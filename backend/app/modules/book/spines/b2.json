@@ -1,0 +1,23 @@
+{
+  "id": "book_b2",
+  "level": "B2",
+  "title": "Dutch B2 — Core path",
+  "description": "Structured lessons for B2 learners.",
+  "chapters": [
+    {
+      "id": "b2_ch1",
+      "title": "Core vocabulary",
+      "order": 0,
+      "pages": [
+        {
+          "id": "b2_ch1_p1",
+          "title": "B2 lesson 1",
+          "order": 0,
+          "word_rank_min": 1,
+          "word_rank_max": 60,
+          "grammar_topic": "B2 grammar focus"
+        }
+      ]
+    }
+  ]
+}

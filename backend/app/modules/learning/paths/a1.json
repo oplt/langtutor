@@ -1,0 +1,118 @@
+{
+  "level": "A1",
+  "modules": [
+    {
+      "id": "a1_vocab",
+      "name": "Core vocabulary",
+      "order": 1,
+      "stage": "explain",
+      "knowledge_points": [
+        {
+          "id": "a1_vocab_greetings",
+          "name": "Greetings & basics",
+          "type": "memory",
+          "rank_min": 1,
+          "rank_max": 30,
+          "drills": [
+            {
+              "prompt": "Type the Dutch word for 'hello'.",
+              "expected_answer": "hallo",
+              "question_type": "short"
+            },
+            {
+              "prompt": "Type the Dutch word for 'goodbye'.",
+              "expected_answer": "dag",
+              "question_type": "short"
+            }
+          ]
+        },
+        {
+          "id": "a1_vocab_family",
+          "name": "Family words",
+          "type": "memory",
+          "rank_min": 31,
+          "rank_max": 60,
+          "drills": [
+            {
+              "prompt": "Type the Dutch word for 'mother'.",
+              "expected_answer": "moeder",
+              "question_type": "short"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1_grammar",
+      "name": "Present tense basics",
+      "order": 2,
+      "stage": "practice",
+      "knowledge_points": [
+        {
+          "id": "a1_grammar_zijn",
+          "name": "Verb zijn (to be)",
+          "type": "concept",
+          "drills": [
+            {
+              "prompt": "Complete: Ik ___ student. (to be)",
+              "expected_answer": "ben",
+              "question_type": "short"
+            }
+          ]
+        },
+        {
+          "id": "a1_grammar_articles",
+          "name": "Articles de / het / een",
+          "type": "procedure",
+          "drills": [
+            {
+              "prompt": "Choose the correct article: ___ tafel (the table)",
+              "expected_answer": "de",
+              "question_type": "short"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1_dialogue",
+      "name": "Short dialogues",
+      "order": 3,
+      "stage": "practice",
+      "knowledge_points": [
+        {
+          "id": "a1_dialogue_intro",
+          "name": "Introducing yourself",
+          "type": "design",
+          "drills": [
+            {
+              "prompt": "Write one sentence in Dutch introducing yourself (include your name).",
+              "expected_answer": "ik heet",
+              "question_type": "open"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1_gate",
+      "name": "A1 mastery gate",
+      "order": 4,
+      "stage": "review",
+      "knowledge_points": [
+        {
+          "id": "a1_gate_checkpoint",
+          "name": "A1 checkpoint",
+          "type": "procedure",
+          "drills": [
+            {
+              "prompt": "Translate to Dutch: I am fine, thank you.",
+              "expected_answer": "het gaat goed",
+              "question_type": "open"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

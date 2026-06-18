@@ -1,0 +1,23 @@
+{
+  "id": "book_c2",
+  "level": "C2",
+  "title": "Dutch C2 — Core path",
+  "description": "Structured lessons for C2 learners.",
+  "chapters": [
+    {
+      "id": "c2_ch1",
+      "title": "Core vocabulary",
+      "order": 0,
+      "pages": [
+        {
+          "id": "c2_ch1_p1",
+          "title": "C2 lesson 1",
+          "order": 0,
+          "word_rank_min": 1,
+          "word_rank_max": 60,
+          "grammar_topic": "C2 grammar focus"
+        }
+      ]
+    }
+  ]
+}

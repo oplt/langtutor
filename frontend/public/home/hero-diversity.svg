@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Skin Intelligence hero illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbe3ec" />
+      <stop offset="52%" stop-color="#f6f1ff" />
+      <stop offset="100%" stop-color="#e5f3ff" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cf6fa9" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#5b8def" stop-opacity="0.85" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)" />
+  <circle cx="260" cy="220" r="140" fill="#ffffff" fill-opacity="0.7" />
+  <circle cx="980" cy="280" r="180" fill="#ffffff" fill-opacity="0.6" />
+  <circle cx="840" cy="680" r="220" fill="#ffffff" fill-opacity="0.5" />
+  <rect x="140" y="520" width="520" height="220" rx="48" fill="url(#accent)" opacity="0.85" />
+  <rect x="180" y="560" width="440" height="16" rx="8" fill="#ffffff" opacity="0.9" />
+  <rect x="180" y="600" width="320" height="16" rx="8" fill="#ffffff" opacity="0.8" />
+  <rect x="180" y="640" width="280" height="16" rx="8" fill="#ffffff" opacity="0.7" />
+  <text x="180" y="470" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-size="48" fill="#2c2c2c">Skin Intelligence</text>
+  <text x="180" y="508" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-size="20" fill="#4a4a4a">Clinical clarity for real skin journeys</text>
+</svg>

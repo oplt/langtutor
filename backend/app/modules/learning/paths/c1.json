@@ -1,0 +1,80 @@
+{
+  "level": "C1",
+  "modules": [
+    {
+      "id": "c1_vocab",
+      "name": "Vocabulary band",
+      "order": 1,
+      "stage": "explain",
+      "knowledge_points": [
+        {
+          "id": "c1_vocab_core",
+          "name": "C1 core words",
+          "type": "memory",
+          "rank_min": 1,
+          "rank_max": 80
+        }
+      ]
+    },
+    {
+      "id": "c1_grammar",
+      "name": "Grammar focus",
+      "order": 2,
+      "stage": "practice",
+      "knowledge_points": [
+        {
+          "id": "c1_grammar_core",
+          "name": "C1 grammar",
+          "type": "concept",
+          "drills": [
+            {
+              "prompt": "Explain one C1 grammar point you practiced in one Dutch sentence.",
+              "expected_answer": "omdat",
+              "question_type": "open"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c1_dialogue",
+      "name": "Dialogue practice",
+      "order": 3,
+      "stage": "practice",
+      "knowledge_points": [
+        {
+          "id": "c1_dialogue_core",
+          "name": "C1 dialogue",
+          "type": "design",
+          "drills": [
+            {
+              "prompt": "Write a short Dutch dialogue line (2-3 sentences) for C1 level.",
+              "expected_answer": "ik",
+              "question_type": "open"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c1_gate",
+      "name": "C1 mastery gate",
+      "order": 4,
+      "stage": "review",
+      "knowledge_points": [
+        {
+          "id": "c1_gate_checkpoint",
+          "name": "C1 checkpoint",
+          "type": "procedure",
+          "drills": [
+            {
+              "prompt": "Summarize what you learned at C1 in Dutch (one sentence).",
+              "expected_answer": "ik heb",
+              "question_type": "open"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

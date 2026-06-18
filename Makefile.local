@@ -1,0 +1,93 @@
+PYTHON ?= $(if $(wildcard $(CURDIR)/backend/.venv/bin/python),$(CURDIR)/backend/.venv/bin/python,$(if $(wildcard $(CURDIR)/.venv/bin/python),$(CURDIR)/.venv/bin/python,python3))
+APP_PYTHON ?= $(PYTHON)
+APP_HOST ?= localhost
+APP_PORT ?= 8000
+FRONTEND_HOST ?= localhost
+FRONTEND_PORT ?= 5173
+REDIS_PORT ?= 6380
+OPEN_BROWSER ?= 1
+RUN_MIGRATIONS ?= 1
+SIM_MODE ?= 1
+HONCHO ?= $(if $(wildcard $(CURDIR)/backend/.venv/bin/honcho),$(CURDIR)/backend/.venv/bin/honcho,$(if $(wildcard $(CURDIR)/.venv/bin/honcho),$(CURDIR)/.venv/bin/honcho,$(if $(wildcard $(HOME)/.local/bin/honcho),$(HOME)/.local/bin/honcho,honcho)))
+BACKEND_ENV ?= $(CURDIR)/backend/.env
+
+SYSTEMCTL ?= systemctl
+SUDO ?= sudo
+
+APP_ENV ?= local
+
+# Do not load backend/.env into every Honcho process by default.
+# The backend should load its own settings; loading backend/.env globally can break local auth cookies.
+HONCHO_ENV_ARGS ?=
+
+PYTHONNOUSERSITE ?= 1
+PYTHONDONTWRITEBYTECODE ?= 1
+
+export APP_PYTHON
+export APP_HOST
+export APP_PORT
+export FRONTEND_HOST
+export FRONTEND_PORT
+export REDIS_PORT
+export RUN_MIGRATIONS
+export SIM_MODE
+
+
+DEV_PROCS := redis backend frontend
+ifeq ($(OPEN_BROWSER),1)
+DEV_PROCS += browser
+endif
+
+.PHONY: local-dev check-local-tools kill-dev kill-ports kill-workers reset-frontend-cache reset-dev
+
+local-dev: check-local-tools
+	$(HONCHO) $(HONCHO_ENV_ARGS) -f Procfile.dev start $(DEV_PROCS)
+
+local-dev-with-backend-env:
+	$(MAKE) -f Makefile.local local-dev HONCHO_ENV_ARGS="-e $(BACKEND_ENV)"
+
+local-dev-no-observability:
+	$(MAKE) -f Makefile.local local-dev
+
+check-local-tools:
+	@$(HONCHO) --help >/dev/null 2>&1 || { echo "honcho executable is not usable: $(HONCHO). Reinstall with: $(PYTHON) -m pip install --force-reinstall honcho"; exit 1; }
+	@$(APP_PYTHON) -c 'import uvicorn, fastapi, alembic' >/dev/null 2>&1 || { echo "Backend Python deps missing for $(APP_PYTHON). Install backend requirements."; exit 1; }
+	@command -v npm >/dev/null 2>&1 || { echo "npm is not installed."; exit 1; }
+	@command -v redis-server >/dev/null 2>&1 || { echo "redis-server is required."; exit 1; }
+
+kill-ports:
+	@for port in $(APP_PORT) $(FRONTEND_PORT) $(REDIS_PORT); do \
+		pids="$$(lsof -ti tcp:$$port 2>/dev/null || true)"; \
+		if [ -n "$$pids" ]; then \
+			echo "[kill-ports] killing tcp:$$port pids=$$pids"; \
+			kill $$pids 2>/dev/null || true; \
+			sleep 0.3; \
+			kill -9 $$pids 2>/dev/null || true; \
+		fi; \
+	done
+	@pgrep -f '[g]st-launch-1.0' | xargs -r kill 2>/dev/null || true
+	@sleep 0.3
+	@pgrep -f '[g]st-launch-1.0' | xargs -r kill -9 2>/dev/null || true
+	@pgrep -f '[f]fplay' | xargs -r kill 2>/dev/null || true
+	@sleep 0.3
+	@pgrep -f '[f]fplay' | xargs -r kill -9 2>/dev/null || true
+
+kill-dev:
+	-pgrep -f "[h]oncho .*Procfile.dev start" | xargs -r kill
+	-pgrep -f "[u]vicorn backend.app.main:app" | xargs -r kill
+	-pgrep -f "[r]edis-server --port $(REDIS_PORT)" | xargs -r kill
+	-sleep 1
+	-pgrep -f "[h]oncho .*Procfile.dev start" | xargs -r kill -9
+	-pgrep -f "[u]vicorn backend.app.main:app" | xargs -r kill -9
+	-pgrep -f "[r]edis-server --port $(REDIS_PORT)" | xargs -r kill -9
+	-$(MAKE) -f Makefile.local kill-ports
+
+kill-workers:
+	-pgrep -f "[c]elery.*backend.entrypoints.workers.celery_app" | xargs -r kill
+	-sleep 1
+	-pgrep -f "[c]elery.*backend.entrypoints.workers.celery_app" | xargs -r kill -9
+
+reset-frontend-cache:
+	rm -rf frontend/node_modules/.vite
+
+reset-dev: kill-dev kill-workers reset-frontend-cache

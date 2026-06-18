@@ -1,0 +1,80 @@
+{
+  "level": "B1",
+  "modules": [
+    {
+      "id": "b1_vocab",
+      "name": "Vocabulary band",
+      "order": 1,
+      "stage": "explain",
+      "knowledge_points": [
+        {
+          "id": "b1_vocab_core",
+          "name": "B1 core words",
+          "type": "memory",
+          "rank_min": 1,
+          "rank_max": 80
+        }
+      ]
+    },
+    {
+      "id": "b1_grammar",
+      "name": "Grammar focus",
+      "order": 2,
+      "stage": "practice",
+      "knowledge_points": [
+        {
+          "id": "b1_grammar_core",
+          "name": "B1 grammar",
+          "type": "concept",
+          "drills": [
+            {
+              "prompt": "Explain one B1 grammar point you practiced in one Dutch sentence.",
+              "expected_answer": "omdat",
+              "question_type": "open"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b1_dialogue",
+      "name": "Dialogue practice",
+      "order": 3,
+      "stage": "practice",
+      "knowledge_points": [
+        {
+          "id": "b1_dialogue_core",
+          "name": "B1 dialogue",
+          "type": "design",
+          "drills": [
+            {
+              "prompt": "Write a short Dutch dialogue line (2-3 sentences) for B1 level.",
+              "expected_answer": "ik",
+              "question_type": "open"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b1_gate",
+      "name": "B1 mastery gate",
+      "order": 4,
+      "stage": "review",
+      "knowledge_points": [
+        {
+          "id": "b1_gate_checkpoint",
+          "name": "B1 checkpoint",
+          "type": "procedure",
+          "drills": [
+            {
+              "prompt": "Summarize what you learned at B1 in Dutch (one sentence).",
+              "expected_answer": "ik heb",
+              "question_type": "open"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

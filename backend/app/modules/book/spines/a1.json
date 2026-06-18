@@ -1,0 +1,46 @@
+{
+  "id": "book_a1",
+  "level": "A1",
+  "title": "Dutch A1 — Foundations",
+  "description": "Greetings, basics, and everyday words.",
+  "chapters": [
+    {
+      "id": "a1_ch1",
+      "title": "Greetings & introductions",
+      "order": 0,
+      "pages": [
+        {
+          "id": "a1_ch1_p1",
+          "title": "Hello and goodbye",
+          "order": 0,
+          "word_rank_min": 1,
+          "word_rank_max": 25,
+          "grammar_topic": "Simple present — zijn/hebben"
+        },
+        {
+          "id": "a1_ch1_p2",
+          "title": "Introducing yourself",
+          "order": 1,
+          "word_rank_min": 26,
+          "word_rank_max": 50,
+          "grammar_topic": "Subject pronouns"
+        }
+      ]
+    },
+    {
+      "id": "a1_ch2",
+      "title": "Daily life",
+      "order": 1,
+      "pages": [
+        {
+          "id": "a1_ch2_p1",
+          "title": "At home",
+          "order": 0,
+          "word_rank_min": 51,
+          "word_rank_max": 80,
+          "grammar_topic": "Articles de / het"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+target-version = "py311"
+line-length = 100
+src = ["app", "tests"]
+
+[lint]
+select = ["E", "F", "I"]
+ignore = [
+  "E501",
+  "UP006",
+  "UP017",
+  "UP035",
+  "UP037",
+  "UP042",
+  "UP045",
+  "B904",
+  "B905",
+]
+
+[lint.per-file-ignores]
+"app/**" = ["I001", "F401", "F821", "F841", "F541"]
+"tests/**" = ["B008"]

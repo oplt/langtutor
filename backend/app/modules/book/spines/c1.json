@@ -1,0 +1,23 @@
+{
+  "id": "book_c1",
+  "level": "C1",
+  "title": "Dutch C1 — Core path",
+  "description": "Structured lessons for C1 learners.",
+  "chapters": [
+    {
+      "id": "c1_ch1",
+      "title": "Core vocabulary",
+      "order": 0,
+      "pages": [
+        {
+          "id": "c1_ch1_p1",
+          "title": "C1 lesson 1",
+          "order": 0,
+          "word_rank_min": 1,
+          "word_rank_max": 60,
+          "grammar_topic": "C1 grammar focus"
+        }
+      ]
+    }
+  ]
+}

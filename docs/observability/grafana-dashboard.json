@@ -1,0 +1,58 @@
+{
+  "title": "LanguageApp Overview",
+  "uid": "languageapp-overview",
+  "timezone": "browser",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "30s",
+  "panels": [
+    {
+      "type": "stat",
+      "title": "HTTP requests (5xx)",
+      "gridPos": { "h": 4, "w": 6, "x": 0, "y": 0 },
+      "targets": [
+        {
+          "expr": "sum(http_request_errors_total)",
+          "legendFormat": "errors"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Request latency (sum ms)",
+      "gridPos": { "h": 8, "w": 12, "x": 6, "y": 0 },
+      "targets": [
+        {
+          "expr": "sum(rate(http_request_duration_ms_sum[5m]))",
+          "legendFormat": "latency_ms"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "LLM calls by task",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 4 },
+      "targets": [
+        {
+          "expr": "sum by (task) (rate(llm_calls_total[5m]))",
+          "legendFormat": "{{task}}"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "LLM tokens (input / output)",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 4 },
+      "targets": [
+        {
+          "expr": "sum(rate(llm_input_tokens_total[5m]))",
+          "legendFormat": "input"
+        },
+        {
+          "expr": "sum(rate(llm_output_tokens_total[5m]))",
+          "legendFormat": "output"
+        }
+      ]
+    }
+  ]
+}

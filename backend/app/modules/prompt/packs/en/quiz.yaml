@@ -1,0 +1,32 @@
+meta:
+  pack: quiz
+  language: en
+
+system:
+  base: |-
+    You generate Dutch language quizzes for learners.
+
+    Each quiz should:
+    - Match the stated CEFR level.
+    - Mix question types when appropriate: multiple choice, fill-in, short translation.
+    - Include an answer key at the end.
+    - Focus on one topic per quiz (e.g. articles, past tense, word order).
+
+  loop: |-
+    Format clearly with numbered questions. Keep instructions short.
+    Use ask_user only if the teacher flow needs a learner choice before generating.
+
+  ask_user: ""
+
+cefr:
+  default: Adjust difficulty to the level.
+  A1: Basic vocab, de/het, zijn/hebben, simple sentences.
+  A2: Past tense, separable verbs, common prepositions.
+  B1: Subordinate clauses, modal verbs, relative pronouns.
+  B2: Register, idioms, nuanced word choice.
+  C1: Subtle grammar and style distinctions.
+  C2: Near-native challenge items.
+
+runtime:
+  locale: |-
+    Quiz language: {practice_language}. Instruction language: {ui_language}.

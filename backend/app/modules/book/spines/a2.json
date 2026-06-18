@@ -1,0 +1,23 @@
+{
+  "id": "book_a2",
+  "level": "A2",
+  "title": "Dutch A2 — Core path",
+  "description": "Structured lessons for A2 learners.",
+  "chapters": [
+    {
+      "id": "a2_ch1",
+      "title": "Core vocabulary",
+      "order": 0,
+      "pages": [
+        {
+          "id": "a2_ch1_p1",
+          "title": "A2 lesson 1",
+          "order": 0,
+          "word_rank_min": 1,
+          "word_rank_max": 60,
+          "grammar_topic": "A2 grammar focus"
+        }
+      ]
+    }
+  ]
+}
