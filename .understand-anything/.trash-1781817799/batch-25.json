@@ -1,0 +1,598 @@
+{
+  "nodes": [
+    {
+      "id": "file:backend/app/shared/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "backend/app/shared/__init__.py",
+      "summary": "code file; python.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:backend/files/dutchwordsordered.json",
+      "type": "config",
+      "name": "dutchwordsordered.json",
+      "filePath": "backend/files/dutchwordsordered.json",
+      "summary": "config file; json.",
+      "tags": [
+        "configuration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:backend/tests/conftest.py",
+      "type": "file",
+      "name": "conftest.py",
+      "filePath": "backend/tests/conftest.py",
+      "summary": "code file; python; 1 function(s); exports: pytest_configure.",
+      "tags": [
+        "test",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/tests/conftest.py:pytest_configure",
+      "type": "function",
+      "name": "pytest_configure",
+      "filePath": "backend/tests/conftest.py",
+      "summary": "Function pytest_configure in backend/tests/conftest.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/tests/test_langchain_embeddings.py",
+      "type": "file",
+      "name": "test_langchain_embeddings.py",
+      "filePath": "backend/tests/test_langchain_embeddings.py",
+      "summary": "code file; python; 1 function(s); exports: test_embed_ollama_runs_requests_in_parallel.",
+      "tags": [
+        "test",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/tests/test_langchain_embeddings.py:test_embed_ollama_runs_requests_in_parallel",
+      "type": "function",
+      "name": "test_embed_ollama_runs_requests_in_parallel",
+      "filePath": "backend/tests/test_langchain_embeddings.py",
+      "summary": "Function test_embed_ollama_runs_requests_in_parallel in backend/tests/test_langchain_embeddings.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/tests/test_memory_tasks.py",
+      "type": "file",
+      "name": "test_memory_tasks.py",
+      "filePath": "backend/tests/test_memory_tasks.py",
+      "summary": "code file; python; 2 function(s); exports: _reset_memory_task_state, test_enqueue_synthesize_l3_deduplicates.",
+      "tags": [
+        "test",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/tests/test_memory_tasks.py:_reset_memory_task_state",
+      "type": "function",
+      "name": "_reset_memory_task_state",
+      "filePath": "backend/tests/test_memory_tasks.py",
+      "summary": "Function _reset_memory_task_state in backend/tests/test_memory_tasks.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/tests/test_memory_tasks.py:test_enqueue_synthesize_l3_deduplicates",
+      "type": "function",
+      "name": "test_enqueue_synthesize_l3_deduplicates",
+      "filePath": "backend/tests/test_memory_tasks.py",
+      "summary": "Function test_enqueue_synthesize_l3_deduplicates in backend/tests/test_memory_tasks.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:docs/observability/grafana-dashboard.json",
+      "type": "config",
+      "name": "grafana-dashboard.json",
+      "filePath": "docs/observability/grafana-dashboard.json",
+      "summary": "config file; json.",
+      "tags": [
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/observability/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "docs/observability/README.md",
+      "summary": "docs file; markdown.",
+      "tags": [
+        "documentation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/e2e/smoke.spec.ts",
+      "type": "file",
+      "name": "smoke.spec.ts",
+      "filePath": "frontend/e2e/smoke.spec.ts",
+      "summary": "code file; typescript.",
+      "tags": [
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/eslint.config.js",
+      "type": "file",
+      "name": "eslint.config.js",
+      "filePath": "frontend/eslint.config.js",
+      "summary": "code file; javascript.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/playwright.config.ts",
+      "type": "file",
+      "name": "playwright.config.ts",
+      "filePath": "frontend/playwright.config.ts",
+      "summary": "code file; typescript.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/modules/knowledge/.gitkeep",
+      "type": "file",
+      "name": ".gitkeep",
+      "filePath": "frontend/src/modules/knowledge/.gitkeep",
+      "summary": "code file; unknown.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/mui.d.ts",
+      "type": "file",
+      "name": "mui.d.ts",
+      "filePath": "frontend/src/mui.d.ts",
+      "summary": "code file; typescript.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/pages/dashboard/internals/components/Copyright.tsx",
+      "type": "file",
+      "name": "Copyright.tsx",
+      "filePath": "frontend/src/pages/dashboard/internals/components/Copyright.tsx",
+      "summary": "code file; typescript; 1 function(s); exports: Copyright.",
+      "tags": [
+        "component",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/pages/dashboard/internals/components/Copyright.tsx:Copyright",
+      "type": "function",
+      "name": "Copyright",
+      "filePath": "frontend/src/pages/dashboard/internals/components/Copyright.tsx",
+      "summary": "Function Copyright in frontend/src/pages/dashboard/internals/components/Copyright.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx",
+      "type": "file",
+      "name": "CustomIcons.tsx",
+      "filePath": "frontend/src/pages/dashboard/internals/components/CustomIcons.tsx",
+      "summary": "code file; typescript; 5 function(s); exports: SitemarkIcon, IndiaFlag, UsaFlag, BrazilFlag.",
+      "tags": [
+        "component",
+        "module"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx:SitemarkIcon",
+      "type": "function",
+      "name": "SitemarkIcon",
+      "filePath": "frontend/src/pages/dashboard/internals/components/CustomIcons.tsx",
+      "summary": "Function SitemarkIcon in frontend/src/pages/dashboard/internals/components/CustomIcons.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx:IndiaFlag",
+      "type": "function",
+      "name": "IndiaFlag",
+      "filePath": "frontend/src/pages/dashboard/internals/components/CustomIcons.tsx",
+      "summary": "Function IndiaFlag in frontend/src/pages/dashboard/internals/components/CustomIcons.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx:UsaFlag",
+      "type": "function",
+      "name": "UsaFlag",
+      "filePath": "frontend/src/pages/dashboard/internals/components/CustomIcons.tsx",
+      "summary": "Function UsaFlag in frontend/src/pages/dashboard/internals/components/CustomIcons.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx:BrazilFlag",
+      "type": "function",
+      "name": "BrazilFlag",
+      "filePath": "frontend/src/pages/dashboard/internals/components/CustomIcons.tsx",
+      "summary": "Function BrazilFlag in frontend/src/pages/dashboard/internals/components/CustomIcons.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx:GlobeFlag",
+      "type": "function",
+      "name": "GlobeFlag",
+      "filePath": "frontend/src/pages/dashboard/internals/components/CustomIcons.tsx",
+      "summary": "Function GlobeFlag in frontend/src/pages/dashboard/internals/components/CustomIcons.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/pages/dashboard/theme/customizations/dataGrid.d.ts",
+      "type": "file",
+      "name": "dataGrid.d.ts",
+      "filePath": "frontend/src/pages/dashboard/theme/customizations/dataGrid.d.ts",
+      "summary": "code file; typescript; exports: dataGridCustomizations.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/pages/shared-theme/ColorModeSelect.tsx",
+      "type": "file",
+      "name": "ColorModeSelect.tsx",
+      "filePath": "frontend/src/pages/shared-theme/ColorModeSelect.tsx",
+      "summary": "code file; typescript; 1 function(s); exports: ColorModeSelect.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/pages/shared-theme/ColorModeSelect.tsx:ColorModeSelect",
+      "type": "function",
+      "name": "ColorModeSelect",
+      "filePath": "frontend/src/pages/shared-theme/ColorModeSelect.tsx",
+      "summary": "Function ColorModeSelect in frontend/src/pages/shared-theme/ColorModeSelect.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/utils/score.tsx",
+      "type": "file",
+      "name": "score.tsx",
+      "filePath": "frontend/src/utils/score.tsx",
+      "summary": "code file; typescript; 2 function(s); exports: clamp01, scoreFromRange.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/utils/score.tsx:clamp01",
+      "type": "function",
+      "name": "clamp01",
+      "filePath": "frontend/src/utils/score.tsx",
+      "summary": "Function clamp01 in frontend/src/utils/score.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/utils/score.tsx:scoreFromRange",
+      "type": "function",
+      "name": "scoreFromRange",
+      "filePath": "frontend/src/utils/score.tsx",
+      "summary": "Function scoreFromRange in frontend/src/utils/score.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/vite.config.ts",
+      "type": "file",
+      "name": "vite.config.ts",
+      "filePath": "frontend/vite.config.ts",
+      "summary": "code file; typescript.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:Makefile.local",
+      "type": "file",
+      "name": "Makefile.local",
+      "filePath": "Makefile.local",
+      "summary": "code file; local.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:Procfile.dev",
+      "type": "file",
+      "name": "Procfile.dev",
+      "filePath": "Procfile.dev",
+      "summary": "code file; dev.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:backend/app/conftest.py",
+      "target": "file:backend/tests/conftest.py",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:backend/tests/conftest.py",
+      "target": "function:backend/tests/conftest.py:pytest_configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/tests/conftest.py",
+      "target": "function:backend/tests/conftest.py:pytest_configure",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/langchain/embeddings.py",
+      "target": "file:backend/tests/test_langchain_embeddings.py",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:backend/tests/test_langchain_embeddings.py",
+      "target": "function:backend/tests/test_langchain_embeddings.py:test_embed_ollama_runs_requests_in_parallel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/tests/test_langchain_embeddings.py",
+      "target": "function:backend/tests/test_langchain_embeddings.py:test_embed_ollama_runs_requests_in_parallel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/tests/test_memory_tasks.py",
+      "target": "file:backend/app/modules/memory/__init__.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/memory/tasks.py",
+      "target": "file:backend/tests/test_memory_tasks.py",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:backend/tests/test_memory_tasks.py",
+      "target": "function:backend/tests/test_memory_tasks.py:_reset_memory_task_state",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/tests/test_memory_tasks.py",
+      "target": "function:backend/tests/test_memory_tasks.py:_reset_memory_task_state",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/tests/test_memory_tasks.py",
+      "target": "function:backend/tests/test_memory_tasks.py:test_enqueue_synthesize_l3_deduplicates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/tests/test_memory_tasks.py",
+      "target": "function:backend/tests/test_memory_tasks.py:test_enqueue_synthesize_l3_deduplicates",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/internals/components/Copyright.tsx",
+      "target": "function:frontend/src/pages/dashboard/internals/components/Copyright.tsx:Copyright",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/internals/components/Copyright.tsx",
+      "target": "function:frontend/src/pages/dashboard/internals/components/Copyright.tsx:Copyright",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx",
+      "target": "function:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx:SitemarkIcon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx",
+      "target": "function:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx:SitemarkIcon",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx",
+      "target": "function:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx:IndiaFlag",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx",
+      "target": "function:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx:IndiaFlag",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx",
+      "target": "function:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx:UsaFlag",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx",
+      "target": "function:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx:UsaFlag",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx",
+      "target": "function:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx:BrazilFlag",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx",
+      "target": "function:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx:BrazilFlag",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx",
+      "target": "function:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx:GlobeFlag",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx",
+      "target": "function:frontend/src/pages/dashboard/internals/components/CustomIcons.tsx:GlobeFlag",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/pages/shared-theme/ColorModeSelect.tsx",
+      "target": "function:frontend/src/pages/shared-theme/ColorModeSelect.tsx:ColorModeSelect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/shared-theme/ColorModeSelect.tsx",
+      "target": "function:frontend/src/pages/shared-theme/ColorModeSelect.tsx:ColorModeSelect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/utils/score.tsx",
+      "target": "function:frontend/src/utils/score.tsx:clamp01",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/utils/score.tsx",
+      "target": "function:frontend/src/utils/score.tsx:clamp01",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/utils/score.tsx",
+      "target": "function:frontend/src/utils/score.tsx:scoreFromRange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/utils/score.tsx",
+      "target": "function:frontend/src/utils/score.tsx:scoreFromRange",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "document:docs/observability/README.md",
+      "target": "file:backend/app/main.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/observability/README.md",
+      "target": "file:frontend/src/main.tsx",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

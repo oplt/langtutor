@@ -7,11 +7,18 @@ import type { ReactNode } from "react";
 
 import { PageLoading } from "./PageLoading";
 
+/**
+ * Shared async panel shell for dashboard feature areas.
+ *
+ * - `error` — initial load / query failure; hides `children` and shows Retry when `onRetry` is set.
+ * - `actionError` — mutation or submit failure; keeps `children` visible so the user can retry in place.
+ */
 type FeaturePanelProps = {
   title: string;
   description?: string;
   loading?: boolean;
   error?: string | null;
+  actionError?: string | null;
   onRetry?: () => void;
   children: ReactNode;
 };
@@ -21,6 +28,7 @@ export function FeaturePanel({
   description,
   loading = false,
   error = null,
+  actionError = null,
   onRetry,
   children,
 }: FeaturePanelProps) {
@@ -51,8 +59,12 @@ export function FeaturePanel({
         >
           {error}
         </Alert>
-      ) : null}
-      {children}
+      ) : (
+        <>
+          {actionError ? <Alert severity="error">{actionError}</Alert> : null}
+          {children}
+        </>
+      )}
     </Stack>
   );
 }

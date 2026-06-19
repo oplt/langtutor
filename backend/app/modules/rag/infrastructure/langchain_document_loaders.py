@@ -7,6 +7,19 @@ from pathlib import Path
 
 from backend.app.modules.rag.domain.models import ParsedDocument
 
+_PROCESS_POOL_SUFFIXES = {"pdf", "docx"}
+_PROCESS_POOL_MIN_BYTES = 512 * 1024
+
+
+def should_parse_in_process_pool(path: Path) -> bool:
+    suffix = path.suffix.lower().lstrip(".")
+    if suffix not in _PROCESS_POOL_SUFFIXES:
+        return False
+    try:
+        return path.stat().st_size >= _PROCESS_POOL_MIN_BYTES
+    except OSError:
+        return False
+
 
 def load_documents_from_path(file_path: str, metadata: dict | None = None) -> list[ParsedDocument]:
     """Parse a file into ParsedDocument instances using LangChain when available."""

@@ -3,9 +3,10 @@
 from __future__ import annotations
 
 import asyncio
-import json
 import logging
 import uuid
+from datetime import date, datetime
+from typing import Any
 
 from backend.app.core.dead_letter import record_dead_letter
 from backend.app.modules.agent.core.context import AgentContext
@@ -17,6 +18,20 @@ from backend.app.modules.tutor.sessions.service import get_tutor_sessions_servic
 logger = logging.getLogger(__name__)
 
 _PERSIST_MAX_ATTEMPTS = 3
+
+
+def _json_safe(value: Any) -> Any:
+    if value is None or isinstance(value, (str, int, float, bool)):
+        return value
+    if isinstance(value, (datetime, date)):
+        return value.isoformat()
+    if isinstance(value, uuid.UUID):
+        return str(value)
+    if isinstance(value, dict):
+        return {str(key): _json_safe(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_json_safe(item) for item in value]
+    return str(value)
 
 
 async def persist_tutor_turn(
@@ -39,8 +54,8 @@ async def persist_tutor_turn(
 ) -> None:
     from backend.app.db.session import AsyncSessionLocal
 
-    safe_events = json.loads(json.dumps(events_fragment, ensure_ascii=False, default=str))
-    safe_history = json.loads(json.dumps(conversation_history or [], ensure_ascii=False, default=str))
+    safe_events = _json_safe(events_fragment)
+    safe_history = _json_safe(conversation_history or [])
 
     last_error: Exception | None = None
     for attempt in range(1, _PERSIST_MAX_ATTEMPTS + 1):
@@ -101,6 +116,52 @@ async def persist_tutor_turn(
             "error": str(last_error) if last_error else "",
         },
     )
+
+
+async def finalize_tutor_turn_lifecycle(
+    *,
+    context: AgentContext,
+    user_id: str,
+    turn_id: str,
+    session_id: str,
+    capability: str,
+    language: str,
+    cefr_level: str | None,
+    persona: str | None,
+    user_message: str,
+    conversation_history: list[dict],
+    seq: int,
+    status: str,
+    events_fragment: list[dict],
+    assistant_reply_fragment: str,
+    paused: bool,
+    pause_question: str | None,
+) -> None:
+    """Persist tutor turn to DB and record L2 memory trace on successful completion."""
+    await persist_tutor_turn(
+        user_id=uuid.UUID(str(user_id)),
+        turn_id=turn_id,
+        session_id=session_id,
+        capability=capability,
+        language=language,
+        cefr_level=cefr_level,
+        persona=persona,
+        user_message=user_message,
+        conversation_history=conversation_history,
+        seq=seq,
+        status=status,
+        events_fragment=events_fragment,
+        assistant_reply_fragment=assistant_reply_fragment,
+        paused=paused,
+        pause_question=pause_question,
+    )
+    if status == "completed" and not paused:
+        await record_chat_memory(
+            context,
+            user_id=str(user_id),
+            session_id=session_id,
+            turn_id=turn_id,
+        )
 
 
 async def record_chat_memory(context: AgentContext, *, user_id: str, session_id: str, turn_id: str) -> None:

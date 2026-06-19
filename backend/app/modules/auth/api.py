@@ -120,6 +120,10 @@ async def login(payload: LoginIn, db: AsyncSession = Depends(get_db)):
 
     token = create_access_token(user.id)
     logger.info("Login success", extra={"user_id": str(user.id), "email_hash": _email_hash(email)})
+    from backend.app.core.background import schedule_background
+    from backend.app.modules.memory.context_loader import warm_l3_memory_on_login
+
+    schedule_background(warm_l3_memory_on_login(user.id), name=f"warm_l3:{user.id}")
     return {"access_token": token, "user": user}
 
 

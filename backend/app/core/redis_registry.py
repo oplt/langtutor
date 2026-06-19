@@ -21,6 +21,16 @@ REDIS_FEATURES: tuple[RedisFeature, ...] = (
     RedisFeature("learning_levels", "learning:levels:v1", "CEFR levels list cache"),
     RedisFeature("learning_progress", "learning:progress:*", "Per-user progress summary cache"),
     RedisFeature("kb_search", "kb:search:*", "BM25 search result cache (shared across workers)"),
+    RedisFeature("memory_l3_full", "memory:l3:full:*", "Full L3 memory concat cache (shared across workers)"),
+    RedisFeature("memory_l3_capability", "memory:l3:*", "Per-capability L3 memory cache"),
+    RedisFeature(
+        "memory_defaults",
+        "memory:defaults:*",
+        "Per-user L2/L3 default document bootstrap flag (shared across workers)",
+    ),
+    RedisFeature("rag_retrieve", "rag:retrieve:*", "Post-rerank RAG retrieval cache"),
+    RedisFeature("rag_answer", "rag:answer:*", "Cached RAG ask answers"),
+    RedisFeature("quiz_generate", "quiz:generate:*", "Cached LLM quiz generation payloads"),
     RedisFeature("job_lock", "lock:jobs:*", "Background job deduplication locks"),
 )
 

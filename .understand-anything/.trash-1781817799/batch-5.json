@@ -1,0 +1,3760 @@
+{
+  "nodes": [
+    {
+      "id": "file:backend/alembic/env.py",
+      "type": "file",
+      "name": "env.py",
+      "filePath": "backend/alembic/env.py",
+      "summary": "code file; python; 5 function(s); exports: get_url, run_migrations_offline, do_run_migrations, run_migrations_online.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/alembic/env.py:get_url",
+      "type": "function",
+      "name": "get_url",
+      "filePath": "backend/alembic/env.py",
+      "summary": "Function get_url in backend/alembic/env.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/alembic/env.py:run_migrations_offline",
+      "type": "function",
+      "name": "run_migrations_offline",
+      "filePath": "backend/alembic/env.py",
+      "summary": "Function run_migrations_offline in backend/alembic/env.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/alembic/env.py:do_run_migrations",
+      "type": "function",
+      "name": "do_run_migrations",
+      "filePath": "backend/alembic/env.py",
+      "summary": "Function do_run_migrations in backend/alembic/env.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/alembic/env.py:run_migrations_online",
+      "type": "function",
+      "name": "run_migrations_online",
+      "filePath": "backend/alembic/env.py",
+      "summary": "Function run_migrations_online in backend/alembic/env.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/alembic/env.py:run_migrations_online_entrypoint",
+      "type": "function",
+      "name": "run_migrations_online_entrypoint",
+      "filePath": "backend/alembic/env.py",
+      "summary": "Function run_migrations_online_entrypoint in backend/alembic/env.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/bootstrap/startup.py",
+      "type": "file",
+      "name": "startup.py",
+      "filePath": "backend/app/bootstrap/startup.py",
+      "summary": "code file; python; 1 function(s); exports: run_startup_warmup.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/bootstrap/startup.py:run_startup_warmup",
+      "type": "function",
+      "name": "run_startup_warmup",
+      "filePath": "backend/app/bootstrap/startup.py",
+      "summary": "Function run_startup_warmup in backend/app/bootstrap/startup.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/db/base.py",
+      "type": "file",
+      "name": "base.py",
+      "filePath": "backend/app/db/base.py",
+      "summary": "code file; python; 1 function(s); 4 class(es); exports: Base, now_utc, TimestampMixin, SoftDeleteMixin.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/db/base.py:now_utc",
+      "type": "function",
+      "name": "now_utc",
+      "filePath": "backend/app/db/base.py",
+      "summary": "Function now_utc in backend/app/db/base.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/db/base.py:Base",
+      "type": "class",
+      "name": "Base",
+      "filePath": "backend/app/db/base.py",
+      "summary": "Class Base in backend/app/db/base.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/db/base.py:TimestampMixin",
+      "type": "class",
+      "name": "TimestampMixin",
+      "filePath": "backend/app/db/base.py",
+      "summary": "Class TimestampMixin in backend/app/db/base.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/db/base.py:SoftDeleteMixin",
+      "type": "class",
+      "name": "SoftDeleteMixin",
+      "filePath": "backend/app/db/base.py",
+      "summary": "Class SoftDeleteMixin in backend/app/db/base.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/db/base.py:CEFRLevel",
+      "type": "class",
+      "name": "CEFRLevel",
+      "filePath": "backend/app/db/base.py",
+      "summary": "Class CEFRLevel in backend/app/db/base.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/db/model_registry.py",
+      "type": "file",
+      "name": "model_registry.py",
+      "filePath": "backend/app/db/model_registry.py",
+      "summary": "code file; python.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/book/compiler.py",
+      "type": "file",
+      "name": "compiler.py",
+      "filePath": "backend/app/modules/book/compiler.py",
+      "summary": "code file; python; 3 function(s); 1 class(es); exports: load_book_spine, find_page_outline, LessonCompiler, get_lesson_compiler.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:backend/app/modules/book/compiler.py:load_book_spine",
+      "type": "function",
+      "name": "load_book_spine",
+      "filePath": "backend/app/modules/book/compiler.py",
+      "summary": "Function load_book_spine in backend/app/modules/book/compiler.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/book/compiler.py:find_page_outline",
+      "type": "function",
+      "name": "find_page_outline",
+      "filePath": "backend/app/modules/book/compiler.py",
+      "summary": "Function find_page_outline in backend/app/modules/book/compiler.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/book/compiler.py:get_lesson_compiler",
+      "type": "function",
+      "name": "get_lesson_compiler",
+      "filePath": "backend/app/modules/book/compiler.py",
+      "summary": "Function get_lesson_compiler in backend/app/modules/book/compiler.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/book/compiler.py:LessonCompiler",
+      "type": "class",
+      "name": "LessonCompiler",
+      "filePath": "backend/app/modules/book/compiler.py",
+      "summary": "Class LessonCompiler in backend/app/modules/book/compiler.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:backend/app/modules/book/models.py",
+      "type": "file",
+      "name": "models.py",
+      "filePath": "backend/app/modules/book/models.py",
+      "summary": "code file; python; 7 class(es); exports: BlockType, BlockStatus, LessonBlock, LessonPageOutline.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/book/models.py:BlockType",
+      "type": "class",
+      "name": "BlockType",
+      "filePath": "backend/app/modules/book/models.py",
+      "summary": "Class BlockType in backend/app/modules/book/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/book/models.py:BlockStatus",
+      "type": "class",
+      "name": "BlockStatus",
+      "filePath": "backend/app/modules/book/models.py",
+      "summary": "Class BlockStatus in backend/app/modules/book/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/book/models.py:LessonBlock",
+      "type": "class",
+      "name": "LessonBlock",
+      "filePath": "backend/app/modules/book/models.py",
+      "summary": "Class LessonBlock in backend/app/modules/book/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/book/models.py:LessonPageOutline",
+      "type": "class",
+      "name": "LessonPageOutline",
+      "filePath": "backend/app/modules/book/models.py",
+      "summary": "Class LessonPageOutline in backend/app/modules/book/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/book/models.py:LessonChapter",
+      "type": "class",
+      "name": "LessonChapter",
+      "filePath": "backend/app/modules/book/models.py",
+      "summary": "Class LessonChapter in backend/app/modules/book/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/book/models.py:LessonBook",
+      "type": "class",
+      "name": "LessonBook",
+      "filePath": "backend/app/modules/book/models.py",
+      "summary": "Class LessonBook in backend/app/modules/book/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/book/models.py:LessonPage",
+      "type": "class",
+      "name": "LessonPage",
+      "filePath": "backend/app/modules/book/models.py",
+      "summary": "Class LessonPage in backend/app/modules/book/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/book/schemas.py",
+      "type": "file",
+      "name": "schemas.py",
+      "filePath": "backend/app/modules/book/schemas.py",
+      "summary": "code file; python; 4 class(es); exports: LessonBlockOut, LessonPageOut, LessonBookOut, LessonCompleteIn.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:backend/app/modules/book/schemas.py:LessonBlockOut",
+      "type": "class",
+      "name": "LessonBlockOut",
+      "filePath": "backend/app/modules/book/schemas.py",
+      "summary": "Class LessonBlockOut in backend/app/modules/book/schemas.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/book/schemas.py:LessonPageOut",
+      "type": "class",
+      "name": "LessonPageOut",
+      "filePath": "backend/app/modules/book/schemas.py",
+      "summary": "Class LessonPageOut in backend/app/modules/book/schemas.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/book/schemas.py:LessonBookOut",
+      "type": "class",
+      "name": "LessonBookOut",
+      "filePath": "backend/app/modules/book/schemas.py",
+      "summary": "Class LessonBookOut in backend/app/modules/book/schemas.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/book/schemas.py:LessonCompleteIn",
+      "type": "class",
+      "name": "LessonCompleteIn",
+      "filePath": "backend/app/modules/book/schemas.py",
+      "summary": "Class LessonCompleteIn in backend/app/modules/book/schemas.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/book/service.py",
+      "type": "file",
+      "name": "service.py",
+      "filePath": "backend/app/modules/book/service.py",
+      "summary": "code file; python; 1 function(s); 1 class(es); exports: LessonBookService, get_lesson_book_service.",
+      "tags": [
+        "service",
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:backend/app/modules/book/service.py:get_lesson_book_service",
+      "type": "function",
+      "name": "get_lesson_book_service",
+      "filePath": "backend/app/modules/book/service.py",
+      "summary": "Function get_lesson_book_service in backend/app/modules/book/service.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/book/service.py:LessonBookService",
+      "type": "class",
+      "name": "LessonBookService",
+      "filePath": "backend/app/modules/book/service.py",
+      "summary": "Class LessonBookService in backend/app/modules/book/service.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:backend/app/modules/extensions/classroom/models.py",
+      "type": "file",
+      "name": "models.py",
+      "filePath": "backend/app/modules/extensions/classroom/models.py",
+      "summary": "code file; python; 1 class(es); exports: ClassroomGrant.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/extensions/classroom/models.py:ClassroomGrant",
+      "type": "class",
+      "name": "ClassroomGrant",
+      "filePath": "backend/app/modules/extensions/classroom/models.py",
+      "summary": "Class ClassroomGrant in backend/app/modules/extensions/classroom/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/extensions/partners/models.py",
+      "type": "file",
+      "name": "models.py",
+      "filePath": "backend/app/modules/extensions/partners/models.py",
+      "summary": "code file; python; 2 class(es); exports: PartnerChannel, PartnerMessageLog.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/extensions/partners/models.py:PartnerChannel",
+      "type": "class",
+      "name": "PartnerChannel",
+      "filePath": "backend/app/modules/extensions/partners/models.py",
+      "summary": "Class PartnerChannel in backend/app/modules/extensions/partners/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/extensions/partners/models.py:PartnerMessageLog",
+      "type": "class",
+      "name": "PartnerMessageLog",
+      "filePath": "backend/app/modules/extensions/partners/models.py",
+      "summary": "Class PartnerMessageLog in backend/app/modules/extensions/partners/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/extensions/partners/service.py",
+      "type": "file",
+      "name": "service.py",
+      "filePath": "backend/app/modules/extensions/partners/service.py",
+      "summary": "code file; python; 1 function(s); 1 class(es); exports: PartnersService, get_partners_service.",
+      "tags": [
+        "service",
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:backend/app/modules/extensions/partners/service.py:get_partners_service",
+      "type": "function",
+      "name": "get_partners_service",
+      "filePath": "backend/app/modules/extensions/partners/service.py",
+      "summary": "Function get_partners_service in backend/app/modules/extensions/partners/service.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/extensions/partners/service.py:PartnersService",
+      "type": "class",
+      "name": "PartnersService",
+      "filePath": "backend/app/modules/extensions/partners/service.py",
+      "summary": "Class PartnersService in backend/app/modules/extensions/partners/service.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:backend/app/modules/extensions/visualize/service.py",
+      "type": "file",
+      "name": "service.py",
+      "filePath": "backend/app/modules/extensions/visualize/service.py",
+      "summary": "code file; python; 1 function(s); 1 class(es); exports: VisualizeService, get_visualize_service.",
+      "tags": [
+        "service",
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:backend/app/modules/extensions/visualize/service.py:get_visualize_service",
+      "type": "function",
+      "name": "get_visualize_service",
+      "filePath": "backend/app/modules/extensions/visualize/service.py",
+      "summary": "Function get_visualize_service in backend/app/modules/extensions/visualize/service.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/extensions/visualize/service.py:VisualizeService",
+      "type": "class",
+      "name": "VisualizeService",
+      "filePath": "backend/app/modules/extensions/visualize/service.py",
+      "summary": "Class VisualizeService in backend/app/modules/extensions/visualize/service.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:backend/app/modules/knowledge/bm25.py",
+      "type": "file",
+      "name": "bm25.py",
+      "filePath": "backend/app/modules/knowledge/bm25.py",
+      "summary": "code file; python; 3 function(s); exports: tokenize, term_frequencies, bm25_score.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/bm25.py:tokenize",
+      "type": "function",
+      "name": "tokenize",
+      "filePath": "backend/app/modules/knowledge/bm25.py",
+      "summary": "Function tokenize in backend/app/modules/knowledge/bm25.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/bm25.py:term_frequencies",
+      "type": "function",
+      "name": "term_frequencies",
+      "filePath": "backend/app/modules/knowledge/bm25.py",
+      "summary": "Function term_frequencies in backend/app/modules/knowledge/bm25.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/bm25.py:bm25_score",
+      "type": "function",
+      "name": "bm25_score",
+      "filePath": "backend/app/modules/knowledge/bm25.py",
+      "summary": "Function bm25_score in backend/app/modules/knowledge/bm25.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/knowledge/cefr_filters.py",
+      "type": "file",
+      "name": "cefr_filters.py",
+      "filePath": "backend/app/modules/knowledge/cefr_filters.py",
+      "summary": "code file; python; 2 function(s); exports: rank_bounds_for_cefr, chunk_matches_cefr.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/cefr_filters.py:rank_bounds_for_cefr",
+      "type": "function",
+      "name": "rank_bounds_for_cefr",
+      "filePath": "backend/app/modules/knowledge/cefr_filters.py",
+      "summary": "Function rank_bounds_for_cefr in backend/app/modules/knowledge/cefr_filters.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/cefr_filters.py:chunk_matches_cefr",
+      "type": "function",
+      "name": "chunk_matches_cefr",
+      "filePath": "backend/app/modules/knowledge/cefr_filters.py",
+      "summary": "Function chunk_matches_cefr in backend/app/modules/knowledge/cefr_filters.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/knowledge/fts_search.py",
+      "type": "file",
+      "name": "fts_search.py",
+      "filePath": "backend/app/modules/knowledge/fts_search.py",
+      "summary": "code file; python; 1 function(s); exports: fts_search_chunks.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/fts_search.py:fts_search_chunks",
+      "type": "function",
+      "name": "fts_search_chunks",
+      "filePath": "backend/app/modules/knowledge/fts_search.py",
+      "summary": "Function fts_search_chunks in backend/app/modules/knowledge/fts_search.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/knowledge/models.py",
+      "type": "file",
+      "name": "models.py",
+      "filePath": "backend/app/modules/knowledge/models.py",
+      "summary": "code file; python; 2 class(es); exports: KnowledgeBase, KnowledgeChunk.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:backend/app/modules/knowledge/models.py:KnowledgeBase",
+      "type": "class",
+      "name": "KnowledgeBase",
+      "filePath": "backend/app/modules/knowledge/models.py",
+      "summary": "Class KnowledgeBase in backend/app/modules/knowledge/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/knowledge/models.py:KnowledgeChunk",
+      "type": "class",
+      "name": "KnowledgeChunk",
+      "filePath": "backend/app/modules/knowledge/models.py",
+      "summary": "Class KnowledgeChunk in backend/app/modules/knowledge/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/knowledge/search_cache.py",
+      "type": "file",
+      "name": "search_cache.py",
+      "filePath": "backend/app/modules/knowledge/search_cache.py",
+      "summary": "code file; python; 10 function(s); 4 class(es); exports: KnowledgeChunkSnapshot, _IndexedChunk, Bm25Index, _stats_revision.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/search_cache.py:_stats_revision",
+      "type": "function",
+      "name": "_stats_revision",
+      "filePath": "backend/app/modules/knowledge/search_cache.py",
+      "summary": "Function _stats_revision in backend/app/modules/knowledge/search_cache.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/search_cache.py:_snapshot_from_chunk",
+      "type": "function",
+      "name": "_snapshot_from_chunk",
+      "filePath": "backend/app/modules/knowledge/search_cache.py",
+      "summary": "Function _snapshot_from_chunk in backend/app/modules/knowledge/search_cache.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/search_cache.py:_indexed_from_chunk",
+      "type": "function",
+      "name": "_indexed_from_chunk",
+      "filePath": "backend/app/modules/knowledge/search_cache.py",
+      "summary": "Function _indexed_from_chunk in backend/app/modules/knowledge/search_cache.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/search_cache.py:_redis_search_key",
+      "type": "function",
+      "name": "_redis_search_key",
+      "filePath": "backend/app/modules/knowledge/search_cache.py",
+      "summary": "Function _redis_search_key in backend/app/modules/knowledge/search_cache.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/search_cache.py:_serialize_search_results",
+      "type": "function",
+      "name": "_serialize_search_results",
+      "filePath": "backend/app/modules/knowledge/search_cache.py",
+      "summary": "Function _serialize_search_results in backend/app/modules/knowledge/search_cache.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/search_cache.py:_deserialize_search_results",
+      "type": "function",
+      "name": "_deserialize_search_results",
+      "filePath": "backend/app/modules/knowledge/search_cache.py",
+      "summary": "Function _deserialize_search_results in backend/app/modules/knowledge/search_cache.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/search_cache.py:_get_redis_search_cache",
+      "type": "function",
+      "name": "_get_redis_search_cache",
+      "filePath": "backend/app/modules/knowledge/search_cache.py",
+      "summary": "Function _get_redis_search_cache in backend/app/modules/knowledge/search_cache.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/search_cache.py:_set_redis_search_cache",
+      "type": "function",
+      "name": "_set_redis_search_cache",
+      "filePath": "backend/app/modules/knowledge/search_cache.py",
+      "summary": "Function _set_redis_search_cache in backend/app/modules/knowledge/search_cache.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/search_cache.py:_invalidate_kb_redis",
+      "type": "function",
+      "name": "_invalidate_kb_redis",
+      "filePath": "backend/app/modules/knowledge/search_cache.py",
+      "summary": "Function _invalidate_kb_redis in backend/app/modules/knowledge/search_cache.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/search_cache.py:get_knowledge_search_cache",
+      "type": "function",
+      "name": "get_knowledge_search_cache",
+      "filePath": "backend/app/modules/knowledge/search_cache.py",
+      "summary": "Function get_knowledge_search_cache in backend/app/modules/knowledge/search_cache.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/knowledge/search_cache.py:KnowledgeChunkSnapshot",
+      "type": "class",
+      "name": "KnowledgeChunkSnapshot",
+      "filePath": "backend/app/modules/knowledge/search_cache.py",
+      "summary": "Class KnowledgeChunkSnapshot in backend/app/modules/knowledge/search_cache.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/knowledge/search_cache.py:_IndexedChunk",
+      "type": "class",
+      "name": "_IndexedChunk",
+      "filePath": "backend/app/modules/knowledge/search_cache.py",
+      "summary": "Class _IndexedChunk in backend/app/modules/knowledge/search_cache.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/knowledge/search_cache.py:Bm25Index",
+      "type": "class",
+      "name": "Bm25Index",
+      "filePath": "backend/app/modules/knowledge/search_cache.py",
+      "summary": "Class Bm25Index in backend/app/modules/knowledge/search_cache.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/knowledge/search_cache.py:KnowledgeSearchCache",
+      "type": "class",
+      "name": "KnowledgeSearchCache",
+      "filePath": "backend/app/modules/knowledge/search_cache.py",
+      "summary": "Class KnowledgeSearchCache in backend/app/modules/knowledge/search_cache.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:backend/app/modules/knowledge/service.py",
+      "type": "file",
+      "name": "service.py",
+      "filePath": "backend/app/modules/knowledge/service.py",
+      "summary": "code file; python; 5 function(s); 2 class(es); exports: _sha256, _now, _word_entry_to_text, _load_file_chunks.",
+      "tags": [
+        "service",
+        "module"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/service.py:_sha256",
+      "type": "function",
+      "name": "_sha256",
+      "filePath": "backend/app/modules/knowledge/service.py",
+      "summary": "Function _sha256 in backend/app/modules/knowledge/service.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/service.py:_now",
+      "type": "function",
+      "name": "_now",
+      "filePath": "backend/app/modules/knowledge/service.py",
+      "summary": "Function _now in backend/app/modules/knowledge/service.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/service.py:_word_entry_to_text",
+      "type": "function",
+      "name": "_word_entry_to_text",
+      "filePath": "backend/app/modules/knowledge/service.py",
+      "summary": "Function _word_entry_to_text in backend/app/modules/knowledge/service.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/service.py:_load_file_chunks",
+      "type": "function",
+      "name": "_load_file_chunks",
+      "filePath": "backend/app/modules/knowledge/service.py",
+      "summary": "Function _load_file_chunks in backend/app/modules/knowledge/service.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/service.py:get_knowledge_service",
+      "type": "function",
+      "name": "get_knowledge_service",
+      "filePath": "backend/app/modules/knowledge/service.py",
+      "summary": "Function get_knowledge_service in backend/app/modules/knowledge/service.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/knowledge/service.py:SearchHit",
+      "type": "class",
+      "name": "SearchHit",
+      "filePath": "backend/app/modules/knowledge/service.py",
+      "summary": "Class SearchHit in backend/app/modules/knowledge/service.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/knowledge/service.py:KnowledgeService",
+      "type": "class",
+      "name": "KnowledgeService",
+      "filePath": "backend/app/modules/knowledge/service.py",
+      "summary": "Class KnowledgeService in backend/app/modules/knowledge/service.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:backend/app/modules/learning/api.py",
+      "type": "file",
+      "name": "api.py",
+      "filePath": "backend/app/modules/learning/api.py",
+      "summary": "code file; python; 8 function(s); exports: build_levels_payload, _apply_levels_cache_headers, get_levels, list_words.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:backend/app/modules/learning/api.py:build_levels_payload",
+      "type": "function",
+      "name": "build_levels_payload",
+      "filePath": "backend/app/modules/learning/api.py",
+      "summary": "Function build_levels_payload in backend/app/modules/learning/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/api.py:_apply_levels_cache_headers",
+      "type": "function",
+      "name": "_apply_levels_cache_headers",
+      "filePath": "backend/app/modules/learning/api.py",
+      "summary": "Function _apply_levels_cache_headers in backend/app/modules/learning/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/api.py:get_levels",
+      "type": "function",
+      "name": "get_levels",
+      "filePath": "backend/app/modules/learning/api.py",
+      "summary": "Function get_levels in backend/app/modules/learning/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/api.py:list_words",
+      "type": "function",
+      "name": "list_words",
+      "filePath": "backend/app/modules/learning/api.py",
+      "summary": "Function list_words in backend/app/modules/learning/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/api.py:generate_story_route",
+      "type": "function",
+      "name": "generate_story_route",
+      "filePath": "backend/app/modules/learning/api.py",
+      "summary": "Function generate_story_route in backend/app/modules/learning/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/api.py:get_story",
+      "type": "function",
+      "name": "get_story",
+      "filePath": "backend/app/modules/learning/api.py",
+      "summary": "Function get_story in backend/app/modules/learning/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/api.py:update_progress",
+      "type": "function",
+      "name": "update_progress",
+      "filePath": "backend/app/modules/learning/api.py",
+      "summary": "Function update_progress in backend/app/modules/learning/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/api.py:progress_summary",
+      "type": "function",
+      "name": "progress_summary",
+      "filePath": "backend/app/modules/learning/api.py",
+      "summary": "Function progress_summary in backend/app/modules/learning/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/learning/engine.py",
+      "type": "file",
+      "name": "engine.py",
+      "filePath": "backend/app/modules/learning/engine.py",
+      "summary": "code file; python; 11 function(s); 1 class(es); exports: level_for_rank, get_level_definitions, _normalize_word, _pick_title.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:backend/app/modules/learning/engine.py:level_for_rank",
+      "type": "function",
+      "name": "level_for_rank",
+      "filePath": "backend/app/modules/learning/engine.py",
+      "summary": "Function level_for_rank in backend/app/modules/learning/engine.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/engine.py:get_level_definitions",
+      "type": "function",
+      "name": "get_level_definitions",
+      "filePath": "backend/app/modules/learning/engine.py",
+      "summary": "Function get_level_definitions in backend/app/modules/learning/engine.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/engine.py:_normalize_word",
+      "type": "function",
+      "name": "_normalize_word",
+      "filePath": "backend/app/modules/learning/engine.py",
+      "summary": "Function _normalize_word in backend/app/modules/learning/engine.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/engine.py:_pick_title",
+      "type": "function",
+      "name": "_pick_title",
+      "filePath": "backend/app/modules/learning/engine.py",
+      "summary": "Function _pick_title in backend/app/modules/learning/engine.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/engine.py:_compose_story",
+      "type": "function",
+      "name": "_compose_story",
+      "filePath": "backend/app/modules/learning/engine.py",
+      "summary": "Function _compose_story in backend/app/modules/learning/engine.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/engine.py:ensure_words_seeded",
+      "type": "function",
+      "name": "ensure_words_seeded",
+      "filePath": "backend/app/modules/learning/engine.py",
+      "summary": "Function ensure_words_seeded in backend/app/modules/learning/engine.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/engine.py:level_counts",
+      "type": "function",
+      "name": "level_counts",
+      "filePath": "backend/app/modules/learning/engine.py",
+      "summary": "Function level_counts in backend/app/modules/learning/engine.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/engine.py:_pick_diverse_words",
+      "type": "function",
+      "name": "_pick_diverse_words",
+      "filePath": "backend/app/modules/learning/engine.py",
+      "summary": "Function _pick_diverse_words in backend/app/modules/learning/engine.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/engine.py:pick_story_words",
+      "type": "function",
+      "name": "pick_story_words",
+      "filePath": "backend/app/modules/learning/engine.py",
+      "summary": "Function pick_story_words in backend/app/modules/learning/engine.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/engine.py:generate_story",
+      "type": "function",
+      "name": "generate_story",
+      "filePath": "backend/app/modules/learning/engine.py",
+      "summary": "Function generate_story in backend/app/modules/learning/engine.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/engine.py:update_word_progress",
+      "type": "function",
+      "name": "update_word_progress",
+      "filePath": "backend/app/modules/learning/engine.py",
+      "summary": "Function update_word_progress in backend/app/modules/learning/engine.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/learning/engine.py:StoryPackage",
+      "type": "class",
+      "name": "StoryPackage",
+      "filePath": "backend/app/modules/learning/engine.py",
+      "summary": "Class StoryPackage in backend/app/modules/learning/engine.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/learning/mastery/grading.py",
+      "type": "file",
+      "name": "grading.py",
+      "filePath": "backend/app/modules/learning/mastery/grading.py",
+      "summary": "code file; python; 2 function(s); exports: grade_answer, classify_error.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/mastery/grading.py:grade_answer",
+      "type": "function",
+      "name": "grade_answer",
+      "filePath": "backend/app/modules/learning/mastery/grading.py",
+      "summary": "Function grade_answer in backend/app/modules/learning/mastery/grading.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/mastery/grading.py:classify_error",
+      "type": "function",
+      "name": "classify_error",
+      "filePath": "backend/app/modules/learning/mastery/grading.py",
+      "summary": "Function classify_error in backend/app/modules/learning/mastery/grading.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/learning/mastery/mastery.py",
+      "type": "file",
+      "name": "mastery.py",
+      "filePath": "backend/app/modules/learning/mastery/mastery.py",
+      "summary": "code file; python; 1 function(s); exports: compute_mastery.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/mastery/mastery.py:compute_mastery",
+      "type": "function",
+      "name": "compute_mastery",
+      "filePath": "backend/app/modules/learning/mastery/mastery.py",
+      "summary": "Function compute_mastery in backend/app/modules/learning/mastery/mastery.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/learning/mastery/models.py",
+      "type": "file",
+      "name": "models.py",
+      "filePath": "backend/app/modules/learning/mastery/models.py",
+      "summary": "code file; python; 13 class(es); exports: KnowledgeType, ErrorType, LearningStage, DrillTemplate.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:backend/app/modules/learning/mastery/models.py:KnowledgeType",
+      "type": "class",
+      "name": "KnowledgeType",
+      "filePath": "backend/app/modules/learning/mastery/models.py",
+      "summary": "Class KnowledgeType in backend/app/modules/learning/mastery/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/learning/mastery/models.py:ErrorType",
+      "type": "class",
+      "name": "ErrorType",
+      "filePath": "backend/app/modules/learning/mastery/models.py",
+      "summary": "Class ErrorType in backend/app/modules/learning/mastery/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/learning/mastery/models.py:LearningStage",
+      "type": "class",
+      "name": "LearningStage",
+      "filePath": "backend/app/modules/learning/mastery/models.py",
+      "summary": "Class LearningStage in backend/app/modules/learning/mastery/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/learning/mastery/models.py:DrillTemplate",
+      "type": "class",
+      "name": "DrillTemplate",
+      "filePath": "backend/app/modules/learning/mastery/models.py",
+      "summary": "Class DrillTemplate in backend/app/modules/learning/mastery/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/learning/mastery/models.py:KnowledgePoint",
+      "type": "class",
+      "name": "KnowledgePoint",
+      "filePath": "backend/app/modules/learning/mastery/models.py",
+      "summary": "Class KnowledgePoint in backend/app/modules/learning/mastery/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/learning/mastery/models.py:LearningModule",
+      "type": "class",
+      "name": "LearningModule",
+      "filePath": "backend/app/modules/learning/mastery/models.py",
+      "summary": "Class LearningModule in backend/app/modules/learning/mastery/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/learning/mastery/models.py:QuizAttempt",
+      "type": "class",
+      "name": "QuizAttempt",
+      "filePath": "backend/app/modules/learning/mastery/models.py",
+      "summary": "Class QuizAttempt in backend/app/modules/learning/mastery/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/learning/mastery/models.py:RetryAttempt",
+      "type": "class",
+      "name": "RetryAttempt",
+      "filePath": "backend/app/modules/learning/mastery/models.py",
+      "summary": "Class RetryAttempt in backend/app/modules/learning/mastery/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/learning/mastery/models.py:ErrorRecord",
+      "type": "class",
+      "name": "ErrorRecord",
+      "filePath": "backend/app/modules/learning/mastery/models.py",
+      "summary": "Class ErrorRecord in backend/app/modules/learning/mastery/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/learning/mastery/models.py:RepetitionState",
+      "type": "class",
+      "name": "RepetitionState",
+      "filePath": "backend/app/modules/learning/mastery/models.py",
+      "summary": "Class RepetitionState in backend/app/modules/learning/mastery/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/learning/mastery/models.py:ReviewTask",
+      "type": "class",
+      "name": "ReviewTask",
+      "filePath": "backend/app/modules/learning/mastery/models.py",
+      "summary": "Class ReviewTask in backend/app/modules/learning/mastery/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/learning/mastery/models.py:PendingQuestion",
+      "type": "class",
+      "name": "PendingQuestion",
+      "filePath": "backend/app/modules/learning/mastery/models.py",
+      "summary": "Class PendingQuestion in backend/app/modules/learning/mastery/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/learning/mastery/models.py:LearningProgress",
+      "type": "class",
+      "name": "LearningProgress",
+      "filePath": "backend/app/modules/learning/mastery/models.py",
+      "summary": "Class LearningProgress in backend/app/modules/learning/mastery/models.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/learning/mastery/policy.py",
+      "type": "file",
+      "name": "policy.py",
+      "filePath": "backend/app/modules/learning/mastery/policy.py",
+      "summary": "code file; python; 10 function(s); 1 class(es); exports: gate_threshold, is_mastered, display_mastery, objective_status.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:backend/app/modules/learning/mastery/policy.py:gate_threshold",
+      "type": "function",
+      "name": "gate_threshold",
+      "filePath": "backend/app/modules/learning/mastery/policy.py",
+      "summary": "Function gate_threshold in backend/app/modules/learning/mastery/policy.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/mastery/policy.py:is_mastered",
+      "type": "function",
+      "name": "is_mastered",
+      "filePath": "backend/app/modules/learning/mastery/policy.py",
+      "summary": "Function is_mastered in backend/app/modules/learning/mastery/policy.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/mastery/policy.py:display_mastery",
+      "type": "function",
+      "name": "display_mastery",
+      "filePath": "backend/app/modules/learning/mastery/policy.py",
+      "summary": "Function display_mastery in backend/app/modules/learning/mastery/policy.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/mastery/policy.py:objective_status",
+      "type": "function",
+      "name": "objective_status",
+      "filePath": "backend/app/modules/learning/mastery/policy.py",
+      "summary": "Function objective_status in backend/app/modules/learning/mastery/policy.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/mastery/policy.py:due_reviews",
+      "type": "function",
+      "name": "due_reviews",
+      "filePath": "backend/app/modules/learning/mastery/policy.py",
+      "summary": "Function due_reviews in backend/app/modules/learning/mastery/policy.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/mastery/policy.py:find_knowledge_point",
+      "type": "function",
+      "name": "find_knowledge_point",
+      "filePath": "backend/app/modules/learning/mastery/policy.py",
+      "summary": "Function find_knowledge_point in backend/app/modules/learning/mastery/policy.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/mastery/policy.py:_gate_kind",
+      "type": "function",
+      "name": "_gate_kind",
+      "filePath": "backend/app/modules/learning/mastery/policy.py",
+      "summary": "Function _gate_kind in backend/app/modules/learning/mastery/policy.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/mastery/policy.py:next_objective",
+      "type": "function",
+      "name": "next_objective",
+      "filePath": "backend/app/modules/learning/mastery/policy.py",
+      "summary": "Function next_objective in backend/app/modules/learning/mastery/policy.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/mastery/policy.py:map_summary",
+      "type": "function",
+      "name": "map_summary",
+      "filePath": "backend/app/modules/learning/mastery/policy.py",
+      "summary": "Function map_summary in backend/app/modules/learning/mastery/policy.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/learning/mastery/policy.py:level_gate_complete",
+      "type": "function",
+      "name": "level_gate_complete",
+      "filePath": "backend/app/modules/learning/mastery/policy.py",
+      "summary": "Function level_gate_complete in backend/app/modules/learning/mastery/policy.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/learning/mastery/policy.py:NextStep",
+      "type": "class",
+      "name": "NextStep",
+      "filePath": "backend/app/modules/learning/mastery/policy.py",
+      "summary": "Class NextStep in backend/app/modules/learning/mastery/policy.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/learning/mastery/repository.py",
+      "type": "file",
+      "name": "repository.py",
+      "filePath": "backend/app/modules/learning/mastery/repository.py",
+      "summary": "code file; python; 1 class(es); exports: MasteryRepository.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/learning/mastery/repository.py:MasteryRepository",
+      "type": "class",
+      "name": "MasteryRepository",
+      "filePath": "backend/app/modules/learning/mastery/repository.py",
+      "summary": "Class MasteryRepository in backend/app/modules/learning/mastery/repository.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/learning/mastery/runtime.py",
+      "type": "file",
+      "name": "runtime.py",
+      "filePath": "backend/app/modules/learning/mastery/runtime.py",
+      "summary": "code file; python; 1 function(s); 1 class(es); exports: MasteryPathRuntime, get_mastery_runtime.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:backend/app/modules/learning/mastery/runtime.py:get_mastery_runtime",
+      "type": "function",
+      "name": "get_mastery_runtime",
+      "filePath": "backend/app/modules/learning/mastery/runtime.py",
+      "summary": "Function get_mastery_runtime in backend/app/modules/learning/mastery/runtime.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/learning/mastery/runtime.py:MasteryPathRuntime",
+      "type": "class",
+      "name": "MasteryPathRuntime",
+      "filePath": "backend/app/modules/learning/mastery/runtime.py",
+      "summary": "Class MasteryPathRuntime in backend/app/modules/learning/mastery/runtime.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:backend/app/modules/learning/mastery/scheduler.py",
+      "type": "file",
+      "name": "scheduler.py",
+      "filePath": "backend/app/modules/learning/mastery/scheduler.py",
+      "summary": "code file; python; 1 class(es); exports: SpacedRepetitionScheduler.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:backend/app/modules/learning/mastery/scheduler.py:SpacedRepetitionScheduler",
+      "type": "class",
+      "name": "SpacedRepetitionScheduler",
+      "filePath": "backend/app/modules/learning/mastery/scheduler.py",
+      "summary": "Class SpacedRepetitionScheduler in backend/app/modules/learning/mastery/scheduler.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:backend/alembic/env.py",
+      "target": "file:backend/app/core/config.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/alembic/env.py",
+      "target": "file:backend/app/db/base.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/alembic/env.py",
+      "target": "file:backend/app/db/model_registry.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/alembic/env.py",
+      "target": "function:backend/alembic/env.py:get_url",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/alembic/env.py",
+      "target": "function:backend/alembic/env.py:get_url",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/alembic/env.py",
+      "target": "function:backend/alembic/env.py:run_migrations_offline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/alembic/env.py",
+      "target": "function:backend/alembic/env.py:run_migrations_offline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/alembic/env.py",
+      "target": "function:backend/alembic/env.py:do_run_migrations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/alembic/env.py",
+      "target": "function:backend/alembic/env.py:do_run_migrations",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/alembic/env.py",
+      "target": "function:backend/alembic/env.py:run_migrations_online",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/alembic/env.py",
+      "target": "function:backend/alembic/env.py:run_migrations_online",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/alembic/env.py",
+      "target": "function:backend/alembic/env.py:run_migrations_online_entrypoint",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/alembic/env.py",
+      "target": "function:backend/alembic/env.py:run_migrations_online_entrypoint",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/bootstrap/startup.py",
+      "target": "file:backend/app/db/session.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/startup.py",
+      "target": "file:backend/app/modules/knowledge/search_cache.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/startup.py",
+      "target": "file:backend/app/modules/knowledge/service.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/startup.py",
+      "target": "file:backend/app/modules/learning/api.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/startup.py",
+      "target": "file:backend/app/modules/learning/engine.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/startup.py",
+      "target": "file:backend/app/modules/learning/response_cache.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/startup.py",
+      "target": "function:backend/app/bootstrap/startup.py:run_startup_warmup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/bootstrap/startup.py",
+      "target": "function:backend/app/bootstrap/startup.py:run_startup_warmup",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/db/base.py",
+      "target": "function:backend/app/db/base.py:now_utc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/db/base.py",
+      "target": "function:backend/app/db/base.py:now_utc",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/db/base.py",
+      "target": "class:backend/app/db/base.py:Base",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/db/base.py",
+      "target": "class:backend/app/db/base.py:Base",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/db/base.py",
+      "target": "class:backend/app/db/base.py:TimestampMixin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/db/base.py",
+      "target": "class:backend/app/db/base.py:TimestampMixin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/db/base.py",
+      "target": "class:backend/app/db/base.py:SoftDeleteMixin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/db/base.py",
+      "target": "class:backend/app/db/base.py:SoftDeleteMixin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/db/base.py",
+      "target": "class:backend/app/db/base.py:CEFRLevel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/db/base.py",
+      "target": "class:backend/app/db/base.py:CEFRLevel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/db/model_registry.py",
+      "target": "file:backend/app/modules/extensions/classroom/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/db/model_registry.py",
+      "target": "file:backend/app/modules/extensions/partners/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/db/model_registry.py",
+      "target": "file:backend/app/modules/knowledge/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/db/model_registry.py",
+      "target": "file:backend/app/modules/learning/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/db/model_registry.py",
+      "target": "file:backend/app/modules/memory/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/db/model_registry.py",
+      "target": "file:backend/app/modules/notebook/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/db/model_registry.py",
+      "target": "file:backend/app/modules/rag/infrastructure/sqlalchemy_models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/db/model_registry.py",
+      "target": "file:backend/app/modules/stories/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/db/model_registry.py",
+      "target": "file:backend/app/modules/tutor/sessions/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/db/model_registry.py",
+      "target": "file:backend/app/modules/users/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/book/compiler.py",
+      "target": "file:backend/app/db/base.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/book/compiler.py",
+      "target": "file:backend/app/modules/book/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/book/compiler.py",
+      "target": "file:backend/app/modules/learning/engine.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/book/compiler.py",
+      "target": "file:backend/app/modules/learning/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/book/compiler.py",
+      "target": "file:backend/app/modules/learning/quiz/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/book/compiler.py",
+      "target": "file:backend/app/modules/learning/quiz/templates.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/book/compiler.py",
+      "target": "function:backend/app/modules/book/compiler.py:load_book_spine",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/book/compiler.py",
+      "target": "function:backend/app/modules/book/compiler.py:load_book_spine",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/book/compiler.py",
+      "target": "function:backend/app/modules/book/compiler.py:find_page_outline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/book/compiler.py",
+      "target": "function:backend/app/modules/book/compiler.py:find_page_outline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/book/compiler.py",
+      "target": "function:backend/app/modules/book/compiler.py:get_lesson_compiler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/book/compiler.py",
+      "target": "function:backend/app/modules/book/compiler.py:get_lesson_compiler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/book/compiler.py",
+      "target": "class:backend/app/modules/book/compiler.py:LessonCompiler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/book/compiler.py",
+      "target": "class:backend/app/modules/book/compiler.py:LessonCompiler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/book/models.py",
+      "target": "class:backend/app/modules/book/models.py:BlockType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/book/models.py",
+      "target": "class:backend/app/modules/book/models.py:BlockType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/book/models.py",
+      "target": "class:backend/app/modules/book/models.py:BlockStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/book/models.py",
+      "target": "class:backend/app/modules/book/models.py:BlockStatus",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/book/models.py",
+      "target": "class:backend/app/modules/book/models.py:LessonBlock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/book/models.py",
+      "target": "class:backend/app/modules/book/models.py:LessonBlock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/book/models.py",
+      "target": "class:backend/app/modules/book/models.py:LessonPageOutline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/book/models.py",
+      "target": "class:backend/app/modules/book/models.py:LessonPageOutline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/book/models.py",
+      "target": "class:backend/app/modules/book/models.py:LessonChapter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/book/models.py",
+      "target": "class:backend/app/modules/book/models.py:LessonChapter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/book/models.py",
+      "target": "class:backend/app/modules/book/models.py:LessonBook",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/book/models.py",
+      "target": "class:backend/app/modules/book/models.py:LessonBook",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/book/models.py",
+      "target": "class:backend/app/modules/book/models.py:LessonPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/book/models.py",
+      "target": "class:backend/app/modules/book/models.py:LessonPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/book/schemas.py",
+      "target": "file:backend/app/modules/book/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/book/schemas.py",
+      "target": "class:backend/app/modules/book/schemas.py:LessonBlockOut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/book/schemas.py",
+      "target": "class:backend/app/modules/book/schemas.py:LessonBlockOut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/book/schemas.py",
+      "target": "class:backend/app/modules/book/schemas.py:LessonPageOut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/book/schemas.py",
+      "target": "class:backend/app/modules/book/schemas.py:LessonPageOut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/book/schemas.py",
+      "target": "class:backend/app/modules/book/schemas.py:LessonBookOut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/book/schemas.py",
+      "target": "class:backend/app/modules/book/schemas.py:LessonBookOut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/book/schemas.py",
+      "target": "class:backend/app/modules/book/schemas.py:LessonCompleteIn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/book/schemas.py",
+      "target": "class:backend/app/modules/book/schemas.py:LessonCompleteIn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/book/service.py",
+      "target": "file:backend/app/db/base.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/book/service.py",
+      "target": "file:backend/app/modules/book/compiler.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/book/service.py",
+      "target": "file:backend/app/modules/book/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/book/service.py",
+      "target": "file:backend/app/modules/learning/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/book/service.py",
+      "target": "file:backend/app/modules/users/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/book/service.py",
+      "target": "function:backend/app/modules/book/service.py:get_lesson_book_service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/book/service.py",
+      "target": "function:backend/app/modules/book/service.py:get_lesson_book_service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/book/service.py",
+      "target": "class:backend/app/modules/book/service.py:LessonBookService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/book/service.py",
+      "target": "class:backend/app/modules/book/service.py:LessonBookService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/classroom/models.py",
+      "target": "file:backend/app/db/base.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/classroom/models.py",
+      "target": "class:backend/app/modules/extensions/classroom/models.py:ClassroomGrant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/classroom/models.py",
+      "target": "class:backend/app/modules/extensions/classroom/models.py:ClassroomGrant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/partners/models.py",
+      "target": "file:backend/app/db/base.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/partners/models.py",
+      "target": "class:backend/app/modules/extensions/partners/models.py:PartnerChannel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/partners/models.py",
+      "target": "class:backend/app/modules/extensions/partners/models.py:PartnerChannel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/partners/models.py",
+      "target": "class:backend/app/modules/extensions/partners/models.py:PartnerMessageLog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/partners/models.py",
+      "target": "class:backend/app/modules/extensions/partners/models.py:PartnerMessageLog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/partners/service.py",
+      "target": "file:backend/app/modules/extensions/partners/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/partners/service.py",
+      "target": "function:backend/app/modules/extensions/partners/service.py:get_partners_service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/partners/service.py",
+      "target": "function:backend/app/modules/extensions/partners/service.py:get_partners_service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/partners/service.py",
+      "target": "class:backend/app/modules/extensions/partners/service.py:PartnersService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/partners/service.py",
+      "target": "class:backend/app/modules/extensions/partners/service.py:PartnersService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/visualize/service.py",
+      "target": "file:backend/app/db/base.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/visualize/service.py",
+      "target": "file:backend/app/modules/learning/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/visualize/service.py",
+      "target": "file:backend/app/modules/notebook/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/visualize/service.py",
+      "target": "function:backend/app/modules/extensions/visualize/service.py:get_visualize_service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/visualize/service.py",
+      "target": "function:backend/app/modules/extensions/visualize/service.py:get_visualize_service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/visualize/service.py",
+      "target": "class:backend/app/modules/extensions/visualize/service.py:VisualizeService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/visualize/service.py",
+      "target": "class:backend/app/modules/extensions/visualize/service.py:VisualizeService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/bm25.py",
+      "target": "function:backend/app/modules/knowledge/bm25.py:tokenize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/bm25.py",
+      "target": "function:backend/app/modules/knowledge/bm25.py:tokenize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/bm25.py",
+      "target": "function:backend/app/modules/knowledge/bm25.py:term_frequencies",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/bm25.py",
+      "target": "function:backend/app/modules/knowledge/bm25.py:term_frequencies",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/bm25.py",
+      "target": "function:backend/app/modules/knowledge/bm25.py:bm25_score",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/bm25.py",
+      "target": "function:backend/app/modules/knowledge/bm25.py:bm25_score",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/cefr_filters.py",
+      "target": "file:backend/app/modules/learning/engine.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/cefr_filters.py",
+      "target": "function:backend/app/modules/knowledge/cefr_filters.py:rank_bounds_for_cefr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/cefr_filters.py",
+      "target": "function:backend/app/modules/knowledge/cefr_filters.py:rank_bounds_for_cefr",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/cefr_filters.py",
+      "target": "function:backend/app/modules/knowledge/cefr_filters.py:chunk_matches_cefr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/cefr_filters.py",
+      "target": "function:backend/app/modules/knowledge/cefr_filters.py:chunk_matches_cefr",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/fts_search.py",
+      "target": "file:backend/app/modules/knowledge/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/fts_search.py",
+      "target": "file:backend/app/modules/knowledge/search_cache.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/fts_search.py",
+      "target": "function:backend/app/modules/knowledge/fts_search.py:fts_search_chunks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/fts_search.py",
+      "target": "function:backend/app/modules/knowledge/fts_search.py:fts_search_chunks",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/models.py",
+      "target": "file:backend/app/db/base.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/models.py",
+      "target": "class:backend/app/modules/knowledge/models.py:KnowledgeBase",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/models.py",
+      "target": "class:backend/app/modules/knowledge/models.py:KnowledgeBase",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/models.py",
+      "target": "class:backend/app/modules/knowledge/models.py:KnowledgeChunk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/models.py",
+      "target": "class:backend/app/modules/knowledge/models.py:KnowledgeChunk",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "file:backend/app/modules/knowledge/bm25.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "file:backend/app/modules/knowledge/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "function:backend/app/modules/knowledge/search_cache.py:_stats_revision",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "function:backend/app/modules/knowledge/search_cache.py:_stats_revision",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "function:backend/app/modules/knowledge/search_cache.py:_snapshot_from_chunk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "function:backend/app/modules/knowledge/search_cache.py:_snapshot_from_chunk",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "function:backend/app/modules/knowledge/search_cache.py:_indexed_from_chunk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "function:backend/app/modules/knowledge/search_cache.py:_indexed_from_chunk",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "function:backend/app/modules/knowledge/search_cache.py:_redis_search_key",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "function:backend/app/modules/knowledge/search_cache.py:_redis_search_key",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "function:backend/app/modules/knowledge/search_cache.py:_serialize_search_results",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "function:backend/app/modules/knowledge/search_cache.py:_serialize_search_results",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "function:backend/app/modules/knowledge/search_cache.py:_deserialize_search_results",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "function:backend/app/modules/knowledge/search_cache.py:_deserialize_search_results",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "function:backend/app/modules/knowledge/search_cache.py:_get_redis_search_cache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "function:backend/app/modules/knowledge/search_cache.py:_get_redis_search_cache",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "function:backend/app/modules/knowledge/search_cache.py:_set_redis_search_cache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "function:backend/app/modules/knowledge/search_cache.py:_set_redis_search_cache",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "function:backend/app/modules/knowledge/search_cache.py:_invalidate_kb_redis",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "function:backend/app/modules/knowledge/search_cache.py:_invalidate_kb_redis",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "function:backend/app/modules/knowledge/search_cache.py:get_knowledge_search_cache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "function:backend/app/modules/knowledge/search_cache.py:get_knowledge_search_cache",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "class:backend/app/modules/knowledge/search_cache.py:KnowledgeChunkSnapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "class:backend/app/modules/knowledge/search_cache.py:KnowledgeChunkSnapshot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "class:backend/app/modules/knowledge/search_cache.py:_IndexedChunk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "class:backend/app/modules/knowledge/search_cache.py:_IndexedChunk",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "class:backend/app/modules/knowledge/search_cache.py:Bm25Index",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "class:backend/app/modules/knowledge/search_cache.py:Bm25Index",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "class:backend/app/modules/knowledge/search_cache.py:KnowledgeSearchCache",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/search_cache.py",
+      "target": "class:backend/app/modules/knowledge/search_cache.py:KnowledgeSearchCache",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/service.py",
+      "target": "file:backend/app/core/config.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/service.py",
+      "target": "file:backend/app/modules/knowledge/bm25.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/service.py",
+      "target": "file:backend/app/modules/knowledge/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/service.py",
+      "target": "file:backend/app/modules/knowledge/search_cache.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/service.py",
+      "target": "function:backend/app/modules/knowledge/service.py:_sha256",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/service.py",
+      "target": "function:backend/app/modules/knowledge/service.py:_sha256",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/service.py",
+      "target": "function:backend/app/modules/knowledge/service.py:_now",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/service.py",
+      "target": "function:backend/app/modules/knowledge/service.py:_now",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/service.py",
+      "target": "function:backend/app/modules/knowledge/service.py:_word_entry_to_text",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/service.py",
+      "target": "function:backend/app/modules/knowledge/service.py:_word_entry_to_text",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/service.py",
+      "target": "function:backend/app/modules/knowledge/service.py:_load_file_chunks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/service.py",
+      "target": "function:backend/app/modules/knowledge/service.py:_load_file_chunks",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/service.py",
+      "target": "function:backend/app/modules/knowledge/service.py:get_knowledge_service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/service.py",
+      "target": "function:backend/app/modules/knowledge/service.py:get_knowledge_service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/service.py",
+      "target": "class:backend/app/modules/knowledge/service.py:SearchHit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/service.py",
+      "target": "class:backend/app/modules/knowledge/service.py:SearchHit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/service.py",
+      "target": "class:backend/app/modules/knowledge/service.py:KnowledgeService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/service.py",
+      "target": "class:backend/app/modules/knowledge/service.py:KnowledgeService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "file:backend/app/db/base.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "file:backend/app/db/session.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "file:backend/app/modules/auth/dependencies.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "file:backend/app/modules/learning/engine.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "file:backend/app/modules/learning/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "file:backend/app/modules/learning/response_cache.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "file:backend/app/modules/stories/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "file:backend/app/modules/users/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "file:backend/app/shared/schemas.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "function:backend/app/modules/learning/api.py:build_levels_payload",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "function:backend/app/modules/learning/api.py:build_levels_payload",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "function:backend/app/modules/learning/api.py:_apply_levels_cache_headers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "function:backend/app/modules/learning/api.py:_apply_levels_cache_headers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "function:backend/app/modules/learning/api.py:get_levels",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "function:backend/app/modules/learning/api.py:get_levels",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "function:backend/app/modules/learning/api.py:list_words",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "function:backend/app/modules/learning/api.py:list_words",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "function:backend/app/modules/learning/api.py:generate_story_route",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "function:backend/app/modules/learning/api.py:generate_story_route",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "function:backend/app/modules/learning/api.py:get_story",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "function:backend/app/modules/learning/api.py:get_story",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "function:backend/app/modules/learning/api.py:update_progress",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "function:backend/app/modules/learning/api.py:update_progress",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "function:backend/app/modules/learning/api.py:progress_summary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/api.py",
+      "target": "function:backend/app/modules/learning/api.py:progress_summary",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "file:backend/app/core/config.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "file:backend/app/db/base.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "file:backend/app/modules/learning/mastery/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "file:backend/app/modules/learning/mastery/scheduler.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "file:backend/app/modules/learning/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "file:backend/app/modules/stories/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "function:backend/app/modules/learning/engine.py:level_for_rank",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "function:backend/app/modules/learning/engine.py:level_for_rank",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "function:backend/app/modules/learning/engine.py:get_level_definitions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "function:backend/app/modules/learning/engine.py:get_level_definitions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "function:backend/app/modules/learning/engine.py:_normalize_word",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "function:backend/app/modules/learning/engine.py:_normalize_word",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "function:backend/app/modules/learning/engine.py:_pick_title",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "function:backend/app/modules/learning/engine.py:_pick_title",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "function:backend/app/modules/learning/engine.py:_compose_story",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "function:backend/app/modules/learning/engine.py:_compose_story",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "function:backend/app/modules/learning/engine.py:ensure_words_seeded",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "function:backend/app/modules/learning/engine.py:ensure_words_seeded",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "function:backend/app/modules/learning/engine.py:level_counts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "function:backend/app/modules/learning/engine.py:level_counts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "function:backend/app/modules/learning/engine.py:_pick_diverse_words",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "function:backend/app/modules/learning/engine.py:_pick_diverse_words",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "function:backend/app/modules/learning/engine.py:pick_story_words",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "function:backend/app/modules/learning/engine.py:pick_story_words",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "function:backend/app/modules/learning/engine.py:generate_story",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "function:backend/app/modules/learning/engine.py:generate_story",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "function:backend/app/modules/learning/engine.py:update_word_progress",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "function:backend/app/modules/learning/engine.py:update_word_progress",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "class:backend/app/modules/learning/engine.py:StoryPackage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/engine.py",
+      "target": "class:backend/app/modules/learning/engine.py:StoryPackage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/grading.py",
+      "target": "file:backend/app/modules/learning/mastery/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/grading.py",
+      "target": "function:backend/app/modules/learning/mastery/grading.py:grade_answer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/grading.py",
+      "target": "function:backend/app/modules/learning/mastery/grading.py:grade_answer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/grading.py",
+      "target": "function:backend/app/modules/learning/mastery/grading.py:classify_error",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/grading.py",
+      "target": "function:backend/app/modules/learning/mastery/grading.py:classify_error",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/mastery.py",
+      "target": "function:backend/app/modules/learning/mastery/mastery.py:compute_mastery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/mastery.py",
+      "target": "function:backend/app/modules/learning/mastery/mastery.py:compute_mastery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:KnowledgeType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:KnowledgeType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:ErrorType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:ErrorType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:LearningStage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:LearningStage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:DrillTemplate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:DrillTemplate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:KnowledgePoint",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:KnowledgePoint",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:LearningModule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:LearningModule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:QuizAttempt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:QuizAttempt",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:RetryAttempt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:RetryAttempt",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:ErrorRecord",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:ErrorRecord",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:RepetitionState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:RepetitionState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:ReviewTask",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:ReviewTask",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:PendingQuestion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:PendingQuestion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:LearningProgress",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/models.py",
+      "target": "class:backend/app/modules/learning/mastery/models.py:LearningProgress",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/policy.py",
+      "target": "file:backend/app/modules/learning/mastery/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/policy.py",
+      "target": "function:backend/app/modules/learning/mastery/policy.py:gate_threshold",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/policy.py",
+      "target": "function:backend/app/modules/learning/mastery/policy.py:gate_threshold",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/policy.py",
+      "target": "function:backend/app/modules/learning/mastery/policy.py:is_mastered",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/policy.py",
+      "target": "function:backend/app/modules/learning/mastery/policy.py:is_mastered",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/policy.py",
+      "target": "function:backend/app/modules/learning/mastery/policy.py:display_mastery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/policy.py",
+      "target": "function:backend/app/modules/learning/mastery/policy.py:display_mastery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/policy.py",
+      "target": "function:backend/app/modules/learning/mastery/policy.py:objective_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/policy.py",
+      "target": "function:backend/app/modules/learning/mastery/policy.py:objective_status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/policy.py",
+      "target": "function:backend/app/modules/learning/mastery/policy.py:due_reviews",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/policy.py",
+      "target": "function:backend/app/modules/learning/mastery/policy.py:due_reviews",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/policy.py",
+      "target": "function:backend/app/modules/learning/mastery/policy.py:find_knowledge_point",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/policy.py",
+      "target": "function:backend/app/modules/learning/mastery/policy.py:find_knowledge_point",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/policy.py",
+      "target": "function:backend/app/modules/learning/mastery/policy.py:_gate_kind",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/policy.py",
+      "target": "function:backend/app/modules/learning/mastery/policy.py:_gate_kind",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/policy.py",
+      "target": "function:backend/app/modules/learning/mastery/policy.py:next_objective",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/policy.py",
+      "target": "function:backend/app/modules/learning/mastery/policy.py:next_objective",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/policy.py",
+      "target": "function:backend/app/modules/learning/mastery/policy.py:map_summary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/policy.py",
+      "target": "function:backend/app/modules/learning/mastery/policy.py:map_summary",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/policy.py",
+      "target": "function:backend/app/modules/learning/mastery/policy.py:level_gate_complete",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/policy.py",
+      "target": "function:backend/app/modules/learning/mastery/policy.py:level_gate_complete",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/policy.py",
+      "target": "class:backend/app/modules/learning/mastery/policy.py:NextStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/policy.py",
+      "target": "class:backend/app/modules/learning/mastery/policy.py:NextStep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/repository.py",
+      "target": "file:backend/app/db/base.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/repository.py",
+      "target": "file:backend/app/modules/learning/mastery/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/repository.py",
+      "target": "file:backend/app/modules/learning/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/repository.py",
+      "target": "class:backend/app/modules/learning/mastery/repository.py:MasteryRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/repository.py",
+      "target": "class:backend/app/modules/learning/mastery/repository.py:MasteryRepository",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/runtime.py",
+      "target": "file:backend/app/db/base.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/runtime.py",
+      "target": "file:backend/app/modules/learning/engine.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/runtime.py",
+      "target": "file:backend/app/modules/learning/mastery/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/runtime.py",
+      "target": "file:backend/app/modules/learning/mastery/policy.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/runtime.py",
+      "target": "file:backend/app/modules/learning/mastery/repository.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/runtime.py",
+      "target": "file:backend/app/modules/learning/mastery/service.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/runtime.py",
+      "target": "file:backend/app/modules/learning/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/runtime.py",
+      "target": "function:backend/app/modules/learning/mastery/runtime.py:get_mastery_runtime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/runtime.py",
+      "target": "function:backend/app/modules/learning/mastery/runtime.py:get_mastery_runtime",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/runtime.py",
+      "target": "class:backend/app/modules/learning/mastery/runtime.py:MasteryPathRuntime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/runtime.py",
+      "target": "class:backend/app/modules/learning/mastery/runtime.py:MasteryPathRuntime",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/scheduler.py",
+      "target": "file:backend/app/modules/learning/mastery/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/scheduler.py",
+      "target": "class:backend/app/modules/learning/mastery/scheduler.py:SpacedRepetitionScheduler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/learning/mastery/scheduler.py",
+      "target": "class:backend/app/modules/learning/mastery/scheduler.py:SpacedRepetitionScheduler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

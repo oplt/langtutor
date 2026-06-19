@@ -113,9 +113,13 @@ async def generate_llm_quiz(
         )
         parsed = _parse_llm_questions(response.content, words)
         return parsed[:count]
-    except Exception:
+    except Exception as exc:
         logger.exception("LLM quiz generation failed")
-        return []
+        raise QuizGenerationError("llm_quiz_generation_failed") from exc
+
+
+class QuizGenerationError(RuntimeError):
+    """LLM quiz generation failed; callers may fall back to templates."""
 
 
 async def judge_with_llm(
@@ -176,7 +180,7 @@ def _verdict_from_text(text: str) -> str:
         return "partial"
     if "✅" in text or "correct" in lowered:
         return "correct"
-    return "partial"
+    return "incorrect"
 
 
 def grade_deterministic(

@@ -1,11 +1,13 @@
 # backend/db/session.py
 from __future__ import annotations
 
-import logging  # <-- ADD THIS IMPORT
+import logging
 from contextlib import asynccontextmanager
 from typing import AsyncIterator
 
-from sqlalchemy import text  # <-- ADD THIS IMPORT
+from fastapi import HTTPException
+from fastapi.exceptions import RequestValidationError
+from sqlalchemy import text
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.ext.asyncio import AsyncEngine, AsyncSession, async_sessionmaker, create_async_engine
 
@@ -14,9 +16,13 @@ from backend.app.core.exceptions import AppError
 from backend.app.core.logging import configure_logging
 import backend.app.db.model_registry  # noqa: F401 -- load model classes for SQLAlchemy relationships
 
-# <-- ADD THIS LOGGER
 configure_logging()
 logger = logging.getLogger(__name__)
+
+
+def is_expected_client_error(exc: BaseException) -> bool:
+    """HTTP/validation/app errors that should rollback quietly without error tracebacks."""
+    return isinstance(exc, (HTTPException, RequestValidationError, AppError))
 
 
 def build_engine() -> AsyncEngine:
@@ -77,9 +83,15 @@ async def session_scope() -> AsyncIterator[AsyncSession]:
         try:
             yield session
             await session.commit()
-        except Exception:
-            logger.warning("Session rollback in session_scope", exc_info=True)
+        except Exception as exc:
             await session.rollback()
+            if is_expected_client_error(exc):
+                logger.debug(
+                    "Session rollback in session_scope",
+                    extra={"reason": exc.__class__.__name__},
+                )
+            else:
+                logger.warning("Session rollback in session_scope", exc_info=True)
             raise
 
 
@@ -96,9 +108,14 @@ async def get_db() -> AsyncIterator[AsyncSession]:
             yield session
             await session.commit()
         except Exception as exc:
-            if exc.__class__.__name__ != "HTTPException":
-                logger.warning("Session rollback in get_db", exc_info=True)
             await session.rollback()
+            if is_expected_client_error(exc):
+                logger.debug(
+                    "Session rollback in get_db",
+                    extra={"reason": exc.__class__.__name__},
+                )
+            else:
+                logger.warning("Session rollback in get_db", exc_info=True)
             raise
 
 

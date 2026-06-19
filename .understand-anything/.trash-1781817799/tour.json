@@ -1,0 +1,97 @@
+[
+  {
+    "order": 1,
+    "title": "Project Overview",
+    "description": "Start with README for purpose, stack, and local dev setup.",
+    "nodeIds": [
+      "document:README.md"
+    ]
+  },
+  {
+    "order": 2,
+    "title": "Backend Entry Point",
+    "description": "FastAPI app factory, middleware, lifespan warmup, health routes.",
+    "nodeIds": [
+      "file:backend/app/main.py",
+      "file:backend/app/bootstrap/routes.py",
+      "file:backend/app/bootstrap/startup.py"
+    ]
+  },
+  {
+    "order": 3,
+    "title": "Frontend Bootstrap",
+    "description": "Vite React entry, routing, auth provider, React Query client.",
+    "nodeIds": [
+      "file:frontend/src/main.tsx",
+      "file:frontend/src/App.tsx",
+      "file:frontend/src/context/AuthContext.tsx"
+    ]
+  },
+  {
+    "order": 4,
+    "title": "Tutor Turn Flow",
+    "description": "HTTP and WebSocket tutor execution, agent orchestrator, turn persistence.",
+    "nodeIds": [
+      "file:backend/app/modules/tutor/application/tutor_turn_service.py",
+      "file:backend/app/modules/tutor/turn_runtime.py",
+      "file:backend/app/modules/agent/chat/pipeline.py",
+      "file:backend/app/modules/agent/loop/runner.py"
+    ]
+  },
+  {
+    "order": 5,
+    "title": "Knowledge Search",
+    "description": "BM25 Dutch corpus, optional PostgreSQL FTS, search cache.",
+    "nodeIds": [
+      "file:backend/app/modules/knowledge/service.py",
+      "file:backend/app/modules/knowledge/search_cache.py"
+    ]
+  },
+  {
+    "order": 6,
+    "title": "User Document RAG",
+    "description": "Upload, chunk, embed, pgvector retrieval, answer synthesis.",
+    "nodeIds": [
+      "file:backend/app/modules/rag/application/retrieval_service.py",
+      "file:backend/app/modules/rag/infrastructure/pgvector_adapter.py",
+      "file:backend/app/modules/rag/api/routes.py"
+    ]
+  },
+  {
+    "order": 7,
+    "title": "Learner Memory",
+    "description": "L2 traces and L3 profile slots, synthesis tasks, context injection.",
+    "nodeIds": [
+      "file:backend/app/modules/memory/service.py",
+      "file:backend/app/modules/memory/context_loader.py"
+    ]
+  },
+  {
+    "order": 8,
+    "title": "Learning Modules",
+    "description": "Quizzes, mastery path, progress tracking, story sessions.",
+    "nodeIds": [
+      "file:backend/app/modules/learning/api.py",
+      "file:frontend/src/modules/learning/hooks/useLearningQueries.ts"
+    ]
+  },
+  {
+    "order": 9,
+    "title": "Dashboard UI",
+    "description": "Main dashboard shell, tabs, tutor chat panel, settings.",
+    "nodeIds": [
+      "file:frontend/src/pages/dashboard/Dashboard.tsx",
+      "file:frontend/src/modules/tutor/components/TutorChatPanel.tsx"
+    ]
+  },
+  {
+    "order": 10,
+    "title": "LLM Integration",
+    "description": "Task clients, retries, circuit breaker, provider registry.",
+    "nodeIds": [
+      "file:backend/app/modules/llm/service.py",
+      "file:backend/app/modules/llm/retry.py",
+      "file:backend/app/modules/ai/service.py"
+    ]
+  }
+]

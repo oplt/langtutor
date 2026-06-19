@@ -66,6 +66,7 @@ export function MasteryPathPanel() {
       description="Structured drills aligned to your CEFR level."
       loading={mapQuery.isLoading && !map}
       error={loadError}
+      actionError={error}
       onRetry={refresh}
     >
       <Stack spacing={2}>
@@ -84,7 +85,6 @@ export function MasteryPathPanel() {
         </Button>
       </Stack>
 
-      {error && <Alert severity="error">{error}</Alert>}
       {feedback && <Alert severity="info">{feedback}</Alert>}
 
       {map && (
@@ -142,12 +142,17 @@ export function MasteryPathPanel() {
               fullWidth
               placeholder="Your answer"
               value={answer}
+              helperText={!answer.trim() ? "Enter an answer before checking." : undefined}
               onChange={(e) => setAnswer(e.target.value)}
               onKeyDown={(e) => {
-                if (e.key === "Enter") void submit();
+                if (e.key === "Enter" && answer.trim()) void submit();
               }}
             />
-            <Button variant="contained" onClick={() => void submit()} disabled={loading}>
+            <Button
+              variant="contained"
+              onClick={() => void submit()}
+              disabled={loading || !answer.trim()}
+            >
               Check
             </Button>
           </Stack>

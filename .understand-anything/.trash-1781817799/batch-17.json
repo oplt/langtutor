@@ -1,0 +1,71 @@
+{
+  "nodes": [
+    {
+      "id": "config:backend/app/modules/book/spines/a1.json",
+      "type": "config",
+      "name": "a1.json",
+      "filePath": "backend/app/modules/book/spines/a1.json",
+      "summary": "config file; json.",
+      "tags": [
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:backend/app/modules/book/spines/a2.json",
+      "type": "config",
+      "name": "a2.json",
+      "filePath": "backend/app/modules/book/spines/a2.json",
+      "summary": "config file; json.",
+      "tags": [
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:backend/app/modules/book/spines/b1.json",
+      "type": "config",
+      "name": "b1.json",
+      "filePath": "backend/app/modules/book/spines/b1.json",
+      "summary": "config file; json.",
+      "tags": [
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:backend/app/modules/book/spines/b2.json",
+      "type": "config",
+      "name": "b2.json",
+      "filePath": "backend/app/modules/book/spines/b2.json",
+      "summary": "config file; json.",
+      "tags": [
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:backend/app/modules/book/spines/c1.json",
+      "type": "config",
+      "name": "c1.json",
+      "filePath": "backend/app/modules/book/spines/c1.json",
+      "summary": "config file; json.",
+      "tags": [
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:backend/app/modules/book/spines/c2.json",
+      "type": "config",
+      "name": "c2.json",
+      "filePath": "backend/app/modules/book/spines/c2.json",
+      "summary": "config file; json.",
+      "tags": [
+        "configuration"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

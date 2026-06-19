@@ -1,0 +1,272 @@
+{
+  "projectRoot": "/home/polat/Desktop/Projects/LanguageApp",
+  "batchFiles": [
+    {
+      "path": "backend/app/core/background.py",
+      "language": "python",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/core/config.py",
+      "language": "python",
+      "sizeLines": 129,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/core/config_validation.py",
+      "language": "python",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/core/health.py",
+      "language": "python",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/core/logging.py",
+      "language": "python",
+      "sizeLines": 184,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/core/rate_limit.py",
+      "language": "python",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/core/redis.py",
+      "language": "python",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/core/redis_json.py",
+      "language": "python",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/core/redis_lock.py",
+      "language": "python",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/core/redis_registry.py",
+      "language": "python",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/core/tracing.py",
+      "language": "python",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/main.py",
+      "language": "python",
+      "sizeLines": 252,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/auth/google_oauth.py",
+      "language": "python",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/auth/oauth_state.py",
+      "language": "python",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/extensions/sandbox/service.py",
+      "language": "python",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/rag/api/routes.py",
+      "language": "python",
+      "sizeLines": 362,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/rag/api/schemas.py",
+      "language": "python",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/rag/application/chunking_service.py",
+      "language": "python",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/rag/application/citation_service.py",
+      "language": "python",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/rag/application/document_ingestion_service.py",
+      "language": "python",
+      "sizeLines": 322,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/rag/application/document_parser_service.py",
+      "language": "python",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/rag/application/embedding_cache.py",
+      "language": "python",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/rag/application/embedding_service.py",
+      "language": "python",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/rag/application/indexing_tasks.py",
+      "language": "python",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/rag/application/rag_context_builder.py",
+      "language": "python",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "backend/app/core/background.py": [
+      "backend/app/core/logging.py"
+    ],
+    "backend/app/core/config.py": [],
+    "backend/app/core/config_validation.py": [
+      "backend/app/core/config.py",
+      "backend/app/core/logging.py"
+    ],
+    "backend/app/core/health.py": [
+      "backend/app/core/config.py",
+      "backend/app/core/logging.py",
+      "backend/app/core/redis_registry.py",
+      "backend/app/db/session.py"
+    ],
+    "backend/app/core/logging.py": [
+      "backend/app/core/config.py",
+      "backend/app/core/logging.py"
+    ],
+    "backend/app/core/rate_limit.py": [],
+    "backend/app/core/redis.py": [
+      "backend/app/core/config.py",
+      "backend/app/core/logging.py"
+    ],
+    "backend/app/core/redis_json.py": [
+      "backend/app/core/logging.py"
+    ],
+    "backend/app/core/redis_lock.py": [
+      "backend/app/core/logging.py"
+    ],
+    "backend/app/core/redis_registry.py": [],
+    "backend/app/core/tracing.py": [
+      "backend/app/core/config.py",
+      "backend/app/core/logging.py"
+    ],
+    "backend/app/main.py": [
+      "backend/app/bootstrap/routes.py",
+      "backend/app/bootstrap/startup.py",
+      "backend/app/core/background.py",
+      "backend/app/core/config_validation.py",
+      "backend/app/core/config.py",
+      "backend/app/core/exceptions.py",
+      "backend/app/core/health.py",
+      "backend/app/core/logging.py",
+      "backend/app/core/metrics.py",
+      "backend/app/core/rate_limit.py",
+      "backend/app/core/redis.py",
+      "backend/app/core/tracing.py",
+      "backend/app/db/session.py",
+      "backend/app/modules/ai/service.py"
+    ],
+    "backend/app/modules/auth/google_oauth.py": [
+      "backend/app/core/config.py"
+    ],
+    "backend/app/modules/auth/oauth_state.py": [
+      "backend/app/core/redis_json.py"
+    ],
+    "backend/app/modules/extensions/sandbox/service.py": [
+      "backend/app/core/config.py"
+    ],
+    "backend/app/modules/rag/api/routes.py": [
+      "backend/app/core/background.py",
+      "backend/app/core/config.py",
+      "backend/app/db/session.py",
+      "backend/app/deps.py",
+      "backend/app/modules/auth/dependencies.py",
+      "backend/app/modules/rag/api/schemas.py",
+      "backend/app/modules/rag/application/document_ingestion_service.py",
+      "backend/app/modules/rag/application/indexing_tasks.py",
+      "backend/app/modules/rag/application/retrieval_service.py",
+      "backend/app/modules/rag/domain/value_objects.py",
+      "backend/app/modules/rag/infrastructure/repositories.py",
+      "backend/app/modules/users/models.py"
+    ],
+    "backend/app/modules/rag/api/schemas.py": [],
+    "backend/app/modules/rag/application/chunking_service.py": [
+      "backend/app/modules/rag/domain/models.py",
+      "backend/app/modules/rag/infrastructure/langchain_text_splitters.py"
+    ],
+    "backend/app/modules/rag/application/citation_service.py": [
+      "backend/app/modules/rag/domain/models.py"
+    ],
+    "backend/app/modules/rag/application/document_ingestion_service.py": [
+      "backend/app/core/config.py",
+      "backend/app/db/session.py",
+      "backend/app/modules/rag/application/chunking_service.py",
+      "backend/app/modules/rag/application/document_parser_service.py",
+      "backend/app/modules/rag/application/embedding_service.py",
+      "backend/app/modules/rag/application/rag_policy_service.py",
+      "backend/app/modules/rag/domain/enums.py",
+      "backend/app/modules/rag/domain/models.py",
+      "backend/app/modules/rag/domain/value_objects.py",
+      "backend/app/modules/rag/infrastructure/file_storage_adapter.py",
+      "backend/app/modules/rag/infrastructure/pgvector_adapter.py",
+      "backend/app/modules/rag/infrastructure/repositories.py",
+      "backend/app/modules/rag/infrastructure/sqlalchemy_models.py"
+    ],
+    "backend/app/modules/rag/application/document_parser_service.py": [
+      "backend/app/core/config.py",
+      "backend/app/modules/rag/domain/models.py",
+      "backend/app/modules/rag/infrastructure/langchain_document_loaders.py"
+    ],
+    "backend/app/modules/rag/application/embedding_cache.py": [
+      "backend/app/core/config.py",
+      "backend/app/core/redis_json.py"
+    ],
+    "backend/app/modules/rag/application/embedding_service.py": [
+      "backend/app/modules/rag/infrastructure/langchain_embeddings.py"
+    ],
+    "backend/app/modules/rag/application/indexing_tasks.py": [
+      "backend/app/core/redis_lock.py",
+      "backend/app/modules/rag/application/document_ingestion_service.py"
+    ],
+    "backend/app/modules/rag/application/rag_context_builder.py": [
+      "backend/app/modules/rag/domain/models.py"
+    ]
+  }
+}

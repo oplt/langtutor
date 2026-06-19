@@ -1,0 +1,341 @@
+{
+  "projectRoot": "/home/polat/Desktop/Projects/LanguageApp",
+  "batchFiles": [
+    {
+      "path": "backend/app/modules/agent/capabilities/chat.py",
+      "language": "python",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/agent/capabilities/deep_research.py",
+      "language": "python",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/agent/capabilities/deep_solve.py",
+      "language": "python",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/agent/capabilities/mastery_path.py",
+      "language": "python",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/agent/capabilities/visualize.py",
+      "language": "python",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/agent/chat/pipeline.py",
+      "language": "python",
+      "sizeLines": 172,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/agent/core/context.py",
+      "language": "python",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/agent/core/protocols.py",
+      "language": "python",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/agent/core/stream_bus.py",
+      "language": "python",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/agent/db_session.py",
+      "language": "python",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/agent/loop/runner.py",
+      "language": "python",
+      "sizeLines": 207,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/agent/runtime/bootstrap.py",
+      "language": "python",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/agent/runtime/registry.py",
+      "language": "python",
+      "sizeLines": 93,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/agent/tools/ask_user.py",
+      "language": "python",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/agent/tools/knowledge.py",
+      "language": "python",
+      "sizeLines": 105,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/agent/tools/mastery.py",
+      "language": "python",
+      "sizeLines": 97,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/agent/tools/memory.py",
+      "language": "python",
+      "sizeLines": 120,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/agent/tools/notebook.py",
+      "language": "python",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/agent/tools/rag_search.py",
+      "language": "python",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/agent/tools/sandbox_eval.py",
+      "language": "python",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/agent/tools/vision_ocr.py",
+      "language": "python",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/extensions/plugins/tools.py",
+      "language": "python",
+      "sizeLines": 116,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/extensions/vision/service.py",
+      "language": "python",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/persona/api.py",
+      "language": "python",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/persona/schemas.py",
+      "language": "python",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/persona/service.py",
+      "language": "python",
+      "sizeLines": 141,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/tests/test_agent_db_session.py",
+      "language": "python",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/tests/test_capability_registry.py",
+      "language": "python",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/tests/test_chat_pipeline.py",
+      "language": "python",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "backend/app/modules/agent/capabilities/chat.py": [
+      "backend/app/modules/agent/chat/pipeline.py",
+      "backend/app/modules/agent/core/context.py",
+      "backend/app/modules/agent/core/protocols.py",
+      "backend/app/modules/agent/core/stream_bus.py"
+    ],
+    "backend/app/modules/agent/capabilities/deep_research.py": [
+      "backend/app/modules/agent/capabilities/chat.py",
+      "backend/app/modules/agent/chat/pipeline.py",
+      "backend/app/modules/agent/core/context.py",
+      "backend/app/modules/agent/core/stream_bus.py"
+    ],
+    "backend/app/modules/agent/capabilities/deep_solve.py": [
+      "backend/app/modules/agent/capabilities/chat.py",
+      "backend/app/modules/agent/chat/pipeline.py",
+      "backend/app/modules/agent/core/context.py",
+      "backend/app/modules/agent/core/stream_bus.py"
+    ],
+    "backend/app/modules/agent/capabilities/mastery_path.py": [
+      "backend/app/modules/agent/capabilities/chat.py",
+      "backend/app/modules/agent/chat/pipeline.py",
+      "backend/app/modules/agent/core/context.py",
+      "backend/app/modules/agent/core/stream_bus.py"
+    ],
+    "backend/app/modules/agent/capabilities/visualize.py": [
+      "backend/app/modules/agent/core/context.py",
+      "backend/app/modules/agent/core/protocols.py",
+      "backend/app/modules/agent/core/stream_bus.py",
+      "backend/app/modules/agent/db_session.py",
+      "backend/app/modules/extensions/visualize/service.py"
+    ],
+    "backend/app/modules/agent/chat/pipeline.py": [
+      "backend/app/core/config.py",
+      "backend/app/modules/agent/chat/playbook.py",
+      "backend/app/modules/agent/core/context.py",
+      "backend/app/modules/agent/core/stream_bus.py",
+      "backend/app/modules/agent/db_session.py",
+      "backend/app/modules/agent/loop/runner.py",
+      "backend/app/modules/agent/runtime/registry.py",
+      "backend/app/modules/ai/service.py",
+      "backend/app/modules/llm/service.py",
+      "backend/app/modules/persona/service.py",
+      "backend/app/modules/skills/service.py"
+    ],
+    "backend/app/modules/agent/core/context.py": [],
+    "backend/app/modules/agent/core/protocols.py": [
+      "backend/app/modules/agent/core/context.py",
+      "backend/app/modules/agent/core/stream_bus.py"
+    ],
+    "backend/app/modules/agent/core/stream_bus.py": [
+      "backend/app/modules/agent/core/stream.py"
+    ],
+    "backend/app/modules/agent/db_session.py": [
+      "backend/app/modules/agent/core/context.py"
+    ],
+    "backend/app/modules/agent/loop/runner.py": [
+      "backend/app/modules/agent/core/context.py",
+      "backend/app/modules/agent/core/protocols.py",
+      "backend/app/modules/agent/core/stream_bus.py",
+      "backend/app/modules/agent/core/stream.py",
+      "backend/app/modules/llm/base.py",
+      "backend/app/modules/llm/task_client.py"
+    ],
+    "backend/app/modules/agent/runtime/bootstrap.py": [
+      "backend/app/modules/agent/capabilities/chat.py",
+      "backend/app/modules/agent/capabilities/deep_research.py",
+      "backend/app/modules/agent/capabilities/deep_solve.py",
+      "backend/app/modules/agent/capabilities/mastery_path.py",
+      "backend/app/modules/agent/capabilities/visualize.py",
+      "backend/app/modules/agent/runtime/registry.py",
+      "backend/app/modules/agent/tools/ask_user.py",
+      "backend/app/modules/agent/tools/knowledge.py",
+      "backend/app/modules/agent/tools/mastery.py",
+      "backend/app/modules/agent/tools/memory.py",
+      "backend/app/modules/agent/tools/notebook.py",
+      "backend/app/modules/agent/tools/rag_search.py",
+      "backend/app/modules/agent/tools/sandbox_eval.py",
+      "backend/app/modules/agent/tools/vision_ocr.py",
+      "backend/app/modules/extensions/plugins/tools.py"
+    ],
+    "backend/app/modules/agent/runtime/registry.py": [
+      "backend/app/modules/agent/core/protocols.py"
+    ],
+    "backend/app/modules/agent/tools/ask_user.py": [
+      "backend/app/modules/agent/core/context.py",
+      "backend/app/modules/agent/core/protocols.py",
+      "backend/app/modules/agent/tools/ask_user_payload.py"
+    ],
+    "backend/app/modules/agent/tools/knowledge.py": [
+      "backend/app/modules/agent/core/context.py",
+      "backend/app/modules/agent/core/protocols.py",
+      "backend/app/modules/agent/db_session.py",
+      "backend/app/modules/knowledge/service.py"
+    ],
+    "backend/app/modules/agent/tools/mastery.py": [
+      "backend/app/modules/agent/core/context.py",
+      "backend/app/modules/agent/core/protocols.py",
+      "backend/app/modules/agent/db_session.py"
+    ],
+    "backend/app/modules/agent/tools/memory.py": [
+      "backend/app/modules/agent/core/context.py",
+      "backend/app/modules/agent/core/protocols.py",
+      "backend/app/modules/agent/db_session.py",
+      "backend/app/modules/memory/l3_cache.py",
+      "backend/app/modules/memory/service.py",
+      "backend/app/modules/memory/tasks.py",
+      "backend/app/modules/memory/types.py"
+    ],
+    "backend/app/modules/agent/tools/notebook.py": [
+      "backend/app/modules/agent/core/context.py",
+      "backend/app/modules/agent/core/protocols.py",
+      "backend/app/modules/agent/db_session.py",
+      "backend/app/modules/notebook/service.py"
+    ],
+    "backend/app/modules/agent/tools/rag_search.py": [
+      "backend/app/core/config.py",
+      "backend/app/modules/agent/core/context.py",
+      "backend/app/modules/agent/core/protocols.py",
+      "backend/app/modules/agent/db_session.py",
+      "backend/app/modules/rag/application/rag_context_builder.py",
+      "backend/app/modules/rag/application/retrieval_service.py",
+      "backend/app/modules/rag/domain/value_objects.py"
+    ],
+    "backend/app/modules/agent/tools/sandbox_eval.py": [
+      "backend/app/modules/agent/core/context.py",
+      "backend/app/modules/agent/core/protocols.py",
+      "backend/app/modules/extensions/sandbox/service.py"
+    ],
+    "backend/app/modules/agent/tools/vision_ocr.py": [
+      "backend/app/modules/agent/core/context.py",
+      "backend/app/modules/agent/core/protocols.py",
+      "backend/app/modules/extensions/vision/service.py"
+    ],
+    "backend/app/modules/extensions/plugins/tools.py": [
+      "backend/app/modules/agent/core/context.py",
+      "backend/app/modules/agent/core/protocols.py",
+      "backend/app/modules/agent/db_session.py"
+    ],
+    "backend/app/modules/extensions/vision/service.py": [],
+    "backend/app/modules/persona/api.py": [
+      "backend/app/modules/persona/schemas.py",
+      "backend/app/modules/persona/service.py"
+    ],
+    "backend/app/modules/persona/schemas.py": [],
+    "backend/app/modules/persona/service.py": [],
+    "backend/tests/test_agent_db_session.py": [
+      "backend/app/modules/agent/core/context.py",
+      "backend/app/modules/agent/db_session.py"
+    ],
+    "backend/tests/test_capability_registry.py": [
+      "backend/app/modules/agent/core/context.py",
+      "backend/app/modules/agent/core/protocols.py",
+      "backend/app/modules/agent/core/stream_bus.py",
+      "backend/app/modules/agent/runtime/registry.py"
+    ],
+    "backend/tests/test_chat_pipeline.py": [
+      "backend/app/modules/agent/chat/pipeline.py",
+      "backend/app/modules/agent/core/context.py",
+      "backend/app/modules/agent/core/stream_bus.py"
+    ]
+  }
+}

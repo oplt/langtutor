@@ -92,18 +92,7 @@ export default function AppAppBar() {
               </>
             ) : (
               <>
-                <Button color="primary" variant="text" size="small" href="#how-it-works">
-                  Method
-                </Button>
-                <Button color="primary" variant="text" size="small" href="#trust">
-                  Privacy
-                </Button>
-                <Button color="primary" variant="text" size="small" component={RouterLink} to="/#auth">
-                  Sign in
-                </Button>
-                <Button color="primary" variant="contained" size="small" component={RouterLink} to="/#auth-signup">
-                  Sign up
-                </Button>
+
               </>
             )}
           </Box>

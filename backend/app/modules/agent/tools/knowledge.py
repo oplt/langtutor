@@ -7,7 +7,7 @@ from backend.app.modules.agent.core.protocols import BaseTool, ToolResult
 from backend.app.modules.agent.db_session import get_bound_db_session, resolve_agent_db
 from backend.app.modules.knowledge.service import get_knowledge_service
 
-_KNOWLEDGE_MIN_SCORE = 0.35
+_DEFAULT_KNOWLEDGE_MIN_SCORE = 0.0  # service applies BM25/FTS-specific floor
 
 
 class SearchKnowledgeTool(BaseTool):
@@ -49,7 +49,7 @@ class SearchKnowledgeTool(BaseTool):
                 query=query,
                 top_k=top_k,
                 cefr_level=context.cefr_level,
-                min_score=_KNOWLEDGE_MIN_SCORE,
+                min_score=_DEFAULT_KNOWLEDGE_MIN_SCORE,
             )
             if get_bound_db_session(context) is None:
                 await db.commit()
@@ -92,14 +92,3 @@ class SearchKnowledgeTool(BaseTool):
             },
         )
 
-
-class RagTool(SearchKnowledgeTool):
-    """Legacy alias — models may still call `rag`."""
-
-    name = "rag"
-
-    async def execute(self, context: AgentContext, **kwargs: Any) -> ToolResult:
-        result = await super().execute(context, **kwargs)
-        if result.content.startswith("search_knowledge:"):
-            result.content = result.content.replace("search_knowledge:", "rag:", 1)
-        return result

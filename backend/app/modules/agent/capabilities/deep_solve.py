@@ -5,7 +5,7 @@ from backend.app.modules.agent.capabilities.chat import ChatCapability
 from backend.app.modules.agent.core.context import AgentContext
 from backend.app.modules.agent.core.stream_bus import StreamBus
 
-SOLVE_TOOLS = ["ask_user", "rag"]
+SOLVE_TOOLS = ["ask_user", "search_knowledge"]
 
 SOLVE_PROMPT = """
 ## Deep solve mode (grammar derivation)
@@ -17,7 +17,7 @@ Structure every answer as:
 4. **Common pitfalls** — one or two learner mistakes to avoid
 5. **Mini drill** — one follow-up prompt for the learner
 
-Use `rag` when you need conjugation tables or grammar references. Be explicit about assumptions.
+Use `search_knowledge` when you need conjugation tables or grammar references. Be explicit about assumptions.
 """.strip()
 
 

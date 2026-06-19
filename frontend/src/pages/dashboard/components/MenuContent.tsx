@@ -10,6 +10,8 @@ import AssignmentRoundedIcon from "@mui/icons-material/AssignmentRounded";
 import ChecklistRoundedIcon from "@mui/icons-material/ChecklistRounded";
 import SmartToyRoundedIcon from "@mui/icons-material/SmartToyRounded";
 import SettingsRoundedIcon from "@mui/icons-material/SettingsRounded";
+import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
+import ManageAccountsRoundedIcon from "@mui/icons-material/ManageAccountsRounded";
 import { Link, useLocation } from "react-router-dom";
 
 const mainListItems = [
@@ -21,6 +23,8 @@ const mainListItems = [
 ];
 
 const secondaryListItems = [
+  { text: "Profile", icon: <PersonRoundedIcon />, path: "/dashboard/profile" },
+  { text: "Account", icon: <ManageAccountsRoundedIcon />, path: "/dashboard/account" },
   { text: "Settings", icon: <SettingsRoundedIcon />, path: "/dashboard/settings" },
 ];
 

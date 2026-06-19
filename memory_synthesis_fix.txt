@@ -1,0 +1,51 @@
+Memory synthesis fix report
+=========================
+
+Root cause
+----------
+`MemoryService.synthesize_l3()` used `asyncio.gather()` to run multiple repository
+calls against the same SQLAlchemy `AsyncSession`. Async sessions are not
+concurrency-safe; overlapping `db.execute()` calls raised:
+
+- `sqlalchemy.exc.InvalidRequestError: concurrent operations are not permitted`
+- follow-on `IllegalStateChangeError` during session cleanup
+
+The background job `memory_synthesize_l3` failed after login when tutor/memory
+code scheduled L3 synthesis.
+
+Changed files
+-------------
+- `backend/app/modules/memory/service.py`
+  - Replaced concurrent `asyncio.gather()` reads with sequential `await` calls
+  - Replaced concurrent `_set_l3_slot()` writes with sequential `await` calls
+- `backend/app/modules/memory/tasks.py`
+  - Fixed failure logging to preserve traceback via `exc_info=(type, value, tb)`
+  - Structured retry/failure logs with `user_id`, `task`, `attempt`, `duration_ms`
+- `backend/tests/test_memory_synthesis.py`
+  - Regression tests for sequential session usage and failure logging
+
+Why AsyncSession cannot be shared concurrently
+----------------------------------------------
+SQLAlchemy async sessions bind one connection at a time. Concurrent coroutines
+calling `await db.execute(...)` on the same session interleave while the session
+is provisioning or using a connection, which violates session invariants.
+
+Safe options:
+1. Sequential awaits on one session (chosen here)
+2. Separate `session_scope()` per concurrent task, each owning its own session
+
+Test results
+------------
+Run:
+
+```bash
+PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 backend/.venv/bin/python -m pytest backend/tests/test_memory_synthesis.py -q
+```
+
+Remaining risks
+---------------
+- Other modules may still use `asyncio.gather()` with a shared session; audit if
+  similar errors appear elsewhere.
+- L3 profile synthesis still calls the LLM sequentially; latency is acceptable
+  for a background job.
+- If true read parallelism is needed later, use independent sessions per task.

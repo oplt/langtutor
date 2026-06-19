@@ -1,0 +1,5804 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 26,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "backend/app/core/metrics.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 130,
+      "nonEmptyLines": 114,
+      "functions": [
+        {
+          "name": "_escape_label",
+          "startLine": 126,
+          "endLine": 127,
+          "params": [
+            "value"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RouteMetrics",
+          "startLine": 10,
+          "endLine": 15,
+          "methods": [],
+          "properties": [
+            "count",
+            "errors",
+            "total_ms",
+            "max_ms",
+            "buckets"
+          ]
+        },
+        {
+          "name": "LLMMetrics",
+          "startLine": 19,
+          "endLine": 24,
+          "methods": [],
+          "properties": [
+            "count",
+            "errors",
+            "total_ms",
+            "input_tokens",
+            "output_tokens"
+          ]
+        },
+        {
+          "name": "MetricsRegistry",
+          "startLine": 31,
+          "endLine": 123,
+          "methods": [
+            "__init__",
+            "observe_request",
+            "observe_llm_call",
+            "render_prometheus"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RouteMetrics",
+          "line": 9,
+          "isDefault": false
+        },
+        {
+          "name": "LLMMetrics",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "MetricsRegistry",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "_escape_label",
+          "line": 126,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "Lock",
+          "lineNumber": 33
+        },
+        {
+          "caller": "__init__",
+          "callee": "time.time",
+          "lineNumber": 34
+        },
+        {
+          "caller": "__init__",
+          "callee": "defaultdict",
+          "lineNumber": 35
+        },
+        {
+          "caller": "__init__",
+          "callee": "defaultdict",
+          "lineNumber": 36
+        },
+        {
+          "caller": "observe_request",
+          "callee": "method.upper",
+          "lineNumber": 39
+        },
+        {
+          "caller": "observe_request",
+          "callee": "int",
+          "lineNumber": 39
+        },
+        {
+          "caller": "observe_request",
+          "callee": "max",
+          "lineNumber": 44
+        },
+        {
+          "caller": "observe_request",
+          "callee": "zip",
+          "lineNumber": 47
+        },
+        {
+          "caller": "observe_llm_call",
+          "callee": "max",
+          "lineNumber": 67
+        },
+        {
+          "caller": "observe_llm_call",
+          "callee": "max",
+          "lineNumber": 68
+        },
+        {
+          "caller": "render_prometheus",
+          "callee": "time.time",
+          "lineNumber": 76
+        },
+        {
+          "caller": "render_prometheus",
+          "callee": "list",
+          "lineNumber": 99
+        },
+        {
+          "caller": "render_prometheus",
+          "callee": "self._routes.items",
+          "lineNumber": 99
+        },
+        {
+          "caller": "render_prometheus",
+          "callee": "list",
+          "lineNumber": 100
+        },
+        {
+          "caller": "render_prometheus",
+          "callee": "self._llm.items",
+          "lineNumber": 100
+        },
+        {
+          "caller": "render_prometheus",
+          "callee": "sorted",
+          "lineNumber": 101
+        },
+        {
+          "caller": "render_prometheus",
+          "callee": "_escape_label",
+          "lineNumber": 102
+        },
+        {
+          "caller": "render_prometheus",
+          "callee": "lines.append",
+          "lineNumber": 103
+        },
+        {
+          "caller": "render_prometheus",
+          "callee": "lines.append",
+          "lineNumber": 104
+        },
+        {
+          "caller": "render_prometheus",
+          "callee": "lines.append",
+          "lineNumber": 105
+        },
+        {
+          "caller": "render_prometheus",
+          "callee": "lines.append",
+          "lineNumber": 106
+        },
+        {
+          "caller": "render_prometheus",
+          "callee": "lines.append",
+          "lineNumber": 110
+        },
+        {
+          "caller": "render_prometheus",
+          "callee": "lines.append",
+          "lineNumber": 111
+        },
+        {
+          "caller": "render_prometheus",
+          "callee": "sorted",
+          "lineNumber": 112
+        },
+        {
+          "caller": "render_prometheus",
+          "callee": "_escape_label",
+          "lineNumber": 114
+        },
+        {
+          "caller": "render_prometheus",
+          "callee": "_escape_label",
+          "lineNumber": 115
+        },
+        {
+          "caller": "render_prometheus",
+          "callee": "_escape_label",
+          "lineNumber": 116
+        },
+        {
+          "caller": "render_prometheus",
+          "callee": "lines.append",
+          "lineNumber": 118
+        },
+        {
+          "caller": "render_prometheus",
+          "callee": "lines.append",
+          "lineNumber": 119
+        },
+        {
+          "caller": "render_prometheus",
+          "callee": "lines.append",
+          "lineNumber": 120
+        },
+        {
+          "caller": "render_prometheus",
+          "callee": "lines.append",
+          "lineNumber": 121
+        },
+        {
+          "caller": "render_prometheus",
+          "callee": "lines.append",
+          "lineNumber": 122
+        },
+        {
+          "caller": "render_prometheus",
+          "callee": "\"\\n\".join",
+          "lineNumber": 123
+        },
+        {
+          "caller": "_escape_label",
+          "callee": "value.replace(\"\\\\\", \"\\\\\\\\\").replace('\"', '\\\\\"').replace",
+          "lineNumber": 127
+        },
+        {
+          "caller": "_escape_label",
+          "callee": "value.replace(\"\\\\\", \"\\\\\\\\\").replace",
+          "lineNumber": 127
+        },
+        {
+          "caller": "_escape_label",
+          "callee": "value.replace",
+          "lineNumber": 127
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 1,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "backend/app/modules/ai/api.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 131,
+      "nonEmptyLines": 100,
+      "functions": [
+        {
+          "name": "get_llm_settings",
+          "startLine": 22,
+          "endLine": 23,
+          "params": []
+        },
+        {
+          "name": "put_llm_settings",
+          "startLine": 27,
+          "endLine": 35,
+          "params": [
+            "payload"
+          ]
+        },
+        {
+          "name": "get_llm_providers",
+          "startLine": 39,
+          "endLine": 40,
+          "params": []
+        },
+        {
+          "name": "get_llm_profiles",
+          "startLine": 44,
+          "endLine": 45,
+          "params": []
+        },
+        {
+          "name": "create_llm_profile",
+          "startLine": 49,
+          "endLine": 54,
+          "params": [
+            "payload"
+          ]
+        },
+        {
+          "name": "update_llm_profile",
+          "startLine": 58,
+          "endLine": 64,
+          "params": [
+            "profile_id",
+            "payload"
+          ]
+        },
+        {
+          "name": "delete_llm_profile",
+          "startLine": 68,
+          "endLine": 74,
+          "params": [
+            "profile_id"
+          ]
+        },
+        {
+          "name": "test_llm_profile",
+          "startLine": 78,
+          "endLine": 82,
+          "params": [
+            "profile_id"
+          ]
+        },
+        {
+          "name": "get_llm_profile_models",
+          "startLine": 86,
+          "endLine": 92,
+          "params": [
+            "profile_id"
+          ]
+        },
+        {
+          "name": "get_llm_routing",
+          "startLine": 96,
+          "endLine": 97,
+          "params": []
+        },
+        {
+          "name": "put_llm_routing",
+          "startLine": 101,
+          "endLine": 106,
+          "params": [
+            "payload"
+          ]
+        },
+        {
+          "name": "get_llm_models",
+          "startLine": 110,
+          "endLine": 115,
+          "params": [
+            "provider"
+          ]
+        },
+        {
+          "name": "test_llm_connection",
+          "startLine": 119,
+          "endLine": 123,
+          "params": [
+            "payload"
+          ]
+        },
+        {
+          "name": "test_llm_chat",
+          "startLine": 127,
+          "endLine": 131,
+          "params": [
+            "payload"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "get_llm_settings",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "put_llm_settings",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "get_llm_providers",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "get_llm_profiles",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "create_llm_profile",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "update_llm_profile",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "delete_llm_profile",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "test_llm_profile",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "get_llm_profile_models",
+          "line": 85,
+          "isDefault": false
+        },
+        {
+          "name": "get_llm_routing",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "put_llm_routing",
+          "line": 100,
+          "isDefault": false
+        },
+        {
+          "name": "get_llm_models",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "test_llm_connection",
+          "line": 118,
+          "isDefault": false
+        },
+        {
+          "name": "test_llm_chat",
+          "line": 126,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "get_llm_settings",
+          "callee": "AISettingsService().get_settings",
+          "lineNumber": 23
+        },
+        {
+          "caller": "get_llm_settings",
+          "callee": "AISettingsService",
+          "lineNumber": 23
+        },
+        {
+          "caller": "put_llm_settings",
+          "callee": "AISettingsService",
+          "lineNumber": 28
+        },
+        {
+          "caller": "put_llm_settings",
+          "callee": "service.save_settings",
+          "lineNumber": 30
+        },
+        {
+          "caller": "put_llm_settings",
+          "callee": "HTTPException",
+          "lineNumber": 32
+        },
+        {
+          "caller": "put_llm_settings",
+          "callee": "str",
+          "lineNumber": 34
+        },
+        {
+          "caller": "get_llm_providers",
+          "callee": "LLMProvidersResponse",
+          "lineNumber": 40
+        },
+        {
+          "caller": "get_llm_providers",
+          "callee": "list",
+          "lineNumber": 40
+        },
+        {
+          "caller": "get_llm_providers",
+          "callee": "PROVIDERS.values",
+          "lineNumber": 40
+        },
+        {
+          "caller": "get_llm_profiles",
+          "callee": "AISettingsService().list_profiles",
+          "lineNumber": 45
+        },
+        {
+          "caller": "get_llm_profiles",
+          "callee": "AISettingsService",
+          "lineNumber": 45
+        },
+        {
+          "caller": "create_llm_profile",
+          "callee": "AISettingsService",
+          "lineNumber": 50
+        },
+        {
+          "caller": "create_llm_profile",
+          "callee": "service.create_profile",
+          "lineNumber": 52
+        },
+        {
+          "caller": "create_llm_profile",
+          "callee": "HTTPException",
+          "lineNumber": 54
+        },
+        {
+          "caller": "create_llm_profile",
+          "callee": "str",
+          "lineNumber": 54
+        },
+        {
+          "caller": "update_llm_profile",
+          "callee": "AISettingsService",
+          "lineNumber": 59
+        },
+        {
+          "caller": "update_llm_profile",
+          "callee": "service.update_profile",
+          "lineNumber": 61
+        },
+        {
+          "caller": "update_llm_profile",
+          "callee": "str(exc).startswith",
+          "lineNumber": 63
+        },
+        {
+          "caller": "update_llm_profile",
+          "callee": "str",
+          "lineNumber": 63
+        },
+        {
+          "caller": "update_llm_profile",
+          "callee": "HTTPException",
+          "lineNumber": 64
+        },
+        {
+          "caller": "update_llm_profile",
+          "callee": "str",
+          "lineNumber": 64
+        },
+        {
+          "caller": "delete_llm_profile",
+          "callee": "AISettingsService",
+          "lineNumber": 69
+        },
+        {
+          "caller": "delete_llm_profile",
+          "callee": "service.delete_profile",
+          "lineNumber": 71
+        },
+        {
+          "caller": "delete_llm_profile",
+          "callee": "HTTPException",
+          "lineNumber": 73
+        },
+        {
+          "caller": "delete_llm_profile",
+          "callee": "str",
+          "lineNumber": 73
+        },
+        {
+          "caller": "test_llm_profile",
+          "callee": "AISettingsService().test_profile",
+          "lineNumber": 80
+        },
+        {
+          "caller": "test_llm_profile",
+          "callee": "AISettingsService",
+          "lineNumber": 80
+        },
+        {
+          "caller": "test_llm_profile",
+          "callee": "HTTPException",
+          "lineNumber": 82
+        },
+        {
+          "caller": "test_llm_profile",
+          "callee": "llm_error_payload",
+          "lineNumber": 82
+        },
+        {
+          "caller": "get_llm_profile_models",
+          "callee": "AISettingsService().get_profile",
+          "lineNumber": 88
+        },
+        {
+          "caller": "get_llm_profile_models",
+          "callee": "AISettingsService",
+          "lineNumber": 88
+        },
+        {
+          "caller": "get_llm_profile_models",
+          "callee": "AISettingsService().list_profile_models",
+          "lineNumber": 89
+        },
+        {
+          "caller": "get_llm_profile_models",
+          "callee": "AISettingsService",
+          "lineNumber": 89
+        },
+        {
+          "caller": "get_llm_profile_models",
+          "callee": "HTTPException",
+          "lineNumber": 91
+        },
+        {
+          "caller": "get_llm_profile_models",
+          "callee": "llm_error_payload",
+          "lineNumber": 91
+        },
+        {
+          "caller": "get_llm_profile_models",
+          "callee": "LLMModelsResponse",
+          "lineNumber": 92
+        },
+        {
+          "caller": "get_llm_routing",
+          "callee": "AISettingsService().get_routing",
+          "lineNumber": 97
+        },
+        {
+          "caller": "get_llm_routing",
+          "callee": "AISettingsService",
+          "lineNumber": 97
+        },
+        {
+          "caller": "put_llm_routing",
+          "callee": "AISettingsService",
+          "lineNumber": 102
+        },
+        {
+          "caller": "put_llm_routing",
+          "callee": "service.save_routing",
+          "lineNumber": 104
+        },
+        {
+          "caller": "put_llm_routing",
+          "callee": "HTTPException",
+          "lineNumber": 106
+        },
+        {
+          "caller": "put_llm_routing",
+          "callee": "str",
+          "lineNumber": 106
+        },
+        {
+          "caller": "get_llm_models",
+          "callee": "Query",
+          "lineNumber": 110
+        },
+        {
+          "caller": "get_llm_models",
+          "callee": "AISettingsService().list_models",
+          "lineNumber": 112
+        },
+        {
+          "caller": "get_llm_models",
+          "callee": "AISettingsService",
+          "lineNumber": 112
+        },
+        {
+          "caller": "get_llm_models",
+          "callee": "HTTPException",
+          "lineNumber": 114
+        },
+        {
+          "caller": "get_llm_models",
+          "callee": "llm_error_payload",
+          "lineNumber": 114
+        },
+        {
+          "caller": "get_llm_models",
+          "callee": "LLMModelsResponse",
+          "lineNumber": 115
+        },
+        {
+          "caller": "test_llm_connection",
+          "callee": "AISettingsService().test_connection",
+          "lineNumber": 121
+        },
+        {
+          "caller": "test_llm_connection",
+          "callee": "AISettingsService",
+          "lineNumber": 121
+        },
+        {
+          "caller": "test_llm_connection",
+          "callee": "HTTPException",
+          "lineNumber": 123
+        },
+        {
+          "caller": "test_llm_connection",
+          "callee": "llm_error_payload",
+          "lineNumber": 123
+        },
+        {
+          "caller": "test_llm_chat",
+          "callee": "AISettingsService().chat_test",
+          "lineNumber": 129
+        },
+        {
+          "caller": "test_llm_chat",
+          "callee": "AISettingsService",
+          "lineNumber": 129
+        },
+        {
+          "caller": "test_llm_chat",
+          "callee": "HTTPException",
+          "lineNumber": 131
+        },
+        {
+          "caller": "test_llm_chat",
+          "callee": "llm_error_payload",
+          "lineNumber": 131
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 14,
+        "functionCount": 14,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/ai/schemas.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 185,
+      "nonEmptyLines": 145,
+      "classes": [
+        {
+          "name": "LLMProviderDescriptor",
+          "startLine": 19,
+          "endLine": 27,
+          "methods": [],
+          "properties": [
+            "id",
+            "label",
+            "mode",
+            "default_api_base",
+            "api_key_required",
+            "supports_model_discovery",
+            "supports_streaming",
+            "supports_vision"
+          ]
+        },
+        {
+          "name": "LLMProviderSettings",
+          "startLine": 30,
+          "endLine": 52,
+          "methods": [],
+          "properties": [
+            "enabled",
+            "api_base",
+            "model",
+            "has_api_key",
+            "api_key",
+            "organization",
+            "project",
+            "timeout_seconds",
+            "max_tokens",
+            "temperature",
+            "streaming",
+            "vision",
+            "embedding_model",
+            "context_window",
+            "mode",
+            "server_binary_path",
+            "model_path",
+            "host",
+            "port",
+            "gpu_layers",
+            "threads",
+            "batch_size"
+          ]
+        },
+        {
+          "name": "LlamaCppParsedConfig",
+          "startLine": 55,
+          "endLine": 67,
+          "methods": [],
+          "properties": [
+            "binary_path",
+            "model_path",
+            "host",
+            "port",
+            "api_base",
+            "context_window",
+            "gpu_layers",
+            "flash_attention",
+            "parallel_slots",
+            "threads",
+            "batch_size",
+            "extra_allowed_args"
+          ]
+        },
+        {
+          "name": "LLMProfile",
+          "startLine": 70,
+          "endLine": 92,
+          "methods": [],
+          "properties": [
+            "id",
+            "name",
+            "provider",
+            "api_base",
+            "model",
+            "enabled",
+            "has_api_key",
+            "api_key",
+            "timeout_seconds",
+            "temperature",
+            "max_tokens",
+            "context_window",
+            "streaming",
+            "vision_support",
+            "privacy_mode",
+            "llama_connection_mode",
+            "llama_command",
+            "llama_config",
+            "created_at",
+            "updated_at"
+          ]
+        },
+        {
+          "name": "LLMProfileCreate",
+          "startLine": 95,
+          "endLine": 112,
+          "methods": [],
+          "properties": [
+            "name",
+            "provider",
+            "api_base",
+            "model",
+            "enabled",
+            "api_key",
+            "timeout_seconds",
+            "temperature",
+            "max_tokens",
+            "context_window",
+            "streaming",
+            "vision_support",
+            "llama_connection_mode",
+            "llama_command",
+            "llama_config"
+          ]
+        },
+        {
+          "name": "LLMProfileUpdate",
+          "startLine": 115,
+          "endLine": 116,
+          "methods": [],
+          "properties": [
+            "has_api_key"
+          ]
+        },
+        {
+          "name": "LLMProfilesResponse",
+          "startLine": 119,
+          "endLine": 121,
+          "methods": [],
+          "properties": [
+            "profiles",
+            "default_profile_id"
+          ]
+        },
+        {
+          "name": "LLMRoutingSettings",
+          "startLine": 124,
+          "endLine": 126,
+          "methods": [],
+          "properties": [
+            "default_profile_id",
+            "task_overrides"
+          ]
+        },
+        {
+          "name": "LLMRoutingUpdate",
+          "startLine": 129,
+          "endLine": 130,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "LLMTaskDefault",
+          "startLine": 133,
+          "endLine": 135,
+          "methods": [],
+          "properties": [
+            "provider",
+            "model"
+          ]
+        },
+        {
+          "name": "LLMSettingsResponse",
+          "startLine": 138,
+          "endLine": 145,
+          "methods": [],
+          "properties": [
+            "active_provider",
+            "system_prompt",
+            "providers",
+            "task_defaults",
+            "profiles",
+            "default_profile_id",
+            "task_overrides"
+          ]
+        },
+        {
+          "name": "LLMSettingsUpdate",
+          "startLine": 148,
+          "endLine": 155,
+          "methods": [],
+          "properties": [
+            "active_provider",
+            "system_prompt",
+            "providers",
+            "task_defaults",
+            "profiles",
+            "default_profile_id",
+            "task_overrides"
+          ]
+        },
+        {
+          "name": "LLMConnectionTestRequest",
+          "startLine": 158,
+          "endLine": 160,
+          "methods": [],
+          "properties": [
+            "provider",
+            "settings"
+          ]
+        },
+        {
+          "name": "LLMChatTestRequest",
+          "startLine": 163,
+          "endLine": 168,
+          "methods": [],
+          "properties": [
+            "provider",
+            "model",
+            "messages"
+          ]
+        },
+        {
+          "name": "LLMModelsResponse",
+          "startLine": 171,
+          "endLine": 173,
+          "methods": [],
+          "properties": [
+            "provider",
+            "models"
+          ]
+        },
+        {
+          "name": "LLMProvidersResponse",
+          "startLine": 176,
+          "endLine": 177,
+          "methods": [],
+          "properties": [
+            "providers"
+          ]
+        },
+        {
+          "name": "LLMHealthResponse",
+          "startLine": 180,
+          "endLine": 181,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "LLMChatTestResponse",
+          "startLine": 184,
+          "endLine": 185,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "LLMProviderDescriptor",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "LLMProviderSettings",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "LlamaCppParsedConfig",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "LLMProfile",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "LLMProfileCreate",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "LLMProfileUpdate",
+          "line": 115,
+          "isDefault": false
+        },
+        {
+          "name": "LLMProfilesResponse",
+          "line": 119,
+          "isDefault": false
+        },
+        {
+          "name": "LLMRoutingSettings",
+          "line": 124,
+          "isDefault": false
+        },
+        {
+          "name": "LLMRoutingUpdate",
+          "line": 129,
+          "isDefault": false
+        },
+        {
+          "name": "LLMTaskDefault",
+          "line": 133,
+          "isDefault": false
+        },
+        {
+          "name": "LLMSettingsResponse",
+          "line": 138,
+          "isDefault": false
+        },
+        {
+          "name": "LLMSettingsUpdate",
+          "line": 148,
+          "isDefault": false
+        },
+        {
+          "name": "LLMConnectionTestRequest",
+          "line": 158,
+          "isDefault": false
+        },
+        {
+          "name": "LLMChatTestRequest",
+          "line": 163,
+          "isDefault": false
+        },
+        {
+          "name": "LLMModelsResponse",
+          "line": 171,
+          "isDefault": false
+        },
+        {
+          "name": "LLMProvidersResponse",
+          "line": 176,
+          "isDefault": false
+        },
+        {
+          "name": "LLMHealthResponse",
+          "line": 180,
+          "isDefault": false
+        },
+        {
+          "name": "LLMChatTestResponse",
+          "line": 184,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 18,
+        "functionCount": 0,
+        "classCount": 18
+      }
+    },
+    {
+      "path": "backend/app/modules/ai/service.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 481,
+      "nonEmptyLines": 437,
+      "functions": [
+        {
+          "name": "invalidate_llm_settings_cache",
+          "startLine": 45,
+          "endLine": 51,
+          "params": []
+        },
+        {
+          "name": "default_llm_settings",
+          "startLine": 54,
+          "endLine": 87,
+          "params": []
+        },
+        {
+          "name": "_default_llm_profile",
+          "startLine": 90,
+          "endLine": 123,
+          "params": []
+        },
+        {
+          "name": "_now_iso",
+          "startLine": 126,
+          "endLine": 127,
+          "params": []
+        },
+        {
+          "name": "_slugify",
+          "startLine": 130,
+          "endLine": 132,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "llm_error_payload",
+          "startLine": 478,
+          "endLine": 481,
+          "params": [
+            "exc"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AISettingsService",
+          "startLine": 135,
+          "endLine": 475,
+          "methods": [
+            "__init__",
+            "get_settings",
+            "save_settings",
+            "list_profiles",
+            "create_profile",
+            "get_profile",
+            "update_profile",
+            "delete_profile",
+            "get_routing",
+            "save_routing",
+            "resolve_task_profile",
+            "list_profile_models",
+            "test_profile",
+            "list_models",
+            "test_connection",
+            "chat_test",
+            "_save_profiles",
+            "_normalize_ai",
+            "_normalize_profiles",
+            "_validate_settings",
+            "_client_config",
+            "_client_config_from_profile",
+            "_privacy_for_provider"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "invalidate_llm_settings_cache",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "default_llm_settings",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "_default_llm_profile",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "_now_iso",
+          "line": 126,
+          "isDefault": false
+        },
+        {
+          "name": "_slugify",
+          "line": 130,
+          "isDefault": false
+        },
+        {
+          "name": "AISettingsService",
+          "line": 135,
+          "isDefault": false
+        },
+        {
+          "name": "llm_error_payload",
+          "line": 478,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "invalidate_llm_settings_cache",
+          "callee": "invalidate_task_client_cache",
+          "lineNumber": 51
+        },
+        {
+          "caller": "default_llm_settings",
+          "callee": "PROVIDERS.items",
+          "lineNumber": 81
+        },
+        {
+          "caller": "default_llm_settings",
+          "callee": "value.model_dump",
+          "lineNumber": 83
+        },
+        {
+          "caller": "default_llm_settings",
+          "callee": "TASK_DEFAULTS.items",
+          "lineNumber": 83
+        },
+        {
+          "caller": "default_llm_settings",
+          "callee": "_default_llm_profile",
+          "lineNumber": 84
+        },
+        {
+          "caller": "_now_iso",
+          "callee": "datetime.now(UTC).isoformat",
+          "lineNumber": 127
+        },
+        {
+          "caller": "_now_iso",
+          "callee": "datetime.now",
+          "lineNumber": 127
+        },
+        {
+          "caller": "_slugify",
+          "callee": "re.sub(r\"[^a-z0-9]+\", \"-\", value.strip().lower()).strip",
+          "lineNumber": 131
+        },
+        {
+          "caller": "_slugify",
+          "callee": "re.sub",
+          "lineNumber": 131
+        },
+        {
+          "caller": "_slugify",
+          "callee": "value.strip().lower",
+          "lineNumber": 131
+        },
+        {
+          "caller": "_slugify",
+          "callee": "value.strip",
+          "lineNumber": 131
+        },
+        {
+          "caller": "_slugify",
+          "callee": "secrets.token_hex",
+          "lineNumber": 132
+        },
+        {
+          "caller": "__init__",
+          "callee": "SettingsRepository",
+          "lineNumber": 137
+        },
+        {
+          "caller": "get_settings",
+          "callee": "time.monotonic",
+          "lineNumber": 142
+        },
+        {
+          "caller": "get_settings",
+          "callee": "self.repo.get_effective_settings_doc",
+          "lineNumber": 148
+        },
+        {
+          "caller": "get_settings",
+          "callee": "(await self.repo.get_settings_doc()).model_dump",
+          "lineNumber": 150
+        },
+        {
+          "caller": "get_settings",
+          "callee": "self.repo.get_settings_doc",
+          "lineNumber": 150
+        },
+        {
+          "caller": "get_settings",
+          "callee": "self._normalize_ai",
+          "lineNumber": 152
+        },
+        {
+          "caller": "get_settings",
+          "callee": "doc.get",
+          "lineNumber": 152
+        },
+        {
+          "caller": "get_settings",
+          "callee": "LLMSettingsResponse.model_validate",
+          "lineNumber": 153
+        },
+        {
+          "caller": "save_settings",
+          "callee": "(await self.repo.get_settings_doc()).model_dump",
+          "lineNumber": 162
+        },
+        {
+          "caller": "save_settings",
+          "callee": "self.repo.get_settings_doc",
+          "lineNumber": 162
+        },
+        {
+          "caller": "save_settings",
+          "callee": "self._normalize_ai",
+          "lineNumber": 163
+        },
+        {
+          "caller": "save_settings",
+          "callee": "payload.model_dump",
+          "lineNumber": 163
+        },
+        {
+          "caller": "save_settings",
+          "callee": "self._validate_settings",
+          "lineNumber": 164
+        },
+        {
+          "caller": "save_settings",
+          "callee": "self.repo.put_settings_doc",
+          "lineNumber": 166
+        },
+        {
+          "caller": "save_settings",
+          "callee": "invalidate_llm_settings_cache",
+          "lineNumber": 167
+        },
+        {
+          "caller": "save_settings",
+          "callee": "self.get_settings",
+          "lineNumber": 168
+        },
+        {
+          "caller": "list_profiles",
+          "callee": "self.get_settings",
+          "lineNumber": 171
+        },
+        {
+          "caller": "list_profiles",
+          "callee": "LLMProfilesResponse",
+          "lineNumber": 172
+        },
+        {
+          "caller": "create_profile",
+          "callee": "self.get_settings",
+          "lineNumber": 178
+        },
+        {
+          "caller": "create_profile",
+          "callee": "_slugify",
+          "lineNumber": 180
+        },
+        {
+          "caller": "create_profile",
+          "callee": "secrets.token_hex",
+          "lineNumber": 182
+        },
+        {
+          "caller": "create_profile",
+          "callee": "_now_iso",
+          "lineNumber": 183
+        },
+        {
+          "caller": "create_profile",
+          "callee": "LLMProfile",
+          "lineNumber": 184
+        },
+        {
+          "caller": "create_profile",
+          "callee": "payload.model_dump",
+          "lineNumber": 186
+        },
+        {
+          "caller": "create_profile",
+          "callee": "self._privacy_for_provider",
+          "lineNumber": 187
+        },
+        {
+          "caller": "create_profile",
+          "callee": "bool",
+          "lineNumber": 188
+        },
+        {
+          "caller": "create_profile",
+          "callee": "self._save_profiles",
+          "lineNumber": 194
+        },
+        {
+          "caller": "create_profile",
+          "callee": "self.get_profile",
+          "lineNumber": 195
+        },
+        {
+          "caller": "get_profile",
+          "callee": "self.get_settings",
+          "lineNumber": 198
+        },
+        {
+          "caller": "get_profile",
+          "callee": "ValueError",
+          "lineNumber": 202
+        },
+        {
+          "caller": "update_profile",
+          "callee": "self.get_settings",
+          "lineNumber": 205
+        },
+        {
+          "caller": "update_profile",
+          "callee": "_now_iso",
+          "lineNumber": 206
+        },
+        {
+          "caller": "update_profile",
+          "callee": "updated.append",
+          "lineNumber": 211
+        },
+        {
+          "caller": "update_profile",
+          "callee": "profile.model_dump",
+          "lineNumber": 214
+        },
+        {
+          "caller": "update_profile",
+          "callee": "payload.model_dump",
+          "lineNumber": 215
+        },
+        {
+          "caller": "update_profile",
+          "callee": "str(incoming.get(\"api_key\") or \"\").strip",
+          "lineNumber": 216
+        },
+        {
+          "caller": "update_profile",
+          "callee": "str",
+          "lineNumber": 216
+        },
+        {
+          "caller": "update_profile",
+          "callee": "incoming.get",
+          "lineNumber": 216
+        },
+        {
+          "caller": "update_profile",
+          "callee": "incoming.get",
+          "lineNumber": 217
+        },
+        {
+          "caller": "update_profile",
+          "callee": "raw.update",
+          "lineNumber": 221
+        },
+        {
+          "caller": "update_profile",
+          "callee": "self._privacy_for_provider",
+          "lineNumber": 223
+        },
+        {
+          "caller": "update_profile",
+          "callee": "str",
+          "lineNumber": 223
+        },
+        {
+          "caller": "update_profile",
+          "callee": "raw.get",
+          "lineNumber": 223
+        },
+        {
+          "caller": "update_profile",
+          "callee": "updated.append",
+          "lineNumber": 226
+        },
+        {
+          "caller": "update_profile",
+          "callee": "LLMProfile.model_validate",
+          "lineNumber": 226
+        },
+        {
+          "caller": "update_profile",
+          "callee": "ValueError",
+          "lineNumber": 228
+        },
+        {
+          "caller": "update_profile",
+          "callee": "self._save_profiles",
+          "lineNumber": 229
+        },
+        {
+          "caller": "update_profile",
+          "callee": "self.get_profile",
+          "lineNumber": 230
+        },
+        {
+          "caller": "delete_profile",
+          "callee": "self.get_settings",
+          "lineNumber": 233
+        },
+        {
+          "caller": "delete_profile",
+          "callee": "len",
+          "lineNumber": 235
+        },
+        {
+          "caller": "delete_profile",
+          "callee": "len",
+          "lineNumber": 235
+        },
+        {
+          "caller": "delete_profile",
+          "callee": "ValueError",
+          "lineNumber": 236
+        },
+        {
+          "caller": "delete_profile",
+          "callee": "settings.task_overrides.items",
+          "lineNumber": 242
+        },
+        {
+          "caller": "delete_profile",
+          "callee": "self._save_profiles",
+          "lineNumber": 245
+        },
+        {
+          "caller": "get_routing",
+          "callee": "self.get_settings",
+          "lineNumber": 248
+        },
+        {
+          "caller": "get_routing",
+          "callee": "LLMRoutingSettings",
+          "lineNumber": 249
+        },
+        {
+          "caller": "save_routing",
+          "callee": "self.get_settings",
+          "lineNumber": 255
+        },
+        {
+          "caller": "save_routing",
+          "callee": "ValueError",
+          "lineNumber": 258
+        },
+        {
+          "caller": "save_routing",
+          "callee": "payload.task_overrides.items",
+          "lineNumber": 259
+        },
+        {
+          "caller": "save_routing",
+          "callee": "ValueError",
+          "lineNumber": 261
+        },
+        {
+          "caller": "save_routing",
+          "callee": "ValueError",
+          "lineNumber": 263
+        },
+        {
+          "caller": "save_routing",
+          "callee": "self._save_profiles",
+          "lineNumber": 264
+        },
+        {
+          "caller": "save_routing",
+          "callee": "payload.task_overrides.items",
+          "lineNumber": 267
+        },
+        {
+          "caller": "save_routing",
+          "callee": "self.get_routing",
+          "lineNumber": 269
+        },
+        {
+          "caller": "resolve_task_profile",
+          "callee": "self.get_settings",
+          "lineNumber": 272
+        },
+        {
+          "caller": "resolve_task_profile",
+          "callee": "settings.task_overrides.get",
+          "lineNumber": 273
+        },
+        {
+          "caller": "resolve_task_profile",
+          "callee": "ValueError",
+          "lineNumber": 277
+        },
+        {
+          "caller": "resolve_task_profile",
+          "callee": "self.get_profile",
+          "lineNumber": 279
+        },
+        {
+          "caller": "resolve_task_profile",
+          "callee": "self.get_profile",
+          "lineNumber": 283
+        },
+        {
+          "caller": "list_profile_models",
+          "callee": "self.get_profile",
+          "lineNumber": 287
+        },
+        {
+          "caller": "list_profile_models",
+          "callee": "create_llm_client",
+          "lineNumber": 288
+        },
+        {
+          "caller": "list_profile_models",
+          "callee": "config_from_profile",
+          "lineNumber": 288
+        },
+        {
+          "caller": "list_profile_models",
+          "callee": "client.list_models",
+          "lineNumber": 289
+        },
+        {
+          "caller": "test_profile",
+          "callee": "self.get_profile",
+          "lineNumber": 292
+        },
+        {
+          "caller": "test_profile",
+          "callee": "create_llm_client",
+          "lineNumber": 293
+        },
+        {
+          "caller": "test_profile",
+          "callee": "config_from_profile",
+          "lineNumber": 293
+        },
+        {
+          "caller": "test_profile",
+          "callee": "client.health_check",
+          "lineNumber": 294
+        },
+        {
+          "caller": "list_models",
+          "callee": "self.get_settings",
+          "lineNumber": 297
+        },
+        {
+          "caller": "list_models",
+          "callee": "create_llm_client",
+          "lineNumber": 298
+        },
+        {
+          "caller": "list_models",
+          "callee": "self._client_config",
+          "lineNumber": 298
+        },
+        {
+          "caller": "list_models",
+          "callee": "client.list_models",
+          "lineNumber": 299
+        },
+        {
+          "caller": "test_connection",
+          "callee": "self.get_settings",
+          "lineNumber": 302
+        },
+        {
+          "caller": "test_connection",
+          "callee": "settings.providers.get",
+          "lineNumber": 304
+        },
+        {
+          "caller": "test_connection",
+          "callee": "ValueError",
+          "lineNumber": 306
+        },
+        {
+          "caller": "test_connection",
+          "callee": "create_llm_client",
+          "lineNumber": 307
+        },
+        {
+          "caller": "test_connection",
+          "callee": "self._client_config",
+          "lineNumber": 307
+        },
+        {
+          "caller": "test_connection",
+          "callee": "client.health_check",
+          "lineNumber": 308
+        },
+        {
+          "caller": "chat_test",
+          "callee": "self.get_settings",
+          "lineNumber": 311
+        },
+        {
+          "caller": "chat_test",
+          "callee": "settings.providers.get",
+          "lineNumber": 313
+        },
+        {
+          "caller": "chat_test",
+          "callee": "ValueError",
+          "lineNumber": 315
+        },
+        {
+          "caller": "chat_test",
+          "callee": "create_llm_client",
+          "lineNumber": 316
+        },
+        {
+          "caller": "chat_test",
+          "callee": "self._client_config",
+          "lineNumber": 316
+        },
+        {
+          "caller": "chat_test",
+          "callee": "client.chat",
+          "lineNumber": 317
+        },
+        {
+          "caller": "chat_test",
+          "callee": "LLMChatRequest",
+          "lineNumber": 318
+        },
+        {
+          "caller": "chat_test",
+          "callee": "min",
+          "lineNumber": 322
+        },
+        {
+          "caller": "_save_profiles",
+          "callee": "(await self.repo.get_settings_doc()).model_dump",
+          "lineNumber": 332
+        },
+        {
+          "caller": "_save_profiles",
+          "callee": "self.repo.get_settings_doc",
+          "lineNumber": 332
+        },
+        {
+          "caller": "_save_profiles",
+          "callee": "self._normalize_ai",
+          "lineNumber": 333
+        },
+        {
+          "caller": "_save_profiles",
+          "callee": "doc.get",
+          "lineNumber": 333
+        },
+        {
+          "caller": "_save_profiles",
+          "callee": "profile.model_dump",
+          "lineNumber": 334
+        },
+        {
+          "caller": "_save_profiles",
+          "callee": "self.repo.put_settings_doc",
+          "lineNumber": 338
+        },
+        {
+          "caller": "_save_profiles",
+          "callee": "invalidate_llm_settings_cache",
+          "lineNumber": 339
+        },
+        {
+          "caller": "_normalize_ai",
+          "callee": "default_llm_settings",
+          "lineNumber": 342
+        },
+        {
+          "caller": "_normalize_ai",
+          "callee": "deepcopy",
+          "lineNumber": 343
+        },
+        {
+          "caller": "_normalize_ai",
+          "callee": "deepcopy",
+          "lineNumber": 344
+        },
+        {
+          "caller": "_normalize_ai",
+          "callee": "merged.update",
+          "lineNumber": 345
+        },
+        {
+          "caller": "_normalize_ai",
+          "callee": "source.items",
+          "lineNumber": 345
+        },
+        {
+          "caller": "_normalize_ai",
+          "callee": "(source.get(\"providers\") or {}).items",
+          "lineNumber": 346
+        },
+        {
+          "caller": "_normalize_ai",
+          "callee": "source.get",
+          "lineNumber": 346
+        },
+        {
+          "caller": "_normalize_ai",
+          "callee": "isinstance",
+          "lineNumber": 347
+        },
+        {
+          "caller": "_normalize_ai",
+          "callee": "merged[\"providers\"][provider_id].update",
+          "lineNumber": 348
+        },
+        {
+          "caller": "_normalize_ai",
+          "callee": "(source.get(\"task_defaults\") or {}).items",
+          "lineNumber": 349
+        },
+        {
+          "caller": "_normalize_ai",
+          "callee": "source.get",
+          "lineNumber": 349
+        },
+        {
+          "caller": "_normalize_ai",
+          "callee": "isinstance",
+          "lineNumber": 350
+        },
+        {
+          "caller": "_normalize_ai",
+          "callee": "merged[\"task_defaults\"][task].update",
+          "lineNumber": 351
+        },
+        {
+          "caller": "_normalize_ai",
+          "callee": "self._normalize_profiles",
+          "lineNumber": 352
+        },
+        {
+          "caller": "_normalize_ai",
+          "callee": "profile.model_dump",
+          "lineNumber": 353
+        },
+        {
+          "caller": "_normalize_ai",
+          "callee": "str",
+          "lineNumber": 354
+        },
+        {
+          "caller": "_normalize_ai",
+          "callee": "source.get",
+          "lineNumber": 354
+        },
+        {
+          "caller": "_normalize_ai",
+          "callee": "(source.get(\"task_overrides\") or {}).items",
+          "lineNumber": 361
+        },
+        {
+          "caller": "_normalize_ai",
+          "callee": "source.get",
+          "lineNumber": 361
+        },
+        {
+          "caller": "_normalize_ai",
+          "callee": "merged[\"providers\"].values",
+          "lineNumber": 364
+        },
+        {
+          "caller": "_normalize_ai",
+          "callee": "provider_settings.get",
+          "lineNumber": 365
+        },
+        {
+          "caller": "_normalize_ai",
+          "callee": "str",
+          "lineNumber": 372
+        },
+        {
+          "caller": "_normalize_ai",
+          "callee": "merged.get",
+          "lineNumber": 372
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "source.get",
+          "lineNumber": 383
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "isinstance",
+          "lineNumber": 385
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "isinstance",
+          "lineNumber": 387
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "LLMProfile.model_validate",
+          "lineNumber": 390
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "self._privacy_for_provider",
+          "lineNumber": 397
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "profiles.append",
+          "lineNumber": 400
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "_now_iso",
+          "lineNumber": 403
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "merged.get(\"providers\", {}).items",
+          "lineNumber": 404
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "merged.get",
+          "lineNumber": 404
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "isinstance",
+          "lineNumber": 405
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "provider_settings.get",
+          "lineNumber": 407
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "provider_settings.get",
+          "lineNumber": 407
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "profiles.append",
+          "lineNumber": 410
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "LLMProfile",
+          "lineNumber": 411
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "str",
+          "lineNumber": 415
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "provider_settings.get",
+          "lineNumber": 415
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "str",
+          "lineNumber": 416
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "provider_settings.get",
+          "lineNumber": 416
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "bool",
+          "lineNumber": 417
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "provider_settings.get",
+          "lineNumber": 417
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "bool",
+          "lineNumber": 418
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "provider_settings.get",
+          "lineNumber": 418
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "provider_settings.get",
+          "lineNumber": 419
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "float",
+          "lineNumber": 420
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "provider_settings.get",
+          "lineNumber": 420
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "float",
+          "lineNumber": 421
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "provider_settings.get",
+          "lineNumber": 421
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "int",
+          "lineNumber": 422
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "provider_settings.get",
+          "lineNumber": 422
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "int",
+          "lineNumber": 423
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "provider_settings.get",
+          "lineNumber": 423
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "bool",
+          "lineNumber": 424
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "provider_settings.get",
+          "lineNumber": 424
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "bool",
+          "lineNumber": 425
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "provider_settings.get",
+          "lineNumber": 425
+        },
+        {
+          "caller": "_normalize_profiles",
+          "callee": "self._privacy_for_provider",
+          "lineNumber": 426
+        },
+        {
+          "caller": "_validate_settings",
+          "callee": "data.get",
+          "lineNumber": 434
+        },
+        {
+          "caller": "_validate_settings",
+          "callee": "ValueError",
+          "lineNumber": 436
+        },
+        {
+          "caller": "_validate_settings",
+          "callee": "data.get(\"providers\", {}).items",
+          "lineNumber": 437
+        },
+        {
+          "caller": "_validate_settings",
+          "callee": "data.get",
+          "lineNumber": 437
+        },
+        {
+          "caller": "_validate_settings",
+          "callee": "ValueError",
+          "lineNumber": 439
+        },
+        {
+          "caller": "_validate_settings",
+          "callee": "provider_settings.get",
+          "lineNumber": 440
+        },
+        {
+          "caller": "_validate_settings",
+          "callee": "str(provider_settings.get(\"api_base\") or \"\").strip",
+          "lineNumber": 441
+        },
+        {
+          "caller": "_validate_settings",
+          "callee": "str",
+          "lineNumber": 441
+        },
+        {
+          "caller": "_validate_settings",
+          "callee": "provider_settings.get",
+          "lineNumber": 441
+        },
+        {
+          "caller": "_validate_settings",
+          "callee": "urlparse",
+          "lineNumber": 442
+        },
+        {
+          "caller": "_validate_settings",
+          "callee": "ValueError",
+          "lineNumber": 444
+        },
+        {
+          "caller": "_validate_settings",
+          "callee": "profile.get",
+          "lineNumber": 445
+        },
+        {
+          "caller": "_validate_settings",
+          "callee": "data.get",
+          "lineNumber": 445
+        },
+        {
+          "caller": "_validate_settings",
+          "callee": "data.get",
+          "lineNumber": 446
+        },
+        {
+          "caller": "_validate_settings",
+          "callee": "ValueError",
+          "lineNumber": 448
+        },
+        {
+          "caller": "_client_config",
+          "callee": "ValueError",
+          "lineNumber": 452
+        },
+        {
+          "caller": "_client_config",
+          "callee": "str",
+          "lineNumber": 454
+        },
+        {
+          "caller": "_client_config",
+          "callee": "LLMProviderConfig",
+          "lineNumber": 455
+        },
+        {
+          "caller": "_client_config_from_profile",
+          "callee": "config_from_profile",
+          "lineNumber": 471
+        },
+        {
+          "caller": "_privacy_for_provider",
+          "callee": "PROVIDERS.get",
+          "lineNumber": 474
+        },
+        {
+          "caller": "llm_error_payload",
+          "callee": "isinstance",
+          "lineNumber": 479
+        },
+        {
+          "caller": "llm_error_payload",
+          "callee": "str",
+          "lineNumber": 480
+        },
+        {
+          "caller": "llm_error_payload",
+          "callee": "str",
+          "lineNumber": 481
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 7,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/llm/anthropic.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 135,
+      "nonEmptyLines": 123,
+      "classes": [
+        {
+          "name": "AnthropicClient",
+          "startLine": 19,
+          "endLine": 135,
+          "methods": [
+            "health_check",
+            "list_models",
+            "chat",
+            "stream_chat",
+            "_headers",
+            "_to_anthropic_messages"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AnthropicClient",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "health_check",
+          "callee": "LLMHealth",
+          "lineNumber": 22
+        },
+        {
+          "caller": "health_check",
+          "callee": "LLMHealth",
+          "lineNumber": 28
+        },
+        {
+          "caller": "list_models",
+          "callee": "LLMModel",
+          "lineNumber": 39
+        },
+        {
+          "caller": "chat",
+          "callee": "LLMConfigError",
+          "lineNumber": 44
+        },
+        {
+          "caller": "chat",
+          "callee": "self._to_anthropic_messages",
+          "lineNumber": 45
+        },
+        {
+          "caller": "chat",
+          "callee": "request_json",
+          "lineNumber": 55
+        },
+        {
+          "caller": "chat",
+          "callee": "self.config.api_base.rstrip",
+          "lineNumber": 57
+        },
+        {
+          "caller": "chat",
+          "callee": "self._headers",
+          "lineNumber": 58
+        },
+        {
+          "caller": "chat",
+          "callee": "isinstance",
+          "lineNumber": 63
+        },
+        {
+          "caller": "chat",
+          "callee": "json.dumps",
+          "lineNumber": 63
+        },
+        {
+          "caller": "chat",
+          "callee": "LLMProviderUnavailableError",
+          "lineNumber": 64
+        },
+        {
+          "caller": "chat",
+          "callee": "isinstance",
+          "lineNumber": 65
+        },
+        {
+          "caller": "chat",
+          "callee": "LLMNetworkError",
+          "lineNumber": 66
+        },
+        {
+          "caller": "chat",
+          "callee": "data.get",
+          "lineNumber": 68
+        },
+        {
+          "caller": "chat",
+          "callee": "\"\".join",
+          "lineNumber": 69
+        },
+        {
+          "caller": "chat",
+          "callee": "str",
+          "lineNumber": 70
+        },
+        {
+          "caller": "chat",
+          "callee": "block.get",
+          "lineNumber": 70
+        },
+        {
+          "caller": "chat",
+          "callee": "isinstance",
+          "lineNumber": 72
+        },
+        {
+          "caller": "chat",
+          "callee": "block.get",
+          "lineNumber": 72
+        },
+        {
+          "caller": "chat",
+          "callee": "LLMChatResponse",
+          "lineNumber": 74
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "LLMConfigError",
+          "lineNumber": 84
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "self._to_anthropic_messages",
+          "lineNumber": 85
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "stream_post_lines",
+          "lineNumber": 96
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "self.config.api_base.rstrip",
+          "lineNumber": 97
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "self._headers",
+          "lineNumber": 98
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "line.startswith",
+          "lineNumber": 102
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "line[5:].strip",
+          "lineNumber": 104
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "json.loads",
+          "lineNumber": 108
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "event.get",
+          "lineNumber": 111
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "event.get",
+          "lineNumber": 112
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "delta.get",
+          "lineNumber": 113
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "str",
+          "lineNumber": 115
+        },
+        {
+          "caller": "_to_anthropic_messages",
+          "callee": "system_parts.append",
+          "lineNumber": 131
+        },
+        {
+          "caller": "_to_anthropic_messages",
+          "callee": "converted.append",
+          "lineNumber": 134
+        },
+        {
+          "caller": "_to_anthropic_messages",
+          "callee": "\"\\n\\n\".join",
+          "lineNumber": 135
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/llm/base.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 100,
+      "nonEmptyLines": 77,
+      "classes": [
+        {
+          "name": "LLMProviderConfig",
+          "startLine": 21,
+          "endLine": 33,
+          "methods": [],
+          "properties": [
+            "provider",
+            "api_base",
+            "api_key",
+            "model",
+            "timeout_seconds",
+            "temperature",
+            "max_tokens",
+            "streaming",
+            "vision",
+            "organization",
+            "project",
+            "context_window"
+          ]
+        },
+        {
+          "name": "LLMMessage",
+          "startLine": 36,
+          "endLine": 41,
+          "methods": [],
+          "properties": [
+            "role",
+            "content",
+            "tool_call_id",
+            "name",
+            "tool_calls"
+          ]
+        },
+        {
+          "name": "LLMToolCall",
+          "startLine": 44,
+          "endLine": 47,
+          "methods": [],
+          "properties": [
+            "id",
+            "name",
+            "arguments"
+          ]
+        },
+        {
+          "name": "LLMChatRequest",
+          "startLine": 50,
+          "endLine": 56,
+          "methods": [],
+          "properties": [
+            "messages",
+            "model",
+            "temperature",
+            "max_tokens",
+            "stream",
+            "tools"
+          ]
+        },
+        {
+          "name": "LLMChatResponse",
+          "startLine": 59,
+          "endLine": 64,
+          "methods": [],
+          "properties": [
+            "provider",
+            "model",
+            "content",
+            "tool_calls",
+            "raw"
+          ]
+        },
+        {
+          "name": "LLMModel",
+          "startLine": 67,
+          "endLine": 71,
+          "methods": [],
+          "properties": [
+            "id",
+            "name",
+            "local",
+            "vision"
+          ]
+        },
+        {
+          "name": "LLMHealth",
+          "startLine": 74,
+          "endLine": 79,
+          "methods": [],
+          "properties": [
+            "ok",
+            "status",
+            "detail",
+            "provider",
+            "model_count"
+          ]
+        },
+        {
+          "name": "BaseLLMClient",
+          "startLine": 82,
+          "endLine": 100,
+          "methods": [
+            "__init__",
+            "health_check",
+            "list_models",
+            "chat",
+            "stream_chat"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "LLMProviderConfig",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "LLMMessage",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "LLMToolCall",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "LLMChatRequest",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "LLMChatResponse",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "LLMModel",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "LLMHealth",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "BaseLLMClient",
+          "line": 82,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "stream_chat",
+          "callee": "self.chat",
+          "lineNumber": 99
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 8,
+        "functionCount": 0,
+        "classCount": 8
+      }
+    },
+    {
+      "path": "backend/app/modules/llm/circuit_breaker.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 44,
+      "nonEmptyLines": 31,
+      "functions": [
+        {
+          "name": "get_llm_circuit_breaker",
+          "startLine": 43,
+          "endLine": 44,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "LLMCircuitBreaker",
+          "startLine": 14,
+          "endLine": 37,
+          "methods": [
+            "__init__",
+            "allow",
+            "record_success",
+            "record_failure"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "LLMCircuitBreaker",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "get_llm_circuit_breaker",
+          "line": 43,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "allow",
+          "callee": "time.monotonic",
+          "lineNumber": 22
+        },
+        {
+          "caller": "allow",
+          "callee": "logger.info",
+          "lineNumber": 25
+        },
+        {
+          "caller": "record_failure",
+          "callee": "time.monotonic",
+          "lineNumber": 36
+        },
+        {
+          "caller": "record_failure",
+          "callee": "logger.warning",
+          "lineNumber": 37
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/llm/context_guard.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 72,
+      "nonEmptyLines": 57,
+      "functions": [
+        {
+          "name": "estimate_tokens",
+          "startLine": 13,
+          "endLine": 16,
+          "params": [
+            "text"
+          ]
+        },
+        {
+          "name": "estimate_messages_tokens",
+          "startLine": 19,
+          "endLine": 24,
+          "params": [
+            "messages"
+          ]
+        },
+        {
+          "name": "fit_messages",
+          "startLine": 27,
+          "endLine": 72,
+          "params": [
+            "messages",
+            "context_window",
+            "reserve_tokens",
+            "task"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "estimate_tokens",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "estimate_messages_tokens",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "fit_messages",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "estimate_tokens",
+          "callee": "max",
+          "lineNumber": 16
+        },
+        {
+          "caller": "estimate_tokens",
+          "callee": "len",
+          "lineNumber": 16
+        },
+        {
+          "caller": "estimate_messages_tokens",
+          "callee": "estimate_tokens",
+          "lineNumber": 23
+        },
+        {
+          "caller": "fit_messages",
+          "callee": "estimate_messages_tokens",
+          "lineNumber": 37
+        },
+        {
+          "caller": "fit_messages",
+          "callee": "max",
+          "lineNumber": 38
+        },
+        {
+          "caller": "fit_messages",
+          "callee": "estimate_tokens",
+          "lineNumber": 48
+        },
+        {
+          "caller": "fit_messages",
+          "callee": "kept_system.append",
+          "lineNumber": 51
+        },
+        {
+          "caller": "fit_messages",
+          "callee": "reversed",
+          "lineNumber": 55
+        },
+        {
+          "caller": "fit_messages",
+          "callee": "estimate_tokens",
+          "lineNumber": 56
+        },
+        {
+          "caller": "fit_messages",
+          "callee": "kept_other.insert",
+          "lineNumber": 59
+        },
+        {
+          "caller": "fit_messages",
+          "callee": "estimate_messages_tokens",
+          "lineNumber": 63
+        },
+        {
+          "caller": "fit_messages",
+          "callee": "logger.info",
+          "lineNumber": 65
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/llm/errors.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 12,
+      "classes": [
+        {
+          "name": "LLMError",
+          "startLine": 4,
+          "endLine": 9,
+          "methods": [
+            "__init__"
+          ],
+          "properties": []
+        },
+        {
+          "name": "LLMConfigError",
+          "startLine": 12,
+          "endLine": 13,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "LLMNetworkError",
+          "startLine": 16,
+          "endLine": 17,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "LLMProviderUnavailableError",
+          "startLine": 20,
+          "endLine": 21,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "LLMError",
+          "line": 4,
+          "isDefault": false
+        },
+        {
+          "name": "LLMConfigError",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "LLMNetworkError",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "LLMProviderUnavailableError",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "super().__init__",
+          "lineNumber": 8
+        },
+        {
+          "caller": "__init__",
+          "callee": "super",
+          "lineNumber": 8
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 0,
+        "classCount": 4
+      }
+    },
+    {
+      "path": "backend/app/modules/llm/factory.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 50,
+      "nonEmptyLines": 43,
+      "functions": [
+        {
+          "name": "create_llm_client",
+          "startLine": 13,
+          "endLine": 23,
+          "params": [
+            "config",
+            "with_retry"
+          ]
+        },
+        {
+          "name": "config_from_profile",
+          "startLine": 26,
+          "endLine": 39,
+          "params": [
+            "profile"
+          ]
+        },
+        {
+          "name": "config_from_env",
+          "startLine": 42,
+          "endLine": 50,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "create_llm_client",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "config_from_profile",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "config_from_env",
+          "line": 42,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create_llm_client",
+          "callee": "get_provider_spec",
+          "lineNumber": 14
+        },
+        {
+          "caller": "create_llm_client",
+          "callee": "OllamaClient",
+          "lineNumber": 16
+        },
+        {
+          "caller": "create_llm_client",
+          "callee": "AnthropicClient",
+          "lineNumber": 18
+        },
+        {
+          "caller": "create_llm_client",
+          "callee": "OpenAICompatibleClient",
+          "lineNumber": 20
+        },
+        {
+          "caller": "create_llm_client",
+          "callee": "RetryLLMClient",
+          "lineNumber": 22
+        },
+        {
+          "caller": "config_from_profile",
+          "callee": "str",
+          "lineNumber": 27
+        },
+        {
+          "caller": "config_from_profile",
+          "callee": "LLMProviderConfig",
+          "lineNumber": 28
+        },
+        {
+          "caller": "config_from_env",
+          "callee": "LLMProviderConfig",
+          "lineNumber": 44
+        },
+        {
+          "caller": "config_from_env",
+          "callee": "float",
+          "lineNumber": 49
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/llm/http.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 83,
+      "nonEmptyLines": 73,
+      "functions": [
+        {
+          "name": "request_json",
+          "startLine": 10,
+          "endLine": 41,
+          "params": [
+            "method",
+            "url",
+            "headers",
+            "body",
+            "timeout_seconds"
+          ]
+        },
+        {
+          "name": "stream_post_lines",
+          "startLine": 44,
+          "endLine": 83,
+          "params": [
+            "url",
+            "headers",
+            "body",
+            "timeout_seconds"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "request_json",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "stream_post_lines",
+          "line": 44,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "request_json",
+          "callee": "dict",
+          "lineNumber": 19
+        },
+        {
+          "caller": "request_json",
+          "callee": "json.dumps(body).encode",
+          "lineNumber": 21
+        },
+        {
+          "caller": "request_json",
+          "callee": "json.dumps",
+          "lineNumber": 21
+        },
+        {
+          "caller": "request_json",
+          "callee": "req_headers.setdefault",
+          "lineNumber": 22
+        },
+        {
+          "caller": "_call",
+          "callee": "request.Request",
+          "lineNumber": 25
+        },
+        {
+          "caller": "_call",
+          "callee": "method.upper",
+          "lineNumber": 25
+        },
+        {
+          "caller": "_call",
+          "callee": "request.urlopen",
+          "lineNumber": 27
+        },
+        {
+          "caller": "_call",
+          "callee": "response.read().decode",
+          "lineNumber": 28
+        },
+        {
+          "caller": "_call",
+          "callee": "response.read",
+          "lineNumber": 28
+        },
+        {
+          "caller": "_call",
+          "callee": "exc.read().decode",
+          "lineNumber": 31
+        },
+        {
+          "caller": "_call",
+          "callee": "exc.read",
+          "lineNumber": 31
+        },
+        {
+          "caller": "_call",
+          "callee": "json.loads",
+          "lineNumber": 36
+        },
+        {
+          "caller": "request_json",
+          "callee": "asyncio.to_thread",
+          "lineNumber": 41
+        },
+        {
+          "caller": "stream_post_lines",
+          "callee": "json.dumps(body or {}).encode",
+          "lineNumber": 51
+        },
+        {
+          "caller": "stream_post_lines",
+          "callee": "json.dumps",
+          "lineNumber": 51
+        },
+        {
+          "caller": "stream_post_lines",
+          "callee": "dict",
+          "lineNumber": 52
+        },
+        {
+          "caller": "stream_post_lines",
+          "callee": "req_headers.setdefault",
+          "lineNumber": 53
+        },
+        {
+          "caller": "stream_post_lines",
+          "callee": "asyncio.Queue",
+          "lineNumber": 54
+        },
+        {
+          "caller": "stream_post_lines",
+          "callee": "asyncio.get_running_loop",
+          "lineNumber": 55
+        },
+        {
+          "caller": "_worker",
+          "callee": "request.Request",
+          "lineNumber": 59
+        },
+        {
+          "caller": "_worker",
+          "callee": "request.urlopen",
+          "lineNumber": 60
+        },
+        {
+          "caller": "_worker",
+          "callee": "response.readline",
+          "lineNumber": 62
+        },
+        {
+          "caller": "_worker",
+          "callee": "asyncio.run_coroutine_threadsafe(\n                        queue.put(line.decode(\"utf-8\", errors=\"replace\").rstrip(\"\\r\\n\")),\n                        loop,\n                    ).result",
+          "lineNumber": 65
+        },
+        {
+          "caller": "_worker",
+          "callee": "asyncio.run_coroutine_threadsafe",
+          "lineNumber": 65
+        },
+        {
+          "caller": "_worker",
+          "callee": "queue.put",
+          "lineNumber": 66
+        },
+        {
+          "caller": "_worker",
+          "callee": "line.decode(\"utf-8\", errors=\"replace\").rstrip",
+          "lineNumber": 66
+        },
+        {
+          "caller": "_worker",
+          "callee": "line.decode",
+          "lineNumber": 66
+        },
+        {
+          "caller": "_worker",
+          "callee": "asyncio.run_coroutine_threadsafe(queue.put(f\"__stream_error__:{exc}\"), loop).result",
+          "lineNumber": 70
+        },
+        {
+          "caller": "_worker",
+          "callee": "asyncio.run_coroutine_threadsafe",
+          "lineNumber": 70
+        },
+        {
+          "caller": "_worker",
+          "callee": "queue.put",
+          "lineNumber": 70
+        },
+        {
+          "caller": "_worker",
+          "callee": "asyncio.run_coroutine_threadsafe(queue.put(None), loop).result",
+          "lineNumber": 72
+        },
+        {
+          "caller": "_worker",
+          "callee": "asyncio.run_coroutine_threadsafe",
+          "lineNumber": 72
+        },
+        {
+          "caller": "_worker",
+          "callee": "queue.put",
+          "lineNumber": 72
+        },
+        {
+          "caller": "stream_post_lines",
+          "callee": "loop.run_in_executor",
+          "lineNumber": 74
+        },
+        {
+          "caller": "stream_post_lines",
+          "callee": "queue.get",
+          "lineNumber": 77
+        },
+        {
+          "caller": "stream_post_lines",
+          "callee": "item.startswith",
+          "lineNumber": 80
+        },
+        {
+          "caller": "stream_post_lines",
+          "callee": "RuntimeError",
+          "lineNumber": 81
+        },
+        {
+          "caller": "stream_post_lines",
+          "callee": "item.split",
+          "lineNumber": 81
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/llm/ollama.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 177,
+      "nonEmptyLines": 166,
+      "classes": [
+        {
+          "name": "OllamaClient",
+          "startLine": 19,
+          "endLine": 177,
+          "methods": [
+            "health_check",
+            "list_models",
+            "chat",
+            "stream_chat",
+            "_parse_tool_calls"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "OllamaClient",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "health_check",
+          "callee": "self.list_models",
+          "lineNumber": 22
+        },
+        {
+          "caller": "health_check",
+          "callee": "LLMHealth",
+          "lineNumber": 24
+        },
+        {
+          "caller": "health_check",
+          "callee": "str",
+          "lineNumber": 27
+        },
+        {
+          "caller": "health_check",
+          "callee": "LLMHealth",
+          "lineNumber": 30
+        },
+        {
+          "caller": "health_check",
+          "callee": "len",
+          "lineNumber": 35
+        },
+        {
+          "caller": "list_models",
+          "callee": "self.config.api_base.rstrip",
+          "lineNumber": 39
+        },
+        {
+          "caller": "list_models",
+          "callee": "request_json",
+          "lineNumber": 41
+        },
+        {
+          "caller": "list_models",
+          "callee": "LLMProviderUnavailableError",
+          "lineNumber": 47
+        },
+        {
+          "caller": "list_models",
+          "callee": "data.get",
+          "lineNumber": 50
+        },
+        {
+          "caller": "list_models",
+          "callee": "isinstance",
+          "lineNumber": 50
+        },
+        {
+          "caller": "list_models",
+          "callee": "LLMModel",
+          "lineNumber": 52
+        },
+        {
+          "caller": "list_models",
+          "callee": "str",
+          "lineNumber": 52
+        },
+        {
+          "caller": "list_models",
+          "callee": "item.get",
+          "lineNumber": 52
+        },
+        {
+          "caller": "list_models",
+          "callee": "str",
+          "lineNumber": 52
+        },
+        {
+          "caller": "list_models",
+          "callee": "item.get",
+          "lineNumber": 52
+        },
+        {
+          "caller": "list_models",
+          "callee": "isinstance",
+          "lineNumber": 54
+        },
+        {
+          "caller": "list_models",
+          "callee": "item.get",
+          "lineNumber": 54
+        },
+        {
+          "caller": "chat",
+          "callee": "LLMConfigError",
+          "lineNumber": 60
+        },
+        {
+          "caller": "chat",
+          "callee": "self.config.api_base.rstrip",
+          "lineNumber": 86
+        },
+        {
+          "caller": "chat",
+          "callee": "request_json",
+          "lineNumber": 87
+        },
+        {
+          "caller": "chat",
+          "callee": "isinstance",
+          "lineNumber": 94
+        },
+        {
+          "caller": "chat",
+          "callee": "json.dumps",
+          "lineNumber": 94
+        },
+        {
+          "caller": "chat",
+          "callee": "LLMProviderUnavailableError",
+          "lineNumber": 95
+        },
+        {
+          "caller": "chat",
+          "callee": "isinstance",
+          "lineNumber": 96
+        },
+        {
+          "caller": "chat",
+          "callee": "LLMNetworkError",
+          "lineNumber": 97
+        },
+        {
+          "caller": "chat",
+          "callee": "data.get",
+          "lineNumber": 99
+        },
+        {
+          "caller": "chat",
+          "callee": "self._parse_tool_calls",
+          "lineNumber": 100
+        },
+        {
+          "caller": "chat",
+          "callee": "message.get",
+          "lineNumber": 100
+        },
+        {
+          "caller": "chat",
+          "callee": "LLMChatResponse",
+          "lineNumber": 101
+        },
+        {
+          "caller": "chat",
+          "callee": "str",
+          "lineNumber": 104
+        },
+        {
+          "caller": "chat",
+          "callee": "message.get",
+          "lineNumber": 104
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "LLMConfigError",
+          "lineNumber": 112
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "self.chat",
+          "lineNumber": 114
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "self.config.api_base.rstrip",
+          "lineNumber": 141
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "stream_post_lines",
+          "lineNumber": 142
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "json.loads",
+          "lineNumber": 148
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "event.get",
+          "lineNumber": 151
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "message.get",
+          "lineNumber": 152
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "str",
+          "lineNumber": 154
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "isinstance",
+          "lineNumber": 158
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "enumerate",
+          "lineNumber": 161
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "isinstance",
+          "lineNumber": 162
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "item.get",
+          "lineNumber": 164
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "fn.get",
+          "lineNumber": 165
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "json.loads",
+          "lineNumber": 167
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "isinstance",
+          "lineNumber": 167
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "dict",
+          "lineNumber": 167
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "parsed.append",
+          "lineNumber": 170
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "LLMToolCall",
+          "lineNumber": 171
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "str",
+          "lineNumber": 172
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "item.get",
+          "lineNumber": 172
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "str",
+          "lineNumber": 173
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "fn.get",
+          "lineNumber": 173
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "item.get",
+          "lineNumber": 173
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "isinstance",
+          "lineNumber": 174
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/llm/openai_compatible.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 226,
+      "nonEmptyLines": 213,
+      "classes": [
+        {
+          "name": "OpenAICompatibleClient",
+          "startLine": 23,
+          "endLine": 226,
+          "methods": [
+            "health_check",
+            "list_models",
+            "chat",
+            "stream_chat",
+            "_headers",
+            "_serialize_message",
+            "_parse_tool_calls"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "OpenAICompatibleClient",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "health_check",
+          "callee": "LLMHealth",
+          "lineNumber": 26
+        },
+        {
+          "caller": "health_check",
+          "callee": "self.list_models",
+          "lineNumber": 33
+        },
+        {
+          "caller": "health_check",
+          "callee": "LLMHealth",
+          "lineNumber": 35
+        },
+        {
+          "caller": "health_check",
+          "callee": "str",
+          "lineNumber": 38
+        },
+        {
+          "caller": "health_check",
+          "callee": "LLMHealth",
+          "lineNumber": 41
+        },
+        {
+          "caller": "health_check",
+          "callee": "len",
+          "lineNumber": 46
+        },
+        {
+          "caller": "list_models",
+          "callee": "self.config.api_base.rstrip",
+          "lineNumber": 50
+        },
+        {
+          "caller": "list_models",
+          "callee": "request_json",
+          "lineNumber": 51
+        },
+        {
+          "caller": "list_models",
+          "callee": "self._headers",
+          "lineNumber": 54
+        },
+        {
+          "caller": "list_models",
+          "callee": "LLMProviderUnavailableError",
+          "lineNumber": 58
+        },
+        {
+          "caller": "list_models",
+          "callee": "LLMProviderUnavailableError",
+          "lineNumber": 60
+        },
+        {
+          "caller": "list_models",
+          "callee": "data.get",
+          "lineNumber": 61
+        },
+        {
+          "caller": "list_models",
+          "callee": "isinstance",
+          "lineNumber": 61
+        },
+        {
+          "caller": "list_models",
+          "callee": "isinstance",
+          "lineNumber": 62
+        },
+        {
+          "caller": "list_models",
+          "callee": "LLMModel",
+          "lineNumber": 65
+        },
+        {
+          "caller": "list_models",
+          "callee": "str",
+          "lineNumber": 66
+        },
+        {
+          "caller": "list_models",
+          "callee": "item.get",
+          "lineNumber": 66
+        },
+        {
+          "caller": "list_models",
+          "callee": "str",
+          "lineNumber": 67
+        },
+        {
+          "caller": "list_models",
+          "callee": "item.get",
+          "lineNumber": 67
+        },
+        {
+          "caller": "list_models",
+          "callee": "isinstance",
+          "lineNumber": 71
+        },
+        {
+          "caller": "list_models",
+          "callee": "item.get",
+          "lineNumber": 71
+        },
+        {
+          "caller": "chat",
+          "callee": "LLMConfigError",
+          "lineNumber": 77
+        },
+        {
+          "caller": "chat",
+          "callee": "self._serialize_message",
+          "lineNumber": 80
+        },
+        {
+          "caller": "chat",
+          "callee": "self.config.api_base.rstrip",
+          "lineNumber": 97
+        },
+        {
+          "caller": "chat",
+          "callee": "request_json",
+          "lineNumber": 98
+        },
+        {
+          "caller": "chat",
+          "callee": "self._headers",
+          "lineNumber": 101
+        },
+        {
+          "caller": "chat",
+          "callee": "LLMProviderUnavailableError",
+          "lineNumber": 106
+        },
+        {
+          "caller": "chat",
+          "callee": "LLMProviderUnavailableError",
+          "lineNumber": 108
+        },
+        {
+          "caller": "chat",
+          "callee": "isinstance",
+          "lineNumber": 110
+        },
+        {
+          "caller": "chat",
+          "callee": "json.dumps",
+          "lineNumber": 110
+        },
+        {
+          "caller": "chat",
+          "callee": "LLMProviderUnavailableError",
+          "lineNumber": 111
+        },
+        {
+          "caller": "chat",
+          "callee": "isinstance",
+          "lineNumber": 113
+        },
+        {
+          "caller": "chat",
+          "callee": "LLMNetworkError",
+          "lineNumber": 114
+        },
+        {
+          "caller": "chat",
+          "callee": "data.get",
+          "lineNumber": 115
+        },
+        {
+          "caller": "chat",
+          "callee": "choice.get",
+          "lineNumber": 116
+        },
+        {
+          "caller": "chat",
+          "callee": "self._parse_tool_calls",
+          "lineNumber": 117
+        },
+        {
+          "caller": "chat",
+          "callee": "message.get",
+          "lineNumber": 117
+        },
+        {
+          "caller": "chat",
+          "callee": "LLMChatResponse",
+          "lineNumber": 118
+        },
+        {
+          "caller": "chat",
+          "callee": "str",
+          "lineNumber": 121
+        },
+        {
+          "caller": "chat",
+          "callee": "message.get",
+          "lineNumber": 121
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "LLMConfigError",
+          "lineNumber": 129
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "self.chat",
+          "lineNumber": 131
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "self._serialize_message",
+          "lineNumber": 138
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "self.config.api_base.rstrip",
+          "lineNumber": 151
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "stream_post_lines",
+          "lineNumber": 152
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "self._headers",
+          "lineNumber": 154
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "line.startswith",
+          "lineNumber": 158
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "line[5:].strip",
+          "lineNumber": 160
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "json.loads",
+          "lineNumber": 164
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "event.get",
+          "lineNumber": 167
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "(choices[0].get(\"delta\") or {}).get",
+          "lineNumber": 170
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "choices[0].get",
+          "lineNumber": 170
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "str",
+          "lineNumber": 172
+        },
+        {
+          "caller": "_serialize_message",
+          "callee": "json.dumps",
+          "lineNumber": 198
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "isinstance",
+          "lineNumber": 207
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "isinstance",
+          "lineNumber": 211
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "item.get",
+          "lineNumber": 213
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "fn.get",
+          "lineNumber": 214
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "json.loads",
+          "lineNumber": 216
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "isinstance",
+          "lineNumber": 216
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "dict",
+          "lineNumber": 216
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "parsed.append",
+          "lineNumber": 219
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "LLMToolCall",
+          "lineNumber": 220
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "str",
+          "lineNumber": 221
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "item.get",
+          "lineNumber": 221
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "str",
+          "lineNumber": 222
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "fn.get",
+          "lineNumber": 222
+        },
+        {
+          "caller": "_parse_tool_calls",
+          "callee": "isinstance",
+          "lineNumber": 223
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/llm/provider_registry.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 121,
+      "nonEmptyLines": 110,
+      "functions": [
+        {
+          "name": "get_provider_spec",
+          "startLine": 117,
+          "endLine": 121,
+          "params": [
+            "provider_id"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ProviderSpec",
+          "startLine": 12,
+          "endLine": 14,
+          "methods": [],
+          "properties": [
+            "descriptor",
+            "backend"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ProviderSpec",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "get_provider_spec",
+          "line": 117,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "get_provider_spec",
+          "callee": "PROVIDER_REGISTRY.get",
+          "lineNumber": 118
+        },
+        {
+          "caller": "get_provider_spec",
+          "callee": "ValueError",
+          "lineNumber": 120
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/llm/retry.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 105,
+      "nonEmptyLines": 92,
+      "classes": [
+        {
+          "name": "RetryLLMClient",
+          "startLine": 23,
+          "endLine": 105,
+          "methods": [
+            "__init__",
+            "health_check",
+            "list_models",
+            "chat",
+            "stream_chat",
+            "_with_retry",
+            "_backoff_delay",
+            "_is_retryable"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RetryLLMClient",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "super().__init__",
+          "lineNumber": 31
+        },
+        {
+          "caller": "__init__",
+          "callee": "super",
+          "lineNumber": 31
+        },
+        {
+          "caller": "__init__",
+          "callee": "max",
+          "lineNumber": 33
+        },
+        {
+          "caller": "health_check",
+          "callee": "self._inner.health_check",
+          "lineNumber": 37
+        },
+        {
+          "caller": "list_models",
+          "callee": "self._with_retry",
+          "lineNumber": 40
+        },
+        {
+          "caller": "chat",
+          "callee": "get_llm_circuit_breaker",
+          "lineNumber": 43
+        },
+        {
+          "caller": "chat",
+          "callee": "breaker.allow",
+          "lineNumber": 44
+        },
+        {
+          "caller": "chat",
+          "callee": "LLMProviderUnavailableError",
+          "lineNumber": 45
+        },
+        {
+          "caller": "chat",
+          "callee": "self._with_retry",
+          "lineNumber": 47
+        },
+        {
+          "caller": "chat",
+          "callee": "breaker.record_failure",
+          "lineNumber": 49
+        },
+        {
+          "caller": "chat",
+          "callee": "breaker.record_success",
+          "lineNumber": 51
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "self._inner.stream_chat",
+          "lineNumber": 59
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "self._is_retryable",
+          "lineNumber": 63
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "self._backoff_delay",
+          "lineNumber": 65
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "logger.warning",
+          "lineNumber": 66
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "asyncio.sleep",
+          "lineNumber": 73
+        },
+        {
+          "caller": "_with_retry",
+          "callee": "fn",
+          "lineNumber": 80
+        },
+        {
+          "caller": "_with_retry",
+          "callee": "self._is_retryable",
+          "lineNumber": 82
+        },
+        {
+          "caller": "_with_retry",
+          "callee": "self._backoff_delay",
+          "lineNumber": 84
+        },
+        {
+          "caller": "_with_retry",
+          "callee": "logger.warning",
+          "lineNumber": 85
+        },
+        {
+          "caller": "_with_retry",
+          "callee": "asyncio.sleep",
+          "lineNumber": 92
+        },
+        {
+          "caller": "_backoff_delay",
+          "callee": "random.uniform",
+          "lineNumber": 95
+        },
+        {
+          "caller": "_is_retryable",
+          "callee": "isinstance",
+          "lineNumber": 100
+        },
+        {
+          "caller": "_is_retryable",
+          "callee": "isinstance",
+          "lineNumber": 102
+        },
+        {
+          "caller": "_is_retryable",
+          "callee": "f\"{exc} {getattr(exc, 'detail', '')}\".lower",
+          "lineNumber": 103
+        },
+        {
+          "caller": "_is_retryable",
+          "callee": "getattr",
+          "lineNumber": 103
+        },
+        {
+          "caller": "_is_retryable",
+          "callee": "any",
+          "lineNumber": 104
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/llm/service.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 91,
+      "nonEmptyLines": 77,
+      "functions": [
+        {
+          "name": "create_task_client",
+          "startLine": 15,
+          "endLine": 34,
+          "params": [
+            "task"
+          ]
+        },
+        {
+          "name": "get_llm_service",
+          "startLine": 87,
+          "endLine": 91,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "LLMService",
+          "startLine": 37,
+          "endLine": 81,
+          "methods": [
+            "for_task",
+            "complete",
+            "stream"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "create_task_client",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "LLMService",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "get_llm_service",
+          "line": 87,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create_task_client",
+          "callee": "get_cached_task_client",
+          "lineNumber": 16
+        },
+        {
+          "caller": "create_task_client",
+          "callee": "AISettingsService",
+          "lineNumber": 22
+        },
+        {
+          "caller": "create_task_client",
+          "callee": "service.resolve_task_profile",
+          "lineNumber": 24
+        },
+        {
+          "caller": "create_task_client",
+          "callee": "config_from_profile",
+          "lineNumber": 25
+        },
+        {
+          "caller": "create_task_client",
+          "callee": "config_from_env",
+          "lineNumber": 27
+        },
+        {
+          "caller": "create_task_client",
+          "callee": "config.model_copy",
+          "lineNumber": 29
+        },
+        {
+          "caller": "create_task_client",
+          "callee": "float",
+          "lineNumber": 30
+        },
+        {
+          "caller": "create_task_client",
+          "callee": "LLMTaskClient",
+          "lineNumber": 32
+        },
+        {
+          "caller": "create_task_client",
+          "callee": "create_llm_client",
+          "lineNumber": 32
+        },
+        {
+          "caller": "create_task_client",
+          "callee": "set_cached_task_client",
+          "lineNumber": 33
+        },
+        {
+          "caller": "for_task",
+          "callee": "create_task_client",
+          "lineNumber": 39
+        },
+        {
+          "caller": "complete",
+          "callee": "self.for_task",
+          "lineNumber": 51
+        },
+        {
+          "caller": "complete",
+          "callee": "client.chat",
+          "lineNumber": 52
+        },
+        {
+          "caller": "complete",
+          "callee": "LLMChatRequest",
+          "lineNumber": 53
+        },
+        {
+          "caller": "stream",
+          "callee": "self.for_task",
+          "lineNumber": 71
+        },
+        {
+          "caller": "stream",
+          "callee": "client.stream_chat",
+          "lineNumber": 72
+        },
+        {
+          "caller": "stream",
+          "callee": "LLMChatRequest",
+          "lineNumber": 73
+        },
+        {
+          "caller": "get_llm_service",
+          "callee": "LLMService",
+          "lineNumber": 90
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/llm/task_client.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 89,
+      "nonEmptyLines": 82,
+      "classes": [
+        {
+          "name": "LLMTaskClient",
+          "startLine": 18,
+          "endLine": 89,
+          "methods": [
+            "chat",
+            "stream_chat",
+            "_prepare_request"
+          ],
+          "properties": [
+            "task",
+            "client",
+            "config"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "LLMTaskClient",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "chat",
+          "callee": "self._prepare_request",
+          "lineNumber": 24
+        },
+        {
+          "caller": "chat",
+          "callee": "time.perf_counter",
+          "lineNumber": 25
+        },
+        {
+          "caller": "chat",
+          "callee": "estimate_messages_tokens",
+          "lineNumber": 26
+        },
+        {
+          "caller": "chat",
+          "callee": "self.client.chat",
+          "lineNumber": 30
+        },
+        {
+          "caller": "chat",
+          "callee": "estimate_tokens",
+          "lineNumber": 31
+        },
+        {
+          "caller": "chat",
+          "callee": "metrics_registry.observe_llm_call",
+          "lineNumber": 35
+        },
+        {
+          "caller": "chat",
+          "callee": "time.perf_counter",
+          "lineNumber": 41
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "self._prepare_request",
+          "lineNumber": 46
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "time.perf_counter",
+          "lineNumber": 47
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "estimate_messages_tokens",
+          "lineNumber": 48
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "self.client.stream_chat",
+          "lineNumber": 52
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "estimate_tokens",
+          "lineNumber": 53
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "metrics_registry.observe_llm_call",
+          "lineNumber": 57
+        },
+        {
+          "caller": "stream_chat",
+          "callee": "time.perf_counter",
+          "lineNumber": 63
+        },
+        {
+          "caller": "_prepare_request",
+          "callee": "fit_messages",
+          "lineNumber": 68
+        },
+        {
+          "caller": "_prepare_request",
+          "callee": "request.model_copy",
+          "lineNumber": 73
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/llm/task_client_cache.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 21,
+      "functions": [
+        {
+          "name": "invalidate_task_client_cache",
+          "startLine": 11,
+          "endLine": 12,
+          "params": []
+        },
+        {
+          "name": "get_cached_task_client",
+          "startLine": 15,
+          "endLine": 23,
+          "params": [
+            "task"
+          ]
+        },
+        {
+          "name": "set_cached_task_client",
+          "startLine": 26,
+          "endLine": 30,
+          "params": [
+            "task",
+            "client"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "invalidate_task_client_cache",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "get_cached_task_client",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "set_cached_task_client",
+          "line": 26,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "invalidate_task_client_cache",
+          "callee": "_task_client_cache.clear",
+          "lineNumber": 12
+        },
+        {
+          "caller": "get_cached_task_client",
+          "callee": "_task_client_cache.get",
+          "lineNumber": 16
+        },
+        {
+          "caller": "get_cached_task_client",
+          "callee": "time.monotonic",
+          "lineNumber": 20
+        },
+        {
+          "caller": "get_cached_task_client",
+          "callee": "_task_client_cache.pop",
+          "lineNumber": 21
+        },
+        {
+          "caller": "set_cached_task_client",
+          "callee": "time.monotonic",
+          "lineNumber": 28
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/settings/api.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 22,
+      "functions": [
+        {
+          "name": "get_settings",
+          "startLine": 16,
+          "endLine": 17,
+          "params": []
+        },
+        {
+          "name": "put_settings",
+          "startLine": 21,
+          "endLine": 30,
+          "params": [
+            "payload"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "get_settings",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "put_settings",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "get_settings",
+          "callee": "_repo.get_settings_doc",
+          "lineNumber": 17
+        },
+        {
+          "caller": "put_settings",
+          "callee": "AISettingsService",
+          "lineNumber": 22
+        },
+        {
+          "caller": "put_settings",
+          "callee": "LLMSettingsUpdate.model_validate",
+          "lineNumber": 24
+        },
+        {
+          "caller": "put_settings",
+          "callee": "payload.ai.model_dump",
+          "lineNumber": 24
+        },
+        {
+          "caller": "put_settings",
+          "callee": "service._validate_settings",
+          "lineNumber": 25
+        },
+        {
+          "caller": "put_settings",
+          "callee": "ai_payload.model_dump",
+          "lineNumber": 25
+        },
+        {
+          "caller": "put_settings",
+          "callee": "HTTPException",
+          "lineNumber": 27
+        },
+        {
+          "caller": "put_settings",
+          "callee": "str",
+          "lineNumber": 27
+        },
+        {
+          "caller": "put_settings",
+          "callee": "_repo.put_settings_doc",
+          "lineNumber": 28
+        },
+        {
+          "caller": "put_settings",
+          "callee": "payload.model_dump",
+          "lineNumber": 28
+        },
+        {
+          "caller": "put_settings",
+          "callee": "invalidate_llm_settings_cache",
+          "lineNumber": 29
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/settings/defaults.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 8,
+      "functions": [
+        {
+          "name": "build_default_settings_doc",
+          "startLine": 8,
+          "endLine": 13,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "build_default_settings_doc",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "build_default_settings_doc",
+          "callee": "SettingsDoc(\n        ai=AISettingsSection.model_validate(default_llm_settings())\n    ).model_dump",
+          "lineNumber": 11
+        },
+        {
+          "caller": "build_default_settings_doc",
+          "callee": "SettingsDoc",
+          "lineNumber": 11
+        },
+        {
+          "caller": "build_default_settings_doc",
+          "callee": "AISettingsSection.model_validate",
+          "lineNumber": 12
+        },
+        {
+          "caller": "build_default_settings_doc",
+          "callee": "default_llm_settings",
+          "lineNumber": 12
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/settings/repository.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 146,
+      "nonEmptyLines": 131,
+      "classes": [
+        {
+          "name": "SettingsRepository",
+          "startLine": 24,
+          "endLine": 146,
+          "methods": [
+            "__init__",
+            "get_settings_doc",
+            "get_effective_settings_doc",
+            "put_settings_doc",
+            "_load_doc",
+            "_persist",
+            "_atomic_write_json",
+            "_merge_secrets",
+            "_mask_secrets",
+            "_extract_secrets"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SettingsRepository",
+          "line": 24,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "get_settings_doc",
+          "callee": "asyncio.to_thread",
+          "lineNumber": 30
+        },
+        {
+          "caller": "get_settings_doc",
+          "callee": "SettingsDoc.model_validate",
+          "lineNumber": 31
+        },
+        {
+          "caller": "get_settings_doc",
+          "callee": "self._mask_secrets",
+          "lineNumber": 31
+        },
+        {
+          "caller": "get_effective_settings_doc",
+          "callee": "asyncio.to_thread",
+          "lineNumber": 34
+        },
+        {
+          "caller": "get_effective_settings_doc",
+          "callee": "self._merge_secrets",
+          "lineNumber": 35
+        },
+        {
+          "caller": "put_settings_doc",
+          "callee": "self._merge_secrets",
+          "lineNumber": 38
+        },
+        {
+          "caller": "put_settings_doc",
+          "callee": "asyncio.to_thread",
+          "lineNumber": 38
+        },
+        {
+          "caller": "put_settings_doc",
+          "callee": "deepcopy",
+          "lineNumber": 39
+        },
+        {
+          "caller": "put_settings_doc",
+          "callee": "merged.update",
+          "lineNumber": 40
+        },
+        {
+          "caller": "put_settings_doc",
+          "callee": "datetime.now(UTC).isoformat",
+          "lineNumber": 41
+        },
+        {
+          "caller": "put_settings_doc",
+          "callee": "datetime.now",
+          "lineNumber": 41
+        },
+        {
+          "caller": "put_settings_doc",
+          "callee": "asyncio.to_thread",
+          "lineNumber": 42
+        },
+        {
+          "caller": "put_settings_doc",
+          "callee": "self.get_settings_doc",
+          "lineNumber": 43
+        },
+        {
+          "caller": "_load_doc",
+          "callee": "self.settings_path.parent.mkdir",
+          "lineNumber": 46
+        },
+        {
+          "caller": "_load_doc",
+          "callee": "self.settings_path.exists",
+          "lineNumber": 47
+        },
+        {
+          "caller": "_load_doc",
+          "callee": "build_default_settings_doc",
+          "lineNumber": 48
+        },
+        {
+          "caller": "_load_doc",
+          "callee": "self._persist",
+          "lineNumber": 49
+        },
+        {
+          "caller": "_load_doc",
+          "callee": "json.loads",
+          "lineNumber": 52
+        },
+        {
+          "caller": "_load_doc",
+          "callee": "self.settings_path.read_text",
+          "lineNumber": 52
+        },
+        {
+          "caller": "_load_doc",
+          "callee": "logger.warning",
+          "lineNumber": 54
+        },
+        {
+          "caller": "_load_doc",
+          "callee": "build_default_settings_doc",
+          "lineNumber": 55
+        },
+        {
+          "caller": "_load_doc",
+          "callee": "self._persist",
+          "lineNumber": 56
+        },
+        {
+          "caller": "_load_doc",
+          "callee": "isinstance",
+          "lineNumber": 58
+        },
+        {
+          "caller": "_load_doc",
+          "callee": "build_default_settings_doc",
+          "lineNumber": 59
+        },
+        {
+          "caller": "_persist",
+          "callee": "self._mask_secrets",
+          "lineNumber": 63
+        },
+        {
+          "caller": "_persist",
+          "callee": "self._extract_secrets",
+          "lineNumber": 64
+        },
+        {
+          "caller": "_persist",
+          "callee": "self._atomic_write_json",
+          "lineNumber": 65
+        },
+        {
+          "caller": "_persist",
+          "callee": "self._atomic_write_json",
+          "lineNumber": 66
+        },
+        {
+          "caller": "_atomic_write_json",
+          "callee": "path.parent.mkdir",
+          "lineNumber": 69
+        },
+        {
+          "caller": "_atomic_write_json",
+          "callee": "tempfile.mkstemp",
+          "lineNumber": 70
+        },
+        {
+          "caller": "_atomic_write_json",
+          "callee": "str",
+          "lineNumber": 70
+        },
+        {
+          "caller": "_atomic_write_json",
+          "callee": "os.fdopen",
+          "lineNumber": 72
+        },
+        {
+          "caller": "_atomic_write_json",
+          "callee": "json.dump",
+          "lineNumber": 73
+        },
+        {
+          "caller": "_atomic_write_json",
+          "callee": "handle.flush",
+          "lineNumber": 74
+        },
+        {
+          "caller": "_atomic_write_json",
+          "callee": "os.fsync",
+          "lineNumber": 75
+        },
+        {
+          "caller": "_atomic_write_json",
+          "callee": "handle.fileno",
+          "lineNumber": 75
+        },
+        {
+          "caller": "_atomic_write_json",
+          "callee": "os.replace",
+          "lineNumber": 76
+        },
+        {
+          "caller": "_atomic_write_json",
+          "callee": "os.unlink",
+          "lineNumber": 79
+        },
+        {
+          "caller": "_merge_secrets",
+          "callee": "deepcopy",
+          "lineNumber": 85
+        },
+        {
+          "caller": "_merge_secrets",
+          "callee": "self.secrets_path.exists",
+          "lineNumber": 86
+        },
+        {
+          "caller": "_merge_secrets",
+          "callee": "json.loads",
+          "lineNumber": 89
+        },
+        {
+          "caller": "_merge_secrets",
+          "callee": "self.secrets_path.read_text",
+          "lineNumber": 89
+        },
+        {
+          "caller": "_merge_secrets",
+          "callee": "isinstance",
+          "lineNumber": 92
+        },
+        {
+          "caller": "_merge_secrets",
+          "callee": "merged.setdefault",
+          "lineNumber": 94
+        },
+        {
+          "caller": "_merge_secrets",
+          "callee": "(secrets.get(\"provider_keys\") or {}).items",
+          "lineNumber": 95
+        },
+        {
+          "caller": "_merge_secrets",
+          "callee": "secrets.get",
+          "lineNumber": 95
+        },
+        {
+          "caller": "_merge_secrets",
+          "callee": "ai.setdefault",
+          "lineNumber": 96
+        },
+        {
+          "caller": "_merge_secrets",
+          "callee": "providers.setdefault",
+          "lineNumber": 97
+        },
+        {
+          "caller": "_merge_secrets",
+          "callee": "(secrets.get(\"profile_keys\") or {}).items",
+          "lineNumber": 101
+        },
+        {
+          "caller": "_merge_secrets",
+          "callee": "secrets.get",
+          "lineNumber": 101
+        },
+        {
+          "caller": "_merge_secrets",
+          "callee": "ai.get",
+          "lineNumber": 102
+        },
+        {
+          "caller": "_merge_secrets",
+          "callee": "isinstance",
+          "lineNumber": 103
+        },
+        {
+          "caller": "_merge_secrets",
+          "callee": "profile.get",
+          "lineNumber": 103
+        },
+        {
+          "caller": "_merge_secrets",
+          "callee": "secrets.get",
+          "lineNumber": 106
+        },
+        {
+          "caller": "_mask_secrets",
+          "callee": "deepcopy",
+          "lineNumber": 112
+        },
+        {
+          "caller": "_mask_secrets",
+          "callee": "masked.get",
+          "lineNumber": 113
+        },
+        {
+          "caller": "_mask_secrets",
+          "callee": "isinstance",
+          "lineNumber": 114
+        },
+        {
+          "caller": "_mask_secrets",
+          "callee": "(ai.get(\"providers\") or {}).values",
+          "lineNumber": 116
+        },
+        {
+          "caller": "_mask_secrets",
+          "callee": "ai.get",
+          "lineNumber": 116
+        },
+        {
+          "caller": "_mask_secrets",
+          "callee": "isinstance",
+          "lineNumber": 117
+        },
+        {
+          "caller": "_mask_secrets",
+          "callee": "provider.get",
+          "lineNumber": 117
+        },
+        {
+          "caller": "_mask_secrets",
+          "callee": "ai.get",
+          "lineNumber": 119
+        },
+        {
+          "caller": "_mask_secrets",
+          "callee": "isinstance",
+          "lineNumber": 120
+        },
+        {
+          "caller": "_mask_secrets",
+          "callee": "profile.get",
+          "lineNumber": 120
+        },
+        {
+          "caller": "_mask_secrets",
+          "callee": "ai.get",
+          "lineNumber": 122
+        },
+        {
+          "caller": "_extract_secrets",
+          "callee": "doc.get",
+          "lineNumber": 127
+        },
+        {
+          "caller": "_extract_secrets",
+          "callee": "(ai.get(\"providers\") or {}).items",
+          "lineNumber": 129
+        },
+        {
+          "caller": "_extract_secrets",
+          "callee": "ai.get",
+          "lineNumber": 129
+        },
+        {
+          "caller": "_extract_secrets",
+          "callee": "isinstance",
+          "lineNumber": 130
+        },
+        {
+          "caller": "_extract_secrets",
+          "callee": "provider.get",
+          "lineNumber": 132
+        },
+        {
+          "caller": "_extract_secrets",
+          "callee": "str",
+          "lineNumber": 134
+        },
+        {
+          "caller": "_extract_secrets",
+          "callee": "str",
+          "lineNumber": 134
+        },
+        {
+          "caller": "_extract_secrets",
+          "callee": "ai.get",
+          "lineNumber": 136
+        },
+        {
+          "caller": "_extract_secrets",
+          "callee": "isinstance",
+          "lineNumber": 137
+        },
+        {
+          "caller": "_extract_secrets",
+          "callee": "profile.get",
+          "lineNumber": 139
+        },
+        {
+          "caller": "_extract_secrets",
+          "callee": "str",
+          "lineNumber": 141
+        },
+        {
+          "caller": "_extract_secrets",
+          "callee": "profile.get",
+          "lineNumber": 141
+        },
+        {
+          "caller": "_extract_secrets",
+          "callee": "str",
+          "lineNumber": 141
+        },
+        {
+          "caller": "_extract_secrets",
+          "callee": "ai.get",
+          "lineNumber": 143
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/settings/schemas.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 17,
+      "classes": [
+        {
+          "name": "AISettingsSection",
+          "startLine": 8,
+          "endLine": 18,
+          "methods": [],
+          "properties": [
+            "active_provider",
+            "system_prompt",
+            "providers",
+            "task_defaults",
+            "profiles",
+            "default_profile_id",
+            "task_overrides"
+          ]
+        },
+        {
+          "name": "SettingsDoc",
+          "startLine": 21,
+          "endLine": 23,
+          "methods": [],
+          "properties": [
+            "ai",
+            "updated_at"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AISettingsSection",
+          "line": 8,
+          "isDefault": false
+        },
+        {
+          "name": "SettingsDoc",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "backend/tests/test_llm_live_eval.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 19,
+      "functions": [
+        {
+          "name": "test_live_llm_chat_smoke",
+          "startLine": 17,
+          "endLine": 26,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "test_live_llm_chat_smoke",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "test_live_llm_chat_smoke",
+          "callee": "create_task_client",
+          "lineNumber": 18
+        },
+        {
+          "caller": "test_live_llm_chat_smoke",
+          "callee": "client.chat",
+          "lineNumber": 19
+        },
+        {
+          "caller": "test_live_llm_chat_smoke",
+          "callee": "LLMChatRequest",
+          "lineNumber": 20
+        },
+        {
+          "caller": "test_live_llm_chat_smoke",
+          "callee": "LLMMessage",
+          "lineNumber": 21
+        },
+        {
+          "caller": "test_live_llm_chat_smoke",
+          "callee": "response.content.lower",
+          "lineNumber": 26
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/tests/test_llm_metrics.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 100,
+      "nonEmptyLines": 75,
+      "functions": [
+        {
+          "name": "_task_client",
+          "startLine": 41,
+          "endLine": 43,
+          "params": [
+            "client"
+          ]
+        },
+        {
+          "name": "test_llm_task_client_records_chat_metrics",
+          "startLine": 46,
+          "endLine": 61,
+          "params": []
+        },
+        {
+          "name": "test_llm_task_client_records_error_metrics",
+          "startLine": 64,
+          "endLine": 77,
+          "params": []
+        },
+        {
+          "name": "test_llm_task_client_records_stream_metrics",
+          "startLine": 80,
+          "endLine": 96,
+          "params": []
+        },
+        {
+          "name": "_task_client_config",
+          "startLine": 99,
+          "endLine": 100,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "FakeLLMClient",
+          "startLine": 21,
+          "endLine": 33,
+          "methods": [
+            "health_check",
+            "list_models",
+            "chat",
+            "stream_chat"
+          ],
+          "properties": []
+        },
+        {
+          "name": "FailingLLMClient",
+          "startLine": 36,
+          "endLine": 38,
+          "methods": [
+            "chat"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "FakeLLMClient",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "FailingLLMClient",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "_task_client",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "test_llm_task_client_records_chat_metrics",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "test_llm_task_client_records_error_metrics",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "test_llm_task_client_records_stream_metrics",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "_task_client_config",
+          "line": 99,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "health_check",
+          "callee": "LLMHealth",
+          "lineNumber": 23
+        },
+        {
+          "caller": "list_models",
+          "callee": "LLMModel",
+          "lineNumber": 26
+        },
+        {
+          "caller": "chat",
+          "callee": "LLMChatResponse",
+          "lineNumber": 29
+        },
+        {
+          "caller": "chat",
+          "callee": "RuntimeError",
+          "lineNumber": 38
+        },
+        {
+          "caller": "_task_client",
+          "callee": "LLMProviderConfig",
+          "lineNumber": 42
+        },
+        {
+          "caller": "_task_client",
+          "callee": "LLMTaskClient",
+          "lineNumber": 43
+        },
+        {
+          "caller": "_run",
+          "callee": "MetricsRegistry",
+          "lineNumber": 48
+        },
+        {
+          "caller": "_run",
+          "callee": "patch",
+          "lineNumber": 49
+        },
+        {
+          "caller": "_run",
+          "callee": "_task_client(FakeLLMClient(_task_client_config())).chat",
+          "lineNumber": 50
+        },
+        {
+          "caller": "_run",
+          "callee": "_task_client",
+          "lineNumber": 50
+        },
+        {
+          "caller": "_run",
+          "callee": "FakeLLMClient",
+          "lineNumber": 50
+        },
+        {
+          "caller": "_run",
+          "callee": "_task_client_config",
+          "lineNumber": 50
+        },
+        {
+          "caller": "_run",
+          "callee": "LLMChatRequest",
+          "lineNumber": 51
+        },
+        {
+          "caller": "_run",
+          "callee": "LLMMessage",
+          "lineNumber": 51
+        },
+        {
+          "caller": "_run",
+          "callee": "registry.render_prometheus",
+          "lineNumber": 54
+        },
+        {
+          "caller": "test_llm_task_client_records_chat_metrics",
+          "callee": "asyncio.run",
+          "lineNumber": 56
+        },
+        {
+          "caller": "test_llm_task_client_records_chat_metrics",
+          "callee": "_run",
+          "lineNumber": 56
+        },
+        {
+          "caller": "_run",
+          "callee": "MetricsRegistry",
+          "lineNumber": 66
+        },
+        {
+          "caller": "_run",
+          "callee": "patch",
+          "lineNumber": 67
+        },
+        {
+          "caller": "_run",
+          "callee": "pytest.raises",
+          "lineNumber": 68
+        },
+        {
+          "caller": "_run",
+          "callee": "_task_client(FailingLLMClient(_task_client_config())).chat",
+          "lineNumber": 69
+        },
+        {
+          "caller": "_run",
+          "callee": "_task_client",
+          "lineNumber": 69
+        },
+        {
+          "caller": "_run",
+          "callee": "FailingLLMClient",
+          "lineNumber": 69
+        },
+        {
+          "caller": "_run",
+          "callee": "_task_client_config",
+          "lineNumber": 69
+        },
+        {
+          "caller": "_run",
+          "callee": "LLMChatRequest",
+          "lineNumber": 70
+        },
+        {
+          "caller": "_run",
+          "callee": "LLMMessage",
+          "lineNumber": 70
+        },
+        {
+          "caller": "_run",
+          "callee": "registry.render_prometheus",
+          "lineNumber": 72
+        },
+        {
+          "caller": "test_llm_task_client_records_error_metrics",
+          "callee": "asyncio.run",
+          "lineNumber": 74
+        },
+        {
+          "caller": "test_llm_task_client_records_error_metrics",
+          "callee": "_run",
+          "lineNumber": 74
+        },
+        {
+          "caller": "_run",
+          "callee": "MetricsRegistry",
+          "lineNumber": 82
+        },
+        {
+          "caller": "_run",
+          "callee": "patch",
+          "lineNumber": 83
+        },
+        {
+          "caller": "_run",
+          "callee": "_task_client(FakeLLMClient(_task_client_config())).stream_chat",
+          "lineNumber": 86
+        },
+        {
+          "caller": "_run",
+          "callee": "_task_client",
+          "lineNumber": 86
+        },
+        {
+          "caller": "_run",
+          "callee": "FakeLLMClient",
+          "lineNumber": 86
+        },
+        {
+          "caller": "_run",
+          "callee": "_task_client_config",
+          "lineNumber": 86
+        },
+        {
+          "caller": "_run",
+          "callee": "LLMChatRequest",
+          "lineNumber": 87
+        },
+        {
+          "caller": "_run",
+          "callee": "LLMMessage",
+          "lineNumber": 87
+        },
+        {
+          "caller": "_run",
+          "callee": "registry.render_prometheus",
+          "lineNumber": 91
+        },
+        {
+          "caller": "test_llm_task_client_records_stream_metrics",
+          "callee": "asyncio.run",
+          "lineNumber": 93
+        },
+        {
+          "caller": "test_llm_task_client_records_stream_metrics",
+          "callee": "_run",
+          "lineNumber": 93
+        },
+        {
+          "caller": "_task_client_config",
+          "callee": "LLMProviderConfig",
+          "lineNumber": 100
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 7,
+        "functionCount": 5,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "backend/tests/test_llm_settings_cache.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 46,
+      "nonEmptyLines": 32,
+      "functions": [
+        {
+          "name": "_clear_settings_cache",
+          "startLine": 12,
+          "endLine": 15,
+          "params": []
+        },
+        {
+          "name": "test_get_settings_uses_ttl_cache",
+          "startLine": 18,
+          "endLine": 31,
+          "params": []
+        },
+        {
+          "name": "test_invalidate_clears_settings_cache",
+          "startLine": 34,
+          "endLine": 46,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_clear_settings_cache",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "test_get_settings_uses_ttl_cache",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "test_invalidate_clears_settings_cache",
+          "line": 34,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_clear_settings_cache",
+          "callee": "invalidate_llm_settings_cache",
+          "lineNumber": 13
+        },
+        {
+          "caller": "_clear_settings_cache",
+          "callee": "invalidate_llm_settings_cache",
+          "lineNumber": 15
+        },
+        {
+          "caller": "_run",
+          "callee": "MagicMock",
+          "lineNumber": 20
+        },
+        {
+          "caller": "_run",
+          "callee": "AsyncMock",
+          "lineNumber": 21
+        },
+        {
+          "caller": "_run",
+          "callee": "MagicMock",
+          "lineNumber": 21
+        },
+        {
+          "caller": "_run",
+          "callee": "AISettingsService",
+          "lineNumber": 22
+        },
+        {
+          "caller": "_run",
+          "callee": "service.get_settings",
+          "lineNumber": 24
+        },
+        {
+          "caller": "_run",
+          "callee": "service.get_settings",
+          "lineNumber": 25
+        },
+        {
+          "caller": "_run",
+          "callee": "isinstance",
+          "lineNumber": 27
+        },
+        {
+          "caller": "_run",
+          "callee": "repo.get_settings_doc.assert_awaited_once",
+          "lineNumber": 29
+        },
+        {
+          "caller": "test_get_settings_uses_ttl_cache",
+          "callee": "asyncio.run",
+          "lineNumber": 31
+        },
+        {
+          "caller": "test_get_settings_uses_ttl_cache",
+          "callee": "_run",
+          "lineNumber": 31
+        },
+        {
+          "caller": "_run",
+          "callee": "MagicMock",
+          "lineNumber": 36
+        },
+        {
+          "caller": "_run",
+          "callee": "AsyncMock",
+          "lineNumber": 37
+        },
+        {
+          "caller": "_run",
+          "callee": "MagicMock",
+          "lineNumber": 37
+        },
+        {
+          "caller": "_run",
+          "callee": "AISettingsService",
+          "lineNumber": 38
+        },
+        {
+          "caller": "_run",
+          "callee": "service.get_settings",
+          "lineNumber": 40
+        },
+        {
+          "caller": "_run",
+          "callee": "invalidate_llm_settings_cache",
+          "lineNumber": 41
+        },
+        {
+          "caller": "_run",
+          "callee": "service.get_settings",
+          "lineNumber": 42
+        },
+        {
+          "caller": "test_invalidate_clears_settings_cache",
+          "callee": "asyncio.run",
+          "lineNumber": 46
+        },
+        {
+          "caller": "test_invalidate_clears_settings_cache",
+          "callee": "_run",
+          "lineNumber": 46
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/tests/test_task_client_cache.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 48,
+      "nonEmptyLines": 36,
+      "functions": [
+        {
+          "name": "test_task_client_cache_reuses_client",
+          "startLine": 15,
+          "endLine": 22,
+          "params": []
+        },
+        {
+          "name": "test_create_task_client_uses_cache",
+          "startLine": 25,
+          "endLine": 38,
+          "params": [
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_task_client_cache_expires",
+          "startLine": 41,
+          "endLine": 48,
+          "params": [
+            "monkeypatch"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "test_task_client_cache_reuses_client",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "test_create_task_client_uses_cache",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "test_task_client_cache_expires",
+          "line": 41,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_run",
+          "callee": "invalidate_task_client_cache",
+          "lineNumber": 17
+        },
+        {
+          "caller": "_run",
+          "callee": "MagicMock",
+          "lineNumber": 18
+        },
+        {
+          "caller": "_run",
+          "callee": "set_cached_task_client",
+          "lineNumber": 19
+        },
+        {
+          "caller": "_run",
+          "callee": "get_cached_task_client",
+          "lineNumber": 20
+        },
+        {
+          "caller": "test_task_client_cache_reuses_client",
+          "callee": "asyncio.run",
+          "lineNumber": 22
+        },
+        {
+          "caller": "test_task_client_cache_reuses_client",
+          "callee": "_run",
+          "lineNumber": 22
+        },
+        {
+          "caller": "_run",
+          "callee": "invalidate_task_client_cache",
+          "lineNumber": 27
+        },
+        {
+          "caller": "_run",
+          "callee": "MagicMock",
+          "lineNumber": 28
+        },
+        {
+          "caller": "_run",
+          "callee": "set_cached_task_client",
+          "lineNumber": 29
+        },
+        {
+          "caller": "_run",
+          "callee": "AsyncMock",
+          "lineNumber": 31
+        },
+        {
+          "caller": "_run",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 32
+        },
+        {
+          "caller": "_run",
+          "callee": "create_task_client",
+          "lineNumber": 34
+        },
+        {
+          "caller": "_run",
+          "callee": "create_mock.assert_not_called",
+          "lineNumber": 36
+        },
+        {
+          "caller": "test_create_task_client_uses_cache",
+          "callee": "asyncio.run",
+          "lineNumber": 38
+        },
+        {
+          "caller": "test_create_task_client_uses_cache",
+          "callee": "_run",
+          "lineNumber": 38
+        },
+        {
+          "caller": "test_task_client_cache_expires",
+          "callee": "invalidate_task_client_cache",
+          "lineNumber": 42
+        },
+        {
+          "caller": "test_task_client_cache_expires",
+          "callee": "MagicMock",
+          "lineNumber": 43
+        },
+        {
+          "caller": "test_task_client_cache_expires",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 45
+        },
+        {
+          "caller": "test_task_client_cache_expires",
+          "callee": "set_cached_task_client",
+          "lineNumber": 46
+        },
+        {
+          "caller": "test_task_client_cache_expires",
+          "callee": "get_cached_task_client",
+          "lineNumber": 48
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    }
+  ]
+}

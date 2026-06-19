@@ -44,6 +44,7 @@ class ReadMemoryTool(BaseTool):
                 db,
                 user_id=_user_uuid(context),
                 metadata=context.metadata,
+                query=context.user_message,
             )
             if get_bound_db_session(context) is None:
                 await db.commit()

@@ -1,6 +1,7 @@
 """Quiz application service — routes delegate here; LLM calls stay in quiz/llm.py."""
 from __future__ import annotations
 
+import logging
 import uuid
 
 from sqlalchemy import select
@@ -10,7 +11,12 @@ from backend.app.core.config import settings
 from backend.app.db.base import CEFRLevel
 from backend.app.modules.learning.engine import ensure_words_seeded, update_word_progress
 from backend.app.modules.learning.models import Word
+from backend.app.modules.learning.quiz.generate_cache import (
+    get_cached_quiz_generate,
+    set_cached_quiz_generate,
+)
 from backend.app.modules.learning.quiz.llm import (
+    QuizGenerationError,
     generate_llm_quiz,
     grade_deterministic,
     judge_with_llm,
@@ -27,6 +33,9 @@ DEFAULT_EXERCISE_TYPES = [
 ]
 
 
+logger = logging.getLogger(__name__)
+
+
 class QuizService:
     async def generate(
         self,
@@ -40,6 +49,7 @@ class QuizService:
     ) -> QuizSession:
         await ensure_words_seeded(db)
         types = exercise_types or list(DEFAULT_EXERCISE_TYPES)
+        type_names = [item.value for item in types]
         words = (
             await db.execute(
                 select(Word).where(Word.level == level).order_by(Word.rank).limit(120)
@@ -48,15 +58,32 @@ class QuizService:
         questions: list[QuizQuestion] = []
         source = "template"
         if use_llm and settings.AI_AGENT_ENABLED:
-            questions = await generate_llm_quiz(
-                level=level,
-                words=words,
+            cached = await get_cached_quiz_generate(
+                level=level.value,
                 count=count,
-                exercise_types=types,
+                exercise_types=type_names,
                 topic=topic,
             )
-            if questions:
-                source = "llm"
+            if cached and cached.get("questions"):
+                try:
+                    cached_session = QuizSession.model_validate(cached)
+                    cached_session.session_id = str(uuid.uuid4())
+                    return cached_session
+                except Exception:
+                    logger.debug("quiz_generate_cache_corrupt level=%s", level.value)
+
+            try:
+                questions = await generate_llm_quiz(
+                    level=level,
+                    words=words,
+                    count=count,
+                    exercise_types=types,
+                    topic=topic,
+                )
+                if questions:
+                    source = "llm"
+            except QuizGenerationError:
+                questions = []
         if not questions:
             questions = build_template_quiz(
                 words=words,
@@ -64,12 +91,21 @@ class QuizService:
                 count=count,
                 exercise_types=types,
             )
-        return QuizSession(
+        session = QuizSession(
             session_id=str(uuid.uuid4()),
             level=level.value,
             source=source,
             questions=questions,
         )
+        if source == "llm":
+            await set_cached_quiz_generate(
+                level=level.value,
+                count=count,
+                exercise_types=type_names,
+                topic=topic,
+                payload=session.model_dump(mode="json"),
+            )
+        return session
 
     async def submit_answer(
         self,

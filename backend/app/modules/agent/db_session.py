@@ -1,3 +1,17 @@
+"""Turn-scoped database session helpers for the agent stack.
+
+Session ownership contract
+--------------------------
+* One owner per tutor/agent turn opens the transactional ``AsyncSession``.
+* HTTP tutor turns: ``TurnCoordinator.run_tutor_turn_with_session`` owns commit/rollback.
+* WebSocket tutor turns: ``TutorTurnRuntime._execute_turn`` owns commit/rollback.
+* ``ChatPipeline.run`` reuses a bound session when present; otherwise it opens its own
+  short-lived session for standalone chat/RAG calls.
+* Tools and services must call ``resolve_agent_db(context)`` instead of opening nested
+  ``AsyncSessionLocal`` sessions when a turn session is already bound.
+* Callers that bind a session must always ``clear_turn_db_session`` in ``finally``.
+"""
+
 from __future__ import annotations
 
 from contextlib import asynccontextmanager

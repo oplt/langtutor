@@ -1,0 +1,295 @@
+{
+  "nodes": [
+    {
+      "id": "file:backend/app/modules/memory/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "backend/app/modules/memory/__init__.py",
+      "summary": "code file; python.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/notebook/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "backend/app/modules/notebook/__init__.py",
+      "summary": "code file; python.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/persona/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "backend/app/modules/persona/__init__.py",
+      "summary": "code file; python.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:backend/app/modules/persona/personas/be-dutch/PERSONA.md",
+      "type": "document",
+      "name": "PERSONA.md",
+      "filePath": "backend/app/modules/persona/personas/be-dutch/PERSONA.md",
+      "summary": "docs file; markdown.",
+      "tags": [
+        "documentation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:backend/app/modules/persona/personas/conversation-partner/PERSONA.md",
+      "type": "document",
+      "name": "PERSONA.md",
+      "filePath": "backend/app/modules/persona/personas/conversation-partner/PERSONA.md",
+      "summary": "docs file; markdown.",
+      "tags": [
+        "documentation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:backend/app/modules/persona/personas/grammar-coach/PERSONA.md",
+      "type": "document",
+      "name": "PERSONA.md",
+      "filePath": "backend/app/modules/persona/personas/grammar-coach/PERSONA.md",
+      "summary": "docs file; markdown.",
+      "tags": [
+        "documentation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:backend/app/modules/persona/personas/nl-dutch/PERSONA.md",
+      "type": "document",
+      "name": "PERSONA.md",
+      "filePath": "backend/app/modules/persona/personas/nl-dutch/PERSONA.md",
+      "summary": "docs file; markdown.",
+      "tags": [
+        "documentation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/privacy/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "backend/app/modules/privacy/__init__.py",
+      "summary": "code file; python.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/prompt/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "backend/app/modules/prompt/__init__.py",
+      "summary": "code file; python.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:backend/app/modules/rag/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "backend/app/modules/rag/README.md",
+      "summary": "docs file; markdown.",
+      "tags": [
+        "documentation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:backend/app/modules/routines/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "backend/app/modules/routines/__init__.py",
+      "summary": "code file; python.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/settings/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "backend/app/modules/settings/__init__.py",
+      "summary": "code file; python.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/skills/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "backend/app/modules/skills/__init__.py",
+      "summary": "code file; python.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/skills/playbooks/.gitkeep",
+      "type": "file",
+      "name": ".gitkeep",
+      "filePath": "backend/app/modules/skills/playbooks/.gitkeep",
+      "summary": "code file; unknown.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:backend/app/modules/skills/playbooks/A1/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md",
+      "filePath": "backend/app/modules/skills/playbooks/A1/SKILL.md",
+      "summary": "docs file; markdown.",
+      "tags": [
+        "documentation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:backend/app/modules/skills/playbooks/A2/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md",
+      "filePath": "backend/app/modules/skills/playbooks/A2/SKILL.md",
+      "summary": "docs file; markdown.",
+      "tags": [
+        "documentation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:backend/app/modules/skills/playbooks/B1/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md",
+      "filePath": "backend/app/modules/skills/playbooks/B1/SKILL.md",
+      "summary": "docs file; markdown.",
+      "tags": [
+        "documentation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:backend/app/modules/skills/playbooks/B2/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md",
+      "filePath": "backend/app/modules/skills/playbooks/B2/SKILL.md",
+      "summary": "docs file; markdown.",
+      "tags": [
+        "documentation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:backend/app/modules/skills/playbooks/C1/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md",
+      "filePath": "backend/app/modules/skills/playbooks/C1/SKILL.md",
+      "summary": "docs file; markdown.",
+      "tags": [
+        "documentation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:backend/app/modules/skills/playbooks/C2/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md",
+      "filePath": "backend/app/modules/skills/playbooks/C2/SKILL.md",
+      "summary": "docs file; markdown.",
+      "tags": [
+        "documentation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/stories/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "backend/app/modules/stories/__init__.py",
+      "summary": "code file; python.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/tutor/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "backend/app/modules/tutor/__init__.py",
+      "summary": "code file; python.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/tutor/application/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "backend/app/modules/tutor/application/__init__.py",
+      "summary": "code file; python.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/tutor/sessions/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "backend/app/modules/tutor/sessions/__init__.py",
+      "summary": "code file; python.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/users/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "backend/app/modules/users/__init__.py",
+      "summary": "code file; python.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:backend/app/modules/rag/README.md",
+      "target": "file:backend/app/main.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:backend/app/modules/rag/README.md",
+      "target": "file:frontend/src/main.tsx",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

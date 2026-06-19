@@ -2,134 +2,33 @@ from __future__ import annotations
 
 import asyncio
 import logging
-import json
-from dataclasses import dataclass, field
-from typing import Any, Awaitable, Callable
+from typing import Any
+
 from uuid import uuid4
 
 from backend.app.modules.agent.core.context import AgentContext
-from backend.app.modules.agent.core.stream import StreamEvent, StreamEventType
+from backend.app.modules.agent.core.stream import StreamEventType
 from backend.app.modules.agent.service import get_orchestrator
-from backend.app.modules.tutor.schemas import TutorMessageIn
 from backend.app.modules.agent.tools.ask_user_payload import (
     AskUserPayload,
+    AskUserQuestion,
     format_ask_user_tool_result,
 )
 from backend.app.modules.tutor.context_factory import build_agent_context
-from backend.app.modules.tutor.persistence import persist_tutor_turn, record_chat_memory
+from backend.app.modules.tutor.persistence import finalize_tutor_turn_lifecycle
+from backend.app.modules.tutor.schemas import TutorMessageIn
 from backend.app.modules.tutor.turn_executor import iter_orchestrator_events
-from backend.app.modules.tutor.turn_state_store import (
-    StoredPausedTurnState,
-    StoredTurnRecord,
-    get_turn_state_store,
+from backend.app.modules.tutor.turn_models import (
+    PausedTurnState,
+    TurnRecord,
+    record_from_stored,
+    record_to_stored,
 )
+from backend.app.modules.tutor.turn_persistence_adapter import persist_turn_fragment
+from backend.app.modules.tutor.turn_protocol import EventSender, build_event_envelope
+from backend.app.modules.tutor.turn_state_store import get_turn_state_store
 
 logger = logging.getLogger(__name__)
-
-EventSender = Callable[[dict[str, Any]], Awaitable[None]]
-
-
-@dataclass
-class PausedTurnState:
-    session_id: str
-    capability: str
-    cefr_level: str | None
-    persona: str | None
-    language: str
-    enabled_tools: list[str] | None
-    system_prompt: str
-    agent_messages: list[dict[str, Any]]
-    pause_question: str
-    pending_tool_call: dict[str, str] | None = None
-    ask_user: dict[str, Any] | None = None
-
-
-@dataclass
-class TurnRecord:
-    turn_id: str
-    session_id: str
-    user_id: str
-    status: str = "running"
-    seq: int = 0
-    task: asyncio.Task[None] | None = None
-    paused: PausedTurnState | None = None
-    user_message: str = ""
-    conversation_history: list[dict[str, Any]] = field(default_factory=list)
-    capability: str = "chat"
-    language: str = "en"
-    cefr_level: str | None = None
-    persona: str | None = None
-
-
-def _paused_to_stored(state: PausedTurnState) -> StoredPausedTurnState:
-    return StoredPausedTurnState(
-        session_id=state.session_id,
-        capability=state.capability,
-        cefr_level=state.cefr_level,
-        persona=state.persona,
-        language=state.language,
-        enabled_tools=state.enabled_tools,
-        system_prompt=state.system_prompt,
-        agent_messages=state.agent_messages,
-        pause_question=state.pause_question,
-        pending_tool_call=state.pending_tool_call,
-        ask_user=state.ask_user,
-    )
-
-
-def _paused_from_stored(state: StoredPausedTurnState) -> PausedTurnState:
-    return PausedTurnState(
-        session_id=state.session_id,
-        capability=state.capability,
-        cefr_level=state.cefr_level,
-        persona=state.persona,
-        language=state.language,
-        enabled_tools=state.enabled_tools,
-        system_prompt=state.system_prompt,
-        agent_messages=state.agent_messages,
-        pause_question=state.pause_question,
-        pending_tool_call=state.pending_tool_call,
-        ask_user=state.ask_user,
-    )
-
-
-def _record_to_stored(record: TurnRecord) -> StoredTurnRecord:
-    return StoredTurnRecord(
-        turn_id=record.turn_id,
-        session_id=record.session_id,
-        user_id=record.user_id,
-        status=record.status,
-        seq=record.seq,
-        paused=_paused_to_stored(record.paused) if record.paused else None,
-        user_message=record.user_message,
-        conversation_history=record.conversation_history,
-        capability=record.capability,
-        language=record.language,
-        cefr_level=record.cefr_level,
-        persona=record.persona,
-    )
-
-
-def _record_from_stored(
-    stored: StoredTurnRecord,
-    *,
-    task: asyncio.Task[None] | None = None,
-) -> TurnRecord:
-    return TurnRecord(
-        turn_id=stored.turn_id,
-        session_id=stored.session_id,
-        user_id=stored.user_id,
-        status=stored.status,
-        seq=stored.seq,
-        task=task,
-        paused=_paused_from_stored(stored.paused) if stored.paused else None,
-        user_message=stored.user_message,
-        conversation_history=stored.conversation_history,
-        capability=stored.capability,
-        language=stored.language,
-        cefr_level=stored.cefr_level,
-        persona=stored.persona,
-    )
 
 
 class TutorTurnRuntime:
@@ -142,40 +41,10 @@ class TutorTurnRuntime:
         stored = await self._store.get_turn(turn_id)
         if stored is None:
             return None
-        return _record_from_stored(stored, task=self._local_tasks.get(turn_id))
+        return record_from_stored(stored, task=self._local_tasks.get(turn_id))
 
     async def _save_record(self, record: TurnRecord) -> None:
-        await self._store.save_turn(_record_to_stored(record))
-
-    async def _persist_turn(
-        self,
-        *,
-        record: TurnRecord,
-        events_fragment: list[dict[str, Any]],
-        assistant_reply_fragment: str,
-        status: str,
-        paused: bool,
-        pause_question: str | None,
-    ) -> None:
-        import uuid as uuid_mod
-
-        await persist_tutor_turn(
-            user_id=uuid_mod.UUID(str(record.user_id)),
-            turn_id=record.turn_id,
-            session_id=record.session_id,
-            capability=record.capability,
-            language=record.language,
-            cefr_level=record.cefr_level,
-            persona=record.persona,
-            user_message=record.user_message,
-            conversation_history=record.conversation_history,
-            seq=record.seq,
-            status=status,
-            events_fragment=events_fragment,
-            assistant_reply_fragment=assistant_reply_fragment,
-            paused=paused,
-            pause_question=pause_question,
-        )
+        await self._store.save_turn(record_to_stored(record))
 
     async def get_turn(self, turn_id: str) -> TurnRecord | None:
         return await self._load_record(turn_id)
@@ -203,16 +72,6 @@ class TutorTurnRuntime:
         if active:
             raise RuntimeError("turn_busy")
 
-        from backend.app.modules.extensions.auto_router.service import resolve_capability
-
-        resolved_capability, route_metadata = resolve_capability(
-            payload.capability, payload.message.strip()
-        )
-        persona = payload.persona
-        suggested_persona = route_metadata.get("suggested_persona")
-        if (not persona) and isinstance(suggested_persona, str) and suggested_persona:
-            persona = suggested_persona
-
         turn_id = str(uuid4())
         acquired = await self._store.acquire_session(
             session_id,
@@ -222,16 +81,22 @@ class TutorTurnRuntime:
         if not acquired:
             raise RuntimeError("turn_busy")
 
+        context = build_agent_context(
+            payload,
+            user_id=user_id,
+            turn_id=turn_id,
+            session_id=session_id,
+        )
         record = TurnRecord(
             turn_id=turn_id,
             session_id=session_id,
             user_id=user_id,
-            user_message=payload.message.strip(),
+            user_message=context.user_message,
             conversation_history=payload.conversation_history or [],
-            capability=resolved_capability or "chat",
-            language=payload.language or "en",
-            cefr_level=payload.cefr_level,
-            persona=persona,
+            capability=context.active_capability or "chat",
+            language=context.language or "en",
+            cefr_level=context.cefr_level,
+            persona=str(context.metadata.get("persona") or "") or None,
         )
         await self._save_record(record)
 
@@ -246,7 +111,7 @@ class TutorTurnRuntime:
         task = asyncio.create_task(
             self._execute_turn(
                 record=record,
-                context=self._build_context(payload, user_id, turn_id, session_id),
+                context=context,
                 send=send,
             )
         )
@@ -280,8 +145,6 @@ class TutorTurnRuntime:
 
         ask_payload: AskUserPayload | None = None
         if paused.ask_user and isinstance(paused.ask_user.get("questions"), list):
-            from backend.app.modules.agent.tools.ask_user_payload import AskUserQuestion
-
             rebuilt = []
             for raw in paused.ask_user["questions"]:
                 if isinstance(raw, dict):
@@ -406,7 +269,7 @@ class TutorTurnRuntime:
                         }
                     )
 
-                    await send(self._event_envelope(record, event))
+                    await send(build_event_envelope(record, event))
                     if event.type == StreamEventType.ASK_USER:
                         meta = event.metadata or {}
                         paused_state = PausedTurnState(
@@ -435,7 +298,7 @@ class TutorTurnRuntime:
                     }
                     if paused_state.ask_user:
                         payload["ask_user"] = paused_state.ask_user
-                    await self._persist_turn(
+                    await persist_turn_fragment(
                         record=record,
                         events_fragment=events_fragment,
                         assistant_reply_fragment="".join(assistant_reply_fragment_parts),
@@ -454,20 +317,29 @@ class TutorTurnRuntime:
                             "session_id": record.session_id,
                         }
                     )
-                    await self._persist_turn(
-                        record=record,
+                    await finalize_tutor_turn_lifecycle(
+                        context=context,
+                        user_id=record.user_id,
+                        turn_id=record.turn_id,
+                        session_id=record.session_id,
+                        capability=record.capability,
+                        language=record.language,
+                        cefr_level=record.cefr_level,
+                        persona=record.persona,
+                        user_message=record.user_message,
+                        conversation_history=record.conversation_history,
+                        seq=record.seq,
+                        status="completed",
                         events_fragment=events_fragment,
                         assistant_reply_fragment="".join(assistant_reply_fragment_parts),
-                        status="completed",
                         paused=False,
                         pause_question=None,
                     )
-                    await self._record_chat_memory(context, record)
                 await db.commit()
             except asyncio.CancelledError:
                 record.status = "cancelled"
                 await self._save_record(record)
-                await self._persist_turn(
+                await persist_turn_fragment(
                     record=record,
                     events_fragment=events_fragment,
                     assistant_reply_fragment="".join(assistant_reply_fragment_parts),
@@ -488,7 +360,7 @@ class TutorTurnRuntime:
                 logger.exception("Turn %s failed", record.turn_id)
                 record.status = "error"
                 await self._save_record(record)
-                await self._persist_turn(
+                await persist_turn_fragment(
                     record=record,
                     events_fragment=events_fragment,
                     assistant_reply_fragment="".join(assistant_reply_fragment_parts),
@@ -509,42 +381,6 @@ class TutorTurnRuntime:
                 self._local_tasks.pop(record.turn_id, None)
                 if record.status != "paused":
                     await self._store.release_session(record.session_id, record.turn_id)
-
-    def _build_context(
-        self,
-        payload: TutorMessageIn,
-        user_id: str,
-        turn_id: str,
-        session_id: str,
-    ) -> AgentContext:
-        return build_agent_context(
-            payload,
-            user_id=user_id,
-            turn_id=turn_id,
-            session_id=session_id,
-        )
-
-    def _event_envelope(self, record: TurnRecord, event: StreamEvent) -> dict[str, Any]:
-        return {
-            "type": "event",
-            "turn_id": record.turn_id,
-            "session_id": record.session_id,
-            "seq": record.seq,
-            "event": {
-                "type": event.type.value,
-                "source": event.source,
-                "content": event.content,
-                "metadata": event.metadata,
-            },
-        }
-
-    async def _record_chat_memory(self, context: AgentContext, record: TurnRecord) -> None:
-        await record_chat_memory(
-            context,
-            user_id=record.user_id,
-            session_id=record.session_id,
-            turn_id=record.turn_id,
-        )
 
 
 _runtime: TutorTurnRuntime | None = None

@@ -1,5 +1,9 @@
 import { API_BASE } from "../../../config";
 import type { TutorWsInbound, TutorWsOutbound } from "../types";
+import {
+  computeReconnectDelayMs,
+  shouldAttemptReconnect,
+} from "./wsReconnect";
 
 /** Must match backend `auth/ws_tokens.WS_AUTH_SUBPROTOCOL`. */
 export const WS_AUTH_SUBPROTOCOL = "languageapp.jwt";
@@ -19,12 +23,14 @@ export class TutorWsClient {
   private listeners = new Set<Listener>();
   private stateListeners = new Set<StateListener>();
   private reconnectTimer: number | null = null;
+  private reconnectAttempts = 0;
   private shouldReconnect = false;
   private token = "";
 
   connect(token: string) {
     this.token = token;
     this.shouldReconnect = true;
+    this.reconnectAttempts = 0;
     this.openSocket();
   }
 
@@ -62,12 +68,30 @@ export class TutorWsClient {
     const socket = new WebSocket(buildTutorWsUrl(), [WS_AUTH_SUBPROTOCOL, this.token]);
     this.socket = socket;
 
-    socket.onopen = () => this.emitState("open");
+    socket.onopen = () => {
+      this.reconnectAttempts = 0;
+      this.emitState("open");
+    };
     socket.onclose = () => {
       this.emitState("closed");
-      if (this.shouldReconnect) {
-        this.reconnectTimer = window.setTimeout(() => this.openSocket(), 1500);
+      if (!this.shouldReconnect) return;
+
+      this.reconnectAttempts += 1;
+      if (!shouldAttemptReconnect(this.reconnectAttempts)) {
+        this.shouldReconnect = false;
+        this.emitState("error");
+        this.listeners.forEach((listener) =>
+          listener({
+            type: "error",
+            code: "WS_RECONNECT_EXHAUSTED",
+            message: "Tutor connection failed after multiple retries. Refresh the page to try again.",
+          }),
+        );
+        return;
       }
+
+      const delayMs = computeReconnectDelayMs(this.reconnectAttempts);
+      this.reconnectTimer = window.setTimeout(() => this.openSocket(), delayMs);
     };
     socket.onerror = () => this.emitState("error");
     socket.onmessage = (event) => {

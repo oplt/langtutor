@@ -7,6 +7,8 @@ from typing import Any
 
 import yaml
 
+from backend.app.modules.content.file_mtime_cache import read_text_cached
+
 PERSONA_ROOT = Path(__file__).resolve().parent / "personas"
 PERSONA_FILE = "PERSONA.md"
 DEFAULT_PERSONA = "conversation-partner"
@@ -79,7 +81,7 @@ def list_personas() -> list[PersonaInfo]:
         path = entry / PERSONA_FILE
         if not path.exists():
             continue
-        text = path.read_text(encoding="utf-8")
+        text = read_text_cached(path)
         meta, _ = _parse_frontmatter(text)
         out.append(
             PersonaInfo(
@@ -95,7 +97,7 @@ def get_persona(name: str) -> PersonaDetail:
     path = PERSONA_ROOT / slug / PERSONA_FILE
     if not path.exists():
         raise PersonaNotFoundError(slug)
-    text = path.read_text(encoding="utf-8")
+    text = read_text_cached(path)
     meta, _ = _parse_frontmatter(text)
     return PersonaDetail(
         name=slug,

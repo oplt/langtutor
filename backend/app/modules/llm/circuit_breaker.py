@@ -1,4 +1,4 @@
-"""Simple circuit breaker for LLM provider calls (Ollama / remote outages)."""
+"""Per-provider LLM circuit breakers."""
 
 from __future__ import annotations
 
@@ -37,8 +37,15 @@ class LLMCircuitBreaker:
             logger.warning("llm_circuit_open failures=%s", self._failures)
 
 
-_breaker = LLMCircuitBreaker()
+_breakers: dict[str, LLMCircuitBreaker] = {}
 
 
-def get_llm_circuit_breaker() -> LLMCircuitBreaker:
-    return _breaker
+def get_llm_circuit_breaker(provider: str) -> LLMCircuitBreaker:
+    key = (provider or "unknown").strip().lower() or "unknown"
+    if key not in _breakers:
+        _breakers[key] = LLMCircuitBreaker()
+    return _breakers[key]
+
+
+def reset_llm_circuit_breakers_for_tests() -> None:
+    _breakers.clear()

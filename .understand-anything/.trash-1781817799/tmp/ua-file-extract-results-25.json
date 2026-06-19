@@ -1,0 +1,736 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 20,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "backend/app/shared/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 0,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/files/dutchwordsordered.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 40644,
+      "nonEmptyLines": 40644,
+      "sections": [
+        {
+          "heading": "words",
+          "level": 1,
+          "line": 2
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "backend/tests/conftest.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 12,
+      "functions": [
+        {
+          "name": "pytest_configure",
+          "startLine": 15,
+          "endLine": 16,
+          "params": [
+            "config"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "pytest_configure",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "pytest_configure",
+          "callee": "config.addinivalue_line",
+          "lineNumber": 16
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/tests/test_langchain_embeddings.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 39,
+      "nonEmptyLines": 27,
+      "functions": [
+        {
+          "name": "test_embed_ollama_runs_requests_in_parallel",
+          "startLine": 9,
+          "endLine": 39,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "test_embed_ollama_runs_requests_in_parallel",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_run",
+          "callee": "MagicMock",
+          "lineNumber": 21
+        },
+        {
+          "caller": "_run",
+          "callee": "AsyncMock",
+          "lineNumber": 22
+        },
+        {
+          "caller": "_run",
+          "callee": "calls.append",
+          "lineNumber": 23
+        },
+        {
+          "caller": "_run",
+          "callee": "_FakeResponse",
+          "lineNumber": 23
+        },
+        {
+          "caller": "_run",
+          "callee": "patch.object",
+          "lineNumber": 33
+        },
+        {
+          "caller": "_run",
+          "callee": "_ClientCtx",
+          "lineNumber": 33
+        },
+        {
+          "caller": "_run",
+          "callee": "embeddings_mod._embed_ollama",
+          "lineNumber": 34
+        },
+        {
+          "caller": "_run",
+          "callee": "len",
+          "lineNumber": 36
+        },
+        {
+          "caller": "_run",
+          "callee": "len",
+          "lineNumber": 36
+        },
+        {
+          "caller": "test_embed_ollama_runs_requests_in_parallel",
+          "callee": "asyncio.run",
+          "lineNumber": 39
+        },
+        {
+          "caller": "test_embed_ollama_runs_requests_in_parallel",
+          "callee": "_run",
+          "lineNumber": 39
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/tests/test_memory_tasks.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 42,
+      "nonEmptyLines": 31,
+      "functions": [
+        {
+          "name": "_reset_memory_task_state",
+          "startLine": 13,
+          "endLine": 16,
+          "params": []
+        },
+        {
+          "name": "test_enqueue_synthesize_l3_deduplicates",
+          "startLine": 19,
+          "endLine": 42,
+          "params": [
+            "monkeypatch"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "_reset_memory_task_state",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "test_enqueue_synthesize_l3_deduplicates",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_reset_memory_task_state",
+          "callee": "memory_tasks._scheduled_tasks.clear",
+          "lineNumber": 14
+        },
+        {
+          "caller": "_reset_memory_task_state",
+          "callee": "memory_tasks._scheduled_tasks.clear",
+          "lineNumber": 16
+        },
+        {
+          "caller": "_run",
+          "callee": "uuid.uuid4",
+          "lineNumber": 21
+        },
+        {
+          "caller": "_fake_schedule",
+          "callee": "scheduled.append",
+          "lineNumber": 25
+        },
+        {
+          "caller": "_fake_schedule",
+          "callee": "coro.close",
+          "lineNumber": 26
+        },
+        {
+          "caller": "_fake_schedule",
+          "callee": "MagicMock",
+          "lineNumber": 27
+        },
+        {
+          "caller": "_fake_schedule",
+          "callee": "MagicMock",
+          "lineNumber": 27
+        },
+        {
+          "caller": "_run",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 29
+        },
+        {
+          "caller": "_run",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 30
+        },
+        {
+          "caller": "_run",
+          "callee": "AsyncMock",
+          "lineNumber": 33
+        },
+        {
+          "caller": "_run",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 35
+        },
+        {
+          "caller": "_run",
+          "callee": "AsyncMock",
+          "lineNumber": 35
+        },
+        {
+          "caller": "_run",
+          "callee": "memory_tasks.enqueue_synthesize_l3",
+          "lineNumber": 37
+        },
+        {
+          "caller": "_run",
+          "callee": "memory_tasks.enqueue_synthesize_l3",
+          "lineNumber": 38
+        },
+        {
+          "caller": "_run",
+          "callee": "len",
+          "lineNumber": 39
+        },
+        {
+          "caller": "test_enqueue_synthesize_l3_deduplicates",
+          "callee": "asyncio.run",
+          "lineNumber": 42
+        },
+        {
+          "caller": "test_enqueue_synthesize_l3_deduplicates",
+          "callee": "_run",
+          "lineNumber": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "docs/observability/grafana-dashboard.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 58,
+      "nonEmptyLines": 58,
+      "sections": [
+        {
+          "heading": "title",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "uid",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "timezone",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "schemaVersion",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "version",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "refresh",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "panels",
+          "level": 1,
+          "line": 8
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "docs/observability/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 42,
+      "nonEmptyLines": 27,
+      "sections": [
+        {
+          "heading": "Observability",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Metrics",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Grafana",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "Traces",
+          "level": 2,
+          "line": 26
+        },
+        {
+          "heading": "Health",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "Dead letter queues",
+          "level": 2,
+          "line": 35
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "frontend/e2e/smoke.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 10,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/eslint.config.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 26,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/playwright.config.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 19,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/modules/knowledge/.gitkeep",
+      "language": "unknown",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 0,
+      "metrics": {}
+    },
+    {
+      "path": "frontend/src/mui.d.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 7,
+      "nonEmptyLines": 6,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/pages/dashboard/internals/components/Copyright.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 25,
+      "functions": [
+        {
+          "name": "Copyright",
+          "startLine": 5,
+          "endLine": 26,
+          "params": [
+            "props"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Copyright",
+          "line": 5,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Copyright",
+          "callee": "Array.isArray",
+          "lineNumber": 15
+        },
+        {
+          "caller": "Copyright",
+          "callee": "new Date().getFullYear",
+          "lineNumber": 22
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/pages/dashboard/internals/components/CustomIcons.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 325,
+      "nonEmptyLines": 321,
+      "functions": [
+        {
+          "name": "SitemarkIcon",
+          "startLine": 3,
+          "endLine": 52,
+          "params": []
+        },
+        {
+          "name": "IndiaFlag",
+          "startLine": 54,
+          "endLine": 113,
+          "params": []
+        },
+        {
+          "name": "UsaFlag",
+          "startLine": 115,
+          "endLine": 190,
+          "params": []
+        },
+        {
+          "name": "BrazilFlag",
+          "startLine": 191,
+          "endLine": 298,
+          "params": []
+        },
+        {
+          "name": "GlobeFlag",
+          "startLine": 300,
+          "endLine": 325,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SitemarkIcon",
+          "line": 3,
+          "isDefault": false
+        },
+        {
+          "name": "IndiaFlag",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "UsaFlag",
+          "line": 115,
+          "isDefault": false
+        },
+        {
+          "name": "BrazilFlag",
+          "line": 191,
+          "isDefault": false
+        },
+        {
+          "name": "GlobeFlag",
+          "line": 300,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/pages/dashboard/theme/customizations/dataGrid.d.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "exports": [
+        {
+          "name": "dataGridCustomizations",
+          "line": 1,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/pages/shared-theme/ColorModeSelect.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 29,
+      "nonEmptyLines": 27,
+      "functions": [
+        {
+          "name": "ColorModeSelect",
+          "startLine": 7,
+          "endLine": 29,
+          "params": [
+            "props"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ColorModeSelect",
+          "line": 7,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ColorModeSelect",
+          "callee": "useColorScheme",
+          "lineNumber": 8
+        },
+        {
+          "caller": "ColorModeSelect",
+          "callee": "setMode",
+          "lineNumber": 16
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/utils/score.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 11,
+      "functions": [
+        {
+          "name": "clamp01",
+          "startLine": 1,
+          "endLine": 3,
+          "params": [
+            "x"
+          ]
+        },
+        {
+          "name": "scoreFromRange",
+          "startLine": 6,
+          "endLine": 12,
+          "params": [
+            "raw",
+            "min",
+            "max",
+            "invert"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "clamp01",
+          "line": 1,
+          "isDefault": false
+        },
+        {
+          "name": "scoreFromRange",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "clamp01",
+          "callee": "Math.max",
+          "lineNumber": 2
+        },
+        {
+          "caller": "clamp01",
+          "callee": "Math.min",
+          "lineNumber": 2
+        },
+        {
+          "caller": "scoreFromRange",
+          "callee": "Number.isFinite",
+          "lineNumber": 7
+        },
+        {
+          "caller": "scoreFromRange",
+          "callee": "Number.isFinite",
+          "lineNumber": 8
+        },
+        {
+          "caller": "scoreFromRange",
+          "callee": "Number.isFinite",
+          "lineNumber": 8
+        },
+        {
+          "caller": "scoreFromRange",
+          "callee": "clamp01",
+          "lineNumber": 9
+        },
+        {
+          "caller": "scoreFromRange",
+          "callee": "Math.round",
+          "lineNumber": 11
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 11,
+      "nonEmptyLines": 10,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "Makefile.local",
+      "language": "local",
+      "fileCategory": "code",
+      "totalLines": 93,
+      "nonEmptyLines": 76,
+      "metrics": {}
+    },
+    {
+      "path": "Procfile.dev",
+      "language": "dev",
+      "fileCategory": "code",
+      "totalLines": 8,
+      "nonEmptyLines": 7,
+      "metrics": {}
+    }
+  ]
+}

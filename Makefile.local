@@ -40,7 +40,7 @@ endif
 
 .PHONY: local-dev check-local-tools kill-dev kill-ports kill-workers reset-frontend-cache reset-dev
 
-local-dev: check-local-tools
+local-dev: check-local-tools kill-dev
 	$(HONCHO) $(HONCHO_ENV_ARGS) -f Procfile.dev start $(DEV_PROCS)
 
 local-dev-with-backend-env:

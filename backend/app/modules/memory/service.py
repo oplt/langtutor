@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-import asyncio
 import logging
+import re
 from datetime import UTC, datetime
 from uuid import uuid4
 
@@ -10,8 +10,10 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from backend.app.core.config import settings
 from backend.app.modules.memory.l3_cache import (
     get_l3_read_cache,
-    invalidate_l3_read_cache,
+    get_l3_capability_cache,
+    invalidate_l3_read_cache_async,
     set_l3_read_cache,
+    set_l3_capability_cache,
 )
 from backend.app.modules.memory.repository import MemoryRepository, _render_entries
 from backend.app.modules.memory.types import (
@@ -26,6 +28,8 @@ from backend.app.modules.memory.types import (
 )
 
 logger = logging.getLogger(__name__)
+
+_L3_SECTION = re.compile(r"^###\s+(.+)$", re.MULTILINE)
 
 
 class MemoryService:
@@ -122,7 +126,7 @@ class MemoryService:
             )
         self._repo.set_entries(row, entries)
         await self._repo.save_document(db, row)
-        invalidate_l3_read_cache(user_id)
+        await invalidate_l3_read_cache_async(user_id)
         return entries[-1]
 
     async def read_l3_concat(
@@ -133,8 +137,12 @@ class MemoryService:
         use_cache: bool = True,
         capability: str | None = None,
     ) -> str:
-        if use_cache and not capability:
-            cached = get_l3_read_cache(user_id)
+        if use_cache and capability:
+            cached = await get_l3_capability_cache(user_id, capability)
+            if cached is not None:
+                return cached
+        elif use_cache:
+            cached = await get_l3_read_cache(user_id)
             if cached is not None:
                 return cached
 
@@ -150,17 +158,70 @@ class MemoryService:
             if row and row.content.strip():
                 parts.append(f"### {slot}\n{row.content.strip()}")
         text = "\n\n".join(parts)
-        if use_cache and not capability:
-            set_l3_read_cache(user_id, text)
+        if use_cache and capability:
+            await set_l3_capability_cache(user_id, capability, text)
+        elif use_cache:
+            await set_l3_read_cache(user_id, text)
         return text
+
+    async def read_l3_for_query(
+        self,
+        db: AsyncSession,
+        *,
+        user_id,
+        query: str,
+        capability: str | None = None,
+        max_chars: int = 2400,
+    ) -> str:
+        full = await self.read_l3_concat(
+            db,
+            user_id=user_id,
+            use_cache=True,
+            capability=capability,
+        )
+        if not full.strip() or not query.strip():
+            return full
+
+        from backend.app.modules.knowledge.bm25 import tokenize
+
+        terms = {term for term in tokenize(query) if len(term) >= 3}
+        if not terms:
+            return full[:max_chars]
+
+        sections = _L3_SECTION.split(full)
+        if len(sections) <= 1:
+            return full[:max_chars]
+
+        scored: list[tuple[int, str]] = []
+        for idx in range(1, len(sections), 2):
+            title = sections[idx].strip()
+            body = sections[idx + 1].strip() if idx + 1 < len(sections) else ""
+            if not body:
+                continue
+            blob = f"{title} {body}".lower()
+            score = sum(1 for term in terms if term in blob)
+            if score <= 0:
+                continue
+            scored.append((score, f"### {title}\n{body}"))
+
+        if not scored or max(item[0] for item in scored) == 0:
+            return full[:max_chars]
+
+        scored.sort(key=lambda item: item[0], reverse=True)
+        parts: list[str] = []
+        used = 0
+        for _, section in scored:
+            if used + len(section) > max_chars and parts:
+                break
+            parts.append(section)
+            used += len(section) + 2
+        return "\n\n".join(parts) if parts else full[:max_chars]
 
     async def synthesize_l3(self, db: AsyncSession, *, user_id) -> dict[str, str]:
         await self._repo.ensure_defaults(db, user_id)
-        traces, l2_docs, l3_docs = await asyncio.gather(
-            self._repo.list_traces(db, user_id=user_id, limit=MAX_TRACE_FETCH),
-            self._repo.list_documents(db, user_id=user_id, layer="L2"),
-            self._repo.list_documents(db, user_id=user_id, layer="L3"),
-        )
+        traces = await self._repo.list_traces(db, user_id=user_id, limit=MAX_TRACE_FETCH)
+        l2_docs = await self._repo.list_documents(db, user_id=user_id, layer="L2")
+        l3_docs = await self._repo.list_documents(db, user_id=user_id, layer="L3")
         l3_by_key = {doc.doc_key: doc for doc in l3_docs}
 
         recent_lines = []
@@ -199,7 +260,9 @@ class MemoryService:
         ):
             if content.strip():
                 parts.append(f"### {slot}\n{content.strip()}")
-        set_l3_read_cache(user_id, "\n\n".join(parts))
+        merged = "\n\n".join(parts)
+        await invalidate_l3_read_cache_async(user_id)
+        await set_l3_read_cache(user_id, merged)
 
         return {
             "recent": recent_content,
@@ -211,7 +274,7 @@ class MemoryService:
         await self._repo.ensure_defaults(db, user_id)
         l2 = await self._repo.list_documents(db, user_id=user_id, layer="L2")
         l3 = await self._repo.list_documents(db, user_id=user_id, layer="L3")
-        trace_count = len(await self._repo.list_traces(db, user_id=user_id, limit=MAX_TRACE_FETCH))
+        trace_count = await self._repo.count_traces(db, user_id=user_id)
         return {
             "trace_count": trace_count,
             "l2": [
@@ -340,10 +403,31 @@ class MemoryService:
             )
             text = (response.content or "").strip()
             if text:
-                return text
+                evidence = profile_lines[:25] + [line for line in trace_hints if line]
+                grounded = _ground_profile_text(text, evidence)
+                if grounded:
+                    return grounded
         except Exception:
             logger.warning("memory_profile_llm_synthesis_failed", exc_info=True)
         return baseline
+
+
+def _ground_profile_text(text: str, evidence_lines: list[str]) -> str:
+    evidence_tokens: set[str] = set()
+    for line in evidence_lines:
+        for token in re.findall(r"[a-zA-Z'\-]{3,}", line.lower()):
+            evidence_tokens.add(token)
+    if not evidence_tokens:
+        return ""
+    kept: list[str] = []
+    for line in text.splitlines():
+        stripped = line.strip().lstrip("-•* ").strip()
+        if not stripped:
+            continue
+        line_tokens = set(re.findall(r"[a-zA-Z'\-]{3,}", stripped.lower()))
+        if line_tokens & evidence_tokens:
+            kept.append(stripped if stripped.startswith("-") else f"- {stripped}")
+    return "\n".join(kept)
 
 
 def _fact_from_trace(event: TraceEvent) -> str:

@@ -23,15 +23,48 @@ class MemoryRepository:
         row = UserMemoryTrace(**fields)
         db.add(row)
         await db.flush()
-        user_id = fields.get("user_id")
-        if user_id is not None:
-            await self._trim_traces_if_needed(db, user_id=user_id)
         return row
 
-    async def _trim_traces_if_needed(self, db: AsyncSession, *, user_id: uuid.UUID) -> None:
-        from sqlalchemy import delete, func
+    async def trim_user_traces(self, db: AsyncSession, *, user_id: uuid.UUID) -> None:
+        from sqlalchemy import delete, select
 
         from backend.app.modules.memory.types import MAX_TRACE_STORE
+
+        keep_ids = (
+            select(UserMemoryTrace.id)
+            .where(UserMemoryTrace.user_id == user_id)
+            .order_by(UserMemoryTrace.created_at.desc())
+            .limit(MAX_TRACE_STORE)
+        )
+        await db.execute(
+            delete(UserMemoryTrace).where(
+                UserMemoryTrace.user_id == user_id,
+                UserMemoryTrace.id.not_in(keep_ids),
+            )
+        )
+        await db.flush()
+
+    async def list_users_over_trace_limit(
+        self,
+        db: AsyncSession,
+        *,
+        limit: int = 50,
+    ) -> list[uuid.UUID]:
+        from sqlalchemy import func
+
+        from backend.app.modules.memory.types import MAX_TRACE_STORE
+
+        stmt = (
+            select(UserMemoryTrace.user_id)
+            .group_by(UserMemoryTrace.user_id)
+            .having(func.count(UserMemoryTrace.id) > MAX_TRACE_STORE)
+            .limit(max(1, limit))
+        )
+        rows = (await db.execute(stmt)).scalars().all()
+        return list(rows)
+
+    async def count_traces(self, db: AsyncSession, *, user_id: uuid.UUID) -> int:
+        from sqlalchemy import func
 
         count = (
             await db.execute(
@@ -40,20 +73,7 @@ class MemoryRepository:
                 .where(UserMemoryTrace.user_id == user_id)
             )
         ).scalar_one()
-        excess = int(count or 0) - MAX_TRACE_STORE
-        if excess <= 0:
-            return
-        oldest = (
-            await db.execute(
-                select(UserMemoryTrace.id)
-                .where(UserMemoryTrace.user_id == user_id)
-                .order_by(UserMemoryTrace.created_at.asc())
-                .limit(excess)
-            )
-        ).scalars().all()
-        if oldest:
-            await db.execute(delete(UserMemoryTrace).where(UserMemoryTrace.id.in_(list(oldest))))
-            await db.flush()
+        return int(count or 0)
 
     async def list_traces(
         self,
@@ -129,7 +149,7 @@ class MemoryRepository:
 
     async def ensure_defaults(self, db: AsyncSession, user_id: uuid.UUID) -> None:
         cache_key = (_DEFAULTS_CACHE_VERSION, user_id)
-        if cache_key in _defaults_ensured_users:
+        if await self._defaults_already_ensured(user_id):
             return
 
         rows = [
@@ -158,7 +178,33 @@ class MemoryRepository:
         stmt = stmt.on_conflict_do_nothing(constraint="uq_user_memory_doc")
         await db.execute(stmt)
         await db.flush()
+        await self._mark_defaults_ensured(user_id)
+
+    async def _defaults_already_ensured(self, user_id: uuid.UUID) -> bool:
+        cache_key = (_DEFAULTS_CACHE_VERSION, user_id)
+        if cache_key in _defaults_ensured_users:
+            return True
+        try:
+            from backend.app.core.redis import get_redis
+
+            return bool(
+                await get_redis().sismember(
+                    f"memory:defaults:{_DEFAULTS_CACHE_VERSION}",
+                    str(user_id),
+                )
+            )
+        except Exception:
+            return False
+
+    async def _mark_defaults_ensured(self, user_id: uuid.UUID) -> None:
+        cache_key = (_DEFAULTS_CACHE_VERSION, user_id)
         _defaults_ensured_users.add(cache_key)
+        try:
+            from backend.app.core.redis import get_redis
+
+            await get_redis().sadd(f"memory:defaults:{_DEFAULTS_CACHE_VERSION}", str(user_id))
+        except Exception:
+            return
 
 
 def _render_entries(entries: list[MemoryEntry]) -> str:

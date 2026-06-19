@@ -222,6 +222,11 @@ async def _invalidate_kb_redis(kb_name: str) -> None:
     except Exception:
         logger.debug("kb_search_redis_invalidate_failed kb=%s", kb_name, exc_info=True)
 
+    if kb_name == "dutch-core":
+        from backend.app.modules.extensions.dict_lookup_cache import invalidate_dict_lookups
+
+        await invalidate_dict_lookups()
+
 
 class KnowledgeSearchCache:
     """In-memory BM25 index + LRU search-result cache per knowledge base."""

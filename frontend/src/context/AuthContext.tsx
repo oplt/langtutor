@@ -4,6 +4,7 @@ import { fetchCurrentUser } from "../modules/auth/api/authApi";
 import { clearStorySession } from "../modules/learning/storySessionCache";
 import { clearTutorChatSession } from "../modules/tutor/tutorChatSessionCache";
 import { queryClient } from "../shared/api/queryClient";
+import { ApiError } from "../shared/api/httpClient";
 
 type AuthStatus = "loading" | "authenticated" | "unauthenticated";
 
@@ -52,8 +53,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setUser(data);
       setSessionDegraded(false);
       setStatus("authenticated");
-    } catch {
-      throw new Error("unauthorized");
+    } catch (err: unknown) {
+      if (err instanceof ApiError && err.status === 401) {
+        throw new Error("unauthorized");
+      }
+      throw err;
     }
   }, [token]);
 

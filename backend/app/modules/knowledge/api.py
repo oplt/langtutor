@@ -7,6 +7,7 @@ from backend.app.db.session import get_db
 from backend.app.modules.auth.dependencies import auth_error, get_current_user
 from backend.app.modules.knowledge.dependencies import require_knowledge_admin
 from backend.app.modules.knowledge.paths import resolve_ingest_paths
+from backend.app.modules.knowledge.tasks import enqueue_knowledge_ingest
 from backend.app.modules.knowledge.schemas import (
     KnowledgeBaseCreateIn,
     KnowledgeBaseOut,
@@ -65,22 +66,18 @@ async def create_base(
 @router.post("/bases/{kb_name}/ingest-default")
 async def ingest_default(
     kb_name: str,
-    db: AsyncSession = Depends(get_db),
     _admin: User = Depends(require_knowledge_admin),
-    service: KnowledgeService = Depends(knowledge_service_dep),
 ):
-    result = await service.ingest_paths(db, kb_name=kb_name, paths=DEFAULT_SOURCES)
-    await db.commit()
-    return result
+    paths = [str(path) for path in DEFAULT_SOURCES]
+    enqueue_knowledge_ingest(kb_name=kb_name, paths=paths)
+    return {"status": "accepted", "kb_name": kb_name, "path_count": len(paths)}
 
 
 @router.post("/bases/{kb_name}/ingest")
 async def ingest_paths(
     kb_name: str,
     payload: KnowledgeIngestIn,
-    db: AsyncSession = Depends(get_db),
     _admin: User = Depends(require_knowledge_admin),
-    service: KnowledgeService = Depends(knowledge_service_dep),
 ):
     try:
         paths = resolve_ingest_paths(payload.paths)
@@ -100,9 +97,11 @@ async def ingest_paths(
             detail=auth_error("invalid_ingest_paths", message, details={"reason": code}),
         ) from exc
 
-    result = await service.ingest_paths(db, kb_name=kb_name, paths=paths)
-    await db.commit()
-    return result
+    enqueue_knowledge_ingest(
+        kb_name=kb_name,
+        paths=[str(path) for path in paths],
+    )
+    return {"status": "accepted", "kb_name": kb_name, "path_count": len(paths)}
 
 
 @router.post("/search")

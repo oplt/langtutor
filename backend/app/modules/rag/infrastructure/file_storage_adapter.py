@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import asyncio
 import shutil
 import uuid
 from pathlib import Path
@@ -17,10 +18,10 @@ class LocalFileStorageAdapter:
         path.mkdir(parents=True, exist_ok=True)
         return path
 
-    def save_upload(self, *, user_id: str, filename: str, data: bytes) -> str:
+    async def save_upload(self, *, user_id: str, filename: str, data: bytes) -> str:
         safe_name = f"{uuid.uuid4().hex}_{Path(filename).name}"
         dest = self.user_dir(user_id) / safe_name
-        dest.write_bytes(data)
+        await asyncio.to_thread(dest.write_bytes, data)
         return str(dest.relative_to(BASE_DIR))
 
     def resolve_path(self, storage_path: str) -> Path:

@@ -1,0 +1,285 @@
+{
+  "projectRoot": "/home/polat/Desktop/Projects/LanguageApp",
+  "batchFiles": [
+    {
+      "path": "frontend/src/App.tsx",
+      "language": "typescript",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/ProtectedRoute.tsx",
+      "language": "typescript",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/auth.tsx",
+      "language": "typescript",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/config.ts",
+      "language": "typescript",
+      "sizeLines": 2,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/context/AuthContext.tsx",
+      "language": "typescript",
+      "sizeLines": 126,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/main.tsx",
+      "language": "typescript",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/modules/auth/api/authApi.ts",
+      "language": "typescript",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/modules/tutor/api/tutorWsClient.test.ts",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/modules/tutor/api/tutorWsClient.ts",
+      "language": "typescript",
+      "sizeLines": 88,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/modules/tutor/components/AskUserCard.tsx",
+      "language": "typescript",
+      "sizeLines": 171,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/modules/tutor/components/TutorChatPanel.tsx",
+      "language": "typescript",
+      "sizeLines": 243,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/modules/tutor/hooks/useTutorChat.ts",
+      "language": "typescript",
+      "sizeLines": 260,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/modules/tutor/tutorChatSessionCache.ts",
+      "language": "typescript",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/modules/tutor/types.ts",
+      "language": "typescript",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/pages/Home/Home.tsx",
+      "language": "typescript",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/pages/Home/components/AppAppBar.tsx",
+      "language": "typescript",
+      "sizeLines": 182,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/pages/Home/components/AuthSection.tsx",
+      "language": "typescript",
+      "sizeLines": 493,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/pages/Home/components/Footer.tsx",
+      "language": "typescript",
+      "sizeLines": 229,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/pages/Home/components/SitemarkIcon.tsx",
+      "language": "typescript",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/pages/Home/components/auth/AuthMarketingPanel.tsx",
+      "language": "typescript",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/pages/Home/components/auth/AuthShell.tsx",
+      "language": "typescript",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/pages/Home/components/auth/ForgotPassword.tsx",
+      "language": "typescript",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/pages/Home/components/auth/GoogleIcon.tsx",
+      "language": "typescript",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/pages/dashboard/Dashboard.tsx",
+      "language": "typescript",
+      "sizeLines": 85,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/pages/dashboard/components/AppNavbar.tsx",
+      "language": "typescript",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/pages/dashboard/components/Header.tsx",
+      "language": "typescript",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/pages/dashboard/components/MenuButton.tsx",
+      "language": "typescript",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/pages/dashboard/components/MenuContent.tsx",
+      "language": "typescript",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "frontend/src/App.tsx": [
+      "frontend/src/ProtectedRoute.tsx",
+      "frontend/src/shared/components/PageLoading.tsx"
+    ],
+    "frontend/src/ProtectedRoute.tsx": [
+      "frontend/src/context/AuthContext.tsx",
+      "frontend/src/shared/components/PageLoading.tsx"
+    ],
+    "frontend/src/auth.tsx": [],
+    "frontend/src/config.ts": [],
+    "frontend/src/context/AuthContext.tsx": [
+      "frontend/src/auth.tsx",
+      "frontend/src/modules/auth/api/authApi.ts",
+      "frontend/src/modules/learning/storySessionCache.ts",
+      "frontend/src/modules/tutor/tutorChatSessionCache.ts",
+      "frontend/src/shared/api/queryClient.ts"
+    ],
+    "frontend/src/main.tsx": [
+      "frontend/src/App.tsx",
+      "frontend/src/context/AuthContext.tsx",
+      "frontend/src/output.css",
+      "frontend/src/shared/api/queryClient.ts"
+    ],
+    "frontend/src/modules/auth/api/authApi.ts": [
+      "frontend/src/shared/api/httpClient.ts"
+    ],
+    "frontend/src/modules/tutor/api/tutorWsClient.test.ts": [
+      "frontend/src/modules/tutor/api/tutorWsClient.ts"
+    ],
+    "frontend/src/modules/tutor/api/tutorWsClient.ts": [
+      "frontend/src/config.ts",
+      "frontend/src/modules/tutor/types.ts"
+    ],
+    "frontend/src/modules/tutor/components/AskUserCard.tsx": [
+      "frontend/src/modules/tutor/types.ts"
+    ],
+    "frontend/src/modules/tutor/components/TutorChatPanel.tsx": [
+      "frontend/src/modules/learning/api/learningPathApi.ts",
+      "frontend/src/modules/tutor/components/AskUserCard.tsx",
+      "frontend/src/modules/tutor/hooks/useTutorChat.ts",
+      "frontend/src/modules/tutor/types.ts",
+      "frontend/src/shared/components/CefrLevelSelect.tsx"
+    ],
+    "frontend/src/modules/tutor/hooks/useTutorChat.ts": [
+      "frontend/src/auth.tsx",
+      "frontend/src/modules/tutor/api/tutorWsClient.ts",
+      "frontend/src/modules/tutor/tutorChatSessionCache.ts",
+      "frontend/src/modules/tutor/types.ts"
+    ],
+    "frontend/src/modules/tutor/tutorChatSessionCache.ts": [
+      "frontend/src/modules/tutor/types.ts"
+    ],
+    "frontend/src/modules/tutor/types.ts": [],
+    "frontend/src/pages/Home/Home.tsx": [
+      "frontend/src/pages/Home/components/AppAppBar.tsx",
+      "frontend/src/pages/Home/components/AuthSection.tsx",
+      "frontend/src/pages/Home/components/Footer.tsx",
+      "frontend/src/pages/shared-theme/AppTheme.tsx"
+    ],
+    "frontend/src/pages/Home/components/AppAppBar.tsx": [
+      "frontend/src/context/AuthContext.tsx",
+      "frontend/src/pages/shared-theme/themePrimitives.ts"
+    ],
+    "frontend/src/pages/Home/components/AuthSection.tsx": [
+      "frontend/src/auth.tsx",
+      "frontend/src/config.ts",
+      "frontend/src/context/AuthContext.tsx",
+      "frontend/src/modules/auth/api/authApi.ts",
+      "frontend/src/pages/Home/components/auth/AuthMarketingPanel.tsx",
+      "frontend/src/pages/Home/components/auth/AuthShell.tsx",
+      "frontend/src/pages/Home/components/auth/ForgotPassword.tsx",
+      "frontend/src/pages/Home/components/auth/GoogleIcon.tsx",
+      "frontend/src/shared/api/httpClient.ts"
+    ],
+    "frontend/src/pages/Home/components/Footer.tsx": [
+      "frontend/src/pages/Home/components/SitemarkIcon.tsx"
+    ],
+    "frontend/src/pages/Home/components/SitemarkIcon.tsx": [],
+    "frontend/src/pages/Home/components/auth/AuthMarketingPanel.tsx": [
+      "frontend/src/pages/shared-theme/themePrimitives.ts"
+    ],
+    "frontend/src/pages/Home/components/auth/AuthShell.tsx": [
+      "frontend/src/pages/shared-theme/themePrimitives.ts"
+    ],
+    "frontend/src/pages/Home/components/auth/ForgotPassword.tsx": [],
+    "frontend/src/pages/Home/components/auth/GoogleIcon.tsx": [],
+    "frontend/src/pages/dashboard/Dashboard.tsx": [
+      "frontend/src/context/AuthContext.tsx",
+      "frontend/src/modules/learning/api/learningApi.ts",
+      "frontend/src/pages/dashboard/components/AppNavbar.tsx",
+      "frontend/src/pages/dashboard/components/SideMenu.tsx",
+      "frontend/src/pages/dashboard/theme/customizations/index.ts",
+      "frontend/src/pages/shared-theme/AppTheme.tsx",
+      "frontend/src/shared/api/queryClient.ts",
+      "frontend/src/shared/api/queryKeys.ts",
+      "frontend/src/shared/components/SessionDegradedBanner.tsx",
+      "frontend/src/shared/hooks/useFocusMainOnNavigate.ts"
+    ],
+    "frontend/src/pages/dashboard/components/AppNavbar.tsx": [
+      "frontend/src/pages/dashboard/components/MenuButton.tsx",
+      "frontend/src/pages/dashboard/components/SideMenuMobile.tsx",
+      "frontend/src/pages/shared-theme/ColorModeIconDropdown.tsx",
+      "frontend/src/pages/shared-theme/themePrimitives.ts"
+    ],
+    "frontend/src/pages/dashboard/components/Header.tsx": [
+      "frontend/src/pages/dashboard/components/NavbarBreadcrumbs.tsx",
+      "frontend/src/pages/shared-theme/ColorModeIconDropdown.tsx"
+    ],
+    "frontend/src/pages/dashboard/components/MenuButton.tsx": [],
+    "frontend/src/pages/dashboard/components/MenuContent.tsx": []
+  }
+}

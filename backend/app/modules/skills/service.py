@@ -3,16 +3,18 @@ from __future__ import annotations
 import hashlib
 from dataclasses import dataclass
 from datetime import datetime, timezone
-from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
 from backend.app.db.base import CEFRLevel
+from backend.app.modules.content.file_mtime_cache import read_text_cached
 
 
 PLAYBOOK_ROOT = (
     Path(__file__).resolve().parent / "playbooks"
 )
+
+_playbook_cache: dict[str, tuple[float, "Playbook"]] = {}
 
 
 @dataclass(frozen=True)
@@ -23,10 +25,6 @@ class Playbook:
     version: str
     updated_at: str | None
     meta: dict[str, Any]
-
-
-def _read_text(path: Path) -> str:
-    return path.read_text(encoding="utf-8")
 
 
 def _compute_version(content: str) -> str:
@@ -45,7 +43,7 @@ def _load_playbook(level: CEFRLevel) -> Playbook | None:
     path = PLAYBOOK_ROOT / level.value / "SKILL.md"
     if not path.exists():
         return None
-    content = _read_text(path)
+    content = read_text_cached(path)
     title = _parse_title(content)
     version = _compute_version(content)
     stat = path.stat()
@@ -60,14 +58,22 @@ def _load_playbook(level: CEFRLevel) -> Playbook | None:
     )
 
 
-@lru_cache(maxsize=64)
 def get_playbook(level: CEFRLevel) -> Playbook:
+    path = PLAYBOOK_ROOT / level.value / "SKILL.md"
+    mtime = path.stat().st_mtime if path.exists() else 0.0
+    cache_key = level.value
+    cached = _playbook_cache.get(cache_key)
+    if cached is not None and cached[0] == mtime:
+        return cached[1]
+
     pb = _load_playbook(level)
     if pb is None:
-        # Fallback to A1 if a level is missing.
         pb = _load_playbook(CEFRLevel.A1)
     if pb is None:
         raise FileNotFoundError("No tutor playbooks found")
+
+    if path.exists():
+        _playbook_cache[cache_key] = (mtime, pb)
     return pb
 
 
@@ -77,7 +83,6 @@ def list_playbooks() -> list[Playbook]:
         pb = _load_playbook(level)
         if pb is not None:
             out.append(pb)
-    # Stable ordering.
     out.sort(key=lambda p: p.level.value)
     return out
 
@@ -90,3 +95,26 @@ def get_playbook_text(level: str | None) -> str:
     except ValueError:
         cefr = CEFRLevel.A1
     return get_playbook(cefr).content
+
+
+def get_playbook_excerpt(level: str | None, *, max_chars: int = 1200) -> str:
+    content = get_playbook_text(level)
+    if len(content) <= max_chars:
+        return content
+    lines = content.splitlines()
+    kept: list[str] = []
+    used = 0
+    for line in lines:
+        next_len = used + len(line) + 1
+        if next_len > max_chars and kept:
+            break
+        kept.append(line)
+        used = next_len
+    excerpt = "\n".join(kept).strip()
+    if len(content) > len(excerpt):
+        excerpt = f"{excerpt}\n\n[Playbook truncated — use tutor tools for deeper CEFR guidance.]"
+    return excerpt
+
+
+def reset_playbook_cache_for_tests() -> None:
+    _playbook_cache.clear()

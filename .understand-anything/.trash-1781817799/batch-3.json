@@ -1,0 +1,1787 @@
+{
+  "nodes": [
+    {
+      "id": "file:frontend/src/App.tsx",
+      "type": "file",
+      "name": "App.tsx",
+      "filePath": "frontend/src/App.tsx",
+      "summary": "code file; typescript; 2 function(s); exports: App.",
+      "tags": [
+        "entry-point",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/App.tsx:App",
+      "type": "function",
+      "name": "App",
+      "filePath": "frontend/src/App.tsx",
+      "summary": "Function App in frontend/src/App.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/ProtectedRoute.tsx",
+      "type": "file",
+      "name": "ProtectedRoute.tsx",
+      "filePath": "frontend/src/ProtectedRoute.tsx",
+      "summary": "code file; typescript; 1 function(s); exports: ProtectedRoute.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/ProtectedRoute.tsx:ProtectedRoute",
+      "type": "function",
+      "name": "ProtectedRoute",
+      "filePath": "frontend/src/ProtectedRoute.tsx",
+      "summary": "Function ProtectedRoute in frontend/src/ProtectedRoute.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/auth.tsx",
+      "type": "file",
+      "name": "auth.tsx",
+      "filePath": "frontend/src/auth.tsx",
+      "summary": "code file; typescript; 5 function(s); exports: setToken, getToken, clearToken, shouldRememberSession.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/auth.tsx:setToken",
+      "type": "function",
+      "name": "setToken",
+      "filePath": "frontend/src/auth.tsx",
+      "summary": "Function setToken in frontend/src/auth.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/auth.tsx:getToken",
+      "type": "function",
+      "name": "getToken",
+      "filePath": "frontend/src/auth.tsx",
+      "summary": "Function getToken in frontend/src/auth.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/auth.tsx:clearToken",
+      "type": "function",
+      "name": "clearToken",
+      "filePath": "frontend/src/auth.tsx",
+      "summary": "Function clearToken in frontend/src/auth.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/auth.tsx:shouldRememberSession",
+      "type": "function",
+      "name": "shouldRememberSession",
+      "filePath": "frontend/src/auth.tsx",
+      "summary": "Function shouldRememberSession in frontend/src/auth.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/auth.tsx:getAuthHeader",
+      "type": "function",
+      "name": "getAuthHeader",
+      "filePath": "frontend/src/auth.tsx",
+      "summary": "Function getAuthHeader in frontend/src/auth.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/config.ts",
+      "type": "file",
+      "name": "config.ts",
+      "filePath": "frontend/src/config.ts",
+      "summary": "code file; typescript; exports: API_BASE.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/context/AuthContext.tsx",
+      "type": "file",
+      "name": "AuthContext.tsx",
+      "filePath": "frontend/src/context/AuthContext.tsx",
+      "summary": "code file; typescript; 2 function(s); exports: AuthProvider, useAuth.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:frontend/src/context/AuthContext.tsx:AuthProvider",
+      "type": "function",
+      "name": "AuthProvider",
+      "filePath": "frontend/src/context/AuthContext.tsx",
+      "summary": "Function AuthProvider in frontend/src/context/AuthContext.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:frontend/src/context/AuthContext.tsx:useAuth",
+      "type": "function",
+      "name": "useAuth",
+      "filePath": "frontend/src/context/AuthContext.tsx",
+      "summary": "Function useAuth in frontend/src/context/AuthContext.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/main.tsx",
+      "type": "file",
+      "name": "main.tsx",
+      "filePath": "frontend/src/main.tsx",
+      "summary": "code file; typescript.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/modules/auth/api/authApi.ts",
+      "type": "file",
+      "name": "authApi.ts",
+      "filePath": "frontend/src/modules/auth/api/authApi.ts",
+      "summary": "code file; typescript; 4 function(s); exports: fetchCurrentUser, login, signup, updateProfile.",
+      "tags": [
+        "api-handler",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/modules/auth/api/authApi.ts:fetchCurrentUser",
+      "type": "function",
+      "name": "fetchCurrentUser",
+      "filePath": "frontend/src/modules/auth/api/authApi.ts",
+      "summary": "Function fetchCurrentUser in frontend/src/modules/auth/api/authApi.ts.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/modules/auth/api/authApi.ts:login",
+      "type": "function",
+      "name": "login",
+      "filePath": "frontend/src/modules/auth/api/authApi.ts",
+      "summary": "Function login in frontend/src/modules/auth/api/authApi.ts.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/modules/auth/api/authApi.ts:signup",
+      "type": "function",
+      "name": "signup",
+      "filePath": "frontend/src/modules/auth/api/authApi.ts",
+      "summary": "Function signup in frontend/src/modules/auth/api/authApi.ts.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/modules/auth/api/authApi.ts:updateProfile",
+      "type": "function",
+      "name": "updateProfile",
+      "filePath": "frontend/src/modules/auth/api/authApi.ts",
+      "summary": "Function updateProfile in frontend/src/modules/auth/api/authApi.ts.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/modules/tutor/api/tutorWsClient.test.ts",
+      "type": "file",
+      "name": "tutorWsClient.test.ts",
+      "filePath": "frontend/src/modules/tutor/api/tutorWsClient.test.ts",
+      "summary": "code file; typescript.",
+      "tags": [
+        "test",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/modules/tutor/api/tutorWsClient.ts",
+      "type": "file",
+      "name": "tutorWsClient.ts",
+      "filePath": "frontend/src/modules/tutor/api/tutorWsClient.ts",
+      "summary": "code file; typescript; 1 function(s); 1 class(es); exports: WS_AUTH_SUBPROTOCOL, buildTutorWsUrl, TutorWsClient.",
+      "tags": [
+        "api-handler",
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:frontend/src/modules/tutor/api/tutorWsClient.ts:buildTutorWsUrl",
+      "type": "function",
+      "name": "buildTutorWsUrl",
+      "filePath": "frontend/src/modules/tutor/api/tutorWsClient.ts",
+      "summary": "Function buildTutorWsUrl in frontend/src/modules/tutor/api/tutorWsClient.ts.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:frontend/src/modules/tutor/api/tutorWsClient.ts:TutorWsClient",
+      "type": "class",
+      "name": "TutorWsClient",
+      "filePath": "frontend/src/modules/tutor/api/tutorWsClient.ts",
+      "summary": "Class TutorWsClient in frontend/src/modules/tutor/api/tutorWsClient.ts.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/modules/tutor/components/AskUserCard.tsx",
+      "type": "file",
+      "name": "AskUserCard.tsx",
+      "filePath": "frontend/src/modules/tutor/components/AskUserCard.tsx",
+      "summary": "code file; typescript; 4 function(s); exports: AskUserCard.",
+      "tags": [
+        "component",
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:frontend/src/modules/tutor/components/AskUserCard.tsx:buildAnswers",
+      "type": "function",
+      "name": "buildAnswers",
+      "filePath": "frontend/src/modules/tutor/components/AskUserCard.tsx",
+      "summary": "Function buildAnswers in frontend/src/modules/tutor/components/AskUserCard.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/modules/tutor/components/AskUserCard.tsx:QuestionPanel",
+      "type": "function",
+      "name": "QuestionPanel",
+      "filePath": "frontend/src/modules/tutor/components/AskUserCard.tsx",
+      "summary": "Function QuestionPanel in frontend/src/modules/tutor/components/AskUserCard.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/modules/tutor/components/AskUserCard.tsx:AskUserCard",
+      "type": "function",
+      "name": "AskUserCard",
+      "filePath": "frontend/src/modules/tutor/components/AskUserCard.tsx",
+      "summary": "Function AskUserCard in frontend/src/modules/tutor/components/AskUserCard.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/modules/tutor/components/TutorChatPanel.tsx",
+      "type": "file",
+      "name": "TutorChatPanel.tsx",
+      "filePath": "frontend/src/modules/tutor/components/TutorChatPanel.tsx",
+      "summary": "code file; typescript; 4 function(s); exports: TutorChatPanel.",
+      "tags": [
+        "component",
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:frontend/src/modules/tutor/components/TutorChatPanel.tsx:connectionLabel",
+      "type": "function",
+      "name": "connectionLabel",
+      "filePath": "frontend/src/modules/tutor/components/TutorChatPanel.tsx",
+      "summary": "Function connectionLabel in frontend/src/modules/tutor/components/TutorChatPanel.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/modules/tutor/components/TutorChatPanel.tsx:messageBubblePropsEqual",
+      "type": "function",
+      "name": "messageBubblePropsEqual",
+      "filePath": "frontend/src/modules/tutor/components/TutorChatPanel.tsx",
+      "summary": "Function messageBubblePropsEqual in frontend/src/modules/tutor/components/TutorChatPanel.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/modules/tutor/components/TutorChatPanel.tsx:TutorChatPanel",
+      "type": "function",
+      "name": "TutorChatPanel",
+      "filePath": "frontend/src/modules/tutor/components/TutorChatPanel.tsx",
+      "summary": "Function TutorChatPanel in frontend/src/modules/tutor/components/TutorChatPanel.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:frontend/src/modules/tutor/hooks/useTutorChat.ts",
+      "type": "file",
+      "name": "useTutorChat.ts",
+      "filePath": "frontend/src/modules/tutor/hooks/useTutorChat.ts",
+      "summary": "code file; typescript; 2 function(s); exports: useTutorChat.",
+      "tags": [
+        "hook",
+        "module"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:frontend/src/modules/tutor/hooks/useTutorChat.ts:useTutorChat",
+      "type": "function",
+      "name": "useTutorChat",
+      "filePath": "frontend/src/modules/tutor/hooks/useTutorChat.ts",
+      "summary": "Function useTutorChat in frontend/src/modules/tutor/hooks/useTutorChat.ts.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:frontend/src/modules/tutor/tutorChatSessionCache.ts",
+      "type": "file",
+      "name": "tutorChatSessionCache.ts",
+      "filePath": "frontend/src/modules/tutor/tutorChatSessionCache.ts",
+      "summary": "code file; typescript; 3 function(s); exports: loadTutorChatSession, saveTutorChatSession, clearTutorChatSession.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/modules/tutor/tutorChatSessionCache.ts:loadTutorChatSession",
+      "type": "function",
+      "name": "loadTutorChatSession",
+      "filePath": "frontend/src/modules/tutor/tutorChatSessionCache.ts",
+      "summary": "Function loadTutorChatSession in frontend/src/modules/tutor/tutorChatSessionCache.ts.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/modules/tutor/tutorChatSessionCache.ts:saveTutorChatSession",
+      "type": "function",
+      "name": "saveTutorChatSession",
+      "filePath": "frontend/src/modules/tutor/tutorChatSessionCache.ts",
+      "summary": "Function saveTutorChatSession in frontend/src/modules/tutor/tutorChatSessionCache.ts.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/modules/tutor/tutorChatSessionCache.ts:clearTutorChatSession",
+      "type": "function",
+      "name": "clearTutorChatSession",
+      "filePath": "frontend/src/modules/tutor/tutorChatSessionCache.ts",
+      "summary": "Function clearTutorChatSession in frontend/src/modules/tutor/tutorChatSessionCache.ts.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/modules/tutor/types.ts",
+      "type": "file",
+      "name": "types.ts",
+      "filePath": "frontend/src/modules/tutor/types.ts",
+      "summary": "code file; typescript.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:frontend/src/pages/Home/Home.tsx",
+      "type": "file",
+      "name": "Home.tsx",
+      "filePath": "frontend/src/pages/Home/Home.tsx",
+      "summary": "code file; typescript; 1 function(s); exports: Home.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/pages/Home/Home.tsx:Home",
+      "type": "function",
+      "name": "Home",
+      "filePath": "frontend/src/pages/Home/Home.tsx",
+      "summary": "Function Home in frontend/src/pages/Home/Home.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/pages/Home/components/AppAppBar.tsx",
+      "type": "file",
+      "name": "AppAppBar.tsx",
+      "filePath": "frontend/src/pages/Home/components/AppAppBar.tsx",
+      "summary": "code file; typescript; 1 function(s); exports: AppAppBar.",
+      "tags": [
+        "component",
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:frontend/src/pages/Home/components/AppAppBar.tsx:AppAppBar",
+      "type": "function",
+      "name": "AppAppBar",
+      "filePath": "frontend/src/pages/Home/components/AppAppBar.tsx",
+      "summary": "Function AppAppBar in frontend/src/pages/Home/components/AppAppBar.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:frontend/src/pages/Home/components/AuthSection.tsx",
+      "type": "file",
+      "name": "AuthSection.tsx",
+      "filePath": "frontend/src/pages/Home/components/AuthSection.tsx",
+      "summary": "code file; typescript; 5 function(s); exports: AuthSection.",
+      "tags": [
+        "component",
+        "module"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:frontend/src/pages/Home/components/AuthSection.tsx:PasswordField",
+      "type": "function",
+      "name": "PasswordField",
+      "filePath": "frontend/src/pages/Home/components/AuthSection.tsx",
+      "summary": "Function PasswordField in frontend/src/pages/Home/components/AuthSection.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/pages/Home/components/AuthSection.tsx:SignInForm",
+      "type": "function",
+      "name": "SignInForm",
+      "filePath": "frontend/src/pages/Home/components/AuthSection.tsx",
+      "summary": "Function SignInForm in frontend/src/pages/Home/components/AuthSection.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:frontend/src/pages/Home/components/AuthSection.tsx:SignUpForm",
+      "type": "function",
+      "name": "SignUpForm",
+      "filePath": "frontend/src/pages/Home/components/AuthSection.tsx",
+      "summary": "Function SignUpForm in frontend/src/pages/Home/components/AuthSection.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:frontend/src/pages/Home/components/AuthSection.tsx:AuthSection",
+      "type": "function",
+      "name": "AuthSection",
+      "filePath": "frontend/src/pages/Home/components/AuthSection.tsx",
+      "summary": "Function AuthSection in frontend/src/pages/Home/components/AuthSection.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:frontend/src/pages/Home/components/Footer.tsx",
+      "type": "file",
+      "name": "Footer.tsx",
+      "filePath": "frontend/src/pages/Home/components/Footer.tsx",
+      "summary": "code file; typescript; 2 function(s); exports: Footer.",
+      "tags": [
+        "component",
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:frontend/src/pages/Home/components/Footer.tsx:Copyright",
+      "type": "function",
+      "name": "Copyright",
+      "filePath": "frontend/src/pages/Home/components/Footer.tsx",
+      "summary": "Function Copyright in frontend/src/pages/Home/components/Footer.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/pages/Home/components/Footer.tsx:Footer",
+      "type": "function",
+      "name": "Footer",
+      "filePath": "frontend/src/pages/Home/components/Footer.tsx",
+      "summary": "Function Footer in frontend/src/pages/Home/components/Footer.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:frontend/src/pages/Home/components/SitemarkIcon.tsx",
+      "type": "file",
+      "name": "SitemarkIcon.tsx",
+      "filePath": "frontend/src/pages/Home/components/SitemarkIcon.tsx",
+      "summary": "code file; typescript; 1 function(s); exports: SitemarkIcon.",
+      "tags": [
+        "component",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/pages/Home/components/SitemarkIcon.tsx:SitemarkIcon",
+      "type": "function",
+      "name": "SitemarkIcon",
+      "filePath": "frontend/src/pages/Home/components/SitemarkIcon.tsx",
+      "summary": "Function SitemarkIcon in frontend/src/pages/Home/components/SitemarkIcon.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/pages/Home/components/auth/AuthMarketingPanel.tsx",
+      "type": "file",
+      "name": "AuthMarketingPanel.tsx",
+      "filePath": "frontend/src/pages/Home/components/auth/AuthMarketingPanel.tsx",
+      "summary": "code file; typescript; 1 function(s); exports: AuthMarketingPanel.",
+      "tags": [
+        "component",
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:frontend/src/pages/Home/components/auth/AuthMarketingPanel.tsx:AuthMarketingPanel",
+      "type": "function",
+      "name": "AuthMarketingPanel",
+      "filePath": "frontend/src/pages/Home/components/auth/AuthMarketingPanel.tsx",
+      "summary": "Function AuthMarketingPanel in frontend/src/pages/Home/components/auth/AuthMarketingPanel.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/pages/Home/components/auth/AuthShell.tsx",
+      "type": "file",
+      "name": "AuthShell.tsx",
+      "filePath": "frontend/src/pages/Home/components/auth/AuthShell.tsx",
+      "summary": "code file; typescript; 1 function(s); exports: AuthShell.",
+      "tags": [
+        "component",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/pages/Home/components/auth/AuthShell.tsx:AuthShell",
+      "type": "function",
+      "name": "AuthShell",
+      "filePath": "frontend/src/pages/Home/components/auth/AuthShell.tsx",
+      "summary": "Function AuthShell in frontend/src/pages/Home/components/auth/AuthShell.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/pages/Home/components/auth/ForgotPassword.tsx",
+      "type": "file",
+      "name": "ForgotPassword.tsx",
+      "filePath": "frontend/src/pages/Home/components/auth/ForgotPassword.tsx",
+      "summary": "code file; typescript; 1 function(s); exports: ForgotPassword.",
+      "tags": [
+        "component",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/pages/Home/components/auth/ForgotPassword.tsx:ForgotPassword",
+      "type": "function",
+      "name": "ForgotPassword",
+      "filePath": "frontend/src/pages/Home/components/auth/ForgotPassword.tsx",
+      "summary": "Function ForgotPassword in frontend/src/pages/Home/components/auth/ForgotPassword.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/pages/Home/components/auth/GoogleIcon.tsx",
+      "type": "file",
+      "name": "GoogleIcon.tsx",
+      "filePath": "frontend/src/pages/Home/components/auth/GoogleIcon.tsx",
+      "summary": "code file; typescript; 1 function(s); exports: GoogleIcon.",
+      "tags": [
+        "component",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/pages/Home/components/auth/GoogleIcon.tsx:GoogleIcon",
+      "type": "function",
+      "name": "GoogleIcon",
+      "filePath": "frontend/src/pages/Home/components/auth/GoogleIcon.tsx",
+      "summary": "Function GoogleIcon in frontend/src/pages/Home/components/auth/GoogleIcon.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/pages/dashboard/Dashboard.tsx",
+      "type": "file",
+      "name": "Dashboard.tsx",
+      "filePath": "frontend/src/pages/dashboard/Dashboard.tsx",
+      "summary": "code file; typescript; 1 function(s); exports: Dashboard.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:frontend/src/pages/dashboard/Dashboard.tsx:Dashboard",
+      "type": "function",
+      "name": "Dashboard",
+      "filePath": "frontend/src/pages/dashboard/Dashboard.tsx",
+      "summary": "Function Dashboard in frontend/src/pages/dashboard/Dashboard.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/pages/dashboard/components/AppNavbar.tsx",
+      "type": "file",
+      "name": "AppNavbar.tsx",
+      "filePath": "frontend/src/pages/dashboard/components/AppNavbar.tsx",
+      "summary": "code file; typescript; 1 function(s); exports: AppNavbar.",
+      "tags": [
+        "component",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/pages/dashboard/components/AppNavbar.tsx:AppNavbar",
+      "type": "function",
+      "name": "AppNavbar",
+      "filePath": "frontend/src/pages/dashboard/components/AppNavbar.tsx",
+      "summary": "Function AppNavbar in frontend/src/pages/dashboard/components/AppNavbar.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/pages/dashboard/components/Header.tsx",
+      "type": "file",
+      "name": "Header.tsx",
+      "filePath": "frontend/src/pages/dashboard/components/Header.tsx",
+      "summary": "code file; typescript; 1 function(s); exports: Header.",
+      "tags": [
+        "component",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/pages/dashboard/components/Header.tsx:Header",
+      "type": "function",
+      "name": "Header",
+      "filePath": "frontend/src/pages/dashboard/components/Header.tsx",
+      "summary": "Function Header in frontend/src/pages/dashboard/components/Header.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/pages/dashboard/components/MenuButton.tsx",
+      "type": "file",
+      "name": "MenuButton.tsx",
+      "filePath": "frontend/src/pages/dashboard/components/MenuButton.tsx",
+      "summary": "code file; typescript; 1 function(s); exports: MenuButton.",
+      "tags": [
+        "component",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/pages/dashboard/components/MenuButton.tsx:MenuButton",
+      "type": "function",
+      "name": "MenuButton",
+      "filePath": "frontend/src/pages/dashboard/components/MenuButton.tsx",
+      "summary": "Function MenuButton in frontend/src/pages/dashboard/components/MenuButton.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/pages/dashboard/components/MenuContent.tsx",
+      "type": "file",
+      "name": "MenuContent.tsx",
+      "filePath": "frontend/src/pages/dashboard/components/MenuContent.tsx",
+      "summary": "code file; typescript; 1 function(s); exports: MenuContent.",
+      "tags": [
+        "component",
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:frontend/src/pages/dashboard/components/MenuContent.tsx:MenuContent",
+      "type": "function",
+      "name": "MenuContent",
+      "filePath": "frontend/src/pages/dashboard/components/MenuContent.tsx",
+      "summary": "Function MenuContent in frontend/src/pages/dashboard/components/MenuContent.tsx.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:frontend/src/App.tsx",
+      "target": "file:frontend/src/ProtectedRoute.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/App.tsx",
+      "target": "file:frontend/src/shared/components/PageLoading.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/App.tsx",
+      "target": "function:frontend/src/App.tsx:App",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/App.tsx",
+      "target": "function:frontend/src/App.tsx:App",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/ProtectedRoute.tsx",
+      "target": "file:frontend/src/context/AuthContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/ProtectedRoute.tsx",
+      "target": "file:frontend/src/shared/components/PageLoading.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/ProtectedRoute.tsx",
+      "target": "function:frontend/src/ProtectedRoute.tsx:ProtectedRoute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/ProtectedRoute.tsx",
+      "target": "function:frontend/src/ProtectedRoute.tsx:ProtectedRoute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/auth.tsx",
+      "target": "function:frontend/src/auth.tsx:setToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/auth.tsx",
+      "target": "function:frontend/src/auth.tsx:setToken",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/auth.tsx",
+      "target": "function:frontend/src/auth.tsx:getToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/auth.tsx",
+      "target": "function:frontend/src/auth.tsx:getToken",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/auth.tsx",
+      "target": "function:frontend/src/auth.tsx:clearToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/auth.tsx",
+      "target": "function:frontend/src/auth.tsx:clearToken",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/auth.tsx",
+      "target": "function:frontend/src/auth.tsx:shouldRememberSession",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/auth.tsx",
+      "target": "function:frontend/src/auth.tsx:shouldRememberSession",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/auth.tsx",
+      "target": "function:frontend/src/auth.tsx:getAuthHeader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/auth.tsx",
+      "target": "function:frontend/src/auth.tsx:getAuthHeader",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/context/AuthContext.tsx",
+      "target": "file:frontend/src/auth.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/context/AuthContext.tsx",
+      "target": "file:frontend/src/modules/auth/api/authApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/context/AuthContext.tsx",
+      "target": "file:frontend/src/modules/learning/storySessionCache.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/context/AuthContext.tsx",
+      "target": "file:frontend/src/modules/tutor/tutorChatSessionCache.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/context/AuthContext.tsx",
+      "target": "file:frontend/src/shared/api/queryClient.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/context/AuthContext.tsx",
+      "target": "function:frontend/src/context/AuthContext.tsx:AuthProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/context/AuthContext.tsx",
+      "target": "function:frontend/src/context/AuthContext.tsx:AuthProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/context/AuthContext.tsx",
+      "target": "function:frontend/src/context/AuthContext.tsx:useAuth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/context/AuthContext.tsx",
+      "target": "function:frontend/src/context/AuthContext.tsx:useAuth",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/main.tsx",
+      "target": "file:frontend/src/App.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/main.tsx",
+      "target": "file:frontend/src/context/AuthContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/main.tsx",
+      "target": "file:frontend/src/output.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/main.tsx",
+      "target": "file:frontend/src/shared/api/queryClient.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/modules/auth/api/authApi.ts",
+      "target": "file:frontend/src/shared/api/httpClient.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/modules/auth/api/authApi.ts",
+      "target": "function:frontend/src/modules/auth/api/authApi.ts:fetchCurrentUser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/modules/auth/api/authApi.ts",
+      "target": "function:frontend/src/modules/auth/api/authApi.ts:fetchCurrentUser",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/modules/auth/api/authApi.ts",
+      "target": "function:frontend/src/modules/auth/api/authApi.ts:login",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/modules/auth/api/authApi.ts",
+      "target": "function:frontend/src/modules/auth/api/authApi.ts:login",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/modules/auth/api/authApi.ts",
+      "target": "function:frontend/src/modules/auth/api/authApi.ts:signup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/modules/auth/api/authApi.ts",
+      "target": "function:frontend/src/modules/auth/api/authApi.ts:signup",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/modules/auth/api/authApi.ts",
+      "target": "function:frontend/src/modules/auth/api/authApi.ts:updateProfile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/modules/auth/api/authApi.ts",
+      "target": "function:frontend/src/modules/auth/api/authApi.ts:updateProfile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/api/tutorWsClient.test.ts",
+      "target": "file:frontend/src/modules/tutor/api/tutorWsClient.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/api/tutorWsClient.ts",
+      "target": "file:frontend/src/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/api/tutorWsClient.ts",
+      "target": "file:frontend/src/modules/tutor/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/api/tutorWsClient.ts",
+      "target": "function:frontend/src/modules/tutor/api/tutorWsClient.ts:buildTutorWsUrl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/api/tutorWsClient.ts",
+      "target": "function:frontend/src/modules/tutor/api/tutorWsClient.ts:buildTutorWsUrl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/api/tutorWsClient.ts",
+      "target": "class:frontend/src/modules/tutor/api/tutorWsClient.ts:TutorWsClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/api/tutorWsClient.ts",
+      "target": "class:frontend/src/modules/tutor/api/tutorWsClient.ts:TutorWsClient",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/components/AskUserCard.tsx",
+      "target": "file:frontend/src/modules/tutor/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/components/AskUserCard.tsx",
+      "target": "function:frontend/src/modules/tutor/components/AskUserCard.tsx:buildAnswers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/components/AskUserCard.tsx",
+      "target": "function:frontend/src/modules/tutor/components/AskUserCard.tsx:QuestionPanel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/components/AskUserCard.tsx",
+      "target": "function:frontend/src/modules/tutor/components/AskUserCard.tsx:AskUserCard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/components/AskUserCard.tsx",
+      "target": "function:frontend/src/modules/tutor/components/AskUserCard.tsx:AskUserCard",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/components/TutorChatPanel.tsx",
+      "target": "file:frontend/src/modules/learning/api/learningPathApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/components/TutorChatPanel.tsx",
+      "target": "file:frontend/src/modules/tutor/components/AskUserCard.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/components/TutorChatPanel.tsx",
+      "target": "file:frontend/src/modules/tutor/hooks/useTutorChat.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/components/TutorChatPanel.tsx",
+      "target": "file:frontend/src/modules/tutor/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/components/TutorChatPanel.tsx",
+      "target": "file:frontend/src/shared/components/CefrLevelSelect.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/components/TutorChatPanel.tsx",
+      "target": "function:frontend/src/modules/tutor/components/TutorChatPanel.tsx:connectionLabel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/components/TutorChatPanel.tsx",
+      "target": "function:frontend/src/modules/tutor/components/TutorChatPanel.tsx:messageBubblePropsEqual",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/components/TutorChatPanel.tsx",
+      "target": "function:frontend/src/modules/tutor/components/TutorChatPanel.tsx:TutorChatPanel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/components/TutorChatPanel.tsx",
+      "target": "function:frontend/src/modules/tutor/components/TutorChatPanel.tsx:TutorChatPanel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/hooks/useTutorChat.ts",
+      "target": "file:frontend/src/auth.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/hooks/useTutorChat.ts",
+      "target": "file:frontend/src/modules/tutor/api/tutorWsClient.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/hooks/useTutorChat.ts",
+      "target": "file:frontend/src/modules/tutor/tutorChatSessionCache.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/hooks/useTutorChat.ts",
+      "target": "file:frontend/src/modules/tutor/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/hooks/useTutorChat.ts",
+      "target": "function:frontend/src/modules/tutor/hooks/useTutorChat.ts:useTutorChat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/hooks/useTutorChat.ts",
+      "target": "function:frontend/src/modules/tutor/hooks/useTutorChat.ts:useTutorChat",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/tutorChatSessionCache.ts",
+      "target": "file:frontend/src/modules/tutor/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/tutorChatSessionCache.ts",
+      "target": "function:frontend/src/modules/tutor/tutorChatSessionCache.ts:loadTutorChatSession",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/tutorChatSessionCache.ts",
+      "target": "function:frontend/src/modules/tutor/tutorChatSessionCache.ts:loadTutorChatSession",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/tutorChatSessionCache.ts",
+      "target": "function:frontend/src/modules/tutor/tutorChatSessionCache.ts:saveTutorChatSession",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/tutorChatSessionCache.ts",
+      "target": "function:frontend/src/modules/tutor/tutorChatSessionCache.ts:saveTutorChatSession",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/tutorChatSessionCache.ts",
+      "target": "function:frontend/src/modules/tutor/tutorChatSessionCache.ts:clearTutorChatSession",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/modules/tutor/tutorChatSessionCache.ts",
+      "target": "function:frontend/src/modules/tutor/tutorChatSessionCache.ts:clearTutorChatSession",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/pages/Home/Home.tsx",
+      "target": "file:frontend/src/pages/Home/components/AppAppBar.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/Home/Home.tsx",
+      "target": "file:frontend/src/pages/Home/components/AuthSection.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/Home/Home.tsx",
+      "target": "file:frontend/src/pages/Home/components/Footer.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/Home/Home.tsx",
+      "target": "file:frontend/src/pages/shared-theme/AppTheme.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/Home/Home.tsx",
+      "target": "function:frontend/src/pages/Home/Home.tsx:Home",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/Home/Home.tsx",
+      "target": "function:frontend/src/pages/Home/Home.tsx:Home",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/AppAppBar.tsx",
+      "target": "file:frontend/src/context/AuthContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/AppAppBar.tsx",
+      "target": "file:frontend/src/pages/shared-theme/themePrimitives.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/AppAppBar.tsx",
+      "target": "function:frontend/src/pages/Home/components/AppAppBar.tsx:AppAppBar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/AppAppBar.tsx",
+      "target": "function:frontend/src/pages/Home/components/AppAppBar.tsx:AppAppBar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/AuthSection.tsx",
+      "target": "file:frontend/src/auth.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/AuthSection.tsx",
+      "target": "file:frontend/src/config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/AuthSection.tsx",
+      "target": "file:frontend/src/context/AuthContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/AuthSection.tsx",
+      "target": "file:frontend/src/modules/auth/api/authApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/AuthSection.tsx",
+      "target": "file:frontend/src/pages/Home/components/auth/AuthMarketingPanel.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/AuthSection.tsx",
+      "target": "file:frontend/src/pages/Home/components/auth/AuthShell.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/AuthSection.tsx",
+      "target": "file:frontend/src/pages/Home/components/auth/ForgotPassword.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/AuthSection.tsx",
+      "target": "file:frontend/src/pages/Home/components/auth/GoogleIcon.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/AuthSection.tsx",
+      "target": "file:frontend/src/shared/api/httpClient.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/AuthSection.tsx",
+      "target": "function:frontend/src/pages/Home/components/AuthSection.tsx:PasswordField",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/AuthSection.tsx",
+      "target": "function:frontend/src/pages/Home/components/AuthSection.tsx:SignInForm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/AuthSection.tsx",
+      "target": "function:frontend/src/pages/Home/components/AuthSection.tsx:SignUpForm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/AuthSection.tsx",
+      "target": "function:frontend/src/pages/Home/components/AuthSection.tsx:AuthSection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/AuthSection.tsx",
+      "target": "function:frontend/src/pages/Home/components/AuthSection.tsx:AuthSection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/Footer.tsx",
+      "target": "file:frontend/src/pages/Home/components/SitemarkIcon.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/Footer.tsx",
+      "target": "function:frontend/src/pages/Home/components/Footer.tsx:Copyright",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/Footer.tsx",
+      "target": "function:frontend/src/pages/Home/components/Footer.tsx:Footer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/Footer.tsx",
+      "target": "function:frontend/src/pages/Home/components/Footer.tsx:Footer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/SitemarkIcon.tsx",
+      "target": "function:frontend/src/pages/Home/components/SitemarkIcon.tsx:SitemarkIcon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/SitemarkIcon.tsx",
+      "target": "function:frontend/src/pages/Home/components/SitemarkIcon.tsx:SitemarkIcon",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/auth/AuthMarketingPanel.tsx",
+      "target": "file:frontend/src/pages/shared-theme/themePrimitives.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/auth/AuthMarketingPanel.tsx",
+      "target": "function:frontend/src/pages/Home/components/auth/AuthMarketingPanel.tsx:AuthMarketingPanel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/auth/AuthMarketingPanel.tsx",
+      "target": "function:frontend/src/pages/Home/components/auth/AuthMarketingPanel.tsx:AuthMarketingPanel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/auth/AuthShell.tsx",
+      "target": "file:frontend/src/pages/shared-theme/themePrimitives.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/auth/AuthShell.tsx",
+      "target": "function:frontend/src/pages/Home/components/auth/AuthShell.tsx:AuthShell",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/auth/AuthShell.tsx",
+      "target": "function:frontend/src/pages/Home/components/auth/AuthShell.tsx:AuthShell",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/auth/ForgotPassword.tsx",
+      "target": "function:frontend/src/pages/Home/components/auth/ForgotPassword.tsx:ForgotPassword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/auth/ForgotPassword.tsx",
+      "target": "function:frontend/src/pages/Home/components/auth/ForgotPassword.tsx:ForgotPassword",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/auth/GoogleIcon.tsx",
+      "target": "function:frontend/src/pages/Home/components/auth/GoogleIcon.tsx:GoogleIcon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/Home/components/auth/GoogleIcon.tsx",
+      "target": "function:frontend/src/pages/Home/components/auth/GoogleIcon.tsx:GoogleIcon",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/Dashboard.tsx",
+      "target": "file:frontend/src/context/AuthContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/Dashboard.tsx",
+      "target": "file:frontend/src/modules/learning/api/learningApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/Dashboard.tsx",
+      "target": "file:frontend/src/pages/dashboard/components/AppNavbar.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/Dashboard.tsx",
+      "target": "file:frontend/src/pages/dashboard/components/SideMenu.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/Dashboard.tsx",
+      "target": "file:frontend/src/pages/dashboard/theme/customizations/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/Dashboard.tsx",
+      "target": "file:frontend/src/pages/shared-theme/AppTheme.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/Dashboard.tsx",
+      "target": "file:frontend/src/shared/api/queryClient.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/Dashboard.tsx",
+      "target": "file:frontend/src/shared/api/queryKeys.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/Dashboard.tsx",
+      "target": "file:frontend/src/shared/components/SessionDegradedBanner.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/Dashboard.tsx",
+      "target": "file:frontend/src/shared/hooks/useFocusMainOnNavigate.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/Dashboard.tsx",
+      "target": "function:frontend/src/pages/dashboard/Dashboard.tsx:Dashboard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/Dashboard.tsx",
+      "target": "function:frontend/src/pages/dashboard/Dashboard.tsx:Dashboard",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/components/AppNavbar.tsx",
+      "target": "file:frontend/src/pages/dashboard/components/MenuButton.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/components/AppNavbar.tsx",
+      "target": "file:frontend/src/pages/dashboard/components/SideMenuMobile.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/components/AppNavbar.tsx",
+      "target": "file:frontend/src/pages/shared-theme/ColorModeIconDropdown.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/components/AppNavbar.tsx",
+      "target": "file:frontend/src/pages/shared-theme/themePrimitives.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/components/AppNavbar.tsx",
+      "target": "function:frontend/src/pages/dashboard/components/AppNavbar.tsx:AppNavbar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/components/AppNavbar.tsx",
+      "target": "function:frontend/src/pages/dashboard/components/AppNavbar.tsx:AppNavbar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/components/Header.tsx",
+      "target": "file:frontend/src/pages/dashboard/components/NavbarBreadcrumbs.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/components/Header.tsx",
+      "target": "file:frontend/src/pages/shared-theme/ColorModeIconDropdown.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/components/Header.tsx",
+      "target": "function:frontend/src/pages/dashboard/components/Header.tsx:Header",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/components/Header.tsx",
+      "target": "function:frontend/src/pages/dashboard/components/Header.tsx:Header",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/components/MenuButton.tsx",
+      "target": "function:frontend/src/pages/dashboard/components/MenuButton.tsx:MenuButton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/components/MenuButton.tsx",
+      "target": "function:frontend/src/pages/dashboard/components/MenuButton.tsx:MenuButton",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/components/MenuContent.tsx",
+      "target": "function:frontend/src/pages/dashboard/components/MenuContent.tsx:MenuContent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:frontend/src/pages/dashboard/components/MenuContent.tsx",
+      "target": "function:frontend/src/pages/dashboard/components/MenuContent.tsx:MenuContent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

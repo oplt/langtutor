@@ -70,7 +70,7 @@ class RagSearchTool(BaseTool):
             return ToolResult(content="No relevant document context was found in indexed documents.")
 
         builder = RagContextBuilder()
-        content = builder.build_context_block(chunks)
+        content = builder.build_context_block(chunks, include_injection_guard=True)
         return ToolResult(
             content=content,
             metadata={

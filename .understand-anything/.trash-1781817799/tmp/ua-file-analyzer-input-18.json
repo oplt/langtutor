@@ -1,0 +1,49 @@
+{
+  "projectRoot": "/home/polat/Desktop/Projects/LanguageApp",
+  "batchFiles": [
+    {
+      "path": "backend/app/modules/learning/paths/a1.json",
+      "language": "json",
+      "sizeLines": 118,
+      "fileCategory": "config"
+    },
+    {
+      "path": "backend/app/modules/learning/paths/a2.json",
+      "language": "json",
+      "sizeLines": 80,
+      "fileCategory": "config"
+    },
+    {
+      "path": "backend/app/modules/learning/paths/b1.json",
+      "language": "json",
+      "sizeLines": 80,
+      "fileCategory": "config"
+    },
+    {
+      "path": "backend/app/modules/learning/paths/b2.json",
+      "language": "json",
+      "sizeLines": 80,
+      "fileCategory": "config"
+    },
+    {
+      "path": "backend/app/modules/learning/paths/c1.json",
+      "language": "json",
+      "sizeLines": 80,
+      "fileCategory": "config"
+    },
+    {
+      "path": "backend/app/modules/learning/paths/c2.json",
+      "language": "json",
+      "sizeLines": 80,
+      "fileCategory": "config"
+    }
+  ],
+  "batchImportData": {
+    "backend/app/modules/learning/paths/a1.json": [],
+    "backend/app/modules/learning/paths/a2.json": [],
+    "backend/app/modules/learning/paths/b1.json": [],
+    "backend/app/modules/learning/paths/b2.json": [],
+    "backend/app/modules/learning/paths/c1.json": [],
+    "backend/app/modules/learning/paths/c2.json": []
+  }
+}

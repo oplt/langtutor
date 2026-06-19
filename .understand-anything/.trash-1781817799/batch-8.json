@@ -1,0 +1,2871 @@
+{
+  "nodes": [
+    {
+      "id": "file:backend/app/core/background.py",
+      "type": "file",
+      "name": "background.py",
+      "filePath": "backend/app/core/background.py",
+      "summary": "code file; python; 1 function(s); exports: schedule_background.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/background.py:schedule_background",
+      "type": "function",
+      "name": "schedule_background",
+      "filePath": "backend/app/core/background.py",
+      "summary": "Function schedule_background in backend/app/core/background.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/core/config.py",
+      "type": "file",
+      "name": "config.py",
+      "filePath": "backend/app/core/config.py",
+      "summary": "code file; python; 1 class(es); exports: Settings.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:backend/app/core/config.py:Settings",
+      "type": "class",
+      "name": "Settings",
+      "filePath": "backend/app/core/config.py",
+      "summary": "Class Settings in backend/app/core/config.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:backend/app/core/config_validation.py",
+      "type": "file",
+      "name": "config_validation.py",
+      "filePath": "backend/app/core/config_validation.py",
+      "summary": "code file; python; 2 function(s); exports: _validate_rag_embedding_dimension, validate_runtime_config.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:backend/app/core/config_validation.py:_validate_rag_embedding_dimension",
+      "type": "function",
+      "name": "_validate_rag_embedding_dimension",
+      "filePath": "backend/app/core/config_validation.py",
+      "summary": "Function _validate_rag_embedding_dimension in backend/app/core/config_validation.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/config_validation.py:validate_runtime_config",
+      "type": "function",
+      "name": "validate_runtime_config",
+      "filePath": "backend/app/core/config_validation.py",
+      "summary": "Function validate_runtime_config in backend/app/core/config_validation.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/core/health.py",
+      "type": "file",
+      "name": "health.py",
+      "filePath": "backend/app/core/health.py",
+      "summary": "code file; python; 4 function(s); exports: check_database, check_redis, check_llm, readiness_report.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/health.py:check_database",
+      "type": "function",
+      "name": "check_database",
+      "filePath": "backend/app/core/health.py",
+      "summary": "Function check_database in backend/app/core/health.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/health.py:check_redis",
+      "type": "function",
+      "name": "check_redis",
+      "filePath": "backend/app/core/health.py",
+      "summary": "Function check_redis in backend/app/core/health.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/health.py:check_llm",
+      "type": "function",
+      "name": "check_llm",
+      "filePath": "backend/app/core/health.py",
+      "summary": "Function check_llm in backend/app/core/health.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/health.py:readiness_report",
+      "type": "function",
+      "name": "readiness_report",
+      "filePath": "backend/app/core/health.py",
+      "summary": "Function readiness_report in backend/app/core/health.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/core/logging.py",
+      "type": "file",
+      "name": "logging.py",
+      "filePath": "backend/app/core/logging.py",
+      "summary": "code file; python; 7 function(s); 3 class(es); exports: set_log_context, clear_log_context, get_log_context, ContextFilter.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:backend/app/core/logging.py:set_log_context",
+      "type": "function",
+      "name": "set_log_context",
+      "filePath": "backend/app/core/logging.py",
+      "summary": "Function set_log_context in backend/app/core/logging.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/logging.py:clear_log_context",
+      "type": "function",
+      "name": "clear_log_context",
+      "filePath": "backend/app/core/logging.py",
+      "summary": "Function clear_log_context in backend/app/core/logging.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/logging.py:get_log_context",
+      "type": "function",
+      "name": "get_log_context",
+      "filePath": "backend/app/core/logging.py",
+      "summary": "Function get_log_context in backend/app/core/logging.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/logging.py:_json_safe",
+      "type": "function",
+      "name": "_json_safe",
+      "filePath": "backend/app/core/logging.py",
+      "summary": "Function _json_safe in backend/app/core/logging.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/logging.py:_resolve_log_path",
+      "type": "function",
+      "name": "_resolve_log_path",
+      "filePath": "backend/app/core/logging.py",
+      "summary": "Function _resolve_log_path in backend/app/core/logging.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/logging.py:_coerce_level",
+      "type": "function",
+      "name": "_coerce_level",
+      "filePath": "backend/app/core/logging.py",
+      "summary": "Function _coerce_level in backend/app/core/logging.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/logging.py:configure_logging",
+      "type": "function",
+      "name": "configure_logging",
+      "filePath": "backend/app/core/logging.py",
+      "summary": "Function configure_logging in backend/app/core/logging.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/core/logging.py:ContextFilter",
+      "type": "class",
+      "name": "ContextFilter",
+      "filePath": "backend/app/core/logging.py",
+      "summary": "Class ContextFilter in backend/app/core/logging.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/core/logging.py:KeyValueFormatter",
+      "type": "class",
+      "name": "KeyValueFormatter",
+      "filePath": "backend/app/core/logging.py",
+      "summary": "Class KeyValueFormatter in backend/app/core/logging.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/core/logging.py:JsonFormatter",
+      "type": "class",
+      "name": "JsonFormatter",
+      "filePath": "backend/app/core/logging.py",
+      "summary": "Class JsonFormatter in backend/app/core/logging.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/core/rate_limit.py",
+      "type": "file",
+      "name": "rate_limit.py",
+      "filePath": "backend/app/core/rate_limit.py",
+      "summary": "code file; python; 2 class(es); exports: InMemoryFixedWindowLimiter, RedisFixedWindowLimiter.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/core/rate_limit.py:InMemoryFixedWindowLimiter",
+      "type": "class",
+      "name": "InMemoryFixedWindowLimiter",
+      "filePath": "backend/app/core/rate_limit.py",
+      "summary": "Class InMemoryFixedWindowLimiter in backend/app/core/rate_limit.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/core/rate_limit.py:RedisFixedWindowLimiter",
+      "type": "class",
+      "name": "RedisFixedWindowLimiter",
+      "filePath": "backend/app/core/rate_limit.py",
+      "summary": "Class RedisFixedWindowLimiter in backend/app/core/rate_limit.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/core/redis.py",
+      "type": "file",
+      "name": "redis.py",
+      "filePath": "backend/app/core/redis.py",
+      "summary": "code file; python; 2 function(s); exports: get_redis, close_redis.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/redis.py:get_redis",
+      "type": "function",
+      "name": "get_redis",
+      "filePath": "backend/app/core/redis.py",
+      "summary": "Function get_redis in backend/app/core/redis.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/redis.py:close_redis",
+      "type": "function",
+      "name": "close_redis",
+      "filePath": "backend/app/core/redis.py",
+      "summary": "Function close_redis in backend/app/core/redis.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/core/redis_json.py",
+      "type": "file",
+      "name": "redis_json.py",
+      "filePath": "backend/app/core/redis_json.py",
+      "summary": "code file; python; 4 function(s); exports: redis_get_json, redis_set_json, redis_delete, redis_getdel.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/redis_json.py:redis_get_json",
+      "type": "function",
+      "name": "redis_get_json",
+      "filePath": "backend/app/core/redis_json.py",
+      "summary": "Function redis_get_json in backend/app/core/redis_json.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/redis_json.py:redis_set_json",
+      "type": "function",
+      "name": "redis_set_json",
+      "filePath": "backend/app/core/redis_json.py",
+      "summary": "Function redis_set_json in backend/app/core/redis_json.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/redis_json.py:redis_delete",
+      "type": "function",
+      "name": "redis_delete",
+      "filePath": "backend/app/core/redis_json.py",
+      "summary": "Function redis_delete in backend/app/core/redis_json.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/redis_json.py:redis_getdel",
+      "type": "function",
+      "name": "redis_getdel",
+      "filePath": "backend/app/core/redis_json.py",
+      "summary": "Function redis_getdel in backend/app/core/redis_json.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/core/redis_lock.py",
+      "type": "file",
+      "name": "redis_lock.py",
+      "filePath": "backend/app/core/redis_lock.py",
+      "summary": "code file; python; 3 function(s); exports: try_acquire_job_lock, release_job_lock, reset_job_locks_for_tests.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/redis_lock.py:try_acquire_job_lock",
+      "type": "function",
+      "name": "try_acquire_job_lock",
+      "filePath": "backend/app/core/redis_lock.py",
+      "summary": "Function try_acquire_job_lock in backend/app/core/redis_lock.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/redis_lock.py:release_job_lock",
+      "type": "function",
+      "name": "release_job_lock",
+      "filePath": "backend/app/core/redis_lock.py",
+      "summary": "Function release_job_lock in backend/app/core/redis_lock.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/redis_lock.py:reset_job_locks_for_tests",
+      "type": "function",
+      "name": "reset_job_locks_for_tests",
+      "filePath": "backend/app/core/redis_lock.py",
+      "summary": "Function reset_job_locks_for_tests in backend/app/core/redis_lock.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/core/redis_registry.py",
+      "type": "file",
+      "name": "redis_registry.py",
+      "filePath": "backend/app/core/redis_registry.py",
+      "summary": "code file; python; 1 function(s); 1 class(es); exports: RedisFeature, redis_feature_inventory.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/redis_registry.py:redis_feature_inventory",
+      "type": "function",
+      "name": "redis_feature_inventory",
+      "filePath": "backend/app/core/redis_registry.py",
+      "summary": "Function redis_feature_inventory in backend/app/core/redis_registry.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/core/redis_registry.py:RedisFeature",
+      "type": "class",
+      "name": "RedisFeature",
+      "filePath": "backend/app/core/redis_registry.py",
+      "summary": "Class RedisFeature in backend/app/core/redis_registry.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/core/tracing.py",
+      "type": "file",
+      "name": "tracing.py",
+      "filePath": "backend/app/core/tracing.py",
+      "summary": "code file; python; 3 function(s); exports: setup_tracing, get_tracer, start_span.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/tracing.py:setup_tracing",
+      "type": "function",
+      "name": "setup_tracing",
+      "filePath": "backend/app/core/tracing.py",
+      "summary": "Function setup_tracing in backend/app/core/tracing.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/tracing.py:get_tracer",
+      "type": "function",
+      "name": "get_tracer",
+      "filePath": "backend/app/core/tracing.py",
+      "summary": "Function get_tracer in backend/app/core/tracing.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/tracing.py:start_span",
+      "type": "function",
+      "name": "start_span",
+      "filePath": "backend/app/core/tracing.py",
+      "summary": "Function start_span in backend/app/core/tracing.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/main.py",
+      "type": "file",
+      "name": "main.py",
+      "filePath": "backend/app/main.py",
+      "summary": "code file; python; 5 function(s); exports: _normalize_http_detail, _trace_id_from_headers, _route_template, lifespan.",
+      "tags": [
+        "entry-point",
+        "module"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:backend/app/main.py:_normalize_http_detail",
+      "type": "function",
+      "name": "_normalize_http_detail",
+      "filePath": "backend/app/main.py",
+      "summary": "Function _normalize_http_detail in backend/app/main.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/main.py:_trace_id_from_headers",
+      "type": "function",
+      "name": "_trace_id_from_headers",
+      "filePath": "backend/app/main.py",
+      "summary": "Function _trace_id_from_headers in backend/app/main.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/main.py:_route_template",
+      "type": "function",
+      "name": "_route_template",
+      "filePath": "backend/app/main.py",
+      "summary": "Function _route_template in backend/app/main.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/main.py:lifespan",
+      "type": "function",
+      "name": "lifespan",
+      "filePath": "backend/app/main.py",
+      "summary": "Function lifespan in backend/app/main.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/main.py:create_app",
+      "type": "function",
+      "name": "create_app",
+      "filePath": "backend/app/main.py",
+      "summary": "Function create_app in backend/app/main.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:backend/app/modules/auth/google_oauth.py",
+      "type": "file",
+      "name": "google_oauth.py",
+      "filePath": "backend/app/modules/auth/google_oauth.py",
+      "summary": "code file; python; 3 function(s); exports: google_callback_redirect, google_exchange_code, google_verify_id_token.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/auth/google_oauth.py:google_callback_redirect",
+      "type": "function",
+      "name": "google_callback_redirect",
+      "filePath": "backend/app/modules/auth/google_oauth.py",
+      "summary": "Function google_callback_redirect in backend/app/modules/auth/google_oauth.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/auth/google_oauth.py:google_exchange_code",
+      "type": "function",
+      "name": "google_exchange_code",
+      "filePath": "backend/app/modules/auth/google_oauth.py",
+      "summary": "Function google_exchange_code in backend/app/modules/auth/google_oauth.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/auth/google_oauth.py:google_verify_id_token",
+      "type": "function",
+      "name": "google_verify_id_token",
+      "filePath": "backend/app/modules/auth/google_oauth.py",
+      "summary": "Function google_verify_id_token in backend/app/modules/auth/google_oauth.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/auth/oauth_state.py",
+      "type": "file",
+      "name": "oauth_state.py",
+      "filePath": "backend/app/modules/auth/oauth_state.py",
+      "summary": "code file; python; 3 function(s); exports: _purge_stale_memory, google_oauth_state_put, google_oauth_state_take.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/auth/oauth_state.py:_purge_stale_memory",
+      "type": "function",
+      "name": "_purge_stale_memory",
+      "filePath": "backend/app/modules/auth/oauth_state.py",
+      "summary": "Function _purge_stale_memory in backend/app/modules/auth/oauth_state.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/auth/oauth_state.py:google_oauth_state_put",
+      "type": "function",
+      "name": "google_oauth_state_put",
+      "filePath": "backend/app/modules/auth/oauth_state.py",
+      "summary": "Function google_oauth_state_put in backend/app/modules/auth/oauth_state.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/auth/oauth_state.py:google_oauth_state_take",
+      "type": "function",
+      "name": "google_oauth_state_take",
+      "filePath": "backend/app/modules/auth/oauth_state.py",
+      "summary": "Function google_oauth_state_take in backend/app/modules/auth/oauth_state.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/extensions/sandbox/service.py",
+      "type": "file",
+      "name": "service.py",
+      "filePath": "backend/app/modules/extensions/sandbox/service.py",
+      "summary": "code file; python; 2 function(s); exports: _validate_safe_ast, run_sandbox_expression.",
+      "tags": [
+        "service",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/extensions/sandbox/service.py:_validate_safe_ast",
+      "type": "function",
+      "name": "_validate_safe_ast",
+      "filePath": "backend/app/modules/extensions/sandbox/service.py",
+      "summary": "Function _validate_safe_ast in backend/app/modules/extensions/sandbox/service.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/extensions/sandbox/service.py:run_sandbox_expression",
+      "type": "function",
+      "name": "run_sandbox_expression",
+      "filePath": "backend/app/modules/extensions/sandbox/service.py",
+      "summary": "Function run_sandbox_expression in backend/app/modules/extensions/sandbox/service.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/rag/api/routes.py",
+      "type": "file",
+      "name": "routes.py",
+      "filePath": "backend/app/modules/rag/api/routes.py",
+      "summary": "code file; python; 13 function(s); exports: _job_out, _access, _require_rag_enabled, rag_status.",
+      "tags": [
+        "api-handler",
+        "module"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:backend/app/modules/rag/api/routes.py:_job_out",
+      "type": "function",
+      "name": "_job_out",
+      "filePath": "backend/app/modules/rag/api/routes.py",
+      "summary": "Function _job_out in backend/app/modules/rag/api/routes.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/rag/api/routes.py:_access",
+      "type": "function",
+      "name": "_access",
+      "filePath": "backend/app/modules/rag/api/routes.py",
+      "summary": "Function _access in backend/app/modules/rag/api/routes.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/rag/api/routes.py:_require_rag_enabled",
+      "type": "function",
+      "name": "_require_rag_enabled",
+      "filePath": "backend/app/modules/rag/api/routes.py",
+      "summary": "Function _require_rag_enabled in backend/app/modules/rag/api/routes.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/rag/api/routes.py:rag_status",
+      "type": "function",
+      "name": "rag_status",
+      "filePath": "backend/app/modules/rag/api/routes.py",
+      "summary": "Function rag_status in backend/app/modules/rag/api/routes.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/rag/api/routes.py:list_documents",
+      "type": "function",
+      "name": "list_documents",
+      "filePath": "backend/app/modules/rag/api/routes.py",
+      "summary": "Function list_documents in backend/app/modules/rag/api/routes.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/rag/api/routes.py:get_document",
+      "type": "function",
+      "name": "get_document",
+      "filePath": "backend/app/modules/rag/api/routes.py",
+      "summary": "Function get_document in backend/app/modules/rag/api/routes.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/rag/api/routes.py:delete_document",
+      "type": "function",
+      "name": "delete_document",
+      "filePath": "backend/app/modules/rag/api/routes.py",
+      "summary": "Function delete_document in backend/app/modules/rag/api/routes.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/rag/api/routes.py:index_document",
+      "type": "function",
+      "name": "index_document",
+      "filePath": "backend/app/modules/rag/api/routes.py",
+      "summary": "Function index_document in backend/app/modules/rag/api/routes.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/rag/api/routes.py:list_document_chunks",
+      "type": "function",
+      "name": "list_document_chunks",
+      "filePath": "backend/app/modules/rag/api/routes.py",
+      "summary": "Function list_document_chunks in backend/app/modules/rag/api/routes.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/rag/api/routes.py:retrieve",
+      "type": "function",
+      "name": "retrieve",
+      "filePath": "backend/app/modules/rag/api/routes.py",
+      "summary": "Function retrieve in backend/app/modules/rag/api/routes.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/rag/api/routes.py:ask",
+      "type": "function",
+      "name": "ask",
+      "filePath": "backend/app/modules/rag/api/routes.py",
+      "summary": "Function ask in backend/app/modules/rag/api/routes.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/rag/api/routes.py:list_queries",
+      "type": "function",
+      "name": "list_queries",
+      "filePath": "backend/app/modules/rag/api/routes.py",
+      "summary": "Function list_queries in backend/app/modules/rag/api/routes.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/rag/api/routes.py:get_job",
+      "type": "function",
+      "name": "get_job",
+      "filePath": "backend/app/modules/rag/api/routes.py",
+      "summary": "Function get_job in backend/app/modules/rag/api/routes.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/rag/api/schemas.py",
+      "type": "file",
+      "name": "schemas.py",
+      "filePath": "backend/app/modules/rag/api/schemas.py",
+      "summary": "code file; python; 9 class(es); exports: DocumentOut, ChunkOut, JobOut, RetrieveIn.",
+      "tags": [
+        "api-handler",
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:backend/app/modules/rag/api/schemas.py:DocumentOut",
+      "type": "class",
+      "name": "DocumentOut",
+      "filePath": "backend/app/modules/rag/api/schemas.py",
+      "summary": "Class DocumentOut in backend/app/modules/rag/api/schemas.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/rag/api/schemas.py:ChunkOut",
+      "type": "class",
+      "name": "ChunkOut",
+      "filePath": "backend/app/modules/rag/api/schemas.py",
+      "summary": "Class ChunkOut in backend/app/modules/rag/api/schemas.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/rag/api/schemas.py:JobOut",
+      "type": "class",
+      "name": "JobOut",
+      "filePath": "backend/app/modules/rag/api/schemas.py",
+      "summary": "Class JobOut in backend/app/modules/rag/api/schemas.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/rag/api/schemas.py:RetrieveIn",
+      "type": "class",
+      "name": "RetrieveIn",
+      "filePath": "backend/app/modules/rag/api/schemas.py",
+      "summary": "Class RetrieveIn in backend/app/modules/rag/api/schemas.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/rag/api/schemas.py:RetrievedChunkOut",
+      "type": "class",
+      "name": "RetrievedChunkOut",
+      "filePath": "backend/app/modules/rag/api/schemas.py",
+      "summary": "Class RetrievedChunkOut in backend/app/modules/rag/api/schemas.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/rag/api/schemas.py:CitationOut",
+      "type": "class",
+      "name": "CitationOut",
+      "filePath": "backend/app/modules/rag/api/schemas.py",
+      "summary": "Class CitationOut in backend/app/modules/rag/api/schemas.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/rag/api/schemas.py:AskIn",
+      "type": "class",
+      "name": "AskIn",
+      "filePath": "backend/app/modules/rag/api/schemas.py",
+      "summary": "Class AskIn in backend/app/modules/rag/api/schemas.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/rag/api/schemas.py:AskOut",
+      "type": "class",
+      "name": "AskOut",
+      "filePath": "backend/app/modules/rag/api/schemas.py",
+      "summary": "Class AskOut in backend/app/modules/rag/api/schemas.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/rag/api/schemas.py:QueryLogOut",
+      "type": "class",
+      "name": "QueryLogOut",
+      "filePath": "backend/app/modules/rag/api/schemas.py",
+      "summary": "Class QueryLogOut in backend/app/modules/rag/api/schemas.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/rag/application/chunking_service.py",
+      "type": "file",
+      "name": "chunking_service.py",
+      "filePath": "backend/app/modules/rag/application/chunking_service.py",
+      "summary": "code file; python; 1 class(es); exports: ChunkingService.",
+      "tags": [
+        "service",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/rag/application/chunking_service.py:ChunkingService",
+      "type": "class",
+      "name": "ChunkingService",
+      "filePath": "backend/app/modules/rag/application/chunking_service.py",
+      "summary": "Class ChunkingService in backend/app/modules/rag/application/chunking_service.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/rag/application/citation_service.py",
+      "type": "file",
+      "name": "citation_service.py",
+      "filePath": "backend/app/modules/rag/application/citation_service.py",
+      "summary": "code file; python; 1 function(s); 1 class(es); exports: _snippet_at_boundary, CitationService.",
+      "tags": [
+        "service",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/rag/application/citation_service.py:_snippet_at_boundary",
+      "type": "function",
+      "name": "_snippet_at_boundary",
+      "filePath": "backend/app/modules/rag/application/citation_service.py",
+      "summary": "Function _snippet_at_boundary in backend/app/modules/rag/application/citation_service.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/rag/application/citation_service.py:CitationService",
+      "type": "class",
+      "name": "CitationService",
+      "filePath": "backend/app/modules/rag/application/citation_service.py",
+      "summary": "Class CitationService in backend/app/modules/rag/application/citation_service.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/rag/application/document_ingestion_service.py",
+      "type": "file",
+      "name": "document_ingestion_service.py",
+      "filePath": "backend/app/modules/rag/application/document_ingestion_service.py",
+      "summary": "code file; python; 1 function(s); 2 class(es); exports: IndexEnqueueResult, DocumentIngestionService, get_document_ingestion_service.",
+      "tags": [
+        "service",
+        "module"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:backend/app/modules/rag/application/document_ingestion_service.py:get_document_ingestion_service",
+      "type": "function",
+      "name": "get_document_ingestion_service",
+      "filePath": "backend/app/modules/rag/application/document_ingestion_service.py",
+      "summary": "Function get_document_ingestion_service in backend/app/modules/rag/application/document_ingestion_service.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/rag/application/document_ingestion_service.py:IndexEnqueueResult",
+      "type": "class",
+      "name": "IndexEnqueueResult",
+      "filePath": "backend/app/modules/rag/application/document_ingestion_service.py",
+      "summary": "Class IndexEnqueueResult in backend/app/modules/rag/application/document_ingestion_service.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/rag/application/document_ingestion_service.py:DocumentIngestionService",
+      "type": "class",
+      "name": "DocumentIngestionService",
+      "filePath": "backend/app/modules/rag/application/document_ingestion_service.py",
+      "summary": "Class DocumentIngestionService in backend/app/modules/rag/application/document_ingestion_service.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:backend/app/modules/rag/application/document_parser_service.py",
+      "type": "file",
+      "name": "document_parser_service.py",
+      "filePath": "backend/app/modules/rag/application/document_parser_service.py",
+      "summary": "code file; python; 1 class(es); exports: DocumentParserService.",
+      "tags": [
+        "service",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/rag/application/document_parser_service.py:DocumentParserService",
+      "type": "class",
+      "name": "DocumentParserService",
+      "filePath": "backend/app/modules/rag/application/document_parser_service.py",
+      "summary": "Class DocumentParserService in backend/app/modules/rag/application/document_parser_service.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/rag/application/embedding_cache.py",
+      "type": "file",
+      "name": "embedding_cache.py",
+      "filePath": "backend/app/modules/rag/application/embedding_cache.py",
+      "summary": "code file; python; 3 function(s); exports: _embedding_cache_key, get_cached_embedding, set_cached_embedding.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/rag/application/embedding_cache.py:_embedding_cache_key",
+      "type": "function",
+      "name": "_embedding_cache_key",
+      "filePath": "backend/app/modules/rag/application/embedding_cache.py",
+      "summary": "Function _embedding_cache_key in backend/app/modules/rag/application/embedding_cache.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/rag/application/embedding_cache.py:get_cached_embedding",
+      "type": "function",
+      "name": "get_cached_embedding",
+      "filePath": "backend/app/modules/rag/application/embedding_cache.py",
+      "summary": "Function get_cached_embedding in backend/app/modules/rag/application/embedding_cache.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/rag/application/embedding_cache.py:set_cached_embedding",
+      "type": "function",
+      "name": "set_cached_embedding",
+      "filePath": "backend/app/modules/rag/application/embedding_cache.py",
+      "summary": "Function set_cached_embedding in backend/app/modules/rag/application/embedding_cache.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/rag/application/embedding_service.py",
+      "type": "file",
+      "name": "embedding_service.py",
+      "filePath": "backend/app/modules/rag/application/embedding_service.py",
+      "summary": "code file; python; 1 class(es); exports: EmbeddingService.",
+      "tags": [
+        "service",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/rag/application/embedding_service.py:EmbeddingService",
+      "type": "class",
+      "name": "EmbeddingService",
+      "filePath": "backend/app/modules/rag/application/embedding_service.py",
+      "summary": "Class EmbeddingService in backend/app/modules/rag/application/embedding_service.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/rag/application/indexing_tasks.py",
+      "type": "file",
+      "name": "indexing_tasks.py",
+      "filePath": "backend/app/modules/rag/application/indexing_tasks.py",
+      "summary": "code file; python; 2 function(s); exports: _lock_key, run_rag_index_job.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/rag/application/indexing_tasks.py:_lock_key",
+      "type": "function",
+      "name": "_lock_key",
+      "filePath": "backend/app/modules/rag/application/indexing_tasks.py",
+      "summary": "Function _lock_key in backend/app/modules/rag/application/indexing_tasks.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/rag/application/indexing_tasks.py:run_rag_index_job",
+      "type": "function",
+      "name": "run_rag_index_job",
+      "filePath": "backend/app/modules/rag/application/indexing_tasks.py",
+      "summary": "Function run_rag_index_job in backend/app/modules/rag/application/indexing_tasks.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/rag/application/rag_context_builder.py",
+      "type": "file",
+      "name": "rag_context_builder.py",
+      "filePath": "backend/app/modules/rag/application/rag_context_builder.py",
+      "summary": "code file; python; 1 class(es); exports: RagContextBuilder.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/rag/application/rag_context_builder.py:RagContextBuilder",
+      "type": "class",
+      "name": "RagContextBuilder",
+      "filePath": "backend/app/modules/rag/application/rag_context_builder.py",
+      "summary": "Class RagContextBuilder in backend/app/modules/rag/application/rag_context_builder.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:backend/app/core/background.py",
+      "target": "file:backend/app/core/logging.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/core/background.py",
+      "target": "function:backend/app/core/background.py:schedule_background",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/background.py",
+      "target": "function:backend/app/core/background.py:schedule_background",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/config.py",
+      "target": "class:backend/app/core/config.py:Settings",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/config.py",
+      "target": "class:backend/app/core/config.py:Settings",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/config_validation.py",
+      "target": "file:backend/app/core/config.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/core/config_validation.py",
+      "target": "file:backend/app/core/logging.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/core/config_validation.py",
+      "target": "function:backend/app/core/config_validation.py:_validate_rag_embedding_dimension",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/config_validation.py",
+      "target": "function:backend/app/core/config_validation.py:_validate_rag_embedding_dimension",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/config_validation.py",
+      "target": "function:backend/app/core/config_validation.py:validate_runtime_config",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/config_validation.py",
+      "target": "function:backend/app/core/config_validation.py:validate_runtime_config",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/health.py",
+      "target": "file:backend/app/core/config.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/core/health.py",
+      "target": "file:backend/app/core/logging.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/core/health.py",
+      "target": "file:backend/app/core/redis_registry.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/core/health.py",
+      "target": "file:backend/app/db/session.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/core/health.py",
+      "target": "function:backend/app/core/health.py:check_database",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/health.py",
+      "target": "function:backend/app/core/health.py:check_database",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/health.py",
+      "target": "function:backend/app/core/health.py:check_redis",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/health.py",
+      "target": "function:backend/app/core/health.py:check_redis",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/health.py",
+      "target": "function:backend/app/core/health.py:check_llm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/health.py",
+      "target": "function:backend/app/core/health.py:check_llm",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/health.py",
+      "target": "function:backend/app/core/health.py:readiness_report",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/health.py",
+      "target": "function:backend/app/core/health.py:readiness_report",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/logging.py",
+      "target": "file:backend/app/core/config.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/core/logging.py",
+      "target": "file:backend/app/core/logging.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/core/logging.py",
+      "target": "function:backend/app/core/logging.py:set_log_context",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/logging.py",
+      "target": "function:backend/app/core/logging.py:set_log_context",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/logging.py",
+      "target": "function:backend/app/core/logging.py:clear_log_context",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/logging.py",
+      "target": "function:backend/app/core/logging.py:clear_log_context",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/logging.py",
+      "target": "function:backend/app/core/logging.py:get_log_context",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/logging.py",
+      "target": "function:backend/app/core/logging.py:get_log_context",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/logging.py",
+      "target": "function:backend/app/core/logging.py:_json_safe",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/logging.py",
+      "target": "function:backend/app/core/logging.py:_json_safe",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/logging.py",
+      "target": "function:backend/app/core/logging.py:_resolve_log_path",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/logging.py",
+      "target": "function:backend/app/core/logging.py:_resolve_log_path",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/logging.py",
+      "target": "function:backend/app/core/logging.py:_coerce_level",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/logging.py",
+      "target": "function:backend/app/core/logging.py:_coerce_level",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/logging.py",
+      "target": "function:backend/app/core/logging.py:configure_logging",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/logging.py",
+      "target": "function:backend/app/core/logging.py:configure_logging",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/logging.py",
+      "target": "class:backend/app/core/logging.py:ContextFilter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/logging.py",
+      "target": "class:backend/app/core/logging.py:ContextFilter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/logging.py",
+      "target": "class:backend/app/core/logging.py:KeyValueFormatter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/logging.py",
+      "target": "class:backend/app/core/logging.py:KeyValueFormatter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/logging.py",
+      "target": "class:backend/app/core/logging.py:JsonFormatter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/logging.py",
+      "target": "class:backend/app/core/logging.py:JsonFormatter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/rate_limit.py",
+      "target": "class:backend/app/core/rate_limit.py:InMemoryFixedWindowLimiter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/rate_limit.py",
+      "target": "class:backend/app/core/rate_limit.py:InMemoryFixedWindowLimiter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/rate_limit.py",
+      "target": "class:backend/app/core/rate_limit.py:RedisFixedWindowLimiter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/rate_limit.py",
+      "target": "class:backend/app/core/rate_limit.py:RedisFixedWindowLimiter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/redis.py",
+      "target": "file:backend/app/core/config.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/core/redis.py",
+      "target": "file:backend/app/core/logging.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/core/redis.py",
+      "target": "function:backend/app/core/redis.py:get_redis",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/redis.py",
+      "target": "function:backend/app/core/redis.py:get_redis",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/redis.py",
+      "target": "function:backend/app/core/redis.py:close_redis",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/redis.py",
+      "target": "function:backend/app/core/redis.py:close_redis",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/redis_json.py",
+      "target": "file:backend/app/core/logging.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/core/redis_json.py",
+      "target": "function:backend/app/core/redis_json.py:redis_get_json",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/redis_json.py",
+      "target": "function:backend/app/core/redis_json.py:redis_get_json",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/redis_json.py",
+      "target": "function:backend/app/core/redis_json.py:redis_set_json",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/redis_json.py",
+      "target": "function:backend/app/core/redis_json.py:redis_set_json",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/redis_json.py",
+      "target": "function:backend/app/core/redis_json.py:redis_delete",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/redis_json.py",
+      "target": "function:backend/app/core/redis_json.py:redis_delete",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/redis_json.py",
+      "target": "function:backend/app/core/redis_json.py:redis_getdel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/redis_json.py",
+      "target": "function:backend/app/core/redis_json.py:redis_getdel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/redis_lock.py",
+      "target": "file:backend/app/core/logging.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/core/redis_lock.py",
+      "target": "function:backend/app/core/redis_lock.py:try_acquire_job_lock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/redis_lock.py",
+      "target": "function:backend/app/core/redis_lock.py:try_acquire_job_lock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/redis_lock.py",
+      "target": "function:backend/app/core/redis_lock.py:release_job_lock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/redis_lock.py",
+      "target": "function:backend/app/core/redis_lock.py:release_job_lock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/redis_lock.py",
+      "target": "function:backend/app/core/redis_lock.py:reset_job_locks_for_tests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/redis_lock.py",
+      "target": "function:backend/app/core/redis_lock.py:reset_job_locks_for_tests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/redis_registry.py",
+      "target": "function:backend/app/core/redis_registry.py:redis_feature_inventory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/redis_registry.py",
+      "target": "function:backend/app/core/redis_registry.py:redis_feature_inventory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/redis_registry.py",
+      "target": "class:backend/app/core/redis_registry.py:RedisFeature",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/redis_registry.py",
+      "target": "class:backend/app/core/redis_registry.py:RedisFeature",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/tracing.py",
+      "target": "file:backend/app/core/config.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/core/tracing.py",
+      "target": "file:backend/app/core/logging.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/core/tracing.py",
+      "target": "function:backend/app/core/tracing.py:setup_tracing",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/tracing.py",
+      "target": "function:backend/app/core/tracing.py:setup_tracing",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/tracing.py",
+      "target": "function:backend/app/core/tracing.py:get_tracer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/tracing.py",
+      "target": "function:backend/app/core/tracing.py:get_tracer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/tracing.py",
+      "target": "function:backend/app/core/tracing.py:start_span",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/tracing.py",
+      "target": "function:backend/app/core/tracing.py:start_span",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "file:backend/app/bootstrap/routes.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "file:backend/app/bootstrap/startup.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "file:backend/app/core/background.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "file:backend/app/core/config_validation.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "file:backend/app/core/config.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "file:backend/app/core/exceptions.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "file:backend/app/core/health.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "file:backend/app/core/logging.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "file:backend/app/core/metrics.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "file:backend/app/core/rate_limit.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "file:backend/app/core/redis.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "file:backend/app/core/tracing.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "file:backend/app/db/session.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "file:backend/app/modules/ai/service.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "function:backend/app/main.py:_normalize_http_detail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "function:backend/app/main.py:_normalize_http_detail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "function:backend/app/main.py:_trace_id_from_headers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "function:backend/app/main.py:_trace_id_from_headers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "function:backend/app/main.py:_route_template",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "function:backend/app/main.py:_route_template",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "function:backend/app/main.py:lifespan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "function:backend/app/main.py:lifespan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "function:backend/app/main.py:create_app",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/main.py",
+      "target": "function:backend/app/main.py:create_app",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/google_oauth.py",
+      "target": "file:backend/app/core/config.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/auth/google_oauth.py",
+      "target": "function:backend/app/modules/auth/google_oauth.py:google_callback_redirect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/google_oauth.py",
+      "target": "function:backend/app/modules/auth/google_oauth.py:google_callback_redirect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/google_oauth.py",
+      "target": "function:backend/app/modules/auth/google_oauth.py:google_exchange_code",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/google_oauth.py",
+      "target": "function:backend/app/modules/auth/google_oauth.py:google_exchange_code",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/google_oauth.py",
+      "target": "function:backend/app/modules/auth/google_oauth.py:google_verify_id_token",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/google_oauth.py",
+      "target": "function:backend/app/modules/auth/google_oauth.py:google_verify_id_token",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/oauth_state.py",
+      "target": "file:backend/app/core/redis_json.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/auth/oauth_state.py",
+      "target": "function:backend/app/modules/auth/oauth_state.py:_purge_stale_memory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/oauth_state.py",
+      "target": "function:backend/app/modules/auth/oauth_state.py:_purge_stale_memory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/oauth_state.py",
+      "target": "function:backend/app/modules/auth/oauth_state.py:google_oauth_state_put",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/oauth_state.py",
+      "target": "function:backend/app/modules/auth/oauth_state.py:google_oauth_state_put",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/oauth_state.py",
+      "target": "function:backend/app/modules/auth/oauth_state.py:google_oauth_state_take",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/oauth_state.py",
+      "target": "function:backend/app/modules/auth/oauth_state.py:google_oauth_state_take",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/sandbox/service.py",
+      "target": "file:backend/app/core/config.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/sandbox/service.py",
+      "target": "function:backend/app/modules/extensions/sandbox/service.py:_validate_safe_ast",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/sandbox/service.py",
+      "target": "function:backend/app/modules/extensions/sandbox/service.py:_validate_safe_ast",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/sandbox/service.py",
+      "target": "function:backend/app/modules/extensions/sandbox/service.py:run_sandbox_expression",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/sandbox/service.py",
+      "target": "function:backend/app/modules/extensions/sandbox/service.py:run_sandbox_expression",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "file:backend/app/core/background.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "file:backend/app/core/config.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "file:backend/app/db/session.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "file:backend/app/deps.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "file:backend/app/modules/auth/dependencies.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "file:backend/app/modules/rag/api/schemas.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "file:backend/app/modules/rag/application/document_ingestion_service.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "file:backend/app/modules/rag/application/indexing_tasks.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "file:backend/app/modules/rag/application/retrieval_service.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "file:backend/app/modules/rag/domain/value_objects.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "file:backend/app/modules/rag/infrastructure/repositories.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "file:backend/app/modules/users/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:_job_out",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:_job_out",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:_access",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:_access",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:_require_rag_enabled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:_require_rag_enabled",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:rag_status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:rag_status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:list_documents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:list_documents",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:get_document",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:get_document",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:delete_document",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:delete_document",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:index_document",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:index_document",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:list_document_chunks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:list_document_chunks",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:retrieve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:retrieve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:ask",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:ask",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:list_queries",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:list_queries",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:get_job",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/routes.py",
+      "target": "function:backend/app/modules/rag/api/routes.py:get_job",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/schemas.py",
+      "target": "class:backend/app/modules/rag/api/schemas.py:DocumentOut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/schemas.py",
+      "target": "class:backend/app/modules/rag/api/schemas.py:DocumentOut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/schemas.py",
+      "target": "class:backend/app/modules/rag/api/schemas.py:ChunkOut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/schemas.py",
+      "target": "class:backend/app/modules/rag/api/schemas.py:ChunkOut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/schemas.py",
+      "target": "class:backend/app/modules/rag/api/schemas.py:JobOut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/schemas.py",
+      "target": "class:backend/app/modules/rag/api/schemas.py:JobOut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/schemas.py",
+      "target": "class:backend/app/modules/rag/api/schemas.py:RetrieveIn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/schemas.py",
+      "target": "class:backend/app/modules/rag/api/schemas.py:RetrieveIn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/schemas.py",
+      "target": "class:backend/app/modules/rag/api/schemas.py:RetrievedChunkOut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/schemas.py",
+      "target": "class:backend/app/modules/rag/api/schemas.py:RetrievedChunkOut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/schemas.py",
+      "target": "class:backend/app/modules/rag/api/schemas.py:CitationOut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/schemas.py",
+      "target": "class:backend/app/modules/rag/api/schemas.py:CitationOut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/schemas.py",
+      "target": "class:backend/app/modules/rag/api/schemas.py:AskIn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/schemas.py",
+      "target": "class:backend/app/modules/rag/api/schemas.py:AskIn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/schemas.py",
+      "target": "class:backend/app/modules/rag/api/schemas.py:AskOut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/schemas.py",
+      "target": "class:backend/app/modules/rag/api/schemas.py:AskOut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/schemas.py",
+      "target": "class:backend/app/modules/rag/api/schemas.py:QueryLogOut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/api/schemas.py",
+      "target": "class:backend/app/modules/rag/api/schemas.py:QueryLogOut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/chunking_service.py",
+      "target": "file:backend/app/modules/rag/domain/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/chunking_service.py",
+      "target": "file:backend/app/modules/rag/infrastructure/langchain_text_splitters.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/chunking_service.py",
+      "target": "class:backend/app/modules/rag/application/chunking_service.py:ChunkingService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/chunking_service.py",
+      "target": "class:backend/app/modules/rag/application/chunking_service.py:ChunkingService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/citation_service.py",
+      "target": "file:backend/app/modules/rag/domain/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/citation_service.py",
+      "target": "function:backend/app/modules/rag/application/citation_service.py:_snippet_at_boundary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/citation_service.py",
+      "target": "function:backend/app/modules/rag/application/citation_service.py:_snippet_at_boundary",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/citation_service.py",
+      "target": "class:backend/app/modules/rag/application/citation_service.py:CitationService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/citation_service.py",
+      "target": "class:backend/app/modules/rag/application/citation_service.py:CitationService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_ingestion_service.py",
+      "target": "file:backend/app/core/config.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_ingestion_service.py",
+      "target": "file:backend/app/db/session.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_ingestion_service.py",
+      "target": "file:backend/app/modules/rag/application/chunking_service.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_ingestion_service.py",
+      "target": "file:backend/app/modules/rag/application/document_parser_service.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_ingestion_service.py",
+      "target": "file:backend/app/modules/rag/application/embedding_service.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_ingestion_service.py",
+      "target": "file:backend/app/modules/rag/application/rag_policy_service.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_ingestion_service.py",
+      "target": "file:backend/app/modules/rag/domain/enums.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_ingestion_service.py",
+      "target": "file:backend/app/modules/rag/domain/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_ingestion_service.py",
+      "target": "file:backend/app/modules/rag/domain/value_objects.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_ingestion_service.py",
+      "target": "file:backend/app/modules/rag/infrastructure/file_storage_adapter.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_ingestion_service.py",
+      "target": "file:backend/app/modules/rag/infrastructure/pgvector_adapter.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_ingestion_service.py",
+      "target": "file:backend/app/modules/rag/infrastructure/repositories.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_ingestion_service.py",
+      "target": "file:backend/app/modules/rag/infrastructure/sqlalchemy_models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_ingestion_service.py",
+      "target": "function:backend/app/modules/rag/application/document_ingestion_service.py:get_document_ingestion_service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_ingestion_service.py",
+      "target": "function:backend/app/modules/rag/application/document_ingestion_service.py:get_document_ingestion_service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_ingestion_service.py",
+      "target": "class:backend/app/modules/rag/application/document_ingestion_service.py:IndexEnqueueResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_ingestion_service.py",
+      "target": "class:backend/app/modules/rag/application/document_ingestion_service.py:IndexEnqueueResult",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_ingestion_service.py",
+      "target": "class:backend/app/modules/rag/application/document_ingestion_service.py:DocumentIngestionService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_ingestion_service.py",
+      "target": "class:backend/app/modules/rag/application/document_ingestion_service.py:DocumentIngestionService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_parser_service.py",
+      "target": "file:backend/app/core/config.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_parser_service.py",
+      "target": "file:backend/app/modules/rag/domain/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_parser_service.py",
+      "target": "file:backend/app/modules/rag/infrastructure/langchain_document_loaders.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_parser_service.py",
+      "target": "class:backend/app/modules/rag/application/document_parser_service.py:DocumentParserService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/document_parser_service.py",
+      "target": "class:backend/app/modules/rag/application/document_parser_service.py:DocumentParserService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/embedding_cache.py",
+      "target": "file:backend/app/core/config.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/embedding_cache.py",
+      "target": "file:backend/app/core/redis_json.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/embedding_cache.py",
+      "target": "function:backend/app/modules/rag/application/embedding_cache.py:_embedding_cache_key",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/embedding_cache.py",
+      "target": "function:backend/app/modules/rag/application/embedding_cache.py:_embedding_cache_key",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/embedding_cache.py",
+      "target": "function:backend/app/modules/rag/application/embedding_cache.py:get_cached_embedding",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/embedding_cache.py",
+      "target": "function:backend/app/modules/rag/application/embedding_cache.py:get_cached_embedding",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/embedding_cache.py",
+      "target": "function:backend/app/modules/rag/application/embedding_cache.py:set_cached_embedding",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/embedding_cache.py",
+      "target": "function:backend/app/modules/rag/application/embedding_cache.py:set_cached_embedding",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/embedding_service.py",
+      "target": "file:backend/app/modules/rag/infrastructure/langchain_embeddings.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/embedding_service.py",
+      "target": "class:backend/app/modules/rag/application/embedding_service.py:EmbeddingService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/embedding_service.py",
+      "target": "class:backend/app/modules/rag/application/embedding_service.py:EmbeddingService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/indexing_tasks.py",
+      "target": "file:backend/app/core/redis_lock.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/indexing_tasks.py",
+      "target": "file:backend/app/modules/rag/application/document_ingestion_service.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/indexing_tasks.py",
+      "target": "function:backend/app/modules/rag/application/indexing_tasks.py:_lock_key",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/indexing_tasks.py",
+      "target": "function:backend/app/modules/rag/application/indexing_tasks.py:_lock_key",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/indexing_tasks.py",
+      "target": "function:backend/app/modules/rag/application/indexing_tasks.py:run_rag_index_job",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/indexing_tasks.py",
+      "target": "function:backend/app/modules/rag/application/indexing_tasks.py:run_rag_index_job",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/rag_context_builder.py",
+      "target": "file:backend/app/modules/rag/domain/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/rag_context_builder.py",
+      "target": "class:backend/app/modules/rag/application/rag_context_builder.py:RagContextBuilder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/rag/application/rag_context_builder.py",
+      "target": "class:backend/app/modules/rag/application/rag_context_builder.py:RagContextBuilder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

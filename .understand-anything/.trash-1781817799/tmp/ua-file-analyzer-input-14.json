@@ -1,0 +1,14 @@
+{
+  "projectRoot": "/home/polat/Desktop/Projects/LanguageApp",
+  "batchFiles": [
+    {
+      "path": "backend/Dockerfile",
+      "language": "dockerfile",
+      "sizeLines": 22,
+      "fileCategory": "infra"
+    }
+  ],
+  "batchImportData": {
+    "backend/Dockerfile": []
+  }
+}

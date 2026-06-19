@@ -14,11 +14,13 @@ from backend.app.db.session import session_scope
 from backend.app.modules.rag.application.chunking_service import ChunkingService
 from backend.app.modules.rag.application.document_parser_service import DocumentParserService
 from backend.app.modules.rag.application.embedding_service import EmbeddingService
+from backend.app.modules.rag.application.job_progress_cache import set_rag_job_progress
 from backend.app.modules.rag.application.rag_policy_service import get_rag_policy_service
 from backend.app.modules.rag.domain.enums import DocumentStatus, IngestionJobStatus, SourceType
 from backend.app.modules.rag.domain.models import IngestionJob
 from backend.app.modules.rag.domain.value_objects import AccessContext
 from backend.app.modules.rag.infrastructure.file_storage_adapter import get_file_storage
+from backend.app.modules.rag.application.retrieve_cache import invalidate_user_retrieve_cache
 from backend.app.modules.rag.infrastructure.pgvector_adapter import get_vector_store
 from backend.app.modules.rag.infrastructure.repositories import get_rag_repository
 from backend.app.modules.rag.infrastructure.sqlalchemy_models import RagChunk
@@ -42,7 +44,9 @@ class DocumentIngestionService:
     ) -> None:
         self._parser = parser or DocumentParserService()
         self._chunker = chunker or ChunkingService()
-        self._embeddings = embeddings or EmbeddingService(allow_deterministic=True)
+        self._embeddings = embeddings or EmbeddingService(
+            allow_deterministic=settings.APP_ENV != "production"
+        )
         self._repo = get_rag_repository()
         self._policy = get_rag_policy_service()
         self._storage = get_file_storage()
@@ -72,7 +76,7 @@ class DocumentIngestionService:
         ):
             raise PermissionError("Not authorized for this project")
 
-        storage_path = self._storage.save_upload(
+        storage_path = await self._storage.save_upload(
             user_id=access.user_id,
             filename=filename,
             data=data,
@@ -124,6 +128,11 @@ class DocumentIngestionService:
             job.id,
             document_id,
             access.user_id,
+        )
+        await set_rag_job_progress(
+            str(job.id),
+            status=IngestionJobStatus.PENDING.value,
+            progress_stage=DocumentStatus.UPLOADED.value,
         )
         return IndexEnqueueResult(job=self._repo.to_job(job), schedule=True)
 
@@ -184,9 +193,11 @@ class DocumentIngestionService:
         await self._repo.update_job(
             db, job, status=IngestionJobStatus.RUNNING, started=True
         )
+        await self._publish_job_progress(job_id=job_id, job=job, document=row)
 
         try:
             await self._repo.update_document_status(db, row, DocumentStatus.PARSING)
+            await self._publish_job_progress(job_id=job_id, job=job, document=row)
             abs_path = str(self._storage.resolve_path(row.storage_path))
             parsed = await self._parser.parse(
                 abs_path,
@@ -198,6 +209,7 @@ class DocumentIngestionService:
             )
 
             await self._repo.update_document_status(db, row, DocumentStatus.CHUNKING)
+            await self._publish_job_progress(job_id=job_id, job=job, document=row)
             chunks = await self._chunker.chunk(
                 parsed,
                 document_id=str(row.id),
@@ -211,6 +223,7 @@ class DocumentIngestionService:
                 raise ValueError("No text extracted from document")
 
             await self._repo.update_document_status(db, row, DocumentStatus.EMBEDDING)
+            await self._publish_job_progress(job_id=job_id, job=job, document=row)
             vectors = await self._embed_chunks_parallel([c.content for c in chunks])
             for chunk, vector in zip(chunks, vectors, strict=True):
                 chunk.embedding = vector
@@ -224,6 +237,7 @@ class DocumentIngestionService:
             await self._repo.update_job(
                 db, job, status=IngestionJobStatus.COMPLETED, finished=True
             )
+            await self._publish_job_progress(job_id=job_id, job=job, document=row)
             logger.info(
                 "rag_indexed document_id=%s chunks=%s user_id=%s job_id=%s",
                 row.id,
@@ -231,6 +245,7 @@ class DocumentIngestionService:
                 access.user_id,
                 job_id,
             )
+            await invalidate_user_retrieve_cache(str(row.user_id))
             return self._repo.to_job(job)
         except Exception as exc:
             await self._repo.update_document_status(db, row, DocumentStatus.FAILED)
@@ -241,8 +256,23 @@ class DocumentIngestionService:
                 error_message=str(exc),
                 finished=True,
             )
+            await self._publish_job_progress(job_id=job_id, job=job, document=row)
             logger.exception("rag_index_failed document_id=%s job_id=%s", row.id, job_id)
             raise
+
+    async def _publish_job_progress(
+        self,
+        *,
+        job_id: str,
+        job,
+        document,
+    ) -> None:
+        await set_rag_job_progress(
+            job_id,
+            status=str(job.status),
+            progress_stage=str(document.status),
+            error_message=job.error_message,
+        )
 
     async def _embed_chunks_parallel(self, texts: list[str]) -> list[list[float]]:
         if not texts:
@@ -278,6 +308,7 @@ class DocumentIngestionService:
         await store.delete_document(document_id, str(row.user_id))
         await self._repo.soft_delete_document(db, row)
         self._storage.delete_file(row.storage_path)
+        await invalidate_user_retrieve_cache(str(row.user_id))
 
     async def list_chunks(
         self,

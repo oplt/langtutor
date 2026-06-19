@@ -1,5 +1,6 @@
 from pathlib import Path
 import json
+from typing import Any
 from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -45,12 +46,18 @@ class Settings(BaseSettings):
     TUTOR_TURN_RUNNING_TTL_SECONDS: int = 1800
     TUTOR_TURN_PAUSED_TTL_SECONDS: int = 86400
     LOG_LEVEL: str = "INFO"
-    LOG_FILE_PATH: str = "logs/app.log"
+    LOG_FILE_PATH: str = "logs/logs.txt"
+    LOG_TO_FILE: bool = True
+    LOG_TO_CONSOLE: bool = True
     LOG_TO_STDOUT: bool = True
+    LOG_FORMAT: str = "json"
     LOG_JSON: bool = True
+    LOG_RETENTION_DAYS: int = 1
     APP_ENV: str = "development"
     REQUIRE_REDIS: bool = False
     SLOW_REQUEST_MS: int = 1000
+    SLOW_JOB_MS: int = 5000
+    SLOW_EXTERNAL_CALL_MS: int = 3000
     LLM_SETTINGS_CACHE_TTL_SECONDS: int = 60
     LLM_TASK_CLIENT_CACHE_TTL_SECONDS: int = 120
     LEARNING_LEVELS_CACHE_TTL_SECONDS: int = 3600
@@ -78,6 +85,9 @@ class Settings(BaseSettings):
     # Comma-separated emails allowed to create/ingest knowledge bases (empty = deny all).
     KNOWLEDGE_ADMIN_EMAILS: str = ""
     KNOWLEDGE_USE_FTS: bool = False
+    KNOWLEDGE_BM25_MIN_SCORE: float = 0.35
+    KNOWLEDGE_FTS_MIN_SCORE: float = 0.05
+    AUTO_ROUTE_MIN_CONFIDENCE: float = 0.75
 
     MEMORY_L3_LLM_PROFILE: bool = False
     MEMORY_L3_PROFILE_MAX_TOKENS: int = 200
@@ -108,6 +118,23 @@ class Settings(BaseSettings):
         if len(value) < 32:
             raise ValueError("JWT_SECRET must be at least 32 characters")
         return value
+
+    @field_validator("LOG_RETENTION_DAYS", mode="before")
+    @classmethod
+    def validate_log_retention_days(cls, value: Any) -> int:
+        try:
+            days = int(value)
+        except (TypeError, ValueError):
+            return 1
+        return max(1, min(days, 365))
+
+    @field_validator("LOG_FORMAT", mode="before")
+    @classmethod
+    def normalize_log_format(cls, value: Any) -> str:
+        fmt = str(value or "json").strip().lower()
+        if fmt not in {"json", "text"}:
+            return "json"
+        return fmt
 
     @property
     def cors_origins_list(self) -> list[str]:

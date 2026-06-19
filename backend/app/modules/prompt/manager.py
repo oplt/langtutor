@@ -1,11 +1,15 @@
 from __future__ import annotations
 
+import logging
+import re
 from pathlib import Path
 from typing import Any
 
 import yaml
 
 PACKS_ROOT = Path(__file__).resolve().parent / "packs"
+
+logger = logging.getLogger(__name__)
 
 # UI / prompt locale → fallback chain
 LANGUAGE_FALLBACKS: dict[str, list[str]] = {
@@ -114,6 +118,7 @@ class PromptManager:
                 if isinstance(data, dict):
                     return data
             except Exception:
+                logger.warning("prompt_pack_load_failed pack=%s lang=%s path=%s", pack, candidate, path, exc_info=True)
                 continue
         return {}
 

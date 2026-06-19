@@ -7,6 +7,6 @@ test("home page loads", async ({ page }) => {
 
 test("login form is reachable from home", async ({ page }) => {
   await page.goto("/#auth");
-  await expect(page.getByLabel("Email")).toBeVisible();
-  await expect(page.getByLabel("Password")).toBeVisible();
+  await expect(page.getByRole("textbox", { name: "Email", exact: true })).toBeVisible();
+  await expect(page.getByLabel("Password", { exact: true })).toBeVisible();
 });

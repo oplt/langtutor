@@ -1,4 +1,4 @@
-.PHONY: start local-dev docker-dev prod-dev fix check backend-lint backend-typecheck backend-tests backend-integration-tests backend-guardrails backend-quality frontend-quality frontend-tests frontend-e2e install-hooks commit-ready
+.PHONY: start local-dev docker-dev prod-dev fix check backend-lint backend-typecheck backend-import-check backend-tests backend-integration-tests backend-guardrails backend-quality frontend-quality frontend-tests frontend-e2e install-hooks commit-ready
 .PHONY: kill-dev kill-ports kill-workers reset-dev reset-frontend-cache
 .PHONY: start-maple stop-maple observability-status start-observability-stack stop-observability-stack local-dev-no-observability
 
@@ -46,6 +46,9 @@ backend-typecheck:
 		exit 1; \
 	fi
 
+backend-import-check:
+	cd backend && $(PYTHON) -m compileall -q app
+
 backend-tests:
 	@if [ -d backend/tests ]; then \
 		cd backend && PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 $(PYTHON) -m pytest tests -m "not integration"; \
@@ -66,7 +69,7 @@ backend-guardrails:
 	$(MAKE) PYTHON=$(PYTHON) backend-typecheck
 	$(MAKE) PYTHON=$(PYTHON) backend-tests
 
-backend-quality: backend-lint backend-guardrails
+backend-quality: backend-lint backend-import-check backend-guardrails
 
 frontend-quality:
 	cd frontend && npm run build

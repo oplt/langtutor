@@ -45,9 +45,15 @@ export default function MainGrid({ focus = "overview" }: { focus?: Focus }) {
 
   const levels = levelsQuery.data ?? [];
   const progress = progressQuery.data ?? null;
-  const loadError = levelsQuery.isError
-    ? "Learning data is temporarily unavailable."
-    : null;
+  const loadError =
+    levelsQuery.isError || progressQuery.isError
+      ? "Learning data is temporarily unavailable."
+      : null;
+
+  const retryLearningData = () => {
+    void levelsQuery.refetch();
+    void progressQuery.refetch();
+  };
 
   const currentLevelMeta = useMemo(
     () => levels.find((item: LevelInfo) => item.level === level),
@@ -80,7 +86,17 @@ export default function MainGrid({ focus = "overview" }: { focus?: Focus }) {
     return (
       <Box sx={{ width: "100%", maxWidth: { sm: "100%", md: 1200 } }}>
         {(loadError || storyError) && (
-          <Alert severity="warning" sx={{ mb: 2 }}>
+          <Alert
+            severity="warning"
+            sx={{ mb: 2 }}
+            action={
+              loadError ? (
+                <Button color="inherit" size="small" onClick={retryLearningData}>
+                  Retry
+                </Button>
+              ) : undefined
+            }
+          >
             {loadError ?? storyError}
           </Alert>
         )}
@@ -146,7 +162,17 @@ export default function MainGrid({ focus = "overview" }: { focus?: Focus }) {
   return (
     <Box sx={{ width: "100%", maxWidth: { sm: "100%", md: 1200 } }}>
       {(loadError || storyError) && (
-        <Alert severity="warning" sx={{ mb: 2 }}>
+        <Alert
+          severity="warning"
+          sx={{ mb: 2 }}
+          action={
+            loadError ? (
+              <Button color="inherit" size="small" onClick={retryLearningData}>
+                Retry
+              </Button>
+            ) : undefined
+          }
+        >
           {loadError ?? storyError}
         </Alert>
       )}

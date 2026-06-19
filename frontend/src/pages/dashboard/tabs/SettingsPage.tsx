@@ -5,24 +5,14 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Switch from "@mui/material/Switch";
-import Divider from "@mui/material/Divider";
 import Button from "@mui/material/Button";
 import Chip from "@mui/material/Chip";
 import Alert from "@mui/material/Alert";
 import CircularProgress from "@mui/material/CircularProgress";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import TextField from "@mui/material/TextField";
-import MenuItem from "@mui/material/MenuItem";
 import {
-  fetchAppSettings,
-  updateAppSettings,
-  updateLlmRouting,
   type LlmProviderId,
 } from "../../../modules/settings/api/settingsApi";
+import { useAppSettingsQuery, useSaveAiSettingsMutation } from "../../../modules/settings/hooks/useSettingsQueries";
 import type { PrivacyPrefs } from "../../../modules/settings/api/privacyApi";
 import {
   usePrivacyActionMutations,
@@ -30,7 +20,9 @@ import {
   usePrivacyPreferencesQuery,
   useUpdatePrivacyPreferencesMutation,
 } from "../../../modules/settings/hooks/usePrivacyQueries";
-import { MemoryWorkbenchPanel } from "../../../modules/memory/components/MemoryWorkbenchPanel";
+import { SettingsMemorySection } from "../../../modules/settings/components/SettingsMemorySection";
+import { SettingsPrivacyAuditCard } from "../../../modules/settings/components/SettingsPrivacyAuditCard";
+import { SettingsPrivacyCard } from "../../../modules/settings/components/SettingsPrivacyCard";
 import { AiSettingsPanel, type AISettingsForm } from "../../../modules/settings/components/AiSettingsPanel";
 import { useAuth } from "../../../context/AuthContext";
 import {
@@ -70,9 +62,11 @@ export default function SettingsPage() {
   const auditQuery = usePrivacyAuditLogQuery();
   const updatePrefsMutation = useUpdatePrivacyPreferencesMutation();
   const privacyActions = usePrivacyActionMutations();
+  const settingsQuery = useAppSettingsQuery();
+  const saveAiSettingsMutation = useSaveAiSettingsMutation();
   const [aiSettings, setAiSettings] = useState<AISettingsForm>(defaultAiSettings);
-  const [aiLoading, setAiLoading] = useState(true);
-  const [aiSaving, setAiSaving] = useState(false);
+  const aiLoading = settingsQuery.isLoading;
+  const aiSaving = saveAiSettingsMutation.isPending;
   const [prefs, setPrefs] = useState<PrivacyPrefs>(defaultPrefs);
   const [saveNotice, setSaveNotice] = useState<string | null>(null);
   const [serverNotice, setServerNotice] = useState<string | null>(null);
@@ -84,60 +78,48 @@ export default function SettingsPage() {
   const auditLoading = auditQuery.isLoading;
 
   useEffect(() => {
-    let mounted = true;
-    const loadAiSettings = async () => {
-      setAiLoading(true);
-      try {
-        const doc = await fetchAppSettings();
-        if (!mounted) return;
-        setAiSettings({
-          active_provider: (doc.ai.active_provider as LlmProviderId) || "ollama",
-          system_prompt: doc.ai.system_prompt,
-          profiles: doc.ai.profiles?.length ? doc.ai.profiles : DEFAULT_LLM_PROFILES,
-          default_profile_id: doc.ai.default_profile_id || "ollama",
-          task_overrides: doc.ai.task_overrides ?? {},
-        });
-      } catch {
-        if (mounted) {
-          setAiSettings(defaultAiSettings);
-          setServerError("Could not load AI settings. Showing defaults.");
-        }
-      } finally {
-        if (mounted) setAiLoading(false);
-      }
-    };
-    void loadAiSettings();
-    return () => {
-      mounted = false;
-    };
-  }, []);
+    if (!settingsQuery.data) return;
+    const doc = settingsQuery.data;
+    setAiSettings({
+      active_provider: (doc.ai.active_provider as LlmProviderId) || "ollama",
+      system_prompt: doc.ai.system_prompt,
+      profiles: doc.ai.profiles?.length ? doc.ai.profiles : DEFAULT_LLM_PROFILES,
+      default_profile_id: doc.ai.default_profile_id || "ollama",
+      task_overrides: doc.ai.task_overrides ?? {},
+    });
+  }, [settingsQuery.data]);
+
+  useEffect(() => {
+    if (!settingsQuery.error) return;
+    setAiSettings(defaultAiSettings);
+    setServerError("Could not load AI settings. Showing defaults.");
+  }, [settingsQuery.error]);
 
   const saveAiSettings = async () => {
-    setAiSaving(true);
     setServerError(null);
     setServerNotice(null);
     try {
       const providers = { ...DEFAULT_AI_PROVIDERS };
-      await updateAppSettings({
-        ai: {
-          active_provider: aiSettings.active_provider,
-          system_prompt: aiSettings.system_prompt,
-          providers,
-          task_defaults: DEFAULT_TASK_DEFAULTS,
-          profiles: aiSettings.profiles,
+      await saveAiSettingsMutation.mutateAsync({
+        doc: {
+          ai: {
+            active_provider: aiSettings.active_provider,
+            system_prompt: aiSettings.system_prompt,
+            providers,
+            task_defaults: DEFAULT_TASK_DEFAULTS,
+            profiles: aiSettings.profiles,
+            default_profile_id: aiSettings.default_profile_id,
+            task_overrides: aiSettings.task_overrides,
+          },
+        },
+        routing: {
           default_profile_id: aiSettings.default_profile_id,
           task_overrides: aiSettings.task_overrides,
         },
       });
-      await updateLlmRouting({
-        default_profile_id: aiSettings.default_profile_id,
-        task_overrides: aiSettings.task_overrides,
-      });
       setServerNotice("AI agent settings saved.");
     } catch (err: unknown) {
       setServerError(err instanceof Error ? err.message : "Failed to save AI settings.");
-    } finally {
-      setAiSaving(false);
     }
   };
 
@@ -192,6 +174,7 @@ export default function SettingsPage() {
   };
 
   const saveServerPrefs = async (nextPrefs: PrivacyPrefs) => {
+    const previous = prefsQuery.data ?? prefs;
     const saved = await runServerAction(
       () => updatePrefsMutation.mutateAsync(nextPrefs),
       "Privacy preferences saved.",
@@ -200,6 +183,11 @@ export default function SettingsPage() {
       setPrefs(saved);
       setSaveNotice("Preferences synced to your account.");
       window.setTimeout(() => setSaveNotice(null), 2500);
+    } else {
+      setPrefs({
+        ...previous,
+        goalPreset: normalizeGoalPreset(previous.goalPreset),
+      });
     }
   };
 
@@ -259,235 +247,67 @@ export default function SettingsPage() {
           </Card>
           <Card variant="outlined">
             <CardContent>
-              <MemoryWorkbenchPanel />
+              <SettingsMemorySection />
             </CardContent>
           </Card>
           <Card variant="outlined">
             <CardContent>
-              <Typography variant="subtitle2" gutterBottom>
-                Privacy
-              </Typography>
-              <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-                Configure how your account uses learning data. Preferences are saved server-side.
-              </Typography>
-              {prefsLoading && (
-                <Stack direction="row" alignItems="center" spacing={1} sx={{ mb: 1 }}>
-                  <CircularProgress size={16} />
-                  <Typography variant="caption" color="text.secondary">
-                    Loading preferences...
-                  </Typography>
-                </Stack>
-              )}
-              <Stack spacing={1}>
-                <FormControlLabel
-                  control={
-                    <Switch
-                      checked={prefs.allowAnalytics}
-                      disabled={prefsLoading || busyAction !== null}
-                      onChange={(e) => {
-                        const nextPrefs = { ...prefs, allowAnalytics: e.target.checked };
-                        setPrefs(nextPrefs);
-                        void saveServerPrefs(nextPrefs);
-                      }}
-                    />
-                  }
-                  label="Allow analytics insights and trends in dashboard cards"
-                />
-                <FormControlLabel
-                  control={
-                    <Switch
-                      checked={prefs.retainHistory}
-                      disabled={prefsLoading || busyAction !== null}
-                      onChange={(e) => {
-                        const nextPrefs = { ...prefs, retainHistory: e.target.checked };
-                        setPrefs(nextPrefs);
-                        void saveServerPrefs(nextPrefs);
-                      }}
-                    />
-                  }
-                  label="Retain learning history for longitudinal comparisons"
-                />
-                <FormControlLabel
-                  control={
-                    <Switch
-                      checked={prefs.coachPersonalization}
-                      disabled={prefsLoading || busyAction !== null}
-                      onChange={(e) => {
-                        const nextPrefs = { ...prefs, coachPersonalization: e.target.checked };
-                        setPrefs(nextPrefs);
-                        void saveServerPrefs(nextPrefs);
-                      }}
-                    />
-                  }
-                  label="Allow AI Tutor to personalize guidance from recent study patterns"
-                />
-                <TextField
-                  select
-                  size="small"
-                  label="Learning goal preset"
-                  value={prefs.goalPreset}
-                  disabled={prefsLoading || busyAction !== null}
-                  onChange={(e) => {
-                    const nextPrefs = { ...prefs, goalPreset: e.target.value as PrivacyPrefs["goalPreset"] };
-                    setPrefs(nextPrefs);
-                    void saveServerPrefs(nextPrefs);
-                  }}
-                >
-                  <MenuItem value="balanced">Balanced</MenuItem>
-                  <MenuItem value="vocabulary">Vocabulary focus</MenuItem>
-                  <MenuItem value="grammar">Grammar focus</MenuItem>
-                  <MenuItem value="conversation">Conversation focus</MenuItem>
-                </TextField>
-                <TextField
-                  size="small"
-                  type="number"
-                  label="Retention window (days)"
-                  value={prefs.retentionDays}
-                  disabled={prefsLoading || busyAction !== null}
-                  inputProps={{ min: 7, max: 730 }}
-                  onBlur={() => {
-                    const normalized = Math.max(7, Math.min(730, Number(prefs.retentionDays || 180)));
-                    const nextPrefs = { ...prefs, retentionDays: normalized };
-                    setPrefs(nextPrefs);
-                    void saveServerPrefs(nextPrefs);
-                  }}
-                  onChange={(e) => setPrefs((prev) => ({ ...prev, retentionDays: Number(e.target.value || 180) }))}
-                />
-              </Stack>
-              <Divider sx={{ my: 2 }} />
-              <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
-                <Button
-                  variant="outlined"
-                  disabled={prefsLoading || busyAction !== null}
-                  onClick={() => {
-                    setPrefs(defaultPrefs);
-                    void saveServerPrefs(defaultPrefs);
-                  }}
-                >
-                  Reset preferences
-                </Button>
-                <Button
-                  variant="text"
-                  disabled={busyAction !== null}
-                  onClick={() => {
-                    setSaveNotice("Local export options reset.");
-                    window.setTimeout(() => setSaveNotice(null), 2500);
-                  }}
-                >
-                  Reset local options
-                </Button>
-                <Button
-                  color="info"
-                  variant="outlined"
-                  disabled={busyAction !== null}
-                  onClick={async () => {
-                    if (!window.confirm(`Run retention cleanup now for data older than ${prefs.retentionDays} days?`)) return;
-                    setBusyAction("retentionCleanup");
-                    await runServerAction(
-                      () => privacyActions.retentionCleanup.mutateAsync(),
-                      "Retention cleanup completed.",
-                    );
-                    setBusyAction(null);
-                  }}
-                >
-                  {busyAction === "retentionCleanup" ? <CircularProgress size={16} /> : "Run retention cleanup"}
-                </Button>
-                <Button
-                  variant="outlined"
-                  disabled={busyAction !== null}
-                  onClick={async () => {
-                    setBusyAction("export");
-                    const payload = await runServerAction(
-                      () => privacyActions.exportAccount.mutateAsync(),
-                      "Export generated. Download should start automatically.",
-                    );
-                    if (payload) downloadExport(payload);
-                    setBusyAction(null);
-                  }}
-                >
-                  {busyAction === "export" ? <CircularProgress size={16} /> : "Export account data"}
-                </Button>
-                <Button
-                  color="warning"
-                  variant="outlined"
-                  disabled={busyAction !== null}
-                  onClick={async () => {
-                    if (!window.confirm("Delete your server-side learning history now? This cannot be undone.")) return;
-                    setBusyAction("deleteHistory");
-                    await runServerAction(
-                      () => privacyActions.deleteHistory.mutateAsync(),
-                      "Server-side learning history deleted.",
-                    );
-                    setBusyAction(null);
-                  }}
-                >
-                  {busyAction === "deleteHistory" ? <CircularProgress size={16} /> : "Delete learning history"}
-                </Button>
-                <Button
-                  color="error"
-                  variant="contained"
-                  disabled={busyAction !== null}
-                  onClick={async () => {
-                    if (!window.confirm("Delete your account and associated data? This action is permanent.")) return;
-                    setBusyAction("deleteAccount");
-                    const ok = await runServerAction(
-                      () => privacyActions.deleteAccount.mutateAsync(),
-                      "Account deleted. Signing out...",
-                    );
-                    setBusyAction(null);
-                    if (ok) logout();
-                  }}
-                >
-                  {busyAction === "deleteAccount" ? <CircularProgress size={16} /> : "Delete account"}
-                </Button>
-              </Stack>
-              <Typography variant="caption" color="text.secondary" sx={{ display: "block", mt: 1.5 }}>
-                Export and deletion actions now apply to your authenticated server-side data.
-              </Typography>
+              <SettingsPrivacyCard
+                prefs={prefs}
+                prefsLoading={prefsLoading}
+                busyAction={busyAction}
+                onPrefsChange={setPrefs}
+                onSavePrefs={saveServerPrefs}
+                onRetentionCleanup={async () => {
+                  if (!window.confirm(`Run retention cleanup now for data older than ${prefs.retentionDays} days?`)) return;
+                  setBusyAction("retentionCleanup");
+                  await runServerAction(
+                    () => privacyActions.retentionCleanup.mutateAsync(),
+                    "Retention cleanup completed.",
+                  );
+                  setBusyAction(null);
+                }}
+                onExport={async () => {
+                  setBusyAction("export");
+                  const payload = await runServerAction(
+                    () => privacyActions.exportAccount.mutateAsync(),
+                    "Export generated. Download should start automatically.",
+                  );
+                  if (payload) downloadExport(payload);
+                  setBusyAction(null);
+                }}
+                onDeleteHistory={async () => {
+                  if (!window.confirm("Delete your server-side learning history now? This cannot be undone.")) return;
+                  setBusyAction("deleteHistory");
+                  await runServerAction(
+                    () => privacyActions.deleteHistory.mutateAsync(),
+                    "Server-side learning history deleted.",
+                  );
+                  setBusyAction(null);
+                }}
+                onDeleteAccount={async () => {
+                  if (!window.confirm("Delete your account and associated data? This action is permanent.")) return;
+                  setBusyAction("deleteAccount");
+                  const ok = await runServerAction(
+                    () => privacyActions.deleteAccount.mutateAsync(),
+                    "Account deleted. Signing out...",
+                  );
+                  setBusyAction(null);
+                  if (ok) logout();
+                }}
+              />
             </CardContent>
           </Card>
           <Card variant="outlined">
             <CardContent>
-              <Stack direction="row" justifyContent="space-between" alignItems="center" sx={{ mb: 1 }}>
-                <Typography variant="subtitle2">Privacy Activity</Typography>
-                <Button
-                  size="small"
-                  variant="text"
-                  onClick={() => {
-                    void auditQuery.refetch();
-                  }}
-                >
-                  Refresh
-                </Button>
-              </Stack>
-              {auditQuery.error && (
-                <Alert severity="error" sx={{ mb: 1 }}>
-                  Could not load privacy activity. Try Refresh.
-                </Alert>
-              )}
-              {auditLoading ? (
-                <Stack direction="row" alignItems="center" spacing={1}>
-                  <CircularProgress size={14} />
-                  <Typography variant="caption" color="text.secondary">
-                    Loading privacy activity...
-                  </Typography>
-                </Stack>
-              ) : auditItems.length === 0 ? (
-                <Typography variant="body2" color="text.secondary">
-                  No privacy activity recorded yet.
-                </Typography>
-              ) : (
-                <List dense sx={{ p: 0 }}>
-                  {auditItems.map((item) => (
-                    <ListItem key={item.id} disableGutters sx={{ py: 0.5 }}>
-                      <ListItemText
-                        primary={item.action.replaceAll("_", " ")}
-                        secondary={item.createdAt ? new Date(item.createdAt).toLocaleString() : "Unknown time"}
-                      />
-                    </ListItem>
-                  ))}
-                </List>
-              )}
+              <SettingsPrivacyAuditCard
+                items={auditItems}
+                loading={auditLoading}
+                error={auditQuery.error instanceof Error ? auditQuery.error : null}
+                onRefresh={() => {
+                  void auditQuery.refetch();
+                }}
+              />
             </CardContent>
           </Card>
         </Stack>

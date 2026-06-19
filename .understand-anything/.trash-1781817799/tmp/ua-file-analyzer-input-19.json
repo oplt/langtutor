@@ -1,0 +1,35 @@
+{
+  "projectRoot": "/home/polat/Desktop/Projects/LanguageApp",
+  "batchFiles": [
+    {
+      "path": "backend/app/modules/prompt/packs/en/conversation.yaml",
+      "language": "yaml",
+      "sizeLines": 49,
+      "fileCategory": "config"
+    },
+    {
+      "path": "backend/app/modules/prompt/packs/en/correction.yaml",
+      "language": "yaml",
+      "sizeLines": 35,
+      "fileCategory": "config"
+    },
+    {
+      "path": "backend/app/modules/prompt/packs/en/quiz.yaml",
+      "language": "yaml",
+      "sizeLines": 32,
+      "fileCategory": "config"
+    },
+    {
+      "path": "backend/app/modules/prompt/packs/en/story.yaml",
+      "language": "yaml",
+      "sizeLines": 32,
+      "fileCategory": "config"
+    }
+  ],
+  "batchImportData": {
+    "backend/app/modules/prompt/packs/en/conversation.yaml": [],
+    "backend/app/modules/prompt/packs/en/correction.yaml": [],
+    "backend/app/modules/prompt/packs/en/quiz.yaml": [],
+    "backend/app/modules/prompt/packs/en/story.yaml": []
+  }
+}

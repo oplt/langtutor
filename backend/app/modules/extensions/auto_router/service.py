@@ -4,6 +4,8 @@ import logging
 import re
 from dataclasses import dataclass
 
+from backend.app.core.config import settings
+
 logger = logging.getLogger(__name__)
 
 # (pattern, capability, reason)
@@ -126,4 +128,8 @@ def resolve_capability(
     }
     if decision.suggested_persona:
         metadata["suggested_persona"] = decision.suggested_persona
+    if decision.confidence < settings.AUTO_ROUTE_MIN_CONFIDENCE:
+        metadata["route_low_confidence"] = True
+        metadata["route_original_capability"] = decision.capability
+        return "chat", metadata
     return decision.capability, metadata

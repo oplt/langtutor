@@ -1,0 +1,226 @@
+{
+  "projectRoot": "/home/polat/Desktop/Projects/LanguageApp",
+  "batchFiles": [
+    {
+      "path": "backend/app/modules/knowledge/dependencies.py",
+      "language": "python",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/knowledge/paths.py",
+      "language": "python",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/knowledge/schemas.py",
+      "language": "python",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/learning/path_api.py",
+      "language": "python",
+      "sizeLines": 145,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/learning/quiz_api.py",
+      "language": "python",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/memory/api.py",
+      "language": "python",
+      "sizeLines": 134,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/memory/schemas.py",
+      "language": "python",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/memory/tasks.py",
+      "language": "python",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/notebook/api.py",
+      "language": "python",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/notebook/schemas.py",
+      "language": "python",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/privacy/api.py",
+      "language": "python",
+      "sizeLines": 123,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/prompt/api.py",
+      "language": "python",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/rag/api/ws.py",
+      "language": "python",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/tutor/sessions/api.py",
+      "language": "python",
+      "sizeLines": 113,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/tutor/sessions/schemas.py",
+      "language": "python",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/tutor/ws.py",
+      "language": "python",
+      "sizeLines": 138,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/users/models.py",
+      "language": "python",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/shared/dependencies.py",
+      "language": "python",
+      "sizeLines": 3,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/tests/test_knowledge_auth.py",
+      "language": "python",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/tests/test_ws_auth.py",
+      "language": "python",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "backend/app/modules/knowledge/dependencies.py": [
+      "backend/app/core/config.py",
+      "backend/app/modules/auth/dependencies.py",
+      "backend/app/modules/users/models.py"
+    ],
+    "backend/app/modules/knowledge/paths.py": [
+      "backend/app/core/config.py"
+    ],
+    "backend/app/modules/knowledge/schemas.py": [],
+    "backend/app/modules/learning/path_api.py": [
+      "backend/app/db/base.py",
+      "backend/app/db/session.py",
+      "backend/app/modules/auth/dependencies.py",
+      "backend/app/modules/learning/mastery/runtime.py",
+      "backend/app/modules/learning/mastery/schemas.py",
+      "backend/app/modules/users/models.py"
+    ],
+    "backend/app/modules/learning/quiz_api.py": [
+      "backend/app/db/session.py",
+      "backend/app/deps.py",
+      "backend/app/modules/auth/dependencies.py",
+      "backend/app/modules/learning/quiz/models.py",
+      "backend/app/modules/learning/quiz/schemas.py",
+      "backend/app/modules/learning/quiz/service.py",
+      "backend/app/modules/users/models.py"
+    ],
+    "backend/app/modules/memory/api.py": [
+      "backend/app/db/session.py",
+      "backend/app/deps.py",
+      "backend/app/modules/auth/dependencies.py",
+      "backend/app/modules/memory/schemas.py",
+      "backend/app/modules/memory/service.py",
+      "backend/app/modules/memory/tasks.py",
+      "backend/app/modules/memory/types.py",
+      "backend/app/modules/users/models.py"
+    ],
+    "backend/app/modules/memory/schemas.py": [],
+    "backend/app/modules/memory/tasks.py": [
+      "backend/app/core/background.py",
+      "backend/app/core/redis_lock.py",
+      "backend/app/db/session.py",
+      "backend/app/modules/memory/service.py"
+    ],
+    "backend/app/modules/notebook/api.py": [
+      "backend/app/db/session.py",
+      "backend/app/modules/auth/dependencies.py",
+      "backend/app/modules/notebook/schemas.py",
+      "backend/app/modules/notebook/service.py",
+      "backend/app/modules/users/models.py"
+    ],
+    "backend/app/modules/notebook/schemas.py": [],
+    "backend/app/modules/privacy/api.py": [
+      "backend/app/db/session.py",
+      "backend/app/modules/auth/dependencies.py",
+      "backend/app/modules/users/models.py"
+    ],
+    "backend/app/modules/prompt/api.py": [
+      "backend/app/modules/auth/dependencies.py",
+      "backend/app/modules/prompt/assembler.py",
+      "backend/app/modules/prompt/manager.py",
+      "backend/app/modules/users/models.py"
+    ],
+    "backend/app/modules/rag/api/ws.py": [
+      "backend/app/db/session.py",
+      "backend/app/modules/auth/ws_tokens.py",
+      "backend/app/modules/auth/ws.py",
+      "backend/app/modules/rag/domain/enums.py",
+      "backend/app/modules/rag/infrastructure/repositories.py"
+    ],
+    "backend/app/modules/tutor/sessions/api.py": [
+      "backend/app/db/session.py",
+      "backend/app/modules/auth/dependencies.py",
+      "backend/app/modules/tutor/sessions/schemas.py",
+      "backend/app/modules/tutor/sessions/service.py",
+      "backend/app/modules/users/models.py"
+    ],
+    "backend/app/modules/tutor/sessions/schemas.py": [],
+    "backend/app/modules/tutor/ws.py": [
+      "backend/app/core/config.py",
+      "backend/app/core/logging.py",
+      "backend/app/modules/auth/ws_tokens.py",
+      "backend/app/modules/auth/ws.py",
+      "backend/app/modules/tutor/schemas.py",
+      "backend/app/modules/tutor/turn_runtime.py"
+    ],
+    "backend/app/modules/users/models.py": [
+      "backend/app/db/base.py"
+    ],
+    "backend/app/shared/dependencies.py": [
+      "backend/app/db/session.py"
+    ],
+    "backend/tests/test_knowledge_auth.py": [
+      "backend/app/core/config.py",
+      "backend/app/modules/knowledge/dependencies.py",
+      "backend/app/modules/knowledge/paths.py"
+    ],
+    "backend/tests/test_ws_auth.py": [
+      "backend/app/modules/auth/ws_tokens.py"
+    ]
+  }
+}

@@ -194,9 +194,19 @@ export function AiSettingsPanel({ ai, onAiFieldChange, onProfilesPersisted }: Pr
       </Box>
 
       <Box>
-        <Stack direction="row" alignItems="center" justifyContent="space-between" sx={{ mb: 1 }}>
+        <Stack
+          direction={{ xs: "column", sm: "row" }}
+          alignItems={{ xs: "stretch", sm: "center" }}
+          justifyContent="space-between"
+          spacing={1}
+          sx={{ mb: 1 }}
+        >
           <Typography variant="h6">LLM Profiles</Typography>
-          <Button startIcon={<AddIcon />} onClick={openAdd}>
+          <Button
+            startIcon={<AddIcon />}
+            onClick={openAdd}
+            sx={{ alignSelf: { xs: "stretch", sm: "auto" }, flexShrink: 0 }}
+          >
             Add profile
           </Button>
         </Stack>
@@ -210,35 +220,47 @@ export function AiSettingsPanel({ ai, onAiFieldChange, onProfilesPersisted }: Pr
                 <Grid size={{ xs: 6, md: 2 }}>{profile.provider}</Grid>
                 <Grid size={{ xs: 6, md: 2 }}>{profile.model || "No model"}</Grid>
                 <Grid size={{ xs: 12, md: 3 }}>
-                  <Typography variant="caption">{profile.api_base}</Typography>
+                  <Typography variant="caption" sx={{ wordBreak: "break-all" }}>
+                    {profile.api_base}
+                  </Typography>
                 </Grid>
-                <Grid size={{ xs: 6, md: 1 }}>{statusById[profile.id] ?? "Not tested"}</Grid>
-                <Grid size={{ xs: 6, md: 1 }}>
-                  <Tooltip title="Test">
-                    <IconButton
-                      size="small"
-                      disabled={Boolean(busy)}
-                      onClick={() => testProfile(profile.id)}
-                    >
-                      <NetworkCheckIcon fontSize="small" />
-                    </IconButton>
-                  </Tooltip>
-                  <Tooltip title="Edit">
-                    <IconButton size="small" disabled={Boolean(busy)} onClick={() => openEdit(profile)}>
-                      <EditOutlinedIcon fontSize="small" />
-                    </IconButton>
-                  </Tooltip>
-                  <Tooltip title="Delete">
-                    <span>
+                <Grid size={{ xs: 12, md: 1 }}>
+                  <Typography variant="caption">{statusById[profile.id] ?? "Not tested"}</Typography>
+                </Grid>
+                <Grid size={{ xs: 12, md: 1 }}>
+                  <Stack
+                    direction="row"
+                    spacing={0.25}
+                    flexWrap="wrap"
+                    useFlexGap
+                    justifyContent={{ xs: "flex-start", md: "flex-end" }}
+                  >
+                    <Tooltip title="Test">
                       <IconButton
                         size="small"
-                        disabled={Boolean(busy) || ai.profiles.length <= 1}
-                        onClick={() => removeProfile(profile.id)}
+                        disabled={Boolean(busy)}
+                        onClick={() => testProfile(profile.id)}
                       >
-                        <DeleteOutlineIcon fontSize="small" />
+                        <NetworkCheckIcon fontSize="small" />
                       </IconButton>
-                    </span>
-                  </Tooltip>
+                    </Tooltip>
+                    <Tooltip title="Edit">
+                      <IconButton size="small" disabled={Boolean(busy)} onClick={() => openEdit(profile)}>
+                        <EditOutlinedIcon fontSize="small" />
+                      </IconButton>
+                    </Tooltip>
+                    <Tooltip title="Delete">
+                      <span>
+                        <IconButton
+                          size="small"
+                          disabled={Boolean(busy) || ai.profiles.length <= 1}
+                          onClick={() => removeProfile(profile.id)}
+                        >
+                          <DeleteOutlineIcon fontSize="small" />
+                        </IconButton>
+                      </span>
+                    </Tooltip>
+                  </Stack>
                 </Grid>
               </Grid>
             </Box>

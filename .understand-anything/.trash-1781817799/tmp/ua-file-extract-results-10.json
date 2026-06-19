@@ -1,0 +1,3850 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 21,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "backend/app/bootstrap/routes.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 47,
+      "nonEmptyLines": 43,
+      "functions": [
+        {
+          "name": "register_routes",
+          "startLine": 27,
+          "endLine": 47,
+          "params": [
+            "app"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "register_routes",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "register_routes",
+          "callee": "app.include_router",
+          "lineNumber": 28
+        },
+        {
+          "caller": "register_routes",
+          "callee": "app.include_router",
+          "lineNumber": 29
+        },
+        {
+          "caller": "register_routes",
+          "callee": "app.include_router",
+          "lineNumber": 30
+        },
+        {
+          "caller": "register_routes",
+          "callee": "app.include_router",
+          "lineNumber": 31
+        },
+        {
+          "caller": "register_routes",
+          "callee": "app.include_router",
+          "lineNumber": 32
+        },
+        {
+          "caller": "register_routes",
+          "callee": "app.include_router",
+          "lineNumber": 33
+        },
+        {
+          "caller": "register_routes",
+          "callee": "app.include_router",
+          "lineNumber": 34
+        },
+        {
+          "caller": "register_routes",
+          "callee": "app.include_router",
+          "lineNumber": 35
+        },
+        {
+          "caller": "register_routes",
+          "callee": "app.include_router",
+          "lineNumber": 36
+        },
+        {
+          "caller": "register_routes",
+          "callee": "app.include_router",
+          "lineNumber": 37
+        },
+        {
+          "caller": "register_routes",
+          "callee": "app.include_router",
+          "lineNumber": 38
+        },
+        {
+          "caller": "register_routes",
+          "callee": "app.include_router",
+          "lineNumber": 39
+        },
+        {
+          "caller": "register_routes",
+          "callee": "app.include_router",
+          "lineNumber": 40
+        },
+        {
+          "caller": "register_routes",
+          "callee": "app.include_router",
+          "lineNumber": 41
+        },
+        {
+          "caller": "register_routes",
+          "callee": "app.include_router",
+          "lineNumber": 42
+        },
+        {
+          "caller": "register_routes",
+          "callee": "app.include_router",
+          "lineNumber": 43
+        },
+        {
+          "caller": "register_routes",
+          "callee": "app.include_router",
+          "lineNumber": 44
+        },
+        {
+          "caller": "register_routes",
+          "callee": "app.include_router",
+          "lineNumber": 45
+        },
+        {
+          "caller": "register_routes",
+          "callee": "app.include_router",
+          "lineNumber": 46
+        },
+        {
+          "caller": "register_routes",
+          "callee": "app.include_router",
+          "lineNumber": 47
+        }
+      ],
+      "metrics": {
+        "importCount": 20,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/core/exceptions.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 18,
+      "classes": [
+        {
+          "name": "AppError",
+          "startLine": 8,
+          "endLine": 22,
+          "methods": [
+            "to_dict"
+          ],
+          "properties": [
+            "code",
+            "message",
+            "status_code",
+            "details"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AppError",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/core/security.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 214,
+      "nonEmptyLines": 171,
+      "functions": [
+        {
+          "name": "hash_password",
+          "startLine": 73,
+          "endLine": 74,
+          "params": [
+            "password"
+          ]
+        },
+        {
+          "name": "verify_password",
+          "startLine": 77,
+          "endLine": 103,
+          "params": [
+            "password",
+            "hashed_password"
+          ]
+        },
+        {
+          "name": "verify_password_and_rehash_if_needed",
+          "startLine": 106,
+          "endLine": 124,
+          "params": [
+            "password",
+            "hashed_password"
+          ]
+        },
+        {
+          "name": "create_access_token",
+          "startLine": 131,
+          "endLine": 140,
+          "params": [
+            "user_id"
+          ]
+        },
+        {
+          "name": "decode_token",
+          "startLine": 143,
+          "endLine": 179,
+          "params": [
+            "token"
+          ]
+        },
+        {
+          "name": "try_decode_token",
+          "startLine": 182,
+          "endLine": 191,
+          "params": [
+            "token"
+          ]
+        },
+        {
+          "name": "verify_token",
+          "startLine": 194,
+          "endLine": 214,
+          "params": [
+            "token"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TokenError",
+          "startLine": 28,
+          "endLine": 29,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "TokenMissingSubject",
+          "startLine": 32,
+          "endLine": 38,
+          "methods": [
+            "__init__"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TokenExpired",
+          "startLine": 41,
+          "endLine": 47,
+          "methods": [
+            "__init__"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TokenInvalid",
+          "startLine": 50,
+          "endLine": 57,
+          "methods": [
+            "__init__"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TokenMalformed",
+          "startLine": 60,
+          "endLine": 66,
+          "methods": [
+            "__init__"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "TokenError",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "TokenMissingSubject",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "TokenExpired",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "TokenInvalid",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "TokenMalformed",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "hash_password",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "verify_password",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "verify_password_and_rehash_if_needed",
+          "line": 106,
+          "isDefault": false
+        },
+        {
+          "name": "create_access_token",
+          "line": 131,
+          "isDefault": false
+        },
+        {
+          "name": "decode_token",
+          "line": 143,
+          "isDefault": false
+        },
+        {
+          "name": "try_decode_token",
+          "line": 182,
+          "isDefault": false
+        },
+        {
+          "name": "verify_token",
+          "line": 194,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "super().__init__",
+          "lineNumber": 34
+        },
+        {
+          "caller": "__init__",
+          "callee": "super",
+          "lineNumber": 34
+        },
+        {
+          "caller": "__init__",
+          "callee": "super().__init__",
+          "lineNumber": 43
+        },
+        {
+          "caller": "__init__",
+          "callee": "super",
+          "lineNumber": 43
+        },
+        {
+          "caller": "__init__",
+          "callee": "super().__init__",
+          "lineNumber": 52
+        },
+        {
+          "caller": "__init__",
+          "callee": "super",
+          "lineNumber": 52
+        },
+        {
+          "caller": "__init__",
+          "callee": "super().__init__",
+          "lineNumber": 62
+        },
+        {
+          "caller": "__init__",
+          "callee": "super",
+          "lineNumber": 62
+        },
+        {
+          "caller": "hash_password",
+          "callee": "ph.hash",
+          "lineNumber": 74
+        },
+        {
+          "caller": "verify_password",
+          "callee": "ph.verify",
+          "lineNumber": 86
+        },
+        {
+          "caller": "verify_password",
+          "callee": "AppError",
+          "lineNumber": 91
+        },
+        {
+          "caller": "verify_password",
+          "callee": "str",
+          "lineNumber": 95
+        },
+        {
+          "caller": "verify_password",
+          "callee": "AppError",
+          "lineNumber": 98
+        },
+        {
+          "caller": "verify_password",
+          "callee": "str",
+          "lineNumber": 102
+        },
+        {
+          "caller": "verify_password_and_rehash_if_needed",
+          "callee": "verify_password",
+          "lineNumber": 113
+        },
+        {
+          "caller": "verify_password_and_rehash_if_needed",
+          "callee": "ph.check_needs_rehash",
+          "lineNumber": 118
+        },
+        {
+          "caller": "verify_password_and_rehash_if_needed",
+          "callee": "hash_password",
+          "lineNumber": 119
+        },
+        {
+          "caller": "create_access_token",
+          "callee": "datetime.now",
+          "lineNumber": 132
+        },
+        {
+          "caller": "create_access_token",
+          "callee": "timedelta",
+          "lineNumber": 133
+        },
+        {
+          "caller": "create_access_token",
+          "callee": "str",
+          "lineNumber": 136
+        },
+        {
+          "caller": "create_access_token",
+          "callee": "int",
+          "lineNumber": 137
+        },
+        {
+          "caller": "create_access_token",
+          "callee": "now.timestamp",
+          "lineNumber": 137
+        },
+        {
+          "caller": "create_access_token",
+          "callee": "int",
+          "lineNumber": 138
+        },
+        {
+          "caller": "create_access_token",
+          "callee": "exp.timestamp",
+          "lineNumber": 138
+        },
+        {
+          "caller": "create_access_token",
+          "callee": "jwt.encode",
+          "lineNumber": 140
+        },
+        {
+          "caller": "decode_token",
+          "callee": "isinstance",
+          "lineNumber": 151
+        },
+        {
+          "caller": "decode_token",
+          "callee": "TokenMalformed",
+          "lineNumber": 152
+        },
+        {
+          "caller": "decode_token",
+          "callee": "jwt.decode",
+          "lineNumber": 155
+        },
+        {
+          "caller": "decode_token",
+          "callee": "TokenExpired",
+          "lineNumber": 157
+        },
+        {
+          "caller": "decode_token",
+          "callee": "TokenInvalid",
+          "lineNumber": 160
+        },
+        {
+          "caller": "decode_token",
+          "callee": "TokenInvalid",
+          "lineNumber": 163
+        },
+        {
+          "caller": "decode_token",
+          "callee": "AppError",
+          "lineNumber": 165
+        },
+        {
+          "caller": "decode_token",
+          "callee": "str",
+          "lineNumber": 169
+        },
+        {
+          "caller": "decode_token",
+          "callee": "payload.get",
+          "lineNumber": 172
+        },
+        {
+          "caller": "decode_token",
+          "callee": "TokenMissingSubject",
+          "lineNumber": 174
+        },
+        {
+          "caller": "decode_token",
+          "callee": "isinstance",
+          "lineNumber": 177
+        },
+        {
+          "caller": "decode_token",
+          "callee": "uuid.UUID",
+          "lineNumber": 177
+        },
+        {
+          "caller": "decode_token",
+          "callee": "str",
+          "lineNumber": 177
+        },
+        {
+          "caller": "decode_token",
+          "callee": "TokenInvalid",
+          "lineNumber": 179
+        },
+        {
+          "caller": "try_decode_token",
+          "callee": "decode_token",
+          "lineNumber": 189
+        },
+        {
+          "caller": "verify_token",
+          "callee": "isinstance",
+          "lineNumber": 200
+        },
+        {
+          "caller": "verify_token",
+          "callee": "TokenMalformed",
+          "lineNumber": 201
+        },
+        {
+          "caller": "verify_token",
+          "callee": "jwt.decode",
+          "lineNumber": 203
+        },
+        {
+          "caller": "verify_token",
+          "callee": "TokenExpired",
+          "lineNumber": 205
+        },
+        {
+          "caller": "verify_token",
+          "callee": "TokenInvalid",
+          "lineNumber": 207
+        },
+        {
+          "caller": "verify_token",
+          "callee": "AppError",
+          "lineNumber": 209
+        },
+        {
+          "caller": "verify_token",
+          "callee": "str",
+          "lineNumber": 213
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 12,
+        "functionCount": 7,
+        "classCount": 5
+      }
+    },
+    {
+      "path": "backend/app/db/session.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 125,
+      "nonEmptyLines": 105,
+      "functions": [
+        {
+          "name": "build_engine",
+          "startLine": 22,
+          "endLine": 55,
+          "params": []
+        },
+        {
+          "name": "session_scope",
+          "startLine": 70,
+          "endLine": 83,
+          "params": []
+        },
+        {
+          "name": "get_db",
+          "startLine": 86,
+          "endLine": 102,
+          "params": []
+        },
+        {
+          "name": "db_healthcheck",
+          "startLine": 105,
+          "endLine": 125,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "build_engine",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "session_scope",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "get_db",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "db_healthcheck",
+          "line": 105,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "build_engine",
+          "callee": "getattr",
+          "lineNumber": 29
+        },
+        {
+          "caller": "build_engine",
+          "callee": "isinstance",
+          "lineNumber": 30
+        },
+        {
+          "caller": "build_engine",
+          "callee": "AppError",
+          "lineNumber": 31
+        },
+        {
+          "caller": "build_engine",
+          "callee": "create_async_engine",
+          "lineNumber": 38
+        },
+        {
+          "caller": "build_engine",
+          "callee": "logger.exception",
+          "lineNumber": 49
+        },
+        {
+          "caller": "build_engine",
+          "callee": "AppError",
+          "lineNumber": 50
+        },
+        {
+          "caller": "build_engine",
+          "callee": "str",
+          "lineNumber": 54
+        },
+        {
+          "caller": "session_scope",
+          "callee": "AsyncSessionLocal",
+          "lineNumber": 76
+        },
+        {
+          "caller": "session_scope",
+          "callee": "session.commit",
+          "lineNumber": 79
+        },
+        {
+          "caller": "session_scope",
+          "callee": "logger.warning",
+          "lineNumber": 81
+        },
+        {
+          "caller": "session_scope",
+          "callee": "session.rollback",
+          "lineNumber": 82
+        },
+        {
+          "caller": "get_db",
+          "callee": "AsyncSessionLocal",
+          "lineNumber": 94
+        },
+        {
+          "caller": "get_db",
+          "callee": "session.commit",
+          "lineNumber": 97
+        },
+        {
+          "caller": "get_db",
+          "callee": "logger.warning",
+          "lineNumber": 100
+        },
+        {
+          "caller": "get_db",
+          "callee": "session.rollback",
+          "lineNumber": 101
+        },
+        {
+          "caller": "db_healthcheck",
+          "callee": "engine.connect",
+          "lineNumber": 114
+        },
+        {
+          "caller": "db_healthcheck",
+          "callee": "conn.execute",
+          "lineNumber": 116
+        },
+        {
+          "caller": "db_healthcheck",
+          "callee": "text",
+          "lineNumber": 116
+        },
+        {
+          "caller": "db_healthcheck",
+          "callee": "logger.info",
+          "lineNumber": 117
+        },
+        {
+          "caller": "db_healthcheck",
+          "callee": "logger.error",
+          "lineNumber": 119
+        },
+        {
+          "caller": "db_healthcheck",
+          "callee": "str",
+          "lineNumber": 119
+        },
+        {
+          "caller": "db_healthcheck",
+          "callee": "AppError",
+          "lineNumber": 120
+        },
+        {
+          "caller": "db_healthcheck",
+          "callee": "str",
+          "lineNumber": 124
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/auth/api.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 260,
+      "nonEmptyLines": 221,
+      "functions": [
+        {
+          "name": "_email_hash",
+          "startLine": 45,
+          "endLine": 46,
+          "params": [
+            "email"
+          ]
+        },
+        {
+          "name": "signup",
+          "startLine": 50,
+          "endLine": 98,
+          "params": [
+            "payload",
+            "db"
+          ]
+        },
+        {
+          "name": "login",
+          "startLine": 102,
+          "endLine": 123,
+          "params": [
+            "payload",
+            "db"
+          ]
+        },
+        {
+          "name": "google_login",
+          "startLine": 127,
+          "endLine": 149,
+          "params": [
+            "mode"
+          ]
+        },
+        {
+          "name": "google_callback",
+          "startLine": 153,
+          "endLine": 229,
+          "params": [
+            "code",
+            "state",
+            "error",
+            "db"
+          ]
+        },
+        {
+          "name": "me",
+          "startLine": 233,
+          "endLine": 234,
+          "params": [
+            "user"
+          ]
+        },
+        {
+          "name": "update_me",
+          "startLine": 238,
+          "endLine": 260,
+          "params": [
+            "payload",
+            "user",
+            "db"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "_email_hash",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "signup",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "login",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "google_login",
+          "line": 126,
+          "isDefault": false
+        },
+        {
+          "name": "google_callback",
+          "line": 152,
+          "isDefault": false
+        },
+        {
+          "name": "me",
+          "line": 232,
+          "isDefault": false
+        },
+        {
+          "name": "update_me",
+          "line": 237,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_email_hash",
+          "callee": "hashlib.sha256(email.encode(\"utf-8\")).hexdigest",
+          "lineNumber": 46
+        },
+        {
+          "caller": "_email_hash",
+          "callee": "hashlib.sha256",
+          "lineNumber": 46
+        },
+        {
+          "caller": "_email_hash",
+          "callee": "email.encode",
+          "lineNumber": 46
+        },
+        {
+          "caller": "signup",
+          "callee": "Depends",
+          "lineNumber": 50
+        },
+        {
+          "caller": "signup",
+          "callee": "payload.email.lower().strip",
+          "lineNumber": 51
+        },
+        {
+          "caller": "signup",
+          "callee": "payload.email.lower",
+          "lineNumber": 51
+        },
+        {
+          "caller": "signup",
+          "callee": "len",
+          "lineNumber": 53
+        },
+        {
+          "caller": "signup",
+          "callee": "payload.password.encode",
+          "lineNumber": 53
+        },
+        {
+          "caller": "signup",
+          "callee": "HTTPException",
+          "lineNumber": 54
+        },
+        {
+          "caller": "signup",
+          "callee": "auth_error",
+          "lineNumber": 56
+        },
+        {
+          "caller": "signup",
+          "callee": "db.execute",
+          "lineNumber": 59
+        },
+        {
+          "caller": "signup",
+          "callee": "select(User)\n        .where(User.email == email)\n        .where(User.is_active.is_(True))\n        .where",
+          "lineNumber": 60
+        },
+        {
+          "caller": "signup",
+          "callee": "select(User)\n        .where(User.email == email)\n        .where",
+          "lineNumber": 60
+        },
+        {
+          "caller": "signup",
+          "callee": "select(User)\n        .where",
+          "lineNumber": 60
+        },
+        {
+          "caller": "signup",
+          "callee": "select",
+          "lineNumber": 60
+        },
+        {
+          "caller": "signup",
+          "callee": "User.is_active.is_",
+          "lineNumber": 62
+        },
+        {
+          "caller": "signup",
+          "callee": "User.deleted_at.is_",
+          "lineNumber": 63
+        },
+        {
+          "caller": "signup",
+          "callee": "q.scalar_one_or_none",
+          "lineNumber": 65
+        },
+        {
+          "caller": "signup",
+          "callee": "HTTPException",
+          "lineNumber": 66
+        },
+        {
+          "caller": "signup",
+          "callee": "auth_error",
+          "lineNumber": 66
+        },
+        {
+          "caller": "signup",
+          "callee": "User",
+          "lineNumber": 68
+        },
+        {
+          "caller": "signup",
+          "callee": "hash_password",
+          "lineNumber": 70
+        },
+        {
+          "caller": "signup",
+          "callee": "db.add",
+          "lineNumber": 79
+        },
+        {
+          "caller": "signup",
+          "callee": "db.flush",
+          "lineNumber": 81
+        },
+        {
+          "caller": "signup",
+          "callee": "db.commit",
+          "lineNumber": 82
+        },
+        {
+          "caller": "signup",
+          "callee": "db.rollback",
+          "lineNumber": 84
+        },
+        {
+          "caller": "signup",
+          "callee": "logger.info",
+          "lineNumber": 85
+        },
+        {
+          "caller": "signup",
+          "callee": "_email_hash",
+          "lineNumber": 85
+        },
+        {
+          "caller": "signup",
+          "callee": "HTTPException",
+          "lineNumber": 86
+        },
+        {
+          "caller": "signup",
+          "callee": "auth_error",
+          "lineNumber": 86
+        },
+        {
+          "caller": "signup",
+          "callee": "db.rollback",
+          "lineNumber": 88
+        },
+        {
+          "caller": "signup",
+          "callee": "logger.exception",
+          "lineNumber": 89
+        },
+        {
+          "caller": "signup",
+          "callee": "_email_hash",
+          "lineNumber": 89
+        },
+        {
+          "caller": "signup",
+          "callee": "HTTPException",
+          "lineNumber": 90
+        },
+        {
+          "caller": "signup",
+          "callee": "auth_error",
+          "lineNumber": 90
+        },
+        {
+          "caller": "signup",
+          "callee": "db.rollback",
+          "lineNumber": 92
+        },
+        {
+          "caller": "signup",
+          "callee": "logger.exception",
+          "lineNumber": 93
+        },
+        {
+          "caller": "signup",
+          "callee": "_email_hash",
+          "lineNumber": 93
+        },
+        {
+          "caller": "signup",
+          "callee": "HTTPException",
+          "lineNumber": 94
+        },
+        {
+          "caller": "signup",
+          "callee": "auth_error",
+          "lineNumber": 94
+        },
+        {
+          "caller": "signup",
+          "callee": "create_access_token",
+          "lineNumber": 96
+        },
+        {
+          "caller": "signup",
+          "callee": "logger.info",
+          "lineNumber": 97
+        },
+        {
+          "caller": "signup",
+          "callee": "str",
+          "lineNumber": 97
+        },
+        {
+          "caller": "signup",
+          "callee": "_email_hash",
+          "lineNumber": 97
+        },
+        {
+          "caller": "login",
+          "callee": "Depends",
+          "lineNumber": 102
+        },
+        {
+          "caller": "login",
+          "callee": "payload.email.lower().strip",
+          "lineNumber": 103
+        },
+        {
+          "caller": "login",
+          "callee": "payload.email.lower",
+          "lineNumber": 103
+        },
+        {
+          "caller": "login",
+          "callee": "db.execute",
+          "lineNumber": 106
+        },
+        {
+          "caller": "login",
+          "callee": "select(User)\n            .where(User.email == email)\n            .where(User.is_active.is_(True))\n            .where",
+          "lineNumber": 107
+        },
+        {
+          "caller": "login",
+          "callee": "select(User)\n            .where(User.email == email)\n            .where",
+          "lineNumber": 107
+        },
+        {
+          "caller": "login",
+          "callee": "select(User)\n            .where",
+          "lineNumber": 107
+        },
+        {
+          "caller": "login",
+          "callee": "select",
+          "lineNumber": 107
+        },
+        {
+          "caller": "login",
+          "callee": "User.is_active.is_",
+          "lineNumber": 109
+        },
+        {
+          "caller": "login",
+          "callee": "User.deleted_at.is_",
+          "lineNumber": 110
+        },
+        {
+          "caller": "login",
+          "callee": "q.scalar_one_or_none",
+          "lineNumber": 112
+        },
+        {
+          "caller": "login",
+          "callee": "logger.exception",
+          "lineNumber": 114
+        },
+        {
+          "caller": "login",
+          "callee": "_email_hash",
+          "lineNumber": 114
+        },
+        {
+          "caller": "login",
+          "callee": "HTTPException",
+          "lineNumber": 115
+        },
+        {
+          "caller": "login",
+          "callee": "auth_error",
+          "lineNumber": 115
+        },
+        {
+          "caller": "login",
+          "callee": "verify_password",
+          "lineNumber": 117
+        },
+        {
+          "caller": "login",
+          "callee": "logger.info",
+          "lineNumber": 118
+        },
+        {
+          "caller": "login",
+          "callee": "_email_hash",
+          "lineNumber": 118
+        },
+        {
+          "caller": "login",
+          "callee": "HTTPException",
+          "lineNumber": 119
+        },
+        {
+          "caller": "login",
+          "callee": "auth_error",
+          "lineNumber": 119
+        },
+        {
+          "caller": "login",
+          "callee": "create_access_token",
+          "lineNumber": 121
+        },
+        {
+          "caller": "login",
+          "callee": "logger.info",
+          "lineNumber": 122
+        },
+        {
+          "caller": "login",
+          "callee": "str",
+          "lineNumber": 122
+        },
+        {
+          "caller": "login",
+          "callee": "_email_hash",
+          "lineNumber": 122
+        },
+        {
+          "caller": "google_login",
+          "callee": "Query",
+          "lineNumber": 128
+        },
+        {
+          "caller": "google_login",
+          "callee": "HTTPException",
+          "lineNumber": 131
+        },
+        {
+          "caller": "google_login",
+          "callee": "auth_error",
+          "lineNumber": 133
+        },
+        {
+          "caller": "google_login",
+          "callee": "google_oauth_state_put",
+          "lineNumber": 136
+        },
+        {
+          "caller": "google_login",
+          "callee": "urllib_parse.urlencode",
+          "lineNumber": 137
+        },
+        {
+          "caller": "google_login",
+          "callee": "RedirectResponse",
+          "lineNumber": 149
+        },
+        {
+          "caller": "google_callback",
+          "callee": "Depends",
+          "lineNumber": 157
+        },
+        {
+          "caller": "google_callback",
+          "callee": "logger.warning",
+          "lineNumber": 160
+        },
+        {
+          "caller": "google_callback",
+          "callee": "google_callback_redirect",
+          "lineNumber": 161
+        },
+        {
+          "caller": "google_callback",
+          "callee": "logger.warning",
+          "lineNumber": 163
+        },
+        {
+          "caller": "google_callback",
+          "callee": "google_callback_redirect",
+          "lineNumber": 164
+        },
+        {
+          "caller": "google_callback",
+          "callee": "google_oauth_state_take",
+          "lineNumber": 166
+        },
+        {
+          "caller": "google_callback",
+          "callee": "logger.warning",
+          "lineNumber": 168
+        },
+        {
+          "caller": "google_callback",
+          "callee": "bool",
+          "lineNumber": 168
+        },
+        {
+          "caller": "google_callback",
+          "callee": "google_callback_redirect",
+          "lineNumber": 169
+        },
+        {
+          "caller": "google_callback",
+          "callee": "google_exchange_code",
+          "lineNumber": 171
+        },
+        {
+          "caller": "google_callback",
+          "callee": "logger.warning",
+          "lineNumber": 173
+        },
+        {
+          "caller": "google_callback",
+          "callee": "google_callback_redirect",
+          "lineNumber": 174
+        },
+        {
+          "caller": "google_callback",
+          "callee": "token_payload.get",
+          "lineNumber": 176
+        },
+        {
+          "caller": "google_callback",
+          "callee": "isinstance",
+          "lineNumber": 177
+        },
+        {
+          "caller": "google_callback",
+          "callee": "logger.warning",
+          "lineNumber": 178
+        },
+        {
+          "caller": "google_callback",
+          "callee": "google_callback_redirect",
+          "lineNumber": 179
+        },
+        {
+          "caller": "google_callback",
+          "callee": "google_verify_id_token",
+          "lineNumber": 181
+        },
+        {
+          "caller": "google_callback",
+          "callee": "logger.warning",
+          "lineNumber": 183
+        },
+        {
+          "caller": "google_callback",
+          "callee": "google_callback_redirect",
+          "lineNumber": 184
+        },
+        {
+          "caller": "google_callback",
+          "callee": "str(verified.get(\"email\", \"\")).lower().strip",
+          "lineNumber": 186
+        },
+        {
+          "caller": "google_callback",
+          "callee": "str(verified.get(\"email\", \"\")).lower",
+          "lineNumber": 186
+        },
+        {
+          "caller": "google_callback",
+          "callee": "str",
+          "lineNumber": 186
+        },
+        {
+          "caller": "google_callback",
+          "callee": "verified.get",
+          "lineNumber": 186
+        },
+        {
+          "caller": "google_callback",
+          "callee": "str(verified.get(\"name\", \"\")).strip",
+          "lineNumber": 187
+        },
+        {
+          "caller": "google_callback",
+          "callee": "str",
+          "lineNumber": 187
+        },
+        {
+          "caller": "google_callback",
+          "callee": "verified.get",
+          "lineNumber": 187
+        },
+        {
+          "caller": "google_callback",
+          "callee": "logger.warning",
+          "lineNumber": 189
+        },
+        {
+          "caller": "google_callback",
+          "callee": "google_callback_redirect",
+          "lineNumber": 190
+        },
+        {
+          "caller": "google_callback",
+          "callee": "db.execute",
+          "lineNumber": 192
+        },
+        {
+          "caller": "google_callback",
+          "callee": "select(User)\n        .where(User.email == email)\n        .where(User.is_active.is_(True))\n        .where",
+          "lineNumber": 193
+        },
+        {
+          "caller": "google_callback",
+          "callee": "select(User)\n        .where(User.email == email)\n        .where",
+          "lineNumber": 193
+        },
+        {
+          "caller": "google_callback",
+          "callee": "select(User)\n        .where",
+          "lineNumber": 193
+        },
+        {
+          "caller": "google_callback",
+          "callee": "select",
+          "lineNumber": 193
+        },
+        {
+          "caller": "google_callback",
+          "callee": "User.is_active.is_",
+          "lineNumber": 195
+        },
+        {
+          "caller": "google_callback",
+          "callee": "User.deleted_at.is_",
+          "lineNumber": 196
+        },
+        {
+          "caller": "google_callback",
+          "callee": "q.scalar_one_or_none",
+          "lineNumber": 198
+        },
+        {
+          "caller": "google_callback",
+          "callee": "User",
+          "lineNumber": 201
+        },
+        {
+          "caller": "google_callback",
+          "callee": "hash_password",
+          "lineNumber": 203
+        },
+        {
+          "caller": "google_callback",
+          "callee": "secrets.token_urlsafe",
+          "lineNumber": 203
+        },
+        {
+          "caller": "google_callback",
+          "callee": "db.add",
+          "lineNumber": 206
+        },
+        {
+          "caller": "google_callback",
+          "callee": "db.flush",
+          "lineNumber": 208
+        },
+        {
+          "caller": "google_callback",
+          "callee": "db.commit",
+          "lineNumber": 209
+        },
+        {
+          "caller": "google_callback",
+          "callee": "db.rollback",
+          "lineNumber": 211
+        },
+        {
+          "caller": "google_callback",
+          "callee": "db.execute",
+          "lineNumber": 212
+        },
+        {
+          "caller": "google_callback",
+          "callee": "select(User)\n                .where(User.email == email)\n                .where(User.is_active.is_(True))\n                .where",
+          "lineNumber": 213
+        },
+        {
+          "caller": "google_callback",
+          "callee": "select(User)\n                .where(User.email == email)\n                .where",
+          "lineNumber": 213
+        },
+        {
+          "caller": "google_callback",
+          "callee": "select(User)\n                .where",
+          "lineNumber": 213
+        },
+        {
+          "caller": "google_callback",
+          "callee": "select",
+          "lineNumber": 213
+        },
+        {
+          "caller": "google_callback",
+          "callee": "User.is_active.is_",
+          "lineNumber": 215
+        },
+        {
+          "caller": "google_callback",
+          "callee": "User.deleted_at.is_",
+          "lineNumber": 216
+        },
+        {
+          "caller": "google_callback",
+          "callee": "q2.scalar_one_or_none",
+          "lineNumber": 218
+        },
+        {
+          "caller": "google_callback",
+          "callee": "logger.exception",
+          "lineNumber": 220
+        },
+        {
+          "caller": "google_callback",
+          "callee": "google_callback_redirect",
+          "lineNumber": 221
+        },
+        {
+          "caller": "google_callback",
+          "callee": "db.rollback",
+          "lineNumber": 223
+        },
+        {
+          "caller": "google_callback",
+          "callee": "logger.exception",
+          "lineNumber": 224
+        },
+        {
+          "caller": "google_callback",
+          "callee": "google_callback_redirect",
+          "lineNumber": 225
+        },
+        {
+          "caller": "google_callback",
+          "callee": "create_access_token",
+          "lineNumber": 227
+        },
+        {
+          "caller": "google_callback",
+          "callee": "logger.info",
+          "lineNumber": 228
+        },
+        {
+          "caller": "google_callback",
+          "callee": "str",
+          "lineNumber": 228
+        },
+        {
+          "caller": "google_callback",
+          "callee": "google_callback_redirect",
+          "lineNumber": 229
+        },
+        {
+          "caller": "me",
+          "callee": "Depends",
+          "lineNumber": 233
+        },
+        {
+          "caller": "update_me",
+          "callee": "Depends",
+          "lineNumber": 240
+        },
+        {
+          "caller": "update_me",
+          "callee": "Depends",
+          "lineNumber": 241
+        },
+        {
+          "caller": "update_me",
+          "callee": "payload.model_dump",
+          "lineNumber": 243
+        },
+        {
+          "caller": "_normalize_text",
+          "callee": "value.strip",
+          "lineNumber": 248
+        },
+        {
+          "caller": "update_me",
+          "callee": "setattr",
+          "lineNumber": 253
+        },
+        {
+          "caller": "update_me",
+          "callee": "_normalize_text",
+          "lineNumber": 253
+        },
+        {
+          "caller": "update_me",
+          "callee": "db.flush",
+          "lineNumber": 257
+        },
+        {
+          "caller": "update_me",
+          "callee": "db.commit",
+          "lineNumber": 258
+        },
+        {
+          "caller": "update_me",
+          "callee": "db.refresh",
+          "lineNumber": 259
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 7,
+        "functionCount": 7,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/auth/dependencies.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 56,
+      "nonEmptyLines": 43,
+      "functions": [
+        {
+          "name": "auth_error",
+          "startLine": 21,
+          "endLine": 25,
+          "params": [
+            "code",
+            "message",
+            "details"
+          ]
+        },
+        {
+          "name": "get_current_user",
+          "startLine": 28,
+          "endLine": 56,
+          "params": [
+            "db",
+            "creds"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "auth_error",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "get_current_user",
+          "line": 28,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "get_current_user",
+          "callee": "Depends",
+          "lineNumber": 29
+        },
+        {
+          "caller": "get_current_user",
+          "callee": "Depends",
+          "lineNumber": 30
+        },
+        {
+          "caller": "get_current_user",
+          "callee": "creds.scheme.lower",
+          "lineNumber": 32
+        },
+        {
+          "caller": "get_current_user",
+          "callee": "logger.info",
+          "lineNumber": 33
+        },
+        {
+          "caller": "get_current_user",
+          "callee": "HTTPException",
+          "lineNumber": 34
+        },
+        {
+          "caller": "get_current_user",
+          "callee": "auth_error",
+          "lineNumber": 34
+        },
+        {
+          "caller": "get_current_user",
+          "callee": "creds.credentials.strip",
+          "lineNumber": 36
+        },
+        {
+          "caller": "get_current_user",
+          "callee": "decode_token",
+          "lineNumber": 39
+        },
+        {
+          "caller": "get_current_user",
+          "callee": "logger.info",
+          "lineNumber": 41
+        },
+        {
+          "caller": "get_current_user",
+          "callee": "HTTPException",
+          "lineNumber": 42
+        },
+        {
+          "caller": "get_current_user",
+          "callee": "e.to_dict",
+          "lineNumber": 42
+        },
+        {
+          "caller": "get_current_user",
+          "callee": "db.execute",
+          "lineNumber": 44
+        },
+        {
+          "caller": "get_current_user",
+          "callee": "select(User)\n        .where(User.id == user_id)\n        .where(User.is_active.is_(True))\n        .where",
+          "lineNumber": 45
+        },
+        {
+          "caller": "get_current_user",
+          "callee": "select(User)\n        .where(User.id == user_id)\n        .where",
+          "lineNumber": 45
+        },
+        {
+          "caller": "get_current_user",
+          "callee": "select(User)\n        .where",
+          "lineNumber": 45
+        },
+        {
+          "caller": "get_current_user",
+          "callee": "select",
+          "lineNumber": 45
+        },
+        {
+          "caller": "get_current_user",
+          "callee": "User.is_active.is_",
+          "lineNumber": 47
+        },
+        {
+          "caller": "get_current_user",
+          "callee": "User.deleted_at.is_",
+          "lineNumber": 48
+        },
+        {
+          "caller": "get_current_user",
+          "callee": "q.scalar_one_or_none",
+          "lineNumber": 50
+        },
+        {
+          "caller": "get_current_user",
+          "callee": "logger.info",
+          "lineNumber": 52
+        },
+        {
+          "caller": "get_current_user",
+          "callee": "HTTPException",
+          "lineNumber": 53
+        },
+        {
+          "caller": "get_current_user",
+          "callee": "auth_error",
+          "lineNumber": 53
+        },
+        {
+          "caller": "get_current_user",
+          "callee": "set_log_context",
+          "lineNumber": 55
+        },
+        {
+          "caller": "get_current_user",
+          "callee": "str",
+          "lineNumber": 55
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/auth/schemas.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 48,
+      "nonEmptyLines": 36,
+      "classes": [
+        {
+          "name": "SignUpIn",
+          "startLine": 9,
+          "endLine": 17,
+          "methods": [],
+          "properties": [
+            "email",
+            "password",
+            "full_name",
+            "gender",
+            "age",
+            "native_language",
+            "target_language",
+            "cefr_goal"
+          ]
+        },
+        {
+          "name": "LoginIn",
+          "startLine": 20,
+          "endLine": 22,
+          "methods": [],
+          "properties": [
+            "email",
+            "password"
+          ]
+        },
+        {
+          "name": "UserOut",
+          "startLine": 25,
+          "endLine": 34,
+          "methods": [],
+          "properties": [
+            "id",
+            "email",
+            "full_name",
+            "gender",
+            "age",
+            "native_language",
+            "target_language",
+            "cefr_goal"
+          ]
+        },
+        {
+          "name": "AuthOut",
+          "startLine": 37,
+          "endLine": 39,
+          "methods": [],
+          "properties": [
+            "access_token",
+            "user"
+          ]
+        },
+        {
+          "name": "UserProfileUpdateIn",
+          "startLine": 42,
+          "endLine": 48,
+          "methods": [],
+          "properties": [
+            "full_name",
+            "gender",
+            "age",
+            "native_language",
+            "target_language",
+            "cefr_goal"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SignUpIn",
+          "line": 9,
+          "isDefault": false
+        },
+        {
+          "name": "LoginIn",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "UserOut",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "AuthOut",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "UserProfileUpdateIn",
+          "line": 42,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 0,
+        "classCount": 5
+      }
+    },
+    {
+      "path": "backend/app/modules/auth/ws.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 43,
+      "nonEmptyLines": 32,
+      "functions": [
+        {
+          "name": "ws_require_user",
+          "startLine": 18,
+          "endLine": 43,
+          "params": [
+            "ws"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ws_require_user",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ws_require_user",
+          "callee": "extract_ws_token",
+          "lineNumber": 19
+        },
+        {
+          "caller": "ws_require_user",
+          "callee": "ws.close",
+          "lineNumber": 21
+        },
+        {
+          "caller": "ws_require_user",
+          "callee": "decode_token",
+          "lineNumber": 25
+        },
+        {
+          "caller": "ws_require_user",
+          "callee": "ws.close",
+          "lineNumber": 27
+        },
+        {
+          "caller": "ws_require_user",
+          "callee": "AsyncSessionLocal",
+          "lineNumber": 30
+        },
+        {
+          "caller": "ws_require_user",
+          "callee": "db.execute",
+          "lineNumber": 31
+        },
+        {
+          "caller": "ws_require_user",
+          "callee": "select(User)\n            .where(User.id == user_id)\n            .where(User.is_active.is_(True))\n            .where",
+          "lineNumber": 32
+        },
+        {
+          "caller": "ws_require_user",
+          "callee": "select(User)\n            .where(User.id == user_id)\n            .where",
+          "lineNumber": 32
+        },
+        {
+          "caller": "ws_require_user",
+          "callee": "select(User)\n            .where",
+          "lineNumber": 32
+        },
+        {
+          "caller": "ws_require_user",
+          "callee": "select",
+          "lineNumber": 32
+        },
+        {
+          "caller": "ws_require_user",
+          "callee": "User.is_active.is_",
+          "lineNumber": 34
+        },
+        {
+          "caller": "ws_require_user",
+          "callee": "User.deleted_at.is_",
+          "lineNumber": 35
+        },
+        {
+          "caller": "ws_require_user",
+          "callee": "result.scalar_one_or_none",
+          "lineNumber": 37
+        },
+        {
+          "caller": "ws_require_user",
+          "callee": "ws.close",
+          "lineNumber": 40
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/auth/ws_tokens.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 25,
+      "nonEmptyLines": 17,
+      "functions": [
+        {
+          "name": "ws_accept_subprotocol",
+          "startLine": 8,
+          "endLine": 12,
+          "params": [
+            "ws"
+          ]
+        },
+        {
+          "name": "extract_ws_token",
+          "startLine": 15,
+          "endLine": 20,
+          "params": [
+            "ws"
+          ]
+        },
+        {
+          "name": "_offered_subprotocols",
+          "startLine": 23,
+          "endLine": 25,
+          "params": [
+            "ws"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ws_accept_subprotocol",
+          "line": 8,
+          "isDefault": false
+        },
+        {
+          "name": "extract_ws_token",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "_offered_subprotocols",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ws_accept_subprotocol",
+          "callee": "_offered_subprotocols",
+          "lineNumber": 9
+        },
+        {
+          "caller": "extract_ws_token",
+          "callee": "_offered_subprotocols",
+          "lineNumber": 16
+        },
+        {
+          "caller": "extract_ws_token",
+          "callee": "enumerate",
+          "lineNumber": 17
+        },
+        {
+          "caller": "extract_ws_token",
+          "callee": "len",
+          "lineNumber": 18
+        },
+        {
+          "caller": "extract_ws_token",
+          "callee": "offered[index + 1].strip",
+          "lineNumber": 19
+        },
+        {
+          "caller": "extract_ws_token",
+          "callee": "ws.query_params.get(\"token\", \"\").strip",
+          "lineNumber": 20
+        },
+        {
+          "caller": "extract_ws_token",
+          "callee": "ws.query_params.get",
+          "lineNumber": 20
+        },
+        {
+          "caller": "_offered_subprotocols",
+          "callee": "ws.headers.get",
+          "lineNumber": 24
+        },
+        {
+          "caller": "_offered_subprotocols",
+          "callee": "part.strip",
+          "lineNumber": 25
+        },
+        {
+          "caller": "_offered_subprotocols",
+          "callee": "raw.split",
+          "lineNumber": 25
+        },
+        {
+          "caller": "_offered_subprotocols",
+          "callee": "part.strip",
+          "lineNumber": 25
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/book/api.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 78,
+      "nonEmptyLines": 64,
+      "functions": [
+        {
+          "name": "list_books",
+          "startLine": 18,
+          "endLine": 21,
+          "params": []
+        },
+        {
+          "name": "get_progress",
+          "startLine": 25,
+          "endLine": 32,
+          "params": [
+            "level",
+            "db",
+            "user"
+          ]
+        },
+        {
+          "name": "get_book",
+          "startLine": 36,
+          "endLine": 42,
+          "params": [
+            "level"
+          ]
+        },
+        {
+          "name": "get_page",
+          "startLine": 46,
+          "endLine": 56,
+          "params": [
+            "level",
+            "page_id",
+            "db"
+          ]
+        },
+        {
+          "name": "complete_page",
+          "startLine": 60,
+          "endLine": 78,
+          "params": [
+            "level",
+            "page_id",
+            "body",
+            "db",
+            "user"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "list_books",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "get_progress",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "get_book",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "get_page",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "complete_page",
+          "line": 59,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "list_books",
+          "callee": "get_lesson_book_service",
+          "lineNumber": 19
+        },
+        {
+          "caller": "list_books",
+          "callee": "service.list_books",
+          "lineNumber": 20
+        },
+        {
+          "caller": "list_books",
+          "callee": "LessonBookOut.from_book",
+          "lineNumber": 21
+        },
+        {
+          "caller": "get_progress",
+          "callee": "Depends",
+          "lineNumber": 27
+        },
+        {
+          "caller": "get_progress",
+          "callee": "Depends",
+          "lineNumber": 28
+        },
+        {
+          "caller": "get_progress",
+          "callee": "get_lesson_book_service",
+          "lineNumber": 30
+        },
+        {
+          "caller": "get_progress",
+          "callee": "service.get_progress",
+          "lineNumber": 31
+        },
+        {
+          "caller": "get_book",
+          "callee": "get_lesson_book_service",
+          "lineNumber": 37
+        },
+        {
+          "caller": "get_book",
+          "callee": "service.get_book",
+          "lineNumber": 39
+        },
+        {
+          "caller": "get_book",
+          "callee": "HTTPException",
+          "lineNumber": 41
+        },
+        {
+          "caller": "get_book",
+          "callee": "str",
+          "lineNumber": 41
+        },
+        {
+          "caller": "get_book",
+          "callee": "LessonBookOut.from_book",
+          "lineNumber": 42
+        },
+        {
+          "caller": "get_page",
+          "callee": "Depends",
+          "lineNumber": 49
+        },
+        {
+          "caller": "get_page",
+          "callee": "get_lesson_book_service",
+          "lineNumber": 51
+        },
+        {
+          "caller": "get_page",
+          "callee": "service.get_page",
+          "lineNumber": 53
+        },
+        {
+          "caller": "get_page",
+          "callee": "HTTPException",
+          "lineNumber": 55
+        },
+        {
+          "caller": "get_page",
+          "callee": "str",
+          "lineNumber": 55
+        },
+        {
+          "caller": "get_page",
+          "callee": "LessonPageOut.from_page",
+          "lineNumber": 56
+        },
+        {
+          "caller": "complete_page",
+          "callee": "Depends",
+          "lineNumber": 64
+        },
+        {
+          "caller": "complete_page",
+          "callee": "Depends",
+          "lineNumber": 65
+        },
+        {
+          "caller": "complete_page",
+          "callee": "get_lesson_book_service",
+          "lineNumber": 67
+        },
+        {
+          "caller": "complete_page",
+          "callee": "service.mark_complete",
+          "lineNumber": 69
+        },
+        {
+          "caller": "complete_page",
+          "callee": "HTTPException",
+          "lineNumber": 77
+        },
+        {
+          "caller": "complete_page",
+          "callee": "str",
+          "lineNumber": 77
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/extensions/api.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 17,
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/extensions/api_auto.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 54,
+      "nonEmptyLines": 43,
+      "functions": [
+        {
+          "name": "route_capability",
+          "startLine": 26,
+          "endLine": 43,
+          "params": [
+            "payload",
+            "user"
+          ]
+        },
+        {
+          "name": "preview_resolve",
+          "startLine": 47,
+          "endLine": 54,
+          "params": [
+            "message",
+            "capability",
+            "user"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AutoRouteIn",
+          "startLine": 13,
+          "endLine": 15,
+          "methods": [],
+          "properties": [
+            "message",
+            "capability"
+          ]
+        },
+        {
+          "name": "AutoRouteOut",
+          "startLine": 18,
+          "endLine": 22,
+          "methods": [],
+          "properties": [
+            "capability",
+            "reason",
+            "confidence",
+            "suggested_persona"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AutoRouteIn",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "AutoRouteOut",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "route_capability",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "preview_resolve",
+          "line": 46,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "route_capability",
+          "callee": "Depends",
+          "lineNumber": 28
+        },
+        {
+          "caller": "route_capability",
+          "callee": "AutoRouteOut",
+          "lineNumber": 32
+        },
+        {
+          "caller": "route_capability",
+          "callee": "classify_intent",
+          "lineNumber": 37
+        },
+        {
+          "caller": "route_capability",
+          "callee": "AutoRouteOut",
+          "lineNumber": 38
+        },
+        {
+          "caller": "preview_resolve",
+          "callee": "Depends",
+          "lineNumber": 50
+        },
+        {
+          "caller": "preview_resolve",
+          "callee": "resolve_capability",
+          "lineNumber": 53
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 4,
+        "functionCount": 2,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "backend/app/modules/extensions/api_classroom.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 81,
+      "nonEmptyLines": 66,
+      "functions": [
+        {
+          "name": "list_students",
+          "startLine": 25,
+          "endLine": 30,
+          "params": [
+            "user",
+            "db"
+          ]
+        },
+        {
+          "name": "list_teachers",
+          "startLine": 34,
+          "endLine": 39,
+          "params": [
+            "user",
+            "db"
+          ]
+        },
+        {
+          "name": "create_grant",
+          "startLine": 43,
+          "endLine": 67,
+          "params": [
+            "payload",
+            "user",
+            "db"
+          ]
+        },
+        {
+          "name": "revoke_grant",
+          "startLine": 71,
+          "endLine": 81,
+          "params": [
+            "grant_id",
+            "user",
+            "db"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ClassroomGrantIn",
+          "startLine": 18,
+          "endLine": 21,
+          "methods": [],
+          "properties": [
+            "student_email",
+            "assigned_level",
+            "note"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ClassroomGrantIn",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "list_students",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "list_teachers",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "create_grant",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "revoke_grant",
+          "line": 70,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "list_students",
+          "callee": "Depends",
+          "lineNumber": 26
+        },
+        {
+          "caller": "list_students",
+          "callee": "Depends",
+          "lineNumber": 27
+        },
+        {
+          "caller": "list_students",
+          "callee": "get_classroom_service",
+          "lineNumber": 29
+        },
+        {
+          "caller": "list_students",
+          "callee": "service.list_students",
+          "lineNumber": 30
+        },
+        {
+          "caller": "list_teachers",
+          "callee": "Depends",
+          "lineNumber": 35
+        },
+        {
+          "caller": "list_teachers",
+          "callee": "Depends",
+          "lineNumber": 36
+        },
+        {
+          "caller": "list_teachers",
+          "callee": "get_classroom_service",
+          "lineNumber": 38
+        },
+        {
+          "caller": "list_teachers",
+          "callee": "service.list_teachers_for_student",
+          "lineNumber": 39
+        },
+        {
+          "caller": "create_grant",
+          "callee": "Depends",
+          "lineNumber": 45
+        },
+        {
+          "caller": "create_grant",
+          "callee": "Depends",
+          "lineNumber": 46
+        },
+        {
+          "caller": "create_grant",
+          "callee": "get_classroom_service",
+          "lineNumber": 48
+        },
+        {
+          "caller": "create_grant",
+          "callee": "service.grant_student",
+          "lineNumber": 50
+        },
+        {
+          "caller": "create_grant",
+          "callee": "str",
+          "lineNumber": 53
+        },
+        {
+          "caller": "create_grant",
+          "callee": "db.commit",
+          "lineNumber": 57
+        },
+        {
+          "caller": "create_grant",
+          "callee": "HTTPException",
+          "lineNumber": 59
+        },
+        {
+          "caller": "create_grant",
+          "callee": "str",
+          "lineNumber": 59
+        },
+        {
+          "caller": "create_grant",
+          "callee": "HTTPException",
+          "lineNumber": 61
+        },
+        {
+          "caller": "create_grant",
+          "callee": "str",
+          "lineNumber": 61
+        },
+        {
+          "caller": "create_grant",
+          "callee": "str",
+          "lineNumber": 64
+        },
+        {
+          "caller": "create_grant",
+          "callee": "str",
+          "lineNumber": 65
+        },
+        {
+          "caller": "revoke_grant",
+          "callee": "Depends",
+          "lineNumber": 73
+        },
+        {
+          "caller": "revoke_grant",
+          "callee": "Depends",
+          "lineNumber": 74
+        },
+        {
+          "caller": "revoke_grant",
+          "callee": "get_classroom_service",
+          "lineNumber": 76
+        },
+        {
+          "caller": "revoke_grant",
+          "callee": "service.revoke_grant",
+          "lineNumber": 77
+        },
+        {
+          "caller": "revoke_grant",
+          "callee": "HTTPException",
+          "lineNumber": 79
+        },
+        {
+          "caller": "revoke_grant",
+          "callee": "db.commit",
+          "lineNumber": 80
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/extensions/api_partners.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 114,
+      "nonEmptyLines": 97,
+      "functions": [
+        {
+          "name": "list_channels",
+          "startLine": 24,
+          "endLine": 40,
+          "params": [
+            "user",
+            "db"
+          ]
+        },
+        {
+          "name": "register_channel",
+          "startLine": 44,
+          "endLine": 66,
+          "params": [
+            "payload",
+            "user",
+            "db"
+          ]
+        },
+        {
+          "name": "disable_channel",
+          "startLine": 70,
+          "endLine": 80,
+          "params": [
+            "channel_id",
+            "user",
+            "db"
+          ]
+        },
+        {
+          "name": "send_daily_prompt",
+          "startLine": 84,
+          "endLine": 96,
+          "params": [
+            "channel_id",
+            "user",
+            "db"
+          ]
+        },
+        {
+          "name": "partner_webhook",
+          "startLine": 100,
+          "endLine": 114,
+          "params": [
+            "channel_type",
+            "secret",
+            "body",
+            "db"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "PartnerChannelIn",
+          "startLine": 17,
+          "endLine": 20,
+          "methods": [],
+          "properties": [
+            "channel_type",
+            "external_id",
+            "daily_prompt_hour_utc"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PartnerChannelIn",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "list_channels",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "register_channel",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "disable_channel",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "send_daily_prompt",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "partner_webhook",
+          "line": 99,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "list_channels",
+          "callee": "Depends",
+          "lineNumber": 25
+        },
+        {
+          "caller": "list_channels",
+          "callee": "Depends",
+          "lineNumber": 26
+        },
+        {
+          "caller": "list_channels",
+          "callee": "get_partners_service",
+          "lineNumber": 28
+        },
+        {
+          "caller": "list_channels",
+          "callee": "service.list_channels",
+          "lineNumber": 29
+        },
+        {
+          "caller": "list_channels",
+          "callee": "str",
+          "lineNumber": 32
+        },
+        {
+          "caller": "register_channel",
+          "callee": "Depends",
+          "lineNumber": 46
+        },
+        {
+          "caller": "register_channel",
+          "callee": "Depends",
+          "lineNumber": 47
+        },
+        {
+          "caller": "register_channel",
+          "callee": "get_partners_service",
+          "lineNumber": 49
+        },
+        {
+          "caller": "register_channel",
+          "callee": "service.register_channel",
+          "lineNumber": 51
+        },
+        {
+          "caller": "register_channel",
+          "callee": "db.commit",
+          "lineNumber": 58
+        },
+        {
+          "caller": "register_channel",
+          "callee": "HTTPException",
+          "lineNumber": 60
+        },
+        {
+          "caller": "register_channel",
+          "callee": "str",
+          "lineNumber": 60
+        },
+        {
+          "caller": "register_channel",
+          "callee": "str",
+          "lineNumber": 63
+        },
+        {
+          "caller": "disable_channel",
+          "callee": "Depends",
+          "lineNumber": 72
+        },
+        {
+          "caller": "disable_channel",
+          "callee": "Depends",
+          "lineNumber": 73
+        },
+        {
+          "caller": "disable_channel",
+          "callee": "get_partners_service",
+          "lineNumber": 75
+        },
+        {
+          "caller": "disable_channel",
+          "callee": "service.disable_channel",
+          "lineNumber": 76
+        },
+        {
+          "caller": "disable_channel",
+          "callee": "HTTPException",
+          "lineNumber": 78
+        },
+        {
+          "caller": "disable_channel",
+          "callee": "db.commit",
+          "lineNumber": 79
+        },
+        {
+          "caller": "send_daily_prompt",
+          "callee": "Depends",
+          "lineNumber": 86
+        },
+        {
+          "caller": "send_daily_prompt",
+          "callee": "Depends",
+          "lineNumber": 87
+        },
+        {
+          "caller": "send_daily_prompt",
+          "callee": "get_partners_service",
+          "lineNumber": 89
+        },
+        {
+          "caller": "send_daily_prompt",
+          "callee": "service.list_channels",
+          "lineNumber": 90
+        },
+        {
+          "caller": "send_daily_prompt",
+          "callee": "next",
+          "lineNumber": 91
+        },
+        {
+          "caller": "send_daily_prompt",
+          "callee": "HTTPException",
+          "lineNumber": 93
+        },
+        {
+          "caller": "send_daily_prompt",
+          "callee": "service.send_daily_prompt",
+          "lineNumber": 94
+        },
+        {
+          "caller": "send_daily_prompt",
+          "callee": "db.commit",
+          "lineNumber": 95
+        },
+        {
+          "caller": "partner_webhook",
+          "callee": "Depends",
+          "lineNumber": 104
+        },
+        {
+          "caller": "partner_webhook",
+          "callee": "get_partners_service",
+          "lineNumber": 106
+        },
+        {
+          "caller": "partner_webhook",
+          "callee": "service.handle_webhook",
+          "lineNumber": 108
+        },
+        {
+          "caller": "partner_webhook",
+          "callee": "db.commit",
+          "lineNumber": 111
+        },
+        {
+          "caller": "partner_webhook",
+          "callee": "HTTPException",
+          "lineNumber": 113
+        },
+        {
+          "caller": "partner_webhook",
+          "callee": "str",
+          "lineNumber": 113
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 6,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/extensions/api_plugins.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 21,
+      "functions": [
+        {
+          "name": "list_plugins",
+          "startLine": 14,
+          "endLine": 26,
+          "params": [
+            "user"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "list_plugins",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "list_plugins",
+          "callee": "Depends",
+          "lineNumber": 14
+        },
+        {
+          "caller": "list_plugins",
+          "callee": "AgentOrchestrator",
+          "lineNumber": 16
+        },
+        {
+          "caller": "list_plugins",
+          "callee": "set",
+          "lineNumber": 17
+        },
+        {
+          "caller": "list_plugins",
+          "callee": "orchestrator.list_tools",
+          "lineNumber": 17
+        },
+        {
+          "caller": "list_plugins",
+          "callee": "list_plugin_manifests",
+          "lineNumber": 19
+        },
+        {
+          "caller": "list_plugins",
+          "callee": "manifests.append",
+          "lineNumber": 20
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/extensions/api_sandbox.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 16,
+      "functions": [
+        {
+          "name": "sandbox_run",
+          "startLine": 18,
+          "endLine": 23,
+          "params": [
+            "payload",
+            "user"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SandboxRunIn",
+          "startLine": 13,
+          "endLine": 14,
+          "methods": [],
+          "properties": [
+            "expression"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SandboxRunIn",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "sandbox_run",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "sandbox_run",
+          "callee": "Depends",
+          "lineNumber": 20
+        },
+        {
+          "caller": "sandbox_run",
+          "callee": "run_sandbox_expression",
+          "lineNumber": 23
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/extensions/api_vision.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 49,
+      "nonEmptyLines": 37,
+      "functions": [
+        {
+          "name": "vision_ocr",
+          "startLine": 28,
+          "endLine": 49,
+          "params": [
+            "payload",
+            "user"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "VisionOcrIn",
+          "startLine": 16,
+          "endLine": 18,
+          "methods": [],
+          "properties": [
+            "image_base64",
+            "text"
+          ]
+        },
+        {
+          "name": "VisionOcrOut",
+          "startLine": 21,
+          "endLine": 24,
+          "methods": [],
+          "properties": [
+            "text",
+            "meta",
+            "tutor_prompt"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "VisionOcrIn",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "VisionOcrOut",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "vision_ocr",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "vision_ocr",
+          "callee": "Depends",
+          "lineNumber": 30
+        },
+        {
+          "caller": "vision_ocr",
+          "callee": "(payload.text or \"\").strip",
+          "lineNumber": 34
+        },
+        {
+          "caller": "vision_ocr",
+          "callee": "extract_text_from_image",
+          "lineNumber": 37
+        },
+        {
+          "caller": "vision_ocr",
+          "callee": "meta.setdefault",
+          "lineNumber": 40
+        },
+        {
+          "caller": "vision_ocr",
+          "callee": "VisionOcrOut",
+          "lineNumber": 45
+        },
+        {
+          "caller": "vision_ocr",
+          "callee": "build_immersion_prompt",
+          "lineNumber": 48
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 3,
+        "functionCount": 1,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "backend/app/modules/extensions/api_visualize.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 16,
+      "functions": [
+        {
+          "name": "progress_charts",
+          "startLine": 15,
+          "endLine": 21,
+          "params": [
+            "level",
+            "user",
+            "db"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "progress_charts",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "progress_charts",
+          "callee": "Query",
+          "lineNumber": 16
+        },
+        {
+          "caller": "progress_charts",
+          "callee": "Depends",
+          "lineNumber": 17
+        },
+        {
+          "caller": "progress_charts",
+          "callee": "Depends",
+          "lineNumber": 18
+        },
+        {
+          "caller": "progress_charts",
+          "callee": "get_visualize_service",
+          "lineNumber": 20
+        },
+        {
+          "caller": "progress_charts",
+          "callee": "service.build_progress_charts",
+          "lineNumber": 21
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/extensions/classroom/service.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 135,
+      "nonEmptyLines": 121,
+      "functions": [
+        {
+          "name": "get_classroom_service",
+          "startLine": 131,
+          "endLine": 135,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ClassroomService",
+          "startLine": 14,
+          "endLine": 125,
+          "methods": [
+            "grant_student",
+            "list_students",
+            "list_teachers_for_student",
+            "revoke_grant"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ClassroomService",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "get_classroom_service",
+          "line": 131,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "grant_student",
+          "callee": "(\n            await db.execute(\n                select(User).where(User.email == student_email.strip().lower())\n            )\n        ).scalar_one_or_none",
+          "lineNumber": 24
+        },
+        {
+          "caller": "grant_student",
+          "callee": "db.execute",
+          "lineNumber": 25
+        },
+        {
+          "caller": "grant_student",
+          "callee": "select(User).where",
+          "lineNumber": 26
+        },
+        {
+          "caller": "grant_student",
+          "callee": "select",
+          "lineNumber": 26
+        },
+        {
+          "caller": "grant_student",
+          "callee": "student_email.strip().lower",
+          "lineNumber": 26
+        },
+        {
+          "caller": "grant_student",
+          "callee": "student_email.strip",
+          "lineNumber": 26
+        },
+        {
+          "caller": "grant_student",
+          "callee": "LookupError",
+          "lineNumber": 30
+        },
+        {
+          "caller": "grant_student",
+          "callee": "ValueError",
+          "lineNumber": 32
+        },
+        {
+          "caller": "grant_student",
+          "callee": "(\n            await db.execute(\n                select(ClassroomGrant)\n                .where(ClassroomGrant.teacher_id == teacher_id)\n                .where(ClassroomGrant.student_id == student.id)\n            )\n        ).scalar_one_or_none",
+          "lineNumber": 34
+        },
+        {
+          "caller": "grant_student",
+          "callee": "db.execute",
+          "lineNumber": 35
+        },
+        {
+          "caller": "grant_student",
+          "callee": "select(ClassroomGrant)\n                .where(ClassroomGrant.teacher_id == teacher_id)\n                .where",
+          "lineNumber": 36
+        },
+        {
+          "caller": "grant_student",
+          "callee": "select(ClassroomGrant)\n                .where",
+          "lineNumber": 36
+        },
+        {
+          "caller": "grant_student",
+          "callee": "select",
+          "lineNumber": 36
+        },
+        {
+          "caller": "grant_student",
+          "callee": "db.flush",
+          "lineNumber": 44
+        },
+        {
+          "caller": "grant_student",
+          "callee": "ClassroomGrant",
+          "lineNumber": 47
+        },
+        {
+          "caller": "grant_student",
+          "callee": "db.add",
+          "lineNumber": 53
+        },
+        {
+          "caller": "grant_student",
+          "callee": "db.flush",
+          "lineNumber": 54
+        },
+        {
+          "caller": "list_students",
+          "callee": "aliased",
+          "lineNumber": 60
+        },
+        {
+          "caller": "list_students",
+          "callee": "(\n            await db.execute(\n                select(ClassroomGrant, student)\n                .join(student, ClassroomGrant.student_id == student.id)\n                .where(ClassroomGrant.teacher_id == teacher_id)\n                .order_by(ClassroomGrant.created_at.desc())\n            )\n        ).all",
+          "lineNumber": 61
+        },
+        {
+          "caller": "list_students",
+          "callee": "db.execute",
+          "lineNumber": 62
+        },
+        {
+          "caller": "list_students",
+          "callee": "select(ClassroomGrant, student)\n                .join(student, ClassroomGrant.student_id == student.id)\n                .where(ClassroomGrant.teacher_id == teacher_id)\n                .order_by",
+          "lineNumber": 63
+        },
+        {
+          "caller": "list_students",
+          "callee": "select(ClassroomGrant, student)\n                .join(student, ClassroomGrant.student_id == student.id)\n                .where",
+          "lineNumber": 63
+        },
+        {
+          "caller": "list_students",
+          "callee": "select(ClassroomGrant, student)\n                .join",
+          "lineNumber": 63
+        },
+        {
+          "caller": "list_students",
+          "callee": "select",
+          "lineNumber": 63
+        },
+        {
+          "caller": "list_students",
+          "callee": "ClassroomGrant.created_at.desc",
+          "lineNumber": 66
+        },
+        {
+          "caller": "list_students",
+          "callee": "payload.append",
+          "lineNumber": 71
+        },
+        {
+          "caller": "list_students",
+          "callee": "str",
+          "lineNumber": 73
+        },
+        {
+          "caller": "list_students",
+          "callee": "str",
+          "lineNumber": 74
+        },
+        {
+          "caller": "list_students",
+          "callee": "grant.created_at.isoformat",
+          "lineNumber": 83
+        },
+        {
+          "caller": "list_teachers_for_student",
+          "callee": "aliased",
+          "lineNumber": 91
+        },
+        {
+          "caller": "list_teachers_for_student",
+          "callee": "(\n            await db.execute(\n                select(ClassroomGrant, teacher)\n                .join(teacher, ClassroomGrant.teacher_id == teacher.id)\n                .where(ClassroomGrant.student_id == student_id)\n            )\n        ).all",
+          "lineNumber": 92
+        },
+        {
+          "caller": "list_teachers_for_student",
+          "callee": "db.execute",
+          "lineNumber": 93
+        },
+        {
+          "caller": "list_teachers_for_student",
+          "callee": "select(ClassroomGrant, teacher)\n                .join(teacher, ClassroomGrant.teacher_id == teacher.id)\n                .where",
+          "lineNumber": 94
+        },
+        {
+          "caller": "list_teachers_for_student",
+          "callee": "select(ClassroomGrant, teacher)\n                .join",
+          "lineNumber": 94
+        },
+        {
+          "caller": "list_teachers_for_student",
+          "callee": "select",
+          "lineNumber": 94
+        },
+        {
+          "caller": "list_teachers_for_student",
+          "callee": "str",
+          "lineNumber": 101
+        },
+        {
+          "caller": "list_teachers_for_student",
+          "callee": "str",
+          "lineNumber": 102
+        },
+        {
+          "caller": "revoke_grant",
+          "callee": "(\n            await db.execute(\n                select(ClassroomGrant)\n                .where(ClassroomGrant.id == grant_id)\n                .where(ClassroomGrant.teacher_id == teacher_id)\n            )\n        ).scalar_one_or_none",
+          "lineNumber": 114
+        },
+        {
+          "caller": "revoke_grant",
+          "callee": "db.execute",
+          "lineNumber": 115
+        },
+        {
+          "caller": "revoke_grant",
+          "callee": "select(ClassroomGrant)\n                .where(ClassroomGrant.id == grant_id)\n                .where",
+          "lineNumber": 116
+        },
+        {
+          "caller": "revoke_grant",
+          "callee": "select(ClassroomGrant)\n                .where",
+          "lineNumber": 116
+        },
+        {
+          "caller": "revoke_grant",
+          "callee": "select",
+          "lineNumber": 116
+        },
+        {
+          "caller": "revoke_grant",
+          "callee": "db.delete",
+          "lineNumber": 123
+        },
+        {
+          "caller": "revoke_grant",
+          "callee": "db.flush",
+          "lineNumber": 124
+        },
+        {
+          "caller": "get_classroom_service",
+          "callee": "ClassroomService",
+          "lineNumber": 134
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/extensions/plugins/registry.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 50,
+      "nonEmptyLines": 41,
+      "functions": [
+        {
+          "name": "list_plugin_manifests",
+          "startLine": 32,
+          "endLine": 42,
+          "params": []
+        },
+        {
+          "name": "default_plugin_tool_names",
+          "startLine": 45,
+          "endLine": 50,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "PluginManifest",
+          "startLine": 8,
+          "endLine": 13,
+          "methods": [],
+          "properties": [
+            "id",
+            "name",
+            "description",
+            "tool_names",
+            "enabled_by_default"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PluginManifest",
+          "line": 7,
+          "isDefault": false
+        },
+        {
+          "name": "list_plugin_manifests",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "default_plugin_tool_names",
+          "line": 45,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "list_plugin_manifests",
+          "callee": "list",
+          "lineNumber": 38
+        },
+        {
+          "caller": "default_plugin_tool_names",
+          "callee": "names.extend",
+          "lineNumber": 49
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/knowledge/api.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 130,
+      "nonEmptyLines": 116,
+      "functions": [
+        {
+          "name": "list_bases",
+          "startLine": 26,
+          "endLine": 42,
+          "params": [
+            "db",
+            "_user",
+            "service"
+          ]
+        },
+        {
+          "name": "create_base",
+          "startLine": 46,
+          "endLine": 62,
+          "params": [
+            "payload",
+            "db",
+            "_admin",
+            "service"
+          ]
+        },
+        {
+          "name": "ingest_default",
+          "startLine": 66,
+          "endLine": 74,
+          "params": [
+            "kb_name",
+            "db",
+            "_admin",
+            "service"
+          ]
+        },
+        {
+          "name": "ingest_paths",
+          "startLine": 78,
+          "endLine": 105,
+          "params": [
+            "kb_name",
+            "payload",
+            "db",
+            "_admin",
+            "service"
+          ]
+        },
+        {
+          "name": "search",
+          "startLine": 109,
+          "endLine": 130,
+          "params": [
+            "payload",
+            "db",
+            "_user",
+            "service"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "list_bases",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "create_base",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "ingest_default",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "ingest_paths",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "search",
+          "line": 108,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "list_bases",
+          "callee": "Depends",
+          "lineNumber": 27
+        },
+        {
+          "caller": "list_bases",
+          "callee": "Depends",
+          "lineNumber": 28
+        },
+        {
+          "caller": "list_bases",
+          "callee": "Depends",
+          "lineNumber": 29
+        },
+        {
+          "caller": "list_bases",
+          "callee": "service.list_bases",
+          "lineNumber": 31
+        },
+        {
+          "caller": "list_bases",
+          "callee": "KnowledgeBaseOut",
+          "lineNumber": 34
+        },
+        {
+          "caller": "list_bases",
+          "callee": "str",
+          "lineNumber": 35
+        },
+        {
+          "caller": "create_base",
+          "callee": "Depends",
+          "lineNumber": 48
+        },
+        {
+          "caller": "create_base",
+          "callee": "Depends",
+          "lineNumber": 49
+        },
+        {
+          "caller": "create_base",
+          "callee": "Depends",
+          "lineNumber": 50
+        },
+        {
+          "caller": "create_base",
+          "callee": "service.create_base",
+          "lineNumber": 53
+        },
+        {
+          "caller": "create_base",
+          "callee": "db.commit",
+          "lineNumber": 54
+        },
+        {
+          "caller": "create_base",
+          "callee": "HTTPException",
+          "lineNumber": 56
+        },
+        {
+          "caller": "create_base",
+          "callee": "str",
+          "lineNumber": 56
+        },
+        {
+          "caller": "create_base",
+          "callee": "KnowledgeBaseOut",
+          "lineNumber": 57
+        },
+        {
+          "caller": "create_base",
+          "callee": "str",
+          "lineNumber": 58
+        },
+        {
+          "caller": "ingest_default",
+          "callee": "Depends",
+          "lineNumber": 68
+        },
+        {
+          "caller": "ingest_default",
+          "callee": "Depends",
+          "lineNumber": 69
+        },
+        {
+          "caller": "ingest_default",
+          "callee": "Depends",
+          "lineNumber": 70
+        },
+        {
+          "caller": "ingest_default",
+          "callee": "service.ingest_paths",
+          "lineNumber": 72
+        },
+        {
+          "caller": "ingest_default",
+          "callee": "db.commit",
+          "lineNumber": 73
+        },
+        {
+          "caller": "ingest_paths",
+          "callee": "Depends",
+          "lineNumber": 81
+        },
+        {
+          "caller": "ingest_paths",
+          "callee": "Depends",
+          "lineNumber": 82
+        },
+        {
+          "caller": "ingest_paths",
+          "callee": "Depends",
+          "lineNumber": 83
+        },
+        {
+          "caller": "ingest_paths",
+          "callee": "resolve_ingest_paths",
+          "lineNumber": 86
+        },
+        {
+          "caller": "ingest_paths",
+          "callee": "str",
+          "lineNumber": 88
+        },
+        {
+          "caller": "ingest_paths",
+          "callee": "code.startswith",
+          "lineNumber": 90
+        },
+        {
+          "caller": "ingest_paths",
+          "callee": "code.startswith",
+          "lineNumber": 92
+        },
+        {
+          "caller": "ingest_paths",
+          "callee": "code.startswith",
+          "lineNumber": 94
+        },
+        {
+          "caller": "ingest_paths",
+          "callee": "HTTPException",
+          "lineNumber": 98
+        },
+        {
+          "caller": "ingest_paths",
+          "callee": "auth_error",
+          "lineNumber": 100
+        },
+        {
+          "caller": "ingest_paths",
+          "callee": "service.ingest_paths",
+          "lineNumber": 103
+        },
+        {
+          "caller": "ingest_paths",
+          "callee": "db.commit",
+          "lineNumber": 104
+        },
+        {
+          "caller": "search",
+          "callee": "Depends",
+          "lineNumber": 111
+        },
+        {
+          "caller": "search",
+          "callee": "Depends",
+          "lineNumber": 112
+        },
+        {
+          "caller": "search",
+          "callee": "Depends",
+          "lineNumber": 113
+        },
+        {
+          "caller": "search",
+          "callee": "service.search",
+          "lineNumber": 115
+        },
+        {
+          "caller": "search",
+          "callee": "KnowledgeSearchOut",
+          "lineNumber": 116
+        },
+        {
+          "caller": "search",
+          "callee": "KnowledgeSourceOut",
+          "lineNumber": 120
+        },
+        {
+          "caller": "search",
+          "callee": "str",
+          "lineNumber": 121
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    }
+  ]
+}

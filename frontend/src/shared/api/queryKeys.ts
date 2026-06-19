@@ -24,4 +24,7 @@ export const queryKeys = {
     preferences: ["privacy", "preferences"] as const,
     auditLog: (limit: number) => ["privacy", "audit-log", limit] as const,
   },
+  settings: {
+    app: ["settings", "app"] as const,
+  },
 } as const;

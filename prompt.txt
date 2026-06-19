@@ -1,0 +1,164 @@
+I reviewed the uploaded `make local-dev` log. The app **starts successfully**, but the memory synthesis background job fails after login. The root cause is here: `MemoryService.synthesize_l3()` uses `asyncio.gather(...)` while sharing the **same SQLAlchemy `AsyncSession`** across concurrent DB operations. SQLAlchemy async sessions are not concurrency-safe, so this triggers:
+
+```text
+sqlalchemy.exc.InvalidRequestError:
+This session is provisioning a new connection; concurrent operations are not permitted
+```
+
+Then the session cleanup also fails because the session is already in a bad state:
+
+```text
+sqlalchemy.exc.IllegalStateChangeError:
+Method 'close()' can't be called here; method '_connection_for_bind()' is already in progress
+```
+
+Source log:
+
+## What is working
+
+Your local stack looks mostly healthy:
+
+```text
+Redis ready on port 6380
+Backend started
+Database health check passed
+Frontend Vite ready on localhost:5173
+/health returns 200
+/metrics returns 200
+/auth/login returns 200
+```
+
+So this is **not** a startup, Redis, frontend, migration, or general database connectivity problem.
+
+## Exact failing area
+
+The failure points to:
+
+```text
+backend/app/modules/memory/service.py line 223
+traces, l2_docs, l3_docs = await asyncio.gather(...)
+```
+
+and:
+
+```text
+backend/app/modules/memory/repository.py line 140
+return list((await db.execute(q)).scalars().all())
+```
+
+That means multiple repository methods are calling `db.execute(...)` at the same time on the same `AsyncSession`.
+
+## Best fix
+
+Do **not** run DB queries concurrently with the same session.
+
+Change this pattern:
+
+```python
+traces, l2_docs, l3_docs = await asyncio.gather(
+    self.repository.list_traces(db, user_id=user_id),
+    self.repository.list_documents(db, user_id=user_id, level="l2"),
+    self.repository.list_documents(db, user_id=user_id, level="l3"),
+)
+```
+
+to this:
+
+```python
+traces = await self.repository.list_traces(db, user_id=user_id)
+l2_docs = await self.repository.list_documents(db, user_id=user_id, level="l2")
+l3_docs = await self.repository.list_documents(db, user_id=user_id, level="l3")
+```
+
+This is the safest fix.
+
+## Alternative fix, only if you really need concurrency
+
+Use **separate sessions per concurrent task**, not one shared session:
+
+```python
+async def fetch_traces(user_id):
+    async with session_scope() as db:
+        return await self.repository.list_traces(db, user_id=user_id)
+
+async def fetch_l2_docs(user_id):
+    async with session_scope() as db:
+        return await self.repository.list_documents(db, user_id=user_id, level="l2")
+
+async def fetch_l3_docs(user_id):
+    async with session_scope() as db:
+        return await self.repository.list_documents(db, user_id=user_id, level="l3")
+
+traces, l2_docs, l3_docs = await asyncio.gather(
+    fetch_traces(user_id),
+    fetch_l2_docs(user_id),
+    fetch_l3_docs(user_id),
+)
+```
+
+But for a memory synthesis job, sequential DB reads are probably simpler and more reliable.
+
+## Also fix the bad error log
+
+This line is not useful:
+
+```text
+"memory_synthesize_failed ...", "exception":"NoneType: None"
+```
+
+It probably means the logger is calling `logger.error(..., exc_info=True)` outside the active exception block, or using `logger.error` instead of `logger.exception`.
+
+Use:
+
+```python
+except Exception:
+    logger.exception(
+        "memory_synthesize_failed",
+        extra={"user_id": str(user_id)}
+    )
+```
+
+inside the `except` block.
+
+## Cursor prompt to fix it
+
+```text
+You are a senior backend engineer specialized in FastAPI, SQLAlchemy async, asyncio, and production-grade background jobs.
+
+Analyze the memory synthesis failure shown in the local-dev logs.
+
+Root problem:
+backend/app/modules/memory/service.py uses asyncio.gather around repository calls that share the same SQLAlchemy AsyncSession. This causes:
+
+sqlalchemy.exc.InvalidRequestError:
+This session is provisioning a new connection; concurrent operations are not permitted
+
+and then:
+
+sqlalchemy.exc.IllegalStateChangeError:
+Method 'close()' can't be called here; method '_connection_for_bind()' is already in progress
+
+Tasks:
+
+1. Inspect backend/app/modules/memory/service.py, especially synthesize_l3 around the asyncio.gather call.
+2. Find every place where one AsyncSession instance is shared across concurrent asyncio tasks.
+3. Replace unsafe concurrent DB calls with sequential awaits when they use the same session.
+4. If concurrency is truly needed, refactor each concurrent DB operation to create and own its own independent AsyncSession using session_scope().
+5. Ensure session_scope is not closed while a DB operation is still in progress.
+6. Improve memory background task error logging:
+   - use logger.exception inside active except blocks
+   - include user_id, request_id, trace_id, task name, attempt number, and duration_ms
+   - avoid logs like "exception: NoneType: None"
+7. Add regression tests proving synthesize_l3 no longer raises SQLAlchemy InvalidRequestError under login-triggered background synthesis.
+8. Run the local test suite and make local-dev.
+9. Write a short report in memory_synthesis_fix.txt explaining:
+   - root cause
+   - changed files
+   - why AsyncSession cannot be shared concurrently
+   - test results
+   - any remaining risks
+
+Do not introduce broad architectural rewrites. Make the smallest safe production-quality fix.
+```
+
+Main conclusion: your logging upgrade worked well because it exposed the real issue. Now the actual bug is in the memory module’s async DB session usage.

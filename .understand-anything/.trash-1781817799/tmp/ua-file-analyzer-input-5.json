@@ -1,0 +1,293 @@
+{
+  "projectRoot": "/home/polat/Desktop/Projects/LanguageApp",
+  "batchFiles": [
+    {
+      "path": "backend/alembic/env.py",
+      "language": "python",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/bootstrap/startup.py",
+      "language": "python",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/db/base.py",
+      "language": "python",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/db/model_registry.py",
+      "language": "python",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/book/compiler.py",
+      "language": "python",
+      "sizeLines": 215,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/book/models.py",
+      "language": "python",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/book/schemas.py",
+      "language": "python",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/book/service.py",
+      "language": "python",
+      "sizeLines": 112,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/extensions/classroom/models.py",
+      "language": "python",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/extensions/partners/models.py",
+      "language": "python",
+      "sizeLines": 63,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/extensions/partners/service.py",
+      "language": "python",
+      "sizeLines": 133,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/extensions/visualize/service.py",
+      "language": "python",
+      "sizeLines": 162,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/knowledge/bm25.py",
+      "language": "python",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/knowledge/cefr_filters.py",
+      "language": "python",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/knowledge/fts_search.py",
+      "language": "python",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/knowledge/models.py",
+      "language": "python",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/knowledge/search_cache.py",
+      "language": "python",
+      "sizeLines": 356,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/knowledge/service.py",
+      "language": "python",
+      "sizeLines": 251,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/learning/api.py",
+      "language": "python",
+      "sizeLines": 262,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/learning/engine.py",
+      "language": "python",
+      "sizeLines": 417,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/learning/mastery/grading.py",
+      "language": "python",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/learning/mastery/mastery.py",
+      "language": "python",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/learning/mastery/models.py",
+      "language": "python",
+      "sizeLines": 154,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/learning/mastery/policy.py",
+      "language": "python",
+      "sizeLines": 226,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/learning/mastery/repository.py",
+      "language": "python",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/learning/mastery/runtime.py",
+      "language": "python",
+      "sizeLines": 236,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/learning/mastery/scheduler.py",
+      "language": "python",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "backend/alembic/env.py": [
+      "backend/app/core/config.py",
+      "backend/app/db/base.py",
+      "backend/app/db/model_registry.py"
+    ],
+    "backend/app/bootstrap/startup.py": [
+      "backend/app/db/session.py",
+      "backend/app/modules/knowledge/search_cache.py",
+      "backend/app/modules/knowledge/service.py",
+      "backend/app/modules/learning/api.py",
+      "backend/app/modules/learning/engine.py",
+      "backend/app/modules/learning/response_cache.py"
+    ],
+    "backend/app/db/base.py": [],
+    "backend/app/db/model_registry.py": [
+      "backend/app/modules/extensions/classroom/models.py",
+      "backend/app/modules/extensions/partners/models.py",
+      "backend/app/modules/knowledge/models.py",
+      "backend/app/modules/learning/models.py",
+      "backend/app/modules/memory/models.py",
+      "backend/app/modules/notebook/models.py",
+      "backend/app/modules/rag/infrastructure/sqlalchemy_models.py",
+      "backend/app/modules/stories/models.py",
+      "backend/app/modules/tutor/sessions/models.py",
+      "backend/app/modules/users/models.py"
+    ],
+    "backend/app/modules/book/compiler.py": [
+      "backend/app/db/base.py",
+      "backend/app/modules/book/models.py",
+      "backend/app/modules/learning/engine.py",
+      "backend/app/modules/learning/models.py",
+      "backend/app/modules/learning/quiz/models.py",
+      "backend/app/modules/learning/quiz/templates.py"
+    ],
+    "backend/app/modules/book/models.py": [],
+    "backend/app/modules/book/schemas.py": [
+      "backend/app/modules/book/models.py"
+    ],
+    "backend/app/modules/book/service.py": [
+      "backend/app/db/base.py",
+      "backend/app/modules/book/compiler.py",
+      "backend/app/modules/book/models.py",
+      "backend/app/modules/learning/models.py",
+      "backend/app/modules/users/models.py"
+    ],
+    "backend/app/modules/extensions/classroom/models.py": [
+      "backend/app/db/base.py"
+    ],
+    "backend/app/modules/extensions/partners/models.py": [
+      "backend/app/db/base.py"
+    ],
+    "backend/app/modules/extensions/partners/service.py": [
+      "backend/app/modules/extensions/partners/models.py"
+    ],
+    "backend/app/modules/extensions/visualize/service.py": [
+      "backend/app/db/base.py",
+      "backend/app/modules/learning/models.py",
+      "backend/app/modules/notebook/models.py"
+    ],
+    "backend/app/modules/knowledge/bm25.py": [],
+    "backend/app/modules/knowledge/cefr_filters.py": [
+      "backend/app/modules/learning/engine.py"
+    ],
+    "backend/app/modules/knowledge/fts_search.py": [
+      "backend/app/modules/knowledge/models.py",
+      "backend/app/modules/knowledge/search_cache.py"
+    ],
+    "backend/app/modules/knowledge/models.py": [
+      "backend/app/db/base.py"
+    ],
+    "backend/app/modules/knowledge/search_cache.py": [
+      "backend/app/modules/knowledge/bm25.py",
+      "backend/app/modules/knowledge/models.py"
+    ],
+    "backend/app/modules/knowledge/service.py": [
+      "backend/app/core/config.py",
+      "backend/app/modules/knowledge/bm25.py",
+      "backend/app/modules/knowledge/models.py",
+      "backend/app/modules/knowledge/search_cache.py"
+    ],
+    "backend/app/modules/learning/api.py": [
+      "backend/app/db/base.py",
+      "backend/app/db/session.py",
+      "backend/app/modules/auth/dependencies.py",
+      "backend/app/modules/learning/engine.py",
+      "backend/app/modules/learning/models.py",
+      "backend/app/modules/learning/response_cache.py",
+      "backend/app/modules/stories/models.py",
+      "backend/app/modules/users/models.py",
+      "backend/app/shared/schemas.py"
+    ],
+    "backend/app/modules/learning/engine.py": [
+      "backend/app/core/config.py",
+      "backend/app/db/base.py",
+      "backend/app/modules/learning/mastery/models.py",
+      "backend/app/modules/learning/mastery/scheduler.py",
+      "backend/app/modules/learning/models.py",
+      "backend/app/modules/stories/models.py"
+    ],
+    "backend/app/modules/learning/mastery/grading.py": [
+      "backend/app/modules/learning/mastery/models.py"
+    ],
+    "backend/app/modules/learning/mastery/mastery.py": [],
+    "backend/app/modules/learning/mastery/models.py": [],
+    "backend/app/modules/learning/mastery/policy.py": [
+      "backend/app/modules/learning/mastery/models.py"
+    ],
+    "backend/app/modules/learning/mastery/repository.py": [
+      "backend/app/db/base.py",
+      "backend/app/modules/learning/mastery/models.py",
+      "backend/app/modules/learning/models.py"
+    ],
+    "backend/app/modules/learning/mastery/runtime.py": [
+      "backend/app/db/base.py",
+      "backend/app/modules/learning/engine.py",
+      "backend/app/modules/learning/mastery/models.py",
+      "backend/app/modules/learning/mastery/policy.py",
+      "backend/app/modules/learning/mastery/repository.py",
+      "backend/app/modules/learning/mastery/service.py",
+      "backend/app/modules/learning/models.py"
+    ],
+    "backend/app/modules/learning/mastery/scheduler.py": [
+      "backend/app/modules/learning/mastery/models.py"
+    ]
+  }
+}

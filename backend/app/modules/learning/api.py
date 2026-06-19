@@ -187,15 +187,16 @@ async def update_progress(
     user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ):
+    user_id = user.id
     await ensure_words_seeded(db)
     progress = await update_word_progress(
         db=db,
-        user_id=user.id,
+        user_id=user_id,
         word_id=payload.word_id,
         event=payload.event,
         correct=payload.correct,
     )
-    await invalidate_progress_summary(user.id)
+    await invalidate_progress_summary(user_id)
     return {
         "ok": True,
         "next_review_at": progress.next_review_at,
@@ -210,7 +211,8 @@ async def progress_summary(
     user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ):
-    cached = await get_cached_progress_summary(user.id)
+    user_id = user.id
+    cached = await get_cached_progress_summary(user_id)
     if cached is not None:
         return ProgressSummary.model_validate(cached)
 
@@ -225,7 +227,7 @@ async def progress_summary(
         await db.execute(
             select(Word.level, func.count(Word.id))
             .join(UserWordProgress, UserWordProgress.word_id == Word.id)
-            .where(UserWordProgress.user_id == user.id)
+            .where(UserWordProgress.user_id == user_id)
             .where(UserWordProgress.recognition_strength >= mastery_threshold)
             .where(UserWordProgress.recall_strength >= mastery_threshold)
             .group_by(Word.level)
@@ -248,7 +250,7 @@ async def progress_summary(
     next_review_at = (
         await db.execute(
             select(func.min(UserWordProgress.next_review_at))
-            .where(UserWordProgress.user_id == user.id)
+            .where(UserWordProgress.user_id == user_id)
         )
     ).scalar_one_or_none()
 
@@ -258,5 +260,5 @@ async def progress_summary(
         next_review_at=next_review_at,
         levels=levels,
     )
-    await set_cached_progress_summary(user.id, summary.model_dump(mode="json"))
+    await set_cached_progress_summary(user_id, summary.model_dump(mode="json"))
     return summary

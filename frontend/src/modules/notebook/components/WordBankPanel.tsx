@@ -67,6 +67,7 @@ export function WordBankPanel() {
       description="Save unknown words from tutor chat or add them manually. Corpus-linked words join your spaced-repetition queue."
       loading={panel.loading}
       error={panel.error}
+      actionError={actionError}
       onRetry={panel.refresh}
     >
       <Stack spacing={2}>
@@ -102,7 +103,6 @@ export function WordBankPanel() {
           </Button>
         </Stack>
 
-        {actionError && <Alert severity="error">{actionError}</Alert>}
         {message && <Alert severity="success">{message}</Alert>}
 
         {!panel.loading && entries.length === 0 && (

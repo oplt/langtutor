@@ -9,6 +9,7 @@ from fastapi import APIRouter, WebSocket, WebSocketDisconnect
 
 from backend.app.modules.auth.ws import WS_AUTH_FAILED, ws_require_user
 from backend.app.modules.auth.ws_tokens import ws_accept_subprotocol
+from backend.app.modules.rag.application.job_progress_cache import get_rag_job_progress
 from backend.app.modules.rag.domain.enums import IngestionJobStatus
 from backend.app.modules.rag.infrastructure.repositories import get_rag_repository
 from backend.app.db.session import AsyncSessionLocal
@@ -21,6 +22,35 @@ _TERMINAL_JOB_STATUSES = {
     IngestionJobStatus.COMPLETED.value,
     IngestionJobStatus.FAILED.value,
 }
+_POLL_INTERVAL_SECONDS = 0.25
+
+
+async def _load_job_progress(
+    *,
+    repo,
+    db,
+    job_uuid: uuid.UUID,
+    job_id: str,
+    user_id: uuid.UUID,
+) -> dict[str, object] | None:
+    cached = await get_rag_job_progress(job_id)
+    if cached is not None:
+        return {
+            "status": cached.get("status"),
+            "progress_stage": cached.get("progress_stage"),
+            "error_message": cached.get("error_message"),
+        }
+
+    row = await repo.get_job(db, job_uuid)
+    if row is None or str(row.user_id) != str(user_id):
+        return None
+
+    document = await repo.get_document(db, document_id=row.document_id)
+    return {
+        "status": row.status,
+        "progress_stage": document.status if document is not None else None,
+        "error_message": row.error_message,
+    }
 
 
 @router.websocket("/jobs/{job_id}/ws")
@@ -34,28 +64,42 @@ async def rag_job_progress_websocket(ws: WebSocket, job_id: str) -> None:
     job_uuid = uuid.UUID(job_id)
 
     try:
-        while True:
-            async with AsyncSessionLocal() as db:
-                row = await repo.get_job(db, job_uuid)
-                if row is None or str(row.user_id) != str(user.id):
-                    await ws.send_text(json.dumps({"type": "error", "message": "Job not found"}))
-                    break
+        async with AsyncSessionLocal() as db:
+            while True:
+                progress = await get_rag_job_progress(job_id)
+                if progress is not None:
+                    status = progress.get("status")
+                    progress_stage = progress.get("progress_stage")
+                    error_message = progress.get("error_message")
+                else:
+                    progress = await _load_job_progress(
+                        repo=repo,
+                        db=db,
+                        job_uuid=job_uuid,
+                        job_id=job_id,
+                        user_id=user.id,
+                    )
+                    if progress is None:
+                        await ws.send_text(json.dumps({"type": "error", "message": "Job not found"}))
+                        break
+                    status = progress["status"]
+                    progress_stage = progress["progress_stage"]
+                    error_message = progress["error_message"]
+                    db.expire_all()
 
-                document = await repo.get_document(db, document_id=row.document_id)
-                progress_stage = document.status if document is not None else None
                 payload = {
                     "type": "job_progress",
                     "job_id": job_id,
-                    "status": row.status,
+                    "status": status,
                     "progress_stage": progress_stage,
-                    "error_message": row.error_message,
+                    "error_message": error_message,
                 }
                 await ws.send_text(json.dumps(payload, default=str))
 
-                if row.status in _TERMINAL_JOB_STATUSES:
+                if status in _TERMINAL_JOB_STATUSES:
                     break
 
-            await asyncio.sleep(0.5)
+                await asyncio.sleep(_POLL_INTERVAL_SECONDS)
     except WebSocketDisconnect:
         return
     except Exception:
@@ -63,4 +107,16 @@ async def rag_job_progress_websocket(ws: WebSocket, job_id: str) -> None:
         try:
             await ws.send_text(json.dumps({"type": "error", "message": "Unexpected websocket error."}))
         except Exception:
-            pass
+            logger.warning(
+                "rag_job_ws_error_send_failed job_id=%s",
+                job_id,
+                exc_info=True,
+            )
+            try:
+                await ws.close(code=1011, reason="Unexpected websocket error")
+            except Exception:
+                logger.debug(
+                    "rag_job_ws_close_failed job_id=%s",
+                    job_id,
+                    exc_info=True,
+                )

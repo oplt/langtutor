@@ -1,4 +1,4 @@
-import { memo, useMemo, useState } from "react";
+import { memo, useEffect, useMemo, useState } from "react";
 import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -15,6 +15,7 @@ import SendRoundedIcon from "@mui/icons-material/SendRounded";
 
 import type { CefrLevel } from "../../learning/api/learningPathApi";
 import { CefrLevelSelect } from "../../../shared/components/CefrLevelSelect";
+import { FeaturePanel } from "../../../shared/components/FeaturePanel";
 import { AskUserCard } from "./AskUserCard";
 import { useTutorChat } from "../hooks/useTutorChat";
 import type { TutorChatMessage, TutorConnectionState } from "../types";
@@ -99,9 +100,14 @@ export function TutorChatPanel() {
   } = useTutorChat();
 
   const [draft, setDraft] = useState("");
+  const [connectionAnnouncement, setConnectionAnnouncement] = useState("");
   const conn = useMemo(() => connectionLabel(connection), [connection]);
   const awaitingReply = Boolean(pausedQuestion || pausedAskUser);
   const structuredPause = Boolean(pausedAskUser?.questions?.length);
+
+  useEffect(() => {
+    setConnectionAnnouncement(`Tutor connection ${conn.label.toLowerCase()}.`);
+  }, [conn.label]);
 
   const submit = async () => {
     if (!draft.trim() || structuredPause) return;
@@ -112,9 +118,37 @@ export function TutorChatPanel() {
   };
 
   return (
-    <Stack spacing={2} sx={{ height: "100%" }}>
-      <Stack direction="row" spacing={1} alignItems="center" flexWrap="wrap" useFlexGap>
-        <Typography variant="h6">Dutch AI Tutor</Typography>
+    <FeaturePanel
+      title="Dutch AI Tutor"
+      description="Practice grammar, conversation, and drills. The tutor streams replies and can pause to ask follow-up questions."
+      loading={connection === "connecting" || connection === "idle"}
+      error={connection === "error" ? error || "Sign in to use the AI tutor." : null}
+    >
+      <Stack spacing={2} sx={{ height: "100%" }}>
+      <Box
+        component="span"
+        aria-live="polite"
+        sx={{
+          position: "absolute",
+          width: 1,
+          height: 1,
+          padding: 0,
+          margin: -1,
+          overflow: "hidden",
+          clip: "rect(0, 0, 0, 0)",
+          whiteSpace: "nowrap",
+          border: 0,
+        }}
+      >
+        {connectionAnnouncement}
+      </Box>
+      <Stack
+        direction={{ xs: "column", sm: "row" }}
+        spacing={1}
+        alignItems={{ xs: "stretch", sm: "center" }}
+        flexWrap="wrap"
+        useFlexGap
+      >
         <Chip size="small" color={conn.color} label={conn.label} />
         <CefrLevelSelect
           value={cefrLevel as CefrLevel}
@@ -127,7 +161,7 @@ export function TutorChatPanel() {
           label="Persona"
           value={persona}
           onChange={(e) => setPersona(e.target.value)}
-          sx={{ minWidth: 190 }}
+          sx={{ minWidth: { xs: "100%", sm: 190 } }}
         >
           {PERSONAS.map((entry) => (
             <MenuItem key={entry.value} value={entry.value}>
@@ -142,7 +176,7 @@ export function TutorChatPanel() {
         )}
       </Stack>
 
-      {error && (
+      {connection === "open" && error && (
         <Alert severity="error" onClose={clearError}>
           {error}
         </Alert>
@@ -234,7 +268,8 @@ export function TutorChatPanel() {
           </IconButton>
         </Stack>
       )}
-    </Stack>
+      </Stack>
+    </FeaturePanel>
   );
 }
 

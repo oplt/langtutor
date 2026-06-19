@@ -17,10 +17,6 @@ def build_system_prompt(
 
     parts: list[str] = []
 
-    override = settings_override.strip()
-    if override:
-        parts.append(override)
-
     base = manager.get_text(prompts, "system", "base")
     if base:
         parts.append(base)
@@ -54,6 +50,10 @@ def build_system_prompt(
             f"Practice language: {practice_language}. "
             f"UI / explanation language: {normalize_language(ui_language)}."
         )
+
+    override = settings_override.strip()
+    if override:
+        parts.append(override)
 
     return "\n\n".join(part.strip() for part in parts if part and part.strip())
 

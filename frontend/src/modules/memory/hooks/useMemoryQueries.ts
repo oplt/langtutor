@@ -1,5 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
+import { heavyQueryOptions, queryStaleTimes } from "../../../shared/api/queryClient";
 import { queryKeys } from "../../../shared/api/queryKeys";
 import {
   appendPreference,
@@ -13,6 +14,8 @@ export function useMemoryOverviewQuery() {
   return useQuery<MemoryOverview>({
     queryKey: queryKeys.memory.overview,
     queryFn: fetchMemoryOverview,
+    staleTime: queryStaleTimes.memoryHeavy,
+    ...heavyQueryOptions,
   });
 }
 
@@ -20,6 +23,8 @@ export function useMemoryL3Query() {
   return useQuery<{ content: string }>({
     queryKey: queryKeys.memory.l3,
     queryFn: fetchMemoryL3,
+    staleTime: queryStaleTimes.memoryHeavy,
+    ...heavyQueryOptions,
   });
 }
 

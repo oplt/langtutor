@@ -1,0 +1,2727 @@
+{
+  "nodes": [
+    {
+      "id": "file:backend/app/bootstrap/routes.py",
+      "type": "file",
+      "name": "routes.py",
+      "filePath": "backend/app/bootstrap/routes.py",
+      "summary": "code file; python; 1 function(s); exports: register_routes.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/bootstrap/routes.py:register_routes",
+      "type": "function",
+      "name": "register_routes",
+      "filePath": "backend/app/bootstrap/routes.py",
+      "summary": "Function register_routes in backend/app/bootstrap/routes.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/core/exceptions.py",
+      "type": "file",
+      "name": "exceptions.py",
+      "filePath": "backend/app/core/exceptions.py",
+      "summary": "code file; python; 1 class(es); exports: AppError.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/core/exceptions.py:AppError",
+      "type": "class",
+      "name": "AppError",
+      "filePath": "backend/app/core/exceptions.py",
+      "summary": "Class AppError in backend/app/core/exceptions.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/core/security.py",
+      "type": "file",
+      "name": "security.py",
+      "filePath": "backend/app/core/security.py",
+      "summary": "code file; python; 7 function(s); 5 class(es); exports: TokenError, TokenMissingSubject, TokenExpired, TokenInvalid.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:backend/app/core/security.py:hash_password",
+      "type": "function",
+      "name": "hash_password",
+      "filePath": "backend/app/core/security.py",
+      "summary": "Function hash_password in backend/app/core/security.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/security.py:verify_password",
+      "type": "function",
+      "name": "verify_password",
+      "filePath": "backend/app/core/security.py",
+      "summary": "Function verify_password in backend/app/core/security.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/security.py:verify_password_and_rehash_if_needed",
+      "type": "function",
+      "name": "verify_password_and_rehash_if_needed",
+      "filePath": "backend/app/core/security.py",
+      "summary": "Function verify_password_and_rehash_if_needed in backend/app/core/security.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/security.py:create_access_token",
+      "type": "function",
+      "name": "create_access_token",
+      "filePath": "backend/app/core/security.py",
+      "summary": "Function create_access_token in backend/app/core/security.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/security.py:decode_token",
+      "type": "function",
+      "name": "decode_token",
+      "filePath": "backend/app/core/security.py",
+      "summary": "Function decode_token in backend/app/core/security.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/security.py:try_decode_token",
+      "type": "function",
+      "name": "try_decode_token",
+      "filePath": "backend/app/core/security.py",
+      "summary": "Function try_decode_token in backend/app/core/security.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/core/security.py:verify_token",
+      "type": "function",
+      "name": "verify_token",
+      "filePath": "backend/app/core/security.py",
+      "summary": "Function verify_token in backend/app/core/security.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/core/security.py:TokenError",
+      "type": "class",
+      "name": "TokenError",
+      "filePath": "backend/app/core/security.py",
+      "summary": "Class TokenError in backend/app/core/security.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/core/security.py:TokenMissingSubject",
+      "type": "class",
+      "name": "TokenMissingSubject",
+      "filePath": "backend/app/core/security.py",
+      "summary": "Class TokenMissingSubject in backend/app/core/security.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/core/security.py:TokenExpired",
+      "type": "class",
+      "name": "TokenExpired",
+      "filePath": "backend/app/core/security.py",
+      "summary": "Class TokenExpired in backend/app/core/security.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/core/security.py:TokenInvalid",
+      "type": "class",
+      "name": "TokenInvalid",
+      "filePath": "backend/app/core/security.py",
+      "summary": "Class TokenInvalid in backend/app/core/security.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/core/security.py:TokenMalformed",
+      "type": "class",
+      "name": "TokenMalformed",
+      "filePath": "backend/app/core/security.py",
+      "summary": "Class TokenMalformed in backend/app/core/security.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/db/session.py",
+      "type": "file",
+      "name": "session.py",
+      "filePath": "backend/app/db/session.py",
+      "summary": "code file; python; 4 function(s); exports: build_engine, session_scope, get_db, db_healthcheck.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:backend/app/db/session.py:build_engine",
+      "type": "function",
+      "name": "build_engine",
+      "filePath": "backend/app/db/session.py",
+      "summary": "Function build_engine in backend/app/db/session.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/db/session.py:session_scope",
+      "type": "function",
+      "name": "session_scope",
+      "filePath": "backend/app/db/session.py",
+      "summary": "Function session_scope in backend/app/db/session.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/db/session.py:get_db",
+      "type": "function",
+      "name": "get_db",
+      "filePath": "backend/app/db/session.py",
+      "summary": "Function get_db in backend/app/db/session.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/db/session.py:db_healthcheck",
+      "type": "function",
+      "name": "db_healthcheck",
+      "filePath": "backend/app/db/session.py",
+      "summary": "Function db_healthcheck in backend/app/db/session.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/auth/api.py",
+      "type": "file",
+      "name": "api.py",
+      "filePath": "backend/app/modules/auth/api.py",
+      "summary": "code file; python; 7 function(s); exports: _email_hash, signup, login, google_login.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:backend/app/modules/auth/api.py:_email_hash",
+      "type": "function",
+      "name": "_email_hash",
+      "filePath": "backend/app/modules/auth/api.py",
+      "summary": "Function _email_hash in backend/app/modules/auth/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/auth/api.py:signup",
+      "type": "function",
+      "name": "signup",
+      "filePath": "backend/app/modules/auth/api.py",
+      "summary": "Function signup in backend/app/modules/auth/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/auth/api.py:login",
+      "type": "function",
+      "name": "login",
+      "filePath": "backend/app/modules/auth/api.py",
+      "summary": "Function login in backend/app/modules/auth/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/auth/api.py:google_login",
+      "type": "function",
+      "name": "google_login",
+      "filePath": "backend/app/modules/auth/api.py",
+      "summary": "Function google_login in backend/app/modules/auth/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/auth/api.py:google_callback",
+      "type": "function",
+      "name": "google_callback",
+      "filePath": "backend/app/modules/auth/api.py",
+      "summary": "Function google_callback in backend/app/modules/auth/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/auth/api.py:me",
+      "type": "function",
+      "name": "me",
+      "filePath": "backend/app/modules/auth/api.py",
+      "summary": "Function me in backend/app/modules/auth/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/auth/api.py:update_me",
+      "type": "function",
+      "name": "update_me",
+      "filePath": "backend/app/modules/auth/api.py",
+      "summary": "Function update_me in backend/app/modules/auth/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/auth/dependencies.py",
+      "type": "file",
+      "name": "dependencies.py",
+      "filePath": "backend/app/modules/auth/dependencies.py",
+      "summary": "code file; python; 2 function(s); exports: auth_error, get_current_user.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/auth/dependencies.py:auth_error",
+      "type": "function",
+      "name": "auth_error",
+      "filePath": "backend/app/modules/auth/dependencies.py",
+      "summary": "Function auth_error in backend/app/modules/auth/dependencies.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/auth/dependencies.py:get_current_user",
+      "type": "function",
+      "name": "get_current_user",
+      "filePath": "backend/app/modules/auth/dependencies.py",
+      "summary": "Function get_current_user in backend/app/modules/auth/dependencies.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/auth/schemas.py",
+      "type": "file",
+      "name": "schemas.py",
+      "filePath": "backend/app/modules/auth/schemas.py",
+      "summary": "code file; python; 5 class(es); exports: SignUpIn, LoginIn, UserOut, AuthOut.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/auth/schemas.py:SignUpIn",
+      "type": "class",
+      "name": "SignUpIn",
+      "filePath": "backend/app/modules/auth/schemas.py",
+      "summary": "Class SignUpIn in backend/app/modules/auth/schemas.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/auth/schemas.py:LoginIn",
+      "type": "class",
+      "name": "LoginIn",
+      "filePath": "backend/app/modules/auth/schemas.py",
+      "summary": "Class LoginIn in backend/app/modules/auth/schemas.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/auth/schemas.py:UserOut",
+      "type": "class",
+      "name": "UserOut",
+      "filePath": "backend/app/modules/auth/schemas.py",
+      "summary": "Class UserOut in backend/app/modules/auth/schemas.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/auth/schemas.py:AuthOut",
+      "type": "class",
+      "name": "AuthOut",
+      "filePath": "backend/app/modules/auth/schemas.py",
+      "summary": "Class AuthOut in backend/app/modules/auth/schemas.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/auth/schemas.py:UserProfileUpdateIn",
+      "type": "class",
+      "name": "UserProfileUpdateIn",
+      "filePath": "backend/app/modules/auth/schemas.py",
+      "summary": "Class UserProfileUpdateIn in backend/app/modules/auth/schemas.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/auth/ws.py",
+      "type": "file",
+      "name": "ws.py",
+      "filePath": "backend/app/modules/auth/ws.py",
+      "summary": "code file; python; 1 function(s); exports: ws_require_user.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/auth/ws.py:ws_require_user",
+      "type": "function",
+      "name": "ws_require_user",
+      "filePath": "backend/app/modules/auth/ws.py",
+      "summary": "Function ws_require_user in backend/app/modules/auth/ws.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/auth/ws_tokens.py",
+      "type": "file",
+      "name": "ws_tokens.py",
+      "filePath": "backend/app/modules/auth/ws_tokens.py",
+      "summary": "code file; python; 3 function(s); exports: ws_accept_subprotocol, extract_ws_token, _offered_subprotocols.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/auth/ws_tokens.py:ws_accept_subprotocol",
+      "type": "function",
+      "name": "ws_accept_subprotocol",
+      "filePath": "backend/app/modules/auth/ws_tokens.py",
+      "summary": "Function ws_accept_subprotocol in backend/app/modules/auth/ws_tokens.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/auth/ws_tokens.py:extract_ws_token",
+      "type": "function",
+      "name": "extract_ws_token",
+      "filePath": "backend/app/modules/auth/ws_tokens.py",
+      "summary": "Function extract_ws_token in backend/app/modules/auth/ws_tokens.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/auth/ws_tokens.py:_offered_subprotocols",
+      "type": "function",
+      "name": "_offered_subprotocols",
+      "filePath": "backend/app/modules/auth/ws_tokens.py",
+      "summary": "Function _offered_subprotocols in backend/app/modules/auth/ws_tokens.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/book/api.py",
+      "type": "file",
+      "name": "api.py",
+      "filePath": "backend/app/modules/book/api.py",
+      "summary": "code file; python; 5 function(s); exports: list_books, get_progress, get_book, get_page.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/book/api.py:list_books",
+      "type": "function",
+      "name": "list_books",
+      "filePath": "backend/app/modules/book/api.py",
+      "summary": "Function list_books in backend/app/modules/book/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/book/api.py:get_progress",
+      "type": "function",
+      "name": "get_progress",
+      "filePath": "backend/app/modules/book/api.py",
+      "summary": "Function get_progress in backend/app/modules/book/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/book/api.py:get_book",
+      "type": "function",
+      "name": "get_book",
+      "filePath": "backend/app/modules/book/api.py",
+      "summary": "Function get_book in backend/app/modules/book/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/book/api.py:get_page",
+      "type": "function",
+      "name": "get_page",
+      "filePath": "backend/app/modules/book/api.py",
+      "summary": "Function get_page in backend/app/modules/book/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/book/api.py:complete_page",
+      "type": "function",
+      "name": "complete_page",
+      "filePath": "backend/app/modules/book/api.py",
+      "summary": "Function complete_page in backend/app/modules/book/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/extensions/api.py",
+      "type": "file",
+      "name": "api.py",
+      "filePath": "backend/app/modules/extensions/api.py",
+      "summary": "code file; python.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/extensions/api_auto.py",
+      "type": "file",
+      "name": "api_auto.py",
+      "filePath": "backend/app/modules/extensions/api_auto.py",
+      "summary": "code file; python; 2 function(s); 2 class(es); exports: AutoRouteIn, AutoRouteOut, route_capability, preview_resolve.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/extensions/api_auto.py:route_capability",
+      "type": "function",
+      "name": "route_capability",
+      "filePath": "backend/app/modules/extensions/api_auto.py",
+      "summary": "Function route_capability in backend/app/modules/extensions/api_auto.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/extensions/api_auto.py:preview_resolve",
+      "type": "function",
+      "name": "preview_resolve",
+      "filePath": "backend/app/modules/extensions/api_auto.py",
+      "summary": "Function preview_resolve in backend/app/modules/extensions/api_auto.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/extensions/api_auto.py:AutoRouteIn",
+      "type": "class",
+      "name": "AutoRouteIn",
+      "filePath": "backend/app/modules/extensions/api_auto.py",
+      "summary": "Class AutoRouteIn in backend/app/modules/extensions/api_auto.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/extensions/api_auto.py:AutoRouteOut",
+      "type": "class",
+      "name": "AutoRouteOut",
+      "filePath": "backend/app/modules/extensions/api_auto.py",
+      "summary": "Class AutoRouteOut in backend/app/modules/extensions/api_auto.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/extensions/api_classroom.py",
+      "type": "file",
+      "name": "api_classroom.py",
+      "filePath": "backend/app/modules/extensions/api_classroom.py",
+      "summary": "code file; python; 4 function(s); 1 class(es); exports: ClassroomGrantIn, list_students, list_teachers, create_grant.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:backend/app/modules/extensions/api_classroom.py:list_students",
+      "type": "function",
+      "name": "list_students",
+      "filePath": "backend/app/modules/extensions/api_classroom.py",
+      "summary": "Function list_students in backend/app/modules/extensions/api_classroom.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/extensions/api_classroom.py:list_teachers",
+      "type": "function",
+      "name": "list_teachers",
+      "filePath": "backend/app/modules/extensions/api_classroom.py",
+      "summary": "Function list_teachers in backend/app/modules/extensions/api_classroom.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/extensions/api_classroom.py:create_grant",
+      "type": "function",
+      "name": "create_grant",
+      "filePath": "backend/app/modules/extensions/api_classroom.py",
+      "summary": "Function create_grant in backend/app/modules/extensions/api_classroom.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/extensions/api_classroom.py:revoke_grant",
+      "type": "function",
+      "name": "revoke_grant",
+      "filePath": "backend/app/modules/extensions/api_classroom.py",
+      "summary": "Function revoke_grant in backend/app/modules/extensions/api_classroom.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/extensions/api_classroom.py:ClassroomGrantIn",
+      "type": "class",
+      "name": "ClassroomGrantIn",
+      "filePath": "backend/app/modules/extensions/api_classroom.py",
+      "summary": "Class ClassroomGrantIn in backend/app/modules/extensions/api_classroom.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/extensions/api_partners.py",
+      "type": "file",
+      "name": "api_partners.py",
+      "filePath": "backend/app/modules/extensions/api_partners.py",
+      "summary": "code file; python; 5 function(s); 1 class(es); exports: PartnerChannelIn, list_channels, register_channel, disable_channel.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:backend/app/modules/extensions/api_partners.py:list_channels",
+      "type": "function",
+      "name": "list_channels",
+      "filePath": "backend/app/modules/extensions/api_partners.py",
+      "summary": "Function list_channels in backend/app/modules/extensions/api_partners.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/extensions/api_partners.py:register_channel",
+      "type": "function",
+      "name": "register_channel",
+      "filePath": "backend/app/modules/extensions/api_partners.py",
+      "summary": "Function register_channel in backend/app/modules/extensions/api_partners.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/extensions/api_partners.py:disable_channel",
+      "type": "function",
+      "name": "disable_channel",
+      "filePath": "backend/app/modules/extensions/api_partners.py",
+      "summary": "Function disable_channel in backend/app/modules/extensions/api_partners.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/extensions/api_partners.py:send_daily_prompt",
+      "type": "function",
+      "name": "send_daily_prompt",
+      "filePath": "backend/app/modules/extensions/api_partners.py",
+      "summary": "Function send_daily_prompt in backend/app/modules/extensions/api_partners.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/extensions/api_partners.py:partner_webhook",
+      "type": "function",
+      "name": "partner_webhook",
+      "filePath": "backend/app/modules/extensions/api_partners.py",
+      "summary": "Function partner_webhook in backend/app/modules/extensions/api_partners.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/extensions/api_partners.py:PartnerChannelIn",
+      "type": "class",
+      "name": "PartnerChannelIn",
+      "filePath": "backend/app/modules/extensions/api_partners.py",
+      "summary": "Class PartnerChannelIn in backend/app/modules/extensions/api_partners.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/extensions/api_plugins.py",
+      "type": "file",
+      "name": "api_plugins.py",
+      "filePath": "backend/app/modules/extensions/api_plugins.py",
+      "summary": "code file; python; 1 function(s); exports: list_plugins.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/extensions/api_plugins.py:list_plugins",
+      "type": "function",
+      "name": "list_plugins",
+      "filePath": "backend/app/modules/extensions/api_plugins.py",
+      "summary": "Function list_plugins in backend/app/modules/extensions/api_plugins.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/extensions/api_sandbox.py",
+      "type": "file",
+      "name": "api_sandbox.py",
+      "filePath": "backend/app/modules/extensions/api_sandbox.py",
+      "summary": "code file; python; 1 function(s); 1 class(es); exports: SandboxRunIn, sandbox_run.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/extensions/api_sandbox.py:sandbox_run",
+      "type": "function",
+      "name": "sandbox_run",
+      "filePath": "backend/app/modules/extensions/api_sandbox.py",
+      "summary": "Function sandbox_run in backend/app/modules/extensions/api_sandbox.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/extensions/api_sandbox.py:SandboxRunIn",
+      "type": "class",
+      "name": "SandboxRunIn",
+      "filePath": "backend/app/modules/extensions/api_sandbox.py",
+      "summary": "Class SandboxRunIn in backend/app/modules/extensions/api_sandbox.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/extensions/api_vision.py",
+      "type": "file",
+      "name": "api_vision.py",
+      "filePath": "backend/app/modules/extensions/api_vision.py",
+      "summary": "code file; python; 1 function(s); 2 class(es); exports: VisionOcrIn, VisionOcrOut, vision_ocr.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/extensions/api_vision.py:vision_ocr",
+      "type": "function",
+      "name": "vision_ocr",
+      "filePath": "backend/app/modules/extensions/api_vision.py",
+      "summary": "Function vision_ocr in backend/app/modules/extensions/api_vision.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/extensions/api_vision.py:VisionOcrIn",
+      "type": "class",
+      "name": "VisionOcrIn",
+      "filePath": "backend/app/modules/extensions/api_vision.py",
+      "summary": "Class VisionOcrIn in backend/app/modules/extensions/api_vision.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/extensions/api_vision.py:VisionOcrOut",
+      "type": "class",
+      "name": "VisionOcrOut",
+      "filePath": "backend/app/modules/extensions/api_vision.py",
+      "summary": "Class VisionOcrOut in backend/app/modules/extensions/api_vision.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/extensions/api_visualize.py",
+      "type": "file",
+      "name": "api_visualize.py",
+      "filePath": "backend/app/modules/extensions/api_visualize.py",
+      "summary": "code file; python; 1 function(s); exports: progress_charts.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/extensions/api_visualize.py:progress_charts",
+      "type": "function",
+      "name": "progress_charts",
+      "filePath": "backend/app/modules/extensions/api_visualize.py",
+      "summary": "Function progress_charts in backend/app/modules/extensions/api_visualize.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/extensions/classroom/service.py",
+      "type": "file",
+      "name": "service.py",
+      "filePath": "backend/app/modules/extensions/classroom/service.py",
+      "summary": "code file; python; 1 function(s); 1 class(es); exports: ClassroomService, get_classroom_service.",
+      "tags": [
+        "service",
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:backend/app/modules/extensions/classroom/service.py:get_classroom_service",
+      "type": "function",
+      "name": "get_classroom_service",
+      "filePath": "backend/app/modules/extensions/classroom/service.py",
+      "summary": "Function get_classroom_service in backend/app/modules/extensions/classroom/service.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/extensions/classroom/service.py:ClassroomService",
+      "type": "class",
+      "name": "ClassroomService",
+      "filePath": "backend/app/modules/extensions/classroom/service.py",
+      "summary": "Class ClassroomService in backend/app/modules/extensions/classroom/service.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:backend/app/modules/extensions/plugins/registry.py",
+      "type": "file",
+      "name": "registry.py",
+      "filePath": "backend/app/modules/extensions/plugins/registry.py",
+      "summary": "code file; python; 2 function(s); 1 class(es); exports: PluginManifest, list_plugin_manifests, default_plugin_tool_names.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/extensions/plugins/registry.py:list_plugin_manifests",
+      "type": "function",
+      "name": "list_plugin_manifests",
+      "filePath": "backend/app/modules/extensions/plugins/registry.py",
+      "summary": "Function list_plugin_manifests in backend/app/modules/extensions/plugins/registry.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/extensions/plugins/registry.py:default_plugin_tool_names",
+      "type": "function",
+      "name": "default_plugin_tool_names",
+      "filePath": "backend/app/modules/extensions/plugins/registry.py",
+      "summary": "Function default_plugin_tool_names in backend/app/modules/extensions/plugins/registry.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:backend/app/modules/extensions/plugins/registry.py:PluginManifest",
+      "type": "class",
+      "name": "PluginManifest",
+      "filePath": "backend/app/modules/extensions/plugins/registry.py",
+      "summary": "Class PluginManifest in backend/app/modules/extensions/plugins/registry.py.",
+      "tags": [
+        "data-model",
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:backend/app/modules/knowledge/api.py",
+      "type": "file",
+      "name": "api.py",
+      "filePath": "backend/app/modules/knowledge/api.py",
+      "summary": "code file; python; 5 function(s); exports: list_bases, create_base, ingest_default, ingest_paths.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/api.py:list_bases",
+      "type": "function",
+      "name": "list_bases",
+      "filePath": "backend/app/modules/knowledge/api.py",
+      "summary": "Function list_bases in backend/app/modules/knowledge/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/api.py:create_base",
+      "type": "function",
+      "name": "create_base",
+      "filePath": "backend/app/modules/knowledge/api.py",
+      "summary": "Function create_base in backend/app/modules/knowledge/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/api.py:ingest_default",
+      "type": "function",
+      "name": "ingest_default",
+      "filePath": "backend/app/modules/knowledge/api.py",
+      "summary": "Function ingest_default in backend/app/modules/knowledge/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/api.py:ingest_paths",
+      "type": "function",
+      "name": "ingest_paths",
+      "filePath": "backend/app/modules/knowledge/api.py",
+      "summary": "Function ingest_paths in backend/app/modules/knowledge/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:backend/app/modules/knowledge/api.py:search",
+      "type": "function",
+      "name": "search",
+      "filePath": "backend/app/modules/knowledge/api.py",
+      "summary": "Function search in backend/app/modules/knowledge/api.py.",
+      "tags": [
+        "module"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:backend/app/bootstrap/routes.py",
+      "target": "file:backend/app/modules/ai/api.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/routes.py",
+      "target": "file:backend/app/modules/auth/api.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/routes.py",
+      "target": "file:backend/app/modules/book/api.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/routes.py",
+      "target": "file:backend/app/modules/extensions/api.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/routes.py",
+      "target": "file:backend/app/modules/knowledge/api.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/routes.py",
+      "target": "file:backend/app/modules/learning/api.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/routes.py",
+      "target": "file:backend/app/modules/learning/path_api.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/routes.py",
+      "target": "file:backend/app/modules/learning/quiz_api.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/routes.py",
+      "target": "file:backend/app/modules/memory/api.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/routes.py",
+      "target": "file:backend/app/modules/notebook/api.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/routes.py",
+      "target": "file:backend/app/modules/persona/api.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/routes.py",
+      "target": "file:backend/app/modules/privacy/api.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/routes.py",
+      "target": "file:backend/app/modules/prompt/api.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/routes.py",
+      "target": "file:backend/app/modules/rag/api/routes.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/routes.py",
+      "target": "file:backend/app/modules/rag/api/ws.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/routes.py",
+      "target": "file:backend/app/modules/settings/api.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/routes.py",
+      "target": "file:backend/app/modules/skills/api.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/routes.py",
+      "target": "file:backend/app/modules/tutor/api.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/routes.py",
+      "target": "file:backend/app/modules/tutor/sessions/api.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/routes.py",
+      "target": "file:backend/app/modules/tutor/ws.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/bootstrap/routes.py",
+      "target": "function:backend/app/bootstrap/routes.py:register_routes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/bootstrap/routes.py",
+      "target": "function:backend/app/bootstrap/routes.py:register_routes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/exceptions.py",
+      "target": "class:backend/app/core/exceptions.py:AppError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/exceptions.py",
+      "target": "class:backend/app/core/exceptions.py:AppError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "file:backend/app/core/config.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "file:backend/app/core/exceptions.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "function:backend/app/core/security.py:hash_password",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "function:backend/app/core/security.py:hash_password",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "function:backend/app/core/security.py:verify_password",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "function:backend/app/core/security.py:verify_password",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "function:backend/app/core/security.py:verify_password_and_rehash_if_needed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "function:backend/app/core/security.py:verify_password_and_rehash_if_needed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "function:backend/app/core/security.py:create_access_token",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "function:backend/app/core/security.py:create_access_token",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "function:backend/app/core/security.py:decode_token",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "function:backend/app/core/security.py:decode_token",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "function:backend/app/core/security.py:try_decode_token",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "function:backend/app/core/security.py:try_decode_token",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "function:backend/app/core/security.py:verify_token",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "function:backend/app/core/security.py:verify_token",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "class:backend/app/core/security.py:TokenError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "class:backend/app/core/security.py:TokenError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "class:backend/app/core/security.py:TokenMissingSubject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "class:backend/app/core/security.py:TokenMissingSubject",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "class:backend/app/core/security.py:TokenExpired",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "class:backend/app/core/security.py:TokenExpired",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "class:backend/app/core/security.py:TokenInvalid",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "class:backend/app/core/security.py:TokenInvalid",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "class:backend/app/core/security.py:TokenMalformed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/core/security.py",
+      "target": "class:backend/app/core/security.py:TokenMalformed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/db/session.py",
+      "target": "file:backend/app/core/config.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/db/session.py",
+      "target": "file:backend/app/core/exceptions.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/db/session.py",
+      "target": "file:backend/app/core/logging.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/db/session.py",
+      "target": "file:backend/app/db/model_registry.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/db/session.py",
+      "target": "function:backend/app/db/session.py:build_engine",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/db/session.py",
+      "target": "function:backend/app/db/session.py:build_engine",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/db/session.py",
+      "target": "function:backend/app/db/session.py:session_scope",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/db/session.py",
+      "target": "function:backend/app/db/session.py:session_scope",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/db/session.py",
+      "target": "function:backend/app/db/session.py:get_db",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/db/session.py",
+      "target": "function:backend/app/db/session.py:get_db",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/db/session.py",
+      "target": "function:backend/app/db/session.py:db_healthcheck",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/db/session.py",
+      "target": "function:backend/app/db/session.py:db_healthcheck",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/api.py",
+      "target": "file:backend/app/core/config.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/auth/api.py",
+      "target": "file:backend/app/core/security.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/auth/api.py",
+      "target": "file:backend/app/db/session.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/auth/api.py",
+      "target": "file:backend/app/modules/auth/dependencies.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/auth/api.py",
+      "target": "file:backend/app/modules/auth/google_oauth.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/auth/api.py",
+      "target": "file:backend/app/modules/auth/oauth_state.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/auth/api.py",
+      "target": "file:backend/app/modules/auth/schemas.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/auth/api.py",
+      "target": "file:backend/app/modules/users/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/auth/api.py",
+      "target": "function:backend/app/modules/auth/api.py:_email_hash",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/api.py",
+      "target": "function:backend/app/modules/auth/api.py:_email_hash",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/api.py",
+      "target": "function:backend/app/modules/auth/api.py:signup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/api.py",
+      "target": "function:backend/app/modules/auth/api.py:signup",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/api.py",
+      "target": "function:backend/app/modules/auth/api.py:login",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/api.py",
+      "target": "function:backend/app/modules/auth/api.py:login",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/api.py",
+      "target": "function:backend/app/modules/auth/api.py:google_login",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/api.py",
+      "target": "function:backend/app/modules/auth/api.py:google_login",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/api.py",
+      "target": "function:backend/app/modules/auth/api.py:google_callback",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/api.py",
+      "target": "function:backend/app/modules/auth/api.py:google_callback",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/api.py",
+      "target": "function:backend/app/modules/auth/api.py:me",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/api.py",
+      "target": "function:backend/app/modules/auth/api.py:me",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/api.py",
+      "target": "function:backend/app/modules/auth/api.py:update_me",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/api.py",
+      "target": "function:backend/app/modules/auth/api.py:update_me",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/dependencies.py",
+      "target": "file:backend/app/core/logging.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/auth/dependencies.py",
+      "target": "file:backend/app/core/security.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/auth/dependencies.py",
+      "target": "file:backend/app/db/session.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/auth/dependencies.py",
+      "target": "file:backend/app/modules/users/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/auth/dependencies.py",
+      "target": "function:backend/app/modules/auth/dependencies.py:auth_error",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/dependencies.py",
+      "target": "function:backend/app/modules/auth/dependencies.py:auth_error",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/dependencies.py",
+      "target": "function:backend/app/modules/auth/dependencies.py:get_current_user",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/dependencies.py",
+      "target": "function:backend/app/modules/auth/dependencies.py:get_current_user",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/schemas.py",
+      "target": "class:backend/app/modules/auth/schemas.py:SignUpIn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/schemas.py",
+      "target": "class:backend/app/modules/auth/schemas.py:SignUpIn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/schemas.py",
+      "target": "class:backend/app/modules/auth/schemas.py:LoginIn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/schemas.py",
+      "target": "class:backend/app/modules/auth/schemas.py:LoginIn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/schemas.py",
+      "target": "class:backend/app/modules/auth/schemas.py:UserOut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/schemas.py",
+      "target": "class:backend/app/modules/auth/schemas.py:UserOut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/schemas.py",
+      "target": "class:backend/app/modules/auth/schemas.py:AuthOut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/schemas.py",
+      "target": "class:backend/app/modules/auth/schemas.py:AuthOut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/schemas.py",
+      "target": "class:backend/app/modules/auth/schemas.py:UserProfileUpdateIn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/schemas.py",
+      "target": "class:backend/app/modules/auth/schemas.py:UserProfileUpdateIn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/ws.py",
+      "target": "file:backend/app/core/security.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/auth/ws.py",
+      "target": "file:backend/app/db/session.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/auth/ws.py",
+      "target": "file:backend/app/modules/auth/ws_tokens.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/auth/ws.py",
+      "target": "file:backend/app/modules/users/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/auth/ws.py",
+      "target": "function:backend/app/modules/auth/ws.py:ws_require_user",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/ws.py",
+      "target": "function:backend/app/modules/auth/ws.py:ws_require_user",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/ws_tokens.py",
+      "target": "function:backend/app/modules/auth/ws_tokens.py:ws_accept_subprotocol",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/ws_tokens.py",
+      "target": "function:backend/app/modules/auth/ws_tokens.py:ws_accept_subprotocol",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/ws_tokens.py",
+      "target": "function:backend/app/modules/auth/ws_tokens.py:extract_ws_token",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/ws_tokens.py",
+      "target": "function:backend/app/modules/auth/ws_tokens.py:extract_ws_token",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/auth/ws_tokens.py",
+      "target": "function:backend/app/modules/auth/ws_tokens.py:_offered_subprotocols",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/auth/ws_tokens.py",
+      "target": "function:backend/app/modules/auth/ws_tokens.py:_offered_subprotocols",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/book/api.py",
+      "target": "file:backend/app/db/base.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/book/api.py",
+      "target": "file:backend/app/db/session.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/book/api.py",
+      "target": "file:backend/app/modules/auth/dependencies.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/book/api.py",
+      "target": "file:backend/app/modules/book/schemas.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/book/api.py",
+      "target": "file:backend/app/modules/book/service.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/book/api.py",
+      "target": "file:backend/app/modules/users/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/book/api.py",
+      "target": "function:backend/app/modules/book/api.py:list_books",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/book/api.py",
+      "target": "function:backend/app/modules/book/api.py:list_books",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/book/api.py",
+      "target": "function:backend/app/modules/book/api.py:get_progress",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/book/api.py",
+      "target": "function:backend/app/modules/book/api.py:get_progress",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/book/api.py",
+      "target": "function:backend/app/modules/book/api.py:get_book",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/book/api.py",
+      "target": "function:backend/app/modules/book/api.py:get_book",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/book/api.py",
+      "target": "function:backend/app/modules/book/api.py:get_page",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/book/api.py",
+      "target": "function:backend/app/modules/book/api.py:get_page",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/book/api.py",
+      "target": "function:backend/app/modules/book/api.py:complete_page",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/book/api.py",
+      "target": "function:backend/app/modules/book/api.py:complete_page",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api.py",
+      "target": "file:backend/app/modules/extensions/api_auto.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api.py",
+      "target": "file:backend/app/modules/extensions/api_classroom.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api.py",
+      "target": "file:backend/app/modules/extensions/api_partners.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api.py",
+      "target": "file:backend/app/modules/extensions/api_plugins.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api.py",
+      "target": "file:backend/app/modules/extensions/api_sandbox.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api.py",
+      "target": "file:backend/app/modules/extensions/api_vision.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api.py",
+      "target": "file:backend/app/modules/extensions/api_visualize.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_auto.py",
+      "target": "file:backend/app/modules/auth/dependencies.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_auto.py",
+      "target": "file:backend/app/modules/extensions/auto_router/service.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_auto.py",
+      "target": "file:backend/app/modules/users/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_auto.py",
+      "target": "function:backend/app/modules/extensions/api_auto.py:route_capability",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_auto.py",
+      "target": "function:backend/app/modules/extensions/api_auto.py:route_capability",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_auto.py",
+      "target": "function:backend/app/modules/extensions/api_auto.py:preview_resolve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_auto.py",
+      "target": "function:backend/app/modules/extensions/api_auto.py:preview_resolve",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_auto.py",
+      "target": "class:backend/app/modules/extensions/api_auto.py:AutoRouteIn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_auto.py",
+      "target": "class:backend/app/modules/extensions/api_auto.py:AutoRouteIn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_auto.py",
+      "target": "class:backend/app/modules/extensions/api_auto.py:AutoRouteOut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_auto.py",
+      "target": "class:backend/app/modules/extensions/api_auto.py:AutoRouteOut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_classroom.py",
+      "target": "file:backend/app/db/base.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_classroom.py",
+      "target": "file:backend/app/db/session.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_classroom.py",
+      "target": "file:backend/app/modules/auth/dependencies.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_classroom.py",
+      "target": "file:backend/app/modules/extensions/classroom/service.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_classroom.py",
+      "target": "file:backend/app/modules/users/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_classroom.py",
+      "target": "function:backend/app/modules/extensions/api_classroom.py:list_students",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_classroom.py",
+      "target": "function:backend/app/modules/extensions/api_classroom.py:list_students",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_classroom.py",
+      "target": "function:backend/app/modules/extensions/api_classroom.py:list_teachers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_classroom.py",
+      "target": "function:backend/app/modules/extensions/api_classroom.py:list_teachers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_classroom.py",
+      "target": "function:backend/app/modules/extensions/api_classroom.py:create_grant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_classroom.py",
+      "target": "function:backend/app/modules/extensions/api_classroom.py:create_grant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_classroom.py",
+      "target": "function:backend/app/modules/extensions/api_classroom.py:revoke_grant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_classroom.py",
+      "target": "function:backend/app/modules/extensions/api_classroom.py:revoke_grant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_classroom.py",
+      "target": "class:backend/app/modules/extensions/api_classroom.py:ClassroomGrantIn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_classroom.py",
+      "target": "class:backend/app/modules/extensions/api_classroom.py:ClassroomGrantIn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_partners.py",
+      "target": "file:backend/app/db/session.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_partners.py",
+      "target": "file:backend/app/modules/auth/dependencies.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_partners.py",
+      "target": "file:backend/app/modules/extensions/partners/service.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_partners.py",
+      "target": "file:backend/app/modules/users/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_partners.py",
+      "target": "function:backend/app/modules/extensions/api_partners.py:list_channels",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_partners.py",
+      "target": "function:backend/app/modules/extensions/api_partners.py:list_channels",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_partners.py",
+      "target": "function:backend/app/modules/extensions/api_partners.py:register_channel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_partners.py",
+      "target": "function:backend/app/modules/extensions/api_partners.py:register_channel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_partners.py",
+      "target": "function:backend/app/modules/extensions/api_partners.py:disable_channel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_partners.py",
+      "target": "function:backend/app/modules/extensions/api_partners.py:disable_channel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_partners.py",
+      "target": "function:backend/app/modules/extensions/api_partners.py:send_daily_prompt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_partners.py",
+      "target": "function:backend/app/modules/extensions/api_partners.py:send_daily_prompt",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_partners.py",
+      "target": "function:backend/app/modules/extensions/api_partners.py:partner_webhook",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_partners.py",
+      "target": "function:backend/app/modules/extensions/api_partners.py:partner_webhook",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_partners.py",
+      "target": "class:backend/app/modules/extensions/api_partners.py:PartnerChannelIn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_partners.py",
+      "target": "class:backend/app/modules/extensions/api_partners.py:PartnerChannelIn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_plugins.py",
+      "target": "file:backend/app/modules/agent/runtime/orchestrator.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_plugins.py",
+      "target": "file:backend/app/modules/auth/dependencies.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_plugins.py",
+      "target": "file:backend/app/modules/extensions/plugins/registry.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_plugins.py",
+      "target": "file:backend/app/modules/users/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_plugins.py",
+      "target": "function:backend/app/modules/extensions/api_plugins.py:list_plugins",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_plugins.py",
+      "target": "function:backend/app/modules/extensions/api_plugins.py:list_plugins",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_sandbox.py",
+      "target": "file:backend/app/modules/auth/dependencies.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_sandbox.py",
+      "target": "file:backend/app/modules/extensions/sandbox/service.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_sandbox.py",
+      "target": "file:backend/app/modules/users/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_sandbox.py",
+      "target": "function:backend/app/modules/extensions/api_sandbox.py:sandbox_run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_sandbox.py",
+      "target": "function:backend/app/modules/extensions/api_sandbox.py:sandbox_run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_sandbox.py",
+      "target": "class:backend/app/modules/extensions/api_sandbox.py:SandboxRunIn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_sandbox.py",
+      "target": "class:backend/app/modules/extensions/api_sandbox.py:SandboxRunIn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_vision.py",
+      "target": "file:backend/app/modules/auth/dependencies.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_vision.py",
+      "target": "file:backend/app/modules/extensions/vision/service.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_vision.py",
+      "target": "file:backend/app/modules/users/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_vision.py",
+      "target": "function:backend/app/modules/extensions/api_vision.py:vision_ocr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_vision.py",
+      "target": "function:backend/app/modules/extensions/api_vision.py:vision_ocr",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_vision.py",
+      "target": "class:backend/app/modules/extensions/api_vision.py:VisionOcrIn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_vision.py",
+      "target": "class:backend/app/modules/extensions/api_vision.py:VisionOcrIn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_vision.py",
+      "target": "class:backend/app/modules/extensions/api_vision.py:VisionOcrOut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_vision.py",
+      "target": "class:backend/app/modules/extensions/api_vision.py:VisionOcrOut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_visualize.py",
+      "target": "file:backend/app/db/session.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_visualize.py",
+      "target": "file:backend/app/modules/auth/dependencies.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_visualize.py",
+      "target": "file:backend/app/modules/extensions/visualize/service.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_visualize.py",
+      "target": "file:backend/app/modules/users/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_visualize.py",
+      "target": "function:backend/app/modules/extensions/api_visualize.py:progress_charts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/api_visualize.py",
+      "target": "function:backend/app/modules/extensions/api_visualize.py:progress_charts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/classroom/service.py",
+      "target": "file:backend/app/db/base.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/classroom/service.py",
+      "target": "file:backend/app/modules/extensions/classroom/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/classroom/service.py",
+      "target": "file:backend/app/modules/users/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/extensions/classroom/service.py",
+      "target": "function:backend/app/modules/extensions/classroom/service.py:get_classroom_service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/classroom/service.py",
+      "target": "function:backend/app/modules/extensions/classroom/service.py:get_classroom_service",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/classroom/service.py",
+      "target": "class:backend/app/modules/extensions/classroom/service.py:ClassroomService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/classroom/service.py",
+      "target": "class:backend/app/modules/extensions/classroom/service.py:ClassroomService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/plugins/registry.py",
+      "target": "function:backend/app/modules/extensions/plugins/registry.py:list_plugin_manifests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/plugins/registry.py",
+      "target": "function:backend/app/modules/extensions/plugins/registry.py:list_plugin_manifests",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/plugins/registry.py",
+      "target": "function:backend/app/modules/extensions/plugins/registry.py:default_plugin_tool_names",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/plugins/registry.py",
+      "target": "function:backend/app/modules/extensions/plugins/registry.py:default_plugin_tool_names",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/extensions/plugins/registry.py",
+      "target": "class:backend/app/modules/extensions/plugins/registry.py:PluginManifest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/extensions/plugins/registry.py",
+      "target": "class:backend/app/modules/extensions/plugins/registry.py:PluginManifest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/api.py",
+      "target": "file:backend/app/db/session.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/api.py",
+      "target": "file:backend/app/deps.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/api.py",
+      "target": "file:backend/app/modules/auth/dependencies.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/api.py",
+      "target": "file:backend/app/modules/knowledge/dependencies.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/api.py",
+      "target": "file:backend/app/modules/knowledge/paths.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/api.py",
+      "target": "file:backend/app/modules/knowledge/schemas.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/api.py",
+      "target": "file:backend/app/modules/knowledge/service.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/api.py",
+      "target": "file:backend/app/modules/users/models.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/api.py",
+      "target": "function:backend/app/modules/knowledge/api.py:list_bases",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/api.py",
+      "target": "function:backend/app/modules/knowledge/api.py:list_bases",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/api.py",
+      "target": "function:backend/app/modules/knowledge/api.py:create_base",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/api.py",
+      "target": "function:backend/app/modules/knowledge/api.py:create_base",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/api.py",
+      "target": "function:backend/app/modules/knowledge/api.py:ingest_default",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/api.py",
+      "target": "function:backend/app/modules/knowledge/api.py:ingest_default",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/api.py",
+      "target": "function:backend/app/modules/knowledge/api.py:ingest_paths",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/api.py",
+      "target": "function:backend/app/modules/knowledge/api.py:ingest_paths",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/api.py",
+      "target": "function:backend/app/modules/knowledge/api.py:search",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:backend/app/modules/knowledge/api.py",
+      "target": "function:backend/app/modules/knowledge/api.py:search",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

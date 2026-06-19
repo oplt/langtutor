@@ -21,14 +21,19 @@ def chunk_matches_cefr(metadata: dict, *, cefr_level: str | None, pos: str | Non
         return True
     rank_min, rank_max = bounds
     raw_rank = metadata.get("rank")
-    if raw_rank is not None:
-        try:
-            rank = int(raw_rank)
-        except (TypeError, ValueError):
-            rank = None
-        else:
-            if rank < rank_min or rank > rank_max:
-                return False
+    if raw_rank is None:
+        tagged_level = str(metadata.get("cefr_level") or "").strip().upper()
+        if tagged_level and tagged_level == cefr_level.strip().upper():
+            return True
+        if metadata.get("skip_cefr_filter") is True:
+            return True
+        return False
+    try:
+        rank = int(raw_rank)
+    except (TypeError, ValueError):
+        return False
+    if rank < rank_min or rank > rank_max:
+        return False
     if pos:
         chunk_pos = str(metadata.get("pos") or "").lower()
         if chunk_pos and pos.lower() not in chunk_pos:

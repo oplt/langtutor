@@ -10,6 +10,12 @@ type TokenResponse = {
   access_token: string;
 };
 
+export type SignupPayload = {
+  email: string;
+  password: string;
+  full_name?: string | null;
+};
+
 export async function fetchCurrentUser(): Promise<AuthUser> {
   return httpRequest<AuthUser>("/auth/me");
 }
@@ -22,14 +28,14 @@ export async function login(email: string, password: string): Promise<TokenRespo
   });
 }
 
-export async function signup(
-  email: string,
-  password: string,
-  fullName?: string,
-): Promise<TokenResponse> {
+export async function signup(payload: SignupPayload): Promise<TokenResponse> {
   return httpRequest<TokenResponse>("/auth/signup", {
     method: "POST",
-    body: { email, password, full_name: fullName ?? null },
+    body: {
+      email: payload.email.trim(),
+      password: payload.password,
+      full_name: payload.full_name ?? null,
+    },
     auth: false,
   });
 }

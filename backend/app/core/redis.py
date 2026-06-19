@@ -6,6 +6,7 @@ from typing import Optional
 from redis.asyncio import Redis
 
 from backend.app.core.config import settings
+from backend.app.core.logging import redact_url
 
 logger = logging.getLogger("backend")
 
@@ -16,7 +17,7 @@ def get_redis() -> Redis:
     global _redis_client
     if _redis_client is None:
         _redis_client = Redis.from_url(settings.REDIS_URL, decode_responses=True)
-        logger.info("Redis client initialized", extra={"redis_url": settings.REDIS_URL})
+        logger.info("Redis client initialized", extra={"redis_url": redact_url(settings.REDIS_URL)})
     return _redis_client
 
 

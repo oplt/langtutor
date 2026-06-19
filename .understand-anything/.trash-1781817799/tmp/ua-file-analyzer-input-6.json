@@ -1,0 +1,272 @@
+{
+  "projectRoot": "/home/polat/Desktop/Projects/LanguageApp",
+  "batchFiles": [
+    {
+      "path": "backend/app/modules/learning/mastery/schemas.py",
+      "language": "python",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/learning/mastery/service.py",
+      "language": "python",
+      "sizeLines": 233,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/learning/models.py",
+      "language": "python",
+      "sizeLines": 179,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/learning/quiz/application/service.py",
+      "language": "python",
+      "sizeLines": 207,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/learning/quiz/llm.py",
+      "language": "python",
+      "sizeLines": 188,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/learning/quiz/models.py",
+      "language": "python",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/learning/quiz/schemas.py",
+      "language": "python",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/learning/quiz/service.py",
+      "language": "python",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/learning/quiz/templates.py",
+      "language": "python",
+      "sizeLines": 158,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/learning/response_cache.py",
+      "language": "python",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/learning/schemas.py",
+      "language": "python",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/notebook/models.py",
+      "language": "python",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/notebook/service.py",
+      "language": "python",
+      "sizeLines": 185,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/skills/api.py",
+      "language": "python",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/skills/schemas.py",
+      "language": "python",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/skills/service.py",
+      "language": "python",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/stories/models.py",
+      "language": "python",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/tutor/sessions/models.py",
+      "language": "python",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/tutor/sessions/service.py",
+      "language": "python",
+      "sizeLines": 184,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/shared/schemas.py",
+      "language": "python",
+      "sizeLines": 105,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/shared/types.py",
+      "language": "python",
+      "sizeLines": 3,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/tests/test_bm25.py",
+      "language": "python",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/tests/test_knowledge_grounding.py",
+      "language": "python",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/tests/test_llm_eval_harness.py",
+      "language": "python",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/tests/test_mastery_scheduler.py",
+      "language": "python",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/tests/test_quiz_judge_fallback.py",
+      "language": "python",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/tests/test_search_cache.py",
+      "language": "python",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "backend/app/modules/learning/mastery/schemas.py": [
+      "backend/app/db/base.py"
+    ],
+    "backend/app/modules/learning/mastery/service.py": [
+      "backend/app/modules/learning/mastery/grading.py",
+      "backend/app/modules/learning/mastery/mastery.py",
+      "backend/app/modules/learning/mastery/models.py",
+      "backend/app/modules/learning/mastery/scheduler.py"
+    ],
+    "backend/app/modules/learning/models.py": [
+      "backend/app/db/base.py"
+    ],
+    "backend/app/modules/learning/quiz/application/service.py": [
+      "backend/app/core/config.py",
+      "backend/app/db/base.py",
+      "backend/app/modules/learning/engine.py",
+      "backend/app/modules/learning/models.py",
+      "backend/app/modules/learning/quiz/llm.py",
+      "backend/app/modules/learning/quiz/models.py",
+      "backend/app/modules/learning/quiz/templates.py",
+      "backend/app/modules/memory/service.py",
+      "backend/app/modules/memory/types.py"
+    ],
+    "backend/app/modules/learning/quiz/llm.py": [
+      "backend/app/db/base.py",
+      "backend/app/modules/learning/mastery/grading.py",
+      "backend/app/modules/learning/quiz/models.py",
+      "backend/app/modules/llm/base.py",
+      "backend/app/modules/llm/service.py",
+      "backend/app/modules/prompt/assembler.py"
+    ],
+    "backend/app/modules/learning/quiz/models.py": [],
+    "backend/app/modules/learning/quiz/schemas.py": [
+      "backend/app/db/base.py",
+      "backend/app/modules/learning/quiz/models.py"
+    ],
+    "backend/app/modules/learning/quiz/service.py": [
+      "backend/app/modules/learning/quiz/application/service.py"
+    ],
+    "backend/app/modules/learning/quiz/templates.py": [
+      "backend/app/db/base.py",
+      "backend/app/modules/learning/quiz/models.py"
+    ],
+    "backend/app/modules/learning/response_cache.py": [
+      "backend/app/core/config.py",
+      "backend/app/core/redis_json.py"
+    ],
+    "backend/app/modules/learning/schemas.py": [
+      "backend/app/shared/schemas.py"
+    ],
+    "backend/app/modules/notebook/models.py": [
+      "backend/app/db/base.py"
+    ],
+    "backend/app/modules/notebook/service.py": [
+      "backend/app/modules/learning/engine.py",
+      "backend/app/modules/learning/models.py",
+      "backend/app/modules/learning/quiz/templates.py",
+      "backend/app/modules/notebook/models.py"
+    ],
+    "backend/app/modules/skills/api.py": [
+      "backend/app/db/base.py",
+      "backend/app/modules/skills/schemas.py",
+      "backend/app/modules/skills/service.py"
+    ],
+    "backend/app/modules/skills/schemas.py": [],
+    "backend/app/modules/skills/service.py": [
+      "backend/app/db/base.py"
+    ],
+    "backend/app/modules/stories/models.py": [
+      "backend/app/db/base.py"
+    ],
+    "backend/app/modules/tutor/sessions/models.py": [
+      "backend/app/db/base.py"
+    ],
+    "backend/app/modules/tutor/sessions/service.py": [
+      "backend/app/modules/tutor/sessions/models.py"
+    ],
+    "backend/app/shared/schemas.py": [
+      "backend/app/db/base.py"
+    ],
+    "backend/app/shared/types.py": [
+      "backend/app/db/base.py"
+    ],
+    "backend/tests/test_bm25.py": [
+      "backend/app/modules/knowledge/bm25.py"
+    ],
+    "backend/tests/test_knowledge_grounding.py": [
+      "backend/app/modules/knowledge/cefr_filters.py"
+    ],
+    "backend/tests/test_llm_eval_harness.py": [
+      "backend/app/modules/knowledge/cefr_filters.py",
+      "backend/app/modules/knowledge/search_cache.py"
+    ],
+    "backend/tests/test_mastery_scheduler.py": [
+      "backend/app/modules/learning/mastery/models.py",
+      "backend/app/modules/learning/mastery/scheduler.py"
+    ],
+    "backend/tests/test_quiz_judge_fallback.py": [
+      "backend/app/modules/learning/quiz/llm.py"
+    ],
+    "backend/tests/test_search_cache.py": [
+      "backend/app/modules/knowledge/search_cache.py"
+    ]
+  }
+}

@@ -100,7 +100,7 @@ export default function SideMenu({ collapsed = false, onToggleCollapsed }: SideM
 
       </Box>
       <Stack sx={{ borderTop: '1px solid', borderColor: 'divider' }}>
-        <Collapse in={menuOpen && !collapsed} timeout="auto" unmountOnExit>
+        <Collapse in={menuOpen && !collapsed} timeout="auto" unmountOnExit id="side-menu-user-actions">
           <Stack sx={{ px: 1, pt: 1, pb: 0.5 }} spacing={0.5}>
             <Button fullWidth size="small" onClick={handleAction('/dashboard/profile')} sx={{ justifyContent: 'flex-start' }}>
               Profile
@@ -121,6 +121,8 @@ export default function SideMenu({ collapsed = false, onToggleCollapsed }: SideM
           role="button"
           tabIndex={0}
           aria-label="Toggle user menu"
+          aria-expanded={menuOpen}
+          aria-controls="side-menu-user-actions"
           onClick={() => setMenuOpen((prev) => !prev)}
           onKeyDown={(event) => {
             if (event.key === 'Enter' || event.key === ' ') {

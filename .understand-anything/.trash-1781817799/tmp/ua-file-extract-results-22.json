@@ -1,0 +1,31 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "frontend/src/App.css",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 42,
+      "nonEmptyLines": 37,
+      "metrics": {}
+    },
+    {
+      "path": "frontend/src/index.css",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 68,
+      "nonEmptyLines": 61,
+      "metrics": {}
+    },
+    {
+      "path": "frontend/src/output.css",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 14,
+      "nonEmptyLines": 13,
+      "metrics": {}
+    }
+  ]
+}

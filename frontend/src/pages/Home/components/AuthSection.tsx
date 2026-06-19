@@ -252,10 +252,14 @@ function SignUpForm({ onSuccess }: { onSuccess: (email: string) => void }) {
 
     setIsSubmitting(true);
     try {
-      const json = await signup(full_name, email, password);
+      const json = await signup({
+        email,
+        password,
+        full_name,
+      });
       loginWithToken(json.access_token);
       onSuccess(email);
-      navigate("/dashboard");
+      window.setTimeout(() => navigate("/dashboard"), 800);
     } catch (err) {
       if (err instanceof ApiError) {
         setEmailError(true);

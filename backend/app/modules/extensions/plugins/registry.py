@@ -20,12 +20,6 @@ BUILTIN_PLUGINS: tuple[PluginManifest, ...] = (
         description="Lookup lemmas and short glosses from the local Dutch corpus.",
         tool_names=("lookup_dictionary",),
     ),
-    PluginManifest(
-        id="forvo-pronunciation",
-        name="Forvo Pronunciation",
-        description="Fetch rule-based pronunciation hints for Dutch words.",
-        tool_names=("pronunciation_forvo",),
-    ),
 )
 
 

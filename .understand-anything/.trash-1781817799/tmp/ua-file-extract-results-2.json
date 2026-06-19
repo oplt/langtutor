@@ -1,0 +1,4259 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 29,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "backend/app/modules/agent/capabilities/chat.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "ChatCapability",
+          "startLine": 9,
+          "endLine": 17,
+          "methods": [
+            "run"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ChatCapability",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "run",
+          "callee": "ChatPipeline",
+          "lineNumber": 16
+        },
+        {
+          "caller": "run",
+          "callee": "pipeline.run",
+          "lineNumber": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/agent/capabilities/deep_research.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 34,
+      "nonEmptyLines": 28,
+      "classes": [
+        {
+          "name": "DeepResearchCapability",
+          "startLine": 21,
+          "endLine": 34,
+          "methods": [
+            "run"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "DeepResearchCapability",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "run",
+          "callee": "list",
+          "lineNumber": 30
+        },
+        {
+          "caller": "run",
+          "callee": "str",
+          "lineNumber": 31
+        },
+        {
+          "caller": "run",
+          "callee": "context.metadata.get",
+          "lineNumber": 31
+        },
+        {
+          "caller": "run",
+          "callee": "f\"{extra}\\n\\n{RESEARCH_PROMPT}\".strip",
+          "lineNumber": 32
+        },
+        {
+          "caller": "run",
+          "callee": "ChatPipeline",
+          "lineNumber": 33
+        },
+        {
+          "caller": "run",
+          "callee": "pipeline.run",
+          "lineNumber": 34
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/agent/capabilities/deep_solve.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 35,
+      "nonEmptyLines": 28,
+      "classes": [
+        {
+          "name": "DeepSolveCapability",
+          "startLine": 24,
+          "endLine": 35,
+          "methods": [
+            "run"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "DeepSolveCapability",
+          "line": 24,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "run",
+          "callee": "list",
+          "lineNumber": 31
+        },
+        {
+          "caller": "run",
+          "callee": "str",
+          "lineNumber": 32
+        },
+        {
+          "caller": "run",
+          "callee": "context.metadata.get",
+          "lineNumber": 32
+        },
+        {
+          "caller": "run",
+          "callee": "f\"{extra}\\n\\n{SOLVE_PROMPT}\".strip",
+          "lineNumber": 33
+        },
+        {
+          "caller": "run",
+          "callee": "ChatPipeline",
+          "lineNumber": 34
+        },
+        {
+          "caller": "run",
+          "callee": "pipeline.run",
+          "lineNumber": 35
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/agent/capabilities/mastery_path.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 17,
+      "classes": [
+        {
+          "name": "MasteryPathCapability",
+          "startLine": 11,
+          "endLine": 22,
+          "methods": [
+            "run"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "MasteryPathCapability",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "run",
+          "callee": "list",
+          "lineNumber": 20
+        },
+        {
+          "caller": "run",
+          "callee": "ChatPipeline",
+          "lineNumber": 21
+        },
+        {
+          "caller": "run",
+          "callee": "pipeline.run",
+          "lineNumber": 22
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/agent/capabilities/visualize.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 41,
+      "nonEmptyLines": 33,
+      "classes": [
+        {
+          "name": "VisualizeCapability",
+          "startLine": 12,
+          "endLine": 41,
+          "methods": [
+            "run"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "VisualizeCapability",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "run",
+          "callee": "bus.error",
+          "lineNumber": 21
+        },
+        {
+          "caller": "run",
+          "callee": "resolve_agent_db",
+          "lineNumber": 24
+        },
+        {
+          "caller": "run",
+          "callee": "get_visualize_service",
+          "lineNumber": 25
+        },
+        {
+          "caller": "run",
+          "callee": "service.build_progress_charts",
+          "lineNumber": 26
+        },
+        {
+          "caller": "run",
+          "callee": "uuid.UUID",
+          "lineNumber": 27
+        },
+        {
+          "caller": "run",
+          "callee": "str",
+          "lineNumber": 27
+        },
+        {
+          "caller": "run",
+          "callee": "get_bound_db_session",
+          "lineNumber": 29
+        },
+        {
+          "caller": "run",
+          "callee": "db.commit",
+          "lineNumber": 30
+        },
+        {
+          "caller": "run",
+          "callee": "bus.content",
+          "lineNumber": 36
+        },
+        {
+          "caller": "run",
+          "callee": "bus.content",
+          "lineNumber": 37
+        },
+        {
+          "caller": "run",
+          "callee": "json.dumps",
+          "lineNumber": 38
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/agent/chat/pipeline.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 172,
+      "nonEmptyLines": 147,
+      "functions": [
+        {
+          "name": "_load_sync_prompt_blocks",
+          "startLine": 171,
+          "endLine": 172,
+          "params": [
+            "persona_name",
+            "cefr_level"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ChatPipeline",
+          "startLine": 38,
+          "endLine": 168,
+          "methods": [
+            "__init__",
+            "run",
+            "_run_turn",
+            "_load_memory_context"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ChatPipeline",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "_load_sync_prompt_blocks",
+          "line": 171,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "run",
+          "callee": "AsyncSessionLocal",
+          "lineNumber": 48
+        },
+        {
+          "caller": "run",
+          "callee": "bind_turn_db_session",
+          "lineNumber": 49
+        },
+        {
+          "caller": "run",
+          "callee": "self._run_turn",
+          "lineNumber": 51
+        },
+        {
+          "caller": "run",
+          "callee": "db.commit",
+          "lineNumber": 52
+        },
+        {
+          "caller": "run",
+          "callee": "db.rollback",
+          "lineNumber": 54
+        },
+        {
+          "caller": "run",
+          "callee": "clear_turn_db_session",
+          "lineNumber": 57
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "str",
+          "lineNumber": 65
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "context.metadata.get",
+          "lineNumber": 65
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "asyncio.gather",
+          "lineNumber": 68
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "AISettingsService().get_settings",
+          "lineNumber": 69
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "AISettingsService",
+          "lineNumber": 69
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "create_task_client",
+          "lineNumber": 70
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "self._load_memory_context",
+          "lineNumber": 71
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "asyncio.to_thread",
+          "lineNumber": 74
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "build_tutor_system_prompt",
+          "lineNumber": 80
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "str",
+          "lineNumber": 84
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "context.metadata.get",
+          "lineNumber": 84
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "persona_block.strip",
+          "lineNumber": 88
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "persona_block.strip",
+          "lineNumber": 89
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "skill_playbook.strip",
+          "lineNumber": 95
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "skill_playbook.strip",
+          "lineNumber": 97
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "str(context.metadata.get(\"extra_system_prompt\") or \"\").strip",
+          "lineNumber": 123
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "str",
+          "lineNumber": 123
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "context.metadata.get",
+          "lineNumber": 123
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "list",
+          "lineNumber": 131
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "enabled.append",
+          "lineNumber": 135
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "get_tool_registry().get_enabled",
+          "lineNumber": 136
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "get_tool_registry",
+          "lineNumber": 136
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "AgentLoopRunner",
+          "lineNumber": 138
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "int",
+          "lineNumber": 139
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "context.config_overrides.get",
+          "lineNumber": 140
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "context.metadata.get",
+          "lineNumber": 141
+        },
+        {
+          "caller": "_run_turn",
+          "callee": "runner.run",
+          "lineNumber": 144
+        },
+        {
+          "caller": "_load_memory_context",
+          "callee": "load_l3_memory_block",
+          "lineNumber": 164
+        },
+        {
+          "caller": "_load_memory_context",
+          "callee": "uuid.UUID",
+          "lineNumber": 166
+        },
+        {
+          "caller": "_load_memory_context",
+          "callee": "str",
+          "lineNumber": 166
+        },
+        {
+          "caller": "_load_sync_prompt_blocks",
+          "callee": "load_persona_context",
+          "lineNumber": 172
+        },
+        {
+          "caller": "_load_sync_prompt_blocks",
+          "callee": "get_playbook_text",
+          "lineNumber": 172
+        }
+      ],
+      "metrics": {
+        "importCount": 11,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/agent/core/context.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 17,
+      "classes": [
+        {
+          "name": "AgentContext",
+          "startLine": 8,
+          "endLine": 21,
+          "methods": [],
+          "properties": [
+            "session_id",
+            "user_id",
+            "user_message",
+            "conversation_history",
+            "enabled_tools",
+            "active_capability",
+            "language",
+            "cefr_level",
+            "system_prompt",
+            "config_overrides",
+            "metadata"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AgentContext",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/agent/core/protocols.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 62,
+      "nonEmptyLines": 47,
+      "classes": [
+        {
+          "name": "ToolResult",
+          "startLine": 12,
+          "endLine": 16,
+          "methods": [],
+          "properties": [
+            "content",
+            "pause_for_user",
+            "pause_question",
+            "metadata"
+          ]
+        },
+        {
+          "name": "ToolDefinition",
+          "startLine": 20,
+          "endLine": 34,
+          "methods": [
+            "to_openai_schema"
+          ],
+          "properties": [
+            "name",
+            "description",
+            "parameters"
+          ]
+        },
+        {
+          "name": "BaseTool",
+          "startLine": 37,
+          "endLine": 53,
+          "methods": [
+            "get_definition",
+            "parameters",
+            "execute"
+          ],
+          "properties": [
+            "name",
+            "description"
+          ]
+        },
+        {
+          "name": "BaseCapability",
+          "startLine": 56,
+          "endLine": 62,
+          "methods": [
+            "run"
+          ],
+          "properties": [
+            "name",
+            "description"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ToolResult",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "ToolDefinition",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "BaseTool",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "BaseCapability",
+          "line": 56,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "get_definition",
+          "callee": "ToolDefinition",
+          "lineNumber": 42
+        },
+        {
+          "caller": "get_definition",
+          "callee": "self.parameters",
+          "lineNumber": 45
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 4,
+        "functionCount": 0,
+        "classCount": 4
+      }
+    },
+    {
+      "path": "backend/app/modules/agent/core/stream_bus.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 43,
+      "nonEmptyLines": 34,
+      "classes": [
+        {
+          "name": "StreamBus",
+          "startLine": 10,
+          "endLine": 43,
+          "methods": [
+            "__init__",
+            "emit",
+            "content",
+            "error",
+            "close",
+            "subscribe"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "StreamBus",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "asyncio.Queue",
+          "lineNumber": 12
+        },
+        {
+          "caller": "emit",
+          "callee": "self._queue.put",
+          "lineNumber": 17
+        },
+        {
+          "caller": "content",
+          "callee": "self.emit",
+          "lineNumber": 20
+        },
+        {
+          "caller": "content",
+          "callee": "StreamEvent",
+          "lineNumber": 21
+        },
+        {
+          "caller": "error",
+          "callee": "self.emit",
+          "lineNumber": 30
+        },
+        {
+          "caller": "error",
+          "callee": "StreamEvent",
+          "lineNumber": 30
+        },
+        {
+          "caller": "close",
+          "callee": "self._queue.put",
+          "lineNumber": 36
+        },
+        {
+          "caller": "subscribe",
+          "callee": "self._queue.get",
+          "lineNumber": 40
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/agent/db_session.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 37,
+      "nonEmptyLines": 23,
+      "functions": [
+        {
+          "name": "bind_turn_db_session",
+          "startLine": 13,
+          "endLine": 14,
+          "params": [
+            "context",
+            "db"
+          ]
+        },
+        {
+          "name": "clear_turn_db_session",
+          "startLine": 17,
+          "endLine": 18,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "get_bound_db_session",
+          "startLine": 21,
+          "endLine": 23,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "resolve_agent_db",
+          "startLine": 27,
+          "endLine": 37,
+          "params": [
+            "context"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "bind_turn_db_session",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "clear_turn_db_session",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "get_bound_db_session",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "resolve_agent_db",
+          "line": 26,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "clear_turn_db_session",
+          "callee": "context.metadata.pop",
+          "lineNumber": 18
+        },
+        {
+          "caller": "get_bound_db_session",
+          "callee": "context.metadata.get",
+          "lineNumber": 22
+        },
+        {
+          "caller": "get_bound_db_session",
+          "callee": "isinstance",
+          "lineNumber": 23
+        },
+        {
+          "caller": "resolve_agent_db",
+          "callee": "get_bound_db_session",
+          "lineNumber": 29
+        },
+        {
+          "caller": "resolve_agent_db",
+          "callee": "AsyncSessionLocal",
+          "lineNumber": 36
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/agent/loop/runner.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 207,
+      "nonEmptyLines": 190,
+      "classes": [
+        {
+          "name": "AgentLoopRunner",
+          "startLine": 18,
+          "endLine": 207,
+          "methods": [
+            "__init__",
+            "run",
+            "_dispatch_tool",
+            "_build_messages",
+            "_coerce_message"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AgentLoopRunner",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "run",
+          "callee": "context.metadata.get",
+          "lineNumber": 32
+        },
+        {
+          "caller": "run",
+          "callee": "isinstance",
+          "lineNumber": 33
+        },
+        {
+          "caller": "run",
+          "callee": "self._coerce_message",
+          "lineNumber": 34
+        },
+        {
+          "caller": "run",
+          "callee": "self._build_messages",
+          "lineNumber": 36
+        },
+        {
+          "caller": "run",
+          "callee": "tool.get_definition().to_openai_schema",
+          "lineNumber": 37
+        },
+        {
+          "caller": "run",
+          "callee": "tool.get_definition",
+          "lineNumber": 37
+        },
+        {
+          "caller": "run",
+          "callee": "bool",
+          "lineNumber": 41
+        },
+        {
+          "caller": "run",
+          "callee": "range",
+          "lineNumber": 43
+        },
+        {
+          "caller": "run",
+          "callee": "LLMChatRequest",
+          "lineNumber": 45
+        },
+        {
+          "caller": "run",
+          "callee": "context.config_overrides.get",
+          "lineNumber": 47
+        },
+        {
+          "caller": "run",
+          "callee": "context.config_overrides.get",
+          "lineNumber": 48
+        },
+        {
+          "caller": "run",
+          "callee": "context.config_overrides.get",
+          "lineNumber": 49
+        },
+        {
+          "caller": "run",
+          "callee": "llm_client.stream_chat",
+          "lineNumber": 55
+        },
+        {
+          "caller": "run",
+          "callee": "chunks.append",
+          "lineNumber": 56
+        },
+        {
+          "caller": "run",
+          "callee": "bus.emit",
+          "lineNumber": 57
+        },
+        {
+          "caller": "run",
+          "callee": "StreamEvent",
+          "lineNumber": 58
+        },
+        {
+          "caller": "run",
+          "callee": "\"\".join(chunks).strip",
+          "lineNumber": 64
+        },
+        {
+          "caller": "run",
+          "callee": "\"\".join",
+          "lineNumber": 64
+        },
+        {
+          "caller": "run",
+          "callee": "LoopOutcome",
+          "lineNumber": 65
+        },
+        {
+          "caller": "run",
+          "callee": "message.model_dump",
+          "lineNumber": 69
+        },
+        {
+          "caller": "run",
+          "callee": "llm_client.chat",
+          "lineNumber": 72
+        },
+        {
+          "caller": "run",
+          "callee": "messages.append",
+          "lineNumber": 75
+        },
+        {
+          "caller": "run",
+          "callee": "LLMMessage",
+          "lineNumber": 76
+        },
+        {
+          "caller": "run",
+          "callee": "list",
+          "lineNumber": 79
+        },
+        {
+          "caller": "run",
+          "callee": "bus.emit",
+          "lineNumber": 83
+        },
+        {
+          "caller": "run",
+          "callee": "StreamEvent",
+          "lineNumber": 84
+        },
+        {
+          "caller": "run",
+          "callee": "self._dispatch_tool",
+          "lineNumber": 91
+        },
+        {
+          "caller": "run",
+          "callee": "bus.emit",
+          "lineNumber": 92
+        },
+        {
+          "caller": "run",
+          "callee": "StreamEvent",
+          "lineNumber": 93
+        },
+        {
+          "caller": "run",
+          "callee": "result.metadata.get",
+          "lineNumber": 101
+        },
+        {
+          "caller": "run",
+          "callee": "bus.emit",
+          "lineNumber": 103
+        },
+        {
+          "caller": "run",
+          "callee": "StreamEvent",
+          "lineNumber": 104
+        },
+        {
+          "caller": "run",
+          "callee": "message.model_dump",
+          "lineNumber": 110
+        },
+        {
+          "caller": "run",
+          "callee": "LoopOutcome",
+          "lineNumber": 117
+        },
+        {
+          "caller": "run",
+          "callee": "message.model_dump",
+          "lineNumber": 122
+        },
+        {
+          "caller": "run",
+          "callee": "isinstance",
+          "lineNumber": 124
+        },
+        {
+          "caller": "run",
+          "callee": "messages.append",
+          "lineNumber": 126
+        },
+        {
+          "caller": "run",
+          "callee": "LLMMessage",
+          "lineNumber": 127
+        },
+        {
+          "caller": "run",
+          "callee": "(response.content or \"\").strip",
+          "lineNumber": 136
+        },
+        {
+          "caller": "run",
+          "callee": "bus.content",
+          "lineNumber": 138
+        },
+        {
+          "caller": "run",
+          "callee": "LoopOutcome",
+          "lineNumber": 139
+        },
+        {
+          "caller": "run",
+          "callee": "message.model_dump",
+          "lineNumber": 143
+        },
+        {
+          "caller": "run",
+          "callee": "bus.content",
+          "lineNumber": 147
+        },
+        {
+          "caller": "run",
+          "callee": "logger.warning",
+          "lineNumber": 149
+        },
+        {
+          "caller": "run",
+          "callee": "LoopOutcome",
+          "lineNumber": 155
+        },
+        {
+          "caller": "run",
+          "callee": "bool",
+          "lineNumber": 158
+        },
+        {
+          "caller": "run",
+          "callee": "message.model_dump",
+          "lineNumber": 159
+        },
+        {
+          "caller": "_dispatch_tool",
+          "callee": "tool_map.get",
+          "lineNumber": 168
+        },
+        {
+          "caller": "_dispatch_tool",
+          "callee": "ToolResult",
+          "lineNumber": 172
+        },
+        {
+          "caller": "_dispatch_tool",
+          "callee": "logger.info",
+          "lineNumber": 174
+        },
+        {
+          "caller": "_dispatch_tool",
+          "callee": "meta.get",
+          "lineNumber": 177
+        },
+        {
+          "caller": "_dispatch_tool",
+          "callee": "meta.get",
+          "lineNumber": 178
+        },
+        {
+          "caller": "_dispatch_tool",
+          "callee": "meta.get",
+          "lineNumber": 179
+        },
+        {
+          "caller": "_dispatch_tool",
+          "callee": "tool.execute",
+          "lineNumber": 182
+        },
+        {
+          "caller": "_build_messages",
+          "callee": "messages.append",
+          "lineNumber": 187
+        },
+        {
+          "caller": "_build_messages",
+          "callee": "LLMMessage",
+          "lineNumber": 187
+        },
+        {
+          "caller": "_build_messages",
+          "callee": "messages.append",
+          "lineNumber": 189
+        },
+        {
+          "caller": "_build_messages",
+          "callee": "self._coerce_message",
+          "lineNumber": 189
+        },
+        {
+          "caller": "_build_messages",
+          "callee": "messages.append",
+          "lineNumber": 191
+        },
+        {
+          "caller": "_build_messages",
+          "callee": "LLMMessage",
+          "lineNumber": 191
+        },
+        {
+          "caller": "_coerce_message",
+          "callee": "item.get",
+          "lineNumber": 195
+        },
+        {
+          "caller": "_coerce_message",
+          "callee": "item.get",
+          "lineNumber": 196
+        },
+        {
+          "caller": "_coerce_message",
+          "callee": "item.get",
+          "lineNumber": 197
+        },
+        {
+          "caller": "_coerce_message",
+          "callee": "isinstance",
+          "lineNumber": 199
+        },
+        {
+          "caller": "_coerce_message",
+          "callee": "LLMToolCall.model_validate",
+          "lineNumber": 200
+        },
+        {
+          "caller": "_coerce_message",
+          "callee": "LLMMessage",
+          "lineNumber": 201
+        },
+        {
+          "caller": "_coerce_message",
+          "callee": "str",
+          "lineNumber": 203
+        },
+        {
+          "caller": "_coerce_message",
+          "callee": "item.get",
+          "lineNumber": 204
+        },
+        {
+          "caller": "_coerce_message",
+          "callee": "item.get",
+          "lineNumber": 205
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/agent/runtime/bootstrap.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 47,
+      "nonEmptyLines": 42,
+      "functions": [
+        {
+          "name": "bootstrap_tools",
+          "startLine": 25,
+          "endLine": 38,
+          "params": [
+            "tool_registry"
+          ]
+        },
+        {
+          "name": "bootstrap_runtime",
+          "startLine": 41,
+          "endLine": 47,
+          "params": [
+            "capability_registry",
+            "tool_registry"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "bootstrap_tools",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "bootstrap_runtime",
+          "line": 41,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "bootstrap_tools",
+          "callee": "tool_registry.register",
+          "lineNumber": 26
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "AskUserTool",
+          "lineNumber": 26
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "tool_registry.register",
+          "lineNumber": 27
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "SearchKnowledgeTool",
+          "lineNumber": 27
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "tool_registry.register",
+          "lineNumber": 28
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "RagTool",
+          "lineNumber": 28
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "tool_registry.register",
+          "lineNumber": 29
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "MasteryStatusTool",
+          "lineNumber": 29
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "tool_registry.register",
+          "lineNumber": 30
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "MasteryGradeTool",
+          "lineNumber": 30
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "tool_registry.register",
+          "lineNumber": 31
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "ReadMemoryTool",
+          "lineNumber": 31
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "tool_registry.register",
+          "lineNumber": 32
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "WriteMemoryTool",
+          "lineNumber": 32
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "tool_registry.register",
+          "lineNumber": 33
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "SaveToNotebookTool",
+          "lineNumber": 33
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "tool_registry.register",
+          "lineNumber": 34
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "VisionOcrTool",
+          "lineNumber": 34
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "tool_registry.register",
+          "lineNumber": 35
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "SandboxEvalTool",
+          "lineNumber": 35
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "tool_registry.register",
+          "lineNumber": 36
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "LookupDictionaryTool",
+          "lineNumber": 36
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "tool_registry.register",
+          "lineNumber": 37
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "PronunciationForvoTool",
+          "lineNumber": 37
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "tool_registry.register",
+          "lineNumber": 38
+        },
+        {
+          "caller": "bootstrap_tools",
+          "callee": "RagSearchTool",
+          "lineNumber": 38
+        },
+        {
+          "caller": "bootstrap_runtime",
+          "callee": "capability_registry.register",
+          "lineNumber": 43
+        },
+        {
+          "caller": "bootstrap_runtime",
+          "callee": "ChatCapability",
+          "lineNumber": 43
+        },
+        {
+          "caller": "bootstrap_runtime",
+          "callee": "capability_registry.register",
+          "lineNumber": 44
+        },
+        {
+          "caller": "bootstrap_runtime",
+          "callee": "MasteryPathCapability",
+          "lineNumber": 44
+        },
+        {
+          "caller": "bootstrap_runtime",
+          "callee": "capability_registry.register",
+          "lineNumber": 45
+        },
+        {
+          "caller": "bootstrap_runtime",
+          "callee": "DeepResearchCapability",
+          "lineNumber": 45
+        },
+        {
+          "caller": "bootstrap_runtime",
+          "callee": "capability_registry.register",
+          "lineNumber": 46
+        },
+        {
+          "caller": "bootstrap_runtime",
+          "callee": "DeepSolveCapability",
+          "lineNumber": 46
+        },
+        {
+          "caller": "bootstrap_runtime",
+          "callee": "capability_registry.register",
+          "lineNumber": 47
+        },
+        {
+          "caller": "bootstrap_runtime",
+          "callee": "VisualizeCapability",
+          "lineNumber": 47
+        }
+      ],
+      "metrics": {
+        "importCount": 15,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/agent/runtime/registry.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 93,
+      "nonEmptyLines": 67,
+      "functions": [
+        {
+          "name": "get_capability_registry",
+          "startLine": 76,
+          "endLine": 83,
+          "params": []
+        },
+        {
+          "name": "get_tool_registry",
+          "startLine": 86,
+          "endLine": 93,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CapabilityRegistry",
+          "startLine": 11,
+          "endLine": 35,
+          "methods": [
+            "__init__",
+            "register",
+            "get",
+            "list_capabilities",
+            "get_manifests"
+          ],
+          "properties": [
+            "_ALIASES"
+          ]
+        },
+        {
+          "name": "ToolRegistry",
+          "startLine": 38,
+          "endLine": 69,
+          "methods": [
+            "__init__",
+            "register",
+            "get",
+            "list_tools",
+            "get_enabled",
+            "build_openai_schemas",
+            "execute"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CapabilityRegistry",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "ToolRegistry",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "get_capability_registry",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "get_tool_registry",
+          "line": 86,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "get",
+          "callee": "self._ALIASES.get",
+          "lineNumber": 21
+        },
+        {
+          "caller": "get",
+          "callee": "self._capabilities.get",
+          "lineNumber": 22
+        },
+        {
+          "caller": "list_capabilities",
+          "callee": "list",
+          "lineNumber": 25
+        },
+        {
+          "caller": "list_capabilities",
+          "callee": "self._capabilities.keys",
+          "lineNumber": 25
+        },
+        {
+          "caller": "list_capabilities",
+          "callee": "names.append",
+          "lineNumber": 28
+        },
+        {
+          "caller": "get_manifests",
+          "callee": "self._capabilities.values",
+          "lineNumber": 34
+        },
+        {
+          "caller": "get",
+          "callee": "self._tools.get",
+          "lineNumber": 46
+        },
+        {
+          "caller": "list_tools",
+          "callee": "list",
+          "lineNumber": 49
+        },
+        {
+          "caller": "list_tools",
+          "callee": "self._tools.keys",
+          "lineNumber": 49
+        },
+        {
+          "caller": "get_enabled",
+          "callee": "list",
+          "lineNumber": 53
+        },
+        {
+          "caller": "get_enabled",
+          "callee": "self._tools.values",
+          "lineNumber": 53
+        },
+        {
+          "caller": "get_enabled",
+          "callee": "self._tools.get",
+          "lineNumber": 56
+        },
+        {
+          "caller": "get_enabled",
+          "callee": "enabled.append",
+          "lineNumber": 58
+        },
+        {
+          "caller": "build_openai_schemas",
+          "callee": "self.get_enabled",
+          "lineNumber": 62
+        },
+        {
+          "caller": "build_openai_schemas",
+          "callee": "list",
+          "lineNumber": 62
+        },
+        {
+          "caller": "build_openai_schemas",
+          "callee": "self._tools.values",
+          "lineNumber": 62
+        },
+        {
+          "caller": "build_openai_schemas",
+          "callee": "tool.get_definition().to_openai_schema",
+          "lineNumber": 63
+        },
+        {
+          "caller": "build_openai_schemas",
+          "callee": "tool.get_definition",
+          "lineNumber": 63
+        },
+        {
+          "caller": "execute",
+          "callee": "self._tools.get",
+          "lineNumber": 66
+        },
+        {
+          "caller": "execute",
+          "callee": "KeyError",
+          "lineNumber": 68
+        },
+        {
+          "caller": "execute",
+          "callee": "tool.execute",
+          "lineNumber": 69
+        },
+        {
+          "caller": "get_capability_registry",
+          "callee": "CapabilityRegistry",
+          "lineNumber": 81
+        },
+        {
+          "caller": "get_capability_registry",
+          "callee": "bootstrap_runtime",
+          "lineNumber": 82
+        },
+        {
+          "caller": "get_capability_registry",
+          "callee": "get_tool_registry",
+          "lineNumber": 82
+        },
+        {
+          "caller": "get_tool_registry",
+          "callee": "ToolRegistry",
+          "lineNumber": 91
+        },
+        {
+          "caller": "get_tool_registry",
+          "callee": "bootstrap_tools",
+          "lineNumber": 92
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 4,
+        "functionCount": 2,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "backend/app/modules/agent/tools/ask_user.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 83,
+      "nonEmptyLines": 76,
+      "classes": [
+        {
+          "name": "AskUserTool",
+          "startLine": 10,
+          "endLine": 83,
+          "methods": [
+            "parameters",
+            "execute"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AskUserTool",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "execute",
+          "callee": "build_ask_user_payload",
+          "lineNumber": 68
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 69
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 70
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 71
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 72
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 75
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 78
+        },
+        {
+          "caller": "execute",
+          "callee": "payload.to_dict",
+          "lineNumber": 82
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/agent/tools/knowledge.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 105,
+      "nonEmptyLines": 89,
+      "classes": [
+        {
+          "name": "SearchKnowledgeTool",
+          "startLine": 13,
+          "endLine": 93,
+          "methods": [
+            "parameters",
+            "execute"
+          ],
+          "properties": []
+        },
+        {
+          "name": "RagTool",
+          "startLine": 96,
+          "endLine": 105,
+          "methods": [
+            "execute"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SearchKnowledgeTool",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "RagTool",
+          "line": 96,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "execute",
+          "callee": "str(kwargs.get(\"query\") or \"\").strip",
+          "lineNumber": 36
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 36
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 36
+        },
+        {
+          "caller": "execute",
+          "callee": "str(kwargs.get(\"kb_name\") or \"dutch-core\").strip",
+          "lineNumber": 37
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 37
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 37
+        },
+        {
+          "caller": "execute",
+          "callee": "int",
+          "lineNumber": 38
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 38
+        },
+        {
+          "caller": "execute",
+          "callee": "max",
+          "lineNumber": 39
+        },
+        {
+          "caller": "execute",
+          "callee": "min",
+          "lineNumber": 39
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 42
+        },
+        {
+          "caller": "execute",
+          "callee": "resolve_agent_db",
+          "lineNumber": 44
+        },
+        {
+          "caller": "execute",
+          "callee": "get_knowledge_service",
+          "lineNumber": 45
+        },
+        {
+          "caller": "execute",
+          "callee": "service.search",
+          "lineNumber": 46
+        },
+        {
+          "caller": "execute",
+          "callee": "get_bound_db_session",
+          "lineNumber": 54
+        },
+        {
+          "caller": "execute",
+          "callee": "db.commit",
+          "lineNumber": 55
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 58
+        },
+        {
+          "caller": "execute",
+          "callee": "enumerate",
+          "lineNumber": 66
+        },
+        {
+          "caller": "execute",
+          "callee": "meta.get",
+          "lineNumber": 69
+        },
+        {
+          "caller": "execute",
+          "callee": "meta_bits.append",
+          "lineNumber": 70
+        },
+        {
+          "caller": "execute",
+          "callee": "meta.get",
+          "lineNumber": 71
+        },
+        {
+          "caller": "execute",
+          "callee": "meta_bits.append",
+          "lineNumber": 72
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 72
+        },
+        {
+          "caller": "execute",
+          "callee": "', '.join",
+          "lineNumber": 73
+        },
+        {
+          "caller": "execute",
+          "callee": "lines.append",
+          "lineNumber": 74
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 78
+        },
+        {
+          "caller": "execute",
+          "callee": "\"\\n\\n\".join",
+          "lineNumber": 79
+        },
+        {
+          "caller": "execute",
+          "callee": "len",
+          "lineNumber": 82
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 85
+        },
+        {
+          "caller": "execute",
+          "callee": "super().execute",
+          "lineNumber": 102
+        },
+        {
+          "caller": "execute",
+          "callee": "super",
+          "lineNumber": 102
+        },
+        {
+          "caller": "execute",
+          "callee": "result.content.startswith",
+          "lineNumber": 103
+        },
+        {
+          "caller": "execute",
+          "callee": "result.content.replace",
+          "lineNumber": 104
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "backend/app/modules/agent/tools/mastery.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 97,
+      "nonEmptyLines": 80,
+      "functions": [
+        {
+          "name": "_parse_level",
+          "startLine": 11,
+          "endLine": 18,
+          "params": [
+            "raw",
+            "context"
+          ]
+        },
+        {
+          "name": "_parse_user_id",
+          "startLine": 21,
+          "endLine": 22,
+          "params": [
+            "context"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "MasteryStatusTool",
+          "startLine": 25,
+          "endLine": 59,
+          "methods": [
+            "parameters",
+            "execute"
+          ],
+          "properties": []
+        },
+        {
+          "name": "MasteryGradeTool",
+          "startLine": 62,
+          "endLine": 97,
+          "methods": [
+            "parameters",
+            "execute"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_parse_level",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "_parse_user_id",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "MasteryStatusTool",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "MasteryGradeTool",
+          "line": 62,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_parse_level",
+          "callee": "str(raw or context.cefr_level or \"A1\").upper",
+          "lineNumber": 14
+        },
+        {
+          "caller": "_parse_level",
+          "callee": "str",
+          "lineNumber": 14
+        },
+        {
+          "caller": "_parse_level",
+          "callee": "CEFRLevel",
+          "lineNumber": 16
+        },
+        {
+          "caller": "_parse_user_id",
+          "callee": "uuid.UUID",
+          "lineNumber": 22
+        },
+        {
+          "caller": "_parse_user_id",
+          "callee": "str",
+          "lineNumber": 22
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 44
+        },
+        {
+          "caller": "execute",
+          "callee": "_parse_level",
+          "lineNumber": 45
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 45
+        },
+        {
+          "caller": "execute",
+          "callee": "resolve_agent_db",
+          "lineNumber": 46
+        },
+        {
+          "caller": "execute",
+          "callee": "get_mastery_runtime().get_map",
+          "lineNumber": 47
+        },
+        {
+          "caller": "execute",
+          "callee": "get_mastery_runtime",
+          "lineNumber": 47
+        },
+        {
+          "caller": "execute",
+          "callee": "_parse_user_id",
+          "lineNumber": 48
+        },
+        {
+          "caller": "execute",
+          "callee": "get_bound_db_session",
+          "lineNumber": 50
+        },
+        {
+          "caller": "execute",
+          "callee": "db.commit",
+          "lineNumber": 51
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 53
+        },
+        {
+          "caller": "execute",
+          "callee": "nxt.get",
+          "lineNumber": 55
+        },
+        {
+          "caller": "execute",
+          "callee": "nxt.get",
+          "lineNumber": 56
+        },
+        {
+          "caller": "execute",
+          "callee": "str(kwargs.get(\"answer\") or context.user_message or \"\").strip",
+          "lineNumber": 79
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 79
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 79
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 81
+        },
+        {
+          "caller": "execute",
+          "callee": "_parse_level",
+          "lineNumber": 82
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 82
+        },
+        {
+          "caller": "execute",
+          "callee": "resolve_agent_db",
+          "lineNumber": 83
+        },
+        {
+          "caller": "execute",
+          "callee": "get_mastery_runtime().grade_answer",
+          "lineNumber": 84
+        },
+        {
+          "caller": "execute",
+          "callee": "get_mastery_runtime",
+          "lineNumber": 84
+        },
+        {
+          "caller": "execute",
+          "callee": "_parse_user_id",
+          "lineNumber": 86
+        },
+        {
+          "caller": "execute",
+          "callee": "get_bound_db_session",
+          "lineNumber": 90
+        },
+        {
+          "caller": "execute",
+          "callee": "db.commit",
+          "lineNumber": 91
+        },
+        {
+          "caller": "execute",
+          "callee": "result.get(\"map\", {}).get",
+          "lineNumber": 93
+        },
+        {
+          "caller": "execute",
+          "callee": "result.get",
+          "lineNumber": 93
+        },
+        {
+          "caller": "execute",
+          "callee": "result.get",
+          "lineNumber": 93
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 94
+        },
+        {
+          "caller": "execute",
+          "callee": "next_step.get",
+          "lineNumber": 95
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 4,
+        "functionCount": 2,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "backend/app/modules/agent/tools/memory.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 120,
+      "nonEmptyLines": 105,
+      "functions": [
+        {
+          "name": "_user_uuid",
+          "startLine": 15,
+          "endLine": 16,
+          "params": [
+            "context"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ReadMemoryTool",
+          "startLine": 19,
+          "endLine": 53,
+          "methods": [
+            "parameters",
+            "execute"
+          ],
+          "properties": []
+        },
+        {
+          "name": "WriteMemoryTool",
+          "startLine": 56,
+          "endLine": 120,
+          "methods": [
+            "parameters",
+            "execute"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_user_uuid",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "ReadMemoryTool",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "WriteMemoryTool",
+          "line": 56,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_user_uuid",
+          "callee": "uuid.UUID",
+          "lineNumber": 16
+        },
+        {
+          "caller": "_user_uuid",
+          "callee": "str",
+          "lineNumber": 16
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 31
+        },
+        {
+          "caller": "execute",
+          "callee": "context.metadata.get",
+          "lineNumber": 33
+        },
+        {
+          "caller": "execute",
+          "callee": "isinstance",
+          "lineNumber": 34
+        },
+        {
+          "caller": "execute",
+          "callee": "preloaded.strip",
+          "lineNumber": 34
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 35
+        },
+        {
+          "caller": "execute",
+          "callee": "preloaded.strip",
+          "lineNumber": 36
+        },
+        {
+          "caller": "execute",
+          "callee": "len",
+          "lineNumber": 37
+        },
+        {
+          "caller": "execute",
+          "callee": "preloaded.strip",
+          "lineNumber": 37
+        },
+        {
+          "caller": "execute",
+          "callee": "resolve_agent_db",
+          "lineNumber": 40
+        },
+        {
+          "caller": "execute",
+          "callee": "load_l3_memory_block",
+          "lineNumber": 43
+        },
+        {
+          "caller": "execute",
+          "callee": "_user_uuid",
+          "lineNumber": 45
+        },
+        {
+          "caller": "execute",
+          "callee": "get_bound_db_session",
+          "lineNumber": 48
+        },
+        {
+          "caller": "execute",
+          "callee": "db.commit",
+          "lineNumber": 49
+        },
+        {
+          "caller": "execute",
+          "callee": "text.strip",
+          "lineNumber": 50
+        },
+        {
+          "caller": "execute",
+          "callee": "enqueue_synthesize_l3",
+          "lineNumber": 51
+        },
+        {
+          "caller": "execute",
+          "callee": "_user_uuid",
+          "lineNumber": 51
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 52
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 53
+        },
+        {
+          "caller": "execute",
+          "callee": "len",
+          "lineNumber": 53
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 86
+        },
+        {
+          "caller": "execute",
+          "callee": "str(kwargs.get(\"text\") or \"\").strip",
+          "lineNumber": 87
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 87
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 87
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 88
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 88
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 89
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 89
+        },
+        {
+          "caller": "execute",
+          "callee": "resolve_agent_db",
+          "lineNumber": 90
+        },
+        {
+          "caller": "execute",
+          "callee": "get_memory_service",
+          "lineNumber": 91
+        },
+        {
+          "caller": "execute",
+          "callee": "service.write_preference",
+          "lineNumber": 93
+        },
+        {
+          "caller": "execute",
+          "callee": "_user_uuid",
+          "lineNumber": 95
+        },
+        {
+          "caller": "execute",
+          "callee": "service.emit",
+          "lineNumber": 100
+        },
+        {
+          "caller": "execute",
+          "callee": "_user_uuid",
+          "lineNumber": 102
+        },
+        {
+          "caller": "execute",
+          "callee": "TraceEvent",
+          "lineNumber": 103
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 108
+        },
+        {
+          "caller": "execute",
+          "callee": "context.metadata.get",
+          "lineNumber": 108
+        },
+        {
+          "caller": "execute",
+          "callee": "get_bound_db_session",
+          "lineNumber": 112
+        },
+        {
+          "caller": "execute",
+          "callee": "db.commit",
+          "lineNumber": 113
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 115
+        },
+        {
+          "caller": "execute",
+          "callee": "context.metadata.pop",
+          "lineNumber": 116
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 117
+        },
+        {
+          "caller": "execute",
+          "callee": "entry.to_dict",
+          "lineNumber": 119
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 3,
+        "functionCount": 1,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "backend/app/modules/agent/tools/notebook.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 74,
+      "nonEmptyLines": 62,
+      "functions": [
+        {
+          "name": "_user_uuid",
+          "startLine": 12,
+          "endLine": 13,
+          "params": [
+            "context"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SaveToNotebookTool",
+          "startLine": 16,
+          "endLine": 74,
+          "methods": [
+            "parameters",
+            "execute"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_user_uuid",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "SaveToNotebookTool",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_user_uuid",
+          "callee": "uuid.UUID",
+          "lineNumber": 13
+        },
+        {
+          "caller": "_user_uuid",
+          "callee": "str",
+          "lineNumber": 13
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 46
+        },
+        {
+          "caller": "execute",
+          "callee": "str(kwargs.get(\"lemma\") or \"\").strip",
+          "lineNumber": 48
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 48
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 48
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 50
+        },
+        {
+          "caller": "execute",
+          "callee": "str(kwargs.get(\"note\") or \"\").strip",
+          "lineNumber": 52
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 52
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 52
+        },
+        {
+          "caller": "execute",
+          "callee": "str(kwargs.get(\"context\") or context.user_message or \"\").strip",
+          "lineNumber": 53
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 53
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 53
+        },
+        {
+          "caller": "execute",
+          "callee": "resolve_agent_db",
+          "lineNumber": 55
+        },
+        {
+          "caller": "execute",
+          "callee": "get_notebook_service",
+          "lineNumber": 56
+        },
+        {
+          "caller": "execute",
+          "callee": "service.save_entry",
+          "lineNumber": 57
+        },
+        {
+          "caller": "execute",
+          "callee": "_user_uuid",
+          "lineNumber": 59
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 65
+        },
+        {
+          "caller": "execute",
+          "callee": "context.metadata.get",
+          "lineNumber": 65
+        },
+        {
+          "caller": "execute",
+          "callee": "get_bound_db_session",
+          "lineNumber": 67
+        },
+        {
+          "caller": "execute",
+          "callee": "db.commit",
+          "lineNumber": 68
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 71
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 73
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 73
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/agent/tools/rag_search.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 81,
+      "nonEmptyLines": 69,
+      "classes": [
+        {
+          "name": "RagSearchTool",
+          "startLine": 14,
+          "endLine": 81,
+          "methods": [
+            "parameters",
+            "execute"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RagSearchTool",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 40
+        },
+        {
+          "caller": "execute",
+          "callee": "str(kwargs.get(\"query\") or \"\").strip",
+          "lineNumber": 42
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 42
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 42
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 44
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 46
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 48
+        },
+        {
+          "caller": "execute",
+          "callee": "int",
+          "lineNumber": 49
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 49
+        },
+        {
+          "caller": "execute",
+          "callee": "max",
+          "lineNumber": 50
+        },
+        {
+          "caller": "execute",
+          "callee": "min",
+          "lineNumber": 50
+        },
+        {
+          "caller": "execute",
+          "callee": "resolve_agent_db",
+          "lineNumber": 52
+        },
+        {
+          "caller": "execute",
+          "callee": "RetrievalService",
+          "lineNumber": 53
+        },
+        {
+          "caller": "execute",
+          "callee": "service.retrieve",
+          "lineNumber": 55
+        },
+        {
+          "caller": "execute",
+          "callee": "AccessContext",
+          "lineNumber": 58
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 59
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 60
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 65
+        },
+        {
+          "caller": "execute",
+          "callee": "get_bound_db_session",
+          "lineNumber": 66
+        },
+        {
+          "caller": "execute",
+          "callee": "db.commit",
+          "lineNumber": 67
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 70
+        },
+        {
+          "caller": "execute",
+          "callee": "RagContextBuilder",
+          "lineNumber": 72
+        },
+        {
+          "caller": "execute",
+          "callee": "builder.build_context_block",
+          "lineNumber": 73
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 74
+        },
+        {
+          "caller": "execute",
+          "callee": "len",
+          "lineNumber": 77
+        },
+        {
+          "caller": "execute",
+          "callee": "list",
+          "lineNumber": 79
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/agent/tools/sandbox_eval.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 38,
+      "nonEmptyLines": 31,
+      "classes": [
+        {
+          "name": "SandboxEvalTool",
+          "startLine": 11,
+          "endLine": 37,
+          "methods": [
+            "parameters",
+            "execute"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SandboxEvalTool",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "execute",
+          "callee": "str(kwargs.get(\"expression\") or \"\").strip",
+          "lineNumber": 32
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 32
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 32
+        },
+        {
+          "caller": "execute",
+          "callee": "run_sandbox_expression",
+          "lineNumber": 33
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 34
+        },
+        {
+          "caller": "execute",
+          "callee": "json.dumps",
+          "lineNumber": 35
+        },
+        {
+          "caller": "execute",
+          "callee": "bool",
+          "lineNumber": 36
+        },
+        {
+          "caller": "execute",
+          "callee": "result.get",
+          "lineNumber": 36
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/agent/tools/vision_ocr.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 53,
+      "nonEmptyLines": 42,
+      "classes": [
+        {
+          "name": "VisionOcrTool",
+          "startLine": 10,
+          "endLine": 52,
+          "methods": [
+            "parameters",
+            "execute"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "VisionOcrTool",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "execute",
+          "callee": "str(kwargs.get(\"text\") or \"\").strip",
+          "lineNumber": 36
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 36
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 36
+        },
+        {
+          "caller": "execute",
+          "callee": "str(kwargs.get(\"image_base64\") or \"\").strip",
+          "lineNumber": 40
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 40
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 40
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 42
+        },
+        {
+          "caller": "execute",
+          "callee": "extract_text_from_image",
+          "lineNumber": 44
+        },
+        {
+          "caller": "execute",
+          "callee": "meta.setdefault",
+          "lineNumber": 47
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 49
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/extensions/plugins/tools.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 116,
+      "nonEmptyLines": 97,
+      "functions": [
+        {
+          "name": "_dutch_pronunciation_hint",
+          "startLine": 99,
+          "endLine": 116,
+          "params": [
+            "word"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "LookupDictionaryTool",
+          "startLine": 10,
+          "endLine": 69,
+          "methods": [
+            "parameters",
+            "execute"
+          ],
+          "properties": []
+        },
+        {
+          "name": "PronunciationForvoTool",
+          "startLine": 72,
+          "endLine": 96,
+          "methods": [
+            "parameters",
+            "execute"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "LookupDictionaryTool",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "PronunciationForvoTool",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "_dutch_pronunciation_hint",
+          "line": 99,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "execute",
+          "callee": "str(kwargs.get(\"lemma\") or \"\").strip",
+          "lineNumber": 27
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 27
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 27
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 29
+        },
+        {
+          "caller": "execute",
+          "callee": "resolve_agent_db",
+          "lineNumber": 35
+        },
+        {
+          "caller": "execute",
+          "callee": "get_knowledge_service",
+          "lineNumber": 39
+        },
+        {
+          "caller": "execute",
+          "callee": "service.ensure_default_kb",
+          "lineNumber": 40
+        },
+        {
+          "caller": "execute",
+          "callee": "service.search",
+          "lineNumber": 41
+        },
+        {
+          "caller": "execute",
+          "callee": "(\n                await db.execute(\n                    select(Word)\n                    .where(Word.lemma.ilike(lemma))\n                    .order_by(Word.rank.asc())\n                    .limit(1)\n                )\n            ).scalar_one_or_none",
+          "lineNumber": 42
+        },
+        {
+          "caller": "execute",
+          "callee": "db.execute",
+          "lineNumber": 43
+        },
+        {
+          "caller": "execute",
+          "callee": "select(Word)\n                    .where(Word.lemma.ilike(lemma))\n                    .order_by(Word.rank.asc())\n                    .limit",
+          "lineNumber": 44
+        },
+        {
+          "caller": "execute",
+          "callee": "select(Word)\n                    .where(Word.lemma.ilike(lemma))\n                    .order_by",
+          "lineNumber": 44
+        },
+        {
+          "caller": "execute",
+          "callee": "select(Word)\n                    .where",
+          "lineNumber": 44
+        },
+        {
+          "caller": "execute",
+          "callee": "select",
+          "lineNumber": 44
+        },
+        {
+          "caller": "execute",
+          "callee": "Word.lemma.ilike",
+          "lineNumber": 45
+        },
+        {
+          "caller": "execute",
+          "callee": "Word.rank.asc",
+          "lineNumber": 46
+        },
+        {
+          "caller": "execute",
+          "callee": "get_bound_db_session",
+          "lineNumber": 50
+        },
+        {
+          "caller": "execute",
+          "callee": "db.commit",
+          "lineNumber": 51
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 54
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 56
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 61
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 66
+        },
+        {
+          "caller": "execute",
+          "callee": "str(kwargs.get(\"word\") or \"\").strip",
+          "lineNumber": 89
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 89
+        },
+        {
+          "caller": "execute",
+          "callee": "kwargs.get",
+          "lineNumber": 89
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 91
+        },
+        {
+          "caller": "execute",
+          "callee": "_dutch_pronunciation_hint",
+          "lineNumber": 92
+        },
+        {
+          "caller": "execute",
+          "callee": "ToolResult",
+          "lineNumber": 93
+        },
+        {
+          "caller": "_dutch_pronunciation_hint",
+          "callee": "word.lower",
+          "lineNumber": 100
+        },
+        {
+          "caller": "_dutch_pronunciation_hint",
+          "callee": "hints.append",
+          "lineNumber": 103
+        },
+        {
+          "caller": "_dutch_pronunciation_hint",
+          "callee": "hints.append",
+          "lineNumber": 105
+        },
+        {
+          "caller": "_dutch_pronunciation_hint",
+          "callee": "hints.append",
+          "lineNumber": 107
+        },
+        {
+          "caller": "_dutch_pronunciation_hint",
+          "callee": "hints.append",
+          "lineNumber": 109
+        },
+        {
+          "caller": "_dutch_pronunciation_hint",
+          "callee": "hints.append",
+          "lineNumber": 111
+        },
+        {
+          "caller": "_dutch_pronunciation_hint",
+          "callee": "lower.startswith",
+          "lineNumber": 112
+        },
+        {
+          "caller": "_dutch_pronunciation_hint",
+          "callee": "hints.append",
+          "lineNumber": 113
+        },
+        {
+          "caller": "_dutch_pronunciation_hint",
+          "callee": "hints.append",
+          "lineNumber": 115
+        },
+        {
+          "caller": "_dutch_pronunciation_hint",
+          "callee": "\"; \".join",
+          "lineNumber": 116
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 3,
+        "functionCount": 1,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "backend/app/modules/extensions/vision/service.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 76,
+      "nonEmptyLines": 59,
+      "functions": [
+        {
+          "name": "extract_text_from_image",
+          "startLine": 15,
+          "endLine": 49,
+          "params": [
+            "image_base64"
+          ]
+        },
+        {
+          "name": "_decode_base64_image",
+          "startLine": 52,
+          "endLine": 56,
+          "params": [
+            "payload"
+          ]
+        },
+        {
+          "name": "_clean_ocr_text",
+          "startLine": 59,
+          "endLine": 65,
+          "params": [
+            "text"
+          ]
+        },
+        {
+          "name": "build_immersion_prompt",
+          "startLine": 68,
+          "endLine": 76,
+          "params": [
+            "extracted_text"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "extract_text_from_image",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "_decode_base64_image",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "_clean_ocr_text",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "build_immersion_prompt",
+          "line": 68,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "extract_text_from_image",
+          "callee": "_decode_base64_image",
+          "lineNumber": 20
+        },
+        {
+          "caller": "extract_text_from_image",
+          "callee": "meta[\"warnings\"].append",
+          "lineNumber": 27
+        },
+        {
+          "caller": "extract_text_from_image",
+          "callee": "Image.open",
+          "lineNumber": 31
+        },
+        {
+          "caller": "extract_text_from_image",
+          "callee": "io.BytesIO",
+          "lineNumber": 31
+        },
+        {
+          "caller": "extract_text_from_image",
+          "callee": "pytesseract.image_to_string",
+          "lineNumber": 38
+        },
+        {
+          "caller": "extract_text_from_image",
+          "callee": "_clean_ocr_text",
+          "lineNumber": 40
+        },
+        {
+          "caller": "extract_text_from_image",
+          "callee": "meta[\"warnings\"].append",
+          "lineNumber": 42
+        },
+        {
+          "caller": "extract_text_from_image",
+          "callee": "logger.warning",
+          "lineNumber": 46
+        },
+        {
+          "caller": "extract_text_from_image",
+          "callee": "meta[\"warnings\"].append",
+          "lineNumber": 47
+        },
+        {
+          "caller": "_decode_base64_image",
+          "callee": "payload.strip",
+          "lineNumber": 53
+        },
+        {
+          "caller": "_decode_base64_image",
+          "callee": "data.lower().startswith",
+          "lineNumber": 54
+        },
+        {
+          "caller": "_decode_base64_image",
+          "callee": "data.lower",
+          "lineNumber": 54
+        },
+        {
+          "caller": "_decode_base64_image",
+          "callee": "data.split",
+          "lineNumber": 55
+        },
+        {
+          "caller": "_decode_base64_image",
+          "callee": "base64.b64decode",
+          "lineNumber": 56
+        },
+        {
+          "caller": "_clean_ocr_text",
+          "callee": "line.strip",
+          "lineNumber": 60
+        },
+        {
+          "caller": "_clean_ocr_text",
+          "callee": "text.splitlines",
+          "lineNumber": 60
+        },
+        {
+          "caller": "_clean_ocr_text",
+          "callee": "line.strip",
+          "lineNumber": 60
+        },
+        {
+          "caller": "_clean_ocr_text",
+          "callee": "_DUTCH_CHARS.search",
+          "lineNumber": 63
+        },
+        {
+          "caller": "_clean_ocr_text",
+          "callee": "cleaned.append",
+          "lineNumber": 64
+        },
+        {
+          "caller": "_clean_ocr_text",
+          "callee": "\"\\n\".join",
+          "lineNumber": 65
+        },
+        {
+          "caller": "build_immersion_prompt",
+          "callee": "extracted_text.strip",
+          "lineNumber": 69
+        },
+        {
+          "caller": "build_immersion_prompt",
+          "callee": "extracted_text.strip",
+          "lineNumber": 73
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/persona/api.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 16,
+      "functions": [
+        {
+          "name": "list_all_personas",
+          "startLine": 12,
+          "endLine": 14,
+          "params": []
+        },
+        {
+          "name": "get_persona_detail",
+          "startLine": 18,
+          "endLine": 23,
+          "params": [
+            "name"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "list_all_personas",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "get_persona_detail",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "list_all_personas",
+          "callee": "list_personas",
+          "lineNumber": 13
+        },
+        {
+          "caller": "list_all_personas",
+          "callee": "PersonaOut",
+          "lineNumber": 14
+        },
+        {
+          "caller": "list_all_personas",
+          "callee": "persona.to_dict",
+          "lineNumber": 14
+        },
+        {
+          "caller": "get_persona_detail",
+          "callee": "get_persona",
+          "lineNumber": 20
+        },
+        {
+          "caller": "get_persona_detail",
+          "callee": "HTTPException",
+          "lineNumber": 22
+        },
+        {
+          "caller": "get_persona_detail",
+          "callee": "str",
+          "lineNumber": 22
+        },
+        {
+          "caller": "get_persona_detail",
+          "callee": "PersonaDetailOut",
+          "lineNumber": 23
+        },
+        {
+          "caller": "get_persona_detail",
+          "callee": "persona.to_dict",
+          "lineNumber": 23
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/persona/schemas.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "PersonaOut",
+          "startLine": 6,
+          "endLine": 9,
+          "methods": [],
+          "properties": [
+            "name",
+            "description",
+            "source"
+          ]
+        },
+        {
+          "name": "PersonaDetailOut",
+          "startLine": 12,
+          "endLine": 16,
+          "methods": [],
+          "properties": [
+            "name",
+            "description",
+            "content",
+            "source"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PersonaOut",
+          "line": 6,
+          "isDefault": false
+        },
+        {
+          "name": "PersonaDetailOut",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "backend/app/modules/persona/service.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 141,
+      "nonEmptyLines": 117,
+      "functions": [
+        {
+          "name": "_validate_name",
+          "startLine": 52,
+          "endLine": 56,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "_parse_frontmatter",
+          "startLine": 59,
+          "endLine": 69,
+          "params": [
+            "content"
+          ]
+        },
+        {
+          "name": "list_personas",
+          "startLine": 72,
+          "endLine": 90,
+          "params": []
+        },
+        {
+          "name": "get_persona",
+          "startLine": 93,
+          "endLine": 104,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "load_for_context",
+          "startLine": 107,
+          "endLine": 130,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "resolve_persona_name",
+          "startLine": 133,
+          "endLine": 141,
+          "params": [
+            "name"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "PersonaInfo",
+          "startLine": 19,
+          "endLine": 29,
+          "methods": [
+            "to_dict"
+          ],
+          "properties": [
+            "name",
+            "description",
+            "source"
+          ]
+        },
+        {
+          "name": "PersonaDetail",
+          "startLine": 33,
+          "endLine": 45,
+          "methods": [
+            "to_dict"
+          ],
+          "properties": [
+            "name",
+            "description",
+            "content",
+            "source"
+          ]
+        },
+        {
+          "name": "PersonaNotFoundError",
+          "startLine": 48,
+          "endLine": 49,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "PersonaInfo",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "PersonaDetail",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "PersonaNotFoundError",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "_validate_name",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "_parse_frontmatter",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "list_personas",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "get_persona",
+          "line": 93,
+          "isDefault": false
+        },
+        {
+          "name": "load_for_context",
+          "line": 107,
+          "isDefault": false
+        },
+        {
+          "name": "resolve_persona_name",
+          "line": 133,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_validate_name",
+          "callee": "(name or \"\").strip().lower",
+          "lineNumber": 53
+        },
+        {
+          "caller": "_validate_name",
+          "callee": "(name or \"\").strip",
+          "lineNumber": 53
+        },
+        {
+          "caller": "_validate_name",
+          "callee": "_NAME_RE.match",
+          "lineNumber": 54
+        },
+        {
+          "caller": "_validate_name",
+          "callee": "PersonaNotFoundError",
+          "lineNumber": 55
+        },
+        {
+          "caller": "_parse_frontmatter",
+          "callee": "_FRONTMATTER_RE.match",
+          "lineNumber": 60
+        },
+        {
+          "caller": "_parse_frontmatter",
+          "callee": "yaml.safe_load",
+          "lineNumber": 64
+        },
+        {
+          "caller": "_parse_frontmatter",
+          "callee": "match.group",
+          "lineNumber": 64
+        },
+        {
+          "caller": "_parse_frontmatter",
+          "callee": "isinstance",
+          "lineNumber": 67
+        },
+        {
+          "caller": "_parse_frontmatter",
+          "callee": "match.end",
+          "lineNumber": 69
+        },
+        {
+          "caller": "list_personas",
+          "callee": "PERSONA_ROOT.exists",
+          "lineNumber": 73
+        },
+        {
+          "caller": "list_personas",
+          "callee": "sorted",
+          "lineNumber": 76
+        },
+        {
+          "caller": "list_personas",
+          "callee": "PERSONA_ROOT.iterdir",
+          "lineNumber": 76
+        },
+        {
+          "caller": "list_personas",
+          "callee": "entry.is_dir",
+          "lineNumber": 77
+        },
+        {
+          "caller": "list_personas",
+          "callee": "path.exists",
+          "lineNumber": 80
+        },
+        {
+          "caller": "list_personas",
+          "callee": "path.read_text",
+          "lineNumber": 82
+        },
+        {
+          "caller": "list_personas",
+          "callee": "_parse_frontmatter",
+          "lineNumber": 83
+        },
+        {
+          "caller": "list_personas",
+          "callee": "out.append",
+          "lineNumber": 84
+        },
+        {
+          "caller": "list_personas",
+          "callee": "PersonaInfo",
+          "lineNumber": 85
+        },
+        {
+          "caller": "list_personas",
+          "callee": "str(meta.get(\"description\") or \"\").strip",
+          "lineNumber": 87
+        },
+        {
+          "caller": "list_personas",
+          "callee": "str",
+          "lineNumber": 87
+        },
+        {
+          "caller": "list_personas",
+          "callee": "meta.get",
+          "lineNumber": 87
+        },
+        {
+          "caller": "get_persona",
+          "callee": "_validate_name",
+          "lineNumber": 94
+        },
+        {
+          "caller": "get_persona",
+          "callee": "path.exists",
+          "lineNumber": 96
+        },
+        {
+          "caller": "get_persona",
+          "callee": "PersonaNotFoundError",
+          "lineNumber": 97
+        },
+        {
+          "caller": "get_persona",
+          "callee": "path.read_text",
+          "lineNumber": 98
+        },
+        {
+          "caller": "get_persona",
+          "callee": "_parse_frontmatter",
+          "lineNumber": 99
+        },
+        {
+          "caller": "get_persona",
+          "callee": "PersonaDetail",
+          "lineNumber": 100
+        },
+        {
+          "caller": "get_persona",
+          "callee": "str(meta.get(\"description\") or \"\").strip",
+          "lineNumber": 102
+        },
+        {
+          "caller": "get_persona",
+          "callee": "str",
+          "lineNumber": 102
+        },
+        {
+          "caller": "get_persona",
+          "callee": "meta.get",
+          "lineNumber": 102
+        },
+        {
+          "caller": "load_for_context",
+          "callee": "(name or DEFAULT_PERSONA).strip().lower",
+          "lineNumber": 109
+        },
+        {
+          "caller": "load_for_context",
+          "callee": "(name or DEFAULT_PERSONA).strip",
+          "lineNumber": 109
+        },
+        {
+          "caller": "load_for_context",
+          "callee": "get_persona",
+          "lineNumber": 113
+        },
+        {
+          "caller": "load_for_context",
+          "callee": "get_persona",
+          "lineNumber": 118
+        },
+        {
+          "caller": "load_for_context",
+          "callee": "_parse_frontmatter",
+          "lineNumber": 121
+        },
+        {
+          "caller": "load_for_context",
+          "callee": "body.strip",
+          "lineNumber": 122
+        },
+        {
+          "caller": "resolve_persona_name",
+          "callee": "(name or DEFAULT_PERSONA).strip().lower",
+          "lineNumber": 134
+        },
+        {
+          "caller": "resolve_persona_name",
+          "callee": "(name or DEFAULT_PERSONA).strip",
+          "lineNumber": 134
+        },
+        {
+          "caller": "resolve_persona_name",
+          "callee": "_validate_name",
+          "lineNumber": 136
+        },
+        {
+          "caller": "resolve_persona_name",
+          "callee": "(PERSONA_ROOT / slug / PERSONA_FILE).exists",
+          "lineNumber": 137
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 9,
+        "functionCount": 6,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "backend/tests/test_agent_db_session.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 59,
+      "nonEmptyLines": 44,
+      "functions": [
+        {
+          "name": "_session_mock",
+          "startLine": 16,
+          "endLine": 17,
+          "params": []
+        },
+        {
+          "name": "test_bind_and_get_turn_db_session",
+          "startLine": 20,
+          "endLine": 26,
+          "params": []
+        },
+        {
+          "name": "test_resolve_agent_db_reuses_bound_session",
+          "startLine": 29,
+          "endLine": 37,
+          "params": []
+        },
+        {
+          "name": "test_resolve_agent_db_opens_fresh_session_when_unbound",
+          "startLine": 40,
+          "endLine": 59,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_session_mock",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "test_bind_and_get_turn_db_session",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "test_resolve_agent_db_reuses_bound_session",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "test_resolve_agent_db_opens_fresh_session_when_unbound",
+          "line": 40,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_session_mock",
+          "callee": "MagicMock",
+          "lineNumber": 17
+        },
+        {
+          "caller": "test_bind_and_get_turn_db_session",
+          "callee": "AgentContext",
+          "lineNumber": 21
+        },
+        {
+          "caller": "test_bind_and_get_turn_db_session",
+          "callee": "_session_mock",
+          "lineNumber": 22
+        },
+        {
+          "caller": "test_bind_and_get_turn_db_session",
+          "callee": "bind_turn_db_session",
+          "lineNumber": 23
+        },
+        {
+          "caller": "test_bind_and_get_turn_db_session",
+          "callee": "get_bound_db_session",
+          "lineNumber": 24
+        },
+        {
+          "caller": "test_bind_and_get_turn_db_session",
+          "callee": "clear_turn_db_session",
+          "lineNumber": 25
+        },
+        {
+          "caller": "test_bind_and_get_turn_db_session",
+          "callee": "get_bound_db_session",
+          "lineNumber": 26
+        },
+        {
+          "caller": "_run",
+          "callee": "AgentContext",
+          "lineNumber": 31
+        },
+        {
+          "caller": "_run",
+          "callee": "_session_mock",
+          "lineNumber": 32
+        },
+        {
+          "caller": "_run",
+          "callee": "bind_turn_db_session",
+          "lineNumber": 33
+        },
+        {
+          "caller": "_run",
+          "callee": "resolve_agent_db",
+          "lineNumber": 34
+        },
+        {
+          "caller": "test_resolve_agent_db_reuses_bound_session",
+          "callee": "asyncio.run",
+          "lineNumber": 37
+        },
+        {
+          "caller": "test_resolve_agent_db_reuses_bound_session",
+          "callee": "_run",
+          "lineNumber": 37
+        },
+        {
+          "caller": "_run",
+          "callee": "AgentContext",
+          "lineNumber": 42
+        },
+        {
+          "caller": "_run",
+          "callee": "AsyncMock",
+          "lineNumber": 43
+        },
+        {
+          "caller": "_run",
+          "callee": "patch",
+          "lineNumber": 52
+        },
+        {
+          "caller": "_run",
+          "callee": "_SessionCtx",
+          "lineNumber": 54
+        },
+        {
+          "caller": "_run",
+          "callee": "resolve_agent_db",
+          "lineNumber": 56
+        },
+        {
+          "caller": "test_resolve_agent_db_opens_fresh_session_when_unbound",
+          "callee": "asyncio.run",
+          "lineNumber": 59
+        },
+        {
+          "caller": "test_resolve_agent_db_opens_fresh_session_when_unbound",
+          "callee": "_run",
+          "lineNumber": 59
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/tests/test_capability_registry.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 14,
+      "functions": [
+        {
+          "name": "test_capability_registry_resolves_tutor_chat_alias",
+          "startLine": 15,
+          "endLine": 19,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "_StubCapability",
+          "startLine": 7,
+          "endLine": 12,
+          "methods": [
+            "run"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_StubCapability",
+          "line": 7,
+          "isDefault": false
+        },
+        {
+          "name": "test_capability_registry_resolves_tutor_chat_alias",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "test_capability_registry_resolves_tutor_chat_alias",
+          "callee": "CapabilityRegistry",
+          "lineNumber": 16
+        },
+        {
+          "caller": "test_capability_registry_resolves_tutor_chat_alias",
+          "callee": "registry.register",
+          "lineNumber": 17
+        },
+        {
+          "caller": "test_capability_registry_resolves_tutor_chat_alias",
+          "callee": "_StubCapability",
+          "lineNumber": 17
+        },
+        {
+          "caller": "test_capability_registry_resolves_tutor_chat_alias",
+          "callee": "registry.get",
+          "lineNumber": 18
+        },
+        {
+          "caller": "test_capability_registry_resolves_tutor_chat_alias",
+          "callee": "registry.list_capabilities",
+          "lineNumber": 19
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/tests/test_chat_pipeline.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 48,
+      "nonEmptyLines": 40,
+      "functions": [
+        {
+          "name": "test_run_turn_prefetches_independent_reads_in_parallel",
+          "startLine": 11,
+          "endLine": 48,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "test_run_turn_prefetches_independent_reads_in_parallel",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_run",
+          "callee": "ChatPipeline",
+          "lineNumber": 13
+        },
+        {
+          "caller": "_run",
+          "callee": "AgentContext",
+          "lineNumber": 14
+        },
+        {
+          "caller": "_run",
+          "callee": "StreamBus",
+          "lineNumber": 15
+        },
+        {
+          "caller": "_run",
+          "callee": "MagicMock",
+          "lineNumber": 17
+        },
+        {
+          "caller": "_run",
+          "callee": "MagicMock",
+          "lineNumber": 18
+        },
+        {
+          "caller": "_run",
+          "callee": "patch",
+          "lineNumber": 21
+        },
+        {
+          "caller": "_run",
+          "callee": "patch",
+          "lineNumber": 26
+        },
+        {
+          "caller": "_run",
+          "callee": "patch",
+          "lineNumber": 31
+        },
+        {
+          "caller": "_run",
+          "callee": "AsyncMock",
+          "lineNumber": 35
+        },
+        {
+          "caller": "_run",
+          "callee": "MagicMock",
+          "lineNumber": 36
+        },
+        {
+          "caller": "_run",
+          "callee": "pipeline._run_turn",
+          "lineNumber": 43
+        },
+        {
+          "caller": "_run",
+          "callee": "AsyncMock",
+          "lineNumber": 43
+        },
+        {
+          "caller": "_run",
+          "callee": "gather.assert_awaited_once",
+          "lineNumber": 45
+        },
+        {
+          "caller": "_run",
+          "callee": "len",
+          "lineNumber": 46
+        },
+        {
+          "caller": "test_run_turn_prefetches_independent_reads_in_parallel",
+          "callee": "asyncio.run",
+          "lineNumber": 48
+        },
+        {
+          "caller": "test_run_turn_prefetches_independent_reads_in_parallel",
+          "callee": "_run",
+          "lineNumber": 48
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    }
+  ]
+}

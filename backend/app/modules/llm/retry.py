@@ -33,6 +33,10 @@ class RetryLLMClient(BaseLLMClient):
         self._max_attempts = max(1, max_attempts)
         self._base_delay_seconds = base_delay_seconds
 
+    @property
+    def _breaker(self):
+        return get_llm_circuit_breaker(self.config.provider)
+
     async def health_check(self) -> LLMHealth:
         return await self._inner.health_check()
 
@@ -40,27 +44,32 @@ class RetryLLMClient(BaseLLMClient):
         return await self._with_retry(self._inner.list_models)
 
     async def chat(self, request: LLMChatRequest) -> LLMChatResponse:
-        breaker = get_llm_circuit_breaker()
-        if not breaker.allow():
+        if not self._breaker.allow():
             raise LLMProviderUnavailableError("LLM circuit open — provider temporarily unavailable.")
         try:
             response = await self._with_retry(self._inner.chat, request)
         except Exception:
-            breaker.record_failure()
+            self._breaker.record_failure()
             raise
-        breaker.record_success()
+        self._breaker.record_success()
         return response
 
     async def stream_chat(self, request: LLMChatRequest) -> AsyncIterator[str]:
+        if not self._breaker.allow():
+            raise LLMProviderUnavailableError("LLM circuit open — provider temporarily unavailable.")
         attempt = 0
         while True:
             attempt += 1
+            saw_output = False
             try:
                 async for chunk in self._inner.stream_chat(request):
+                    saw_output = True
                     yield chunk
+                self._breaker.record_success()
                 return
             except Exception as exc:
-                if attempt >= self._max_attempts or not self._is_retryable(exc):
+                if saw_output or attempt >= self._max_attempts or not self._is_retryable(exc):
+                    self._breaker.record_failure()
                     raise
                 delay = self._backoff_delay(attempt)
                 logger.warning(

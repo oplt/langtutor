@@ -1,15 +1,22 @@
 from __future__ import annotations
 
-import re
 import secrets
 import time
-from copy import deepcopy
 from datetime import UTC, datetime
 from typing import Any
-from urllib.parse import urlparse
 
 from backend.app.core.config import settings as app_settings
 
+from backend.app.modules.ai.profile_resolution import (
+    TASK_DEFAULTS,
+    default_llm_profile,
+    default_llm_settings,
+    normalize_ai_settings,
+    privacy_for_provider,
+    resolve_profile_id_for_task,
+    slugify_profile_id,
+    validate_ai_settings,
+)
 from backend.app.modules.ai.schemas import (
     LLMConnectionTestRequest,
     LLMProfile,
@@ -21,22 +28,12 @@ from backend.app.modules.ai.schemas import (
     LLMRoutingUpdate,
     LLMSettingsResponse,
     LLMSettingsUpdate,
-    LLMTaskDefault,
 )
 from backend.app.modules.llm.base import LLMChatRequest, LLMProviderConfig
 from backend.app.modules.llm.errors import LLMError
 from backend.app.modules.llm.factory import config_from_profile, create_llm_client
 from backend.app.modules.llm.provider_registry import PROVIDERS
 from backend.app.modules.settings.repository import MASK, SettingsRepository
-
-TASK_DEFAULTS: dict[str, LLMTaskDefault] = {
-    "tutor_chat": LLMTaskDefault(provider="ollama"),
-    "story_generation": LLMTaskDefault(provider="ollama"),
-    "quiz_generation": LLMTaskDefault(provider="ollama"),
-    "grammar_explanation": LLMTaskDefault(provider="ollama"),
-    "correction": LLMTaskDefault(provider="openai"),
-    "placement": LLMTaskDefault(provider="ollama"),
-}
 
 _public_settings_cache: tuple[float, LLMSettingsResponse] | None = None
 _effective_settings_cache: tuple[float, LLMSettingsResponse] | None = None
@@ -51,85 +48,8 @@ def invalidate_llm_settings_cache() -> None:
     invalidate_task_client_cache()
 
 
-def default_llm_settings() -> dict[str, Any]:
-    return {
-        "active_provider": "ollama",
-        "system_prompt": (
-            "You are a supportive Dutch language tutor. Explain clearly, correct gently, "
-            "and adapt to the learner's CEFR level."
-        ),
-        "providers": {
-            provider_id: {
-                "enabled": provider_id in {"ollama", "openai"},
-                "api_base": descriptor.default_api_base,
-                "model": "",
-                "timeout_seconds": 120 if descriptor.mode == "local" else 60,
-                "max_tokens": 2048,
-                "temperature": 0.2,
-                "streaming": descriptor.supports_streaming,
-                "vision": descriptor.supports_vision,
-                "context_window": 8192,
-                "mode": "external_server",
-                "server_binary_path": "",
-                "model_path": "",
-                "host": "127.0.0.1",
-                "port": 8080,
-                "gpu_layers": 0,
-                "threads": 0,
-                "batch_size": 512,
-            }
-            for provider_id, descriptor in PROVIDERS.items()
-        },
-        "task_defaults": {key: value.model_dump() for key, value in TASK_DEFAULTS.items()},
-        "profiles": [_default_llm_profile()],
-        "default_profile_id": "ollama",
-        "task_overrides": {},
-    }
-
-
-def _default_llm_profile() -> dict[str, Any]:
-    return {
-        "id": "ollama",
-        "name": "Local Ollama",
-        "provider": "ollama",
-        "api_base": "http://localhost:11434",
-        "model": "",
-        "enabled": True,
-        "has_api_key": False,
-        "api_key": None,
-        "timeout_seconds": 120,
-        "temperature": 0.2,
-        "max_tokens": 2048,
-        "context_window": 8192,
-        "streaming": True,
-        "vision_support": False,
-        "privacy_mode": "local",
-        "llama_connection_mode": "external_server",
-        "llama_command": "",
-        "llama_config": {
-            "binary_path": "",
-            "model_path": "",
-            "host": "127.0.0.1",
-            "port": 8080,
-            "api_base": "http://127.0.0.1:8080/v1",
-            "context_window": 8192,
-            "gpu_layers": 0,
-            "flash_attention": False,
-            "parallel_slots": 1,
-            "threads": 0,
-            "batch_size": 512,
-            "extra_allowed_args": [],
-        },
-    }
-
-
 def _now_iso() -> str:
     return datetime.now(UTC).isoformat()
-
-
-def _slugify(value: str) -> str:
-    slug = re.sub(r"[^a-z0-9]+", "-", value.strip().lower()).strip("-")
-    return slug or f"llm-{secrets.token_hex(4)}"
 
 
 class AISettingsService:
@@ -149,7 +69,7 @@ class AISettingsService:
             if effective
             else (await self.repo.get_settings_doc()).model_dump()
         )
-        normalized = self._normalize_ai(doc.get("ai", {}), include_secret=effective)
+        normalized = normalize_ai_settings(doc.get("ai", {}), include_secret=effective)
         response = LLMSettingsResponse.model_validate(normalized)
         expires_at = now + app_settings.LLM_SETTINGS_CACHE_TTL_SECONDS
         if effective:
@@ -160,8 +80,8 @@ class AISettingsService:
 
     async def save_settings(self, payload: LLMSettingsUpdate) -> LLMSettingsResponse:
         public_doc = (await self.repo.get_settings_doc()).model_dump()
-        normalized = self._normalize_ai(payload.model_dump(), include_secret=True)
-        self._validate_settings(normalized)
+        normalized = normalize_ai_settings(payload.model_dump(), include_secret=True)
+        validate_ai_settings(normalized)
         public_doc["ai"] = normalized
         await self.repo.put_settings_doc(public_doc)
         invalidate_llm_settings_cache()
@@ -177,14 +97,14 @@ class AISettingsService:
     async def create_profile(self, payload: LLMProfileCreate) -> LLMProfile:
         settings = await self.get_settings(effective=True)
         profile_ids = {profile.id for profile in settings.profiles}
-        profile_id = _slugify(payload.name)
+        profile_id = slugify_profile_id(payload.name)
         if profile_id in profile_ids:
             profile_id = f"{profile_id}-{secrets.token_hex(3)}"
         timestamp = _now_iso()
         profile = LLMProfile(
             id=profile_id,
             **payload.model_dump(),
-            privacy_mode=self._privacy_for_provider(payload.provider),
+            privacy_mode=privacy_for_provider(payload.provider),
             has_api_key=bool(payload.api_key),
             created_at=timestamp,
             updated_at=timestamp,
@@ -220,7 +140,7 @@ class AISettingsService:
                         incoming["api_key"] = MASK
             raw.update(incoming)
             raw["id"] = profile_id
-            raw["privacy_mode"] = self._privacy_for_provider(str(raw.get("provider") or ""))
+            raw["privacy_mode"] = privacy_for_provider(str(raw.get("provider") or ""))
             raw["created_at"] = profile.created_at or timestamp
             raw["updated_at"] = timestamp
             updated.append(LLMProfile.model_validate(raw))
@@ -270,11 +190,13 @@ class AISettingsService:
 
     async def resolve_task_profile(self, task: str) -> LLMProfile:
         settings = await self.get_settings(effective=True)
-        profile_id = settings.task_overrides.get(task) or settings.default_profile_id
-        if not profile_id and settings.profiles:
-            profile_id = settings.profiles[0].id
-        if not profile_id:
-            raise ValueError("No LLM profile configured.")
+        profile_ids = {profile.id for profile in settings.profiles}
+        profile_id = resolve_profile_id_for_task(
+            task=task,
+            default_profile_id=settings.default_profile_id,
+            task_overrides=settings.task_overrides,
+            profile_ids=profile_ids,
+        )
         try:
             return await self.get_profile(profile_id, effective=True)
         except ValueError:
@@ -330,7 +252,7 @@ class AISettingsService:
         task_overrides: dict[str, str],
     ) -> None:
         doc = (await self.repo.get_settings_doc()).model_dump()
-        ai = self._normalize_ai(doc.get("ai", {}), include_secret=False)
+        ai = normalize_ai_settings(doc.get("ai", {}), include_secret=False)
         ai["profiles"] = [profile.model_dump() for profile in profiles]
         ai["default_profile_id"] = default_profile_id
         ai["task_overrides"] = task_overrides
@@ -339,113 +261,10 @@ class AISettingsService:
         invalidate_llm_settings_cache()
 
     def _normalize_ai(self, raw: dict[str, Any], *, include_secret: bool) -> dict[str, Any]:
-        defaults = default_llm_settings()
-        source = deepcopy(raw or {})
-        merged = deepcopy(defaults)
-        merged.update({k: v for k, v in source.items() if k not in {"providers", "task_defaults"}})
-        for provider_id, provider_settings in (source.get("providers") or {}).items():
-            if provider_id in PROVIDERS and isinstance(provider_settings, dict):
-                merged["providers"][provider_id].update(provider_settings)
-        for task, task_default in (source.get("task_defaults") or {}).items():
-            if task in TASK_DEFAULTS and isinstance(task_default, dict):
-                merged["task_defaults"][task].update(task_default)
-        profiles = self._normalize_profiles(source, merged, include_secret=include_secret)
-        merged["profiles"] = [profile.model_dump() for profile in profiles]
-        default_profile_id = str(source.get("default_profile_id") or "")
-        if not default_profile_id and profiles:
-            default_profile_id = profiles[0].id
-        merged["default_profile_id"] = default_profile_id
-        profile_ids = {profile.id for profile in profiles}
-        merged["task_overrides"] = {
-            task: profile_id
-            for task, profile_id in (source.get("task_overrides") or {}).items()
-            if task in TASK_DEFAULTS and profile_id in profile_ids
-        }
-        for provider_settings in merged["providers"].values():
-            api_key = provider_settings.get("api_key")
-            if api_key == "":
-                provider_settings["has_api_key"] = False
-            elif api_key and api_key != MASK:
-                provider_settings["has_api_key"] = True
-            if not include_secret:
-                provider_settings["api_key"] = None
-        active = str(merged.get("active_provider") or "ollama")
-        merged["active_provider"] = active if active in PROVIDERS else "ollama"
-        return merged
-
-    def _normalize_profiles(
-        self,
-        source: dict[str, Any],
-        merged: dict[str, Any],
-        *,
-        include_secret: bool,
-    ) -> list[LLMProfile]:
-        raw_profiles = source.get("profiles")
-        profiles: list[LLMProfile] = []
-        if isinstance(raw_profiles, list):
-            for raw_profile in raw_profiles:
-                if not isinstance(raw_profile, dict):
-                    continue
-                try:
-                    profile = LLMProfile.model_validate(raw_profile)
-                except Exception:
-                    continue
-                if profile.api_key == "":
-                    profile.has_api_key = False
-                elif profile.api_key and profile.api_key != MASK:
-                    profile.has_api_key = True
-                profile.privacy_mode = self._privacy_for_provider(profile.provider)
-                if not include_secret:
-                    profile.api_key = None
-                profiles.append(profile)
-        if profiles:
-            return profiles
-        timestamp = _now_iso()
-        for provider_id, provider_settings in merged.get("providers", {}).items():
-            if provider_id not in PROVIDERS or not isinstance(provider_settings, dict):
-                continue
-            if not provider_settings.get("enabled") and not provider_settings.get("model"):
-                continue
-            descriptor = PROVIDERS[provider_id]
-            profiles.append(
-                LLMProfile(
-                    id=provider_id,
-                    name=descriptor.label,
-                    provider=provider_id,
-                    api_base=str(provider_settings.get("api_base") or descriptor.default_api_base),
-                    model=str(provider_settings.get("model") or ""),
-                    enabled=bool(provider_settings.get("enabled", True)),
-                    has_api_key=bool(provider_settings.get("has_api_key")),
-                    api_key=provider_settings.get("api_key") if include_secret else None,
-                    timeout_seconds=float(provider_settings.get("timeout_seconds") or 60),
-                    temperature=float(provider_settings.get("temperature") or 0.2),
-                    max_tokens=int(provider_settings.get("max_tokens") or 2048),
-                    context_window=int(provider_settings.get("context_window") or 8192),
-                    streaming=bool(provider_settings.get("streaming", True)),
-                    vision_support=bool(provider_settings.get("vision", False)),
-                    privacy_mode=self._privacy_for_provider(provider_id),
-                    created_at=timestamp,
-                    updated_at=timestamp,
-                )
-            )
-        return profiles
+        return normalize_ai_settings(raw, include_secret=include_secret)
 
     def _validate_settings(self, data: dict[str, Any]) -> None:
-        active = data.get("active_provider")
-        if active not in PROVIDERS:
-            raise ValueError("Unsupported active LLM provider.")
-        for provider_id, provider_settings in data.get("providers", {}).items():
-            if provider_id not in PROVIDERS:
-                raise ValueError(f"Unsupported LLM provider: {provider_id}")
-            if provider_settings.get("enabled"):
-                api_base = str(provider_settings.get("api_base") or "").strip()
-                parsed = urlparse(api_base)
-                if not parsed.scheme or not parsed.netloc:
-                    raise ValueError(f"{provider_id} API base must be an absolute URL.")
-        profile_ids = {profile.get("id") for profile in data.get("profiles", [])}
-        default_profile_id = data.get("default_profile_id")
-        if default_profile_id and default_profile_id not in profile_ids:
-            raise ValueError("Default LLM profile does not exist.")
+        validate_ai_settings(data)
 
     def _client_config(self, provider: str, settings: LLMProviderSettings) -> LLMProviderConfig:
         if provider not in PROVIDERS:
@@ -467,15 +286,20 @@ class AISettingsService:
             context_window=settings.context_window,
         )
 
-    def _client_config_from_profile(self, profile: LLMProfile) -> LLMProviderConfig:
-        return config_from_profile(profile)
-
     def _privacy_for_provider(self, provider: str) -> str:
-        descriptor = PROVIDERS.get(provider)
-        return "local" if descriptor and descriptor.mode == "local" else "cloud"
+        return privacy_for_provider(provider)
 
 
 def llm_error_payload(exc: Exception) -> dict[str, Any]:
     if isinstance(exc, LLMError):
         return {"code": exc.code, "message": str(exc), "detail": exc.detail}
     return {"code": "LLM_REQUEST_FAILED", "message": str(exc), "detail": ""}
+
+
+__all__ = [
+    "AISettingsService",
+    "TASK_DEFAULTS",
+    "default_llm_settings",
+    "invalidate_llm_settings_cache",
+    "llm_error_payload",
+]

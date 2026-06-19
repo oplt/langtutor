@@ -43,6 +43,14 @@ def build_agent_context(
     if log_ctx.get("trace_id"):
         metadata["trace_id"] = log_ctx["trace_id"]
 
+    if payload.cefr_level:
+        from backend.app.db.base import CEFRLevel
+
+        try:
+            CEFRLevel(str(payload.cefr_level).upper())
+        except ValueError:
+            metadata["cefr_level_invalid"] = payload.cefr_level
+
     return AgentContext(
         session_id=sid,
         user_id=user_id,

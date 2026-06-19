@@ -53,12 +53,19 @@ export default function ProfilePage() {
   }, [user, refreshUser]);
 
   const saveProfile = async () => {
+    const trimmed = form.full_name.trim();
+    if (trimmed.length < 2) {
+      setError("Full name must be at least 2 characters.");
+      setNotice(null);
+      return;
+    }
     setSaving(true);
     setNotice(null);
     setError(null);
     try {
-      await updateProfile(form.full_name);
+      await updateProfile(trimmed);
       await refreshUser();
+      setForm({ full_name: trimmed });
       setNotice("Profile updated.");
     } catch {
       setError("Could not save profile changes.");
@@ -109,10 +116,20 @@ export default function ProfilePage() {
                       label="Full name"
                       size="small"
                       value={form.full_name}
+                      error={form.full_name.trim().length > 0 && form.full_name.trim().length < 2}
+                      helperText={
+                        form.full_name.trim().length > 0 && form.full_name.trim().length < 2
+                          ? "Use at least 2 characters."
+                          : undefined
+                      }
                       onChange={(e) => setForm((prev) => ({ ...prev, full_name: e.target.value }))}
                     />
                     <TextField label="Email" size="small" value={displayEmail} disabled />
-                    <Button variant="contained" onClick={saveProfile} disabled={saving}>
+                    <Button
+                      variant="contained"
+                      onClick={saveProfile}
+                      disabled={saving || form.full_name.trim().length < 2}
+                    >
                       {saving ? "Saving..." : "Save profile"}
                     </Button>
                   </Stack>

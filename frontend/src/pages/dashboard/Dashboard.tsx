@@ -6,11 +6,6 @@ import Stack from "@mui/material/Stack";
 import AppNavbar from "./components/AppNavbar";
 import SideMenu from "./components/SideMenu";
 import AppTheme from "../shared-theme/AppTheme";
-import {
-  chartsCustomizations,
-  dataGridCustomizations,
-  datePickersCustomizations,
-} from "./theme/customizations";
 import { useAuth } from "../../context/AuthContext";
 import { SessionDegradedBanner } from "../../shared/components/SessionDegradedBanner";
 import { useFocusMainOnNavigate } from "../../shared/hooks/useFocusMainOnNavigate";
@@ -21,14 +16,8 @@ import {
   fetchProgressSummary,
 } from "../../modules/learning/api/learningApi";
 
-const xThemeComponents = {
-  ...chartsCustomizations,
-  ...dataGridCustomizations,
-  ...datePickersCustomizations,
-};
-
 export default function Dashboard(props: { disableCustomTheme?: boolean }) {
-  const { sessionDegraded, retrySession, user } = useAuth();
+  const { sessionDegraded, retrySession } = useAuth();
   const [sidebarCollapsed, setSidebarCollapsed] = React.useState(false);
   const mainRef = useFocusMainOnNavigate();
 
@@ -44,9 +33,9 @@ export default function Dashboard(props: { disableCustomTheme?: boolean }) {
   }, []);
 
   return (
-    <AppTheme {...props} themeComponents={xThemeComponents}>
+    <AppTheme {...props}>
       <CssBaseline enableColorScheme />
-      {(sessionDegraded || !user) && (
+      {(sessionDegraded) && (
         <SessionDegradedBanner onRetry={retrySession} />
       )}
       <Box sx={{ display: "flex" }}>

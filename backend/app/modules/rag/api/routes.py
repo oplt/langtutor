@@ -25,6 +25,7 @@ from backend.app.modules.rag.api.schemas import (
 from backend.app.deps import document_ingestion_dep
 from backend.app.modules.rag.application.document_ingestion_service import DocumentIngestionService
 from backend.app.modules.rag.application.indexing_tasks import run_rag_index_job
+from backend.app.modules.rag.api.errors import rag_ask_http_exception
 from backend.app.modules.rag.application.retrieval_service import RagAnswerService, RetrievalService
 from backend.app.modules.rag.domain.value_objects import AccessContext, RetrievalFilters
 from backend.app.modules.rag.infrastructure.repositories import get_rag_repository
@@ -90,7 +91,6 @@ if HAS_MULTIPART:
                 data=data,
                 project_id=project_id,
             )
-            await db.commit()
         except ValueError as exc:
             raise HTTPException(status_code=400, detail=str(exc)) from exc
         except PermissionError as exc:
@@ -193,7 +193,6 @@ async def delete_document(
     _require_rag_enabled()
     try:
         await service.delete_document(db, access=_access(user), document_id=document_id)
-        await db.commit()
     except LookupError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
     except PermissionError as exc:
@@ -216,7 +215,6 @@ async def index_document(
         result = await service.enqueue_index_document(
             db, access=_access(user), document_id=document_id
         )
-        await db.commit()
     except LookupError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
     except PermissionError as exc:
@@ -307,13 +305,12 @@ async def ask(
             access=_access(user, payload.project_id),
             top_k=payload.top_k,
         )
-        await db.commit()
     except PermissionError as exc:
         raise HTTPException(status_code=403, detail=str(exc)) from exc
     except Exception as exc:
         await db.rollback()
         logger.exception("rag_ask_failed user_id=%s", user.id)
-        raise HTTPException(status_code=503, detail="RAG answer generation failed") from exc
+        raise rag_ask_http_exception(exc) from exc
     return AskOut(
         query=result.query,
         answer=result.answer,

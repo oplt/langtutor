@@ -1,0 +1,268 @@
+{
+  "projectRoot": "/home/polat/Desktop/Projects/LanguageApp",
+  "batchFiles": [
+    {
+      "path": "backend/app/core/metrics.py",
+      "language": "python",
+      "sizeLines": 130,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/ai/api.py",
+      "language": "python",
+      "sizeLines": 131,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/ai/schemas.py",
+      "language": "python",
+      "sizeLines": 185,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/ai/service.py",
+      "language": "python",
+      "sizeLines": 481,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/llm/anthropic.py",
+      "language": "python",
+      "sizeLines": 135,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/llm/base.py",
+      "language": "python",
+      "sizeLines": 100,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/llm/circuit_breaker.py",
+      "language": "python",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/llm/context_guard.py",
+      "language": "python",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/llm/errors.py",
+      "language": "python",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/llm/factory.py",
+      "language": "python",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/llm/http.py",
+      "language": "python",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/llm/ollama.py",
+      "language": "python",
+      "sizeLines": 177,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/llm/openai_compatible.py",
+      "language": "python",
+      "sizeLines": 226,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/llm/provider_registry.py",
+      "language": "python",
+      "sizeLines": 121,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/llm/retry.py",
+      "language": "python",
+      "sizeLines": 105,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/llm/service.py",
+      "language": "python",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/llm/task_client.py",
+      "language": "python",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/llm/task_client_cache.py",
+      "language": "python",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/settings/api.py",
+      "language": "python",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/settings/defaults.py",
+      "language": "python",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/settings/repository.py",
+      "language": "python",
+      "sizeLines": 146,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/settings/schemas.py",
+      "language": "python",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/tests/test_llm_live_eval.py",
+      "language": "python",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/tests/test_llm_metrics.py",
+      "language": "python",
+      "sizeLines": 100,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/tests/test_llm_settings_cache.py",
+      "language": "python",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/tests/test_task_client_cache.py",
+      "language": "python",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "backend/app/core/metrics.py": [],
+    "backend/app/modules/ai/api.py": [
+      "backend/app/modules/ai/schemas.py",
+      "backend/app/modules/ai/service.py"
+    ],
+    "backend/app/modules/ai/schemas.py": [
+      "backend/app/modules/llm/base.py"
+    ],
+    "backend/app/modules/ai/service.py": [
+      "backend/app/core/config.py",
+      "backend/app/modules/ai/schemas.py",
+      "backend/app/modules/llm/base.py",
+      "backend/app/modules/llm/errors.py",
+      "backend/app/modules/llm/factory.py",
+      "backend/app/modules/llm/provider_registry.py",
+      "backend/app/modules/settings/repository.py"
+    ],
+    "backend/app/modules/llm/anthropic.py": [
+      "backend/app/modules/llm/base.py",
+      "backend/app/modules/llm/errors.py",
+      "backend/app/modules/llm/http.py"
+    ],
+    "backend/app/modules/llm/base.py": [],
+    "backend/app/modules/llm/circuit_breaker.py": [],
+    "backend/app/modules/llm/context_guard.py": [
+      "backend/app/modules/llm/base.py"
+    ],
+    "backend/app/modules/llm/errors.py": [],
+    "backend/app/modules/llm/factory.py": [
+      "backend/app/core/config.py",
+      "backend/app/modules/ai/schemas.py",
+      "backend/app/modules/llm/anthropic.py",
+      "backend/app/modules/llm/base.py",
+      "backend/app/modules/llm/ollama.py",
+      "backend/app/modules/llm/openai_compatible.py",
+      "backend/app/modules/llm/provider_registry.py",
+      "backend/app/modules/llm/retry.py"
+    ],
+    "backend/app/modules/llm/http.py": [],
+    "backend/app/modules/llm/ollama.py": [
+      "backend/app/modules/llm/base.py",
+      "backend/app/modules/llm/errors.py",
+      "backend/app/modules/llm/http.py"
+    ],
+    "backend/app/modules/llm/openai_compatible.py": [
+      "backend/app/modules/llm/base.py",
+      "backend/app/modules/llm/errors.py",
+      "backend/app/modules/llm/http.py"
+    ],
+    "backend/app/modules/llm/provider_registry.py": [
+      "backend/app/modules/ai/schemas.py"
+    ],
+    "backend/app/modules/llm/retry.py": [
+      "backend/app/modules/llm/base.py",
+      "backend/app/modules/llm/circuit_breaker.py",
+      "backend/app/modules/llm/errors.py"
+    ],
+    "backend/app/modules/llm/service.py": [
+      "backend/app/core/config.py",
+      "backend/app/modules/llm/base.py",
+      "backend/app/modules/llm/factory.py",
+      "backend/app/modules/llm/task_client_cache.py",
+      "backend/app/modules/llm/task_client.py"
+    ],
+    "backend/app/modules/llm/task_client.py": [
+      "backend/app/core/metrics.py",
+      "backend/app/modules/llm/base.py",
+      "backend/app/modules/llm/context_guard.py"
+    ],
+    "backend/app/modules/llm/task_client_cache.py": [
+      "backend/app/core/config.py",
+      "backend/app/modules/llm/task_client.py"
+    ],
+    "backend/app/modules/settings/api.py": [
+      "backend/app/modules/ai/schemas.py",
+      "backend/app/modules/ai/service.py",
+      "backend/app/modules/settings/repository.py",
+      "backend/app/modules/settings/schemas.py"
+    ],
+    "backend/app/modules/settings/defaults.py": [
+      "backend/app/modules/settings/schemas.py"
+    ],
+    "backend/app/modules/settings/repository.py": [
+      "backend/app/core/config.py",
+      "backend/app/modules/settings/defaults.py",
+      "backend/app/modules/settings/schemas.py"
+    ],
+    "backend/app/modules/settings/schemas.py": [],
+    "backend/tests/test_llm_live_eval.py": [
+      "backend/app/modules/llm/base.py",
+      "backend/app/modules/llm/service.py"
+    ],
+    "backend/tests/test_llm_metrics.py": [
+      "backend/app/core/metrics.py",
+      "backend/app/modules/llm/base.py",
+      "backend/app/modules/llm/task_client.py"
+    ],
+    "backend/tests/test_llm_settings_cache.py": [
+      "backend/app/modules/ai/schemas.py",
+      "backend/app/modules/ai/service.py"
+    ],
+    "backend/tests/test_task_client_cache.py": [
+      "backend/app/modules/llm/service.py",
+      "backend/app/modules/llm/task_client_cache.py"
+    ]
+  }
+}

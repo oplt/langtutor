@@ -1,0 +1,4184 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 27,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "backend/app/modules/learning/mastery/schemas.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 44,
+      "nonEmptyLines": 29,
+      "classes": [
+        {
+          "name": "PathQuizIn",
+          "startLine": 11,
+          "endLine": 16,
+          "methods": [],
+          "properties": [
+            "knowledge_point_id",
+            "prompt",
+            "expected_answer",
+            "question_type",
+            "options"
+          ]
+        },
+        {
+          "name": "PathGradeIn",
+          "startLine": 19,
+          "endLine": 20,
+          "methods": [],
+          "properties": [
+            "answer"
+          ]
+        },
+        {
+          "name": "PathAssessIn",
+          "startLine": 23,
+          "endLine": 26,
+          "methods": [],
+          "properties": [
+            "knowledge_point_id",
+            "passed",
+            "evidence"
+          ]
+        },
+        {
+          "name": "PathMapOut",
+          "startLine": 29,
+          "endLine": 33,
+          "methods": [],
+          "properties": [
+            "level",
+            "next",
+            "map",
+            "version"
+          ]
+        },
+        {
+          "name": "PathDrillOut",
+          "startLine": 36,
+          "endLine": 38,
+          "methods": [],
+          "properties": [
+            "step",
+            "drill"
+          ]
+        },
+        {
+          "name": "PathGradeOut",
+          "startLine": 41,
+          "endLine": 44,
+          "methods": [],
+          "properties": [
+            "correct",
+            "map",
+            "drill"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PathQuizIn",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "PathGradeIn",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "PathAssessIn",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "PathMapOut",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "PathDrillOut",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "PathGradeOut",
+          "line": 41,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 6,
+        "functionCount": 0,
+        "classCount": 6
+      }
+    },
+    {
+      "path": "backend/app/modules/learning/mastery/service.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 233,
+      "nonEmptyLines": 217,
+      "functions": [
+        {
+          "name": "load_path_definition",
+          "startLine": 27,
+          "endLine": 60,
+          "params": [
+            "level"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "MasteryService",
+          "startLine": 63,
+          "endLine": 233,
+          "methods": [
+            "__init__",
+            "new_progress",
+            "replace_modules",
+            "calculate_mastery",
+            "record_quiz_attempt",
+            "grade_and_record",
+            "set_pending_question",
+            "record_qualitative",
+            "pick_drill",
+            "build_pending_from_drill"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "load_path_definition",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "MasteryService",
+          "line": 63,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "load_path_definition",
+          "callee": "level.lower",
+          "lineNumber": 28
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "path_file.exists",
+          "lineNumber": 29
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "FileNotFoundError",
+          "lineNumber": 30
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "json.loads",
+          "lineNumber": 31
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "path_file.read_text",
+          "lineNumber": 31
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "payload.get",
+          "lineNumber": 33
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "raw.get",
+          "lineNumber": 35
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "DrillTemplate.model_validate",
+          "lineNumber": 37
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "kp_raw.get",
+          "lineNumber": 37
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "kps.append",
+          "lineNumber": 39
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "KnowledgePoint",
+          "lineNumber": 40
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "str",
+          "lineNumber": 41
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "str",
+          "lineNumber": 42
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "KnowledgeType",
+          "lineNumber": 43
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "str",
+          "lineNumber": 43
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "str",
+          "lineNumber": 44
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "kp_raw.get",
+          "lineNumber": 45
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "kp_raw.get",
+          "lineNumber": 46
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "modules.append",
+          "lineNumber": 50
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "LearningModule",
+          "lineNumber": 51
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "str",
+          "lineNumber": 52
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "str",
+          "lineNumber": 53
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "int",
+          "lineNumber": 54
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "raw.get",
+          "lineNumber": 54
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "LearningStage",
+          "lineNumber": 55
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "str",
+          "lineNumber": 55
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "raw.get",
+          "lineNumber": 55
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "float",
+          "lineNumber": 56
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "raw.get",
+          "lineNumber": 56
+        },
+        {
+          "caller": "load_path_definition",
+          "callee": "sorted",
+          "lineNumber": 60
+        },
+        {
+          "caller": "__init__",
+          "callee": "SpacedRepetitionScheduler",
+          "lineNumber": 65
+        },
+        {
+          "caller": "new_progress",
+          "callee": "LearningProgress",
+          "lineNumber": 68
+        },
+        {
+          "caller": "new_progress",
+          "callee": "path_id.upper",
+          "lineNumber": 68
+        },
+        {
+          "caller": "new_progress",
+          "callee": "self.replace_modules",
+          "lineNumber": 69
+        },
+        {
+          "caller": "replace_modules",
+          "callee": "list",
+          "lineNumber": 74
+        },
+        {
+          "caller": "replace_modules",
+          "callee": "progress.mastery_levels.keys",
+          "lineNumber": 74
+        },
+        {
+          "caller": "replace_modules",
+          "callee": "list",
+          "lineNumber": 77
+        },
+        {
+          "caller": "replace_modules",
+          "callee": "progress.knowledge_types.keys",
+          "lineNumber": 77
+        },
+        {
+          "caller": "replace_modules",
+          "callee": "list",
+          "lineNumber": 80
+        },
+        {
+          "caller": "replace_modules",
+          "callee": "progress.repetition_states.keys",
+          "lineNumber": 80
+        },
+        {
+          "caller": "replace_modules",
+          "callee": "list",
+          "lineNumber": 89
+        },
+        {
+          "caller": "replace_modules",
+          "callee": "time.time",
+          "lineNumber": 93
+        },
+        {
+          "caller": "calculate_mastery",
+          "callee": "compute_mastery",
+          "lineNumber": 101
+        },
+        {
+          "caller": "record_quiz_attempt",
+          "callee": "next",
+          "lineNumber": 105
+        },
+        {
+          "caller": "record_quiz_attempt",
+          "callee": "existing.retry_history.append",
+          "lineNumber": 115
+        },
+        {
+          "caller": "record_quiz_attempt",
+          "callee": "RetryAttempt",
+          "lineNumber": 116
+        },
+        {
+          "caller": "record_quiz_attempt",
+          "callee": "time.time",
+          "lineNumber": 117
+        },
+        {
+          "caller": "record_quiz_attempt",
+          "callee": "len",
+          "lineNumber": 119
+        },
+        {
+          "caller": "record_quiz_attempt",
+          "callee": "progress.error_records.append",
+          "lineNumber": 124
+        },
+        {
+          "caller": "record_quiz_attempt",
+          "callee": "ErrorRecord",
+          "lineNumber": 125
+        },
+        {
+          "caller": "record_quiz_attempt",
+          "callee": "uuid.uuid4",
+          "lineNumber": 126
+        },
+        {
+          "caller": "record_quiz_attempt",
+          "callee": "record.retry_history.append",
+          "lineNumber": 141
+        },
+        {
+          "caller": "record_quiz_attempt",
+          "callee": "RetryAttempt",
+          "lineNumber": 142
+        },
+        {
+          "caller": "record_quiz_attempt",
+          "callee": "time.time",
+          "lineNumber": 143
+        },
+        {
+          "caller": "record_quiz_attempt",
+          "callee": "len",
+          "lineNumber": 145
+        },
+        {
+          "caller": "record_quiz_attempt",
+          "callee": "progress.quiz_attempts.append",
+          "lineNumber": 150
+        },
+        {
+          "caller": "record_quiz_attempt",
+          "callee": "time.time",
+          "lineNumber": 151
+        },
+        {
+          "caller": "grade_and_record",
+          "callee": "bool",
+          "lineNumber": 164
+        },
+        {
+          "caller": "grade_and_record",
+          "callee": "grade_answer",
+          "lineNumber": 164
+        },
+        {
+          "caller": "grade_and_record",
+          "callee": "self.record_quiz_attempt",
+          "lineNumber": 167
+        },
+        {
+          "caller": "grade_and_record",
+          "callee": "QuizAttempt",
+          "lineNumber": 169
+        },
+        {
+          "caller": "grade_and_record",
+          "callee": "classify_error",
+          "lineNumber": 175
+        },
+        {
+          "caller": "grade_and_record",
+          "callee": "self.calculate_mastery",
+          "lineNumber": 179
+        },
+        {
+          "caller": "grade_and_record",
+          "callee": "progress.knowledge_types.get",
+          "lineNumber": 182
+        },
+        {
+          "caller": "grade_and_record",
+          "callee": "progress.repetition_states.get",
+          "lineNumber": 184
+        },
+        {
+          "caller": "grade_and_record",
+          "callee": "self._scheduler.get_initial_state",
+          "lineNumber": 186
+        },
+        {
+          "caller": "grade_and_record",
+          "callee": "self._scheduler.schedule_next",
+          "lineNumber": 188
+        },
+        {
+          "caller": "grade_and_record",
+          "callee": "self._scheduler.build_review_queue",
+          "lineNumber": 189
+        },
+        {
+          "caller": "grade_and_record",
+          "callee": "time.time",
+          "lineNumber": 191
+        },
+        {
+          "caller": "set_pending_question",
+          "callee": "time.time",
+          "lineNumber": 196
+        },
+        {
+          "caller": "record_qualitative",
+          "callee": "bool",
+          "lineNumber": 206
+        },
+        {
+          "caller": "record_qualitative",
+          "callee": "progress.mastery_levels.get",
+          "lineNumber": 207
+        },
+        {
+          "caller": "record_qualitative",
+          "callee": "max",
+          "lineNumber": 208
+        },
+        {
+          "caller": "record_qualitative",
+          "callee": "min",
+          "lineNumber": 208
+        },
+        {
+          "caller": "record_qualitative",
+          "callee": "time.time",
+          "lineNumber": 211
+        },
+        {
+          "caller": "pick_drill",
+          "callee": "random.choice",
+          "lineNumber": 215
+        },
+        {
+          "caller": "build_pending_from_drill",
+          "callee": "PendingQuestion",
+          "lineNumber": 225
+        },
+        {
+          "caller": "build_pending_from_drill",
+          "callee": "uuid.uuid4",
+          "lineNumber": 226
+        },
+        {
+          "caller": "build_pending_from_drill",
+          "callee": "list",
+          "lineNumber": 232
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/learning/models.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 179,
+      "nonEmptyLines": 152,
+      "classes": [
+        {
+          "name": "Word",
+          "startLine": 24,
+          "endLine": 57,
+          "methods": [],
+          "properties": [
+            "id",
+            "lemma",
+            "rank",
+            "level",
+            "forms",
+            "stories",
+            "user_progress"
+          ]
+        },
+        {
+          "name": "WordForm",
+          "startLine": 60,
+          "endLine": 80,
+          "methods": [],
+          "properties": [
+            "id",
+            "word_id",
+            "form",
+            "features",
+            "word"
+          ]
+        },
+        {
+          "name": "UserWordProgress",
+          "startLine": 83,
+          "endLine": 120,
+          "methods": [],
+          "properties": [
+            "id",
+            "user_id",
+            "word_id",
+            "recognition_strength",
+            "recall_strength",
+            "production_strength",
+            "ease_factor",
+            "interval_days",
+            "last_seen_at",
+            "next_review_at",
+            "user",
+            "word"
+          ]
+        },
+        {
+          "name": "UserLessonPageProgress",
+          "startLine": 123,
+          "endLine": 149,
+          "methods": [],
+          "properties": [
+            "id",
+            "user_id",
+            "level",
+            "page_id",
+            "quiz_score",
+            "completed_at",
+            "user"
+          ]
+        },
+        {
+          "name": "UserMasteryProgress",
+          "startLine": 152,
+          "endLine": 179,
+          "methods": [],
+          "properties": [
+            "id",
+            "user_id",
+            "level",
+            "progress_json",
+            "version",
+            "user"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Word",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "WordForm",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "UserWordProgress",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "UserLessonPageProgress",
+          "line": 123,
+          "isDefault": false
+        },
+        {
+          "name": "UserMasteryProgress",
+          "line": 152,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 5,
+        "functionCount": 0,
+        "classCount": 5
+      }
+    },
+    {
+      "path": "backend/app/modules/learning/quiz/application/service.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 207,
+      "nonEmptyLines": 187,
+      "functions": [
+        {
+          "name": "_event_for_exercise",
+          "startLine": 187,
+          "endLine": 192,
+          "params": [
+            "exercise"
+          ]
+        },
+        {
+          "name": "_looks_open",
+          "startLine": 195,
+          "endLine": 197,
+          "params": [
+            "prompt"
+          ]
+        },
+        {
+          "name": "get_quiz_service",
+          "startLine": 203,
+          "endLine": 207,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "QuizService",
+          "startLine": 30,
+          "endLine": 184,
+          "methods": [
+            "generate",
+            "submit_answer",
+            "judge_only",
+            "_record_quiz_memory"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "QuizService",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "_event_for_exercise",
+          "line": 187,
+          "isDefault": false
+        },
+        {
+          "name": "_looks_open",
+          "line": 195,
+          "isDefault": false
+        },
+        {
+          "name": "get_quiz_service",
+          "line": 203,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "generate",
+          "callee": "ensure_words_seeded",
+          "lineNumber": 41
+        },
+        {
+          "caller": "generate",
+          "callee": "list",
+          "lineNumber": 42
+        },
+        {
+          "caller": "generate",
+          "callee": "(\n            await db.execute(\n                select(Word).where(Word.level == level).order_by(Word.rank).limit(120)\n            )\n        ).scalars().all",
+          "lineNumber": 43
+        },
+        {
+          "caller": "generate",
+          "callee": "(\n            await db.execute(\n                select(Word).where(Word.level == level).order_by(Word.rank).limit(120)\n            )\n        ).scalars",
+          "lineNumber": 43
+        },
+        {
+          "caller": "generate",
+          "callee": "db.execute",
+          "lineNumber": 44
+        },
+        {
+          "caller": "generate",
+          "callee": "select(Word).where(Word.level == level).order_by(Word.rank).limit",
+          "lineNumber": 45
+        },
+        {
+          "caller": "generate",
+          "callee": "select(Word).where(Word.level == level).order_by",
+          "lineNumber": 45
+        },
+        {
+          "caller": "generate",
+          "callee": "select(Word).where",
+          "lineNumber": 45
+        },
+        {
+          "caller": "generate",
+          "callee": "select",
+          "lineNumber": 45
+        },
+        {
+          "caller": "generate",
+          "callee": "generate_llm_quiz",
+          "lineNumber": 51
+        },
+        {
+          "caller": "generate",
+          "callee": "build_template_quiz",
+          "lineNumber": 61
+        },
+        {
+          "caller": "generate",
+          "callee": "QuizSession",
+          "lineNumber": 67
+        },
+        {
+          "caller": "generate",
+          "callee": "str",
+          "lineNumber": 68
+        },
+        {
+          "caller": "generate",
+          "callee": "uuid.uuid4",
+          "lineNumber": 68
+        },
+        {
+          "caller": "submit_answer",
+          "callee": "user_answer.strip",
+          "lineNumber": 83
+        },
+        {
+          "caller": "submit_answer",
+          "callee": "judge_with_llm",
+          "lineNumber": 85
+        },
+        {
+          "caller": "submit_answer",
+          "callee": "grade_deterministic",
+          "lineNumber": 99
+        },
+        {
+          "caller": "submit_answer",
+          "callee": "_event_for_exercise",
+          "lineNumber": 108
+        },
+        {
+          "caller": "submit_answer",
+          "callee": "update_word_progress",
+          "lineNumber": 109
+        },
+        {
+          "caller": "submit_answer",
+          "callee": "self._record_quiz_memory",
+          "lineNumber": 117
+        },
+        {
+          "caller": "judge_only",
+          "callee": "_looks_open",
+          "lineNumber": 142
+        },
+        {
+          "caller": "judge_only",
+          "callee": "grade_deterministic",
+          "lineNumber": 143
+        },
+        {
+          "caller": "judge_only",
+          "callee": "judge_with_llm",
+          "lineNumber": 153
+        },
+        {
+          "caller": "_record_quiz_memory",
+          "callee": "get_memory_service().emit",
+          "lineNumber": 171
+        },
+        {
+          "caller": "_record_quiz_memory",
+          "callee": "get_memory_service",
+          "lineNumber": 171
+        },
+        {
+          "caller": "_record_quiz_memory",
+          "callee": "TraceEvent",
+          "lineNumber": 174
+        },
+        {
+          "caller": "_looks_open",
+          "callee": "prompt.lower",
+          "lineNumber": 196
+        },
+        {
+          "caller": "get_quiz_service",
+          "callee": "QuizService",
+          "lineNumber": 206
+        }
+      ],
+      "metrics": {
+        "importCount": 9,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/learning/quiz/llm.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 188,
+      "nonEmptyLines": 173,
+      "functions": [
+        {
+          "name": "_parse_llm_questions",
+          "startLine": 31,
+          "endLine": 79,
+          "params": [
+            "raw",
+            "words"
+          ]
+        },
+        {
+          "name": "generate_llm_quiz",
+          "startLine": 82,
+          "endLine": 118,
+          "params": [
+            "level",
+            "words",
+            "count",
+            "exercise_types",
+            "topic"
+          ]
+        },
+        {
+          "name": "judge_with_llm",
+          "startLine": 121,
+          "endLine": 168,
+          "params": [
+            "prompt",
+            "question_type",
+            "correct_answer",
+            "explanation",
+            "user_answer",
+            "options",
+            "language"
+          ]
+        },
+        {
+          "name": "_verdict_from_text",
+          "startLine": 171,
+          "endLine": 179,
+          "params": [
+            "text"
+          ]
+        },
+        {
+          "name": "grade_deterministic",
+          "startLine": 182,
+          "endLine": 188,
+          "params": [
+            "question_type",
+            "correct_answer",
+            "user_answer"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "_parse_llm_questions",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "generate_llm_quiz",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "judge_with_llm",
+          "line": 121,
+          "isDefault": false
+        },
+        {
+          "name": "_verdict_from_text",
+          "line": 171,
+          "isDefault": false
+        },
+        {
+          "name": "grade_deterministic",
+          "line": 182,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "raw.strip",
+          "lineNumber": 32
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "re.search",
+          "lineNumber": 33
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "fence.group",
+          "lineNumber": 35
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "text.find",
+          "lineNumber": 37
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "text.rfind",
+          "lineNumber": 38
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "json.loads",
+          "lineNumber": 41
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "isinstance",
+          "lineNumber": 42
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "word.lemma.lower",
+          "lineNumber": 44
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "isinstance",
+          "lineNumber": 47
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "str(item.get(\"lemma\") or item.get(\"word\") or \"\").strip().lower",
+          "lineNumber": 49
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "str(item.get(\"lemma\") or item.get(\"word\") or \"\").strip",
+          "lineNumber": 49
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "str",
+          "lineNumber": 49
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "item.get",
+          "lineNumber": 49
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "item.get",
+          "lineNumber": 49
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "word_by_lemma.get",
+          "lineNumber": 50
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "str(item.get(\"exercise_type\") or \"recall\").lower",
+          "lineNumber": 51
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "str",
+          "lineNumber": 51
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "item.get",
+          "lineNumber": 51
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "ExerciseType",
+          "lineNumber": 53
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "str",
+          "lineNumber": 56
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "item.get",
+          "lineNumber": 56
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "item.get",
+          "lineNumber": 57
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "str",
+          "lineNumber": 59
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "isinstance",
+          "lineNumber": 60
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "list",
+          "lineNumber": 61
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "options_raw.values",
+          "lineNumber": 61
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "isinstance",
+          "lineNumber": 62
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "questions.append",
+          "lineNumber": 65
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "QuizQuestion",
+          "lineNumber": 66
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "str",
+          "lineNumber": 67
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "uuid.uuid4",
+          "lineNumber": 67
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "str",
+          "lineNumber": 72
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "item.get",
+          "lineNumber": 72
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "item.get",
+          "lineNumber": 72
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "str",
+          "lineNumber": 74
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "item.get",
+          "lineNumber": 74
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "item.get",
+          "lineNumber": 74
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "str",
+          "lineNumber": 75
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "item.get",
+          "lineNumber": 75
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "bool",
+          "lineNumber": 76
+        },
+        {
+          "caller": "_parse_llm_questions",
+          "callee": "item.get",
+          "lineNumber": 76
+        },
+        {
+          "caller": "generate_llm_quiz",
+          "callee": "\", \".join",
+          "lineNumber": 91
+        },
+        {
+          "caller": "generate_llm_quiz",
+          "callee": "build_task_system_prompt",
+          "lineNumber": 92
+        },
+        {
+          "caller": "generate_llm_quiz",
+          "callee": "', '.join",
+          "lineNumber": 97
+        },
+        {
+          "caller": "generate_llm_quiz",
+          "callee": "get_llm_service().complete",
+          "lineNumber": 105
+        },
+        {
+          "caller": "generate_llm_quiz",
+          "callee": "get_llm_service",
+          "lineNumber": 105
+        },
+        {
+          "caller": "generate_llm_quiz",
+          "callee": "LLMMessage",
+          "lineNumber": 108
+        },
+        {
+          "caller": "generate_llm_quiz",
+          "callee": "LLMMessage",
+          "lineNumber": 109
+        },
+        {
+          "caller": "generate_llm_quiz",
+          "callee": "_parse_llm_questions",
+          "lineNumber": 114
+        },
+        {
+          "caller": "generate_llm_quiz",
+          "callee": "logger.exception",
+          "lineNumber": 117
+        },
+        {
+          "caller": "judge_with_llm",
+          "callee": "user_answer.strip",
+          "lineNumber": 131
+        },
+        {
+          "caller": "judge_with_llm",
+          "callee": "grade_answer",
+          "lineNumber": 134
+        },
+        {
+          "caller": "judge_with_llm",
+          "callee": "language.lower().startswith",
+          "lineNumber": 141
+        },
+        {
+          "caller": "judge_with_llm",
+          "callee": "language.lower",
+          "lineNumber": 141
+        },
+        {
+          "caller": "judge_with_llm",
+          "callee": "\"\\n\".join",
+          "lineNumber": 143
+        },
+        {
+          "caller": "judge_with_llm",
+          "callee": "get_llm_service().stream",
+          "lineNumber": 153
+        },
+        {
+          "caller": "judge_with_llm",
+          "callee": "get_llm_service",
+          "lineNumber": 153
+        },
+        {
+          "caller": "judge_with_llm",
+          "callee": "LLMMessage",
+          "lineNumber": 156
+        },
+        {
+          "caller": "judge_with_llm",
+          "callee": "LLMMessage",
+          "lineNumber": 157
+        },
+        {
+          "caller": "judge_with_llm",
+          "callee": "_verdict_from_text",
+          "lineNumber": 163
+        },
+        {
+          "caller": "judge_with_llm",
+          "callee": "text.strip",
+          "lineNumber": 167
+        },
+        {
+          "caller": "_verdict_from_text",
+          "callee": "text.lower",
+          "lineNumber": 172
+        },
+        {
+          "caller": "grade_deterministic",
+          "callee": "grade_answer",
+          "lineNumber": 188
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/learning/quiz/models.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 36,
+      "nonEmptyLines": 28,
+      "classes": [
+        {
+          "name": "ExerciseType",
+          "startLine": 10,
+          "endLine": 15,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "QuizQuestion",
+          "startLine": 18,
+          "endLine": 29,
+          "methods": [],
+          "properties": [
+            "id",
+            "word_id",
+            "lemma",
+            "exercise_type",
+            "question_type",
+            "prompt",
+            "options",
+            "correct_answer",
+            "explanation",
+            "use_ai_judge",
+            "metadata"
+          ]
+        },
+        {
+          "name": "QuizSession",
+          "startLine": 32,
+          "endLine": 36,
+          "methods": [],
+          "properties": [
+            "session_id",
+            "level",
+            "source",
+            "questions"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ExerciseType",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "QuizQuestion",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "QuizSession",
+          "line": 32,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 0,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "backend/app/modules/learning/quiz/schemas.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 49,
+      "nonEmptyLines": 36,
+      "classes": [
+        {
+          "name": "QuizGenerateIn",
+          "startLine": 12,
+          "endLine": 23,
+          "methods": [],
+          "properties": [
+            "level",
+            "count",
+            "exercise_types",
+            "use_llm",
+            "topic"
+          ]
+        },
+        {
+          "name": "QuizJudgeIn",
+          "startLine": 26,
+          "endLine": 33,
+          "methods": [],
+          "properties": [
+            "prompt",
+            "question_type",
+            "correct_answer",
+            "explanation",
+            "user_answer",
+            "options",
+            "language"
+          ]
+        },
+        {
+          "name": "QuizSubmitIn",
+          "startLine": 36,
+          "endLine": 39,
+          "methods": [],
+          "properties": [
+            "question",
+            "user_answer",
+            "language"
+          ]
+        },
+        {
+          "name": "QuizJudgeOut",
+          "startLine": 42,
+          "endLine": 45,
+          "methods": [],
+          "properties": [
+            "correct",
+            "verdict",
+            "feedback"
+          ]
+        },
+        {
+          "name": "QuizSubmitOut",
+          "startLine": 48,
+          "endLine": 49,
+          "methods": [],
+          "properties": [
+            "word_progress_updated"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "QuizGenerateIn",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "QuizJudgeIn",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "QuizSubmitIn",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "QuizJudgeOut",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "QuizSubmitOut",
+          "line": 48,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 5,
+        "functionCount": 0,
+        "classCount": 5
+      }
+    },
+    {
+      "path": "backend/app/modules/learning/quiz/service.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 5,
+      "nonEmptyLines": 3,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/learning/quiz/templates.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 158,
+      "nonEmptyLines": 138,
+      "functions": [
+        {
+          "name": "_distractors",
+          "startLine": 43,
+          "endLine": 46,
+          "params": [
+            "words",
+            "target",
+            "count"
+          ]
+        },
+        {
+          "name": "build_recognition",
+          "startLine": 49,
+          "endLine": 63,
+          "params": [
+            "word",
+            "words"
+          ]
+        },
+        {
+          "name": "build_recall",
+          "startLine": 66,
+          "endLine": 77,
+          "params": [
+            "word"
+          ]
+        },
+        {
+          "name": "build_fill_blank",
+          "startLine": 80,
+          "endLine": 91,
+          "params": [
+            "word"
+          ]
+        },
+        {
+          "name": "build_translation",
+          "startLine": 94,
+          "endLine": 111,
+          "params": [
+            "word",
+            "to_dutch"
+          ]
+        },
+        {
+          "name": "build_production",
+          "startLine": 114,
+          "endLine": 129,
+          "params": [
+            "word"
+          ]
+        },
+        {
+          "name": "build_template_quiz",
+          "startLine": 141,
+          "endLine": 158,
+          "params": [
+            "words",
+            "level",
+            "count",
+            "exercise_types"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "_distractors",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "build_recognition",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "build_recall",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "build_fill_blank",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "build_translation",
+          "line": 94,
+          "isDefault": false
+        },
+        {
+          "name": "build_production",
+          "line": 114,
+          "isDefault": false
+        },
+        {
+          "name": "build_template_quiz",
+          "line": 141,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_distractors",
+          "callee": "random.shuffle",
+          "lineNumber": 45
+        },
+        {
+          "caller": "build_recognition",
+          "callee": "_distractors",
+          "lineNumber": 50
+        },
+        {
+          "caller": "build_recognition",
+          "callee": "random.shuffle",
+          "lineNumber": 51
+        },
+        {
+          "caller": "build_recognition",
+          "callee": "GLOSS_EN.get",
+          "lineNumber": 52
+        },
+        {
+          "caller": "build_recognition",
+          "callee": "QuizQuestion",
+          "lineNumber": 53
+        },
+        {
+          "caller": "build_recognition",
+          "callee": "str",
+          "lineNumber": 54
+        },
+        {
+          "caller": "build_recognition",
+          "callee": "uuid.uuid4",
+          "lineNumber": 54
+        },
+        {
+          "caller": "build_recall",
+          "callee": "GLOSS_EN.get",
+          "lineNumber": 67
+        },
+        {
+          "caller": "build_recall",
+          "callee": "QuizQuestion",
+          "lineNumber": 68
+        },
+        {
+          "caller": "build_recall",
+          "callee": "str",
+          "lineNumber": 69
+        },
+        {
+          "caller": "build_recall",
+          "callee": "uuid.uuid4",
+          "lineNumber": 69
+        },
+        {
+          "caller": "build_fill_blank",
+          "callee": "random.choice(SENTENCE_FRAMES).format",
+          "lineNumber": 81
+        },
+        {
+          "caller": "build_fill_blank",
+          "callee": "random.choice",
+          "lineNumber": 81
+        },
+        {
+          "caller": "build_fill_blank",
+          "callee": "QuizQuestion",
+          "lineNumber": 82
+        },
+        {
+          "caller": "build_fill_blank",
+          "callee": "str",
+          "lineNumber": 83
+        },
+        {
+          "caller": "build_fill_blank",
+          "callee": "uuid.uuid4",
+          "lineNumber": 83
+        },
+        {
+          "caller": "build_translation",
+          "callee": "GLOSS_EN.get",
+          "lineNumber": 95
+        },
+        {
+          "caller": "build_translation",
+          "callee": "QuizQuestion",
+          "lineNumber": 102
+        },
+        {
+          "caller": "build_translation",
+          "callee": "str",
+          "lineNumber": 103
+        },
+        {
+          "caller": "build_translation",
+          "callee": "uuid.uuid4",
+          "lineNumber": 103
+        },
+        {
+          "caller": "build_production",
+          "callee": "GLOSS_EN.get",
+          "lineNumber": 115
+        },
+        {
+          "caller": "build_production",
+          "callee": "QuizQuestion",
+          "lineNumber": 116
+        },
+        {
+          "caller": "build_production",
+          "callee": "str",
+          "lineNumber": 117
+        },
+        {
+          "caller": "build_production",
+          "callee": "uuid.uuid4",
+          "lineNumber": 117
+        },
+        {
+          "caller": "build_template_quiz",
+          "callee": "list",
+          "lineNumber": 148
+        },
+        {
+          "caller": "build_template_quiz",
+          "callee": "random.shuffle",
+          "lineNumber": 151
+        },
+        {
+          "caller": "build_template_quiz",
+          "callee": "max",
+          "lineNumber": 152
+        },
+        {
+          "caller": "build_template_quiz",
+          "callee": "enumerate",
+          "lineNumber": 154
+        },
+        {
+          "caller": "build_template_quiz",
+          "callee": "len",
+          "lineNumber": 155
+        },
+        {
+          "caller": "build_template_quiz",
+          "callee": "questions.append",
+          "lineNumber": 157
+        },
+        {
+          "caller": "build_template_quiz",
+          "callee": "builder",
+          "lineNumber": 157
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 7,
+        "functionCount": 7,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/learning/response_cache.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 67,
+      "nonEmptyLines": 45,
+      "functions": [
+        {
+          "name": "_progress_cache_key",
+          "startLine": 17,
+          "endLine": 18,
+          "params": [
+            "user_id"
+          ]
+        },
+        {
+          "name": "get_cached_levels",
+          "startLine": 21,
+          "endLine": 32,
+          "params": []
+        },
+        {
+          "name": "set_cached_levels",
+          "startLine": 35,
+          "endLine": 44,
+          "params": [
+            "payload"
+          ]
+        },
+        {
+          "name": "invalidate_levels_cache",
+          "startLine": 47,
+          "endLine": 51,
+          "params": []
+        },
+        {
+          "name": "get_cached_progress_summary",
+          "startLine": 54,
+          "endLine": 55,
+          "params": [
+            "user_id"
+          ]
+        },
+        {
+          "name": "set_cached_progress_summary",
+          "startLine": 58,
+          "endLine": 63,
+          "params": [
+            "user_id",
+            "payload"
+          ]
+        },
+        {
+          "name": "invalidate_progress_summary",
+          "startLine": 66,
+          "endLine": 67,
+          "params": [
+            "user_id"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "_progress_cache_key",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "get_cached_levels",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "set_cached_levels",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "invalidate_levels_cache",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "get_cached_progress_summary",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "set_cached_progress_summary",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "invalidate_progress_summary",
+          "line": 66,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "get_cached_levels",
+          "callee": "time.monotonic",
+          "lineNumber": 24
+        },
+        {
+          "caller": "get_cached_levels",
+          "callee": "redis_get_json",
+          "lineNumber": 28
+        },
+        {
+          "caller": "set_cached_levels",
+          "callee": "time.monotonic",
+          "lineNumber": 38
+        },
+        {
+          "caller": "set_cached_levels",
+          "callee": "redis_set_json",
+          "lineNumber": 40
+        },
+        {
+          "caller": "invalidate_levels_cache",
+          "callee": "redis_delete",
+          "lineNumber": 51
+        },
+        {
+          "caller": "get_cached_progress_summary",
+          "callee": "redis_get_json",
+          "lineNumber": 55
+        },
+        {
+          "caller": "get_cached_progress_summary",
+          "callee": "_progress_cache_key",
+          "lineNumber": 55
+        },
+        {
+          "caller": "set_cached_progress_summary",
+          "callee": "redis_set_json",
+          "lineNumber": 59
+        },
+        {
+          "caller": "set_cached_progress_summary",
+          "callee": "_progress_cache_key",
+          "lineNumber": 60
+        },
+        {
+          "caller": "invalidate_progress_summary",
+          "callee": "redis_delete",
+          "lineNumber": 67
+        },
+        {
+          "caller": "invalidate_progress_summary",
+          "callee": "_progress_cache_key",
+          "lineNumber": 67
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 7,
+        "functionCount": 7,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/learning/schemas.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 19,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/notebook/models.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 55,
+      "nonEmptyLines": 46,
+      "classes": [
+        {
+          "name": "WordNotebookEntry",
+          "startLine": 17,
+          "endLine": 55,
+          "methods": [],
+          "properties": [
+            "id",
+            "user_id",
+            "word_id",
+            "lemma",
+            "note",
+            "context",
+            "source",
+            "session_id",
+            "metadata_json",
+            "user",
+            "word"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "WordNotebookEntry",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/notebook/service.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 185,
+      "nonEmptyLines": 164,
+      "functions": [
+        {
+          "name": "normalize_lemma",
+          "startLine": 15,
+          "endLine": 16,
+          "params": [
+            "lemma"
+          ]
+        },
+        {
+          "name": "get_notebook_service",
+          "startLine": 181,
+          "endLine": 185,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "NotebookService",
+          "startLine": 19,
+          "endLine": 175,
+          "methods": [
+            "_lookup_word",
+            "save_entry",
+            "list_entries",
+            "delete_entry",
+            "due_count"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "normalize_lemma",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "NotebookService",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "get_notebook_service",
+          "line": 181,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "normalize_lemma",
+          "callee": "\" \".join",
+          "lineNumber": 16
+        },
+        {
+          "caller": "normalize_lemma",
+          "callee": "lemma.strip().lower().split",
+          "lineNumber": 16
+        },
+        {
+          "caller": "normalize_lemma",
+          "callee": "lemma.strip().lower",
+          "lineNumber": 16
+        },
+        {
+          "caller": "normalize_lemma",
+          "callee": "lemma.strip",
+          "lineNumber": 16
+        },
+        {
+          "caller": "_lookup_word",
+          "callee": "normalize_lemma",
+          "lineNumber": 21
+        },
+        {
+          "caller": "_lookup_word",
+          "callee": "(\n            await db.execute(select(Word).where(func.lower(Word.lemma) == normalized))\n        ).scalar_one_or_none",
+          "lineNumber": 22
+        },
+        {
+          "caller": "_lookup_word",
+          "callee": "db.execute",
+          "lineNumber": 23
+        },
+        {
+          "caller": "_lookup_word",
+          "callee": "select(Word).where",
+          "lineNumber": 23
+        },
+        {
+          "caller": "_lookup_word",
+          "callee": "select",
+          "lineNumber": 23
+        },
+        {
+          "caller": "_lookup_word",
+          "callee": "func.lower",
+          "lineNumber": 23
+        },
+        {
+          "caller": "save_entry",
+          "callee": "ensure_words_seeded",
+          "lineNumber": 38
+        },
+        {
+          "caller": "save_entry",
+          "callee": "normalize_lemma",
+          "lineNumber": 39
+        },
+        {
+          "caller": "save_entry",
+          "callee": "ValueError",
+          "lineNumber": 41
+        },
+        {
+          "caller": "save_entry",
+          "callee": "self._lookup_word",
+          "lineNumber": 43
+        },
+        {
+          "caller": "save_entry",
+          "callee": "(\n            await db.execute(\n                select(WordNotebookEntry)\n                .where(WordNotebookEntry.user_id == user_id)\n                .where(WordNotebookEntry.lemma == normalized)\n            )\n        ).scalar_one_or_none",
+          "lineNumber": 44
+        },
+        {
+          "caller": "save_entry",
+          "callee": "db.execute",
+          "lineNumber": 45
+        },
+        {
+          "caller": "save_entry",
+          "callee": "select(WordNotebookEntry)\n                .where(WordNotebookEntry.user_id == user_id)\n                .where",
+          "lineNumber": 46
+        },
+        {
+          "caller": "save_entry",
+          "callee": "select(WordNotebookEntry)\n                .where",
+          "lineNumber": 46
+        },
+        {
+          "caller": "save_entry",
+          "callee": "select",
+          "lineNumber": 46
+        },
+        {
+          "caller": "save_entry",
+          "callee": "WordNotebookEntry",
+          "lineNumber": 53
+        },
+        {
+          "caller": "save_entry",
+          "callee": "note.strip",
+          "lineNumber": 57
+        },
+        {
+          "caller": "save_entry",
+          "callee": "context.strip",
+          "lineNumber": 58
+        },
+        {
+          "caller": "save_entry",
+          "callee": "db.add",
+          "lineNumber": 63
+        },
+        {
+          "caller": "save_entry",
+          "callee": "note.strip",
+          "lineNumber": 65
+        },
+        {
+          "caller": "save_entry",
+          "callee": "note.strip",
+          "lineNumber": 66
+        },
+        {
+          "caller": "save_entry",
+          "callee": "context.strip",
+          "lineNumber": 67
+        },
+        {
+          "caller": "save_entry",
+          "callee": "context.strip",
+          "lineNumber": 68
+        },
+        {
+          "caller": "save_entry",
+          "callee": "db.flush",
+          "lineNumber": 77
+        },
+        {
+          "caller": "save_entry",
+          "callee": "(\n                await db.execute(\n                    select(UserWordProgress)\n                    .where(UserWordProgress.user_id == user_id)\n                    .where(UserWordProgress.word_id == row.word_id)\n                )\n            ).scalar_one_or_none",
+          "lineNumber": 80
+        },
+        {
+          "caller": "save_entry",
+          "callee": "db.execute",
+          "lineNumber": 81
+        },
+        {
+          "caller": "save_entry",
+          "callee": "select(UserWordProgress)\n                    .where(UserWordProgress.user_id == user_id)\n                    .where",
+          "lineNumber": 82
+        },
+        {
+          "caller": "save_entry",
+          "callee": "select(UserWordProgress)\n                    .where",
+          "lineNumber": 82
+        },
+        {
+          "caller": "save_entry",
+          "callee": "select",
+          "lineNumber": 82
+        },
+        {
+          "caller": "save_entry",
+          "callee": "update_word_progress",
+          "lineNumber": 88
+        },
+        {
+          "caller": "save_entry",
+          "callee": "datetime.now",
+          "lineNumber": 95
+        },
+        {
+          "caller": "save_entry",
+          "callee": "datetime.now",
+          "lineNumber": 98
+        },
+        {
+          "caller": "save_entry",
+          "callee": "db.flush",
+          "lineNumber": 99
+        },
+        {
+          "caller": "list_entries",
+          "callee": "ensure_words_seeded",
+          "lineNumber": 109
+        },
+        {
+          "caller": "list_entries",
+          "callee": "(\n            await db.execute(\n                select(WordNotebookEntry, Word, UserWordProgress)\n                .outerjoin(Word, Word.id == WordNotebookEntry.word_id)\n                .outerjoin(\n                    UserWordProgress,\n                    (UserWordProgress.word_id == WordNotebookEntry.word_id)\n                    & (UserWordProgress.user_id == user_id),\n                )\n                .where(WordNotebookEntry.user_id == user_id)\n                .order_by(WordNotebookEntry.updated_at.desc())\n            )\n        ).all",
+          "lineNumber": 110
+        },
+        {
+          "caller": "list_entries",
+          "callee": "db.execute",
+          "lineNumber": 111
+        },
+        {
+          "caller": "list_entries",
+          "callee": "select(WordNotebookEntry, Word, UserWordProgress)\n                .outerjoin(Word, Word.id == WordNotebookEntry.word_id)\n                .outerjoin(\n                    UserWordProgress,\n                    (UserWordProgress.word_id == WordNotebookEntry.word_id)\n                    & (UserWordProgress.user_id == user_id),\n                )\n                .where(WordNotebookEntry.user_id == user_id)\n                .order_by",
+          "lineNumber": 112
+        },
+        {
+          "caller": "list_entries",
+          "callee": "select(WordNotebookEntry, Word, UserWordProgress)\n                .outerjoin(Word, Word.id == WordNotebookEntry.word_id)\n                .outerjoin(\n                    UserWordProgress,\n                    (UserWordProgress.word_id == WordNotebookEntry.word_id)\n                    & (UserWordProgress.user_id == user_id),\n                )\n                .where",
+          "lineNumber": 112
+        },
+        {
+          "caller": "list_entries",
+          "callee": "select(WordNotebookEntry, Word, UserWordProgress)\n                .outerjoin(Word, Word.id == WordNotebookEntry.word_id)\n                .outerjoin",
+          "lineNumber": 112
+        },
+        {
+          "caller": "list_entries",
+          "callee": "select(WordNotebookEntry, Word, UserWordProgress)\n                .outerjoin",
+          "lineNumber": 112
+        },
+        {
+          "caller": "list_entries",
+          "callee": "select",
+          "lineNumber": 112
+        },
+        {
+          "caller": "list_entries",
+          "callee": "WordNotebookEntry.updated_at.desc",
+          "lineNumber": 120
+        },
+        {
+          "caller": "list_entries",
+          "callee": "datetime.now",
+          "lineNumber": 125
+        },
+        {
+          "caller": "list_entries",
+          "callee": "GLOSS_EN.get",
+          "lineNumber": 127
+        },
+        {
+          "caller": "list_entries",
+          "callee": "out.append",
+          "lineNumber": 128
+        },
+        {
+          "caller": "list_entries",
+          "callee": "str",
+          "lineNumber": 130
+        },
+        {
+          "caller": "list_entries",
+          "callee": "str",
+          "lineNumber": 135
+        },
+        {
+          "caller": "list_entries",
+          "callee": "bool",
+          "lineNumber": 144
+        },
+        {
+          "caller": "delete_entry",
+          "callee": "(\n            await db.execute(\n                select(WordNotebookEntry)\n                .where(WordNotebookEntry.user_id == user_id)\n                .where(WordNotebookEntry.id == entry_id)\n            )\n        ).scalar_one_or_none",
+          "lineNumber": 160
+        },
+        {
+          "caller": "delete_entry",
+          "callee": "db.execute",
+          "lineNumber": 161
+        },
+        {
+          "caller": "delete_entry",
+          "callee": "select(WordNotebookEntry)\n                .where(WordNotebookEntry.user_id == user_id)\n                .where",
+          "lineNumber": 162
+        },
+        {
+          "caller": "delete_entry",
+          "callee": "select(WordNotebookEntry)\n                .where",
+          "lineNumber": 162
+        },
+        {
+          "caller": "delete_entry",
+          "callee": "select",
+          "lineNumber": 162
+        },
+        {
+          "caller": "delete_entry",
+          "callee": "db.delete",
+          "lineNumber": 169
+        },
+        {
+          "caller": "due_count",
+          "callee": "datetime.now",
+          "lineNumber": 173
+        },
+        {
+          "caller": "due_count",
+          "callee": "self.list_entries",
+          "lineNumber": 174
+        },
+        {
+          "caller": "due_count",
+          "callee": "sum",
+          "lineNumber": 175
+        },
+        {
+          "caller": "due_count",
+          "callee": "item.get",
+          "lineNumber": 175
+        },
+        {
+          "caller": "get_notebook_service",
+          "callee": "NotebookService",
+          "lineNumber": 184
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/skills/api.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 38,
+      "nonEmptyLines": 30,
+      "functions": [
+        {
+          "name": "list_skill_playbooks",
+          "startLine": 14,
+          "endLine": 27,
+          "params": []
+        },
+        {
+          "name": "get_skill_playbook",
+          "startLine": 31,
+          "endLine": 38,
+          "params": [
+            "level"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "list_skill_playbooks",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "get_skill_playbook",
+          "line": 30,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "list_skill_playbooks",
+          "callee": "list_playbooks",
+          "lineNumber": 15
+        },
+        {
+          "caller": "list_skill_playbooks",
+          "callee": "SkillPlaybookOut",
+          "lineNumber": 18
+        },
+        {
+          "caller": "get_skill_playbook",
+          "callee": "get_playbook",
+          "lineNumber": 32
+        },
+        {
+          "caller": "get_skill_playbook",
+          "callee": "SkillPlaybookContentOut",
+          "lineNumber": 33
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/app/modules/skills/schemas.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "SkillPlaybookOut",
+          "startLine": 7,
+          "endLine": 12,
+          "methods": [],
+          "properties": [
+            "level",
+            "title",
+            "version",
+            "updated_at",
+            "meta"
+          ]
+        },
+        {
+          "name": "SkillPlaybookContentOut",
+          "startLine": 15,
+          "endLine": 19,
+          "methods": [],
+          "properties": [
+            "level",
+            "title",
+            "version",
+            "content"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SkillPlaybookOut",
+          "line": 7,
+          "isDefault": false
+        },
+        {
+          "name": "SkillPlaybookContentOut",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "backend/app/modules/skills/service.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 92,
+      "nonEmptyLines": 72,
+      "functions": [
+        {
+          "name": "_read_text",
+          "startLine": 28,
+          "endLine": 29,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "_compute_version",
+          "startLine": 32,
+          "endLine": 33,
+          "params": [
+            "content"
+          ]
+        },
+        {
+          "name": "_parse_title",
+          "startLine": 36,
+          "endLine": 41,
+          "params": [
+            "content"
+          ]
+        },
+        {
+          "name": "_load_playbook",
+          "startLine": 44,
+          "endLine": 60,
+          "params": [
+            "level"
+          ]
+        },
+        {
+          "name": "get_playbook",
+          "startLine": 64,
+          "endLine": 71,
+          "params": [
+            "level"
+          ]
+        },
+        {
+          "name": "list_playbooks",
+          "startLine": 74,
+          "endLine": 82,
+          "params": []
+        },
+        {
+          "name": "get_playbook_text",
+          "startLine": 85,
+          "endLine": 92,
+          "params": [
+            "level"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "Playbook",
+          "startLine": 19,
+          "endLine": 25,
+          "methods": [],
+          "properties": [
+            "level",
+            "title",
+            "content",
+            "version",
+            "updated_at",
+            "meta"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Playbook",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "_read_text",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "_compute_version",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "_parse_title",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "_load_playbook",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "get_playbook",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "list_playbooks",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "get_playbook_text",
+          "line": 85,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_read_text",
+          "callee": "path.read_text",
+          "lineNumber": 29
+        },
+        {
+          "caller": "_compute_version",
+          "callee": "hashlib.sha256(content.encode(\"utf-8\")).hexdigest",
+          "lineNumber": 33
+        },
+        {
+          "caller": "_compute_version",
+          "callee": "hashlib.sha256",
+          "lineNumber": 33
+        },
+        {
+          "caller": "_compute_version",
+          "callee": "content.encode",
+          "lineNumber": 33
+        },
+        {
+          "caller": "_parse_title",
+          "callee": "content.splitlines",
+          "lineNumber": 37
+        },
+        {
+          "caller": "_parse_title",
+          "callee": "line.strip",
+          "lineNumber": 38
+        },
+        {
+          "caller": "_parse_title",
+          "callee": "line.startswith",
+          "lineNumber": 39
+        },
+        {
+          "caller": "_parse_title",
+          "callee": "len",
+          "lineNumber": 39
+        },
+        {
+          "caller": "_parse_title",
+          "callee": "line[2:].strip",
+          "lineNumber": 40
+        },
+        {
+          "caller": "_load_playbook",
+          "callee": "path.exists",
+          "lineNumber": 46
+        },
+        {
+          "caller": "_load_playbook",
+          "callee": "_read_text",
+          "lineNumber": 48
+        },
+        {
+          "caller": "_load_playbook",
+          "callee": "_parse_title",
+          "lineNumber": 49
+        },
+        {
+          "caller": "_load_playbook",
+          "callee": "_compute_version",
+          "lineNumber": 50
+        },
+        {
+          "caller": "_load_playbook",
+          "callee": "path.stat",
+          "lineNumber": 51
+        },
+        {
+          "caller": "_load_playbook",
+          "callee": "datetime.fromtimestamp(stat.st_mtime, tz=timezone.utc).isoformat",
+          "lineNumber": 52
+        },
+        {
+          "caller": "_load_playbook",
+          "callee": "datetime.fromtimestamp",
+          "lineNumber": 52
+        },
+        {
+          "caller": "_load_playbook",
+          "callee": "Playbook",
+          "lineNumber": 53
+        },
+        {
+          "caller": "_load_playbook",
+          "callee": "str",
+          "lineNumber": 59
+        },
+        {
+          "caller": "get_playbook",
+          "callee": "_load_playbook",
+          "lineNumber": 65
+        },
+        {
+          "caller": "get_playbook",
+          "callee": "_load_playbook",
+          "lineNumber": 68
+        },
+        {
+          "caller": "get_playbook",
+          "callee": "FileNotFoundError",
+          "lineNumber": 70
+        },
+        {
+          "caller": "list_playbooks",
+          "callee": "_load_playbook",
+          "lineNumber": 77
+        },
+        {
+          "caller": "list_playbooks",
+          "callee": "out.append",
+          "lineNumber": 79
+        },
+        {
+          "caller": "list_playbooks",
+          "callee": "out.sort",
+          "lineNumber": 81
+        },
+        {
+          "caller": "get_playbook_text",
+          "callee": "get_playbook",
+          "lineNumber": 87
+        },
+        {
+          "caller": "get_playbook_text",
+          "callee": "CEFRLevel",
+          "lineNumber": 89
+        },
+        {
+          "caller": "get_playbook_text",
+          "callee": "str(level).upper",
+          "lineNumber": 89
+        },
+        {
+          "caller": "get_playbook_text",
+          "callee": "str",
+          "lineNumber": 89
+        },
+        {
+          "caller": "get_playbook_text",
+          "callee": "get_playbook",
+          "lineNumber": 92
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 8,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/modules/stories/models.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 77,
+      "nonEmptyLines": 64,
+      "classes": [
+        {
+          "name": "Story",
+          "startLine": 14,
+          "endLine": 43,
+          "methods": [],
+          "properties": [
+            "id",
+            "level",
+            "title",
+            "body",
+            "word_count",
+            "new_word_count",
+            "source",
+            "metadata_json",
+            "words"
+          ]
+        },
+        {
+          "name": "StoryWord",
+          "startLine": 46,
+          "endLine": 77,
+          "methods": [],
+          "properties": [
+            "id",
+            "story_id",
+            "word_id",
+            "is_new",
+            "position",
+            "story",
+            "word"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Story",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "StoryWord",
+          "line": 46,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "backend/app/modules/tutor/sessions/models.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 90,
+      "nonEmptyLines": 72,
+      "classes": [
+        {
+          "name": "TutorChatSession",
+          "startLine": 13,
+          "endLine": 42,
+          "methods": [],
+          "properties": [
+            "id",
+            "user_id",
+            "session_id",
+            "capability",
+            "language",
+            "cefr_level",
+            "persona",
+            "last_turn_at"
+          ]
+        },
+        {
+          "name": "TutorChatTurn",
+          "startLine": 45,
+          "endLine": 89,
+          "methods": [],
+          "properties": [
+            "id",
+            "user_id",
+            "session_id",
+            "turn_id",
+            "parent_turn_id",
+            "seq",
+            "status",
+            "capability",
+            "language",
+            "cefr_level",
+            "persona",
+            "user_message",
+            "conversation_history",
+            "assistant_reply",
+            "paused",
+            "pause_question",
+            "events"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "TutorChatSession",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "TutorChatTurn",
+          "line": 45,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "backend/app/modules/tutor/sessions/service.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 184,
+      "nonEmptyLines": 165,
+      "functions": [
+        {
+          "name": "_utcnow",
+          "startLine": 12,
+          "endLine": 13,
+          "params": []
+        },
+        {
+          "name": "get_tutor_sessions_service",
+          "startLine": 179,
+          "endLine": 183,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "TutorSessionsService",
+          "startLine": 16,
+          "endLine": 173,
+          "methods": [
+            "get_or_create_session",
+            "upsert_turn",
+            "list_sessions",
+            "list_turns",
+            "get_turn",
+            "reconstruct_conversation_history"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_utcnow",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "TutorSessionsService",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "get_tutor_sessions_service",
+          "line": 179,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_utcnow",
+          "callee": "datetime.now",
+          "lineNumber": 13
+        },
+        {
+          "caller": "get_or_create_session",
+          "callee": "(\n            await db.execute(\n                select(TutorChatSession).where(TutorChatSession.user_id == user_id).where(\n                    TutorChatSession.session_id == session_id\n                )\n            )\n        ).scalar_one_or_none",
+          "lineNumber": 28
+        },
+        {
+          "caller": "get_or_create_session",
+          "callee": "db.execute",
+          "lineNumber": 29
+        },
+        {
+          "caller": "get_or_create_session",
+          "callee": "select(TutorChatSession).where(TutorChatSession.user_id == user_id).where",
+          "lineNumber": 30
+        },
+        {
+          "caller": "get_or_create_session",
+          "callee": "select(TutorChatSession).where",
+          "lineNumber": 30
+        },
+        {
+          "caller": "get_or_create_session",
+          "callee": "select",
+          "lineNumber": 30
+        },
+        {
+          "caller": "get_or_create_session",
+          "callee": "TutorChatSession",
+          "lineNumber": 36
+        },
+        {
+          "caller": "get_or_create_session",
+          "callee": "_utcnow",
+          "lineNumber": 43
+        },
+        {
+          "caller": "get_or_create_session",
+          "callee": "db.add",
+          "lineNumber": 45
+        },
+        {
+          "caller": "get_or_create_session",
+          "callee": "db.flush",
+          "lineNumber": 46
+        },
+        {
+          "caller": "get_or_create_session",
+          "callee": "_utcnow",
+          "lineNumber": 52
+        },
+        {
+          "caller": "get_or_create_session",
+          "callee": "db.flush",
+          "lineNumber": 53
+        },
+        {
+          "caller": "upsert_turn",
+          "callee": "(\n            await db.execute(\n                select(TutorChatTurn)\n                .where(TutorChatTurn.user_id == user_id)\n                .where(TutorChatTurn.turn_id == turn_id)\n            )\n        ).scalar_one_or_none",
+          "lineNumber": 77
+        },
+        {
+          "caller": "upsert_turn",
+          "callee": "db.execute",
+          "lineNumber": 78
+        },
+        {
+          "caller": "upsert_turn",
+          "callee": "select(TutorChatTurn)\n                .where(TutorChatTurn.user_id == user_id)\n                .where",
+          "lineNumber": 79
+        },
+        {
+          "caller": "upsert_turn",
+          "callee": "select(TutorChatTurn)\n                .where",
+          "lineNumber": 79
+        },
+        {
+          "caller": "upsert_turn",
+          "callee": "select",
+          "lineNumber": 79
+        },
+        {
+          "caller": "upsert_turn",
+          "callee": "TutorChatTurn",
+          "lineNumber": 86
+        },
+        {
+          "caller": "upsert_turn",
+          "callee": "bool",
+          "lineNumber": 100
+        },
+        {
+          "caller": "upsert_turn",
+          "callee": "db.add",
+          "lineNumber": 104
+        },
+        {
+          "caller": "upsert_turn",
+          "callee": "db.flush",
+          "lineNumber": 105
+        },
+        {
+          "caller": "upsert_turn",
+          "callee": "bool",
+          "lineNumber": 123
+        },
+        {
+          "caller": "upsert_turn",
+          "callee": "db.flush",
+          "lineNumber": 126
+        },
+        {
+          "caller": "list_sessions",
+          "callee": "(\n            await db.execute(\n                select(TutorChatSession)\n                .where(TutorChatSession.user_id == user_id)\n                .order_by(TutorChatSession.last_turn_at.desc().nullslast(), TutorChatSession.updated_at.desc())\n            )\n        ).scalars().all",
+          "lineNumber": 130
+        },
+        {
+          "caller": "list_sessions",
+          "callee": "(\n            await db.execute(\n                select(TutorChatSession)\n                .where(TutorChatSession.user_id == user_id)\n                .order_by(TutorChatSession.last_turn_at.desc().nullslast(), TutorChatSession.updated_at.desc())\n            )\n        ).scalars",
+          "lineNumber": 130
+        },
+        {
+          "caller": "list_sessions",
+          "callee": "db.execute",
+          "lineNumber": 131
+        },
+        {
+          "caller": "list_sessions",
+          "callee": "select(TutorChatSession)\n                .where(TutorChatSession.user_id == user_id)\n                .order_by",
+          "lineNumber": 132
+        },
+        {
+          "caller": "list_sessions",
+          "callee": "select(TutorChatSession)\n                .where",
+          "lineNumber": 132
+        },
+        {
+          "caller": "list_sessions",
+          "callee": "select",
+          "lineNumber": 132
+        },
+        {
+          "caller": "list_sessions",
+          "callee": "TutorChatSession.last_turn_at.desc().nullslast",
+          "lineNumber": 134
+        },
+        {
+          "caller": "list_sessions",
+          "callee": "TutorChatSession.last_turn_at.desc",
+          "lineNumber": 134
+        },
+        {
+          "caller": "list_sessions",
+          "callee": "TutorChatSession.updated_at.desc",
+          "lineNumber": 134
+        },
+        {
+          "caller": "list_sessions",
+          "callee": "list",
+          "lineNumber": 137
+        },
+        {
+          "caller": "list_turns",
+          "callee": "(\n            await db.execute(\n                select(TutorChatTurn)\n                .where(TutorChatTurn.user_id == user_id)\n                .where(TutorChatTurn.session_id == session_id)\n                .order_by(TutorChatTurn.created_at.asc())\n            )\n        ).scalars().all",
+          "lineNumber": 142
+        },
+        {
+          "caller": "list_turns",
+          "callee": "(\n            await db.execute(\n                select(TutorChatTurn)\n                .where(TutorChatTurn.user_id == user_id)\n                .where(TutorChatTurn.session_id == session_id)\n                .order_by(TutorChatTurn.created_at.asc())\n            )\n        ).scalars",
+          "lineNumber": 142
+        },
+        {
+          "caller": "list_turns",
+          "callee": "db.execute",
+          "lineNumber": 143
+        },
+        {
+          "caller": "list_turns",
+          "callee": "select(TutorChatTurn)\n                .where(TutorChatTurn.user_id == user_id)\n                .where(TutorChatTurn.session_id == session_id)\n                .order_by",
+          "lineNumber": 144
+        },
+        {
+          "caller": "list_turns",
+          "callee": "select(TutorChatTurn)\n                .where(TutorChatTurn.user_id == user_id)\n                .where",
+          "lineNumber": 144
+        },
+        {
+          "caller": "list_turns",
+          "callee": "select(TutorChatTurn)\n                .where",
+          "lineNumber": 144
+        },
+        {
+          "caller": "list_turns",
+          "callee": "select",
+          "lineNumber": 144
+        },
+        {
+          "caller": "list_turns",
+          "callee": "TutorChatTurn.created_at.asc",
+          "lineNumber": 147
+        },
+        {
+          "caller": "list_turns",
+          "callee": "list",
+          "lineNumber": 150
+        },
+        {
+          "caller": "get_turn",
+          "callee": "(\n            await db.execute(\n                select(TutorChatTurn)\n                .where(TutorChatTurn.user_id == user_id)\n                .where(TutorChatTurn.turn_id == turn_id)\n            )\n        ).scalar_one_or_none",
+          "lineNumber": 153
+        },
+        {
+          "caller": "get_turn",
+          "callee": "db.execute",
+          "lineNumber": 154
+        },
+        {
+          "caller": "get_turn",
+          "callee": "select(TutorChatTurn)\n                .where(TutorChatTurn.user_id == user_id)\n                .where",
+          "lineNumber": 155
+        },
+        {
+          "caller": "get_turn",
+          "callee": "select(TutorChatTurn)\n                .where",
+          "lineNumber": 155
+        },
+        {
+          "caller": "get_turn",
+          "callee": "select",
+          "lineNumber": 155
+        },
+        {
+          "caller": "reconstruct_conversation_history",
+          "callee": "self.get_turn",
+          "lineNumber": 164
+        },
+        {
+          "caller": "reconstruct_conversation_history",
+          "callee": "out.extend",
+          "lineNumber": 168
+        },
+        {
+          "caller": "reconstruct_conversation_history",
+          "callee": "out.append",
+          "lineNumber": 170
+        },
+        {
+          "caller": "reconstruct_conversation_history",
+          "callee": "out.append",
+          "lineNumber": 172
+        },
+        {
+          "caller": "get_tutor_sessions_service",
+          "callee": "TutorSessionsService",
+          "lineNumber": 182
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "backend/app/shared/schemas.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 105,
+      "nonEmptyLines": 76,
+      "classes": [
+        {
+          "name": "ORMBase",
+          "startLine": 12,
+          "endLine": 13,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "ErrorPayload",
+          "startLine": 16,
+          "endLine": 20,
+          "methods": [],
+          "properties": [
+            "code",
+            "message",
+            "status_code",
+            "details"
+          ]
+        },
+        {
+          "name": "ErrorResponse",
+          "startLine": 23,
+          "endLine": 26,
+          "methods": [],
+          "properties": [
+            "ok",
+            "error",
+            "request_id"
+          ]
+        },
+        {
+          "name": "UserCreate",
+          "startLine": 29,
+          "endLine": 32,
+          "methods": [],
+          "properties": [
+            "email",
+            "password",
+            "full_name"
+          ]
+        },
+        {
+          "name": "UserUpdate",
+          "startLine": 35,
+          "endLine": 37,
+          "methods": [],
+          "properties": [
+            "full_name",
+            "is_active"
+          ]
+        },
+        {
+          "name": "UserOut",
+          "startLine": 40,
+          "endLine": 51,
+          "methods": [],
+          "properties": [
+            "id",
+            "email",
+            "full_name",
+            "gender",
+            "age",
+            "native_language",
+            "target_language",
+            "cefr_goal",
+            "is_active",
+            "created_at",
+            "updated_at"
+          ]
+        },
+        {
+          "name": "LevelInfo",
+          "startLine": 54,
+          "endLine": 61,
+          "methods": [],
+          "properties": [
+            "level",
+            "rank_min",
+            "rank_max",
+            "word_coverage",
+            "grammar_focus",
+            "input_type",
+            "word_count"
+          ]
+        },
+        {
+          "name": "WordOut",
+          "startLine": 64,
+          "endLine": 68,
+          "methods": [],
+          "properties": [
+            "id",
+            "lemma",
+            "rank",
+            "level"
+          ]
+        },
+        {
+          "name": "StoryGenerateIn",
+          "startLine": 71,
+          "endLine": 74,
+          "methods": [],
+          "properties": [
+            "level",
+            "target_word_count",
+            "max_words"
+          ]
+        },
+        {
+          "name": "StoryOut",
+          "startLine": 77,
+          "endLine": 86,
+          "methods": [],
+          "properties": [
+            "id",
+            "level",
+            "title",
+            "body",
+            "word_count",
+            "new_word_count",
+            "new_words",
+            "review_words",
+            "target_words"
+          ]
+        },
+        {
+          "name": "WordProgressUpdateIn",
+          "startLine": 89,
+          "endLine": 92,
+          "methods": [],
+          "properties": [
+            "word_id",
+            "event",
+            "correct"
+          ]
+        },
+        {
+          "name": "LevelProgress",
+          "startLine": 95,
+          "endLine": 98,
+          "methods": [],
+          "properties": [
+            "level",
+            "mastered",
+            "total"
+          ]
+        },
+        {
+          "name": "ProgressSummary",
+          "startLine": 101,
+          "endLine": 105,
+          "methods": [],
+          "properties": [
+            "total_words",
+            "mastered_words",
+            "next_review_at",
+            "levels"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ORMBase",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "ErrorPayload",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "ErrorResponse",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "UserCreate",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "UserUpdate",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "UserOut",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "LevelInfo",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "WordOut",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "StoryGenerateIn",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "StoryOut",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "WordProgressUpdateIn",
+          "line": 89,
+          "isDefault": false
+        },
+        {
+          "name": "LevelProgress",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "ProgressSummary",
+          "line": 101,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 13,
+        "functionCount": 0,
+        "classCount": 13
+      }
+    },
+    {
+      "path": "backend/app/shared/types.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 3,
+      "nonEmptyLines": 2,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/tests/test_bm25.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 35,
+      "nonEmptyLines": 28,
+      "functions": [
+        {
+          "name": "test_tokenize_lowercases_words",
+          "startLine": 6,
+          "endLine": 7,
+          "params": []
+        },
+        {
+          "name": "test_bm25_scores_matching_term_higher",
+          "startLine": 10,
+          "endLine": 28,
+          "params": []
+        },
+        {
+          "name": "test_term_frequencies_counts_tokens",
+          "startLine": 31,
+          "endLine": 35,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "test_tokenize_lowercases_words",
+          "line": 6,
+          "isDefault": false
+        },
+        {
+          "name": "test_bm25_scores_matching_term_higher",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "test_term_frequencies_counts_tokens",
+          "line": 31,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "test_tokenize_lowercases_words",
+          "callee": "tokenize",
+          "lineNumber": 7
+        },
+        {
+          "caller": "test_bm25_scores_matching_term_higher",
+          "callee": "bm25_score",
+          "lineNumber": 12
+        },
+        {
+          "caller": "test_bm25_scores_matching_term_higher",
+          "callee": "bm25_score",
+          "lineNumber": 20
+        },
+        {
+          "caller": "test_term_frequencies_counts_tokens",
+          "callee": "term_frequencies",
+          "lineNumber": 32
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/tests/test_knowledge_grounding.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 23,
+      "functions": [
+        {
+          "name": "test_rank_bounds_for_a1",
+          "startLine": 4,
+          "endLine": 6,
+          "params": []
+        },
+        {
+          "name": "test_chunk_matches_cefr_filters_by_rank",
+          "startLine": 9,
+          "endLine": 11,
+          "params": []
+        },
+        {
+          "name": "test_a1_path_rank_ranges_align_with_engine",
+          "startLine": 14,
+          "endLine": 30,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "test_rank_bounds_for_a1",
+          "line": 4,
+          "isDefault": false
+        },
+        {
+          "name": "test_chunk_matches_cefr_filters_by_rank",
+          "line": 9,
+          "isDefault": false
+        },
+        {
+          "name": "test_a1_path_rank_ranges_align_with_engine",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "test_rank_bounds_for_a1",
+          "callee": "rank_bounds_for_cefr",
+          "lineNumber": 5
+        },
+        {
+          "caller": "test_chunk_matches_cefr_filters_by_rank",
+          "callee": "chunk_matches_cefr",
+          "lineNumber": 10
+        },
+        {
+          "caller": "test_chunk_matches_cefr_filters_by_rank",
+          "callee": "chunk_matches_cefr",
+          "lineNumber": 11
+        },
+        {
+          "caller": "test_a1_path_rank_ranges_align_with_engine",
+          "callee": "Path(__file__).resolve",
+          "lineNumber": 18
+        },
+        {
+          "caller": "test_a1_path_rank_ranges_align_with_engine",
+          "callee": "Path",
+          "lineNumber": 18
+        },
+        {
+          "caller": "test_a1_path_rank_ranges_align_with_engine",
+          "callee": "json.loads",
+          "lineNumber": 19
+        },
+        {
+          "caller": "test_a1_path_rank_ranges_align_with_engine",
+          "callee": "path.read_text",
+          "lineNumber": 19
+        },
+        {
+          "caller": "test_a1_path_rank_ranges_align_with_engine",
+          "callee": "rank_bounds_for_cefr",
+          "lineNumber": 20
+        },
+        {
+          "caller": "test_a1_path_rank_ranges_align_with_engine",
+          "callee": "payload.get",
+          "lineNumber": 23
+        },
+        {
+          "caller": "test_a1_path_rank_ranges_align_with_engine",
+          "callee": "module.get",
+          "lineNumber": 24
+        },
+        {
+          "caller": "test_a1_path_rank_ranges_align_with_engine",
+          "callee": "int",
+          "lineNumber": 25
+        },
+        {
+          "caller": "test_a1_path_rank_ranges_align_with_engine",
+          "callee": "kp.get",
+          "lineNumber": 25
+        },
+        {
+          "caller": "test_a1_path_rank_ranges_align_with_engine",
+          "callee": "int",
+          "lineNumber": 26
+        },
+        {
+          "caller": "test_a1_path_rank_ranges_align_with_engine",
+          "callee": "kp.get",
+          "lineNumber": 26
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/tests/test_llm_eval_harness.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 54,
+      "nonEmptyLines": 43,
+      "functions": [
+        {
+          "name": "_chunk",
+          "startLine": 11,
+          "endLine": 20,
+          "params": [
+            "title",
+            "terms"
+          ]
+        },
+        {
+          "name": "test_grounding_bm25_prefers_exact_lemma",
+          "startLine": 23,
+          "endLine": 40,
+          "params": []
+        },
+        {
+          "name": "test_grounding_cefr_filter_excludes_out_of_band_rank",
+          "startLine": 43,
+          "endLine": 46,
+          "params": []
+        },
+        {
+          "name": "test_quiz_exact_match_is_deterministic",
+          "startLine": 49,
+          "endLine": 54,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_chunk",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "test_grounding_bm25_prefers_exact_lemma",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "test_grounding_cefr_filter_excludes_out_of_band_rank",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "test_quiz_exact_match_is_deterministic",
+          "line": 49,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_chunk",
+          "callee": "_IndexedChunk",
+          "lineNumber": 12
+        },
+        {
+          "caller": "_chunk",
+          "callee": "uuid.uuid4",
+          "lineNumber": 13
+        },
+        {
+          "caller": "_chunk",
+          "callee": "max",
+          "lineNumber": 18
+        },
+        {
+          "caller": "_chunk",
+          "callee": "sum",
+          "lineNumber": 18
+        },
+        {
+          "caller": "_chunk",
+          "callee": "terms.values",
+          "lineNumber": 18
+        },
+        {
+          "caller": "test_grounding_bm25_prefers_exact_lemma",
+          "callee": "_chunk",
+          "lineNumber": 25
+        },
+        {
+          "caller": "test_grounding_bm25_prefers_exact_lemma",
+          "callee": "_chunk",
+          "lineNumber": 26
+        },
+        {
+          "caller": "test_grounding_bm25_prefers_exact_lemma",
+          "callee": "Bm25Index",
+          "lineNumber": 28
+        },
+        {
+          "caller": "test_grounding_bm25_prefers_exact_lemma",
+          "callee": "index.search",
+          "lineNumber": 37
+        },
+        {
+          "caller": "test_grounding_cefr_filter_excludes_out_of_band_rank",
+          "callee": "chunk_matches_cefr",
+          "lineNumber": 45
+        },
+        {
+          "caller": "test_grounding_cefr_filter_excludes_out_of_band_rank",
+          "callee": "chunk_matches_cefr",
+          "lineNumber": 46
+        },
+        {
+          "caller": "test_quiz_exact_match_is_deterministic",
+          "callee": "expected.strip().lower",
+          "lineNumber": 52
+        },
+        {
+          "caller": "test_quiz_exact_match_is_deterministic",
+          "callee": "expected.strip",
+          "lineNumber": 52
+        },
+        {
+          "caller": "test_quiz_exact_match_is_deterministic",
+          "callee": "actual.strip().lower().strip",
+          "lineNumber": 53
+        },
+        {
+          "caller": "test_quiz_exact_match_is_deterministic",
+          "callee": "actual.strip().lower",
+          "lineNumber": 53
+        },
+        {
+          "caller": "test_quiz_exact_match_is_deterministic",
+          "callee": "actual.strip",
+          "lineNumber": 53
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/tests/test_mastery_scheduler.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 59,
+      "nonEmptyLines": 52,
+      "functions": [
+        {
+          "name": "test_schedule_next_advances_on_correct_answers",
+          "startLine": 11,
+          "endLine": 20,
+          "params": []
+        },
+        {
+          "name": "test_schedule_next_steps_back_on_wrong_answers",
+          "startLine": 23,
+          "endLine": 33,
+          "params": []
+        },
+        {
+          "name": "test_build_review_queue_prioritizes_error_knowledge_points",
+          "startLine": 36,
+          "endLine": 59,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "test_schedule_next_advances_on_correct_answers",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "test_schedule_next_steps_back_on_wrong_answers",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "test_build_review_queue_prioritizes_error_knowledge_points",
+          "line": 36,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "test_schedule_next_advances_on_correct_answers",
+          "callee": "SpacedRepetitionScheduler",
+          "lineNumber": 12
+        },
+        {
+          "caller": "test_schedule_next_advances_on_correct_answers",
+          "callee": "scheduler.get_initial_state",
+          "lineNumber": 13
+        },
+        {
+          "caller": "test_schedule_next_advances_on_correct_answers",
+          "callee": "scheduler.interval_days_for_index",
+          "lineNumber": 14
+        },
+        {
+          "caller": "test_schedule_next_advances_on_correct_answers",
+          "callee": "scheduler.schedule_next",
+          "lineNumber": 16
+        },
+        {
+          "caller": "test_schedule_next_steps_back_on_wrong_answers",
+          "callee": "SpacedRepetitionScheduler",
+          "lineNumber": 24
+        },
+        {
+          "caller": "test_schedule_next_steps_back_on_wrong_answers",
+          "callee": "RepetitionState",
+          "lineNumber": 25
+        },
+        {
+          "caller": "test_schedule_next_steps_back_on_wrong_answers",
+          "callee": "scheduler.schedule_next",
+          "lineNumber": 31
+        },
+        {
+          "caller": "test_build_review_queue_prioritizes_error_knowledge_points",
+          "callee": "SpacedRepetitionScheduler",
+          "lineNumber": 37
+        },
+        {
+          "caller": "test_build_review_queue_prioritizes_error_knowledge_points",
+          "callee": "LearningProgress",
+          "lineNumber": 38
+        },
+        {
+          "caller": "test_build_review_queue_prioritizes_error_knowledge_points",
+          "callee": "RepetitionState",
+          "lineNumber": 42
+        },
+        {
+          "caller": "test_build_review_queue_prioritizes_error_knowledge_points",
+          "callee": "RepetitionState",
+          "lineNumber": 43
+        },
+        {
+          "caller": "test_build_review_queue_prioritizes_error_knowledge_points",
+          "callee": "ErrorRecord",
+          "lineNumber": 46
+        },
+        {
+          "caller": "test_build_review_queue_prioritizes_error_knowledge_points",
+          "callee": "scheduler.build_review_queue",
+          "lineNumber": 56
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/tests/test_quiz_judge_fallback.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 46,
+      "nonEmptyLines": 37,
+      "functions": [
+        {
+          "name": "test_judge_with_llm_short_circuits_exact_match",
+          "startLine": 7,
+          "endLine": 23,
+          "params": []
+        },
+        {
+          "name": "test_judge_with_llm_calls_llm_for_open_questions",
+          "startLine": 26,
+          "endLine": 46,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "test_judge_with_llm_short_circuits_exact_match",
+          "line": 7,
+          "isDefault": false
+        },
+        {
+          "name": "test_judge_with_llm_calls_llm_for_open_questions",
+          "line": 26,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_run",
+          "callee": "patch",
+          "lineNumber": 9
+        },
+        {
+          "caller": "_run",
+          "callee": "judge_with_llm",
+          "lineNumber": 10
+        },
+        {
+          "caller": "_run",
+          "callee": "llm_factory.assert_not_called",
+          "lineNumber": 19
+        },
+        {
+          "caller": "test_judge_with_llm_short_circuits_exact_match",
+          "callee": "asyncio.run",
+          "lineNumber": 23
+        },
+        {
+          "caller": "test_judge_with_llm_short_circuits_exact_match",
+          "callee": "_run",
+          "lineNumber": 23
+        },
+        {
+          "caller": "_run",
+          "callee": "AsyncMock",
+          "lineNumber": 28
+        },
+        {
+          "caller": "_run",
+          "callee": "patch",
+          "lineNumber": 34
+        },
+        {
+          "caller": "_run",
+          "callee": "judge_with_llm",
+          "lineNumber": 35
+        },
+        {
+          "caller": "test_judge_with_llm_calls_llm_for_open_questions",
+          "callee": "asyncio.run",
+          "lineNumber": 46
+        },
+        {
+          "caller": "test_judge_with_llm_calls_llm_for_open_questions",
+          "callee": "_run",
+          "lineNumber": 46
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "backend/tests/test_search_cache.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 71,
+      "nonEmptyLines": 61,
+      "functions": [
+        {
+          "name": "_chunk",
+          "startLine": 15,
+          "endLine": 24,
+          "params": [
+            "title",
+            "terms"
+          ]
+        },
+        {
+          "name": "test_bm25_index_returns_relevant_chunk",
+          "startLine": 27,
+          "endLine": 40,
+          "params": []
+        },
+        {
+          "name": "test_search_cache_invalidate_clears_kb_entries",
+          "startLine": 43,
+          "endLine": 56,
+          "params": []
+        },
+        {
+          "name": "test_search_results_serialize_roundtrip",
+          "startLine": 59,
+          "endLine": 71,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_chunk",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "test_bm25_index_returns_relevant_chunk",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "test_search_cache_invalidate_clears_kb_entries",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "test_search_results_serialize_roundtrip",
+          "line": 59,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_chunk",
+          "callee": "_IndexedChunk",
+          "lineNumber": 16
+        },
+        {
+          "caller": "_chunk",
+          "callee": "uuid.uuid4",
+          "lineNumber": 17
+        },
+        {
+          "caller": "_chunk",
+          "callee": "max",
+          "lineNumber": 22
+        },
+        {
+          "caller": "_chunk",
+          "callee": "sum",
+          "lineNumber": 22
+        },
+        {
+          "caller": "_chunk",
+          "callee": "terms.values",
+          "lineNumber": 22
+        },
+        {
+          "caller": "test_bm25_index_returns_relevant_chunk",
+          "callee": "_chunk",
+          "lineNumber": 28
+        },
+        {
+          "caller": "test_bm25_index_returns_relevant_chunk",
+          "callee": "_chunk",
+          "lineNumber": 28
+        },
+        {
+          "caller": "test_bm25_index_returns_relevant_chunk",
+          "callee": "Bm25Index",
+          "lineNumber": 29
+        },
+        {
+          "caller": "test_bm25_index_returns_relevant_chunk",
+          "callee": "index.search",
+          "lineNumber": 38
+        },
+        {
+          "caller": "test_bm25_index_returns_relevant_chunk",
+          "callee": "len",
+          "lineNumber": 39
+        },
+        {
+          "caller": "test_search_cache_invalidate_clears_kb_entries",
+          "callee": "KnowledgeSearchCache",
+          "lineNumber": 44
+        },
+        {
+          "caller": "test_search_cache_invalidate_clears_kb_entries",
+          "callee": "_chunk",
+          "lineNumber": 45
+        },
+        {
+          "caller": "test_search_cache_invalidate_clears_kb_entries",
+          "callee": "KnowledgeChunkSnapshot",
+          "lineNumber": 46
+        },
+        {
+          "caller": "test_search_cache_invalidate_clears_kb_entries",
+          "callee": "cache._set_cached_search",
+          "lineNumber": 53
+        },
+        {
+          "caller": "test_search_cache_invalidate_clears_kb_entries",
+          "callee": "cache._get_cached_search",
+          "lineNumber": 54
+        },
+        {
+          "caller": "test_search_cache_invalidate_clears_kb_entries",
+          "callee": "cache.invalidate_kb",
+          "lineNumber": 55
+        },
+        {
+          "caller": "test_search_cache_invalidate_clears_kb_entries",
+          "callee": "cache._get_cached_search",
+          "lineNumber": 56
+        },
+        {
+          "caller": "test_search_results_serialize_roundtrip",
+          "callee": "KnowledgeChunkSnapshot",
+          "lineNumber": 60
+        },
+        {
+          "caller": "test_search_results_serialize_roundtrip",
+          "callee": "uuid.uuid4",
+          "lineNumber": 61
+        },
+        {
+          "caller": "test_search_results_serialize_roundtrip",
+          "callee": "_deserialize_search_results",
+          "lineNumber": 68
+        },
+        {
+          "caller": "test_search_results_serialize_roundtrip",
+          "callee": "_serialize_search_results",
+          "lineNumber": 68
+        },
+        {
+          "caller": "test_search_results_serialize_roundtrip",
+          "callee": "len",
+          "lineNumber": 69
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    }
+  ]
+}

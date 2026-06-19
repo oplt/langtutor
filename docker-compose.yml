@@ -34,6 +34,7 @@ services:
     environment:
       DATABASE_URL: postgresql+asyncpg://postgres:postgres@postgres:5432/languageapp
       REDIS_URL: redis://redis:6379/0
+      # Dev-only placeholder — generate a unique secret for production (≥32 chars).
       JWT_SECRET: change-me-to-at-least-32-characters-long
       APP_ENV: development
       REQUIRE_REDIS: "true"

@@ -2,11 +2,12 @@ import { useMemo, useState } from "react";
 import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 import TextField from "@mui/material/TextField";
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import Typography from "@mui/material/Typography";
 
 import type { AskUserAnswer, AskUserPayload, AskUserQuestion } from "../types";
@@ -62,37 +63,59 @@ function QuestionPanel({
   const multi = Boolean(question.multi_select);
   const allowFreeText = question.allow_free_text !== false;
 
-  const toggleOption = (label: string) => {
-    if (multi) {
-      const selected = value.selected.includes(label)
-        ? value.selected.filter((item) => item !== label)
-        : [...value.selected, label];
-      onChange({ ...value, selected });
-      return;
-    }
-    onChange({ ...value, selected: [label] });
+  const handleSingleSelect = (_event: React.MouseEvent<HTMLElement>, next: string | null) => {
+    if (!next || disabled) return;
+    onChange({ ...value, selected: [next] });
+  };
+
+  const handleMultiSelect = (_event: React.MouseEvent<HTMLElement>, next: string[]) => {
+    if (disabled) return;
+    onChange({ ...value, selected: next });
   };
 
   return (
     <Stack spacing={1.5}>
       <Typography variant="body2">{question.prompt}</Typography>
-      {options.length > 0 && (
-        <Stack direction="row" flexWrap="wrap" gap={1} useFlexGap>
-          {options.map((option) => {
-            const active = value.selected.includes(option.label);
-            return (
-              <Chip
-                key={option.label}
-                label={option.label}
-                title={option.description ?? undefined}
-                color={active ? "primary" : "default"}
-                variant={active ? "filled" : "outlined"}
-                onClick={() => !disabled && toggleOption(option.label)}
-                disabled={disabled}
-              />
-            );
-          })}
-        </Stack>
+      {options.length > 0 && multi && (
+        <ToggleButtonGroup
+          value={value.selected}
+          onChange={handleMultiSelect}
+          aria-label={question.header || "Answer options"}
+          size="small"
+          sx={{ flexWrap: "wrap", gap: 0.5 }}
+        >
+          {options.map((option) => (
+            <ToggleButton
+              key={option.label}
+              value={option.label}
+              disabled={disabled}
+              aria-label={option.description ?? option.label}
+            >
+              {option.label}
+            </ToggleButton>
+          ))}
+        </ToggleButtonGroup>
+      )}
+      {options.length > 0 && !multi && (
+        <ToggleButtonGroup
+          exclusive
+          value={value.selected[0] ?? null}
+          onChange={handleSingleSelect}
+          aria-label={question.header || "Answer options"}
+          size="small"
+          sx={{ flexWrap: "wrap", gap: 0.5 }}
+        >
+          {options.map((option) => (
+            <ToggleButton
+              key={option.label}
+              value={option.label}
+              disabled={disabled}
+              aria-label={option.description ?? option.label}
+            >
+              {option.label}
+            </ToggleButton>
+          ))}
+        </ToggleButtonGroup>
       )}
       {allowFreeText && (
         <TextField
@@ -127,6 +150,7 @@ export function AskUserCard({ payload, disabled, onSubmit }: Props) {
   if (!questions.length) return null;
 
   const showTabs = questions.length > 1;
+  const activeQuestion = questions[showTabs ? tab : 0];
 
   return (
     <Alert severity="info" sx={{ alignItems: "flex-start" }}>
@@ -147,19 +171,27 @@ export function AskUserCard({ payload, disabled, onSubmit }: Props) {
               <Tab
                 key={question.id}
                 value={index}
+                id={`ask-user-tab-${question.id}`}
+                aria-controls={`ask-user-panel-${question.id}`}
                 label={question.header || `Q${index + 1}`}
               />
             ))}
           </Tabs>
         )}
-        <QuestionPanel
-          question={questions[showTabs ? tab : 0]}
-          value={state[questions[showTabs ? tab : 0].id]}
-          onChange={(next) =>
-            setState((prev) => ({ ...prev, [questions[showTabs ? tab : 0].id]: next }))
-          }
-          disabled={disabled}
-        />
+        <Box
+          id={`ask-user-panel-${activeQuestion.id}`}
+          role="tabpanel"
+          aria-labelledby={`ask-user-tab-${activeQuestion.id}`}
+        >
+          <QuestionPanel
+            question={activeQuestion}
+            value={state[activeQuestion.id]}
+            onChange={(next) =>
+              setState((prev) => ({ ...prev, [activeQuestion.id]: next }))
+            }
+            disabled={disabled}
+          />
+        </Box>
         <Box>
           <Button variant="contained" size="small" disabled={disabled || !canSubmit} onClick={submit}>
             Submit answer

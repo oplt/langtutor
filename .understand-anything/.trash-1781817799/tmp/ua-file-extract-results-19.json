@@ -1,0 +1,151 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "backend/app/modules/prompt/packs/en/conversation.yaml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 49,
+      "nonEmptyLines": 43,
+      "sections": [
+        {
+          "heading": "meta",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "system",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "cefr",
+          "level": 1,
+          "line": 28
+        },
+        {
+          "heading": "runtime",
+          "level": 1,
+          "line": 47
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "backend/app/modules/prompt/packs/en/correction.yaml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 35,
+      "nonEmptyLines": 28,
+      "sections": [
+        {
+          "heading": "meta",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "system",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "cefr",
+          "level": 1,
+          "line": 24
+        },
+        {
+          "heading": "runtime",
+          "level": 1,
+          "line": 33
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "backend/app/modules/prompt/packs/en/quiz.yaml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 32,
+      "nonEmptyLines": 26,
+      "sections": [
+        {
+          "heading": "meta",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "system",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "cefr",
+          "level": 1,
+          "line": 21
+        },
+        {
+          "heading": "runtime",
+          "level": 1,
+          "line": 30
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "backend/app/modules/prompt/packs/en/story.yaml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 32,
+      "nonEmptyLines": 26,
+      "sections": [
+        {
+          "heading": "meta",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "system",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "cefr",
+          "level": 1,
+          "line": 21
+        },
+        {
+          "heading": "runtime",
+          "level": 1,
+          "line": 30
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    }
+  ]
+}

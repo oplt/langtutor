@@ -7,6 +7,7 @@ from contextlib import asynccontextmanager
 from typing import Any, Dict
 
 from fastapi import FastAPI, HTTPException, Request
+from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, PlainTextResponse
 
@@ -28,6 +29,14 @@ from backend.app.modules.ai.service import AISettingsService
 configure_logging()
 logger = logging.getLogger("backend")
 fallback_limiter = InMemoryFixedWindowLimiter()
+_redis_rate_limiter: RedisFixedWindowLimiter | None = None
+
+
+def _get_redis_rate_limiter() -> RedisFixedWindowLimiter:
+    global _redis_rate_limiter
+    if _redis_rate_limiter is None:
+        _redis_rate_limiter = RedisFixedWindowLimiter(get_redis())
+    return _redis_rate_limiter
 
 
 def _normalize_http_detail(detail: Any) -> Dict[str, Any]:
@@ -51,6 +60,12 @@ def _route_template(request: Request) -> str:
     return getattr(route, "path", request.url.path)
 
 
+def _response_headers(request: Request) -> dict[str, str]:
+    rid = getattr(request.state, "request_id", None)
+    trace_id = getattr(request.state, "trace_id", None)
+    return {"x-request-id": rid or "", "x-trace-id": trace_id or ""}
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     setup_tracing()
@@ -59,6 +74,9 @@ async def lifespan(app: FastAPI):
         await validate_runtime_config()
         await AISettingsService().get_settings(effective=True)
         schedule_background(run_startup_warmup(), name="startup_warmup")
+        from backend.app.modules.memory.tasks import start_memory_maintenance
+
+        start_memory_maintenance()
         logger.info("Startup: database connectivity OK")
     except AppError as e:
         logger.critical("Startup failed (AppError)", extra={"code": e.code, "details": e.details})
@@ -67,9 +85,12 @@ async def lifespan(app: FastAPI):
         logger.critical("Startup failed (unexpected)", exc_info=True)
         raise
 
+    logger.info("Application startup complete")
     yield
 
+    logger.info("Application shutdown started")
     await close_redis()
+    logger.info("Application shutdown complete")
 
 
 def create_app() -> FastAPI:
@@ -97,7 +118,11 @@ def create_app() -> FastAPI:
         try:
             response = await call_next(request)
             status_code = response.status_code
-        except Exception as exc:
+        except HTTPException:
+            raise
+        except RequestValidationError:
+            raise
+        except Exception:
             duration_ms = (time.perf_counter() - start) * 1000
             metrics_registry.observe_request(
                 method=request.method,
@@ -105,20 +130,8 @@ def create_app() -> FastAPI:
                 status_code=status_code,
                 duration_ms=duration_ms,
             )
-            logger.exception(
-                "http_request_failed",
-                extra={
-                    "method": request.method,
-                    "path": request.url.path,
-                    "status_code": status_code,
-                    "duration_ms": round(duration_ms, 2),
-                    "error_type": exc.__class__.__name__,
-                },
-            )
+            clear_log_context()
             raise
-        finally:
-            if "response" not in locals():
-                clear_log_context()
 
         duration_ms = (time.perf_counter() - start) * 1000
         route_path = _route_template(request)
@@ -134,6 +147,8 @@ def create_app() -> FastAPI:
             "raw_path": request.url.path,
             "status_code": status_code,
             "duration_ms": round(duration_ms, 2),
+            "request_id": request_id,
+            "trace_id": trace_id,
         }
         if duration_ms >= settings.SLOW_REQUEST_MS:
             logger.warning("http_request_slow", extra=log_extra)
@@ -156,15 +171,14 @@ def create_app() -> FastAPI:
             per_minute = settings.RATE_LIMIT_LOGIN_PER_MIN
         elif path == "/auth/signup":
             per_minute = settings.RATE_LIMIT_SIGNUP_PER_MIN
-        elif path in {"/api/learning/quiz/generate", "/api/tutor/message"}:
+        elif path in {"/api/learning/quiz/generate", "/api/tutor/message", "/api/tutor/message/stream"}:
             per_minute = settings.RATE_LIMIT_ANALYZE_PER_MIN
 
         if per_minute is not None and per_minute > 0:
             client_ip = request.client.host if request.client else "unknown"
             key = f"{path}:{client_ip}"
             try:
-                redis_limiter = RedisFixedWindowLimiter(get_redis())
-                allow, retry_after = await redis_limiter.allow(
+                allow, retry_after = await _get_redis_rate_limiter().allow(
                     key=key,
                     limit=per_minute,
                     window_seconds=60,
@@ -198,6 +212,7 @@ def create_app() -> FastAPI:
         return PlainTextResponse(metrics_registry.render_prometheus(), media_type="text/plain; version=0.0.4")
 
     @app.get("/health", include_in_schema=False)
+    @app.get("/healthz", include_in_schema=False)
     async def health():
         return {"ok": True}
 
@@ -206,6 +221,36 @@ def create_app() -> FastAPI:
         report = await readiness_report()
         status_code = 200 if report["ok"] else 503
         return JSONResponse(status_code=status_code, content=report)
+
+    @app.exception_handler(RequestValidationError)
+    async def request_validation_error_handler(request: Request, exc: RequestValidationError):
+        rid = getattr(request.state, "request_id", None)
+        trace_id = getattr(request.state, "trace_id", None)
+        validation_errors = exc.errors()
+        logger.warning(
+            "request_validation_error",
+            extra={
+                "request_id": rid,
+                "trace_id": trace_id,
+                "path": _route_template(request),
+                "method": request.method,
+                "validation_errors": validation_errors,
+                "status_code": 422,
+            },
+        )
+        return JSONResponse(
+            status_code=422,
+            content={
+                "ok": False,
+                "error": {
+                    "code": "validation_error",
+                    "message": "Request validation failed.",
+                    "details": validation_errors,
+                },
+                "request_id": rid,
+            },
+            headers=_response_headers(request),
+        )
 
     @app.exception_handler(AppError)
     async def app_error_handler(request: Request, exc: AppError):
@@ -217,6 +262,7 @@ def create_app() -> FastAPI:
         return JSONResponse(
             status_code=exc.status_code,
             content={"ok": False, "error": exc.to_dict(), "request_id": rid},
+            headers=_response_headers(request),
         )
 
     @app.exception_handler(HTTPException)
@@ -230,6 +276,7 @@ def create_app() -> FastAPI:
         return JSONResponse(
             status_code=exc.status_code,
             content={"ok": False, "error": detail, "request_id": rid},
+            headers=_response_headers(request),
         )
 
     @app.exception_handler(Exception)
@@ -243,6 +290,7 @@ def create_app() -> FastAPI:
                 "error": {"code": "internal_error", "message": "Unexpected internal error."},
                 "request_id": rid,
             },
+            headers=_response_headers(request),
         )
 
     register_routes(app)

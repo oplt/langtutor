@@ -1,0 +1,93 @@
+# .understandignore — patterns for files/dirs to exclude from analysis
+# --- From .gitignore (uncomment to exclude) ---
+
+# .DS_Store
+# Thumbs.db
+# *~
+# *.sublime-*
+# .agents/
+# .codex/
+# backend/.agents/
+# backend/.codex/
+# .env
+# .env.*
+# !.env.example
+# !.env.*.example
+# backend/.env
+# frontend/.env
+# backend/data/runtime/settings.secrets.json
+# *.py[cod]
+# *$py.class
+# *.so
+# .Python
+# env/
+# ENV/
+# env.bak/
+# venv.bak/
+# __pypackages__/
+# downloads/
+# eggs/
+# .eggs/
+# lib/
+# lib64/
+# parts/
+# sdist/
+# var/
+# wheels/
+# share/python-wheels/
+# *.egg-info/
+# .installed.cfg
+# *.egg
+# MANIFEST
+# .pytest_cache/
+# .mypy_cache/
+# .ruff_cache/
+# .pyre/
+# .pytype/
+# .tox/
+# .nox/
+# .coverage
+# .coverage.*
+# coverage.xml
+# htmlcov/
+# cover/
+# *.cover
+# *.py,cover
+# .hypothesis/
+# .dmypy.json
+# dmypy.json
+# backend/logs/
+# backend/storage/
+# backend/data/rag/
+# *.pid
+# *.sqlite
+# *.sqlite3
+# *.db
+# celerybeat-schedule
+# celerybeat.pid
+# frontend/node_modules/
+# npm-debug.log*
+# yarn-debug.log*
+# yarn-error.log*
+# pnpm-debug.log*
+# .eslintcache
+# .parcel-cache/
+# .vite/
+# .vite-temp/
+# frontend/dist/
+# frontend/.vite/
+# frontend/.vite-temp/
+# frontend/coverage/
+# frontend/playwright-report/
+# frontend/test-results/
+# backend/.git/
+
+# --- Detected directories (uncomment to exclude) ---
+
+# docs/
+
+# --- Test file patterns (uncomment to exclude) ---
+
+# *.test.*
+# *.spec.*
+# *.snap

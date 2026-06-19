@@ -86,4 +86,10 @@ def _fallback_split(text: str) -> list[str]:
 
 
 def _estimate_tokens(text: str) -> int:
-    return max(1, len(text.split()))
+    try:
+        import tiktoken
+
+        enc = tiktoken.get_encoding("cl100k_base")
+        return max(1, len(enc.encode(text)))
+    except Exception:
+        return max(1, len(text.split()))

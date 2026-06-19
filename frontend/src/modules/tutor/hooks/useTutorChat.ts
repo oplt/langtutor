@@ -167,13 +167,23 @@ export function useTutorChat(initialCefrLevel = "A1") {
   }, [handleInbound]);
 
   useEffect(() => {
-    saveTutorChatSession({
+    if (isBusy) return;
+
+    const snapshot = {
       sessionId,
       cefrLevel,
       persona,
-      messages: messages.map((message) => ({ ...message, streaming: false })),
-    });
-  }, [sessionId, cefrLevel, persona, messages]);
+      messages: messages
+        .filter((message) => !message.streaming)
+        .map((message) => ({ ...message, streaming: false })),
+    };
+
+    const timer = window.setTimeout(() => {
+      saveTutorChatSession(snapshot);
+    }, 400);
+
+    return () => window.clearTimeout(timer);
+  }, [sessionId, cefrLevel, persona, messages, isBusy]);
 
   const clearError = useCallback(() => setError(null), []);
 
@@ -199,7 +209,7 @@ export function useTutorChat(initialCefrLevel = "A1") {
           cefr_level: cefrLevel,
           persona,
           language: "en",
-          conversation_history: conversationHistory,
+          ...(sessionId ? {} : { conversation_history: conversationHistory }),
         },
       });
     },

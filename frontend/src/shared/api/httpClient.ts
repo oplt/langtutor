@@ -12,9 +12,16 @@ export class ApiError extends Error {
   }
 }
 
+const DEFAULT_TIMEOUT_MS = 30_000;
+
 export async function httpRequest<T>(
   path: string,
-  options: { method?: string; body?: unknown; auth?: boolean } = {},
+  options: {
+    method?: string;
+    body?: unknown;
+    auth?: boolean;
+    timeoutMs?: number;
+  } = {},
 ): Promise<T> {
   const headers: Record<string, string> = {};
   if (options.auth !== false) {
@@ -25,11 +32,28 @@ export async function httpRequest<T>(
     headers["Content-Type"] = "application/json";
     body = JSON.stringify(options.body);
   }
-  const response = await fetch(`${API_BASE}${path}`, {
-    method: options.method ?? "GET",
-    headers,
-    body,
-  });
+
+  const timeoutMs = options.timeoutMs ?? DEFAULT_TIMEOUT_MS;
+  const controller = new AbortController();
+  const timer = window.setTimeout(() => controller.abort(), timeoutMs);
+
+  let response: Response;
+  try {
+    response = await fetch(`${API_BASE}${path}`, {
+      method: options.method ?? "GET",
+      headers,
+      body,
+      signal: controller.signal,
+    });
+  } catch (error) {
+    if (error instanceof DOMException && error.name === "AbortError") {
+      throw new ApiError(`Request timed out after ${timeoutMs}ms`, 408);
+    }
+    throw error;
+  } finally {
+    window.clearTimeout(timer);
+  }
+
   const data = await response.json().catch(() => ({}));
   if (!response.ok) {
     const message =

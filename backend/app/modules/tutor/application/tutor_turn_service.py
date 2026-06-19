@@ -2,13 +2,16 @@
 
 from __future__ import annotations
 
-from uuid import uuid4
+from collections.abc import AsyncIterator
 
-from backend.app.modules.agent.db_session import bind_turn_db_session, clear_turn_db_session
 from backend.app.modules.agent.runtime.orchestrator import AgentOrchestrator
+from backend.app.modules.tutor.application.turn_coordinator import (
+    finalize_tutor_turn_from_result,
+    run_tutor_turn_with_session,
+    stream_tutor_turn_http,
+    tutor_message_out_from_result,
+)
 from backend.app.modules.tutor.schemas import TutorMessageIn, TutorMessageOut
-from backend.app.modules.tutor.context_factory import build_agent_context
-from backend.app.modules.tutor.turn_executor import collect_orchestrator_turn
 
 
 class TutorTurnService:
@@ -23,29 +26,31 @@ class TutorTurnService:
         return self._orchestrator
 
     async def execute_turn(self, payload: TutorMessageIn, *, user_id: str) -> TutorMessageOut:
-        from backend.app.db.session import AsyncSessionLocal
+        context, result = await run_tutor_turn_with_session(
+            payload,
+            user_id=user_id,
+            orchestrator=self._orchestrator_for_turn(),
+        )
+        await finalize_tutor_turn_from_result(
+            context=context,
+            payload=payload,
+            result=result,
+            user_id=user_id,
+        )
+        return tutor_message_out_from_result(context, result)
 
-        context = build_agent_context(
-            payload, user_id=user_id, session_id=payload.session_id or str(uuid4())
-        )
-        async with AsyncSessionLocal() as db:
-            bind_turn_db_session(context, db)
-            try:
-                result = await collect_orchestrator_turn(self._orchestrator_for_turn(), context)
-                await db.commit()
-            except Exception:
-                await db.rollback()
-                raise
-            finally:
-                clear_turn_db_session(context)
-        return TutorMessageOut(
-            session_id=context.session_id,
-            capability=context.active_capability or "chat",
-            reply=result.reply,
-            paused=result.paused,
-            pause_question=result.pause_question,
-            events=result.events,
-        )
+    async def stream_turn(
+        self,
+        payload: TutorMessageIn,
+        *,
+        user_id: str,
+    ) -> AsyncIterator[dict]:
+        async for frame in stream_tutor_turn_http(
+            payload,
+            user_id=user_id,
+            orchestrator=self._orchestrator_for_turn(),
+        ):
+            yield frame
 
 
 _service: TutorTurnService | None = None

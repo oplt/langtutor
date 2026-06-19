@@ -1,0 +1,263 @@
+{
+  "projectRoot": "/home/polat/Desktop/Projects/LanguageApp",
+  "batchFiles": [
+    {
+      "path": "backend/app/bootstrap/routes.py",
+      "language": "python",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/core/exceptions.py",
+      "language": "python",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/core/security.py",
+      "language": "python",
+      "sizeLines": 214,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/db/session.py",
+      "language": "python",
+      "sizeLines": 125,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/auth/api.py",
+      "language": "python",
+      "sizeLines": 260,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/auth/dependencies.py",
+      "language": "python",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/auth/schemas.py",
+      "language": "python",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/auth/ws.py",
+      "language": "python",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/auth/ws_tokens.py",
+      "language": "python",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/book/api.py",
+      "language": "python",
+      "sizeLines": 78,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/extensions/api.py",
+      "language": "python",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/extensions/api_auto.py",
+      "language": "python",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/extensions/api_classroom.py",
+      "language": "python",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/extensions/api_partners.py",
+      "language": "python",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/extensions/api_plugins.py",
+      "language": "python",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/extensions/api_sandbox.py",
+      "language": "python",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/extensions/api_vision.py",
+      "language": "python",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/extensions/api_visualize.py",
+      "language": "python",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/extensions/classroom/service.py",
+      "language": "python",
+      "sizeLines": 135,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/extensions/plugins/registry.py",
+      "language": "python",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "backend/app/modules/knowledge/api.py",
+      "language": "python",
+      "sizeLines": 130,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "backend/app/bootstrap/routes.py": [
+      "backend/app/modules/ai/api.py",
+      "backend/app/modules/auth/api.py",
+      "backend/app/modules/book/api.py",
+      "backend/app/modules/extensions/api.py",
+      "backend/app/modules/knowledge/api.py",
+      "backend/app/modules/learning/api.py",
+      "backend/app/modules/learning/path_api.py",
+      "backend/app/modules/learning/quiz_api.py",
+      "backend/app/modules/memory/api.py",
+      "backend/app/modules/notebook/api.py",
+      "backend/app/modules/persona/api.py",
+      "backend/app/modules/privacy/api.py",
+      "backend/app/modules/prompt/api.py",
+      "backend/app/modules/rag/api/routes.py",
+      "backend/app/modules/rag/api/ws.py",
+      "backend/app/modules/settings/api.py",
+      "backend/app/modules/skills/api.py",
+      "backend/app/modules/tutor/api.py",
+      "backend/app/modules/tutor/sessions/api.py",
+      "backend/app/modules/tutor/ws.py"
+    ],
+    "backend/app/core/exceptions.py": [],
+    "backend/app/core/security.py": [
+      "backend/app/core/config.py",
+      "backend/app/core/exceptions.py"
+    ],
+    "backend/app/db/session.py": [
+      "backend/app/core/config.py",
+      "backend/app/core/exceptions.py",
+      "backend/app/core/logging.py",
+      "backend/app/db/model_registry.py"
+    ],
+    "backend/app/modules/auth/api.py": [
+      "backend/app/core/config.py",
+      "backend/app/core/security.py",
+      "backend/app/db/session.py",
+      "backend/app/modules/auth/dependencies.py",
+      "backend/app/modules/auth/google_oauth.py",
+      "backend/app/modules/auth/oauth_state.py",
+      "backend/app/modules/auth/schemas.py",
+      "backend/app/modules/users/models.py"
+    ],
+    "backend/app/modules/auth/dependencies.py": [
+      "backend/app/core/logging.py",
+      "backend/app/core/security.py",
+      "backend/app/db/session.py",
+      "backend/app/modules/users/models.py"
+    ],
+    "backend/app/modules/auth/schemas.py": [],
+    "backend/app/modules/auth/ws.py": [
+      "backend/app/core/security.py",
+      "backend/app/db/session.py",
+      "backend/app/modules/auth/ws_tokens.py",
+      "backend/app/modules/users/models.py"
+    ],
+    "backend/app/modules/auth/ws_tokens.py": [],
+    "backend/app/modules/book/api.py": [
+      "backend/app/db/base.py",
+      "backend/app/db/session.py",
+      "backend/app/modules/auth/dependencies.py",
+      "backend/app/modules/book/schemas.py",
+      "backend/app/modules/book/service.py",
+      "backend/app/modules/users/models.py"
+    ],
+    "backend/app/modules/extensions/api.py": [
+      "backend/app/modules/extensions/api_auto.py",
+      "backend/app/modules/extensions/api_classroom.py",
+      "backend/app/modules/extensions/api_partners.py",
+      "backend/app/modules/extensions/api_plugins.py",
+      "backend/app/modules/extensions/api_sandbox.py",
+      "backend/app/modules/extensions/api_vision.py",
+      "backend/app/modules/extensions/api_visualize.py"
+    ],
+    "backend/app/modules/extensions/api_auto.py": [
+      "backend/app/modules/auth/dependencies.py",
+      "backend/app/modules/extensions/auto_router/service.py",
+      "backend/app/modules/users/models.py"
+    ],
+    "backend/app/modules/extensions/api_classroom.py": [
+      "backend/app/db/base.py",
+      "backend/app/db/session.py",
+      "backend/app/modules/auth/dependencies.py",
+      "backend/app/modules/extensions/classroom/service.py",
+      "backend/app/modules/users/models.py"
+    ],
+    "backend/app/modules/extensions/api_partners.py": [
+      "backend/app/db/session.py",
+      "backend/app/modules/auth/dependencies.py",
+      "backend/app/modules/extensions/partners/service.py",
+      "backend/app/modules/users/models.py"
+    ],
+    "backend/app/modules/extensions/api_plugins.py": [
+      "backend/app/modules/agent/runtime/orchestrator.py",
+      "backend/app/modules/auth/dependencies.py",
+      "backend/app/modules/extensions/plugins/registry.py",
+      "backend/app/modules/users/models.py"
+    ],
+    "backend/app/modules/extensions/api_sandbox.py": [
+      "backend/app/modules/auth/dependencies.py",
+      "backend/app/modules/extensions/sandbox/service.py",
+      "backend/app/modules/users/models.py"
+    ],
+    "backend/app/modules/extensions/api_vision.py": [
+      "backend/app/modules/auth/dependencies.py",
+      "backend/app/modules/extensions/vision/service.py",
+      "backend/app/modules/users/models.py"
+    ],
+    "backend/app/modules/extensions/api_visualize.py": [
+      "backend/app/db/session.py",
+      "backend/app/modules/auth/dependencies.py",
+      "backend/app/modules/extensions/visualize/service.py",
+      "backend/app/modules/users/models.py"
+    ],
+    "backend/app/modules/extensions/classroom/service.py": [
+      "backend/app/db/base.py",
+      "backend/app/modules/extensions/classroom/models.py",
+      "backend/app/modules/users/models.py"
+    ],
+    "backend/app/modules/extensions/plugins/registry.py": [],
+    "backend/app/modules/knowledge/api.py": [
+      "backend/app/db/session.py",
+      "backend/app/deps.py",
+      "backend/app/modules/auth/dependencies.py",
+      "backend/app/modules/knowledge/dependencies.py",
+      "backend/app/modules/knowledge/paths.py",
+      "backend/app/modules/knowledge/schemas.py",
+      "backend/app/modules/knowledge/service.py",
+      "backend/app/modules/users/models.py"
+    ]
+  }
+}
