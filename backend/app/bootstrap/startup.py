@@ -1,13 +1,15 @@
 from __future__ import annotations
 
+import asyncio
 import logging
 
 from backend.app.db.session import session_scope
 from backend.app.modules.knowledge.search_cache import get_knowledge_search_cache
 from backend.app.modules.knowledge.service import get_knowledge_service
 from backend.app.modules.learning.api import build_levels_payload
-from backend.app.modules.learning.engine import ensure_words_seeded
+from backend.app.modules.reading.vocabulary_loader import preload_reading_vocabulary_levels
 from backend.app.modules.learning.response_cache import set_cached_levels
+from backend.app.modules.learning.engine import ensure_words_seeded
 
 logger = logging.getLogger(__name__)
 
@@ -15,6 +17,7 @@ logger = logging.getLogger(__name__)
 async def run_startup_warmup() -> None:
     """Seed learning corpus and default knowledge base off the request path."""
     try:
+        await asyncio.to_thread(preload_reading_vocabulary_levels)
         kb_name = ""
         chunk_count = 0
         total_words = 0

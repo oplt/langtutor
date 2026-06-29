@@ -1,4 +1,5 @@
-import { memo, useEffect, useMemo, useState } from "react";
+import { memo, useEffect, useMemo, useRef, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -82,6 +83,7 @@ const MessageBubble = memo(function MessageBubble({ message }: { message: TutorC
 }, messageBubblePropsEqual);
 
 export function TutorChatPanel() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const {
     connection,
     cefrLevel,
@@ -101,13 +103,44 @@ export function TutorChatPanel() {
 
   const [draft, setDraft] = useState("");
   const [connectionAnnouncement, setConnectionAnnouncement] = useState("");
+  const sentPromptRef = useRef<string | null>(null);
   const conn = useMemo(() => connectionLabel(connection), [connection]);
   const awaitingReply = Boolean(pausedQuestion || pausedAskUser);
   const structuredPause = Boolean(pausedAskUser?.questions?.length);
+  const promptParam = searchParams.get("prompt");
 
   useEffect(() => {
     setConnectionAnnouncement(`Tutor connection ${conn.label.toLowerCase()}.`);
   }, [conn.label]);
+
+  useEffect(() => {
+    if (!promptParam) {
+      sentPromptRef.current = null;
+    }
+  }, [promptParam]);
+
+  useEffect(() => {
+    if (!promptParam || sentPromptRef.current === promptParam) return;
+    if (connection !== "open" || isBusy || awaitingReply) return;
+
+    sentPromptRef.current = promptParam;
+    setSearchParams(
+      (prev) => {
+        const next = new URLSearchParams(prev);
+        next.delete("prompt");
+        return next;
+      },
+      { replace: true },
+    );
+    void sendMessage(promptParam);
+  }, [
+    awaitingReply,
+    connection,
+    isBusy,
+    promptParam,
+    sendMessage,
+    setSearchParams,
+  ]);
 
   const submit = async () => {
     if (!draft.trim() || structuredPause) return;

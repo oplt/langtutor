@@ -83,10 +83,13 @@ async def test_llm_profile(profile_id: str):
 
 
 @router.get("/profiles/{profile_id}/models", response_model=LLMModelsResponse)
-async def get_llm_profile_models(profile_id: str):
+async def get_llm_profile_models(
+    profile_id: str,
+    api_base: str | None = Query(default=None),
+):
     try:
         profile = await AISettingsService().get_profile(profile_id)
-        models = await AISettingsService().list_profile_models(profile_id)
+        models = await AISettingsService().list_profile_models(profile_id, api_base=api_base)
     except Exception as exc:
         raise HTTPException(status_code=503, detail=llm_error_payload(exc)) from exc
     return LLMModelsResponse(provider=profile.provider, models=models)
@@ -107,9 +110,12 @@ async def put_llm_routing(payload: LLMRoutingUpdate):
 
 
 @router.get("/models", response_model=LLMModelsResponse)
-async def get_llm_models(provider: str = Query(...)):
+async def get_llm_models(
+    provider: str = Query(...),
+    api_base: str | None = Query(default=None),
+):
     try:
-        models = await AISettingsService().list_models(provider)
+        models = await AISettingsService().list_models(provider, api_base=api_base)
     except Exception as exc:
         raise HTTPException(status_code=503, detail=llm_error_payload(exc)) from exc
     return LLMModelsResponse(provider=provider, models=models)

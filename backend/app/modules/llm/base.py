@@ -54,6 +54,7 @@ class LLMChatRequest(BaseModel):
     max_tokens: int | None = None
     stream: bool = False
     tools: list[dict[str, Any]] | None = None
+    response_format: Literal["text", "json"] | None = None
 
 
 class LLMChatResponse(BaseModel):

@@ -12,7 +12,7 @@ from sqlalchemy import delete, func, select
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.core.config import settings
+from backend.app.core.config import BASE_DIR, settings
 from backend.app.modules.knowledge.bm25 import term_frequencies
 from backend.app.modules.knowledge.models import KnowledgeBase, KnowledgeChunk
 from backend.app.modules.knowledge.search_cache import (
@@ -24,9 +24,7 @@ DEFAULT_KB_NAME = "dutch-core"
 _INGEST_BATCH_SIZE = 500
 _MAX_CHUNK_TITLE_LEN = 200
 _MAX_WORD_TITLE_LEN = 80
-DEFAULT_SOURCES = [
-    Path(__file__).resolve().parents[3] / "files" / "dutchwordsordered.json",
-]
+DEFAULT_SOURCES = sorted((BASE_DIR.parent / "files" / "levels").glob("*.json"))
 
 
 def _normalize_chunk_title(title: str) -> str | None:
@@ -64,10 +62,11 @@ def _word_entry_to_text(entry: dict[str, Any]) -> str:
 def _load_file_chunks(path: Path) -> list[tuple[str, str, dict[str, Any]]]:
     """Return (title, content, metadata) chunks."""
     suffix = path.suffix.lower()
-    if suffix == ".json" and path.name == "dutchwordsordered.json":
+    if suffix == ".json":
         data = json.loads(path.read_text(encoding="utf-8"))
+        entries = data if isinstance(data, list) else data.get("words", [])
         chunks = []
-        for entry in data.get("words", []):
+        for entry in entries:
             title = _normalize_chunk_title(str(entry.get("word") or ""))
             if title is None:
                 continue

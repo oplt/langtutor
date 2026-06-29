@@ -16,8 +16,8 @@ import { useAuth } from "../../../context/AuthContext";
 import { updateProfile } from "../../../modules/auth/api/authApi";
 
 export default function ProfilePage() {
-  const { user, refreshUser } = useAuth();
-  const [loadingProfile, setLoadingProfile] = useState(false);
+  const { user, status, refreshUser } = useAuth();
+  const loadingProfile = status === "loading" && !user;
   const displayName = user?.full_name?.trim() || "Language learner";
   const displayEmail = user?.email || "user@email.com";
   const initials = displayName.charAt(0).toUpperCase();
@@ -33,24 +33,6 @@ export default function ProfilePage() {
       full_name: user?.full_name ?? "",
     });
   }, [user]);
-
-  useEffect(() => {
-    if (user) return;
-    let active = true;
-    setLoadingProfile(true);
-    refreshUser()
-      .catch(() => {
-        if (!active) return;
-        setError("Could not load profile details.");
-      })
-      .finally(() => {
-        if (!active) return;
-        setLoadingProfile(false);
-      });
-    return () => {
-      active = false;
-    };
-  }, [user, refreshUser]);
 
   const saveProfile = async () => {
     const trimmed = form.full_name.trim();

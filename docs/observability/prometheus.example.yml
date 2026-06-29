@@ -1,0 +1,14 @@
+# Example Prometheus scrape config for LanguageApp.
+# Default scrape interval is 15s to avoid flooding backend access logs.
+# /metrics and /health are excluded from HTTP access logs in the app.
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: languageapp-backend
+    metrics_path: /metrics
+    static_configs:
+      - targets:
+          - localhost:8000

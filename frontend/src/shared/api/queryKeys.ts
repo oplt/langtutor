@@ -1,6 +1,9 @@
 import type { CefrLevel } from "../../modules/learning/api/learningPathApi";
 
 export const queryKeys = {
+  auth: {
+    me: ["auth", "me"] as const,
+  },
   learning: {
     levels: ["learning", "levels"] as const,
     progressSummary: ["learning", "progress", "summary"] as const,
@@ -26,5 +29,12 @@ export const queryKeys = {
   },
   settings: {
     app: ["settings", "app"] as const,
+  },
+  rag: {
+    status: ["rag", "status"] as const,
+    documents: ["rag", "documents"] as const,
+  },
+  reading: {
+    saved: ["reading", "saved"] as const,
   },
 } as const;

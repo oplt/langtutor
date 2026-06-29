@@ -33,6 +33,22 @@ cd frontend && npm ci && npm run dev
 
 Or from the repo root: `make start`
 
+### DeepL translation (reading)
+
+Add to `.env` when you want English translations for generated Dutch reading texts:
+
+```env
+DEEPL_ENABLED=true
+DEEPL_AUTH_KEY=your_deepl_api_key_here
+DEEPL_API_BASE_URL=https://api-free.deepl.com
+DEEPL_SOURCE_LANG=NL
+DEEPL_TARGET_LANG=EN-US
+DEEPL_TIMEOUT_SECONDS=10
+DEEPL_MODEL_TYPE=latency_optimized
+```
+
+Use `https://api.deepl.com` for Pro accounts. If DeepL is disabled or unavailable, reading generation still returns Dutch text with `translation.status` set to `disabled` or `unavailable`.
+
 Docker (Postgres + Redis + backend):
 
 ```bash
@@ -117,4 +133,4 @@ SLOW_EXTERNAL_CALL_MS=3000
 - User document RAG: `backend/app/modules/rag/README.md`
 - Visual design tokens: `DESIGN.md`
 
-Interactive architecture graph (optional): run `npx gitnexus analyze` in the repo root.
+

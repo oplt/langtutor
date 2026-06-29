@@ -147,15 +147,26 @@ export async function testLlmProfile(profileId: string): Promise<{
 
 export async function fetchLlmProfileModels(
   profileId: string,
+  apiBase?: string,
 ): Promise<{ provider: string; models: { id: string; name: string }[] }> {
-  return httpRequest(`/api/ai/llm/profiles/${encodeURIComponent(profileId)}/models`);
+  const params = new URLSearchParams();
+  if (apiBase?.trim()) params.set("api_base", apiBase.trim());
+  const query = params.toString();
+  return httpRequest(
+    `/api/ai/llm/profiles/${encodeURIComponent(profileId)}/models${query ? `?${query}` : ""}`,
+  );
 }
 
-export async function fetchLlmModels(provider: LlmProviderId): Promise<{
+export async function fetchLlmModels(
+  provider: LlmProviderId,
+  apiBase?: string,
+): Promise<{
   provider: string;
   models: { id: string; name: string }[];
 }> {
-  return httpRequest(`/api/ai/llm/models?provider=${encodeURIComponent(provider)}`);
+  const params = new URLSearchParams({ provider });
+  if (apiBase?.trim()) params.set("api_base", apiBase.trim());
+  return httpRequest(`/api/ai/llm/models?${params.toString()}`);
 }
 
 export async function updateLlmRouting(payload: {

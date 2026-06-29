@@ -16,7 +16,9 @@ TUTOR_TIMEOUT_TASKS = frozenset(
 
 
 def apply_task_timeout(task: str, configured_seconds: float) -> float:
-    """Ensure agent/tutor tasks never fall below ``LLM_TUTOR_TIMEOUT_SECONDS``."""
+    """Apply task-specific timeout ceilings and floors."""
+    if task in {"reading_generation", "reading_translation"}:
+        return min(float(configured_seconds), float(settings.LLM_TUTOR_TIMEOUT_SECONDS))
     if task in TUTOR_TIMEOUT_TASKS:
         return max(float(configured_seconds), float(settings.LLM_TUTOR_TIMEOUT_SECONDS))
     return float(configured_seconds)

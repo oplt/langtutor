@@ -24,11 +24,12 @@ TASK_TO_PACK: dict[str, str] = {
     "correction": "correction",
     "story_generation": "story",
     "quiz_generation": "quiz",
+    "reading_generation": "reading",
     "grammar_explanation": "conversation",
     "placement": "conversation",
 }
 
-AVAILABLE_PACKS = ("conversation", "correction", "story", "quiz")
+AVAILABLE_PACKS = ("conversation", "correction", "story", "quiz", "reading")
 
 
 def normalize_language(language: str | None) -> str:

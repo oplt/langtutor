@@ -205,8 +205,10 @@ class AISettingsService:
                     return await self.get_profile(profile.id, effective=True)
             raise
 
-    async def list_profile_models(self, profile_id: str):
+    async def list_profile_models(self, profile_id: str, *, api_base: str | None = None):
         profile = await self.get_profile(profile_id, effective=True)
+        if api_base and api_base.strip():
+            profile = profile.model_copy(update={"api_base": api_base.strip()})
         client = create_llm_client(config_from_profile(profile))
         return await client.list_models()
 
@@ -215,9 +217,14 @@ class AISettingsService:
         client = create_llm_client(config_from_profile(profile))
         return await client.health_check()
 
-    async def list_models(self, provider: str):
+    async def list_models(self, provider: str, *, api_base: str | None = None):
         settings = await self.get_settings(effective=True)
-        client = create_llm_client(self._client_config(provider, settings.providers[provider]))
+        provider_settings = settings.providers.get(provider)
+        if provider_settings is None:
+            raise ValueError(f"Unknown LLM provider: {provider}")
+        client = create_llm_client(
+            self._client_config(provider, provider_settings, api_base=api_base)
+        )
         return await client.list_models()
 
     async def test_connection(self, request: LLMConnectionTestRequest):
@@ -266,14 +273,20 @@ class AISettingsService:
     def _validate_settings(self, data: dict[str, Any]) -> None:
         validate_ai_settings(data)
 
-    def _client_config(self, provider: str, settings: LLMProviderSettings) -> LLMProviderConfig:
+    def _client_config(
+        self,
+        provider: str,
+        settings: LLMProviderSettings,
+        *,
+        api_base: str | None = None,
+    ) -> LLMProviderConfig:
         if provider not in PROVIDERS:
             raise ValueError(f"Unknown LLM provider: {provider}")
-        api_base = settings.api_base or PROVIDERS[provider].default_api_base
+        resolved_base = (api_base or "").strip() or settings.api_base or PROVIDERS[provider].default_api_base
         api_key = "" if settings.api_key == MASK else str(settings.api_key or "")
         return LLMProviderConfig(
             provider=provider,  # type: ignore[arg-type]
-            api_base=api_base,
+            api_base=resolved_base,
             api_key=api_key,
             model=settings.model,
             timeout_seconds=settings.timeout_seconds,
@@ -293,7 +306,13 @@ class AISettingsService:
 def llm_error_payload(exc: Exception) -> dict[str, Any]:
     if isinstance(exc, LLMError):
         return {"code": exc.code, "message": str(exc), "detail": exc.detail}
-    return {"code": "LLM_REQUEST_FAILED", "message": str(exc), "detail": ""}
+    message = str(exc)
+    if "connection" in message.lower() or "connect" in message.lower():
+        message = (
+            f"Cannot reach the LLM server ({message}). "
+            "For Ollama, ensure it is running and the API base URL is correct."
+        )
+    return {"code": "LLM_REQUEST_FAILED", "message": message, "detail": ""}
 
 
 __all__ = [

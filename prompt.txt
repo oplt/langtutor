@@ -1,164 +1,305 @@
-I reviewed the uploaded `make local-dev` log. The app **starts successfully**, but the memory synthesis background job fails after login. The root cause is here: `MemoryService.synthesize_l3()` uses `asyncio.gather(...)` while sharing the **same SQLAlchemy `AsyncSession`** across concurrent DB operations. SQLAlchemy async sessions are not concurrency-safe, so this triggers:
+# Reading Adaptation: Linguistic and Technical Improvement Plan
+
+You are improving the Dutch reading-adaptation feature in LanguageApp. Implement this as a production feature, not as prompt-only tuning. Preserve factual meaning, personalize vocabulary boundaries, make level decisions consistent across the application, and evaluate output deterministically.
+
+## Current flow
+
+The current request path is:
+
+1. `ReadingPanel.tsx` asks the learner to choose numeric frequency level 1–6, topic, length, source mode, and strictness.
+2. `POST /api/reading/generate` authenticates the user, but the route/job/service does not use the user profile or word-progress data.
+3. `ReadingService.generate()` loads a cumulative frequency vocabulary, fetches an RSS summary, calls the LLM, analyzes surface tokens, retries failing sentences, translates the result, and caches the response.
+4. The frontend highlights words from `coverage.unknownWordList`.
+
+This pipeline is structurally reasonable, but its linguistic model is incomplete and conflicts with the rest of the app.
+
+## Main findings
+
+### P0 — One level system must own the application
+
+The app currently has incompatible definitions:
+
+- Reading level 1–6 means top 500, 1000, 2000, 3000, 4000, and 5000 frequency words.
+- `learning/engine.py` maps A1–C2 to different ranges: 1–200, 201–500, 501–1000, 1001–2000, 2001–3000, and 3001–4000.
+- Reading uses cumulative bands; some knowledge filters use exclusive rank bands.
+- The user model stores `cefr_goal`, which is a goal, not demonstrated current ability.
+
+Create one canonical `LanguageLevelPolicy` shared by reading, learning, stories, knowledge filters, and frontend labels. Separate these concepts explicitly:
+
+- `current_cefr`: estimated current proficiency.
+- `target_cefr`: learner goal.
+- `frequency_rank_ceiling`: lexical support boundary.
+- `known_lemmas`: personalized words demonstrated as known.
+- `learning_lemmas`: small set intentionally introduced in this text.
+
+Do not claim that frequency rank equals CEFR. Frequency and CEFR correlate, but CEFR also includes grammar, discourse, functions, and task complexity. UI may show both, for example `A2 · core vocabulary up to rank 1000`.
+
+Technical work:
+
+- Add a single domain module such as `backend/app/modules/learning/level_policy.py`.
+- Define immutable mappings, cumulative rank ceilings, sentence-length targets, grammar constraints, discourse constraints, and allowed new-word budgets.
+- Replace duplicated constants in `reading/schemas.py`, `learning/engine.py`, `knowledge/cefr_filters.py`, and `readingConstants.ts` with API-provided level metadata.
+- Add migration-backed user fields or a learner-profile table for current level and assessment provenance. Keep `cefr_goal` separate.
+- Make all rank checks cumulative when deciding what a learner may already know. Exclusive bands are useful only for assigning a word's instructional level.
+- Add contract tests asserting identical mappings across endpoints.
+
+### P0 — Personalize vocabulary from actual mastery
+
+Generation currently discards the authenticated user. Numeric level alone cannot represent vocabulary knowledge. Two A2 learners know different words.
+
+Build an `AllowedVocabularyService` that returns:
 
 ```text
-sqlalchemy.exc.InvalidRequestError:
-This session is provisioning a new connection; concurrent operations are not permitted
+AllowedVocabularySnapshot
+  policy_version
+  user_id
+  current_cefr
+  rank_ceiling
+  core_lemmas
+  mastered_lemmas
+  temporarily_allowed_topic_terms
+  learning_lemmas
+  forbidden_or_unmastered_lemmas
 ```
 
-Then the session cleanup also fails because the session is already in a bad state:
+Technical work:
+
+- Pass `user.id` from `reading/api.py` through `ReadingGenerationJobRunner` into `ReadingService.generate()`.
+- Query `UserWordProgress`; include a lemma only after a documented mastery threshold using both recognition and recall, not either alone.
+- Always include lower-level core vocabulary cumulatively.
+- Permit mastered higher-rank words because they are known to this learner.
+- Select 3–8 unmastered words as deliberate learning targets based on strictness and level. Do not treat every unknown topic word as pedagogically useful.
+- Store the vocabulary snapshot/version with each generated reading so old results remain explainable.
+- Invalidate generation cache when mastery state or level policy changes. Cache keys must include user vocabulary fingerprint, not only source and requested level.
+
+### P0 — Replace “word-list prompting” with constrained generate–validate–repair
+
+Sending thousands of allowed words to an LLM is costly and does not guarantee compliance. An LLM cannot be the authority on whether its own output meets a lexical boundary.
+
+Use this pipeline:
+
+1. Retrieve source facts.
+2. Extract a compact fact representation: entities, events, quantities, dates, causal relations, and attribution.
+3. Plan the learner text: facts to include, target words, essential topic terms, sentence count, and grammar profile.
+4. Generate from the plan using a compact list of preferred words and forbidden words relevant to this source.
+5. Run deterministic linguistic analysis.
+6. Repair only failed spans/sentences with allowed alternatives.
+7. Revalidate lexical coverage, factual fidelity, grammar limits, length, and quiz answerability.
+8. Return best candidate only when hard gates pass; otherwise return a transparent degraded result.
+
+The prompt should include:
+
+- Exact level policy and new-word budget.
+- Source fact JSON, not uncontrolled page text alone.
+- Unknown source lemmas that require simplification.
+- Candidate simpler lemmas retrieved from the learner vocabulary.
+- Required JSON schema.
+- Explicit instruction that proper nouns and essential terms are exceptions, not ordinary allowed vocabulary.
+
+Use structured output/schema support from the configured provider when available. Reject malformed or incomplete output rather than silently trusting fields.
+
+### P0 — Use real Dutch morphological analysis
+
+Current suffix stripping is not linguistically safe. Dutch morphology includes irregular plurals, diminutives, adjective inflection, strong verbs, separable verbs, compounds, contractions, and multiword expressions. Examples include `stad/steden`, `schip/schepen`, `gelopen/lopen`, `belt ... op/opbellen`, and productive compounds.
+
+Introduce a Dutch analysis adapter with this interface:
 
 ```text
-sqlalchemy.exc.IllegalStateChangeError:
-Method 'close()' can't be called here; method '_connection_for_bind()' is already in progress
+analyze(text) -> tokens[]
+token = {
+  surface, normalized, lemma, pos, morphology,
+  sentence_index, start, end,
+  entity_type, compound_parts, separable_verb_lemma
+}
 ```
 
-Source log:
+Prefer a maintained Dutch NLP model such as spaCy `nl_core_news_*` or Stanza after benchmarking. Wrap it behind an interface so the model can be replaced. Keep deterministic fallback behavior for deployments without the model.
 
-## What is working
+Technical rules:
 
-Your local stack looks mostly healthy:
+- Match vocabulary by lemma plus POS where possible.
+- Keep surface offsets for exact frontend highlighting.
+- Recognize inflected forms through morphological features, not suffix guesses.
+- Handle separable verbs at sentence level.
+- Treat compounds with a policy: known transparent parts may reduce difficulty, but the compound is not automatically known.
+- Store multiword expressions as lexical entries, not independent tokens only.
+- Remove the global `STOPWORDS` exemption. Function words must come from the canonical vocabulary; stopword status is not evidence that the learner knows a word.
+- Add gold tests for Dutch inflection, compounds, apostrophes, clitics, named entities, abbreviations, and sentence-initial capitalization.
+
+### P1 — Measure lexical difficulty correctly
+
+Current coverage is token coverage. Repetition can inflate it: a difficult word used once and an easy word repeated twenty times can produce a reassuring percentage. Report multiple measures:
+
+- Token coverage: readable running-text proportion.
+- Type coverage: unique known lemma proportion.
+- Unknown lemma count.
+- Unknown token count.
+- New-word density per 100 tokens.
+- Sentence-level minimum coverage.
+- Lexical frequency profile by band.
+- Mean and maximum sentence length.
+
+Use hard constraints by mode:
+
+- Strict: no incidental unknown content lemmas; only named entities plus explicit learning/topic terms.
+- Balanced: controlled new-word budget, normally 3–5 lemmas per 300 words.
+- Natural: larger controlled budget, still validated and glossed.
+
+Do not truncate the unknown list before repair. Keep the complete internal list; truncate only display/log output.
+
+### P1 — Distinguish essential topic terms from names
+
+The current protected set includes the entire source title and publisher. This can whitelist ordinary difficult words merely because they occur in a title. Proper-noun detection based on capitalization also misclassifies words.
+
+Technical work:
+
+- Use NER plus source metadata to protect only actual entities.
+- Protect publisher as an entity, not every token in its title.
+- Require the fact-planning step to nominate essential topic terms with reasons.
+- Cap topic terms per text and define each in simple Dutch plus optional native-language translation.
+- Count retained topic terms separately; do not include them as “known” in coverage.
+
+### P1 — Improve source diversity and provenance
+
+Concurrent source fetching and random selection among successful feeds is a good baseline. Improve it with a source-selection service:
+
+- Fetch all approved feeds concurrently within a total budget.
+- Build candidate articles, then sample with weights for source recency, topic match, content length, source reliability, and recent-use penalty.
+- Persist recent publisher/article IDs per user to avoid repeated NOS or repeated stories.
+- Track fetch success rate by source. Do not permanently favor the most reliable endpoint.
+- Return `source_selection_reason`, immutable source URL, publisher, publication time, fetch time, and content hash.
+- Deduplicate syndicated or near-identical articles.
+- Respect licensing and use RSS facts/snippets unless full-text use is explicitly approved.
+- If all online sources fail, label fallback clearly as generated; never present it as sourced news.
+
+RSS descriptions are often too short for a requested 500–1000 word reading. Do not ask the model to expand a two-sentence snippet into a long article; that invites hallucination. Either lower output length, combine multiple corroborating approved snippets, or fetch licensed fuller content.
+
+### P1 — Preserve factual meaning with explicit checks
+
+Lexical simplicity must not alter participants, negation, modality, time, quantity, or causal relations.
+
+Technical work:
+
+- Extract atomic source claims before rewriting.
+- Require each generated sentence to reference one or more claim IDs.
+- Run a factual-consistency check from adapted sentence to source claims.
+- Add deterministic checks for names, dates, numbers, negation, and quoted attribution.
+- For high-risk domains such as health, do not elaborate beyond source facts.
+- Quiz questions must be answerable only from the adapted text, and the declared answer must exactly match an option.
+
+### P1 — Frontend highlighting must use token spans
+
+Do not reconstruct highlights with regex over a list of normalized unknown words. It breaks with Unicode, punctuation, apostrophes, compounds, repeated forms, and regex metacharacters.
+
+Return annotations from the backend:
+
+```json
+{
+  "surface": "steden",
+  "lemma": "stad",
+  "start": 42,
+  "end": 48,
+  "status": "known|learning|topic|unknown|entity",
+  "reason": "...",
+  "levelOrRank": "..."
+}
+```
+
+Render text from ordered spans in React. Use different accessible styles for learning words, unexplained unknown words, and topic terms. “Outside my level” should mean outside the personalized snapshot, not outside a generic list.
+
+### P2 — UX and learner feedback
+
+- Default reading level from current assessed level, while allowing temporary override.
+- Explain that CEFR and vocabulary size are related but different.
+- Show `known`, `learning`, `topic`, and `unexplained` categories.
+- Let learners mark a highlighted word as “I know this” or “I don't know this”; update mastery carefully rather than immediately declaring mastery from one click.
+- After quiz completion, update word evidence and reading difficulty feedback.
+- Use learner feedback to calibrate future text difficulty.
+- Do not show quiz answers before the learner attempts the quiz.
+
+## Proposed module boundaries
 
 ```text
-Redis ready on port 6380
-Backend started
-Database health check passed
-Frontend Vite ready on localhost:5173
-/health returns 200
-/metrics returns 200
-/auth/login returns 200
+backend/app/modules/reading/
+  api.py                         # HTTP only
+  schemas.py                     # request/response contracts
+  service.py                     # orchestration
+  source_selection.py            # candidate retrieval/ranking/randomization
+  fact_extraction.py             # source -> atomic claims
+  adaptation.py                  # plan/generate/repair workflow
+  evaluation.py                  # lexical, grammar, fidelity gates
+  annotations.py                 # backend token spans
+  cache.py                       # user-vocabulary-aware cache
+
+backend/app/modules/linguistics/
+  dutch_analyzer.py              # NLP adapter
+  vocabulary.py                  # lemma/POS/MWE data
+  level_policy.py                # canonical CEFR/frequency policy
+
+backend/app/modules/learning/
+  allowed_vocabulary_service.py  # policy + mastery personalization
 ```
 
-So this is **not** a startup, Redis, frontend, migration, or general database connectivity problem.
+Keep API routes thin. Keep provider-specific LLM code outside linguistic evaluation. The deterministic evaluator, not the prompt, decides whether output passes.
 
-## Exact failing area
+## Data repair and vocabulary governance
 
-The failure points to:
+The vocabulary data was extracted from PDFs and has shown duplicate/corrupted ranks. Treat it as a versioned dataset requiring validation.
 
-```text
-backend/app/modules/memory/service.py line 223
-traces, l2_docs, l3_docs = await asyncio.gather(...)
-```
+- Create an offline import command that emits canonical records with `lemma`, `surface_forms`, `pos`, `rank`, `frequency`, `source`, and `dataset_version`.
+- Reject duplicate ranks unless the source schema explicitly allows ties.
+- Reject OCR artifacts, headers, sentences, and implausibly long entries.
+- Produce an audit report: missing ranks, duplicates, invalid lemmas, POS coverage, and band sizes.
+- Never silently take the first duplicate at runtime as the final long-term solution.
+- Store canonical vocabulary in DB or a validated generated artifact; runtime loading should be simple and deterministic.
+- Add a human-review queue for ambiguous entries.
 
-and:
+## Evaluation suite required before rollout
 
-```text
-backend/app/modules/memory/repository.py line 140
-return list((await db.execute(q)).scalars().all())
-```
+Create a versioned evaluation corpus across levels, topics, and source publishers. Include at least:
 
-That means multiple repository methods are calling `db.execute(...)` at the same time on the same `AsyncSession`.
+- 20 source texts per level.
+- Short and long sources.
+- Entity-heavy news.
+- Separable verbs, irregular verbs/plurals, compounds, MWEs, apostrophes, and Belgian/Dutch variants.
+- Learners with different mastered-word sets at the same CEFR level.
 
-## Best fix
+Measure:
 
-Do **not** run DB queries concurrently with the same session.
+- Personalized lexical token/type coverage.
+- Incidental unknown lemmas.
+- Target-word retention.
+- Factual claim precision/recall.
+- Meaning-changing errors involving negation, time, quantity, agent, or modality.
+- Grammar-profile compliance.
+- Sentence-length distribution.
+- Source diversity and repeat rate.
+- LLM latency, retries, failure rate, and cost.
 
-Change this pattern:
+Add regression tests where the expected annotations and allowed/unknown classifications are hand-reviewed by a Dutch linguist.
 
-```python
-traces, l2_docs, l3_docs = await asyncio.gather(
-    self.repository.list_traces(db, user_id=user_id),
-    self.repository.list_documents(db, user_id=user_id, level="l2"),
-    self.repository.list_documents(db, user_id=user_id, level="l3"),
-)
-```
+## Delivery order
 
-to this:
+1. Canonicalize level policy and vocabulary data.
+2. Pass user identity into generation and build personalized allowed snapshots.
+3. Add Dutch lemma/POS/span analyzer.
+4. Replace regex highlighting with backend annotations.
+5. Implement fact-plan-generate-validate-repair workflow.
+6. Add source candidate ranking, diversity history, and provenance.
+7. Add evaluation corpus, metrics, dashboards, and staged rollout.
 
-```python
-traces = await self.repository.list_traces(db, user_id=user_id)
-l2_docs = await self.repository.list_documents(db, user_id=user_id, level="l2")
-l3_docs = await self.repository.list_documents(db, user_id=user_id, level="l3")
-```
+## Acceptance criteria
 
-This is the safest fix.
-
-## Alternative fix, only if you really need concurrency
-
-Use **separate sessions per concurrent task**, not one shared session:
-
-```python
-async def fetch_traces(user_id):
-    async with session_scope() as db:
-        return await self.repository.list_traces(db, user_id=user_id)
-
-async def fetch_l2_docs(user_id):
-    async with session_scope() as db:
-        return await self.repository.list_documents(db, user_id=user_id, level="l2")
-
-async def fetch_l3_docs(user_id):
-    async with session_scope() as db:
-        return await self.repository.list_documents(db, user_id=user_id, level="l3")
-
-traces, l2_docs, l3_docs = await asyncio.gather(
-    fetch_traces(user_id),
-    fetch_l2_docs(user_id),
-    fetch_l3_docs(user_id),
-)
-```
-
-But for a memory synthesis job, sequential DB reads are probably simpler and more reliable.
-
-## Also fix the bad error log
-
-This line is not useful:
-
-```text
-"memory_synthesize_failed ...", "exception":"NoneType: None"
-```
-
-It probably means the logger is calling `logger.error(..., exc_info=True)` outside the active exception block, or using `logger.error` instead of `logger.exception`.
-
-Use:
-
-```python
-except Exception:
-    logger.exception(
-        "memory_synthesize_failed",
-        extra={"user_id": str(user_id)}
-    )
-```
-
-inside the `except` block.
-
-## Cursor prompt to fix it
-
-```text
-You are a senior backend engineer specialized in FastAPI, SQLAlchemy async, asyncio, and production-grade background jobs.
-
-Analyze the memory synthesis failure shown in the local-dev logs.
-
-Root problem:
-backend/app/modules/memory/service.py uses asyncio.gather around repository calls that share the same SQLAlchemy AsyncSession. This causes:
-
-sqlalchemy.exc.InvalidRequestError:
-This session is provisioning a new connection; concurrent operations are not permitted
-
-and then:
-
-sqlalchemy.exc.IllegalStateChangeError:
-Method 'close()' can't be called here; method '_connection_for_bind()' is already in progress
-
-Tasks:
-
-1. Inspect backend/app/modules/memory/service.py, especially synthesize_l3 around the asyncio.gather call.
-2. Find every place where one AsyncSession instance is shared across concurrent asyncio tasks.
-3. Replace unsafe concurrent DB calls with sequential awaits when they use the same session.
-4. If concurrency is truly needed, refactor each concurrent DB operation to create and own its own independent AsyncSession using session_scope().
-5. Ensure session_scope is not closed while a DB operation is still in progress.
-6. Improve memory background task error logging:
-   - use logger.exception inside active except blocks
-   - include user_id, request_id, trace_id, task name, attempt number, and duration_ms
-   - avoid logs like "exception: NoneType: None"
-7. Add regression tests proving synthesize_l3 no longer raises SQLAlchemy InvalidRequestError under login-triggered background synthesis.
-8. Run the local test suite and make local-dev.
-9. Write a short report in memory_synthesis_fix.txt explaining:
-   - root cause
-   - changed files
-   - why AsyncSession cannot be shared concurrently
-   - test results
-   - any remaining risks
-
-Do not introduce broad architectural rewrites. Make the smallest safe production-quality fix.
-```
-
-Main conclusion: your logging upgrade worked well because it exposed the real issue. Now the actual bug is in the memory module’s async DB session usage.
+- Every higher level includes all lower-level core vocabulary.
+- One canonical policy drives backend and frontend labels/ranges.
+- Generation uses authenticated learner mastery and current level.
+- A word's classification is identical in evaluator, API response, export, and highlight UI.
+- Inflected known lemmas are not falsely highlighted.
+- Unknown classification is lemma/POS-aware and span-backed.
+- Strict mode emits no incidental unknown content lemmas.
+- Balanced/natural modes stay within explicit new-word budgets.
+- Factual entities, dates, quantities, negation, and modality are preserved.
+- Repeated generations demonstrably use diverse successful approved sources.
+- Cache cannot leak or reuse another learner's vocabulary adaptation.
+- Output failing hard linguistic or factual gates is never labeled successful.
+- All behavior has unit, integration, and end-to-end tests plus offline linguistic evaluation.

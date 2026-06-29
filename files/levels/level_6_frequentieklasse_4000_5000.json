@@ -1,0 +1,4987 @@
+[
+  {
+    "word": "aangeboren",
+    "grammatical_structure": "adjective",
+    "translation": "innate; congenital"
+  },
+  {
+    "word": "aanhalen",
+    "grammatical_structure": "verb",
+    "translation": "to quote; to cite; to tighten; to pull in"
+  },
+  {
+    "word": "aankoop",
+    "grammatical_structure": "noun",
+    "translation": "purchase; acquisition"
+  },
+  {
+    "word": "aanmoedigen",
+    "grammatical_structure": "verb",
+    "translation": "to encourage; to cheer on"
+  },
+  {
+    "word": "aanraden",
+    "grammatical_structure": "verb",
+    "translation": "to recommend; to advise"
+  },
+  {
+    "word": "aansluiting",
+    "grammatical_structure": "noun",
+    "translation": "connection; aansluiting; affiliation"
+  },
+  {
+    "word": "aanvang",
+    "grammatical_structure": "noun",
+    "translation": "beginning; start"
+  },
+  {
+    "word": "aanwenden",
+    "grammatical_structure": "verb",
+    "translation": "to use; to apply; to employ"
+  },
+  {
+    "word": "aanzet",
+    "grammatical_structure": "noun",
+    "translation": "impetus; initial step; start"
+  },
+  {
+    "word": "aanzetten",
+    "grammatical_structure": "verb",
+    "translation": "to turn on; to incite; to prompt"
+  },
+  {
+    "word": "aarzeling",
+    "grammatical_structure": "noun",
+    "translation": "hesitation"
+  },
+  {
+    "word": "abrupt",
+    "grammatical_structure": "adjective; adverb",
+    "translation": "abrupt; suddenly"
+  },
+  {
+    "word": "absurd",
+    "grammatical_structure": "adjective",
+    "translation": "absurd"
+  },
+  {
+    "word": "academie",
+    "grammatical_structure": "noun",
+    "translation": "academy"
+  },
+  {
+    "word": "achteloos",
+    "grammatical_structure": "adjective; adverb",
+    "translation": "careless; casually"
+  },
+  {
+    "word": "achteraan",
+    "grammatical_structure": "adverb",
+    "translation": "at the back; in the rear"
+  },
+  {
+    "word": "achterin",
+    "grammatical_structure": "adverb",
+    "translation": "in the back; at the rear"
+  },
+  {
+    "word": "achtervolgen",
+    "grammatical_structure": "verb",
+    "translation": "to chase; to pursue"
+  },
+  {
+    "word": "achterwege",
+    "grammatical_structure": "adverb",
+    "translation": "omitted; left out"
+  },
+  {
+    "word": "acuut",
+    "grammatical_structure": "adjective",
+    "translation": "acute; urgent"
+  },
+  {
+    "word": "adel",
+    "grammatical_structure": "noun",
+    "translation": "nobility; aristocracy"
+  },
+  {
+    "word": "adequaat",
+    "grammatical_structure": "adjective",
+    "translation": "adequate; appropriate"
+  },
+  {
+    "word": "ader",
+    "grammatical_structure": "noun",
+    "translation": "vein"
+  },
+  {
+    "word": "adolescent",
+    "grammatical_structure": "noun; adjective",
+    "translation": "adolescent"
+  },
+  {
+    "word": "adviseur",
+    "grammatical_structure": "noun",
+    "translation": "advisor; consultant"
+  },
+  {
+    "word": "afbeelden",
+    "grammatical_structure": "verb",
+    "translation": "to depict; to portray"
+  },
+  {
+    "word": "afbreken",
+    "grammatical_structure": "verb",
+    "translation": "to break down; to demolish; to interrupt"
+  },
+  {
+    "word": "afdoen",
+    "grammatical_structure": "verb",
+    "translation": "to take off; to dismiss; to settle"
+  },
+  {
+    "word": "affaire",
+    "grammatical_structure": "noun",
+    "translation": "affair; scandal"
+  },
+  {
+    "word": "afgaan",
+    "grammatical_structure": "verb",
+    "translation": "to go off; to fail; to be guided by"
+  },
+  {
+    "word": "afgevaardigde",
+    "grammatical_structure": "noun",
+    "translation": "delegate; representative"
+  },
+  {
+    "word": "afgrond",
+    "grammatical_structure": "noun",
+    "translation": "abyss; precipice"
+  },
+  {
+    "word": "afhangen",
+    "grammatical_structure": "verb",
+    "translation": "to depend; to hang down"
+  },
+  {
+    "word": "afkomst",
+    "grammatical_structure": "noun",
+    "translation": "origin; descent"
+  },
+  {
+    "word": "afmeting",
+    "grammatical_structure": "noun",
+    "translation": "dimension; measurement"
+  },
+  {
+    "word": "afschaffen",
+    "grammatical_structure": "verb",
+    "translation": "to abolish"
+  },
+  {
+    "word": "afval",
+    "grammatical_structure": "noun",
+    "translation": "waste; garbage; refuse"
+  },
+  {
+    "word": "akelig",
+    "grammatical_structure": "adjective",
+    "translation": "awful; nasty; unpleasant"
+  },
+  {
+    "word": "aldaar",
+    "grammatical_structure": "adverb",
+    "translation": "there; at that place"
+  },
+  {
+    "word": "algeheel",
+    "grammatical_structure": "adjective",
+    "translation": "complete; overall"
+  },
+  {
+    "word": "alhoewel",
+    "grammatical_structure": "conjunction",
+    "translation": "although; even though"
+  },
+  {
+    "word": "alledaags",
+    "grammatical_structure": "adjective",
+    "translation": "everyday; ordinary"
+  },
+  {
+    "word": "alsook",
+    "grammatical_structure": "conjunction",
+    "translation": "as well as; and also"
+  },
+  {
+    "word": "alstublieft",
+    "grammatical_structure": "interjection",
+    "translation": "please; here you are"
+  },
+  {
+    "word": "altaar",
+    "grammatical_structure": "noun",
+    "translation": "altar"
+  },
+  {
+    "word": "ambassade",
+    "grammatical_structure": "noun",
+    "translation": "embassy"
+  },
+  {
+    "word": "ambassadeur",
+    "grammatical_structure": "noun",
+    "translation": "ambassador"
+  },
+  {
+    "word": "ambitie",
+    "grammatical_structure": "noun",
+    "translation": "ambition"
+  },
+  {
+    "word": "ambt",
+    "grammatical_structure": "noun",
+    "translation": "office; official position"
+  },
+  {
+    "word": "ambtelijk",
+    "grammatical_structure": "adjective",
+    "translation": "official; administrative"
+  },
+  {
+    "word": "amper",
+    "grammatical_structure": "adverb",
+    "translation": "barely; hardly"
+  },
+  {
+    "word": "anoniem",
+    "grammatical_structure": "adjective",
+    "translation": "anonymous"
+  },
+  {
+    "word": "arbeidsmarkt",
+    "grammatical_structure": "noun",
+    "translation": "labor market; job market"
+  },
+  {
+    "word": "architect",
+    "grammatical_structure": "noun",
+    "translation": "architect"
+  },
+  {
+    "word": "asbak",
+    "grammatical_structure": "noun",
+    "translation": "ashtray"
+  },
+  {
+    "word": "assistent",
+    "grammatical_structure": "noun",
+    "translation": "assistant"
+  },
+  {
+    "word": "atelier",
+    "grammatical_structure": "noun",
+    "translation": "studio; workshop"
+  },
+  {
+    "word": "attitude",
+    "grammatical_structure": "noun",
+    "translation": "attitude"
+  },
+  {
+    "word": "autonomie",
+    "grammatical_structure": "noun",
+    "translation": "autonomy"
+  },
+  {
+    "word": "autonoom",
+    "grammatical_structure": "adjective",
+    "translation": "autonomous"
+  },
+  {
+    "word": "bv",
+    "grammatical_structure": "abbreviation",
+    "translation": "for example; private limited company"
+  },
+  {
+    "word": "baai",
+    "grammatical_structure": "noun",
+    "translation": "bay"
+  },
+  {
+    "word": "babbelen",
+    "grammatical_structure": "verb",
+    "translation": "to chat; to babble"
+  },
+  {
+    "word": "bacterie",
+    "grammatical_structure": "noun",
+    "translation": "bacterium"
+  },
+  {
+    "word": "baden",
+    "grammatical_structure": "verb",
+    "translation": "to bathe; to swim"
+  },
+  {
+    "word": "bakker",
+    "grammatical_structure": "noun",
+    "translation": "baker"
+  },
+  {
+    "word": "balans",
+    "grammatical_structure": "noun",
+    "translation": "balance"
+  },
+  {
+    "word": "balk",
+    "grammatical_structure": "noun",
+    "translation": "beam; bar"
+  },
+  {
+    "word": "bankier",
+    "grammatical_structure": "noun",
+    "translation": "banker"
+  },
+  {
+    "word": "baren",
+    "grammatical_structure": "verb",
+    "translation": "to give birth; to cause; to produce"
+  },
+  {
+    "word": "bedaren",
+    "grammatical_structure": "verb",
+    "translation": "to calm down; to subside"
+  },
+  {
+    "word": "bederven",
+    "grammatical_structure": "verb",
+    "translation": "to spoil; to ruin"
+  },
+  {
+    "word": "bedrog",
+    "grammatical_structure": "noun",
+    "translation": "deceit; fraud"
+  },
+  {
+    "word": "bedwingen",
+    "grammatical_structure": "verb",
+    "translation": "to restrain; to subdue"
+  },
+  {
+    "word": "beek",
+    "grammatical_structure": "noun",
+    "translation": "brook; stream"
+  },
+  {
+    "word": "begaafd",
+    "grammatical_structure": "adjective",
+    "translation": "gifted; talented"
+  },
+  {
+    "word": "begaan",
+    "grammatical_structure": "verb",
+    "translation": "to commit; to be concerned with"
+  },
+  {
+    "word": "begeerte",
+    "grammatical_structure": "noun",
+    "translation": "desire; lust"
+  },
+  {
+    "word": "begeren",
+    "grammatical_structure": "verb",
+    "translation": "to desire; to covet"
+  },
+  {
+    "word": "beheer",
+    "grammatical_structure": "noun",
+    "translation": "management; administration"
+  },
+  {
+    "word": "behoedzaam",
+    "grammatical_structure": "adjective; adverb",
+    "translation": "cautious; carefully"
+  },
+  {
+    "word": "behoeve",
+    "grammatical_structure": "noun",
+    "translation": "benefit; behalf"
+  },
+  {
+    "word": "behoud",
+    "grammatical_structure": "noun",
+    "translation": "preservation; retention"
+  },
+  {
+    "word": "beker",
+    "grammatical_structure": "noun",
+    "translation": "cup; trophy"
+  },
+  {
+    "word": "beklagen",
+    "grammatical_structure": "verb",
+    "translation": "to pity; to complain"
+  },
+  {
+    "word": "bekleden",
+    "grammatical_structure": "verb",
+    "translation": "to hold; to cover; to clothe"
+  },
+  {
+    "word": "beklimmen",
+    "grammatical_structure": "verb",
+    "translation": "to climb"
+  },
+  {
+    "word": "bekommeren",
+    "grammatical_structure": "verb",
+    "translation": "to concern; to worry"
+  },
+  {
+    "word": "bekwaam",
+    "grammatical_structure": "adjective",
+    "translation": "competent; capable"
+  },
+  {
+    "word": "beleefd",
+    "grammatical_structure": "adjective",
+    "translation": "polite"
+  },
+  {
+    "word": "belonen",
+    "grammatical_structure": "verb",
+    "translation": "to reward"
+  },
+  {
+    "word": "benaming",
+    "grammatical_structure": "noun",
+    "translation": "name; designation"
+  },
+  {
+    "word": "benodigd",
+    "grammatical_structure": "adjective",
+    "translation": "needed; required"
+  },
+  {
+    "word": "benoeming",
+    "grammatical_structure": "noun",
+    "translation": "appointment; nomination"
+  },
+  {
+    "word": "bepleiten",
+    "grammatical_structure": "verb",
+    "translation": "to advocate; to argue for"
+  },
+  {
+    "word": "bereik",
+    "grammatical_structure": "noun",
+    "translation": "reach; range; scope"
+  },
+  {
+    "word": "beroepen",
+    "grammatical_structure": "verb",
+    "translation": "to appeal; to invoke; to appoint"
+  },
+  {
+    "word": "beroven",
+    "grammatical_structure": "verb",
+    "translation": "to rob; to deprive"
+  },
+  {
+    "word": "berucht",
+    "grammatical_structure": "adjective",
+    "translation": "notorious; infamous"
+  },
+  {
+    "word": "beslissend",
+    "grammatical_structure": "adjective",
+    "translation": "decisive"
+  },
+  {
+    "word": "bestanddeel",
+    "grammatical_structure": "noun",
+    "translation": "component; ingredient"
+  },
+  {
+    "word": "bestemmingsplan",
+    "grammatical_structure": "noun",
+    "translation": "zoning plan; land-use plan"
+  },
+  {
+    "word": "betreuren",
+    "grammatical_structure": "verb",
+    "translation": "to regret"
+  },
+  {
+    "word": "betwijfelen",
+    "grammatical_structure": "verb",
+    "translation": "to doubt; to question"
+  },
+  {
+    "word": "bevinding",
+    "grammatical_structure": "noun",
+    "translation": "finding; observation"
+  },
+  {
+    "word": "bevriend",
+    "grammatical_structure": "adjective",
+    "translation": "friendly; friends with"
+  },
+  {
+    "word": "bevriezen",
+    "grammatical_structure": "verb",
+    "translation": "to freeze"
+  },
+  {
+    "word": "bewerkstelligen",
+    "grammatical_structure": "verb",
+    "translation": "to bring about; to achieve"
+  },
+  {
+    "word": "bewind",
+    "grammatical_structure": "noun",
+    "translation": "regime; administration; rule"
+  },
+  {
+    "word": "bewogen",
+    "grammatical_structure": "adjective",
+    "translation": "moved; eventful; turbulent"
+  },
+  {
+    "word": "bezet",
+    "grammatical_structure": "adjective",
+    "translation": "occupied; busy; taken"
+  },
+  {
+    "word": "bezweren",
+    "grammatical_structure": "verb",
+    "translation": "to swear; to avert; to conjure"
+  },
+  {
+    "word": "bijkomen",
+    "grammatical_structure": "verb",
+    "translation": "to recover; to come around; to gain weight"
+  },
+  {
+    "word": "binnendringen",
+    "grammatical_structure": "verb",
+    "translation": "to enter by force; to penetrate"
+  },
+  {
+    "word": "binnenkant",
+    "grammatical_structure": "noun",
+    "translation": "inside; interior"
+  },
+  {
+    "word": "blijkens",
+    "grammatical_structure": "preposition",
+    "translation": "according to; as appears from"
+  },
+  {
+    "word": "blijvend",
+    "grammatical_structure": "adjective",
+    "translation": "lasting; permanent"
+  },
+  {
+    "word": "bliksem",
+    "grammatical_structure": "noun",
+    "translation": "lightning"
+  },
+  {
+    "word": "bobby",
+    "grammatical_structure": "noun",
+    "translation": "British policeman; bobby"
+  },
+  {
+    "word": "boeiend",
+    "grammatical_structure": "adjective",
+    "translation": "fascinating; captivating"
+  },
+  {
+    "word": "boeken",
+    "grammatical_structure": "verb",
+    "translation": "to book; to record; to make progress"
+  },
+  {
+    "word": "boerin",
+    "grammatical_structure": "noun",
+    "translation": "farmer's wife; female farmer"
+  },
+  {
+    "word": "bol",
+    "grammatical_structure": "noun; adjective",
+    "translation": "sphere; bulb; convex; round"
+  },
+  {
+    "word": "bonken",
+    "grammatical_structure": "verb",
+    "translation": "to pound; to thump"
+  },
+  {
+    "word": "bonzen",
+    "grammatical_structure": "verb",
+    "translation": "to pound; to throb"
+  },
+  {
+    "word": "boon",
+    "grammatical_structure": "noun",
+    "translation": "bean"
+  },
+  {
+    "word": "boren",
+    "grammatical_structure": "verb",
+    "translation": "to drill"
+  },
+  {
+    "word": "botsen",
+    "grammatical_structure": "verb",
+    "translation": "to collide; to clash"
+  },
+  {
+    "word": "botsing",
+    "grammatical_structure": "noun",
+    "translation": "collision; clash"
+  },
+  {
+    "word": "bouwwerk",
+    "grammatical_structure": "noun",
+    "translation": "structure; building work"
+  },
+  {
+    "word": "bovenal",
+    "grammatical_structure": "adverb",
+    "translation": "above all"
+  },
+  {
+    "word": "bovengenoemd",
+    "grammatical_structure": "adjective",
+    "translation": "aforementioned; above-mentioned"
+  },
+  {
+    "word": "brein",
+    "grammatical_structure": "noun",
+    "translation": "brain; mind"
+  },
+  {
+    "word": "briljant",
+    "grammatical_structure": "adjective",
+    "translation": "brilliant"
+  },
+  {
+    "word": "brok",
+    "grammatical_structure": "noun",
+    "translation": "chunk; lump; piece"
+  },
+  {
+    "word": "brommen",
+    "grammatical_structure": "verb",
+    "translation": "to grumble; to hum; to growl"
+  },
+  {
+    "word": "brouwerij",
+    "grammatical_structure": "noun",
+    "translation": "brewery"
+  },
+  {
+    "word": "bui",
+    "grammatical_structure": "noun",
+    "translation": "shower; mood"
+  },
+  {
+    "word": "buit",
+    "grammatical_structure": "noun",
+    "translation": "loot; booty"
+  },
+  {
+    "word": "buitenaf",
+    "grammatical_structure": "adverb",
+    "translation": "from outside; in the countryside"
+  },
+  {
+    "word": "buitenlander",
+    "grammatical_structure": "noun",
+    "translation": "foreigner"
+  },
+  {
+    "word": "buitenstaander",
+    "grammatical_structure": "noun",
+    "translation": "outsider"
+  },
+  {
+    "word": "cabine",
+    "grammatical_structure": "noun",
+    "translation": "cabin; booth"
+  },
+  {
+    "word": "cadet",
+    "grammatical_structure": "noun",
+    "translation": "cadet"
+  },
+  {
+    "word": "casino",
+    "grammatical_structure": "noun",
+    "translation": "casino"
+  },
+  {
+    "word": "charmant",
+    "grammatical_structure": "adjective",
+    "translation": "charming"
+  },
+  {
+    "word": "charme",
+    "grammatical_structure": "noun",
+    "translation": "charm"
+  },
+  {
+    "word": "chip",
+    "grammatical_structure": "noun",
+    "translation": "chip"
+  },
+  {
+    "word": "Chr.",
+    "grammatical_structure": "abbreviation",
+    "translation": "AD; Christian era"
+  },
+  {
+    "word": "citaat",
+    "grammatical_structure": "noun",
+    "translation": "quotation; quote"
+  },
+  {
+    "word": "citroen",
+    "grammatical_structure": "noun",
+    "translation": "lemon"
+  },
+  {
+    "word": "co",
+    "grammatical_structure": "noun; abbreviation",
+    "translation": "co; company; companion"
+  },
+  {
+    "word": "code",
+    "grammatical_structure": "noun",
+    "translation": "code"
+  },
+  {
+    "word": "cognitief",
+    "grammatical_structure": "adjective",
+    "translation": "cognitive"
+  },
+  {
+    "word": "collectie",
+    "grammatical_structure": "noun",
+    "translation": "collection"
+  },
+  {
+    "word": "communisme",
+    "grammatical_structure": "noun",
+    "translation": "communism"
+  },
+  {
+    "word": "compliment",
+    "grammatical_structure": "noun",
+    "translation": "compliment"
+  },
+  {
+    "word": "componist",
+    "grammatical_structure": "noun",
+    "translation": "composer"
+  },
+  {
+    "word": "concept",
+    "grammatical_structure": "noun",
+    "translation": "concept; draft"
+  },
+  {
+    "word": "conceptie",
+    "grammatical_structure": "noun",
+    "translation": "conception"
+  },
+  {
+    "word": "concert",
+    "grammatical_structure": "noun",
+    "translation": "concert"
+  },
+  {
+    "word": "concilie",
+    "grammatical_structure": "noun",
+    "translation": "council; church council"
+  },
+  {
+    "word": "consequent",
+    "grammatical_structure": "adjective; adverb",
+    "translation": "consistent; consequently"
+  },
+  {
+    "word": "conservatief",
+    "grammatical_structure": "adjective; noun",
+    "translation": "conservative"
+  },
+  {
+    "word": "construeren",
+    "grammatical_structure": "verb",
+    "translation": "to construct"
+  },
+  {
+    "word": "consumptie",
+    "grammatical_structure": "noun",
+    "translation": "consumption; drink"
+  },
+  {
+    "word": "continent",
+    "grammatical_structure": "noun",
+    "translation": "continent"
+  },
+  {
+    "word": "contrast",
+    "grammatical_structure": "noun",
+    "translation": "contrast"
+  },
+  {
+    "word": "coöperatie",
+    "grammatical_structure": "noun",
+    "translation": "cooperative; cooperation"
+  },
+  {
+    "word": "coördinatie",
+    "grammatical_structure": "noun",
+    "translation": "coordination"
+  },
+  {
+    "word": "correct",
+    "grammatical_structure": "adjective",
+    "translation": "correct; proper"
+  },
+  {
+    "word": "daadwerkelijk",
+    "grammatical_structure": "adjective; adverb",
+    "translation": "actual; actually"
+  },
+  {
+    "word": "daags",
+    "grammatical_structure": "adjective; adverb",
+    "translation": "daily; by day"
+  },
+  {
+    "word": "dader",
+    "grammatical_structure": "noun",
+    "translation": "perpetrator; offender"
+  },
+  {
+    "word": "daglicht",
+    "grammatical_structure": "noun",
+    "translation": "daylight"
+  },
+  {
+    "word": "dankzij",
+    "grammatical_structure": "preposition",
+    "translation": "thanks to"
+  },
+  {
+    "word": "darm",
+    "grammatical_structure": "noun",
+    "translation": "intestine; bowel"
+  },
+  {
+    "word": "debat",
+    "grammatical_structure": "noun",
+    "translation": "debate"
+  },
+  {
+    "word": "delegatie",
+    "grammatical_structure": "noun",
+    "translation": "delegation"
+  },
+  {
+    "word": "delven",
+    "grammatical_structure": "verb",
+    "translation": "to dig; to mine"
+  },
+  {
+    "word": "demonstratie",
+    "grammatical_structure": "noun",
+    "translation": "demonstration"
+  },
+  {
+    "word": "demonstreren",
+    "grammatical_structure": "verb",
+    "translation": "to demonstrate"
+  },
+  {
+    "word": "dempen",
+    "grammatical_structure": "verb",
+    "translation": "to dampen; to mute; to fill in"
+  },
+  {
+    "word": "denkbeeldig",
+    "grammatical_structure": "adjective",
+    "translation": "imaginary"
+  },
+  {
+    "word": "depressie",
+    "grammatical_structure": "noun",
+    "translation": "depression"
+  },
+  {
+    "word": "dertien",
+    "grammatical_structure": "numeral",
+    "translation": "thirteen"
+  },
+  {
+    "word": "des",
+    "grammatical_structure": "article/particle",
+    "translation": "of the; the more"
+  },
+  {
+    "word": "deskundig",
+    "grammatical_structure": "adjective",
+    "translation": "expert; knowledgeable"
+  },
+  {
+    "word": "deugen",
+    "grammatical_structure": "verb",
+    "translation": "to be good; to be valid"
+  },
+  {
+    "word": "dictatuur",
+    "grammatical_structure": "noun",
+    "translation": "dictatorship"
+  },
+  {
+    "word": "dieet",
+    "grammatical_structure": "noun",
+    "translation": "diet"
+  },
+  {
+    "word": "dief",
+    "grammatical_structure": "noun",
+    "translation": "thief"
+  },
+  {
+    "word": "dierenarts",
+    "grammatical_structure": "noun",
+    "translation": "veterinarian; vet"
+  },
+  {
+    "word": "district",
+    "grammatical_structure": "noun",
+    "translation": "district"
+  },
+  {
+    "word": "doelen",
+    "grammatical_structure": "verb",
+    "translation": "to aim; to mean"
+  },
+  {
+    "word": "doeltreffend",
+    "grammatical_structure": "adjective",
+    "translation": "effective"
+  },
+  {
+    "word": "domein",
+    "grammatical_structure": "noun",
+    "translation": "domain; field"
+  },
+  {
+    "word": "donder",
+    "grammatical_structure": "noun",
+    "translation": "thunder"
+  },
+  {
+    "word": "donderen",
+    "grammatical_structure": "verb",
+    "translation": "to thunder; to tumble"
+  },
+  {
+    "word": "doodgaan",
+    "grammatical_structure": "verb",
+    "translation": "to die"
+  },
+  {
+    "word": "doodstil",
+    "grammatical_structure": "adjective",
+    "translation": "dead silent"
+  },
+  {
+    "word": "doormaken",
+    "grammatical_structure": "verb",
+    "translation": "to experience; to go through"
+  },
+  {
+    "word": "doorstaan",
+    "grammatical_structure": "verb",
+    "translation": "to withstand; to endure"
+  },
+  {
+    "word": "dopen",
+    "grammatical_structure": "verb",
+    "translation": "to baptize; to dip"
+  },
+  {
+    "word": "dorst",
+    "grammatical_structure": "noun",
+    "translation": "thirst"
+  },
+  {
+    "word": "dosis",
+    "grammatical_structure": "noun",
+    "translation": "dose"
+  },
+  {
+    "word": "doven",
+    "grammatical_structure": "verb",
+    "translation": "to extinguish; to fade"
+  },
+  {
+    "word": "dozijn",
+    "grammatical_structure": "noun; numeral",
+    "translation": "dozen"
+  },
+  {
+    "word": "dreunen",
+    "grammatical_structure": "verb",
+    "translation": "to boom; to thud"
+  },
+  {
+    "word": "driemaal",
+    "grammatical_structure": "adverb",
+    "translation": "three times"
+  },
+  {
+    "word": "driftig",
+    "grammatical_structure": "adjective",
+    "translation": "angry; impetuous"
+  },
+  {
+    "word": "dromer",
+    "grammatical_structure": "noun",
+    "translation": "dreamer"
+  },
+  {
+    "word": "drug",
+    "grammatical_structure": "noun",
+    "translation": "drug"
+  },
+  {
+    "word": "duister",
+    "grammatical_structure": "adjective/noun",
+    "translation": "dark; obscure"
+  },
+  {
+    "word": "dulden",
+    "grammatical_structure": "verb",
+    "translation": "to tolerate; to put up with"
+  },
+  {
+    "word": "duurzaam",
+    "grammatical_structure": "adjective",
+    "translation": "sustainable; durable"
+  },
+  {
+    "word": "dwang",
+    "grammatical_structure": "noun",
+    "translation": "coercion; compulsion"
+  },
+  {
+    "word": "dynamisch",
+    "grammatical_structure": "adjective",
+    "translation": "dynamic"
+  },
+  {
+    "word": "e.v.",
+    "grammatical_structure": "abbreviation",
+    "translation": "and following; ff."
+  },
+  {
+    "word": "echo",
+    "grammatical_structure": "noun",
+    "translation": "echo"
+  },
+  {
+    "word": "echtscheiding",
+    "grammatical_structure": "noun",
+    "translation": "divorce"
+  },
+  {
+    "word": "econoom",
+    "grammatical_structure": "noun",
+    "translation": "economist"
+  },
+  {
+    "word": "edel",
+    "grammatical_structure": "adjective",
+    "translation": "noble; precious"
+  },
+  {
+    "word": "eer",
+    "grammatical_structure": "noun",
+    "translation": "honor"
+  },
+  {
+    "word": "efficiënt",
+    "grammatical_structure": "adjective",
+    "translation": "efficient"
+  },
+  {
+    "word": "eik",
+    "grammatical_structure": "noun",
+    "translation": "oak"
+  },
+  {
+    "word": "el",
+    "grammatical_structure": "noun",
+    "translation": "ell; cubit"
+  },
+  {
+    "word": "elementair",
+    "grammatical_structure": "adjective",
+    "translation": "elementary; basic"
+  },
+  {
+    "word": "emancipatie",
+    "grammatical_structure": "noun",
+    "translation": "emancipation"
+  },
+  {
+    "word": "enkel",
+    "grammatical_structure": "adjective; adverb; noun",
+    "translation": "single; only; ankle"
+  },
+  {
+    "word": "enkeling",
+    "grammatical_structure": "noun",
+    "translation": "individual; a few people"
+  },
+  {
+    "word": "erectie",
+    "grammatical_structure": "noun",
+    "translation": "erection"
+  },
+  {
+    "word": "erfelijk",
+    "grammatical_structure": "adjective",
+    "translation": "hereditary"
+  },
+  {
+    "word": "erfenis",
+    "grammatical_structure": "noun",
+    "translation": "inheritance; legacy"
+  },
+  {
+    "word": "erotisch",
+    "grammatical_structure": "adjective",
+    "translation": "erotic"
+  },
+  {
+    "word": "etalage",
+    "grammatical_structure": "noun",
+    "translation": "shop window; display window"
+  },
+  {
+    "word": "etiket",
+    "grammatical_structure": "noun",
+    "translation": "label; etiquette"
+  },
+  {
+    "word": "evaluatie",
+    "grammatical_structure": "noun",
+    "translation": "evaluation"
+  },
+  {
+    "word": "evangelie",
+    "grammatical_structure": "noun",
+    "translation": "gospel"
+  },
+  {
+    "word": "evengoed",
+    "grammatical_structure": "adverb",
+    "translation": "just as well; nevertheless"
+  },
+  {
+    "word": "eventjes",
+    "grammatical_structure": "adverb",
+    "translation": "for a moment; briefly"
+  },
+  {
+    "word": "evenwichtig",
+    "grammatical_structure": "adjective",
+    "translation": "balanced"
+  },
+  {
+    "word": "examen",
+    "grammatical_structure": "noun",
+    "translation": "exam; examination"
+  },
+  {
+    "word": "exclusief",
+    "grammatical_structure": "adjective; adverb",
+    "translation": "exclusive; excluding"
+  },
+  {
+    "word": "expeditie",
+    "grammatical_structure": "noun",
+    "translation": "expedition; shipping"
+  },
+  {
+    "word": "experimenteren",
+    "grammatical_structure": "verb",
+    "translation": "to experiment"
+  },
+  {
+    "word": "explosie",
+    "grammatical_structure": "noun",
+    "translation": "explosion"
+  },
+  {
+    "word": "extern",
+    "grammatical_structure": "adjective",
+    "translation": "external"
+  },
+  {
+    "word": "ezel",
+    "grammatical_structure": "noun",
+    "translation": "donkey"
+  },
+  {
+    "word": "fabrikant",
+    "grammatical_structure": "noun",
+    "translation": "manufacturer"
+  },
+  {
+    "word": "faculteit",
+    "grammatical_structure": "noun",
+    "translation": "faculty"
+  },
+  {
+    "word": "farao",
+    "grammatical_structure": "noun",
+    "translation": "pharaoh"
+  },
+  {
+    "word": "fataal",
+    "grammatical_structure": "adjective",
+    "translation": "fatal"
+  },
+  {
+    "word": "fatsoenlijk",
+    "grammatical_structure": "adjective",
+    "translation": "decent; proper"
+  },
+  {
+    "word": "fauteuil",
+    "grammatical_structure": "noun",
+    "translation": "armchair"
+  },
+  {
+    "word": "feestelijk",
+    "grammatical_structure": "adjective",
+    "translation": "festive"
+  },
+  {
+    "word": "financiën",
+    "grammatical_structure": "noun plural",
+    "translation": "finances"
+  },
+  {
+    "word": "flard",
+    "grammatical_structure": "noun",
+    "translation": "fragment; shred"
+  },
+  {
+    "word": "fonds",
+    "grammatical_structure": "noun",
+    "translation": "fund"
+  },
+  {
+    "word": "fotograaf",
+    "grammatical_structure": "noun",
+    "translation": "photographer"
+  },
+  {
+    "word": "fotograferen",
+    "grammatical_structure": "verb",
+    "translation": "to photograph"
+  },
+  {
+    "word": "fractie",
+    "grammatical_structure": "noun",
+    "translation": "fraction; parliamentary group"
+  },
+  {
+    "word": "fragment",
+    "grammatical_structure": "noun",
+    "translation": "fragment"
+  },
+  {
+    "word": "frequentie",
+    "grammatical_structure": "noun",
+    "translation": "frequency"
+  },
+  {
+    "word": "fruit",
+    "grammatical_structure": "noun",
+    "translation": "fruit"
+  },
+  {
+    "word": "frustratie",
+    "grammatical_structure": "noun",
+    "translation": "frustration"
+  },
+  {
+    "word": "gadeslaan",
+    "grammatical_structure": "verb",
+    "translation": "to observe; to watch"
+  },
+  {
+    "word": "gangbaar",
+    "grammatical_structure": "adjective",
+    "translation": "common; usual; current"
+  },
+  {
+    "word": "gans",
+    "grammatical_structure": "noun; adjective",
+    "translation": "goose; whole; entire"
+  },
+  {
+    "word": "gapen",
+    "grammatical_structure": "verb",
+    "translation": "to yawn; to gape"
+  },
+  {
+    "word": "garage",
+    "grammatical_structure": "noun",
+    "translation": "garage"
+  },
+  {
+    "word": "garanderen",
+    "grammatical_structure": "verb",
+    "translation": "to guarantee"
+  },
+  {
+    "word": "garantie",
+    "grammatical_structure": "noun",
+    "translation": "guarantee; warranty"
+  },
+  {
+    "word": "gebaren",
+    "grammatical_structure": "verb; noun",
+    "translation": "to gesture; gestures"
+  },
+  {
+    "word": "gebieden",
+    "grammatical_structure": "verb",
+    "translation": "to command; to order"
+  },
+  {
+    "word": "gebit",
+    "grammatical_structure": "noun",
+    "translation": "teeth; dentures"
+  },
+  {
+    "word": "gebod",
+    "grammatical_structure": "noun",
+    "translation": "commandment; order"
+  },
+  {
+    "word": "gebrekkig",
+    "grammatical_structure": "adjective",
+    "translation": "defective; poor; imperfect"
+  },
+  {
+    "word": "gecompliceerd",
+    "grammatical_structure": "adjective",
+    "translation": "complicated"
+  },
+  {
+    "word": "gediend",
+    "grammatical_structure": "adjective",
+    "translation": "served; helped"
+  },
+  {
+    "word": "geding",
+    "grammatical_structure": "noun",
+    "translation": "lawsuit; proceedings"
+  },
+  {
+    "word": "gedoe",
+    "grammatical_structure": "noun",
+    "translation": "fuss; hassle"
+  },
+  {
+    "word": "gedreven",
+    "grammatical_structure": "adjective",
+    "translation": "driven; passionate"
+  },
+  {
+    "word": "geïnteresseerd",
+    "grammatical_structure": "adjective",
+    "translation": "interested"
+  },
+  {
+    "word": "geit",
+    "grammatical_structure": "noun",
+    "translation": "goat"
+  },
+  {
+    "word": "gelang",
+    "grammatical_structure": "noun",
+    "translation": "measure; proportion"
+  },
+  {
+    "word": "geldig",
+    "grammatical_structure": "adjective",
+    "translation": "valid"
+  },
+  {
+    "word": "geliefd",
+    "grammatical_structure": "adjective",
+    "translation": "beloved; popular"
+  },
+  {
+    "word": "gelijk",
+    "grammatical_structure": "adjective; adverb; noun",
+    "translation": "equal; right; immediately; equality"
+  },
+  {
+    "word": "gelijken",
+    "grammatical_structure": "verb",
+    "translation": "to resemble; to be like"
+  },
+  {
+    "word": "gelijkenis",
+    "grammatical_structure": "noun",
+    "translation": "resemblance; parable"
+  },
+  {
+    "word": "gelovige",
+    "grammatical_structure": "noun",
+    "translation": "believer"
+  },
+  {
+    "word": "gemeentebestuur",
+    "grammatical_structure": "noun",
+    "translation": "municipal administration; local council"
+  },
+  {
+    "word": "gemeenteraad",
+    "grammatical_structure": "noun",
+    "translation": "municipal council"
+  },
+  {
+    "word": "gemengd",
+    "grammatical_structure": "adjective",
+    "translation": "mixed"
+  },
+  {
+    "word": "gemiddelde",
+    "grammatical_structure": "noun; adjective",
+    "translation": "average"
+  },
+  {
+    "word": "genegenheid",
+    "grammatical_structure": "noun",
+    "translation": "affection"
+  },
+  {
+    "word": "geneigd",
+    "grammatical_structure": "adjective",
+    "translation": "inclined"
+  },
+  {
+    "word": "genetisch",
+    "grammatical_structure": "adjective",
+    "translation": "genetic"
+  },
+  {
+    "word": "genie",
+    "grammatical_structure": "noun",
+    "translation": "genius"
+  },
+  {
+    "word": "gereedschap",
+    "grammatical_structure": "noun",
+    "translation": "tools; equipment"
+  },
+  {
+    "word": "geruim",
+    "grammatical_structure": "adjective",
+    "translation": "considerable; ample"
+  },
+  {
+    "word": "geruststellen",
+    "grammatical_structure": "verb",
+    "translation": "to reassure"
+  },
+  {
+    "word": "geslaagd",
+    "grammatical_structure": "adjective",
+    "translation": "successful; passed"
+  },
+  {
+    "word": "getekend",
+    "grammatical_structure": "adjective",
+    "translation": "signed; drawn; marked"
+  },
+  {
+    "word": "getuigenis",
+    "grammatical_structure": "noun",
+    "translation": "testimony; witness statement"
+  },
+  {
+    "word": "geuren",
+    "grammatical_structure": "verb",
+    "translation": "to smell; to give off a scent"
+  },
+  {
+    "word": "gewaarwording",
+    "grammatical_structure": "noun",
+    "translation": "sensation; awareness"
+  },
+  {
+    "word": "gewijd",
+    "grammatical_structure": "adjective",
+    "translation": "sacred; devoted"
+  },
+  {
+    "word": "gewonnen",
+    "grammatical_structure": "adjective",
+    "translation": "won; extracted"
+  },
+  {
+    "word": "gieren",
+    "grammatical_structure": "verb",
+    "translation": "to roar; to howl; to vulture about"
+  },
+  {
+    "word": "giftig",
+    "grammatical_structure": "adjective",
+    "translation": "poisonous; toxic"
+  },
+  {
+    "word": "gigantisch",
+    "grammatical_structure": "adjective",
+    "translation": "gigantic; enormous"
+  },
+  {
+    "word": "glans",
+    "grammatical_structure": "noun",
+    "translation": "shine; gloss"
+  },
+  {
+    "word": "glorie",
+    "grammatical_structure": "noun",
+    "translation": "glory"
+  },
+  {
+    "word": "gluren",
+    "grammatical_structure": "verb",
+    "translation": "to peek; to peep"
+  },
+  {
+    "word": "godheid",
+    "grammatical_structure": "noun",
+    "translation": "deity; godhead"
+  },
+  {
+    "word": "godverdomme",
+    "grammatical_structure": "interjection",
+    "translation": "damn; goddamn"
+  },
+  {
+    "word": "goedheid",
+    "grammatical_structure": "noun",
+    "translation": "goodness"
+  },
+  {
+    "word": "graan",
+    "grammatical_structure": "noun",
+    "translation": "grain"
+  },
+  {
+    "word": "gracht",
+    "grammatical_structure": "noun",
+    "translation": "canal; moat"
+  },
+  {
+    "word": "gratie",
+    "grammatical_structure": "noun",
+    "translation": "grace; pardon"
+  },
+  {
+    "word": "gratis",
+    "grammatical_structure": "adjective; adverb",
+    "translation": "free; for free"
+  },
+  {
+    "word": "grenzen",
+    "grammatical_structure": "verb",
+    "translation": "to border; to limit"
+  },
+  {
+    "word": "griezelig",
+    "grammatical_structure": "adjective",
+    "translation": "creepy; scary"
+  },
+  {
+    "word": "grijns",
+    "grammatical_structure": "noun",
+    "translation": "grin"
+  },
+  {
+    "word": "grillig",
+    "grammatical_structure": "adjective",
+    "translation": "whimsical; erratic"
+  },
+  {
+    "word": "grimmig",
+    "grammatical_structure": "adjective",
+    "translation": "grim; fierce"
+  },
+  {
+    "word": "groet",
+    "grammatical_structure": "noun",
+    "translation": "greeting; regards"
+  },
+  {
+    "word": "grondstof",
+    "grammatical_structure": "noun",
+    "translation": "raw material"
+  },
+  {
+    "word": "grondwet",
+    "grammatical_structure": "noun",
+    "translation": "constitution"
+  },
+  {
+    "word": "haast",
+    "grammatical_structure": "noun; adverb",
+    "translation": "hurry; almost"
+  },
+  {
+    "word": "hak",
+    "grammatical_structure": "noun",
+    "translation": "heel; chop"
+  },
+  {
+    "word": "haken",
+    "grammatical_structure": "verb",
+    "translation": "to hook; to crochet; to snag"
+  },
+  {
+    "word": "halverwege",
+    "grammatical_structure": "adverb",
+    "translation": "halfway"
+  },
+  {
+    "word": "ham",
+    "grammatical_structure": "noun",
+    "translation": "ham"
+  },
+  {
+    "word": "handelaar",
+    "grammatical_structure": "noun",
+    "translation": "trader; dealer"
+  },
+  {
+    "word": "handpalm",
+    "grammatical_structure": "noun",
+    "translation": "palm of the hand"
+  },
+  {
+    "word": "handschoen",
+    "grammatical_structure": "noun",
+    "translation": "glove"
+  },
+  {
+    "word": "handschrift",
+    "grammatical_structure": "noun",
+    "translation": "handwriting; manuscript"
+  },
+  {
+    "word": "harte",
+    "grammatical_structure": "noun",
+    "translation": "heart"
+  },
+  {
+    "word": "hartstochtelijk",
+    "grammatical_structure": "adjective; adverb",
+    "translation": "passionate; passionately"
+  },
+  {
+    "word": "hecht",
+    "grammatical_structure": "adjective",
+    "translation": "close; firm; tight"
+  },
+  {
+    "word": "heden",
+    "grammatical_structure": "adverb/noun",
+    "translation": "today; present"
+  },
+  {
+    "word": "heengaan",
+    "grammatical_structure": "verb",
+    "translation": "to leave; to pass away"
+  },
+  {
+    "word": "heimelijk",
+    "grammatical_structure": "adjective; adverb",
+    "translation": "secret; secretly"
+  },
+  {
+    "word": "heimwee",
+    "grammatical_structure": "noun",
+    "translation": "homesickness"
+  },
+  {
+    "word": "helaas",
+    "grammatical_structure": "adverb",
+    "translation": "unfortunately"
+  },
+  {
+    "word": "helm",
+    "grammatical_structure": "noun",
+    "translation": "helmet"
+  },
+  {
+    "word": "hemels",
+    "grammatical_structure": "adjective",
+    "translation": "heavenly"
+  },
+  {
+    "word": "herkomst",
+    "grammatical_structure": "noun",
+    "translation": "origin; provenance"
+  },
+  {
+    "word": "hervorming",
+    "grammatical_structure": "noun",
+    "translation": "reform"
+  },
+  {
+    "word": "hiel",
+    "grammatical_structure": "noun",
+    "translation": "heel"
+  },
+  {
+    "word": "hiërarchie",
+    "grammatical_structure": "noun",
+    "translation": "hierarchy"
+  },
+  {
+    "word": "hiërarchisch",
+    "grammatical_structure": "adjective",
+    "translation": "hierarchical"
+  },
+  {
+    "word": "hijsen",
+    "grammatical_structure": "verb",
+    "translation": "to hoist"
+  },
+  {
+    "word": "hinderlijk",
+    "grammatical_structure": "adjective",
+    "translation": "annoying; troublesome"
+  },
+  {
+    "word": "historie",
+    "grammatical_structure": "noun",
+    "translation": "history"
+  },
+  {
+    "word": "hoede",
+    "grammatical_structure": "noun",
+    "translation": "care; custody"
+  },
+  {
+    "word": "hoesten",
+    "grammatical_structure": "verb",
+    "translation": "to cough"
+  },
+  {
+    "word": "hoeve",
+    "grammatical_structure": "noun",
+    "translation": "farmstead; amount"
+  },
+  {
+    "word": "hoezo",
+    "grammatical_structure": "adverb",
+    "translation": "why so; how so"
+  },
+  {
+    "word": "hok",
+    "grammatical_structure": "noun",
+    "translation": "hutch; cage; cubicle"
+  },
+  {
+    "word": "homoseksualiteit",
+    "grammatical_structure": "noun",
+    "translation": "homosexuality"
+  },
+  {
+    "word": "homoseksueel",
+    "grammatical_structure": "adjective; noun",
+    "translation": "homosexual; gay person"
+  },
+  {
+    "word": "honing",
+    "grammatical_structure": "noun",
+    "translation": "honey"
+  },
+  {
+    "word": "hoofdkwartier",
+    "grammatical_structure": "noun",
+    "translation": "headquarters"
+  },
+  {
+    "word": "hopeloos",
+    "grammatical_structure": "adjective",
+    "translation": "hopeless"
+  },
+  {
+    "word": "houvast",
+    "grammatical_structure": "noun",
+    "translation": "hold; support; foothold"
+  },
+  {
+    "word": "humanistisch",
+    "grammatical_structure": "adjective",
+    "translation": "humanistic"
+  },
+  {
+    "word": "humeur",
+    "grammatical_structure": "noun",
+    "translation": "mood"
+  },
+  {
+    "word": "hurken",
+    "grammatical_structure": "verb",
+    "translation": "to squat"
+  },
+  {
+    "word": "huur",
+    "grammatical_structure": "noun",
+    "translation": "rent; hire"
+  },
+  {
+    "word": "idioot",
+    "grammatical_structure": "noun; adjective",
+    "translation": "idiot; idiotic"
+  },
+  {
+    "word": "ijl",
+    "grammatical_structure": "adjective",
+    "translation": "thin; rarefied; delirious"
+  },
+  {
+    "word": "ijskoud",
+    "grammatical_structure": "adjective",
+    "translation": "ice-cold"
+  },
+  {
+    "word": "ijverig",
+    "grammatical_structure": "adjective",
+    "translation": "diligent"
+  },
+  {
+    "word": "illustratie",
+    "grammatical_structure": "noun",
+    "translation": "illustration"
+  },
+  {
+    "word": "illustreren",
+    "grammatical_structure": "verb",
+    "translation": "to illustrate"
+  },
+  {
+    "word": "impliceren",
+    "grammatical_structure": "verb",
+    "translation": "to imply"
+  },
+  {
+    "word": "inbrengen",
+    "grammatical_structure": "verb",
+    "translation": "to insert; to contribute; to raise"
+  },
+  {
+    "word": "incident",
+    "grammatical_structure": "noun",
+    "translation": "incident"
+  },
+  {
+    "word": "inclusief",
+    "grammatical_structure": "preposition; adjective",
+    "translation": "including; inclusive"
+  },
+  {
+    "word": "indelen",
+    "grammatical_structure": "verb",
+    "translation": "to classify; to arrange"
+  },
+  {
+    "word": "ineen",
+    "grammatical_structure": "adverb",
+    "translation": "together; into one"
+  },
+  {
+    "word": "infectie",
+    "grammatical_structure": "noun",
+    "translation": "infection"
+  },
+  {
+    "word": "ingenieur",
+    "grammatical_structure": "noun",
+    "translation": "engineer"
+  },
+  {
+    "word": "ingreep",
+    "grammatical_structure": "noun",
+    "translation": "intervention; operation; grip"
+  },
+  {
+    "word": "inheems",
+    "grammatical_structure": "adjective",
+    "translation": "native; indigenous"
+  },
+  {
+    "word": "inhoudelijk",
+    "grammatical_structure": "adjective",
+    "translation": "substantive; content-related"
+  },
+  {
+    "word": "inlichten",
+    "grammatical_structure": "verb",
+    "translation": "to inform; to brief"
+  },
+  {
+    "word": "innig",
+    "grammatical_structure": "adjective",
+    "translation": "deep; heartfelt; intimate"
+  },
+  {
+    "word": "inschakelen",
+    "grammatical_structure": "verb",
+    "translation": "to switch on; to engage; to call in"
+  },
+  {
+    "word": "inslaan",
+    "grammatical_structure": "verb",
+    "translation": "to strike; to store; to take a road"
+  },
+  {
+    "word": "inspiratie",
+    "grammatical_structure": "noun",
+    "translation": "inspiration"
+  },
+  {
+    "word": "inspraak",
+    "grammatical_structure": "noun",
+    "translation": "participation; say; consultation"
+  },
+  {
+    "word": "installeren",
+    "grammatical_structure": "verb",
+    "translation": "to install"
+  },
+  {
+    "word": "instemming",
+    "grammatical_structure": "noun",
+    "translation": "consent; approval"
+  },
+  {
+    "word": "instinctief",
+    "grammatical_structure": "adjective; adverb",
+    "translation": "instinctive; instinctively"
+  },
+  {
+    "word": "integraal",
+    "grammatical_structure": "adjective",
+    "translation": "integral; full"
+  },
+  {
+    "word": "integreren",
+    "grammatical_structure": "verb",
+    "translation": "to integrate"
+  },
+  {
+    "word": "intensiteit",
+    "grammatical_structure": "noun",
+    "translation": "intensity"
+  },
+  {
+    "word": "interactie",
+    "grammatical_structure": "noun",
+    "translation": "interaction"
+  },
+  {
+    "word": "intrekken",
+    "grammatical_structure": "verb",
+    "translation": "to withdraw; to move in; to retract"
+  },
+  {
+    "word": "intuïtie",
+    "grammatical_structure": "noun",
+    "translation": "intuition"
+  },
+  {
+    "word": "inval",
+    "grammatical_structure": "noun",
+    "translation": "idea; invasion; raid"
+  },
+  {
+    "word": "invullen",
+    "grammatical_structure": "verb",
+    "translation": "to fill in"
+  },
+  {
+    "word": "ironie",
+    "grammatical_structure": "noun",
+    "translation": "irony"
+  },
+  {
+    "word": "ironisch",
+    "grammatical_structure": "adjective",
+    "translation": "ironic"
+  },
+  {
+    "word": "irriteren",
+    "grammatical_structure": "verb",
+    "translation": "to irritate"
+  },
+  {
+    "word": "jack",
+    "grammatical_structure": "noun",
+    "translation": "jacket"
+  },
+  {
+    "word": "jaguar",
+    "grammatical_structure": "noun",
+    "translation": "jaguar"
+  },
+  {
+    "word": "jaloezie",
+    "grammatical_structure": "noun",
+    "translation": "jealousy"
+  },
+  {
+    "word": "janken",
+    "grammatical_structure": "verb",
+    "translation": "to howl; to whine; to cry"
+  },
+  {
+    "word": "japon",
+    "grammatical_structure": "noun",
+    "translation": "dress; gown"
+  },
+  {
+    "word": "juichen",
+    "grammatical_structure": "verb",
+    "translation": "to cheer"
+  },
+  {
+    "word": "juweel",
+    "grammatical_structure": "noun",
+    "translation": "jewel"
+  },
+  {
+    "word": "kabel",
+    "grammatical_structure": "noun",
+    "translation": "cable"
+  },
+  {
+    "word": "kachel",
+    "grammatical_structure": "noun",
+    "translation": "stove; heater"
+  },
+  {
+    "word": "kade",
+    "grammatical_structure": "noun",
+    "translation": "quay; embankment"
+  },
+  {
+    "word": "kalk",
+    "grammatical_structure": "noun",
+    "translation": "lime; chalk"
+  },
+  {
+    "word": "kandidaat",
+    "grammatical_structure": "noun",
+    "translation": "candidate"
+  },
+  {
+    "word": "kanon",
+    "grammatical_structure": "noun",
+    "translation": "cannon"
+  },
+  {
+    "word": "kapel",
+    "grammatical_structure": "noun",
+    "translation": "chapel"
+  },
+  {
+    "word": "karwei",
+    "grammatical_structure": "noun",
+    "translation": "job; chore"
+  },
+  {
+    "word": "kas",
+    "grammatical_structure": "noun",
+    "translation": "greenhouse; cash register; fund"
+  },
+  {
+    "word": "kater",
+    "grammatical_structure": "noun",
+    "translation": "male cat; hangover"
+  },
+  {
+    "word": "kathedraal",
+    "grammatical_structure": "noun",
+    "translation": "cathedral"
+  },
+  {
+    "word": "kei",
+    "grammatical_structure": "noun",
+    "translation": "boulder; cobblestone; ace"
+  },
+  {
+    "word": "kelner",
+    "grammatical_structure": "noun",
+    "translation": "waiter"
+  },
+  {
+    "word": "kenbaar",
+    "grammatical_structure": "adjective",
+    "translation": "known; recognizable"
+  },
+  {
+    "word": "kenmerkend",
+    "grammatical_structure": "adjective",
+    "translation": "characteristic"
+  },
+  {
+    "word": "keten",
+    "grammatical_structure": "noun",
+    "translation": "chain"
+  },
+  {
+    "word": "ketter",
+    "grammatical_structure": "noun",
+    "translation": "heretic"
+  },
+  {
+    "word": "keuren",
+    "grammatical_structure": "verb",
+    "translation": "to inspect; to approve"
+  },
+  {
+    "word": "kier",
+    "grammatical_structure": "noun",
+    "translation": "crack; gap"
+  },
+  {
+    "word": "kiezer",
+    "grammatical_structure": "noun",
+    "translation": "voter"
+  },
+  {
+    "word": "kijk",
+    "grammatical_structure": "noun; interjection",
+    "translation": "look; view"
+  },
+  {
+    "word": "klaarblijkelijk",
+    "grammatical_structure": "adverb",
+    "translation": "apparently; evidently"
+  },
+  {
+    "word": "klaarmaken",
+    "grammatical_structure": "verb",
+    "translation": "to prepare; to get ready"
+  },
+  {
+    "word": "kletsen",
+    "grammatical_structure": "verb",
+    "translation": "to chat; to gossip; to slap"
+  },
+  {
+    "word": "kleurig",
+    "grammatical_structure": "adjective",
+    "translation": "colorful"
+  },
+  {
+    "word": "kleuter",
+    "grammatical_structure": "noun",
+    "translation": "preschooler; toddler"
+  },
+  {
+    "word": "kleven",
+    "grammatical_structure": "verb",
+    "translation": "to stick; to adhere"
+  },
+  {
+    "word": "kliniek",
+    "grammatical_structure": "noun",
+    "translation": "clinic"
+  },
+  {
+    "word": "klomp",
+    "grammatical_structure": "noun",
+    "translation": "clog; lump"
+  },
+  {
+    "word": "knoflook",
+    "grammatical_structure": "noun",
+    "translation": "garlic"
+  },
+  {
+    "word": "koepel",
+    "grammatical_structure": "noun",
+    "translation": "dome; umbrella organization"
+  },
+  {
+    "word": "koninkrijk",
+    "grammatical_structure": "noun",
+    "translation": "kingdom"
+  },
+  {
+    "word": "koor",
+    "grammatical_structure": "noun",
+    "translation": "choir"
+  },
+  {
+    "word": "koper",
+    "grammatical_structure": "noun",
+    "translation": "buyer; copper"
+  },
+  {
+    "word": "koperen",
+    "grammatical_structure": "adjective",
+    "translation": "copper"
+  },
+  {
+    "word": "kopie",
+    "grammatical_structure": "noun",
+    "translation": "copy"
+  },
+  {
+    "word": "koppelen",
+    "grammatical_structure": "verb",
+    "translation": "to link; to connect"
+  },
+  {
+    "word": "korporaal",
+    "grammatical_structure": "noun",
+    "translation": "corporal"
+  },
+  {
+    "word": "korst",
+    "grammatical_structure": "noun",
+    "translation": "crust; scab"
+  },
+  {
+    "word": "kosmisch",
+    "grammatical_structure": "adjective",
+    "translation": "cosmic"
+  },
+  {
+    "word": "kostuum",
+    "grammatical_structure": "noun",
+    "translation": "suit; costume"
+  },
+  {
+    "word": "kous",
+    "grammatical_structure": "noun",
+    "translation": "stocking"
+  },
+  {
+    "word": "kraag",
+    "grammatical_structure": "noun",
+    "translation": "collar"
+  },
+  {
+    "word": "kraan",
+    "grammatical_structure": "noun",
+    "translation": "crane; tap; faucet"
+  },
+  {
+    "word": "krachtens",
+    "grammatical_structure": "preposition",
+    "translation": "by virtue of; pursuant to"
+  },
+  {
+    "word": "krampachtig",
+    "grammatical_structure": "adjective",
+    "translation": "spasmodic; strained"
+  },
+  {
+    "word": "krijger",
+    "grammatical_structure": "noun",
+    "translation": "warrior"
+  },
+  {
+    "word": "krijsen",
+    "grammatical_structure": "verb",
+    "translation": "to shriek; to scream"
+  },
+  {
+    "word": "krimpen",
+    "grammatical_structure": "verb",
+    "translation": "to shrink"
+  },
+  {
+    "word": "kroeg",
+    "grammatical_structure": "noun",
+    "translation": "pub; bar"
+  },
+  {
+    "word": "kronkelen",
+    "grammatical_structure": "verb",
+    "translation": "to twist; to wind; to writhe"
+  },
+  {
+    "word": "krul",
+    "grammatical_structure": "noun",
+    "translation": "curl"
+  },
+  {
+    "word": "kunstwerk",
+    "grammatical_structure": "noun",
+    "translation": "work of art; artwork"
+  },
+  {
+    "word": "kwellen",
+    "grammatical_structure": "verb",
+    "translation": "to torment; to afflict"
+  },
+  {
+    "word": "kwetsen",
+    "grammatical_structure": "verb",
+    "translation": "to hurt; to wound; to offend"
+  },
+  {
+    "word": "kwijtraken",
+    "grammatical_structure": "verb",
+    "translation": "to lose"
+  },
+  {
+    "word": "laan",
+    "grammatical_structure": "noun",
+    "translation": "avenue; lane"
+  },
+  {
+    "word": "ladder",
+    "grammatical_structure": "noun",
+    "translation": "ladder"
+  },
+  {
+    "word": "lady",
+    "grammatical_structure": "noun",
+    "translation": "lady"
+  },
+  {
+    "word": "lanceren",
+    "grammatical_structure": "verb",
+    "translation": "to launch"
+  },
+  {
+    "word": "lap",
+    "grammatical_structure": "noun",
+    "translation": "rag; patch; piece of cloth"
+  },
+  {
+    "word": "Latijn",
+    "grammatical_structure": "noun",
+    "translation": "Latin"
+  },
+  {
+    "word": "lauw",
+    "grammatical_structure": "adjective",
+    "translation": "lukewarm; tepid"
+  },
+  {
+    "word": "legende",
+    "grammatical_structure": "noun",
+    "translation": "legend"
+  },
+  {
+    "word": "lever",
+    "grammatical_structure": "noun",
+    "translation": "liver"
+  },
+  {
+    "word": "leverancier",
+    "grammatical_structure": "noun",
+    "translation": "supplier"
+  },
+  {
+    "word": "liefje",
+    "grammatical_structure": "noun",
+    "translation": "darling; sweetheart"
+  },
+  {
+    "word": "lies",
+    "grammatical_structure": "noun",
+    "translation": "groin"
+  },
+  {
+    "word": "linker",
+    "grammatical_structure": "adjective",
+    "translation": "left; left-hand"
+  },
+  {
+    "word": "linkerhand",
+    "grammatical_structure": "noun",
+    "translation": "left hand"
+  },
+  {
+    "word": "litteken",
+    "grammatical_structure": "noun",
+    "translation": "scar"
+  },
+  {
+    "word": "loeien",
+    "grammatical_structure": "verb",
+    "translation": "to moo; to roar"
+  },
+  {
+    "word": "loeren",
+    "grammatical_structure": "verb",
+    "translation": "to lurk; to peek"
+  },
+  {
+    "word": "lopend",
+    "grammatical_structure": "adjective",
+    "translation": "walking; current; ongoing"
+  },
+  {
+    "word": "luchten",
+    "grammatical_structure": "verb",
+    "translation": "to air; to ventilate"
+  },
+  {
+    "word": "lucifer",
+    "grammatical_structure": "noun",
+    "translation": "match"
+  },
+  {
+    "word": "lui",
+    "grammatical_structure": "adjective; noun plural",
+    "translation": "lazy; people"
+  },
+  {
+    "word": "luidruchtig",
+    "grammatical_structure": "adjective",
+    "translation": "noisy; loud"
+  },
+  {
+    "word": "luik",
+    "grammatical_structure": "noun",
+    "translation": "shutter; hatch"
+  },
+  {
+    "word": "lunch",
+    "grammatical_structure": "noun",
+    "translation": "lunch"
+  },
+  {
+    "word": "luxe",
+    "grammatical_structure": "noun; adjective",
+    "translation": "luxury; luxurious"
+  },
+  {
+    "word": "maagd",
+    "grammatical_structure": "noun",
+    "translation": "virgin; maiden"
+  },
+  {
+    "word": "magie",
+    "grammatical_structure": "noun",
+    "translation": "magic"
+  },
+  {
+    "word": "majesteit",
+    "grammatical_structure": "noun",
+    "translation": "majesty"
+  },
+  {
+    "word": "malen",
+    "grammatical_structure": "verb",
+    "translation": "to grind; to care; to mill"
+  },
+  {
+    "word": "mankeren",
+    "grammatical_structure": "verb",
+    "translation": "to be wrong; to be lacking"
+  },
+  {
+    "word": "manuscript",
+    "grammatical_structure": "noun",
+    "translation": "manuscript"
+  },
+  {
+    "word": "marcheren",
+    "grammatical_structure": "verb",
+    "translation": "to march"
+  },
+  {
+    "word": "marxisme",
+    "grammatical_structure": "noun",
+    "translation": "Marxism"
+  },
+  {
+    "word": "massief",
+    "grammatical_structure": "adjective",
+    "translation": "solid; massive"
+  },
+  {
+    "word": "matig",
+    "grammatical_structure": "adjective",
+    "translation": "moderate; mediocre"
+  },
+  {
+    "word": "matras",
+    "grammatical_structure": "noun",
+    "translation": "mattress"
+  },
+  {
+    "word": "matroos",
+    "grammatical_structure": "noun",
+    "translation": "sailor"
+  },
+  {
+    "word": "mechanisch",
+    "grammatical_structure": "adjective",
+    "translation": "mechanical"
+  },
+  {
+    "word": "medemens",
+    "grammatical_structure": "noun",
+    "translation": "fellow human being"
+  },
+  {
+    "word": "meedelen",
+    "grammatical_structure": "verb",
+    "translation": "to inform; to share; to communicate"
+  },
+  {
+    "word": "meedogenloos",
+    "grammatical_structure": "adjective",
+    "translation": "ruthless; merciless"
+  },
+  {
+    "word": "meeslepen",
+    "grammatical_structure": "verb",
+    "translation": "to drag along; to carry away"
+  },
+  {
+    "word": "melding",
+    "grammatical_structure": "noun",
+    "translation": "report; notification"
+  },
+  {
+    "word": "melodie",
+    "grammatical_structure": "noun",
+    "translation": "melody"
+  },
+  {
+    "word": "menig",
+    "grammatical_structure": "determiner; adjective",
+    "translation": "many a; numerous"
+  },
+  {
+    "word": "mentaal",
+    "grammatical_structure": "adjective",
+    "translation": "mental"
+  },
+  {
+    "word": "mentaliteit",
+    "grammatical_structure": "noun",
+    "translation": "mentality"
+  },
+  {
+    "word": "merendeel",
+    "grammatical_structure": "noun",
+    "translation": "majority; greater part"
+  },
+  {
+    "word": "merk",
+    "grammatical_structure": "noun",
+    "translation": "brand; mark"
+  },
+  {
+    "word": "middeleeuws",
+    "grammatical_structure": "adjective",
+    "translation": "medieval"
+  },
+  {
+    "word": "middernacht",
+    "grammatical_structure": "noun",
+    "translation": "midnight"
+  },
+  {
+    "word": "mijl",
+    "grammatical_structure": "noun",
+    "translation": "mile"
+  },
+  {
+    "word": "minachting",
+    "grammatical_structure": "noun",
+    "translation": "contempt"
+  },
+  {
+    "word": "minder",
+    "grammatical_structure": "adjective; adverb",
+    "translation": "less; fewer"
+  },
+  {
+    "word": "mini",
+    "grammatical_structure": "adjective; noun",
+    "translation": "mini; miniature"
+  },
+  {
+    "word": "minimaal",
+    "grammatical_structure": "adjective",
+    "translation": "minimal; minimum"
+  },
+  {
+    "word": "minimum",
+    "grammatical_structure": "noun",
+    "translation": "minimum"
+  },
+  {
+    "word": "misbruik",
+    "grammatical_structure": "noun",
+    "translation": "abuse; misuse"
+  },
+  {
+    "word": "misdadiger",
+    "grammatical_structure": "noun",
+    "translation": "criminal"
+  },
+  {
+    "word": "misleiden",
+    "grammatical_structure": "verb",
+    "translation": "to mislead; to deceive"
+  },
+  {
+    "word": "miss",
+    "grammatical_structure": "noun",
+    "translation": "miss"
+  },
+  {
+    "word": "misselijk",
+    "grammatical_structure": "adjective",
+    "translation": "nauseous; sick"
+  },
+  {
+    "word": "missie",
+    "grammatical_structure": "noun",
+    "translation": "mission"
+  },
+  {
+    "word": "mist",
+    "grammatical_structure": "noun",
+    "translation": "fog; mist"
+  },
+  {
+    "word": "moedig",
+    "grammatical_structure": "adjective",
+    "translation": "brave; courageous"
+  },
+  {
+    "word": "moeras",
+    "grammatical_structure": "noun",
+    "translation": "swamp; marsh"
+  },
+  {
+    "word": "monnik",
+    "grammatical_structure": "noun",
+    "translation": "monk"
+  },
+  {
+    "word": "monument",
+    "grammatical_structure": "noun",
+    "translation": "monument"
+  },
+  {
+    "word": "mopperen",
+    "grammatical_structure": "verb",
+    "translation": "to grumble; to complain"
+  },
+  {
+    "word": "motivatie",
+    "grammatical_structure": "noun",
+    "translation": "motivation"
+  },
+  {
+    "word": "munt",
+    "grammatical_structure": "noun",
+    "translation": "coin; mint"
+  },
+  {
+    "word": "mysterieus",
+    "grammatical_structure": "adjective",
+    "translation": "mysterious"
+  },
+  {
+    "word": "mystiek",
+    "grammatical_structure": "noun; adjective",
+    "translation": "mysticism; mystical"
+  },
+  {
+    "word": "nachtmerrie",
+    "grammatical_structure": "noun",
+    "translation": "nightmare"
+  },
+  {
+    "word": "naïef",
+    "grammatical_structure": "adjective",
+    "translation": "naive"
+  },
+  {
+    "word": "namiddag",
+    "grammatical_structure": "noun",
+    "translation": "afternoon"
+  },
+  {
+    "word": "nederlaag",
+    "grammatical_structure": "noun",
+    "translation": "defeat"
+  },
+  {
+    "word": "nestelen",
+    "grammatical_structure": "verb",
+    "translation": "to nestle; to settle"
+  },
+  {
+    "word": "netwerk",
+    "grammatical_structure": "noun",
+    "translation": "network"
+  },
+  {
+    "word": "nicht",
+    "grammatical_structure": "noun",
+    "translation": "niece; female cousin"
+  },
+  {
+    "word": "nier",
+    "grammatical_structure": "noun",
+    "translation": "kidney"
+  },
+  {
+    "word": "nijdig",
+    "grammatical_structure": "adjective",
+    "translation": "angry; spiteful"
+  },
+  {
+    "word": "nl.",
+    "grammatical_structure": "abbreviation",
+    "translation": "namely; viz."
+  },
+  {
+    "word": "no.",
+    "grammatical_structure": "abbreviation",
+    "translation": "number; no."
+  },
+  {
+    "word": "noodlot",
+    "grammatical_structure": "noun",
+    "translation": "fate; doom"
+  },
+  {
+    "word": "nors",
+    "grammatical_structure": "adjective",
+    "translation": "gruff; surly"
+  },
+  {
+    "word": "notaris",
+    "grammatical_structure": "noun",
+    "translation": "notary"
+  },
+  {
+    "word": "nutteloos",
+    "grammatical_structure": "adjective",
+    "translation": "useless"
+  },
+  {
+    "word": "ober",
+    "grammatical_structure": "noun",
+    "translation": "waiter"
+  },
+  {
+    "word": "observatie",
+    "grammatical_structure": "noun",
+    "translation": "observation"
+  },
+  {
+    "word": "offeren",
+    "grammatical_structure": "verb",
+    "translation": "to sacrifice; to offer up"
+  },
+  {
+    "word": "oké",
+    "grammatical_structure": "interjection; adjective",
+    "translation": "okay"
+  },
+  {
+    "word": "omroep",
+    "grammatical_structure": "noun",
+    "translation": "broadcasting organization; broadcaster"
+  },
+  {
+    "word": "omweg",
+    "grammatical_structure": "noun",
+    "translation": "detour"
+  },
+  {
+    "word": "omzetten",
+    "grammatical_structure": "verb",
+    "translation": "to convert; to turn over; to transpose"
+  },
+  {
+    "word": "onafgebroken",
+    "grammatical_structure": "adjective; adverb",
+    "translation": "uninterrupted; continuously"
+  },
+  {
+    "word": "onderdak",
+    "grammatical_structure": "noun",
+    "translation": "shelter; accommodation"
+  },
+  {
+    "word": "ondergeschikt",
+    "grammatical_structure": "adjective",
+    "translation": "subordinate; secondary"
+  },
+  {
+    "word": "ondergrond",
+    "grammatical_structure": "noun",
+    "translation": "subsoil; underground"
+  },
+  {
+    "word": "onderhandelen",
+    "grammatical_structure": "verb",
+    "translation": "to negotiate"
+  },
+  {
+    "word": "onderschatten",
+    "grammatical_structure": "verb",
+    "translation": "to underestimate"
+  },
+  {
+    "word": "onderscheiding",
+    "grammatical_structure": "noun",
+    "translation": "distinction; award"
+  },
+  {
+    "word": "ondertekenen",
+    "grammatical_structure": "verb",
+    "translation": "to sign"
+  },
+  {
+    "word": "ondervragen",
+    "grammatical_structure": "verb",
+    "translation": "to interrogate; to question"
+  },
+  {
+    "word": "ongeacht",
+    "grammatical_structure": "preposition",
+    "translation": "regardless of"
+  },
+  {
+    "word": "ongelijk",
+    "grammatical_structure": "noun; adjective",
+    "translation": "wrong; unequal; inequality"
+  },
+  {
+    "word": "ongelovig",
+    "grammatical_structure": "adjective; noun",
+    "translation": "unbelieving; non-believer"
+  },
+  {
+    "word": "ongemerkt",
+    "grammatical_structure": "adjective; adverb",
+    "translation": "unnoticed; unnoticedly"
+  },
+  {
+    "word": "onherroepelijk",
+    "grammatical_structure": "adjective; adverb",
+    "translation": "irrevocable; irrevocably"
+  },
+  {
+    "word": "onmacht",
+    "grammatical_structure": "noun",
+    "translation": "powerlessness; inability"
+  },
+  {
+    "word": "onnodig",
+    "grammatical_structure": "adjective",
+    "translation": "unnecessary"
+  },
+  {
+    "word": "onnozel",
+    "grammatical_structure": "adjective",
+    "translation": "foolish; naive"
+  },
+  {
+    "word": "onophoudelijk",
+    "grammatical_structure": "adjective; adverb",
+    "translation": "incessant; incessantly"
+  },
+  {
+    "word": "onrecht",
+    "grammatical_structure": "noun",
+    "translation": "injustice; wrong"
+  },
+  {
+    "word": "ontelbaar",
+    "grammatical_structure": "adjective",
+    "translation": "countless"
+  },
+  {
+    "word": "ontplooien",
+    "grammatical_structure": "verb",
+    "translation": "to unfold; to develop"
+  },
+  {
+    "word": "ontroeren",
+    "grammatical_structure": "verb",
+    "translation": "to move emotionally; to touch"
+  },
+  {
+    "word": "ontspannen",
+    "grammatical_structure": "verb/adjective",
+    "translation": "to relax; relaxed"
+  },
+  {
+    "word": "ontspanning",
+    "grammatical_structure": "noun",
+    "translation": "relaxation; recreation"
+  },
+  {
+    "word": "ontsteking",
+    "grammatical_structure": "noun",
+    "translation": "inflammation; ignition"
+  },
+  {
+    "word": "ontzettend",
+    "grammatical_structure": "adjective; adverb",
+    "translation": "terrible; terribly; very"
+  },
+  {
+    "word": "onvoorstelbaar",
+    "grammatical_structure": "adjective",
+    "translation": "unimaginable"
+  },
+  {
+    "word": "ooglid",
+    "grammatical_structure": "noun",
+    "translation": "eyelid"
+  },
+  {
+    "word": "oogpunt",
+    "grammatical_structure": "noun",
+    "translation": "point of view; perspective"
+  },
+  {
+    "word": "oostelijk",
+    "grammatical_structure": "adjective",
+    "translation": "eastern"
+  },
+  {
+    "word": "oosters",
+    "grammatical_structure": "adjective",
+    "translation": "Oriental; eastern"
+  },
+  {
+    "word": "opa",
+    "grammatical_structure": "noun",
+    "translation": "grandpa; grandfather"
+  },
+  {
+    "word": "opbergen",
+    "grammatical_structure": "verb",
+    "translation": "to put away; to store"
+  },
+  {
+    "word": "opdringen",
+    "grammatical_structure": "verb",
+    "translation": "to impose; to force on; to push forward"
+  },
+  {
+    "word": "opduiken",
+    "grammatical_structure": "verb",
+    "translation": "to pop up; to emerge; to dive up"
+  },
+  {
+    "word": "openbaring",
+    "grammatical_structure": "noun",
+    "translation": "revelation"
+  },
+  {
+    "word": "opendoen",
+    "grammatical_structure": "verb",
+    "translation": "to open"
+  },
+  {
+    "word": "openstaan",
+    "grammatical_structure": "verb",
+    "translation": "to be open; to remain open"
+  },
+  {
+    "word": "opeten",
+    "grammatical_structure": "verb",
+    "translation": "to eat up"
+  },
+  {
+    "word": "opeten",
+    "grammatical_structure": "verb",
+    "translation": "to eat up"
+  },
+  {
+    "word": "opleiden",
+    "grammatical_structure": "verb",
+    "translation": "to train; to educate"
+  },
+  {
+    "word": "opletten",
+    "grammatical_structure": "verb",
+    "translation": "to pay attention"
+  },
+  {
+    "word": "opluchten",
+    "grammatical_structure": "verb",
+    "translation": "to relieve"
+  },
+  {
+    "word": "oppassen",
+    "grammatical_structure": "verb",
+    "translation": "to watch out; to babysit"
+  },
+  {
+    "word": "oppositie",
+    "grammatical_structure": "noun",
+    "translation": "opposition"
+  },
+  {
+    "word": "oproep",
+    "grammatical_structure": "noun",
+    "translation": "call; appeal; summons"
+  },
+  {
+    "word": "opruimen",
+    "grammatical_structure": "verb",
+    "translation": "to clean up; to clear away"
+  },
+  {
+    "word": "opschieten",
+    "grammatical_structure": "verb",
+    "translation": "to hurry up; to get along; to make progress"
+  },
+  {
+    "word": "opstel",
+    "grammatical_structure": "noun",
+    "translation": "essay; composition"
+  },
+  {
+    "word": "opstelling",
+    "grammatical_structure": "noun",
+    "translation": "arrangement; line-up; setup"
+  },
+  {
+    "word": "opstijgen",
+    "grammatical_structure": "verb",
+    "translation": "to take off; to rise"
+  },
+  {
+    "word": "opvoeren",
+    "grammatical_structure": "verb",
+    "translation": "to perform; to increase; to stage"
+  },
+  {
+    "word": "ordenen",
+    "grammatical_structure": "verb",
+    "translation": "to order; to arrange"
+  },
+  {
+    "word": "order",
+    "grammatical_structure": "noun",
+    "translation": "order"
+  },
+  {
+    "word": "organisch",
+    "grammatical_structure": "adjective",
+    "translation": "organic"
+  },
+  {
+    "word": "orgasme",
+    "grammatical_structure": "noun",
+    "translation": "orgasm"
+  },
+  {
+    "word": "oriëntatie",
+    "grammatical_structure": "noun",
+    "translation": "orientation"
+  },
+  {
+    "word": "oriënteren",
+    "grammatical_structure": "verb",
+    "translation": "to orient; to familiarize"
+  },
+  {
+    "word": "origineel",
+    "grammatical_structure": "adjective; noun",
+    "translation": "original"
+  },
+  {
+    "word": "orkest",
+    "grammatical_structure": "noun",
+    "translation": "orchestra"
+  },
+  {
+    "word": "ouderdom",
+    "grammatical_structure": "noun",
+    "translation": "old age; age"
+  },
+  {
+    "word": "oudheid",
+    "grammatical_structure": "noun",
+    "translation": "antiquity; ancient times"
+  },
+  {
+    "word": "oven",
+    "grammatical_structure": "noun",
+    "translation": "oven"
+  },
+  {
+    "word": "overdracht",
+    "grammatical_structure": "noun",
+    "translation": "transfer; transmission"
+  },
+  {
+    "word": "overdragen",
+    "grammatical_structure": "verb",
+    "translation": "to transfer; to transmit; to hand over"
+  },
+  {
+    "word": "overdreven",
+    "grammatical_structure": "adjective",
+    "translation": "exaggerated"
+  },
+  {
+    "word": "overeen",
+    "grammatical_structure": "adverb",
+    "translation": "agreed; in agreement"
+  },
+  {
+    "word": "overeenkomstig",
+    "grammatical_structure": "preposition; adjective",
+    "translation": "according to; corresponding"
+  },
+  {
+    "word": "overgave",
+    "grammatical_structure": "noun",
+    "translation": "surrender; abandonment"
+  },
+  {
+    "word": "overgeven",
+    "grammatical_structure": "verb",
+    "translation": "to vomit; to surrender; to hand over"
+  },
+  {
+    "word": "overleggen",
+    "grammatical_structure": "verb",
+    "translation": "to consult; to confer; to submit"
+  },
+  {
+    "word": "overleveren",
+    "grammatical_structure": "verb",
+    "translation": "to hand down; to deliver up"
+  },
+  {
+    "word": "overschrijden",
+    "grammatical_structure": "verb",
+    "translation": "to exceed; to cross"
+  },
+  {
+    "word": "overslaan",
+    "grammatical_structure": "verb",
+    "translation": "to skip; to strike over; to spread over"
+  },
+  {
+    "word": "oversteken",
+    "grammatical_structure": "verb",
+    "translation": "to cross"
+  },
+  {
+    "word": "overtreding",
+    "grammatical_structure": "noun",
+    "translation": "offense; violation"
+  },
+  {
+    "word": "overtreffen",
+    "grammatical_structure": "verb",
+    "translation": "to surpass; to exceed"
+  },
+  {
+    "word": "overvloedig",
+    "grammatical_structure": "adjective",
+    "translation": "abundant; plentiful"
+  },
+  {
+    "word": "overwegend",
+    "grammatical_structure": "adjective; adverb",
+    "translation": "predominant; mostly"
+  },
+  {
+    "word": "paars",
+    "grammatical_structure": "adjective; noun",
+    "translation": "purple"
+  },
+  {
+    "word": "palm",
+    "grammatical_structure": "noun",
+    "translation": "palm; palm tree"
+  },
+  {
+    "word": "pand",
+    "grammatical_structure": "noun",
+    "translation": "building; property; pawn"
+  },
+  {
+    "word": "paranormaal",
+    "grammatical_structure": "adjective",
+    "translation": "paranormal"
+  },
+  {
+    "word": "parfum",
+    "grammatical_structure": "noun",
+    "translation": "perfume"
+  },
+  {
+    "word": "paspoort",
+    "grammatical_structure": "noun",
+    "translation": "passport"
+  },
+  {
+    "word": "pauze",
+    "grammatical_structure": "noun",
+    "translation": "pause; break"
+  },
+  {
+    "word": "pedagogisch",
+    "grammatical_structure": "adjective",
+    "translation": "pedagogical; educational"
+  },
+  {
+    "word": "peil",
+    "grammatical_structure": "noun",
+    "translation": "level; gauge"
+  },
+  {
+    "word": "penis",
+    "grammatical_structure": "noun",
+    "translation": "penis"
+  },
+  {
+    "word": "pensioen",
+    "grammatical_structure": "noun",
+    "translation": "pension; retirement"
+  },
+  {
+    "word": "personage",
+    "grammatical_structure": "noun",
+    "translation": "character; personage"
+  },
+  {
+    "word": "pest",
+    "grammatical_structure": "noun",
+    "translation": "plague; pest"
+  },
+  {
+    "word": "piekeren",
+    "grammatical_structure": "verb",
+    "translation": "to worry; to brood"
+  },
+  {
+    "word": "piepen",
+    "grammatical_structure": "verb",
+    "translation": "to squeak; to beep"
+  },
+  {
+    "word": "pikken",
+    "grammatical_structure": "verb",
+    "translation": "to peck; to steal; to tolerate"
+  },
+  {
+    "word": "plak",
+    "grammatical_structure": "noun",
+    "translation": "slice; place; patch"
+  },
+  {
+    "word": "plantage",
+    "grammatical_structure": "noun",
+    "translation": "plantation"
+  },
+  {
+    "word": "plas",
+    "grammatical_structure": "noun",
+    "translation": "puddle; lake; pee"
+  },
+  {
+    "word": "plooi",
+    "grammatical_structure": "noun",
+    "translation": "fold; crease"
+  },
+  {
+    "word": "podium",
+    "grammatical_structure": "noun",
+    "translation": "stage; platform"
+  },
+  {
+    "word": "pond",
+    "grammatical_structure": "noun",
+    "translation": "pound"
+  },
+  {
+    "word": "pony",
+    "grammatical_structure": "noun",
+    "translation": "pony"
+  },
+  {
+    "word": "portefeuille",
+    "grammatical_structure": "noun",
+    "translation": "wallet; portfolio"
+  },
+  {
+    "word": "potentieel",
+    "grammatical_structure": "adjective; noun",
+    "translation": "potential"
+  },
+  {
+    "word": "potlood",
+    "grammatical_structure": "noun",
+    "translation": "pencil"
+  },
+  {
+    "word": "predikant",
+    "grammatical_structure": "noun",
+    "translation": "minister; preacher"
+  },
+  {
+    "word": "premier",
+    "grammatical_structure": "noun",
+    "translation": "prime minister; premier"
+  },
+  {
+    "word": "pretentie",
+    "grammatical_structure": "noun",
+    "translation": "pretension; claim"
+  },
+  {
+    "word": "producent",
+    "grammatical_structure": "noun",
+    "translation": "producer; manufacturer"
+  },
+  {
+    "word": "proefpersoon",
+    "grammatical_structure": "noun",
+    "translation": "test subject"
+  },
+  {
+    "word": "progressief",
+    "grammatical_structure": "adjective",
+    "translation": "progressive"
+  },
+  {
+    "word": "projecteren",
+    "grammatical_structure": "verb",
+    "translation": "to project"
+  },
+  {
+    "word": "prompt",
+    "grammatical_structure": "adjective; adverb",
+    "translation": "prompt; promptly"
+  },
+  {
+    "word": "propaganda",
+    "grammatical_structure": "noun",
+    "translation": "propaganda"
+  },
+  {
+    "word": "proza",
+    "grammatical_structure": "noun",
+    "translation": "prose"
+  },
+  {
+    "word": "publiciteit",
+    "grammatical_structure": "noun",
+    "translation": "publicity; advertising"
+  },
+  {
+    "word": "raket",
+    "grammatical_structure": "noun",
+    "translation": "rocket; missile"
+  },
+  {
+    "word": "rangschikken",
+    "grammatical_structure": "verb",
+    "translation": "to arrange; to classify"
+  },
+  {
+    "word": "rapen",
+    "grammatical_structure": "verb",
+    "translation": "to pick up; to gather"
+  },
+  {
+    "word": "ratelen",
+    "grammatical_structure": "verb",
+    "translation": "to rattle; to chatter"
+  },
+  {
+    "word": "realistisch",
+    "grammatical_structure": "adjective",
+    "translation": "realistic"
+  },
+  {
+    "word": "rechter",
+    "grammatical_structure": "noun; adjective",
+    "translation": "judge; right-hand"
+  },
+  {
+    "word": "rechtvaardig",
+    "grammatical_structure": "adjective",
+    "translation": "just; fair"
+  },
+  {
+    "word": "rector",
+    "grammatical_structure": "noun",
+    "translation": "rector"
+  },
+  {
+    "word": "redacteur",
+    "grammatical_structure": "noun",
+    "translation": "editor"
+  },
+  {
+    "word": "reduceren",
+    "grammatical_structure": "verb",
+    "translation": "to reduce"
+  },
+  {
+    "word": "regio",
+    "grammatical_structure": "noun",
+    "translation": "region"
+  },
+  {
+    "word": "reiziger",
+    "grammatical_structure": "noun",
+    "translation": "traveler; passenger"
+  },
+  {
+    "word": "rekenschap",
+    "grammatical_structure": "noun",
+    "translation": "accountability; account"
+  },
+  {
+    "word": "research",
+    "grammatical_structure": "noun",
+    "translation": "research"
+  },
+  {
+    "word": "reserve",
+    "grammatical_structure": "noun; adjective",
+    "translation": "reserve; spare"
+  },
+  {
+    "word": "resp.",
+    "grammatical_structure": "abbreviation",
+    "translation": "respectively"
+  },
+  {
+    "word": "respecteren",
+    "grammatical_structure": "verb",
+    "translation": "to respect"
+  },
+  {
+    "word": "resteren",
+    "grammatical_structure": "verb",
+    "translation": "to remain"
+  },
+  {
+    "word": "resulteren",
+    "grammatical_structure": "verb",
+    "translation": "to result"
+  },
+  {
+    "word": "revolver",
+    "grammatical_structure": "noun",
+    "translation": "revolver"
+  },
+  {
+    "word": "richtlijn",
+    "grammatical_structure": "noun",
+    "translation": "guideline; directive"
+  },
+  {
+    "word": "ridder",
+    "grammatical_structure": "noun",
+    "translation": "knight"
+  },
+  {
+    "word": "riet",
+    "grammatical_structure": "noun",
+    "translation": "reed"
+  },
+  {
+    "word": "rillen",
+    "grammatical_structure": "verb",
+    "translation": "to shiver"
+  },
+  {
+    "word": "rimpel",
+    "grammatical_structure": "noun",
+    "translation": "wrinkle; ripple"
+  },
+  {
+    "word": "rit",
+    "grammatical_structure": "noun",
+    "translation": "ride; trip"
+  },
+  {
+    "word": "roeien",
+    "grammatical_structure": "verb",
+    "translation": "to row"
+  },
+  {
+    "word": "rommel",
+    "grammatical_structure": "noun",
+    "translation": "mess; junk"
+  },
+  {
+    "word": "romp",
+    "grammatical_structure": "noun",
+    "translation": "trunk; torso; hull"
+  },
+  {
+    "word": "roosteren",
+    "grammatical_structure": "verb",
+    "translation": "to roast; to grill"
+  },
+  {
+    "word": "rot",
+    "grammatical_structure": "adjective; noun",
+    "translation": "rotten; lousy; squad"
+  },
+  {
+    "word": "route",
+    "grammatical_structure": "noun",
+    "translation": "route"
+  },
+  {
+    "word": "ruil",
+    "grammatical_structure": "noun",
+    "translation": "exchange; swap"
+  },
+  {
+    "word": "ruilen",
+    "grammatical_structure": "verb",
+    "translation": "to exchange; to swap"
+  },
+  {
+    "word": "ruïne",
+    "grammatical_structure": "noun",
+    "translation": "ruin"
+  },
+  {
+    "word": "ruisen",
+    "grammatical_structure": "verb",
+    "translation": "to rustle; to murmur; to hiss"
+  },
+  {
+    "word": "ruit",
+    "grammatical_structure": "noun",
+    "translation": "windowpane; diamond shape"
+  },
+  {
+    "word": "saai",
+    "grammatical_structure": "adjective",
+    "translation": "boring; dull"
+  },
+  {
+    "word": "sanctie",
+    "grammatical_structure": "noun",
+    "translation": "sanction; penalty"
+  },
+  {
+    "word": "saus",
+    "grammatical_structure": "noun",
+    "translation": "sauce"
+  },
+  {
+    "word": "schatting",
+    "grammatical_structure": "noun",
+    "translation": "estimate; estimation"
+  },
+  {
+    "word": "schemering",
+    "grammatical_structure": "noun",
+    "translation": "twilight; dusk"
+  },
+  {
+    "word": "schets",
+    "grammatical_structure": "noun",
+    "translation": "sketch; outline"
+  },
+  {
+    "word": "schijf",
+    "grammatical_structure": "noun",
+    "translation": "disc; slice"
+  },
+  {
+    "word": "schim",
+    "grammatical_structure": "noun",
+    "translation": "shadow; ghost"
+  },
+  {
+    "word": "scholengemeenschap",
+    "grammatical_structure": "noun",
+    "translation": "school community; comprehensive school"
+  },
+  {
+    "word": "schommelen",
+    "grammatical_structure": "verb",
+    "translation": "to swing; to fluctuate"
+  },
+  {
+    "word": "schotel",
+    "grammatical_structure": "noun",
+    "translation": "dish; saucer; satellite dish"
+  },
+  {
+    "word": "schrapen",
+    "grammatical_structure": "verb",
+    "translation": "to scrape"
+  },
+  {
+    "word": "schreien",
+    "grammatical_structure": "verb",
+    "translation": "to cry; to weep"
+  },
+  {
+    "word": "Schrift",
+    "grammatical_structure": "noun",
+    "translation": "Scripture; writing"
+  },
+  {
+    "word": "schuifelen",
+    "grammatical_structure": "verb",
+    "translation": "to shuffle"
+  },
+  {
+    "word": "schuilplaats",
+    "grammatical_structure": "noun",
+    "translation": "hiding place; shelter"
+  },
+  {
+    "word": "sectie",
+    "grammatical_structure": "noun",
+    "translation": "section"
+  },
+  {
+    "word": "secundair",
+    "grammatical_structure": "adjective",
+    "translation": "secondary"
+  },
+  {
+    "word": "selecteren",
+    "grammatical_structure": "verb",
+    "translation": "to select"
+  },
+  {
+    "word": "sensatie",
+    "grammatical_structure": "noun",
+    "translation": "sensation"
+  },
+  {
+    "word": "sierlijk",
+    "grammatical_structure": "adjective",
+    "translation": "graceful; elegant"
+  },
+  {
+    "word": "signaleren",
+    "grammatical_structure": "verb",
+    "translation": "to signal; to notice; to report"
+  },
+  {
+    "word": "slaken",
+    "grammatical_structure": "verb",
+    "translation": "to utter; to let out"
+  },
+  {
+    "word": "slaperig",
+    "grammatical_structure": "adjective",
+    "translation": "sleepy"
+  },
+  {
+    "word": "slavernij",
+    "grammatical_structure": "noun",
+    "translation": "slavery"
+  },
+  {
+    "word": "slenteren",
+    "grammatical_structure": "verb",
+    "translation": "to stroll; to saunter"
+  },
+  {
+    "word": "sleuren",
+    "grammatical_structure": "verb",
+    "translation": "to drag; to haul"
+  },
+  {
+    "word": "sloot",
+    "grammatical_structure": "noun",
+    "translation": "ditch"
+  },
+  {
+    "word": "slordig",
+    "grammatical_structure": "adjective",
+    "translation": "sloppy; careless"
+  },
+  {
+    "word": "smeren",
+    "grammatical_structure": "verb",
+    "translation": "to smear; to lubricate; to spread"
+  },
+  {
+    "word": "sneuvelen",
+    "grammatical_structure": "verb",
+    "translation": "to fall in battle; to be killed"
+  },
+  {
+    "word": "socioloog",
+    "grammatical_structure": "noun",
+    "translation": "sociologist"
+  },
+  {
+    "word": "sok",
+    "grammatical_structure": "noun",
+    "translation": "sock"
+  },
+  {
+    "word": "solidariteit",
+    "grammatical_structure": "noun",
+    "translation": "solidarity"
+  },
+  {
+    "word": "sorry",
+    "grammatical_structure": "interjection",
+    "translation": "sorry"
+  },
+  {
+    "word": "Spaans",
+    "grammatical_structure": "adjective; noun",
+    "translation": "Spanish"
+  },
+  {
+    "word": "spatten",
+    "grammatical_structure": "verb",
+    "translation": "to splash; to splatter"
+  },
+  {
+    "word": "speelgoed",
+    "grammatical_structure": "noun",
+    "translation": "toy; toys"
+  },
+  {
+    "word": "speels",
+    "grammatical_structure": "adjective",
+    "translation": "playful"
+  },
+  {
+    "word": "spelling",
+    "grammatical_structure": "noun",
+    "translation": "spelling"
+  },
+  {
+    "word": "spijt",
+    "grammatical_structure": "noun",
+    "translation": "regret"
+  },
+  {
+    "word": "spleet",
+    "grammatical_structure": "noun",
+    "translation": "crack; slit"
+  },
+  {
+    "word": "spook",
+    "grammatical_structure": "noun",
+    "translation": "ghost"
+  },
+  {
+    "word": "spot",
+    "grammatical_structure": "noun",
+    "translation": "mockery; spotlight"
+  },
+  {
+    "word": "staatssecretaris",
+    "grammatical_structure": "noun",
+    "translation": "state secretary; junior minister"
+  },
+  {
+    "word": "stamelen",
+    "grammatical_structure": "verb",
+    "translation": "to stammer; to stutter"
+  },
+  {
+    "word": "stampen",
+    "grammatical_structure": "verb",
+    "translation": "to stamp; to pound"
+  },
+  {
+    "word": "star",
+    "grammatical_structure": "adjective",
+    "translation": "rigid; fixed"
+  },
+  {
+    "word": "start",
+    "grammatical_structure": "noun",
+    "translation": "start"
+  },
+  {
+    "word": "state",
+    "grammatical_structure": "noun",
+    "translation": "state; estate"
+  },
+  {
+    "word": "sterkte",
+    "grammatical_structure": "noun",
+    "translation": "strength; good luck"
+  },
+  {
+    "word": "stiekem",
+    "grammatical_structure": "adjective; adverb",
+    "translation": "secret; secretly"
+  },
+  {
+    "word": "stier",
+    "grammatical_structure": "noun",
+    "translation": "bull"
+  },
+  {
+    "word": "stikken",
+    "grammatical_structure": "verb",
+    "translation": "to choke; to suffocate"
+  },
+  {
+    "word": "stilstand",
+    "grammatical_structure": "noun",
+    "translation": "standstill"
+  },
+  {
+    "word": "stoet",
+    "grammatical_structure": "noun",
+    "translation": "procession; parade"
+  },
+  {
+    "word": "stoot",
+    "grammatical_structure": "noun",
+    "translation": "push; blow; shock"
+  },
+  {
+    "word": "stralend",
+    "grammatical_structure": "adjective",
+    "translation": "radiant; shining"
+  },
+  {
+    "word": "straling",
+    "grammatical_structure": "noun",
+    "translation": "radiation"
+  },
+  {
+    "word": "strategie",
+    "grammatical_structure": "noun",
+    "translation": "strategy"
+  },
+  {
+    "word": "strategisch",
+    "grammatical_structure": "adjective",
+    "translation": "strategic"
+  },
+  {
+    "word": "strekking",
+    "grammatical_structure": "noun",
+    "translation": "meaning; tendency; purport"
+  },
+  {
+    "word": "stress",
+    "grammatical_structure": "noun",
+    "translation": "stress"
+  },
+  {
+    "word": "stro",
+    "grammatical_structure": "noun",
+    "translation": "straw"
+  },
+  {
+    "word": "strooien",
+    "grammatical_structure": "verb",
+    "translation": "to scatter; to sprinkle"
+  },
+  {
+    "word": "subject",
+    "grammatical_structure": "noun",
+    "translation": "subject"
+  },
+  {
+    "word": "subsidie",
+    "grammatical_structure": "noun",
+    "translation": "subsidy; grant"
+  },
+  {
+    "word": "sultan",
+    "grammatical_structure": "noun",
+    "translation": "sultan"
+  },
+  {
+    "word": "sussen",
+    "grammatical_structure": "verb",
+    "translation": "to soothe; to calm"
+  },
+  {
+    "word": "symbolisch",
+    "grammatical_structure": "adjective",
+    "translation": "symbolic"
+  },
+  {
+    "word": "sympathiek",
+    "grammatical_structure": "adjective",
+    "translation": "sympathetic; likeable"
+  },
+  {
+    "word": "taai",
+    "grammatical_structure": "adjective",
+    "translation": "tough; chewy; tenacious"
+  },
+  {
+    "word": "taalgebruik",
+    "grammatical_structure": "noun",
+    "translation": "language use; wording"
+  },
+  {
+    "word": "tabak",
+    "grammatical_structure": "noun",
+    "translation": "tobacco"
+  },
+  {
+    "word": "tablet",
+    "grammatical_structure": "noun",
+    "translation": "tablet"
+  },
+  {
+    "word": "tafereel",
+    "grammatical_structure": "noun",
+    "translation": "scene; tableau"
+  },
+  {
+    "word": "tandarts",
+    "grammatical_structure": "noun",
+    "translation": "dentist"
+  },
+  {
+    "word": "technologie",
+    "grammatical_structure": "noun",
+    "translation": "technology"
+  },
+  {
+    "word": "tegenzin",
+    "grammatical_structure": "noun",
+    "translation": "reluctance; aversion"
+  },
+  {
+    "word": "tehuis",
+    "grammatical_structure": "noun",
+    "translation": "home; institution"
+  },
+  {
+    "word": "tendens",
+    "grammatical_structure": "noun",
+    "translation": "tendency; trend"
+  },
+  {
+    "word": "tentoonstelling",
+    "grammatical_structure": "noun",
+    "translation": "exhibition"
+  },
+  {
+    "word": "terloops",
+    "grammatical_structure": "adverb",
+    "translation": "incidentally; in passing"
+  },
+  {
+    "word": "testament",
+    "grammatical_structure": "noun",
+    "translation": "will; testament"
+  },
+  {
+    "word": "testen",
+    "grammatical_structure": "verb",
+    "translation": "to test"
+  },
+  {
+    "word": "teug",
+    "grammatical_structure": "noun",
+    "translation": "sip; gulp"
+  },
+  {
+    "word": "tevergeefs",
+    "grammatical_structure": "adverb",
+    "translation": "in vain"
+  },
+  {
+    "word": "tevoorschijn",
+    "grammatical_structure": "adverb",
+    "translation": "into view; forth"
+  },
+  {
+    "word": "teweegbrengen",
+    "grammatical_structure": "verb",
+    "translation": "to bring about; to cause"
+  },
+  {
+    "word": "tezamen",
+    "grammatical_structure": "adverb",
+    "translation": "together"
+  },
+  {
+    "word": "theelepel",
+    "grammatical_structure": "noun",
+    "translation": "teaspoon"
+  },
+  {
+    "word": "theoloog",
+    "grammatical_structure": "noun",
+    "translation": "theologian"
+  },
+  {
+    "word": "therapeut",
+    "grammatical_structure": "noun",
+    "translation": "therapist"
+  },
+  {
+    "word": "tiende",
+    "grammatical_structure": "numeral; adjective",
+    "translation": "tenth"
+  },
+  {
+    "word": "timmeren",
+    "grammatical_structure": "verb",
+    "translation": "to hammer; to build"
+  },
+  {
+    "word": "tint",
+    "grammatical_structure": "noun",
+    "translation": "shade; tint"
+  },
+  {
+    "word": "toedienen",
+    "grammatical_structure": "verb",
+    "translation": "to administer; to give"
+  },
+  {
+    "word": "toekijken",
+    "grammatical_structure": "verb",
+    "translation": "to watch; to look on"
+  },
+  {
+    "word": "toename",
+    "grammatical_structure": "noun",
+    "translation": "increase"
+  },
+  {
+    "word": "toespraak",
+    "grammatical_structure": "noun",
+    "translation": "speech; address"
+  },
+  {
+    "word": "toewijzen",
+    "grammatical_structure": "verb",
+    "translation": "to assign; to allocate"
+  },
+  {
+    "word": "toezien",
+    "grammatical_structure": "verb",
+    "translation": "to supervise; to see to"
+  },
+  {
+    "word": "transport",
+    "grammatical_structure": "noun",
+    "translation": "transportation; transport"
+  },
+  {
+    "word": "triomf",
+    "grammatical_structure": "noun",
+    "translation": "triumph"
+  },
+  {
+    "word": "triomfantelijk",
+    "grammatical_structure": "adjective; adverb",
+    "translation": "triumphant; triumphantly"
+  },
+  {
+    "word": "troon",
+    "grammatical_structure": "noun",
+    "translation": "throne"
+  },
+  {
+    "word": "tropisch",
+    "grammatical_structure": "adjective",
+    "translation": "tropical"
+  },
+  {
+    "word": "trottoir",
+    "grammatical_structure": "noun",
+    "translation": "pavement; sidewalk"
+  },
+  {
+    "word": "truc",
+    "grammatical_structure": "noun",
+    "translation": "trick"
+  },
+  {
+    "word": "tweetal",
+    "grammatical_structure": "noun",
+    "translation": "pair; two"
+  },
+  {
+    "word": "typeren",
+    "grammatical_structure": "verb",
+    "translation": "to characterize; to typify"
+  },
+  {
+    "word": "uitbundig",
+    "grammatical_structure": "adjective",
+    "translation": "exuberant; lavish"
+  },
+  {
+    "word": "uitdagen",
+    "grammatical_structure": "verb",
+    "translation": "to challenge"
+  },
+  {
+    "word": "uiteenzetten",
+    "grammatical_structure": "verb",
+    "translation": "to explain; to set out"
+  },
+  {
+    "word": "uiteenzetting",
+    "grammatical_structure": "noun",
+    "translation": "explanation; exposition"
+  },
+  {
+    "word": "uiteinde",
+    "grammatical_structure": "noun",
+    "translation": "end; extremity"
+  },
+  {
+    "word": "uitgang",
+    "grammatical_structure": "noun",
+    "translation": "exit; starting point"
+  },
+  {
+    "word": "uitgeput",
+    "grammatical_structure": "adjective",
+    "translation": "exhausted; depleted"
+  },
+  {
+    "word": "uitgestrekt",
+    "grammatical_structure": "adjective",
+    "translation": "extensive; stretched out"
+  },
+  {
+    "word": "uitgroeien",
+    "grammatical_structure": "verb",
+    "translation": "to grow into; to develop into"
+  },
+  {
+    "word": "uithalen",
+    "grammatical_structure": "verb",
+    "translation": "to take out; to lash out; to pull off"
+  },
+  {
+    "word": "uitkiezen",
+    "grammatical_structure": "verb",
+    "translation": "to choose; to select"
+  },
+  {
+    "word": "uitroepen",
+    "grammatical_structure": "verb",
+    "translation": "to exclaim; to proclaim"
+  },
+  {
+    "word": "uitslag",
+    "grammatical_structure": "noun",
+    "translation": "result; rash"
+  },
+  {
+    "word": "uitstappen",
+    "grammatical_structure": "verb",
+    "translation": "to get out; to step out"
+  },
+  {
+    "word": "uitstellen",
+    "grammatical_structure": "verb",
+    "translation": "to postpone"
+  },
+  {
+    "word": "uittrekken",
+    "grammatical_structure": "verb",
+    "translation": "to take off; to pull out; to allocate"
+  },
+  {
+    "word": "uitvallen",
+    "grammatical_structure": "verb",
+    "translation": "to fail; to drop out; to lash out"
+  },
+  {
+    "word": "uitvinding",
+    "grammatical_structure": "noun",
+    "translation": "invention"
+  },
+  {
+    "word": "uitweg",
+    "grammatical_structure": "noun",
+    "translation": "way out; solution"
+  },
+  {
+    "word": "uitzending",
+    "grammatical_structure": "noun",
+    "translation": "broadcast; transmission; mission"
+  },
+  {
+    "word": "uitzoeken",
+    "grammatical_structure": "verb",
+    "translation": "to find out; to sort out"
+  },
+  {
+    "word": "unie",
+    "grammatical_structure": "noun",
+    "translation": "union"
+  },
+  {
+    "word": "universitair",
+    "grammatical_structure": "adjective",
+    "translation": "university; academic"
+  },
+  {
+    "word": "urenlang",
+    "grammatical_structure": "adverb",
+    "translation": "for hours"
+  },
+  {
+    "word": "vaas",
+    "grammatical_structure": "noun",
+    "translation": "vase"
+  },
+  {
+    "word": "vakbeweging",
+    "grammatical_structure": "noun",
+    "translation": "trade union movement"
+  },
+  {
+    "word": "vakbond",
+    "grammatical_structure": "noun",
+    "translation": "trade union"
+  },
+  {
+    "word": "vanwaar",
+    "grammatical_structure": "adverb",
+    "translation": "from where; why"
+  },
+  {
+    "word": "vastbesloten",
+    "grammatical_structure": "adjective",
+    "translation": "determined"
+  },
+  {
+    "word": "vellen",
+    "grammatical_structure": "verb",
+    "translation": "to fell; to pass judgment; to sheet"
+  },
+  {
+    "word": "verantwoorden",
+    "grammatical_structure": "verb",
+    "translation": "to justify; to account for"
+  },
+  {
+    "word": "verbaal",
+    "grammatical_structure": "adjective",
+    "translation": "verbal"
+  },
+  {
+    "word": "verbeelden",
+    "grammatical_structure": "verb",
+    "translation": "to imagine; to depict"
+  },
+  {
+    "word": "verblinden",
+    "grammatical_structure": "verb",
+    "translation": "to blind; to dazzle"
+  },
+  {
+    "word": "verbond",
+    "grammatical_structure": "noun",
+    "translation": "alliance; covenant"
+  },
+  {
+    "word": "verbouwen",
+    "grammatical_structure": "verb",
+    "translation": "to renovate; to grow crops"
+  },
+  {
+    "word": "verdacht",
+    "grammatical_structure": "adjective",
+    "translation": "suspicious; suspect"
+  },
+  {
+    "word": "verdienste",
+    "grammatical_structure": "noun",
+    "translation": "merit; credit"
+  },
+  {
+    "word": "verdoven",
+    "grammatical_structure": "verb",
+    "translation": "to numb; to anesthetize"
+  },
+  {
+    "word": "verdrinken",
+    "grammatical_structure": "verb",
+    "translation": "to drown"
+  },
+  {
+    "word": "verduidelijken",
+    "grammatical_structure": "verb",
+    "translation": "to clarify"
+  },
+  {
+    "word": "vereiste",
+    "grammatical_structure": "noun; adjective",
+    "translation": "requirement; required"
+  },
+  {
+    "word": "vereren",
+    "grammatical_structure": "verb",
+    "translation": "to honor; to worship"
+  },
+  {
+    "word": "verfijnen",
+    "grammatical_structure": "verb",
+    "translation": "to refine"
+  },
+  {
+    "word": "vergeefs",
+    "grammatical_structure": "adverb",
+    "translation": "in vain"
+  },
+  {
+    "word": "verhoging",
+    "grammatical_structure": "noun",
+    "translation": "increase; elevation"
+  },
+  {
+    "word": "verhoor",
+    "grammatical_structure": "noun",
+    "translation": "interrogation; hearing"
+  },
+  {
+    "word": "verjagen",
+    "grammatical_structure": "verb",
+    "translation": "to chase away; to drive off"
+  },
+  {
+    "word": "verkennen",
+    "grammatical_structure": "verb",
+    "translation": "to explore; to scout"
+  },
+  {
+    "word": "verkoper",
+    "grammatical_structure": "noun",
+    "translation": "seller; salesperson"
+  },
+  {
+    "word": "verleiding",
+    "grammatical_structure": "noun",
+    "translation": "temptation; seduction"
+  },
+  {
+    "word": "verlengen",
+    "grammatical_structure": "verb",
+    "translation": "to extend; to prolong"
+  },
+  {
+    "word": "verlof",
+    "grammatical_structure": "noun",
+    "translation": "leave; permission"
+  },
+  {
+    "word": "verlopen",
+    "grammatical_structure": "verb",
+    "translation": "to expire; to elapse; to proceed"
+  },
+  {
+    "word": "vermindering",
+    "grammatical_structure": "noun",
+    "translation": "reduction; decrease"
+  },
+  {
+    "word": "vermoeidheid",
+    "grammatical_structure": "noun",
+    "translation": "fatigue; tiredness"
+  },
+  {
+    "word": "vernielen",
+    "grammatical_structure": "verb",
+    "translation": "to destroy; to ruin"
+  },
+  {
+    "word": "vernieuwen",
+    "grammatical_structure": "verb",
+    "translation": "to renew; to innovate"
+  },
+  {
+    "word": "verontwaardiging",
+    "grammatical_structure": "noun",
+    "translation": "indignation; outrage"
+  },
+  {
+    "word": "verovering",
+    "grammatical_structure": "noun",
+    "translation": "conquest; capture"
+  },
+  {
+    "word": "verraad",
+    "grammatical_structure": "noun",
+    "translation": "treason; betrayal"
+  },
+  {
+    "word": "verrukkelijk",
+    "grammatical_structure": "adjective",
+    "translation": "delicious; delightful"
+  },
+  {
+    "word": "verscheuren",
+    "grammatical_structure": "verb",
+    "translation": "to tear apart"
+  },
+  {
+    "word": "verschrikken",
+    "grammatical_structure": "verb",
+    "translation": "to frighten; to be startled"
+  },
+  {
+    "word": "verstandelijk",
+    "grammatical_structure": "adjective",
+    "translation": "intellectual; mental"
+  },
+  {
+    "word": "versterking",
+    "grammatical_structure": "noun",
+    "translation": "reinforcement; strengthening"
+  },
+  {
+    "word": "verteren",
+    "grammatical_structure": "verb",
+    "translation": "to digest; to consume; to decompose"
+  },
+  {
+    "word": "verveling",
+    "grammatical_structure": "noun",
+    "translation": "boredom"
+  },
+  {
+    "word": "verven",
+    "grammatical_structure": "verb",
+    "translation": "to paint; to dye"
+  },
+  {
+    "word": "vervolg",
+    "grammatical_structure": "noun",
+    "translation": "sequel; continuation"
+  },
+  {
+    "word": "verwantschap",
+    "grammatical_structure": "noun",
+    "translation": "kinship; relationship"
+  },
+  {
+    "word": "verward",
+    "grammatical_structure": "adjective",
+    "translation": "confused; tangled"
+  },
+  {
+    "word": "verwisselen",
+    "grammatical_structure": "verb",
+    "translation": "to exchange; to confuse; to switch"
+  },
+  {
+    "word": "verwondering",
+    "grammatical_structure": "noun",
+    "translation": "amazement; wonder"
+  },
+  {
+    "word": "verzekering",
+    "grammatical_structure": "noun",
+    "translation": "insurance; assurance"
+  },
+  {
+    "word": "verzoenen",
+    "grammatical_structure": "verb",
+    "translation": "to reconcile"
+  },
+  {
+    "word": "verzwakken",
+    "grammatical_structure": "verb",
+    "translation": "to weaken"
+  },
+  {
+    "word": "verzwijgen",
+    "grammatical_structure": "verb",
+    "translation": "to conceal; to keep silent about"
+  },
+  {
+    "word": "vestiging",
+    "grammatical_structure": "noun",
+    "translation": "establishment; settlement; branch"
+  },
+  {
+    "word": "vet",
+    "grammatical_structure": "noun/adjective",
+    "translation": "fat; greasy; bold"
+  },
+  {
+    "word": "vijver",
+    "grammatical_structure": "noun",
+    "translation": "pond"
+  },
+  {
+    "word": "vingertop",
+    "grammatical_structure": "noun",
+    "translation": "fingertip"
+  },
+  {
+    "word": "viool",
+    "grammatical_structure": "noun",
+    "translation": "violin"
+  },
+  {
+    "word": "visioen",
+    "grammatical_structure": "noun",
+    "translation": "vision"
+  },
+  {
+    "word": "vitaal",
+    "grammatical_structure": "adjective",
+    "translation": "vital"
+  },
+  {
+    "word": "vloeistof",
+    "grammatical_structure": "noun",
+    "translation": "liquid"
+  },
+  {
+    "word": "voertuig",
+    "grammatical_structure": "noun",
+    "translation": "vehicle"
+  },
+  {
+    "word": "volop",
+    "grammatical_structure": "adverb",
+    "translation": "plenty; fully"
+  },
+  {
+    "word": "volslagen",
+    "grammatical_structure": "adjective",
+    "translation": "complete; utter"
+  },
+  {
+    "word": "vondst",
+    "grammatical_structure": "noun",
+    "translation": "find; discovery"
+  },
+  {
+    "word": "vonk",
+    "grammatical_structure": "noun",
+    "translation": "spark"
+  },
+  {
+    "word": "voogdij",
+    "grammatical_structure": "noun",
+    "translation": "guardianship"
+  },
+  {
+    "word": "vooraanstaand",
+    "grammatical_structure": "adjective",
+    "translation": "prominent; leading"
+  },
+  {
+    "word": "voorbaat",
+    "grammatical_structure": "noun",
+    "translation": "advance"
+  },
+  {
+    "word": "voordien",
+    "grammatical_structure": "adverb",
+    "translation": "before then; previously"
+  },
+  {
+    "word": "voorkomend",
+    "grammatical_structure": "adjective",
+    "translation": "courteous; obliging"
+  },
+  {
+    "word": "voorleggen",
+    "grammatical_structure": "verb",
+    "translation": "to present; to submit"
+  },
+  {
+    "word": "voorlezen",
+    "grammatical_structure": "verb",
+    "translation": "to read aloud"
+  },
+  {
+    "word": "voornemen",
+    "grammatical_structure": "noun; verb",
+    "translation": "intention; to intend"
+  },
+  {
+    "word": "vooroordeel",
+    "grammatical_structure": "noun",
+    "translation": "prejudice"
+  },
+  {
+    "word": "voorouder",
+    "grammatical_structure": "noun",
+    "translation": "ancestor"
+  },
+  {
+    "word": "voorouders",
+    "grammatical_structure": "noun plural",
+    "translation": "ancestors"
+  },
+  {
+    "word": "voorstander",
+    "grammatical_structure": "noun",
+    "translation": "supporter; proponent"
+  },
+  {
+    "word": "voortbestaan",
+    "grammatical_structure": "noun; verb",
+    "translation": "continued existence; to continue to exist"
+  },
+  {
+    "word": "voortgaan",
+    "grammatical_structure": "verb",
+    "translation": "to continue; to proceed"
+  },
+  {
+    "word": "voorval",
+    "grammatical_structure": "noun",
+    "translation": "incident; occurrence"
+  },
+  {
+    "word": "vork",
+    "grammatical_structure": "noun",
+    "translation": "fork"
+  },
+  {
+    "word": "vormgeving",
+    "grammatical_structure": "noun",
+    "translation": "design; styling"
+  },
+  {
+    "word": "vredig",
+    "grammatical_structure": "adjective",
+    "translation": "peaceful"
+  },
+  {
+    "word": "vreedzaam",
+    "grammatical_structure": "adjective",
+    "translation": "peaceful"
+  },
+  {
+    "word": "vreten",
+    "grammatical_structure": "verb",
+    "translation": "to devour; to eat greedily"
+  },
+  {
+    "word": "vriezen",
+    "grammatical_structure": "verb",
+    "translation": "to freeze"
+  },
+  {
+    "word": "vrijwilliger",
+    "grammatical_structure": "noun",
+    "translation": "volunteer"
+  },
+  {
+    "word": "vs.",
+    "grammatical_structure": "abbreviation",
+    "translation": "versus; vs."
+  },
+  {
+    "word": "waanzin",
+    "grammatical_structure": "noun",
+    "translation": "madness; insanity"
+  },
+  {
+    "word": "waarnemer",
+    "grammatical_structure": "noun",
+    "translation": "observer"
+  },
+  {
+    "word": "wapenen",
+    "grammatical_structure": "verb",
+    "translation": "to arm; to equip"
+  },
+  {
+    "word": "wapperen",
+    "grammatical_structure": "verb",
+    "translation": "to flutter; to wave"
+  },
+  {
+    "word": "weefsel",
+    "grammatical_structure": "noun",
+    "translation": "tissue; fabric"
+  },
+  {
+    "word": "weekblad",
+    "grammatical_structure": "noun",
+    "translation": "weekly magazine"
+  },
+  {
+    "word": "weerhouden",
+    "grammatical_structure": "verb",
+    "translation": "to withhold; to prevent; to deter"
+  },
+  {
+    "word": "weerklinken",
+    "grammatical_structure": "verb",
+    "translation": "to resound; to echo"
+  },
+  {
+    "word": "weerloos",
+    "grammatical_structure": "adjective",
+    "translation": "defenseless"
+  },
+  {
+    "word": "weghalen",
+    "grammatical_structure": "verb",
+    "translation": "to take away; to remove"
+  },
+  {
+    "word": "weigering",
+    "grammatical_structure": "noun",
+    "translation": "refusal"
+  },
+  {
+    "word": "weiland",
+    "grammatical_structure": "noun",
+    "translation": "meadow; pasture"
+  },
+  {
+    "word": "weren",
+    "grammatical_structure": "verb",
+    "translation": "to repel; to keep out"
+  },
+  {
+    "word": "werkgroep",
+    "grammatical_structure": "noun",
+    "translation": "working group"
+  },
+  {
+    "word": "werkloze",
+    "grammatical_structure": "noun",
+    "translation": "unemployed person"
+  },
+  {
+    "word": "wetboek",
+    "grammatical_structure": "noun",
+    "translation": "code of law"
+  },
+  {
+    "word": "wethouder",
+    "grammatical_structure": "noun",
+    "translation": "alderman; municipal executive"
+  },
+  {
+    "word": "wetsontwerp",
+    "grammatical_structure": "noun",
+    "translation": "bill; draft law"
+  },
+  {
+    "word": "wiegen",
+    "grammatical_structure": "verb",
+    "translation": "to rock; to cradle"
+  },
+  {
+    "word": "wijf",
+    "grammatical_structure": "noun",
+    "translation": "woman; bitch"
+  },
+  {
+    "word": "wijfje",
+    "grammatical_structure": "noun",
+    "translation": "female animal; little woman"
+  },
+  {
+    "word": "wippen",
+    "grammatical_structure": "verb",
+    "translation": "to seesaw; to hop; to have sex"
+  },
+  {
+    "word": "wiskunde",
+    "grammatical_structure": "noun",
+    "translation": "mathematics"
+  },
+  {
+    "word": "wonderbaarlijk",
+    "grammatical_structure": "adjective",
+    "translation": "miraculous; wonderful"
+  },
+  {
+    "word": "zaaien",
+    "grammatical_structure": "verb",
+    "translation": "to sow"
+  },
+  {
+    "word": "zadel",
+    "grammatical_structure": "noun",
+    "translation": "saddle"
+  },
+  {
+    "word": "zakenman",
+    "grammatical_structure": "noun",
+    "translation": "businessman"
+  },
+  {
+    "word": "zedelijk",
+    "grammatical_structure": "adjective",
+    "translation": "moral; decent"
+  },
+  {
+    "word": "zeeman",
+    "grammatical_structure": "noun",
+    "translation": "sailor"
+  },
+  {
+    "word": "zeg",
+    "grammatical_structure": "interjection",
+    "translation": "listen; say"
+  },
+  {
+    "word": "zegen",
+    "grammatical_structure": "noun",
+    "translation": "blessing"
+  },
+  {
+    "word": "zeil",
+    "grammatical_structure": "noun",
+    "translation": "sail; canvas"
+  },
+  {
+    "word": "zelfvertrouwen",
+    "grammatical_structure": "noun",
+    "translation": "self-confidence"
+  },
+  {
+    "word": "zendeling",
+    "grammatical_structure": "noun",
+    "translation": "missionary"
+  },
+  {
+    "word": "zender",
+    "grammatical_structure": "noun",
+    "translation": "sender; transmitter; broadcaster"
+  },
+  {
+    "word": "zestiende",
+    "grammatical_structure": "numeral; adjective",
+    "translation": "sixteenth"
+  },
+  {
+    "word": "zetel",
+    "grammatical_structure": "noun",
+    "translation": "seat"
+  },
+  {
+    "word": "zeuren",
+    "grammatical_structure": "verb",
+    "translation": "to nag; to whine"
+  },
+  {
+    "word": "zevende",
+    "grammatical_structure": "numeral; adjective",
+    "translation": "seventh"
+  },
+  {
+    "word": "zeventien",
+    "grammatical_structure": "numeral",
+    "translation": "seventeen"
+  },
+  {
+    "word": "zeventiende",
+    "grammatical_structure": "numeral; adjective",
+    "translation": "seventeenth"
+  },
+  {
+    "word": "zielig",
+    "grammatical_structure": "adjective",
+    "translation": "pitiful; pathetic"
+  },
+  {
+    "word": "zijkant",
+    "grammatical_structure": "noun",
+    "translation": "side"
+  },
+  {
+    "word": "zilver",
+    "grammatical_structure": "noun; adjective",
+    "translation": "silver"
+  },
+  {
+    "word": "zintuig",
+    "grammatical_structure": "noun",
+    "translation": "sense"
+  },
+  {
+    "word": "zoemen",
+    "grammatical_structure": "verb",
+    "translation": "to buzz; to hum"
+  },
+  {
+    "word": "zoen",
+    "grammatical_structure": "noun",
+    "translation": "kiss"
+  },
+  {
+    "word": "zondags",
+    "grammatical_structure": "adjective; adverb",
+    "translation": "Sunday; on Sundays"
+  },
+  {
+    "word": "zuinig",
+    "grammatical_structure": "adjective",
+    "translation": "frugal; economical"
+  },
+  {
+    "word": "zuurstof",
+    "grammatical_structure": "noun",
+    "translation": "oxygen"
+  },
+  {
+    "word": "zweten",
+    "grammatical_structure": "verb",
+    "translation": "to sweat"
+  }
+]

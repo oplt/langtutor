@@ -22,6 +22,7 @@ from backend.app.modules.skills.api import router as skills_router
 from backend.app.modules.extensions.api import router as extensions_router
 from backend.app.modules.rag.api.routes import router as rag_router
 from backend.app.modules.rag.api.ws import router as rag_ws_router
+from backend.app.modules.reading.api import router as reading_router
 
 
 def register_routes(app: FastAPI) -> None:
@@ -45,3 +46,4 @@ def register_routes(app: FastAPI) -> None:
     app.include_router(extensions_router)
     app.include_router(rag_router)
     app.include_router(rag_ws_router)
+    app.include_router(reading_router)

@@ -6,6 +6,8 @@ const PAGE_TITLES: Record<string, string> = {
   "/dashboard/tasks": "Practice tasks",
   "/dashboard/analytics": "Progress analytics",
   "/dashboard/routine": "Study plan",
+  "/dashboard/documents": "Study documents",
+  "/dashboard/reading": "Reading",
   "/dashboard/coach": "AI tutor",
   "/dashboard/settings": "Settings",
   "/dashboard/profile": "Profile",

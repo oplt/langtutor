@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+import logging
 import random
 import time
 from dataclasses import dataclass
@@ -19,6 +20,12 @@ from backend.app.modules.learning.mastery.models import KnowledgeType, Repetitio
 from backend.app.modules.learning.mastery.scheduler import SpacedRepetitionScheduler
 from backend.app.modules.stories.models import Story, StoryWord
 from backend.app.core.config import BASE_DIR
+
+logger = logging.getLogger(__name__)
+
+MAX_LEMMA_LENGTH = 128
+MAX_LEMMA_WORDS = 3
+_seed_failed = False
 
 
 LEVEL_DEFINITIONS: List[Dict[str, object]] = [
@@ -73,6 +80,7 @@ LEVEL_DEFINITIONS: List[Dict[str, object]] = [
 ]
 
 LEVEL_ORDER = [CEFRLevel.A1, CEFRLevel.A2, CEFRLevel.B1, CEFRLevel.B2, CEFRLevel.C1, CEFRLevel.C2]
+WORD_LEVELS_DIR = BASE_DIR.parent / "files" / "levels"
 
 STOPWORDS = {
     "de", "het", "een", "en", "ik", "jij", "je", "hij", "zij", "we", "wij", "jullie", "u",
@@ -169,6 +177,17 @@ def _normalize_word(value: str) -> str:
     return value.strip().lower()
 
 
+def _is_valid_seed_lemma(word: str) -> bool:
+    if not word or len(word) > MAX_LEMMA_LENGTH:
+        return False
+    lowered = word.lower()
+    if "made with" in lowered or "xodo pdf" in lowered:
+        return False
+    if word.count(" ") > MAX_LEMMA_WORDS:
+        return False
+    return True
+
+
 def _pick_title(level: CEFRLevel) -> str:
     options = TITLES.get(level) or ["Kort verhaal"]
     return random.choice(options)
@@ -198,29 +217,36 @@ def _compose_story(level: CEFRLevel, target_words: List[str], new_words: List[st
 
 
 async def ensure_words_seeded(db: AsyncSession) -> int:
+    global _seed_failed
+
+    if _seed_failed:
+        return 0
+
     existing = await db.execute(select(func.count(Word.id)))
     count = existing.scalar_one() or 0
     if count > 0:
         return 0
 
-    path = BASE_DIR / "files" / "dutchwordsordered.json"
-    payload = await asyncio.to_thread(json.loads, path.read_text(encoding="utf-8"))
-    items = payload.get("words", [])
     rows = []
-    for item in items:
-        word = _normalize_word(str(item.get("word", "")))
-        if not word:
-            continue
-        rank = int(item.get("rank", 0))
-        if rank <= 0:
-            continue
-        rows.append({
-            "lemma": word,
-            "rank": rank,
-            "level": level_for_rank(rank),
-        })
+    skipped = 0
+    rank = 1
+    level_paths = sorted(WORD_LEVELS_DIR.glob("*.json"))
+    for level, path in zip(LEVEL_ORDER, level_paths, strict=False):
+        items = await asyncio.to_thread(json.loads, path.read_text(encoding="utf-8"))
+        for item in items:
+            word = _normalize_word(str(item.get("word", "")))
+            if not _is_valid_seed_lemma(word):
+                if word:
+                    skipped += 1
+                continue
+            rows.append({"lemma": word, "rank": rank, "level": level})
+            rank += 1
+
+    if skipped:
+        logger.warning("word_seed_skipped_invalid count=%s", skipped)
 
     if not rows:
+        _seed_failed = True
         return 0
 
     try:
@@ -229,9 +255,17 @@ async def ensure_words_seeded(db: AsyncSession) -> int:
         from backend.app.modules.learning.response_cache import invalidate_levels_cache
 
         await invalidate_levels_cache()
+        logger.info("word_seed_completed count=%s skipped=%s", len(rows), skipped)
         return len(rows)
     except IntegrityError:
-        # Another request likely seeded in parallel.
+        await db.rollback()
+        return 0
+    except Exception:
+        logger.exception(
+            "word_seed_failed",
+            extra={"row_count": len(rows), "skipped": skipped},
+        )
+        _seed_failed = True
         await db.rollback()
         return 0
 

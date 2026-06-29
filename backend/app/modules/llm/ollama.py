@@ -16,6 +16,16 @@ from backend.app.modules.llm.errors import LLMConfigError, LLMNetworkError, LLMP
 from backend.app.modules.llm.http import request_json, stream_post_lines
 
 
+def _is_embedding_model(model_id: str) -> bool:
+    lowered = model_id.lower()
+    return any(token in lowered for token in ("embed", "bge-", "bge_", "nomic-embed"))
+
+
+def _prefer_chat_models(models: list[LLMModel]) -> list[LLMModel]:
+    chat_models = [model for model in models if not _is_embedding_model(model.id)]
+    return chat_models or models
+
+
 class OllamaClient(BaseLLMClient):
     async def health_check(self) -> LLMHealth:
         try:
@@ -48,11 +58,12 @@ class OllamaClient(BaseLLMClient):
                 f"Ollama model discovery failed with HTTP {status}."
             )
         raw_models = data.get("models") if isinstance(data, dict) else []
-        return [
+        models = [
             LLMModel(id=str(item.get("name")), name=str(item.get("name")), local=True)
             for item in raw_models
             if isinstance(item, dict) and item.get("name")
         ]
+        return _prefer_chat_models(models)
 
     async def chat(self, request: LLMChatRequest) -> LLMChatResponse:
         model = request.model or self.config.model
@@ -82,6 +93,8 @@ class OllamaClient(BaseLLMClient):
         }
         if request.tools:
             payload["tools"] = request.tools
+        if request.response_format == "json":
+            payload["format"] = "json"
 
         base = self.config.api_base.rstrip("/")
         status, data = await request_json(

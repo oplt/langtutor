@@ -1,7 +1,11 @@
-import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
+import React, { createContext, useCallback, useContext, useMemo, useState } from "react";
 import { clearToken, getToken, setToken as persistToken } from "../auth";
-import { fetchCurrentUser } from "../modules/auth/api/authApi";
 import { clearStorySession } from "../modules/learning/storySessionCache";
+import {
+  currentUserQueryOptions,
+  useCurrentUserQuery,
+  useInvalidateCurrentUser,
+} from "../modules/auth/hooks/useCurrentUserQuery";
 import { clearTutorChatSession } from "../modules/tutor/tutorChatSessionCache";
 import { queryClient } from "../shared/api/queryClient";
 import { ApiError } from "../shared/api/httpClient";
@@ -29,80 +33,76 @@ const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [token, setTokenState] = useState<string | null>(() => getToken());
-  const [user, setUser] = useState<User | null>(null);
   const [sessionDegraded, setSessionDegraded] = useState(false);
-  const [status, setStatus] = useState<AuthStatus>(() =>
-    getToken() ? "loading" : "unauthenticated",
-  );
+  const invalidateCurrentUser = useInvalidateCurrentUser();
+  const currentUserQuery = useCurrentUserQuery(Boolean(token));
 
   const logout = useCallback(() => {
     clearToken();
+    queryClient.removeQueries({ queryKey: currentUserQueryOptions.queryKey });
     queryClient.clear();
     clearStorySession();
     clearTutorChatSession();
     setTokenState(null);
-    setUser(null);
     setSessionDegraded(false);
-    setStatus("unauthenticated");
   }, []);
 
   const refreshUser = useCallback(async () => {
     if (!token) return;
-    try {
-      const data = await fetchCurrentUser();
-      setUser(data);
-      setSessionDegraded(false);
-      setStatus("authenticated");
-    } catch (err: unknown) {
-      if (err instanceof ApiError && err.status === 401) {
-        throw new Error("unauthorized");
-      }
-      throw err;
-    }
+    const result = await queryClient.fetchQuery(currentUserQueryOptions);
+    if (!result) return;
+    setSessionDegraded(false);
   }, [token]);
 
   const retrySession = useCallback(async () => {
     if (!token) return;
-    setStatus("loading");
     setSessionDegraded(false);
     try {
       await refreshUser();
     } catch (err: unknown) {
-      if (err instanceof Error && err.message === "unauthorized") {
+      if (err instanceof ApiError && err.status === 401) {
         logout();
         return;
       }
       setSessionDegraded(true);
-      setStatus("authenticated");
     }
-  }, [token, refreshUser, logout]);
-
-  useEffect(() => {
-    if (!token) return;
-
-    let active = true;
-    setStatus("loading");
-    refreshUser().catch((err: unknown) => {
-      if (!active) return;
-      if (err instanceof Error && err.message === "unauthorized") {
-        logout();
-        return;
-      }
-      setSessionDegraded(true);
-      setStatus("authenticated");
-    });
-
-    return () => {
-      active = false;
-    };
   }, [token, refreshUser, logout]);
 
   const loginWithToken = useCallback((nextToken: string, remember = true) => {
     persistToken(nextToken, remember);
     setTokenState(nextToken);
     setSessionDegraded(false);
-    setStatus("loading");
   }, []);
+
+  const status: AuthStatus = useMemo(() => {
+    if (!token) return "unauthenticated";
+    if (currentUserQuery.isPending) return "loading";
+    if (currentUserQuery.isError) {
+      if (
+        currentUserQuery.error instanceof ApiError &&
+        currentUserQuery.error.status === 401
+      ) {
+        return "unauthenticated";
+      }
+      return sessionDegraded ? "authenticated" : "loading";
+    }
+    return currentUserQuery.data ? "authenticated" : "loading";
+  }, [token, currentUserQuery.isPending, currentUserQuery.isError, currentUserQuery.error, currentUserQuery.data, sessionDegraded]);
+
+  React.useEffect(() => {
+    if (!token) return;
+    if (
+      currentUserQuery.isError &&
+      currentUserQuery.error instanceof ApiError &&
+      currentUserQuery.error.status === 401
+    ) {
+      logout();
+    } else if (currentUserQuery.isError) {
+      setSessionDegraded(true);
+    }
+  }, [token, currentUserQuery.isError, currentUserQuery.error, logout]);
+
+  const user = currentUserQuery.data ?? null;
 
   const value = useMemo<AuthContextValue>(
     () => ({
@@ -112,10 +112,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       sessionDegraded,
       loginWithToken,
       logout,
-      refreshUser,
+      refreshUser: async () => {
+        await invalidateCurrentUser();
+        await refreshUser();
+      },
       retrySession,
     }),
-    [token, user, status, sessionDegraded, loginWithToken, logout, refreshUser, retrySession],
+    [token, user, status, sessionDegraded, loginWithToken, logout, refreshUser, retrySession, invalidateCurrentUser],
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

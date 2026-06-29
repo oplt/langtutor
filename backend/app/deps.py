@@ -12,6 +12,8 @@ from backend.app.modules.rag.application.document_ingestion_service import (
     DocumentIngestionService,
     get_document_ingestion_service,
 )
+from backend.app.modules.reading.jobs import ReadingGenerationJobRunner
+from backend.app.modules.reading.service import ReadingService, get_reading_service
 from backend.app.modules.tutor.application.tutor_turn_service import (
     TutorTurnService,
     get_tutor_turn_service,
@@ -44,3 +46,11 @@ def quiz_service_dep() -> QuizService:
 
 def document_ingestion_dep() -> DocumentIngestionService:
     return get_document_ingestion_service()
+
+
+def reading_service_dep() -> ReadingService:
+    return get_reading_service()
+
+
+def reading_job_runner_dep() -> ReadingGenerationJobRunner:
+    return ReadingGenerationJobRunner(get_reading_service())

@@ -11,7 +11,7 @@
         "max_tokens": 2048,
         "temperature": 0.2,
         "streaming": true,
-        "vision": true,
+        "vision": false,
         "context_window": 8192,
         "mode": "external_server",
         "server_binary_path": "",
@@ -20,7 +20,12 @@
         "port": 8080,
         "gpu_layers": 0,
         "threads": 0,
-        "batch_size": 512
+        "batch_size": 512,
+        "has_api_key": false,
+        "api_key": null,
+        "organization": "",
+        "project": "",
+        "embedding_model": ""
       },
       "openai_compatible": {
         "enabled": false,
@@ -30,7 +35,7 @@
         "max_tokens": 2048,
         "temperature": 0.2,
         "streaming": true,
-        "vision": true,
+        "vision": false,
         "context_window": 8192,
         "mode": "external_server",
         "server_binary_path": "",
@@ -39,7 +44,12 @@
         "port": 8080,
         "gpu_layers": 0,
         "threads": 0,
-        "batch_size": 512
+        "batch_size": 512,
+        "has_api_key": false,
+        "api_key": null,
+        "organization": "",
+        "project": "",
+        "embedding_model": ""
       },
       "openrouter": {
         "enabled": false,
@@ -49,7 +59,7 @@
         "max_tokens": 2048,
         "temperature": 0.2,
         "streaming": true,
-        "vision": true,
+        "vision": false,
         "context_window": 8192,
         "mode": "external_server",
         "server_binary_path": "",
@@ -58,7 +68,12 @@
         "port": 8080,
         "gpu_layers": 0,
         "threads": 0,
-        "batch_size": 512
+        "batch_size": 512,
+        "has_api_key": false,
+        "api_key": null,
+        "organization": "",
+        "project": "",
+        "embedding_model": ""
       },
       "ollama": {
         "enabled": true,
@@ -68,7 +83,7 @@
         "max_tokens": 2048,
         "temperature": 0.2,
         "streaming": true,
-        "vision": true,
+        "vision": false,
         "context_window": 8192,
         "mode": "external_server",
         "server_binary_path": "",
@@ -77,7 +92,12 @@
         "port": 8080,
         "gpu_layers": 0,
         "threads": 0,
-        "batch_size": 512
+        "batch_size": 512,
+        "has_api_key": false,
+        "api_key": null,
+        "organization": "",
+        "project": "",
+        "embedding_model": ""
       },
       "llama_cpp": {
         "enabled": false,
@@ -96,7 +116,12 @@
         "port": 8080,
         "gpu_layers": 0,
         "threads": 0,
-        "batch_size": 512
+        "batch_size": 512,
+        "has_api_key": false,
+        "api_key": null,
+        "organization": "",
+        "project": "",
+        "embedding_model": ""
       },
       "huggingface": {
         "enabled": false,
@@ -106,7 +131,7 @@
         "max_tokens": 2048,
         "temperature": 0.2,
         "streaming": true,
-        "vision": true,
+        "vision": false,
         "context_window": 8192,
         "mode": "external_server",
         "server_binary_path": "",
@@ -115,7 +140,12 @@
         "port": 8080,
         "gpu_layers": 0,
         "threads": 0,
-        "batch_size": 512
+        "batch_size": 512,
+        "has_api_key": false,
+        "api_key": null,
+        "organization": "",
+        "project": "",
+        "embedding_model": ""
       },
       "anthropic": {
         "enabled": false,
@@ -125,7 +155,7 @@
         "max_tokens": 2048,
         "temperature": 0.2,
         "streaming": true,
-        "vision": true,
+        "vision": false,
         "context_window": 8192,
         "mode": "external_server",
         "server_binary_path": "",
@@ -134,7 +164,12 @@
         "port": 8080,
         "gpu_layers": 0,
         "threads": 0,
-        "batch_size": 512
+        "batch_size": 512,
+        "has_api_key": false,
+        "api_key": null,
+        "organization": "",
+        "project": "",
+        "embedding_model": ""
       },
       "custom_http": {
         "enabled": false,
@@ -153,7 +188,12 @@
         "port": 8080,
         "gpu_layers": 0,
         "threads": 0,
-        "batch_size": 512
+        "batch_size": 512,
+        "has_api_key": false,
+        "api_key": null,
+        "organization": "",
+        "project": "",
+        "embedding_model": ""
       }
     },
     "task_defaults": {
@@ -166,6 +206,14 @@
         "model": ""
       },
       "quiz_generation": {
+        "provider": "ollama",
+        "model": ""
+      },
+      "reading_generation": {
+        "provider": "ollama",
+        "model": ""
+      },
+      "reading_translation": {
         "provider": "ollama",
         "model": ""
       },
@@ -184,15 +232,15 @@
     },
     "profiles": [
       {
-        "id": "ollama",
-        "name": "Local Ollama",
+        "id": "llama3",
+        "name": "llama3",
         "provider": "ollama",
         "api_base": "http://localhost:11434",
-        "model": "",
+        "model": "llama3:latest",
         "enabled": true,
         "has_api_key": false,
-        "api_key": null,
-        "timeout_seconds": 120,
+        "api_key": "",
+        "timeout_seconds": 120.0,
         "temperature": 0.2,
         "max_tokens": 2048,
         "context_window": 8192,
@@ -214,11 +262,13 @@
           "threads": 0,
           "batch_size": 512,
           "extra_allowed_args": []
-        }
+        },
+        "created_at": "2026-06-20T01:02:23.133159+00:00",
+        "updated_at": "2026-06-20T01:02:23.133159+00:00"
       }
     ],
-    "default_profile_id": "ollama",
+    "default_profile_id": "llama3",
     "task_overrides": {}
   },
-  "updated_at": null
+  "updated_at": "2026-06-20T01:02:34.063783+00:00"
 }

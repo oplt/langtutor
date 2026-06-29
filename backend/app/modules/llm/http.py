@@ -87,11 +87,11 @@ async def request_json(
             "duration_ms": duration_ms,
         }
         if duration_ms >= settings.SLOW_EXTERNAL_CALL_MS:
-            logger.warning("external_request_slow", extra=extra)
+            logger.debug("external_request_slow", extra=extra)
         elif status >= 400:
             logger.warning("external_request_error_status", extra=extra)
         else:
-            logger.info("external_request_complete", extra=extra)
+            logger.debug("external_request_complete", extra=extra)
         return status, payload
 
 
@@ -138,6 +138,6 @@ async def stream_post_lines(
     duration_ms = round((time.perf_counter() - start) * 1000, 2)
     extra = {"target": target, "duration_ms": duration_ms}
     if duration_ms >= settings.SLOW_EXTERNAL_CALL_MS:
-        logger.warning("external_stream_slow", extra=extra)
+        logger.debug("external_stream_slow", extra=extra)
     else:
-        logger.info("external_stream_complete", extra=extra)
+        logger.debug("external_stream_complete", extra=extra)

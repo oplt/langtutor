@@ -17,7 +17,7 @@ from backend.app.core.config_validation import validate_runtime_config
 from backend.app.core.background import schedule_background
 from backend.app.core.config import settings
 from backend.app.core.exceptions import AppError
-from backend.app.core.health import readiness_report
+from backend.app.core.http_access_log import should_log_http_request
 from backend.app.core.logging import clear_log_context, configure_logging, set_log_context
 from backend.app.core.metrics import metrics_registry
 from backend.app.core.tracing import setup_tracing
@@ -150,10 +150,11 @@ def create_app() -> FastAPI:
             "request_id": request_id,
             "trace_id": trace_id,
         }
-        if duration_ms >= settings.SLOW_REQUEST_MS:
-            logger.warning("http_request_slow", extra=log_extra)
-        else:
-            logger.info("http_request", extra=log_extra)
+        if should_log_http_request(request.url.path):
+            if duration_ms >= settings.SLOW_REQUEST_MS:
+                logger.warning("http_request_slow", extra=log_extra)
+            else:
+                logger.info("http_request", extra=log_extra)
 
         response.headers["x-request-id"] = request_id
         response.headers["x-trace-id"] = trace_id
@@ -171,7 +172,12 @@ def create_app() -> FastAPI:
             per_minute = settings.RATE_LIMIT_LOGIN_PER_MIN
         elif path == "/auth/signup":
             per_minute = settings.RATE_LIMIT_SIGNUP_PER_MIN
-        elif path in {"/api/learning/quiz/generate", "/api/tutor/message", "/api/tutor/message/stream"}:
+        elif path in {
+            "/api/learning/quiz/generate",
+            "/api/reading/generate",
+            "/api/tutor/message",
+            "/api/tutor/message/stream",
+        }:
             per_minute = settings.RATE_LIMIT_ANALYZE_PER_MIN
 
         if per_minute is not None and per_minute > 0:

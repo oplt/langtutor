@@ -1,8 +1,10 @@
 from __future__ import annotations
 
+import logging
 from collections.abc import AsyncIterator
+from typing import Literal
 
-from backend.app.modules.llm.base import LLMChatRequest, LLMChatResponse, LLMMessage
+from backend.app.modules.llm.base import LLMChatRequest, LLMChatResponse, LLMMessage, LLMProviderConfig
 from backend.app.modules.llm.circuit_breaker import get_llm_circuit_breaker
 from backend.app.modules.llm.errors import LLMProviderUnavailableError
 from backend.app.modules.llm.factory import config_from_env, config_from_profile, create_llm_client
@@ -12,6 +14,9 @@ from backend.app.modules.llm.task_client_cache import (
     get_cached_task_client,
     set_cached_task_client,
 )
+
+
+logger = logging.getLogger(__name__)
 
 
 async def _profile_candidates(task: str) -> list:
@@ -44,6 +49,23 @@ async def _profile_candidates(task: str) -> list:
     return profiles
 
 
+async def _resolve_model_if_missing(config: LLMProviderConfig) -> LLMProviderConfig:
+    if config.model:
+        return config
+    if config.provider != "ollama":
+        return config
+    try:
+        client = create_llm_client(config, with_retry=False)
+        models = await client.list_models()
+        if models:
+            resolved = models[0].id
+            logger.info("ollama_model_auto_resolved model=%s", resolved)
+            return config.model_copy(update={"model": resolved})
+    except Exception as exc:
+        logger.warning("ollama_model_auto_resolve_failed error=%s", exc)
+    return config
+
+
 async def create_task_client(task: str) -> LLMTaskClient:
     cached = get_cached_task_client(task)
     if cached is not None:
@@ -55,6 +77,7 @@ async def create_task_client(task: str) -> LLMTaskClient:
         if not get_llm_circuit_breaker(profile.provider).allow():
             continue
         config = config_from_profile(profile)
+        config = await _resolve_model_if_missing(config)
         config = config.model_copy(
             update={"timeout_seconds": apply_task_timeout(task, config.timeout_seconds)}
         )
@@ -65,6 +88,7 @@ async def create_task_client(task: str) -> LLMTaskClient:
     if profiles:
         profile = profiles[0]
         config = config_from_profile(profile)
+        config = await _resolve_model_if_missing(config)
         config = config.model_copy(
             update={"timeout_seconds": apply_task_timeout(task, config.timeout_seconds)}
         )
@@ -74,6 +98,7 @@ async def create_task_client(task: str) -> LLMTaskClient:
 
     try:
         config = config_from_env()
+        config = await _resolve_model_if_missing(config)
     except Exception as exc:
         raise LLMProviderUnavailableError("No LLM profile configured.") from (last_error or exc)
     config = config.model_copy(
@@ -97,6 +122,7 @@ class LLMService:
         temperature: float | None = None,
         max_tokens: int | None = None,
         tools: list[dict] | None = None,
+        response_format: Literal["text", "json"] | None = None,
     ) -> LLMChatResponse:
         client = await self.for_task(task)
         return await client.chat(
@@ -106,6 +132,7 @@ class LLMService:
                 temperature=temperature,
                 max_tokens=max_tokens,
                 tools=tools,
+                response_format=response_format,
             )
         )
 

@@ -11,6 +11,8 @@ const SettingsPage = lazy(() => import("./pages/dashboard/tabs/SettingsPage"));
 const AnalyticsPage = lazy(() => import("./pages/dashboard/tabs/AnalyticsPage"));
 const RoutinePage = lazy(() => import("./pages/dashboard/tabs/RoutinePage"));
 const CoachPage = lazy(() => import("./pages/dashboard/tabs/CoachPage"));
+const DocumentsPage = lazy(() => import("./pages/dashboard/tabs/DocumentsPage"));
+const ReadingPage = lazy(() => import("./pages/dashboard/tabs/ReadingPage"));
 const ProfilePage = lazy(() => import("./pages/dashboard/tabs/ProfilePage"));
 const AccountPage = lazy(() => import("./pages/dashboard/tabs/AccountPage"));
 
@@ -41,6 +43,8 @@ export default function App() {
             <Route path="analytics" element={<AnalyticsPage />} />
             <Route path="routine" element={<RoutinePage />} />
             <Route path="coach" element={<CoachPage />} />
+            <Route path="documents" element={<DocumentsPage />} />
+            <Route path="reading" element={<ReadingPage />} />
             <Route path="tasks" element={<TasksPage />} />
             <Route path="settings" element={<SettingsPage />} />
             <Route path="profile" element={<ProfilePage />} />

@@ -108,6 +108,8 @@ LLM_TASKS = (
     "tutor_chat",
     "story_generation",
     "quiz_generation",
+    "reading_generation",
+    "reading_translation",
     "grammar_explanation",
     "correction",
     "placement",

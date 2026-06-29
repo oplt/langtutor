@@ -25,11 +25,12 @@ def create_llm_client(config: LLMProviderConfig, *, with_retry: bool = True):
 
 def config_from_profile(profile: LLMProfile) -> LLMProviderConfig:
     api_key = "" if profile.api_key in {None, "********"} else str(profile.api_key or "")
+    model = (profile.model or "").strip() or settings.LLM_MODEL
     return LLMProviderConfig(
         provider=profile.provider,  # type: ignore[arg-type]
         api_base=profile.api_base or PROVIDERS[profile.provider].default_api_base,
         api_key=api_key,
-        model=profile.model,
+        model=model,
         timeout_seconds=profile.timeout_seconds,
         temperature=profile.temperature,
         max_tokens=profile.max_tokens,

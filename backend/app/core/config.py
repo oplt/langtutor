@@ -58,11 +58,26 @@ class Settings(BaseSettings):
     SLOW_REQUEST_MS: int = 1000
     SLOW_JOB_MS: int = 5000
     SLOW_EXTERNAL_CALL_MS: int = 3000
+    READING_GENERATE_TIMEOUT_SECONDS: int = 120
+    READING_COVERAGE_RELAXED_PERCENT: float = 80.0
+    READING_COVERAGE_BALANCED_PERCENT: float = 85.0
+    READING_COVERAGE_STRICT_PERCENT: float = 92.0
+    READING_COVERAGE_MAX_ATTEMPTS: int = 3
+    READING_GENERATE_CACHE_TTL_SECONDS: int = 600
+    READING_GENERATE_FALLBACK_CACHE_TTL_SECONDS: int = 120
     LLM_SETTINGS_CACHE_TTL_SECONDS: int = 60
     LLM_TASK_CLIENT_CACHE_TTL_SECONDS: int = 120
     LEARNING_LEVELS_CACHE_TTL_SECONDS: int = 3600
     LEARNING_PROGRESS_CACHE_TTL_SECONDS: int = 45
     RAG_EMBEDDING_CACHE_TTL_SECONDS: int = 3600
+
+    DEEPL_ENABLED: bool = True
+    DEEPL_AUTH_KEY: str = ""
+    DEEPL_API_BASE_URL: str = "https://api-free.deepl.com"
+    DEEPL_SOURCE_LANG: str = "NL"
+    DEEPL_TARGET_LANG: str = "EN-US"
+    DEEPL_TIMEOUT_SECONDS: int = 10
+    DEEPL_MODEL_TYPE: str = ""
 
     # User document RAG (LangChain-backed, separate from global knowledge BM25).
     # Disabled by default — set RAG_ENABLED=true when pgvector + embeddings are configured.

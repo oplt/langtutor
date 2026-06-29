@@ -9,6 +9,8 @@ import AnalyticsRoundedIcon from "@mui/icons-material/AnalyticsRounded";
 import AssignmentRoundedIcon from "@mui/icons-material/AssignmentRounded";
 import ChecklistRoundedIcon from "@mui/icons-material/ChecklistRounded";
 import SmartToyRoundedIcon from "@mui/icons-material/SmartToyRounded";
+import DescriptionRoundedIcon from "@mui/icons-material/DescriptionRounded";
+import MenuBookRoundedIcon from "@mui/icons-material/MenuBookRounded";
 import SettingsRoundedIcon from "@mui/icons-material/SettingsRounded";
 import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import ManageAccountsRoundedIcon from "@mui/icons-material/ManageAccountsRounded";
@@ -19,6 +21,8 @@ const mainListItems = [
   { text: "Practice", icon: <AssignmentRoundedIcon />, path: "/dashboard/tasks" },
   { text: "Progress", icon: <AnalyticsRoundedIcon />, path: "/dashboard/analytics" },
   { text: "Study Plan", icon: <ChecklistRoundedIcon />, path: "/dashboard/routine" },
+  { text: "Documents", icon: <DescriptionRoundedIcon />, path: "/dashboard/documents" },
+  { text: "Reading", icon: <MenuBookRoundedIcon />, path: "/dashboard/reading" },
   { text: "Tutor", icon: <SmartToyRoundedIcon />, path: "/dashboard/coach" },
 ];
 

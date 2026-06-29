@@ -95,26 +95,48 @@ export function LlmProfileDialog({
   const [draft, setDraft] = useState<LlmProfileInput>(emptyProfile());
   const [models, setModels] = useState<{ id: string; name: string }[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const [discoverMessage, setDiscoverMessage] = useState<string | null>(null);
 
   useEffect(() => {
     if (!open) return;
     setDraft(profile ? profileInput(profile) : emptyProfile());
     setModels([]);
     setError(null);
+    setDiscoverMessage(null);
   }, [open, profile]);
 
   const fetchModels = async () => {
+    if (!draft.api_base.trim()) {
+      setError("API base is required before discovering models.");
+      return;
+    }
     onBusyChange(true);
     setError(null);
+    setDiscoverMessage(null);
     try {
       const data = profile
-        ? await fetchLlmProfileModels(profile.id)
-        : await fetchLlmModels(draft.provider);
+        ? await fetchLlmProfileModels(profile.id, draft.api_base)
+        : await fetchLlmModels(draft.provider, draft.api_base);
       setModels(data.models);
-      if (!data.models.length) setError("No discovered models. Manual entry is available.");
+      if (!data.models.length) {
+        setError(
+          `No chat models found at ${draft.api_base}. Check that Ollama is running and has models installed.`,
+        );
+        return;
+      }
+      setDiscoverMessage(`Discovered ${data.models.length} model${data.models.length === 1 ? "" : "s"}.`);
+      if (!draft.model) {
+        setDraft((prev) => ({ ...prev, model: data.models[0]?.id ?? "" }));
+      }
     } catch (err) {
       setModels([]);
-      setError(err instanceof ApiError ? err.message : "Model discovery failed.");
+      const message =
+        err instanceof ApiError
+          ? err.message
+          : "Model discovery failed.";
+      setError(
+        `${message} Check that the server can reach ${draft.api_base} (Ollama must be running).`,
+      );
     } finally {
       onBusyChange(false);
     }
@@ -157,6 +179,7 @@ export function LlmProfileDialog({
       <DialogContent>
         <Stack spacing={2} sx={{ mt: 1 }}>
           {error && <Alert severity="warning">{error}</Alert>}
+          {discoverMessage && <Alert severity="success">{discoverMessage}</Alert>}
           <TextField
             label="Display name"
             value={draft.name}
@@ -182,25 +205,37 @@ export function LlmProfileDialog({
             onChange={(e) => setDraft((prev) => ({ ...prev, api_base: e.target.value }))}
             fullWidth
           />
-          <Stack direction="row" spacing={1}>
+          <Stack direction="row" spacing={1} alignItems="flex-start">
             <TextField
               select
               label="Model"
               value={draft.model}
               onChange={(e) => setDraft((prev) => ({ ...prev, model: e.target.value }))}
               fullWidth
+              helperText={
+                models.length
+                  ? "Select a discovered model or type a custom model name below."
+                  : "Click Discover to load models from your API base."
+              }
             >
-              <MenuItem value="">Manual / none</MenuItem>
+              <MenuItem value="">Select a model</MenuItem>
               {models.map((model) => (
                 <MenuItem key={model.id} value={model.id}>
                   {model.name}
                 </MenuItem>
               ))}
             </TextField>
-            <Button variant="outlined" onClick={fetchModels} disabled={busy}>
+            <Button variant="outlined" onClick={fetchModels} disabled={busy} sx={{ mt: 1 }}>
               Discover
             </Button>
           </Stack>
+          <TextField
+            label="Custom model name"
+            value={draft.model}
+            onChange={(e) => setDraft((prev) => ({ ...prev, model: e.target.value }))}
+            fullWidth
+            placeholder="e.g. llama3:latest"
+          />
           <TextField
             label="API key"
             type="password"
